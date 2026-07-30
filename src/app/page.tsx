@@ -1,9 +1,9 @@
 import Link from "next/link";
+import { getAllEntries } from "@/lib/content";
 
-// Placeholder home page. It exists so the design tokens are visible on screen
-// and the one live content route is reachable. The real index arrives with the
-// content in Phase 1.
 export default function Home() {
+  const glossaryCount = getAllEntries("glossary").length;
+
   return (
     <div className="flex flex-1 flex-col">
       <header className="bg-turf px-5 py-4 text-chalk sm:px-8">
@@ -21,22 +21,19 @@ export default function Home() {
           and what a position is actually for.
         </p>
 
-        <h2 className="font-display condensed mt-10 text-xl font-semibold uppercase tracking-wide">
-          Glossary
-        </h2>
-        <ul className="mt-3 border-t border-graphite/15">
-          <li className="border-b border-graphite/15">
-            <Link
-              href="/glossary/dead-money"
-              className="flex min-h-11 items-center justify-between gap-4 py-3 hover:text-pencil"
-            >
-              <span>Dead money</span>
-              <span className="font-data text-xs text-graphite/60">
-                glossary
-              </span>
-            </Link>
-          </li>
-        </ul>
+        <nav className="mt-10 border-t border-graphite/15">
+          <Link
+            href="/glossary"
+            className="flex min-h-11 items-center justify-between gap-4 border-b border-graphite/15 py-4 hover:text-pencil"
+          >
+            <span className="font-display condensed text-xl font-semibold">
+              Glossary
+            </span>
+            <span className="font-data text-xs uppercase tracking-wide text-graphite/60">
+              {glossaryCount} {glossaryCount === 1 ? "entry" : "entries"}
+            </span>
+          </Link>
+        </nav>
       </main>
     </div>
   );
