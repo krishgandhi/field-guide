@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Design tokens — CLAUDE.md §10, "the coach's laminated call sheet".
+   Tailwind v4 has no tailwind.config.js; the theme lives here as CSS. */
+
+/* Colours get a plain @theme block so Tailwind also emits the --color-*
+   custom properties on :root. That lets us use var(--color-chalk) in the
+   handwritten CSS below, not just in utility classes. */
+@theme {
+  --color-turf: #1b3a2f; /* deep desaturated field green, primary surface */
+  --color-chalk: #e6e5df; /* cool paper grey, main background (NOT warm cream) */
+  --color-pencil: #c8322b; /* grease-pencil red, flags and urgency */
+  --color-royal: #00338d; /* Bills royal blue, allegiance accent */
+  --color-amber: #e0a526; /* laminate highlight, "watch this" */
+  --color-graphite: #2a2a28; /* body text */
 }
 
+/* Fonts get `inline` because their values point at variables that next/font
+   defines on the <html> element in layout.tsx, rather than at literals. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-data: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* "Archivo Condensed" is not a Google Fonts family. Archivo is a variable font
+   with a width axis (62–125), so layout.tsx loads that axis and we condense
+   here. Pair with font-display: `class="font-display condensed"`. */
+@utility condensed {
+  font-stretch: 80%;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-chalk);
+    color: var(--color-graphite);
+    font-family: var(--font-body), ui-serif, Georgia, serif;
+    /* Newsreader is an optical-size face; let it size itself for body copy. */
+    font-optical-sizing: auto;
+  }
+
+  /* §10 quality floor: keyboard focus must always be visible. */
+  :focus-visible {
+    outline: 2px solid var(--color-pencil);
+    outline-offset: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* §10 quality floor: respect prefers-reduced-motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
