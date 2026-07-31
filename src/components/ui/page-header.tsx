@@ -46,12 +46,17 @@ export function PageHeader({
 export function SectionHeader({
   title,
   aside,
+  first,
 }: {
   title: string;
   aside?: string;
+  /** Drops the top margin — the first section shouldn't push itself down the page. */
+  first?: boolean;
 }) {
   return (
-    <div className="mt-9 flex items-baseline justify-between gap-3 border-b border-graphite/25 pb-1">
+    <div
+      className={`${first ? "mt-1" : "mt-9"} flex items-baseline justify-between gap-3 border-b border-graphite/25 pb-1`}
+    >
       <h2 className="font-display condensed text-lg font-semibold uppercase tracking-wide text-graphite">
         {title}
       </h2>

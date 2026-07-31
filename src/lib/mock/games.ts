@@ -39,7 +39,7 @@ export const GAMES: Game[] = [
     away: "SF",
     home: "LAR",
     spread: null,
-    window: "Thursday night, in Australia",
+    window: "In Melbourne",
     watchability: 4,
     reason:
       "Two good teams who genuinely dislike each other, played in Melbourne. Odd start time, worth it.",
@@ -63,7 +63,7 @@ export const GAMES: Game[] = [
     away: "NYG",
     home: "DAL",
     spread: null,
-    window: "Sunday night",
+    window: "Sunday Night Football",
     watchability: 3,
     reason:
       "An old, genuinely bitter rivalry in the prime slot. The football is often worse than the noise.",
@@ -75,7 +75,7 @@ export const GAMES: Game[] = [
     away: "DEN",
     home: "KC",
     spread: null,
-    window: "Monday night",
+    window: "Monday Night Football",
     watchability: 4,
     reason:
       "First place in their division is usually settled between these two. Denver has closed the gap.",
@@ -218,7 +218,7 @@ export const CALENDAR: CalendarItem[] = [
   {
     slug: "season-opener",
     label: "Season opens",
-    date: "2026-09-09",
+    date: "Wed 9 Sep",
     why: "First real game after seven months of nothing. Everything before this is practice.",
   },
   {

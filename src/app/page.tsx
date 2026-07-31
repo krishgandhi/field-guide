@@ -38,7 +38,7 @@ export default function ThisWeekPage() {
       <PageShell>
         {billsGame ? (
           <>
-            <SectionHeader title="Your game" aside="Bills" />
+            <SectionHeader first title="Your game" aside="Bills" />
             <Link
               href="/games"
               className="mt-2 block min-h-14 border-l-4 border-royal py-3 pl-3 hover:bg-graphite/5"
@@ -75,7 +75,7 @@ export default function ThisWeekPage() {
             </li>
           ))}
         </ul>
-        <SampleDataBadge note="Scores placed by hand — §8 scoring isn't built yet" />
+        <SampleDataBadge note="Ratings placed by hand, not calculated yet" />
 
         <SectionHeader title="Biggest recent move" />
         <Link
@@ -112,8 +112,8 @@ export default function ThisWeekPage() {
           <span className="font-display condensed text-lg font-semibold">
             Glossary
           </span>
-          <span className="font-data text-xs uppercase tracking-wide text-graphite/60">
-            real content
+          <span aria-hidden className="font-data text-graphite/50">
+            →
           </span>
         </Link>
       </PageShell>
