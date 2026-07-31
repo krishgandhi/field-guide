@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import { BottomNav } from "@/components/nav/bottom-nav";
 import "./globals.css";
 
 // Display face. CLAUDE.md §10 asks for "Archivo Condensed", which is not a
@@ -41,7 +42,10 @@ export default function RootLayout({
       lang="en"
       className={`${archivo.variable} ${newsreader.variable} ${plexMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <BottomNav />
+      </body>
     </html>
   );
 }

@@ -44,7 +44,7 @@ export default function GlossaryIndexPage() {
             <li key={entry.slug} className="border-b border-graphite/15">
               <Link
                 href={`/glossary/${entry.slug}`}
-                className="block py-4 hover:text-pencil"
+                className="block min-h-14 py-4 hover:text-pencil"
               >
                 <span className="font-display condensed text-xl font-semibold">
                   {entry.title}
