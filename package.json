@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "shots": "node scripts/screenshots.mjs"
+    "shots": "node scripts/screenshots.mjs",
+    "fetch:teams": "node scripts/fetch-teams.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
+    "lucide-react": "^1.30.0",
     "next": "16.2.12",
     "next-mdx-remote": "^6.0.0",
     "react": "19.2.4",

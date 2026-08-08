@@ -18,16 +18,16 @@ export default function GlossaryIndexPage() {
     <div className="mx-auto w-full max-w-2xl flex-1 px-5 py-8 sm:px-8 sm:py-12">
       <Link
         href="/"
-        className="font-data inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-graphite/60 hover:text-pencil"
+        className="font-data inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-fg/60 hover:text-pencil"
       >
         ← Field guide
       </Link>
 
-      <header className="mt-2 border-b-2 border-graphite/80 pb-4">
-        <h1 className="font-display condensed text-4xl font-semibold text-graphite sm:text-5xl">
+      <header className="mt-2 border-b-2 border-fg/80 pb-4">
+        <h1 className="font-display condensed text-4xl font-semibold text-fg sm:text-5xl">
           Glossary
         </h1>
-        <p className="font-data mt-2 text-xs uppercase tracking-[0.2em] text-graphite/60">
+        <p className="font-data mt-2 text-xs uppercase tracking-[0.2em] text-fg/60">
           {entries.length} {entries.length === 1 ? "entry" : "entries"}
         </p>
       </header>
@@ -41,7 +41,7 @@ export default function GlossaryIndexPage() {
       ) : (
         <ul className="mt-2">
           {entries.map((entry) => (
-            <li key={entry.slug} className="border-b border-graphite/15">
+            <li key={entry.slug} className="border-b border-fg/15">
               <Link
                 href={`/glossary/${entry.slug}`}
                 className="block min-h-14 py-4 hover:text-pencil"
@@ -49,7 +49,7 @@ export default function GlossaryIndexPage() {
                 <span className="font-display condensed text-xl font-semibold">
                   {entry.title}
                 </span>
-                <span className="mt-0.5 block leading-snug text-graphite/75">
+                <span className="mt-0.5 block leading-snug text-fg/75">
                   {entry.summary}
                 </span>
               </Link>

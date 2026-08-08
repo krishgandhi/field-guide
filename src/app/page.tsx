@@ -24,9 +24,9 @@ export default function ThisWeekPage() {
 
   return (
     <>
-      <header className="bg-turf px-5 py-5 text-chalk sm:px-8">
+      <header className="bg-surface px-5 py-5 text-fg sm:px-8">
         <div className="mx-auto w-full max-w-2xl">
-          <p className="font-data text-xs uppercase tracking-[0.2em] text-chalk/70">
+          <p className="font-data text-xs uppercase tracking-[0.2em] text-fg/70">
             Field guide · Week {CURRENT_WEEK}
           </p>
           <h1 className="font-display condensed mt-1 text-3xl font-semibold sm:text-4xl">
@@ -41,12 +41,12 @@ export default function ThisWeekPage() {
             <SectionHeader first title="Your game" aside="Bills" />
             <Link
               href="/games"
-              className="mt-2 block min-h-14 border-l-4 border-royal py-3 pl-3 hover:bg-graphite/5"
+              className="mt-2 block min-h-14 border-l-4 border-royal py-3 pl-3 hover:bg-fg/5"
             >
               <p className="font-display condensed text-2xl font-semibold">
                 {shortName(billsGame.away)} at {shortName(billsGame.home)}
               </p>
-              <p className="font-data mt-1 text-xs uppercase tracking-wide text-graphite/60">
+              <p className="font-data mt-1 text-xs uppercase tracking-wide text-fg/60">
                 Sun 13 Sep · 1:00 PM ET
               </p>
               <p className="mt-2 leading-snug">{billsGame.reason}</p>
@@ -57,7 +57,7 @@ export default function ThisWeekPage() {
         <SectionHeader title="Also worth watching" aside="Sample scores" />
         <ul className="mt-1">
           {alsoWatch.map((game) => (
-            <li key={game.id} className="border-b border-graphite/15">
+            <li key={game.id} className="border-b border-fg/15">
               <Link
                 href="/games"
                 className="flex min-h-14 items-center justify-between gap-4 py-3 hover:text-pencil"
@@ -66,7 +66,7 @@ export default function ThisWeekPage() {
                   <span className="font-display condensed block text-lg font-semibold">
                     {shortName(game.away)} at {shortName(game.home)}
                   </span>
-                  <span className="block text-sm leading-snug text-graphite/75">
+                  <span className="block text-sm leading-snug text-fg/75">
                     {game.reason}
                   </span>
                 </span>
@@ -88,7 +88,7 @@ export default function ThisWeekPage() {
             </span>
             <ScoreMeter value={topMove.bigness} label="How big" />
           </span>
-          <span className="mt-1 block leading-snug text-graphite/80">
+          <span className="mt-1 block leading-snug text-fg/80">
             {topMove.soWhat}
           </span>
         </Link>
@@ -98,21 +98,21 @@ export default function ThisWeekPage() {
           <p className="font-display condensed text-xl font-semibold">
             {nextDate.label}
           </p>
-          <p className="font-data text-xs uppercase tracking-wide text-graphite/60">
+          <p className="font-data text-xs uppercase tracking-wide text-fg/60">
             {nextDate.date}
           </p>
-          <p className="mt-1 leading-snug text-graphite/80">{nextDate.why}</p>
+          <p className="mt-1 leading-snug text-fg/80">{nextDate.why}</p>
         </div>
 
         <SectionHeader title="Look something up" aside={`${glossaryCount} entries`} />
         <Link
           href="/glossary"
-          className="mt-1 flex min-h-14 items-center justify-between gap-4 border-b border-graphite/15 py-3 hover:text-pencil"
+          className="mt-1 flex min-h-14 items-center justify-between gap-4 border-b border-fg/15 py-3 hover:text-pencil"
         >
           <span className="font-display condensed text-lg font-semibold">
             Glossary
           </span>
-          <span aria-hidden className="font-data text-graphite/50">
+          <span aria-hidden className="font-data text-fg/50">
             →
           </span>
         </Link>

@@ -29,13 +29,13 @@ export function ScoreMeter({
               i < filled
                 ? filled >= 4
                   ? "bg-amber"
-                  : "bg-graphite/60"
-                : "bg-graphite/15"
+                  : "bg-fg/60"
+                : "bg-fg/15"
             }`}
           />
         ))}
       </span>
-      <span className="font-data text-xs tabular-nums text-graphite/70">
+      <span className="font-data text-xs tabular-nums text-fg/70">
         {filled}
       </span>
       <span className="sr-only">

@@ -53,8 +53,8 @@ export default async function TeamDetailPage({ params }: PageProps) {
         </>
       ) : (
         /* §10: empty states are invitations, not apologies. */
-        <div className="mt-6 border-l-2 border-graphite/30 py-2 pl-3">
-          <p className="leading-relaxed text-graphite/80">
+        <div className="mt-6 border-l-2 border-fg/30 py-2 pl-3">
+          <p className="leading-relaxed text-fg/80">
             Not written up yet. Buffalo is the only team with a real write-up so
             far — the rest are deliberately blank rather than filled with guesses.
           </p>
@@ -76,7 +76,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
             </p>
             <ScoreMeter value={nextGame.watchability} label="Worth watching" />
           </div>
-          <p className="leading-snug text-graphite/80">{nextGame.reason}</p>
+          <p className="leading-snug text-fg/80">{nextGame.reason}</p>
         </>
       ) : null}
 
@@ -85,7 +85,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
           <SectionHeader title="Recent moves" />
           <ul className="mt-1">
             {teamMoves.map((move) => (
-              <li key={move.slug} className="border-b border-graphite/15">
+              <li key={move.slug} className="border-b border-fg/15">
                 <Link
                   href={`/moves/${move.slug}`}
                   className="flex min-h-14 items-center justify-between gap-3 py-3 hover:text-pencil"

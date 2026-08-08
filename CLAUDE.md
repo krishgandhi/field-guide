@@ -172,28 +172,37 @@ Phase 3 and later. **Verify each one still works before building against it** �
 
 ## 10. Design direction
 
-Specific and deliberate. Do not drift toward generic sports-portal aesthetics (aggressive reds, angular gradients, dark chrome) or toward the standard AI-editorial look (warm cream background, high-contrast serif, terracotta accent).
+*Revised August 2026. This section previously specified a light "coach's laminated call sheet" — paper-grey background, editorial serif, monospace data. It was built exactly as written and it read as a printed document, not an app. Krish's verdict: "the UI sucks… I want it to be the NFL App for newbies to use." The old direction is dead; don't reintroduce it.*
 
-**Concept: the coach's laminated call sheet.** Dense, gridded, tabular, color-coded by urgency, annotated in grease pencil. It's a real artifact from the subject's own world, it suits information-dense reference content, and it justifies a monospace utility face for data.
+**Concept: a modern consumer sports app.** Reference points are **Apple Sports** and **Real** — dark, logo-forward, card-based, all-sans. Content sits on cards floating over a near-black page. Team identity comes from logos, not from chrome. It should look like something he'd have downloaded, not like a reference site about football.
 
-**Palette** — muted, so the accents can carry meaning:
+**Palette** — dark, so team logos and colour carry the interest:
 
 ```
---turf     #1B3A2F   deep desaturated field green, primary surface
---chalk    #E6E5DF   cool paper grey, main background (NOT warm cream)
---pencil   #C8322B   grease-pencil red, flags and urgency
---royal    #00338D   Bills royal blue, allegiance accent
---amber    #E0A526   laminate highlight, "watch this"
---graphite #2A2A28   body text
+--ink        #0A0C0B   page background, near-black with a faint green cast
+--surface    #141817   cards
+--surface-2  #1E2422   raised / pressed
+--line       #2A302E   hairline borders
+--fg         #F2F4F3   primary text
+--fg-dim     #98A29E   secondary text
+--amber      #FFC53D   "watch this"
+--pencil     #FF6B5E   flags and urgency
+--royal      #4C8DFF   Bills / allegiance accent
 ```
 
-**Type** — three roles, deliberately paired:
+The accents keep the meanings the old palette gave them; only the values changed. The originals were mixed for a light background and are unreadable here — the old royal `#00338D` managed 1.7:1 against ink.
 
-- **Display: Archivo Condensed.** Roster-sheet and jersey-numeral energy. Headings and team names.
-- **Body: Newsreader.** This is a reading site; long explanations need a real editorial serif.
-- **Data: IBM Plex Mono.** Spreads, records, snap counts, dates. Anything tabular.
+**Type: one family, Inter.** UI, data and long reads all use it. A single modern sans is most of what separates "app" from "document". Reading comfort comes from size, measure and leading, not a second family. Numerals in columns get `tabular-nums`.
 
-**Signature element: the grease-pencil underline.** Auto-linked glossary terms get a slightly irregular hand-drawn underline stroke — the mark of a coach circling something on a sheet. The product's entire thesis is "the jargon gets explained," so the jargon marker is the thing the site should be remembered for. Spend the boldness here and keep everything else quiet.
+### Team logos and colours — two rules learned the hard way
+
+**Logos are bundled, never hotlinked.** `npm run fetch:teams` pulls all 32 from ESPN into `public/logos/` and writes `src/lib/teams/nfl-teams.json`. Pages read the JSON. This is §4's data-flow rule; it also means ESPN breaking never breaks the site. Use the `500-dark` variant — for black-heavy logos (Raiders, Jets, Saints) ESPN serves a version with a white keyline that survives a dark background, and returns the standard logo for everyone else.
+
+**Never render an official brand colour directly.** 22 of the 32 fail contrast against `--ink`; Buffalo's `#00338D` is 1.7:1, effectively invisible. The fetch script computes a `displayColor` per team — the brand hue lifted until it clears 4.5:1 — and that is the only colour the UI renders. Teams whose primary is black (Steelers, Raiders) fall back to their `alternateColor`, because lightening black only ever produces grey.
+
+A consequence worth knowing: lifting the navies converges Dallas, New England, Seattle and the Giants on nearly the same blue. **Colour cannot identify a team here.** The logo does that; colour is decoration.
+
+**Signature element: the explained term.** Auto-linked glossary terms (§6a) get a dotted amber underline and, on tap, a sheet that slides up from the bottom. The old spec put a hand-drawn grease-pencil stroke here; the reasoning behind it still holds even though the execution doesn't. "The jargon gets explained" is the entire product thesis, so the jargon marker is the one place to spend boldness — everything else stays quiet.
 
 **Quality floor, unannounced:** responsive to 380px, visible keyboard focus, `prefers-reduced-motion` respected, tap targets 44px minimum. Phone is the primary device — he will read this on transit and in bars.
 

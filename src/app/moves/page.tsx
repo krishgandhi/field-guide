@@ -20,7 +20,7 @@ export default function MovesPage() {
 
       <ul className="mt-4">
         {MOVES_BY_BIGNESS.map((move) => (
-          <li key={move.slug} className="border-b border-graphite/15">
+          <li key={move.slug} className="border-b border-fg/15">
             <Link
               href={`/moves/${move.slug}`}
               className="block min-h-14 py-4 hover:text-pencil"
@@ -31,10 +31,10 @@ export default function MovesPage() {
                 </span>
                 <ScoreMeter value={move.bigness} label="How big" />
               </span>
-              <span className="font-data mt-1 block text-[0.65rem] uppercase tracking-[0.15em] text-graphite/55">
+              <span className="font-data mt-1 block text-[0.65rem] uppercase tracking-[0.15em] text-fg/55">
                 {move.date} · {move.teams.map(shortName).join(" / ")}
               </span>
-              <span className="mt-1.5 block leading-snug text-graphite/80">
+              <span className="mt-1.5 block leading-snug text-fg/80">
                 {move.soWhat}
               </span>
             </Link>

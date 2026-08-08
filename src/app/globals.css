@@ -1,47 +1,68 @@
 @import "tailwindcss";
 
-/* Design tokens — CLAUDE.md §10, "the coach's laminated call sheet".
+/* Design tokens — CLAUDE.md §10.
    Tailwind v4 has no tailwind.config.js; the theme lives here as CSS. */
 
 /* Colours get a plain @theme block so Tailwind also emits the --color-*
-   custom properties on :root. That lets us use var(--color-chalk) in the
-   handwritten CSS below, not just in utility classes. */
+   custom properties on :root, usable in handwritten CSS and inline styles.
+
+   --color-ink MUST stay in sync with INK in scripts/fetch-teams.mjs, which
+   contrast-corrects all 32 team colours against it. Change one, re-run the
+   other. */
 @theme {
-  --color-turf: #1b3a2f; /* deep desaturated field green, primary surface */
-  --color-chalk: #e6e5df; /* cool paper grey, main background (NOT warm cream) */
-  --color-pencil: #c8322b; /* grease-pencil red, flags and urgency */
-  --color-royal: #00338d; /* Bills royal blue, allegiance accent */
-  --color-amber: #e0a526; /* laminate highlight, "watch this" */
-  --color-graphite: #2a2a28; /* body text */
+  --color-ink: #0a0c0b; /* page background, near-black with a faint green cast */
+  --color-surface: #141817; /* cards */
+  --color-surface-2: #1e2422; /* raised / pressed */
+  --color-line: #2a302e; /* hairline borders */
+  --color-fg: #f2f4f3; /* primary text */
+  --color-fg-dim: #98a29e; /* secondary text */
+
+  /* Accents keep the meanings §10 assigned them; only the values changed.
+     The originals were mixed for a light background and are unreadable here —
+     the old royal #00338D managed 1.7:1 against ink. */
+  --color-amber: #ffc53d; /* "watch this" */
+  --color-pencil: #ff6b5e; /* flags and urgency */
+  --color-royal: #4c8dff; /* Bills / allegiance accent */
 }
 
-/* Fonts get `inline` because their values point at variables that next/font
-   defines on the <html> element in layout.tsx, rather than at literals. */
+/* Fonts get `inline` because their values point at the variable next/font
+   defines on the <html> element in layout.tsx.
+
+   One family everywhere. --font-display and --font-data are transitional
+   aliases so screens not yet redesigned keep rendering; they resolve to the
+   same face and disappear when the rollout reaches those screens. */
 @theme inline {
-  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-newsreader), ui-serif, Georgia, serif;
-  --font-data: var(--font-plex-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-data: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* "Archivo Condensed" is not a Google Fonts family. Archivo is a variable font
-   with a width axis (62–125), so layout.tsx loads that axis and we condense
-   here. Pair with font-display: `class="font-display condensed"`. */
+/* Numerals in the same column should line up. Anything tabular gets this. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Transitional: Inter has no width axis, so the old call-sheet `condensed`
+   can't be honoured. Tightened tracking is the nearest equivalent and keeps
+   not-yet-redesigned screens from reflowing. Goes away with the rollout. */
 @utility condensed {
-  font-stretch: 80%;
+  letter-spacing: -0.02em;
 }
 
 @layer base {
   body {
-    background-color: var(--color-chalk);
-    color: var(--color-graphite);
-    font-family: var(--font-body), ui-serif, Georgia, serif;
-    /* Newsreader is an optical-size face; let it size itself for body copy. */
-    font-optical-sizing: auto;
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
   }
 
-  /* §10 quality floor: keyboard focus must always be visible. */
+  /* §10 quality floor: keyboard focus must always be visible. Amber rather
+     than pencil — it reads clearly against both ink and every team colour. */
   :focus-visible {
-    outline: 2px solid var(--color-pencil);
+    outline: 2px solid var(--color-amber);
     outline-offset: 2px;
   }
 }

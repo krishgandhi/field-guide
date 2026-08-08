@@ -1,0 +1,322 @@
+[
+  {
+    "id": "ARI",
+    "slug": "arizona-cardinals",
+    "location": "Arizona",
+    "name": "Cardinals",
+    "displayName": "Arizona Cardinals",
+    "brandColor": "#A40227",
+    "displayColor": "#F2033A",
+    "logo": "/logos/ari.png"
+  },
+  {
+    "id": "ATL",
+    "slug": "atlanta-falcons",
+    "location": "Atlanta",
+    "name": "Falcons",
+    "displayName": "Atlanta Falcons",
+    "brandColor": "#A71930",
+    "displayColor": "#E13753",
+    "logo": "/logos/atl.png"
+  },
+  {
+    "id": "BAL",
+    "slug": "baltimore-ravens",
+    "location": "Baltimore",
+    "name": "Ravens",
+    "displayName": "Baltimore Ravens",
+    "brandColor": "#29126F",
+    "displayColor": "#8565E6",
+    "logo": "/logos/bal.png"
+  },
+  {
+    "id": "BUF",
+    "slug": "buffalo-bills",
+    "location": "Buffalo",
+    "name": "Bills",
+    "displayName": "Buffalo Bills",
+    "brandColor": "#00338D",
+    "displayColor": "#1F70FF",
+    "logo": "/logos/buf.png"
+  },
+  {
+    "id": "CAR",
+    "slug": "carolina-panthers",
+    "location": "Carolina",
+    "name": "Panthers",
+    "displayName": "Carolina Panthers",
+    "brandColor": "#0085CA",
+    "displayColor": "#0085CA",
+    "logo": "/logos/car.png"
+  },
+  {
+    "id": "CHI",
+    "slug": "chicago-bears",
+    "location": "Chicago",
+    "name": "Bears",
+    "displayName": "Chicago Bears",
+    "brandColor": "#0B1C3A",
+    "displayColor": "#3E77DA",
+    "logo": "/logos/chi.png"
+  },
+  {
+    "id": "CIN",
+    "slug": "cincinnati-bengals",
+    "location": "Cincinnati",
+    "name": "Bengals",
+    "displayName": "Cincinnati Bengals",
+    "brandColor": "#FB4F14",
+    "displayColor": "#FB4F14",
+    "logo": "/logos/cin.png"
+  },
+  {
+    "id": "CLE",
+    "slug": "cleveland-browns",
+    "location": "Cleveland",
+    "name": "Browns",
+    "displayName": "Cleveland Browns",
+    "brandColor": "#472A08",
+    "displayColor": "#B36A14",
+    "logo": "/logos/cle.png"
+  },
+  {
+    "id": "DAL",
+    "slug": "dallas-cowboys",
+    "location": "Dallas",
+    "name": "Cowboys",
+    "displayName": "Dallas Cowboys",
+    "brandColor": "#002A5C",
+    "displayColor": "#0074FF",
+    "logo": "/logos/dal.png"
+  },
+  {
+    "id": "DEN",
+    "slug": "denver-broncos",
+    "location": "Denver",
+    "name": "Broncos",
+    "displayName": "Denver Broncos",
+    "brandColor": "#0A2343",
+    "displayColor": "#2A79DF",
+    "logo": "/logos/den.png"
+  },
+  {
+    "id": "DET",
+    "slug": "detroit-lions",
+    "location": "Detroit",
+    "name": "Lions",
+    "displayName": "Detroit Lions",
+    "brandColor": "#0076B6",
+    "displayColor": "#0081C7",
+    "logo": "/logos/det.png"
+  },
+  {
+    "id": "GB",
+    "slug": "green-bay-packers",
+    "location": "Green Bay",
+    "name": "Packers",
+    "displayName": "Green Bay Packers",
+    "brandColor": "#204E32",
+    "displayColor": "#388958",
+    "logo": "/logos/gb.png"
+  },
+  {
+    "id": "HOU",
+    "slug": "houston-texans",
+    "location": "Houston",
+    "name": "Texans",
+    "displayName": "Houston Texans",
+    "brandColor": "#021018",
+    "displayColor": "#1081C1",
+    "logo": "/logos/hou.png"
+  },
+  {
+    "id": "IND",
+    "slug": "indianapolis-colts",
+    "location": "Indianapolis",
+    "name": "Colts",
+    "displayName": "Indianapolis Colts",
+    "brandColor": "#003B75",
+    "displayColor": "#0079F0",
+    "logo": "/logos/ind.png"
+  },
+  {
+    "id": "JAX",
+    "slug": "jacksonville-jaguars",
+    "location": "Jacksonville",
+    "name": "Jaguars",
+    "displayName": "Jacksonville Jaguars",
+    "brandColor": "#007487",
+    "displayColor": "#00889E",
+    "logo": "/logos/jax.png"
+  },
+  {
+    "id": "KC",
+    "slug": "kansas-city-chiefs",
+    "location": "Kansas City",
+    "name": "Chiefs",
+    "displayName": "Kansas City Chiefs",
+    "brandColor": "#E31837",
+    "displayColor": "#E92B48",
+    "logo": "/logos/kc.png"
+  },
+  {
+    "id": "LAC",
+    "slug": "los-angeles-chargers",
+    "location": "Los Angeles",
+    "name": "Chargers",
+    "displayName": "Los Angeles Chargers",
+    "brandColor": "#0080C6",
+    "displayColor": "#0080C6",
+    "logo": "/logos/lac.png"
+  },
+  {
+    "id": "LAR",
+    "slug": "los-angeles-rams",
+    "location": "Los Angeles",
+    "name": "Rams",
+    "displayName": "Los Angeles Rams",
+    "brandColor": "#003594",
+    "displayColor": "#2472FF",
+    "logo": "/logos/lar.png"
+  },
+  {
+    "id": "LV",
+    "slug": "las-vegas-raiders",
+    "location": "Las Vegas",
+    "name": "Raiders",
+    "displayName": "Las Vegas Raiders",
+    "brandColor": "#000000",
+    "displayColor": "#7A7A7A",
+    "logo": "/logos/lv.png"
+  },
+  {
+    "id": "MIA",
+    "slug": "miami-dolphins",
+    "location": "Miami",
+    "name": "Dolphins",
+    "displayName": "Miami Dolphins",
+    "brandColor": "#008E97",
+    "displayColor": "#008E97",
+    "logo": "/logos/mia.png"
+  },
+  {
+    "id": "MIN",
+    "slug": "minnesota-vikings",
+    "location": "Minnesota",
+    "name": "Vikings",
+    "displayName": "Minnesota Vikings",
+    "brandColor": "#4F2683",
+    "displayColor": "#9261D1",
+    "logo": "/logos/min.png"
+  },
+  {
+    "id": "NE",
+    "slug": "new-england-patriots",
+    "location": "New England",
+    "name": "Patriots",
+    "displayName": "New England Patriots",
+    "brandColor": "#002A5C",
+    "displayColor": "#0074FF",
+    "logo": "/logos/ne.png"
+  },
+  {
+    "id": "NO",
+    "slug": "new-orleans-saints",
+    "location": "New Orleans",
+    "name": "Saints",
+    "displayName": "New Orleans Saints",
+    "brandColor": "#D3BC8D",
+    "displayColor": "#D3BC8D",
+    "logo": "/logos/no.png"
+  },
+  {
+    "id": "NYG",
+    "slug": "new-york-giants",
+    "location": "New York",
+    "name": "Giants",
+    "displayName": "New York Giants",
+    "brandColor": "#003C7F",
+    "displayColor": "#0074F5",
+    "logo": "/logos/nyg.png"
+  },
+  {
+    "id": "NYJ",
+    "slug": "new-york-jets",
+    "location": "New York",
+    "name": "Jets",
+    "displayName": "New York Jets",
+    "brandColor": "#115740",
+    "displayColor": "#1C8D68",
+    "logo": "/logos/nyj.png"
+  },
+  {
+    "id": "PHI",
+    "slug": "philadelphia-eagles",
+    "location": "Philadelphia",
+    "name": "Eagles",
+    "displayName": "Philadelphia Eagles",
+    "brandColor": "#06424D",
+    "displayColor": "#0C869C",
+    "logo": "/logos/phi.png"
+  },
+  {
+    "id": "PIT",
+    "slug": "pittsburgh-steelers",
+    "location": "Pittsburgh",
+    "name": "Steelers",
+    "displayName": "Pittsburgh Steelers",
+    "brandColor": "#000000",
+    "displayColor": "#FFB612",
+    "logo": "/logos/pit.png"
+  },
+  {
+    "id": "SEA",
+    "slug": "seattle-seahawks",
+    "location": "Seattle",
+    "name": "Seahawks",
+    "displayName": "Seattle Seahawks",
+    "brandColor": "#002A5C",
+    "displayColor": "#0074FF",
+    "logo": "/logos/sea.png"
+  },
+  {
+    "id": "SF",
+    "slug": "san-francisco-49ers",
+    "location": "San Francisco",
+    "name": "49ers",
+    "displayName": "San Francisco 49ers",
+    "brandColor": "#AA0000",
+    "displayColor": "#F50000",
+    "logo": "/logos/sf.png"
+  },
+  {
+    "id": "TB",
+    "slug": "tampa-bay-buccaneers",
+    "location": "Tampa Bay",
+    "name": "Buccaneers",
+    "displayName": "Tampa Bay Buccaneers",
+    "brandColor": "#BD1C36",
+    "displayColor": "#E13753",
+    "logo": "/logos/tb.png"
+  },
+  {
+    "id": "TEN",
+    "slug": "tennessee-titans",
+    "location": "Tennessee",
+    "name": "Titans",
+    "displayName": "Tennessee Titans",
+    "brandColor": "#4495D2",
+    "displayColor": "#4495D2",
+    "logo": "/logos/ten.png"
+  },
+  {
+    "id": "WSH",
+    "slug": "washington-commanders",
+    "location": "Washington",
+    "name": "Commanders",
+    "displayName": "Washington Commanders",
+    "brandColor": "#5A1414",
+    "displayColor": "#D64747",
+    "logo": "/logos/wsh.png"
+  }
+]

@@ -1,35 +1,27 @@
-import type { Metadata } from "next";
-import { Archivo, IBM_Plex_Mono, Newsreader } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import { BottomNav } from "@/components/nav/bottom-nav";
 import "./globals.css";
 
-// Display face. CLAUDE.md §10 asks for "Archivo Condensed", which is not a
-// family on Google Fonts — Archivo is a single variable font with a width axis
-// (wdth, 62–125). We load that axis and condense with `font-stretch` via the
-// `condensed` utility in globals.css.
-const archivo = Archivo({
-  variable: "--font-archivo",
+// One family for everything — UI, data and long reads. A single modern sans is
+// most of what separates "app" from "document", which was the problem with the
+// previous three-face call-sheet treatment.
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  axes: ["wdth"],
-});
-
-// Body face. Long explanations are the whole product, so this is the one that
-// has to be comfortable to read.
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
-  subsets: ["latin"],
-});
-
-// Data face. Anything tabular: spreads, records, dates.
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Field guide",
-  description: "Why the NFL does what it does, explained without assuming you already know.",
+  description:
+    "Why the NFL does what it does, explained without assuming you already know.",
+};
+
+// Paints the browser chrome and the iOS status bar to match the app, so a
+// home-screen launch doesn't flash a white bar above a black page.
+export const viewport: Viewport = {
+  themeColor: "#0A0C0B",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -38,11 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${archivo.variable} ${newsreader.variable} ${plexMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className={`${inter.variable} h-full`}>
+      <body className="flex min-h-full flex-col">
         {children}
         <BottomNav />
       </body>

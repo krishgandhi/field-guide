@@ -21,13 +21,13 @@ import remarkGfm from "remark-gfm";
 const components = {
   h2: (props: React.ComponentProps<"h2">) => (
     <h2
-      className="font-display condensed mt-10 mb-3 text-xl font-semibold uppercase tracking-wide text-graphite"
+      className="font-display condensed mt-10 mb-3 text-xl font-semibold uppercase tracking-wide text-fg"
       {...props}
     />
   ),
   h3: (props: React.ComponentProps<"h3">) => (
     <h3
-      className="font-display condensed mt-8 mb-2 text-lg font-semibold text-graphite"
+      className="font-display condensed mt-8 mb-2 text-lg font-semibold text-fg"
       {...props}
     />
   ),
@@ -51,22 +51,22 @@ const components = {
   ),
   blockquote: (props: React.ComponentProps<"blockquote">) => (
     <blockquote
-      className="my-5 border-l-2 border-amber pl-4 italic text-graphite/80"
+      className="my-5 border-l-2 border-amber pl-4 italic text-fg/80"
       {...props}
     />
   ),
   hr: (props: React.ComponentProps<"hr">) => (
-    <hr className="my-8 border-graphite/15" {...props} />
+    <hr className="my-8 border-fg/15" {...props} />
   ),
   code: (props: React.ComponentProps<"code">) => (
     <code
-      className="font-data rounded bg-graphite/8 px-1 py-0.5 text-[0.9em]"
+      className="font-data rounded bg-fg/8 px-1 py-0.5 text-[0.9em]"
       {...props}
     />
   ),
   pre: (props: React.ComponentProps<"pre">) => (
     <pre
-      className="font-data my-5 overflow-x-auto rounded bg-turf p-4 text-sm text-chalk"
+      className="font-data my-5 overflow-x-auto rounded bg-surface p-4 text-sm text-fg"
       {...props}
     />
   ),
@@ -79,12 +79,12 @@ const components = {
   ),
   th: (props: React.ComponentProps<"th">) => (
     <th
-      className="border-b border-graphite/30 px-2 py-1.5 text-left font-semibold uppercase tracking-wide"
+      className="border-b border-fg/30 px-2 py-1.5 text-left font-semibold uppercase tracking-wide"
       {...props}
     />
   ),
   td: (props: React.ComponentProps<"td">) => (
-    <td className="border-b border-graphite/15 px-2 py-1.5 align-top" {...props} />
+    <td className="border-b border-fg/15 px-2 py-1.5 align-top" {...props} />
   ),
 };
 

@@ -2,25 +2,28 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { BookOpen, CalendarDays, Repeat2, Shield, Tv } from "lucide-react";
 
 /**
  * Bottom tab bar.
  *
- * Bottom rather than top because §10 says the phone is the primary device — he
- * reads this on transit and in bars, one-handed, so navigation belongs at thumb
- * height. This is a client component only because it needs usePathname to know
- * which tab is active.
+ * Bottom rather than top because §10 makes the phone the primary device — he
+ * reads this on transit and in bars, one-handed, so navigation sits at thumb
+ * height. Client component solely for usePathname.
  *
- * Tap targets are 56px tall, comfortably over §10's 44px floor, and the bar
- * pads for the iPhone home indicator via safe-area insets.
+ * Icons because "more intuitive" was an explicit ask: at a glance a shield and
+ * a TV separate faster than two words in the same weight and size.
+ *
+ * Tap targets are 56px tall against §10's 44px floor, and the bar pads for the
+ * iPhone home indicator with safe-area insets.
  */
 
 const TABS = [
-  { href: "/", label: "This week" },
-  { href: "/games", label: "Games" },
-  { href: "/moves", label: "Moves" },
-  { href: "/teams", label: "Teams" },
-  { href: "/glossary", label: "Glossary" },
+  { href: "/", label: "This week", Icon: CalendarDays },
+  { href: "/games", label: "Games", Icon: Tv },
+  { href: "/moves", label: "Moves", Icon: Repeat2 },
+  { href: "/teams", label: "Teams", Icon: Shield },
+  { href: "/glossary", label: "Glossary", Icon: BookOpen },
 ];
 
 export function BottomNav() {
@@ -29,32 +32,25 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Main"
-      className="sticky bottom-0 z-40 border-t-2 border-graphite/80 bg-turf"
+      className="sticky bottom-0 z-40 border-t border-line bg-ink/95 backdrop-blur"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="mx-auto flex w-full max-w-2xl">
-        {TABS.map((tab) => {
+        {TABS.map(({ href, label, Icon }) => {
           const active =
-            tab.href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(tab.href);
+            href === "/" ? pathname === "/" : pathname.startsWith(href);
 
           return (
-            <li key={tab.href} className="flex-1">
+            <li key={href} className="flex-1">
               <Link
-                href={tab.href}
+                href={href}
                 aria-current={active ? "page" : undefined}
-                className={`font-display condensed flex min-h-14 flex-col items-center justify-center gap-0.5 px-1 text-center text-[0.7rem] uppercase leading-tight tracking-wide transition-colors ${
-                  active
-                    ? "text-chalk"
-                    : "text-chalk/55 hover:text-chalk/80"
+                className={`flex min-h-14 flex-col items-center justify-center gap-1 px-1 text-center text-[0.65rem] font-medium leading-none transition-colors ${
+                  active ? "text-amber" : "text-fg-dim hover:text-fg"
                 }`}
               >
-                <span
-                  aria-hidden
-                  className={`h-[3px] w-6 ${active ? "bg-amber" : "bg-transparent"}`}
-                />
-                {tab.label}
+                <Icon size={20} strokeWidth={active ? 2.4 : 1.8} aria-hidden />
+                {label}
               </Link>
             </li>
           );

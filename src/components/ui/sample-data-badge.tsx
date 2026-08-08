@@ -9,8 +9,8 @@
  */
 export function SampleDataBadge({ note }: { note?: string }) {
   return (
-    <p className="font-data mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 border-l-2 border-amber bg-amber/10 py-1.5 pl-2 pr-2 text-[0.65rem] uppercase tracking-[0.15em] text-graphite/70">
-      <span className="font-semibold text-graphite">Sample data</span>
+    <p className="font-data mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 border-l-2 border-amber bg-amber/10 py-1.5 pl-2 pr-2 text-[0.65rem] uppercase tracking-[0.15em] text-fg/70">
+      <span className="font-semibold text-fg">Sample data</span>
       {note ? <span className="normal-case tracking-normal">{note}</span> : null}
     </p>
   );

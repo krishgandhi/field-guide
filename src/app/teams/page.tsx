@@ -26,20 +26,20 @@ export default function TeamsPage() {
     <PageShell>
       <PageHeader kicker="All 32" title="Teams" />
 
-      <p className="font-data mt-3 text-[0.65rem] uppercase tracking-[0.15em] text-graphite/55">
+      <p className="font-data mt-3 text-[0.65rem] uppercase tracking-[0.15em] text-fg/55">
         {written} of {TEAMS.length} written up
       </p>
 
       {ORDER.map(([conference, division]) => (
         <section key={`${conference}-${division}`}>
-          <h2 className="font-display condensed mt-7 border-b border-graphite/25 pb-1 text-sm font-semibold uppercase tracking-[0.15em] text-graphite/70">
+          <h2 className="font-display condensed mt-7 border-b border-fg/25 pb-1 text-sm font-semibold uppercase tracking-[0.15em] text-fg/70">
             {conference} {division}
           </h2>
           <ul>
             {TEAMS.filter(
               (t) => t.conference === conference && t.division === division,
             ).map((team) => (
-              <li key={team.id} className="border-b border-graphite/15">
+              <li key={team.id} className="border-b border-fg/15">
                 <Link
                   href={`/teams/${team.slug}`}
                   className="flex min-h-14 items-center justify-between gap-3 py-2.5 hover:text-pencil"
@@ -49,12 +49,12 @@ export default function TeamsPage() {
                       {team.city} {team.name}
                     </span>
                     {team.quarterback ? (
-                      <span className="block text-sm leading-snug text-graphite/70">
+                      <span className="block text-sm leading-snug text-fg/70">
                         {team.quarterback}
                       </span>
                     ) : null}
                   </span>
-                  <span className="font-data shrink-0 text-[0.65rem] uppercase tracking-[0.15em] text-graphite/45">
+                  <span className="font-data shrink-0 text-[0.65rem] uppercase tracking-[0.15em] text-fg/45">
                     {team.blurb ? team.id : "unwritten"}
                   </span>
                 </Link>
