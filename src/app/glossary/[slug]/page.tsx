@@ -52,7 +52,7 @@ export default async function GlossaryEntryPage({ params }: PageProps) {
         </header>
 
         <div className="mt-5 border-t border-line pt-1">
-          <MdxContent source={body} />
+          <MdxContent source={body} currentSlug={slug} />
         </div>
 
         {frontmatter.aliases.length > 0 ? (

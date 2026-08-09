@@ -1,5 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import { GlossaryTerm } from "@/components/glossary-term";
+import { rehypeGlossaryLinks } from "@/lib/glossary/rehype-glossary-links";
 
 /**
  * The one place MDX gets turned into JSX.
@@ -39,12 +41,36 @@ const components = {
       {...props}
     />
   ),
-  a: (props: React.ComponentProps<"a">) => (
-    <a
-      className="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber"
-      {...props}
-    />
-  ),
+  // Anchors carrying data-glossary were injected by the rehype plugin, not
+  // written by hand. They become the interactive term; everything else stays a
+  // plain link.
+  a: ({
+    "data-glossary": slug,
+    "data-title": title,
+    "data-summary": summary,
+    children,
+    ...props
+  }: React.ComponentProps<"a"> & {
+    "data-glossary"?: string;
+    "data-title"?: string;
+    "data-summary"?: string;
+  }) => {
+    if (slug && title && summary) {
+      return (
+        <GlossaryTerm slug={slug} title={title} summary={summary}>
+          {children}
+        </GlossaryTerm>
+      );
+    }
+    return (
+      <a
+        className="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber"
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
   strong: (props: React.ComponentProps<"strong">) => (
     <strong className="font-semibold text-fg" {...props} />
   ),
@@ -87,7 +113,14 @@ const components = {
   ),
 };
 
-export function MdxContent({ source }: { source: string }) {
+export function MdxContent({
+  source,
+  /** Slug of the entry being rendered, so it never links to itself (§6a). */
+  currentSlug,
+}: {
+  source: string;
+  currentSlug?: string;
+}) {
   return (
     <MDXRemote
       source={source}
@@ -96,7 +129,10 @@ export function MdxContent({ source }: { source: string }) {
         mdxOptions: {
           // Tables and strikethrough. §7 and §8 are both tabular.
           remarkPlugins: [remarkGfm],
-          rehypePlugins: [],
+          // Tuple form, not rehypeGlossaryLinks({...}). unified treats a bare
+          // function in this list as an attacher and calls it with no
+          // arguments; passing [attacher, options] is how it gets them.
+          rehypePlugins: [[rehypeGlossaryLinks, { currentSlug }]],
         },
       }}
     />
