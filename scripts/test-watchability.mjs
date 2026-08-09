@@ -87,6 +87,20 @@ for (const g of [tight, blowout, div, rivalry, otherGreat]) {
 }
 check("every reason is a plain sentence with no jargon", bad.length === 0, bad.join(" | "));
 
+// --- a stored (Claude-written) reason wins over the template -------------
+const withStored = game({ spread: 2, reason: "A stored sentence written by the model." });
+const stored = watchability(withStored, 1);
+check(
+  "stored reason is used instead of the template",
+  stored.reason === "A stored sentence written by the model.",
+  `"${stored.reason}"`,
+);
+check(
+  "...but the score is still computed from the factors, not the prose",
+  stored.score === watchability(game({ spread: 2 }), 1).score,
+  `${stored.score}`,
+);
+
 // --- a game with no posted line still scores and explains itself ---------
 const noLine = game({ spread: null, favourite: null });
 const nl = watchability(noLine, 1);

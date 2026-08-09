@@ -24,6 +24,12 @@ const gameSchema = z.object({
   broadcast: z.string().nullable(),
   venue: z.string().nullable(),
   neutralSite: z.boolean(),
+  /**
+   * Claude-written "why watch this", generated once by the daily job and
+   * cached here (§13). Absent when the model wasn't run or its sentence failed
+   * validation — the deterministic template covers that game instead.
+   */
+  reason: z.string().optional(),
 });
 
 const injurySchema = z.object({

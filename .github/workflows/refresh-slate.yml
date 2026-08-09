@@ -35,10 +35,24 @@ jobs:
         with:
           node-version: "24"
 
-      # No npm install: the fetch script uses only Node builtins, which keeps
-      # the job fast and means a broken dependency can't stop a data refresh.
+      # No npm install for the fetch: it uses only Node builtins, so a broken
+      # dependency can never stop a data refresh.
       - name: Fetch slate
         run: node scripts/fetch-slate.mjs
+
+      # Only the prose step needs dependencies.
+      - name: Install
+        run: npm ci
+
+      # continue-on-error on purpose: if Claude is unreachable, the key is
+      # missing, or a sentence fails validation, the slate is already correct
+      # and the app falls back to deterministic templates. Losing nice prose is
+      # cosmetic; losing the schedule is not.
+      - name: Write reasons
+        run: npm run write:reasons
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Commit if changed
         run: |
