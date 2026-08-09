@@ -36,21 +36,25 @@ export type Flag = {
   exportedAt: string | null;
 };
 
-const CONTENT_ROUTES = [
-  "glossary",
-  "positions",
-  "teams",
-  "moves",
-  "calendar",
-  "rivalries",
-];
+/**
+ * Content types that actually have MDX files on disk today.
+ *
+ * Deliberately NOT the full list from §5. The first real flag came from a
+ * /moves page and confidently reported its source as
+ * content/moves/2026-06-garrett-to-rams.mdx — a file that does not exist,
+ * because move text still lives in src/lib/mock/moves.ts. Naming a file that
+ * isn't there sends me editing nothing.
+ *
+ * Add a type here when its content directory gains real files.
+ */
+const ROUTES_WITH_FILES = ["glossary"];
 
-/** /glossary/dead-money → content/glossary/dead-money.mdx */
+/** /glossary/dead-money → content/glossary/dead-money.mdx, or null if unknown. */
 export function sourceFileFor(path: string): string | null {
   const parts = path.split("/").filter(Boolean);
   if (parts.length !== 2) return null;
   const [type, slug] = parts;
-  return CONTENT_ROUTES.includes(type) ? `content/${type}/${slug}.mdx` : null;
+  return ROUTES_WITH_FILES.includes(type) ? `content/${type}/${slug}.mdx` : null;
 }
 
 function read(): Flag[] {

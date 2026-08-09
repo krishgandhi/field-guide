@@ -15,6 +15,7 @@ import { GAMES } from "@/lib/mock/games";
 import { MOVES } from "@/lib/mock/moves";
 import { TEAMS, getTeam } from "@/lib/mock/teams";
 import { teamColor, teamLogo } from "@/lib/teams";
+import { createExplainer } from "@/lib/glossary/explain";
 
 export const dynamicParams = false;
 
@@ -50,6 +51,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
   const color = teamColor(team.id);
   const nextGame = GAMES.find((g) => g.home === team.id || g.away === team.id);
   const teamMoves = MOVES.filter((m) => m.teams.includes(team.id));
+  const explain = createExplainer();
 
   return (
     <PageShell flaggable>
@@ -92,13 +94,13 @@ export default async function TeamDetailPage({ params }: PageProps) {
       {team.blurb ? (
         <>
           <p className="mt-5 text-[1.05rem] leading-relaxed text-fg">
-            {team.blurb}
+            {explain(team.blurb)}
           </p>
 
           <SectionHeader title="One thing to know" />
           <Card tone="amber">
             <p className="text-sm leading-relaxed text-fg">
-              {team.oneThingToKnow}
+              {explain(team.oneThingToKnow)}
             </p>
           </Card>
         </>

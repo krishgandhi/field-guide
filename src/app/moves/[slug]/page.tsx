@@ -10,6 +10,7 @@ import {
   SectionHeader,
 } from "@/components/ui/page-header";
 import { MOVES, getMove } from "@/lib/mock/moves";
+import { createExplainer } from "@/lib/glossary/explain";
 import { teamLogo, teamName } from "@/lib/teams";
 
 export const dynamicParams = false;
@@ -38,6 +39,9 @@ export default async function MoveDetailPage({ params }: PageProps) {
   const move = getMove(slug);
   if (!move) notFound();
 
+  // One explainer for the whole page so a term links on first appearance only.
+  const explain = createExplainer();
+
   return (
     <PageShell flaggable>
       <PageHeader backHref="/moves" backLabel="Moves" title={move.headline} />
@@ -65,7 +69,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
       </div>
 
       <p className="mt-4 text-[1.05rem] leading-relaxed text-fg">
-        {move.soWhat}
+        {explain(move.soWhat)}
       </p>
 
       <SampleDataBadge note="Real event. The scores below are judgement calls." />
@@ -81,7 +85,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
                   <ScoreMeter value={axis.score} label={axis.axis} />
                 </div>
                 <p className="mt-1.5 text-sm leading-snug text-fg-dim">
-                  {axis.note}
+                  {explain(axis.note)}
                 </p>
               </Card>
             ))}
