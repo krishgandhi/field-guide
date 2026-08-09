@@ -11,7 +11,7 @@ import {
   PageShell,
   SectionHeader,
 } from "@/components/ui/page-header";
-import { GAMES } from "@/lib/mock/games";
+import { SLATE } from "@/lib/slate";
 import { MOVES } from "@/lib/mock/moves";
 import { TEAMS, getTeam } from "@/lib/mock/teams";
 import { teamColor, teamLogo } from "@/lib/teams";
@@ -49,7 +49,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
 
   const logo = teamLogo(team.id);
   const color = teamColor(team.id);
-  const nextGame = GAMES.find((g) => g.home === team.id || g.away === team.id);
+  const nextGame = SLATE.games.find((g) => g.home === team.id || g.away === team.id);
   const teamMoves = MOVES.filter((m) => m.teams.includes(team.id));
   const explain = createExplainer();
 
@@ -123,9 +123,10 @@ export default async function TeamDetailPage({ params }: PageProps) {
 
       {nextGame ? (
         <>
-          <SectionHeader title="Next game" aside="Week 1" />
+          <SectionHeader title="Next game" aside={`Week ${SLATE.week}`} />
           <GameCard
             game={nextGame}
+            week={SLATE.week}
             timeLabel={fmt.format(new Date(nextGame.kickoff))}
           />
         </>

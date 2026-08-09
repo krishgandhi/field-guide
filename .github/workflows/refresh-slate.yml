@@ -1,0 +1,55 @@
+name: Refresh slate
+
+# Pulls the week's games, spreads and injuries from ESPN and commits the result.
+# The commit triggers the normal Vercel deploy, so pages stay fully static and
+# never call ESPN at request time (CLAUDE.md §4).
+#
+# GitHub Actions rather than Vercel Cron: Vercel's Hobby plan caps cron at once
+# per day and rejects more frequent expressions at deploy time. This also keeps
+# every data change visible as a git diff.
+
+on:
+  schedule:
+    # 11:00 UTC daily — about 7am Eastern, before the 1pm Sunday games and
+    # after Wednesday/Thursday/Friday injury reports have landed.
+    - cron: "0 11 * * *"
+  # So the pipeline can be proven before anyone relies on the schedule.
+  workflow_dispatch:
+
+# Least privilege: the job pushes one file and touches nothing else.
+permissions:
+  contents: write
+
+# A slow run must never overlap the next day's.
+concurrency:
+  group: refresh-slate
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # No npm install: the fetch script uses only Node builtins, which keeps
+      # the job fast and means a broken dependency can't stop a data refresh.
+      - name: Fetch slate
+        run: node scripts/fetch-slate.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- src/data/slate.json; then
+            echo "No change — nothing to commit."
+            exit 0
+          fi
+          git config user.name  "field-guide bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/data/slate.json
+          # "data:" prefix so these filter out of the history that should stay
+          # readable as a record of actual work (§3).
+          git commit -m "data: refresh slate ($(date -u +%Y-%m-%d))"
+          git push

@@ -2,11 +2,12 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { GameCard } from "@/components/game-card";
 import { QueueLink } from "@/components/flag/queue-link";
-import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card, PageShell, SectionHeader } from "@/components/ui/page-header";
 import { getAllEntries } from "@/lib/content";
-import { CALENDAR, CURRENT_WEEK, slateInViewingOrder } from "@/lib/mock/games";
+import { CALENDAR } from "@/lib/mock/games";
+import { SLATE } from "@/lib/slate";
+import { sortForViewing } from "@/lib/watchability";
 import { MOVES_BY_BIGNESS } from "@/lib/mock/moves";
 
 const fmt = new Intl.DateTimeFormat("en-US", {
@@ -24,7 +25,7 @@ const fmt = new Intl.DateTimeFormat("en-US", {
  * on, the biggest recent move, one date coming up.
  */
 export default function ThisWeekPage() {
-  const slate = slateInViewingOrder();
+  const slate = sortForViewing(SLATE.games, SLATE.week);
   const billsGame = slate.find((g) => g.home === "BUF" || g.away === "BUF");
   const alsoWatch = slate.filter((g) => g !== billsGame).slice(0, 2);
   const topMove = MOVES_BY_BIGNESS[0];
@@ -35,14 +36,12 @@ export default function ThisWeekPage() {
     <PageShell>
       <header>
         <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
-          Week {CURRENT_WEEK}
+          Week {SLATE.week}
         </p>
         <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
           This week
         </h1>
       </header>
-
-      <SampleDataBadge note="Real matchups and dates. Ratings are placeholders." />
 
       {/* Renders only when there's something waiting (§6b). */}
       <QueueLink />
@@ -52,6 +51,7 @@ export default function ThisWeekPage() {
           <SectionHeader title="Your game" aside="Bills" />
           <GameCard
             game={billsGame}
+            week={SLATE.week}
             timeLabel={fmt.format(new Date(billsGame.kickoff))}
             highlight
           />
@@ -64,6 +64,7 @@ export default function ThisWeekPage() {
           <GameCard
             key={game.id}
             game={game}
+            week={SLATE.week}
             timeLabel={fmt.format(new Date(game.kickoff))}
           />
         ))}

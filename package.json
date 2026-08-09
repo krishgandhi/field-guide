@@ -10,7 +10,9 @@
     "shots": "node scripts/screenshots.mjs",
     "shots:glossary": "node scripts/shot-glossary-interactions.mjs",
     "fetch:teams": "node scripts/fetch-teams.mjs",
-    "test:flags": "node scripts/test-flag-queue.mjs"
+    "test:flags": "node scripts/test-flag-queue.mjs",
+    "fetch:slate": "node scripts/fetch-slate.mjs",
+    "test:watchability": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/test-watchability.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
