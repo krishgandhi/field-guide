@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { GameCard } from "@/components/game-card";
+import { QueueLink } from "@/components/flag/queue-link";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card, PageShell, SectionHeader } from "@/components/ui/page-header";
@@ -42,6 +43,9 @@ export default function ThisWeekPage() {
       </header>
 
       <SampleDataBadge note="Real matchups and dates. Ratings are placeholders." />
+
+      {/* Renders only when there's something waiting (§6b). */}
+      <QueueLink />
 
       {billsGame ? (
         <>

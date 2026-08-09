@@ -38,7 +38,7 @@ export default async function GlossaryEntryPage({ params }: PageProps) {
   const { frontmatter, body } = entry;
 
   return (
-    <PageShell>
+    <PageShell flaggable>
       <BackLink href="/glossary" label="Glossary" />
 
       <article>

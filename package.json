@@ -9,7 +9,8 @@
     "lint": "eslint",
     "shots": "node scripts/screenshots.mjs",
     "shots:glossary": "node scripts/shot-glossary-interactions.mjs",
-    "fetch:teams": "node scripts/fetch-teams.mjs"
+    "fetch:teams": "node scripts/fetch-teams.mjs",
+    "test:flags": "node scripts/test-flag-queue.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

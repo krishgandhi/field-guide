@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { BottomNav } from "@/components/nav/bottom-nav";
+import { FlagSelection } from "@/components/flag/flag-selection";
 import "./globals.css";
 
 // One family for everything — UI, data and long reads. A single modern sans is
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         {children}
+        <FlagSelection />
         <BottomNav />
       </body>
     </html>

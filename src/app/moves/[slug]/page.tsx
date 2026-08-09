@@ -39,7 +39,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
   if (!move) notFound();
 
   return (
-    <PageShell>
+    <PageShell flaggable>
       <PageHeader backHref="/moves" backLabel="Moves" title={move.headline} />
 
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">

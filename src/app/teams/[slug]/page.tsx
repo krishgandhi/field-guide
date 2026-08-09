@@ -52,7 +52,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
   const teamMoves = MOVES.filter((m) => m.teams.includes(team.id));
 
   return (
-    <PageShell>
+    <PageShell flaggable>
       <BackLink href="/teams" label="Teams" />
 
       {/* The crest does the identifying; the colour is a wash behind it,

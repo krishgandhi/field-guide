@@ -7,9 +7,23 @@ import { ChevronLeft } from "lucide-react";
  * like one app rather than several pages.
  */
 
-export function PageShell({ children }: { children: React.ReactNode }) {
+export function PageShell({
+  children,
+  /**
+   * Opts this page's prose into the flag queue (§6b) — selecting text inside
+   * offers "Flag this". A prop rather than a wrapper div so pages don't grow
+   * an extra layout element just to carry an attribute.
+   */
+  flaggable,
+}: {
+  children: React.ReactNode;
+  flaggable?: boolean;
+}) {
   return (
-    <div className="mx-auto w-full max-w-2xl flex-1 px-4 pb-10 pt-8 sm:px-6">
+    <div
+      data-flaggable={flaggable ? "" : undefined}
+      className="mx-auto w-full max-w-2xl flex-1 px-4 pb-10 pt-8 sm:px-6"
+    >
       {children}
     </div>
   );
