@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageHeader, PageShell } from "@/components/ui/page-header";
 import { getAllEntries } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -8,55 +9,41 @@ export const metadata: Metadata = {
 };
 
 export default function GlossaryIndexPage() {
-  // Reads frontmatter only — no MDX gets compiled to build this list, so it
+  // Reads frontmatter only — no MDX is compiled to build this list, so it
   // stays cheap however many entries there are.
   const entries = getAllEntries("glossary").sort((a, b) =>
     a.title.localeCompare(b.title),
   );
 
   return (
-    <div className="mx-auto w-full max-w-2xl flex-1 px-5 py-8 sm:px-8 sm:py-12">
-      <Link
-        href="/"
-        className="font-data inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-fg/60 hover:text-pencil"
-      >
-        ← Field guide
-      </Link>
-
-      <header className="mt-2 border-b-2 border-fg/80 pb-4">
-        <h1 className="font-display condensed text-4xl font-semibold text-fg sm:text-5xl">
-          Glossary
-        </h1>
-        <p className="font-data mt-2 text-xs uppercase tracking-[0.2em] text-fg/60">
-          {entries.length} {entries.length === 1 ? "entry" : "entries"}
-        </p>
-      </header>
+    <PageShell>
+      <PageHeader kicker={`${entries.length} terms`} title="Glossary" />
 
       {entries.length === 0 ? (
         // §10: empty states are invitations, not apologies.
-        <p className="mt-8 text-lg leading-relaxed">
+        <p className="mt-5 leading-relaxed text-fg-dim">
           Nothing here yet. The first entries go in{" "}
-          <code className="font-data text-[0.9em]">content/glossary/</code>.
+          <code className="rounded bg-surface-2 px-1 py-0.5 text-[0.85em]">
+            content/glossary/
+          </code>
+          .
         </p>
       ) : (
-        <ul className="mt-2">
+        <div className="mt-5 space-y-2">
           {entries.map((entry) => (
-            <li key={entry.slug} className="border-b border-fg/15">
-              <Link
-                href={`/glossary/${entry.slug}`}
-                className="block min-h-14 py-4 hover:text-pencil"
-              >
-                <span className="font-display condensed text-xl font-semibold">
-                  {entry.title}
-                </span>
-                <span className="mt-0.5 block leading-snug text-fg/75">
-                  {entry.summary}
-                </span>
-              </Link>
-            </li>
+            <Link
+              key={entry.slug}
+              href={`/glossary/${entry.slug}`}
+              className="block rounded-2xl border border-line bg-surface px-4 py-3.5 transition-colors hover:border-fg/20"
+            >
+              <h2 className="text-base font-semibold text-fg">{entry.title}</h2>
+              <p className="mt-0.5 text-sm leading-snug text-fg-dim">
+                {entry.summary}
+              </p>
+            </Link>
           ))}
-        </ul>
+        </div>
       )}
-    </div>
+    </PageShell>
   );
 }

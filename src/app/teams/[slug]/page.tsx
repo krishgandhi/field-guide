@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ScoreMeter } from "@/components/ui/score-meter";
-import { PageHeader, PageShell, SectionHeader } from "@/components/ui/page-header";
+import { ChevronRight } from "lucide-react";
+import { GameCard } from "@/components/game-card";
+import { BignessPill } from "@/components/ui/score-meter";
+import {
+  BackLink,
+  Card,
+  PageShell,
+  SectionHeader,
+} from "@/components/ui/page-header";
 import { GAMES } from "@/lib/mock/games";
 import { MOVES } from "@/lib/mock/moves";
-import { TEAMS, getTeam, shortName } from "@/lib/mock/teams";
+import { TEAMS, getTeam } from "@/lib/mock/teams";
+import { teamColor, teamLogo } from "@/lib/teams";
 
 export const dynamicParams = false;
 
@@ -14,6 +23,13 @@ export function generateStaticParams() {
 }
 
 type PageProps = { params: Promise<{ slug: string }> };
+
+const fmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "short",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "America/New_York",
+});
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -30,74 +46,106 @@ export default async function TeamDetailPage({ params }: PageProps) {
   const team = getTeam(slug);
   if (!team) notFound();
 
+  const logo = teamLogo(team.id);
+  const color = teamColor(team.id);
   const nextGame = GAMES.find((g) => g.home === team.id || g.away === team.id);
   const teamMoves = MOVES.filter((m) => m.teams.includes(team.id));
 
   return (
     <PageShell>
-      <PageHeader
-        backHref="/teams"
-        backLabel="Teams"
-        kicker={`${team.conference} ${team.division}`}
-        title={`${team.city} ${team.name}`}
-      />
+      <BackLink href="/teams" label="Teams" />
+
+      {/* The crest does the identifying; the colour is a wash behind it,
+          because lifted brand colours can't tell four navy teams apart. */}
+      <header className="relative overflow-hidden rounded-2xl border border-line p-5">
+        <span
+          aria-hidden
+          className="absolute inset-0 opacity-[0.18]"
+          style={{
+            background: `radial-gradient(120% 100% at 0% 0%, ${color}, transparent 70%)`,
+          }}
+        />
+        <div className="relative flex items-center gap-4">
+          {logo ? (
+            <Image
+              src={logo}
+              alt=""
+              width={56}
+              height={56}
+              className="h-14 w-14 shrink-0 object-contain"
+            />
+          ) : null}
+          <div className="min-w-0">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+              {team.conference} {team.division}
+            </p>
+            <h1 className="text-2xl font-bold leading-tight tracking-tight text-fg">
+              {team.city} {team.name}
+            </h1>
+            {team.quarterback ? (
+              <p className="mt-0.5 text-sm text-fg-dim">{team.quarterback}</p>
+            ) : null}
+          </div>
+        </div>
+      </header>
 
       {team.blurb ? (
         <>
-          <p className="mt-4 text-lg leading-relaxed">{team.blurb}</p>
+          <p className="mt-5 text-[1.05rem] leading-relaxed text-fg">
+            {team.blurb}
+          </p>
 
           <SectionHeader title="One thing to know" />
-          <p className="mt-2 border-l-2 border-amber py-1 pl-3 leading-relaxed">
-            {team.oneThingToKnow}
-          </p>
+          <Card tone="amber">
+            <p className="text-sm leading-relaxed text-fg">
+              {team.oneThingToKnow}
+            </p>
+          </Card>
         </>
       ) : (
         /* §10: empty states are invitations, not apologies. */
-        <div className="mt-6 border-l-2 border-fg/30 py-2 pl-3">
-          <p className="leading-relaxed text-fg/80">
+        <Card className="mt-5">
+          <p className="text-sm leading-relaxed text-fg-dim">
             Not written up yet. Buffalo is the only team with a real write-up so
             far — the rest are deliberately blank rather than filled with guesses.
           </p>
           <Link
             href="/teams/buffalo-bills"
-            className="font-data mt-2 inline-flex min-h-11 items-center text-xs uppercase tracking-[0.15em] text-pencil hover:underline"
+            className="mt-3 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-amber hover:underline"
           >
-            See a finished one →
+            See a finished one
+            <ChevronRight size={15} aria-hidden />
           </Link>
-        </div>
+        </Card>
       )}
 
       {nextGame ? (
         <>
           <SectionHeader title="Next game" aside="Week 1" />
-          <div className="mt-2 flex items-baseline justify-between gap-3 py-2">
-            <p className="font-display condensed text-xl font-semibold">
-              {shortName(nextGame.away)} at {shortName(nextGame.home)}
-            </p>
-            <ScoreMeter value={nextGame.watchability} label="Worth watching" />
-          </div>
-          <p className="leading-snug text-fg/80">{nextGame.reason}</p>
+          <GameCard
+            game={nextGame}
+            timeLabel={fmt.format(new Date(nextGame.kickoff))}
+          />
         </>
       ) : null}
 
       {teamMoves.length > 0 ? (
         <>
           <SectionHeader title="Recent moves" />
-          <ul className="mt-1">
+          <div className="space-y-2.5">
             {teamMoves.map((move) => (
-              <li key={move.slug} className="border-b border-fg/15">
-                <Link
-                  href={`/moves/${move.slug}`}
-                  className="flex min-h-14 items-center justify-between gap-3 py-3 hover:text-pencil"
-                >
-                  <span className="font-display condensed text-base font-semibold leading-tight">
-                    {move.headline}
-                  </span>
-                  <ScoreMeter value={move.bigness} label="How big" />
-                </Link>
-              </li>
+              <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
+                <Card className="transition-colors hover:border-fg/20">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-sm font-semibold leading-snug text-fg">
+                      {move.headline}
+                    </h3>
+                    <BignessPill value={move.bigness} />
+                  </div>
+                </Card>
+              </Link>
             ))}
-          </ul>
+          </div>
         </>
       ) : null}
     </PageShell>

@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
-import { ScoreMeter } from "@/components/ui/score-meter";
-import { PageHeader, PageShell, SectionHeader } from "@/components/ui/page-header";
+import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
+import {
+  Card,
+  PageHeader,
+  PageShell,
+  SectionHeader,
+} from "@/components/ui/page-header";
 import { MOVES, getMove } from "@/lib/mock/moves";
-import { shortName } from "@/lib/mock/teams";
+import { teamLogo, teamName } from "@/lib/teams";
 
 export const dynamicParams = false;
 
@@ -25,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
  * The §7 rubric in full — the reasoning framework a newcomer is missing.
  *
  * Six axes, each scored 1–5 with two sentences. The score never appears without
- * its sentence: the whole point is the explanation, not the number.
+ * its sentence: the explanation is the point, not the number.
  */
 export default async function MoveDetailPage({ params }: PageProps) {
   const { slug } = await params;
@@ -34,51 +40,66 @@ export default async function MoveDetailPage({ params }: PageProps) {
 
   return (
     <PageShell>
-      <PageHeader
-        backHref="/moves"
-        backLabel="Moves"
-        kicker={`${move.date} · ${move.teams.map(shortName).join(" / ")}`}
-        title={move.headline}
-      />
+      <PageHeader backHref="/moves" backLabel="Moves" title={move.headline} />
 
-      <div className="mt-4 flex items-center gap-3">
-        <span className="font-data text-xs uppercase tracking-[0.15em] text-fg/60">
-          How big
+      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span className="flex items-center gap-1.5">
+          {move.teams.map((id) => {
+            const logo = teamLogo(id);
+            return logo ? (
+              <Image
+                key={id}
+                src={logo}
+                alt={teamName(id)}
+                width={22}
+                height={22}
+                className="h-[22px] w-[22px] object-contain"
+              />
+            ) : null;
+          })}
         </span>
-        <ScoreMeter value={move.bigness} label="How big" />
+        <span className="text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+          {move.date}
+        </span>
+        <BignessPill value={move.bigness} />
       </div>
 
-      <p className="mt-3 text-lg leading-relaxed">{move.soWhat}</p>
+      <p className="mt-4 text-[1.05rem] leading-relaxed text-fg">
+        {move.soWhat}
+      </p>
 
       <SampleDataBadge note="Real event. The scores below are judgement calls." />
 
       {move.rubric.length > 0 ? (
         <>
-          <SectionHeader title="Why it's big" aside="Six axes" />
-          <ul className="mt-1">
+          <SectionHeader title="Why it's big" aside="Six things that matter" />
+          <div className="space-y-2.5">
             {move.rubric.map((axis) => (
-              <li key={axis.axis} className="border-b border-fg/15 py-3">
-                <div className="flex items-baseline justify-between gap-3">
-                  <h3 className="font-display condensed text-base font-semibold uppercase tracking-wide">
-                    {axis.axis}
-                  </h3>
+              <Card key={axis.axis}>
+                <div className="flex items-center justify-between gap-3">
+                  <h3 className="text-sm font-semibold text-fg">{axis.axis}</h3>
                   <ScoreMeter value={axis.score} label={axis.axis} />
                 </div>
-                <p className="mt-1 leading-snug text-fg/80">{axis.note}</p>
-              </li>
+                <p className="mt-1.5 text-sm leading-snug text-fg-dim">
+                  {axis.note}
+                </p>
+              </Card>
             ))}
-          </ul>
+          </div>
         </>
       ) : (
         /* Honest gap rather than six meaningless scores — see moves.ts. */
         <>
           <SectionHeader title="Why it's big" />
-          <p className="mt-2 leading-relaxed text-fg/80">
-            The six-axis rubric is built for player trades and signings — it opens
-            with &ldquo;player quality&rdquo; and &ldquo;positional value&rdquo;, which have
-            nothing useful to say about a coaching change. Scoring this one anyway
-            would produce numbers that look meaningful and aren&rsquo;t.
-          </p>
+          <Card>
+            <p className="text-sm leading-relaxed text-fg-dim">
+              The six-point checklist is built for player trades and signings —
+              it opens with &ldquo;player quality&rdquo; and &ldquo;positional
+              value&rdquo;, which have nothing useful to say about a coaching
+              change. Scoring this one anyway would produce numbers that look
+              meaningful and aren&rsquo;t.
+            </p>
+          </Card>
         </>
       )}
     </PageShell>

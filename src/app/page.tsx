@@ -1,18 +1,26 @@
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
+import { GameCard } from "@/components/game-card";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
-import { ScoreMeter } from "@/components/ui/score-meter";
-import { PageShell, SectionHeader } from "@/components/ui/page-header";
+import { BignessPill } from "@/components/ui/score-meter";
+import { Card, PageShell, SectionHeader } from "@/components/ui/page-header";
 import { getAllEntries } from "@/lib/content";
 import { CALENDAR, CURRENT_WEEK, slateInViewingOrder } from "@/lib/mock/games";
 import { MOVES_BY_BIGNESS } from "@/lib/mock/moves";
-import { shortName } from "@/lib/mock/teams";
+
+const fmt = new Intl.DateTimeFormat("en-US", {
+  weekday: "short",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "America/New_York",
+});
 
 /**
  * "This week" — the companion home screen.
  *
- * The question it answers is "what do I need to know right now", so it's a
- * digest of the other tabs rather than a menu: the Bills game, the two other
- * games worth turning on, the biggest recent move, and one date coming up.
+ * Answers "what do I need to know right now", so it's a digest of the other
+ * tabs rather than a menu: the Bills game, the two other games worth turning
+ * on, the biggest recent move, one date coming up.
  */
 export default function ThisWeekPage() {
   const slate = slateInViewingOrder();
@@ -23,100 +31,86 @@ export default function ThisWeekPage() {
   const glossaryCount = getAllEntries("glossary").length;
 
   return (
-    <>
-      <header className="bg-surface px-5 py-5 text-fg sm:px-8">
-        <div className="mx-auto w-full max-w-2xl">
-          <p className="font-data text-xs uppercase tracking-[0.2em] text-fg/70">
-            Field guide · Week {CURRENT_WEEK}
-          </p>
-          <h1 className="font-display condensed mt-1 text-3xl font-semibold sm:text-4xl">
-            This week
-          </h1>
-        </div>
+    <PageShell>
+      <header>
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+          Week {CURRENT_WEEK}
+        </p>
+        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
+          This week
+        </h1>
       </header>
 
-      <PageShell>
-        {billsGame ? (
-          <>
-            <SectionHeader first title="Your game" aside="Bills" />
-            <Link
-              href="/games"
-              className="mt-2 block min-h-14 border-l-4 border-royal py-3 pl-3 hover:bg-fg/5"
-            >
-              <p className="font-display condensed text-2xl font-semibold">
-                {shortName(billsGame.away)} at {shortName(billsGame.home)}
-              </p>
-              <p className="font-data mt-1 text-xs uppercase tracking-wide text-fg/60">
-                Sun 13 Sep · 1:00 PM ET
-              </p>
-              <p className="mt-2 leading-snug">{billsGame.reason}</p>
-            </Link>
-          </>
-        ) : null}
+      <SampleDataBadge note="Real matchups and dates. Ratings are placeholders." />
 
-        <SectionHeader title="Also worth watching" aside="Sample scores" />
-        <ul className="mt-1">
-          {alsoWatch.map((game) => (
-            <li key={game.id} className="border-b border-fg/15">
-              <Link
-                href="/games"
-                className="flex min-h-14 items-center justify-between gap-4 py-3 hover:text-pencil"
-              >
-                <span className="min-w-0">
-                  <span className="font-display condensed block text-lg font-semibold">
-                    {shortName(game.away)} at {shortName(game.home)}
-                  </span>
-                  <span className="block text-sm leading-snug text-fg/75">
-                    {game.reason}
-                  </span>
-                </span>
-                <ScoreMeter value={game.watchability} label="Worth watching" />
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <SampleDataBadge note="Ratings placed by hand, not calculated yet" />
+      {billsGame ? (
+        <>
+          <SectionHeader title="Your game" aside="Bills" />
+          <GameCard
+            game={billsGame}
+            timeLabel={fmt.format(new Date(billsGame.kickoff))}
+            highlight
+          />
+        </>
+      ) : null}
 
-        <SectionHeader title="Biggest recent move" />
-        <Link
-          href={`/moves/${topMove.slug}`}
-          className="mt-2 block min-h-14 py-2 hover:text-pencil"
-        >
-          <span className="flex items-baseline justify-between gap-3">
-            <span className="font-display condensed text-xl font-semibold">
+      <SectionHeader title="Also worth watching" />
+      <div className="space-y-3">
+        {alsoWatch.map((game) => (
+          <GameCard
+            key={game.id}
+            game={game}
+            timeLabel={fmt.format(new Date(game.kickoff))}
+          />
+        ))}
+      </div>
+      <Link
+        href="/games"
+        className="mt-3 flex min-h-11 items-center justify-between rounded-xl border border-line px-4 py-3 text-sm font-medium text-fg-dim hover:text-fg"
+      >
+        All {slate.length} games this week
+        <ChevronRight size={16} aria-hidden />
+      </Link>
+
+      <SectionHeader title="Biggest recent move" />
+      <Link href={`/moves/${topMove.slug}`} className="block">
+        <Card className="transition-colors hover:border-fg/20">
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-semibold leading-snug text-fg">
               {topMove.headline}
-            </span>
-            <ScoreMeter value={topMove.bigness} label="How big" />
-          </span>
-          <span className="mt-1 block leading-snug text-fg/80">
+            </h3>
+            <BignessPill value={topMove.bigness} />
+          </div>
+          <p className="mt-2 text-sm leading-snug text-fg-dim">
             {topMove.soWhat}
-          </span>
-        </Link>
-
-        <SectionHeader title="Coming up" />
-        <div className="mt-2 py-2">
-          <p className="font-display condensed text-xl font-semibold">
-            {nextDate.label}
           </p>
-          <p className="font-data text-xs uppercase tracking-wide text-fg/60">
+        </Card>
+      </Link>
+
+      <SectionHeader title="Coming up" />
+      <Card>
+        <div className="flex items-baseline justify-between gap-3">
+          <h3 className="text-base font-semibold text-fg">{nextDate.label}</h3>
+          <span className="tnum shrink-0 text-sm font-medium text-amber">
             {nextDate.date}
-          </p>
-          <p className="mt-1 leading-snug text-fg/80">{nextDate.why}</p>
+          </span>
         </div>
+        <p className="mt-1.5 text-sm leading-snug text-fg-dim">{nextDate.why}</p>
+      </Card>
 
-        <SectionHeader title="Look something up" aside={`${glossaryCount} entries`} />
-        <Link
-          href="/glossary"
-          className="mt-1 flex min-h-14 items-center justify-between gap-4 border-b border-fg/15 py-3 hover:text-pencil"
-        >
-          <span className="font-display condensed text-lg font-semibold">
-            Glossary
+      <SectionHeader title="Look something up" />
+      <Link
+        href="/glossary"
+        className="flex min-h-14 items-center justify-between rounded-2xl border border-line bg-surface px-4 py-3.5 hover:border-fg/20"
+      >
+        <span>
+          <span className="block text-base font-semibold text-fg">Glossary</span>
+          <span className="block text-sm text-fg-dim">
+            {glossaryCount} terms, explained plainly
           </span>
-          <span aria-hidden className="font-data text-fg/50">
-            →
-          </span>
-        </Link>
-      </PageShell>
-    </>
+        </span>
+        <ChevronRight size={18} className="shrink-0 text-fg-dim" aria-hidden />
+      </Link>
+    </PageShell>
   );
 }

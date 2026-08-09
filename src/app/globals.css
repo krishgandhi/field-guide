@@ -25,30 +25,16 @@
   --color-royal: #4c8dff; /* Bills / allegiance accent */
 }
 
-/* Fonts get `inline` because their values point at the variable next/font
-   defines on the <html> element in layout.tsx.
-
-   One family everywhere. --font-display and --font-data are transitional
-   aliases so screens not yet redesigned keep rendering; they resolve to the
-   same face and disappear when the rollout reaches those screens. */
+/* Fonts get `inline` because the value points at the variable next/font
+   defines on the <html> element in layout.tsx. One family, everywhere. */
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-data: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Numerals in the same column should line up. Anything tabular gets this. */
 @utility tnum {
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
-}
-
-/* Transitional: Inter has no width axis, so the old call-sheet `condensed`
-   can't be honoured. Tightened tracking is the nearest equivalent and keeps
-   not-yet-redesigned screens from reflowing. Goes away with the rollout. */
-@utility condensed {
-  letter-spacing: -0.02em;
 }
 
 @layer base {

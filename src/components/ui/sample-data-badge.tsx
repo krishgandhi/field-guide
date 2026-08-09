@@ -1,17 +1,26 @@
+import { FlaskConical } from "lucide-react";
+
 /**
  * The always-visible marker that a screen is showing invented data.
  *
- * Not a dev-only marker. A watchability score that looks authoritative but was
- * placed by hand is precisely the failure this product exists to prevent
- * (CLAUDE.md §1), so it says so on screen, in production, every time.
+ * Not a dev-only marker. A rating that looks authoritative but was placed by
+ * hand is precisely the failure this product exists to prevent (CLAUDE.md §1),
+ * so it says so on screen, in production, every time.
  *
- * Remove the badge from a screen only when that screen's data is genuinely real.
+ * Remove it from a screen only when that screen's data is genuinely real.
  */
 export function SampleDataBadge({ note }: { note?: string }) {
   return (
-    <p className="font-data mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1 border-l-2 border-amber bg-amber/10 py-1.5 pl-2 pr-2 text-[0.65rem] uppercase tracking-[0.15em] text-fg/70">
-      <span className="font-semibold text-fg">Sample data</span>
-      {note ? <span className="normal-case tracking-normal">{note}</span> : null}
-    </p>
+    <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-amber/25 bg-amber/[0.07] px-3 py-2.5">
+      <FlaskConical
+        size={15}
+        className="mt-0.5 shrink-0 text-amber"
+        aria-hidden
+      />
+      <p className="text-[0.8rem] leading-snug text-fg-dim">
+        <span className="font-semibold text-amber">Sample data.</span>{" "}
+        {note ?? "Placeholder values, not real."}
+      </p>
+    </div>
   );
 }

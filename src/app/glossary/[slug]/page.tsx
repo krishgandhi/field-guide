@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx-content";
+import { BackLink, PageShell } from "@/components/ui/page-header";
 import { getEntry, getSlugs } from "@/lib/content";
 
 // Every glossary entry is a file in the repo, so the full set of routes is
@@ -14,9 +14,7 @@ export function generateStaticParams() {
 
 type PageProps = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const entry = getEntry("glossary", slug);
   if (!entry) return {};
@@ -27,6 +25,11 @@ export async function generateMetadata({
   };
 }
 
+/**
+ * A reading screen, not a data screen. Everything else in the app is dense and
+ * card-based; this one gets generous leading and a narrower measure, because
+ * the explanation is the product and it has to be comfortable to actually read.
+ */
 export default async function GlossaryEntryPage({ params }: PageProps) {
   const { slug } = await params;
   const entry = getEntry("glossary", slug);
@@ -35,31 +38,34 @@ export default async function GlossaryEntryPage({ params }: PageProps) {
   const { frontmatter, body } = entry;
 
   return (
-    <article className="mx-auto w-full max-w-2xl flex-1 px-5 py-8 sm:px-8 sm:py-12">
-      <Link
-        href="/"
-        className="font-data inline-flex min-h-11 items-center text-xs uppercase tracking-[0.2em] text-fg/60 hover:text-pencil"
-      >
-        ← Field guide
-      </Link>
+    <PageShell>
+      <BackLink href="/glossary" label="Glossary" />
 
-      <header className="mt-2 border-b-2 border-fg/80 pb-4">
-        <h1 className="font-display condensed text-4xl font-semibold text-fg sm:text-5xl">
-          {frontmatter.title}
-        </h1>
-        <p className="mt-2 text-lg leading-snug text-fg/80">
-          {frontmatter.summary}
-        </p>
-      </header>
+      <article>
+        <header>
+          <h1 className="text-[2rem] font-bold leading-tight tracking-tight text-fg">
+            {frontmatter.title}
+          </h1>
+          <p className="mt-2 text-[1.05rem] leading-snug text-amber">
+            {frontmatter.summary}
+          </p>
+        </header>
 
-      <div className="mt-2">
-        <MdxContent source={body} />
-      </div>
+        <div className="mt-5 border-t border-line pt-1">
+          <MdxContent source={body} />
+        </div>
 
-      <footer className="font-data mt-12 flex flex-wrap gap-x-6 gap-y-1 border-t border-fg/15 pt-3 text-xs uppercase tracking-wide text-fg/50">
-        <span>Glossary</span>
-        <span>Updated {frontmatter.lastUpdated}</span>
-      </footer>
-    </article>
+        {frontmatter.aliases.length > 0 ? (
+          <footer className="mt-8 border-t border-line pt-4">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+              Also called
+            </p>
+            <p className="mt-1.5 text-sm text-fg-dim">
+              {frontmatter.aliases.join(" · ")}
+            </p>
+          </footer>
+        ) : null}
+      </article>
+    </PageShell>
   );
 }
