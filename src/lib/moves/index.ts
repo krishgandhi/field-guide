@@ -1,5 +1,10 @@
 import { getAllEntries, getEntry, getSlugs } from "@/lib/content";
-import type { Frontmatter, MoveMeta, RubricScore } from "@/lib/content/schema";
+import type {
+  Frontmatter,
+  MoveMeta,
+  MoveSource,
+  RubricScore,
+} from "@/lib/content/schema";
 import { team } from "@/lib/teams";
 
 /**
@@ -20,7 +25,7 @@ import { team } from "@/lib/teams";
  * No new filesystem code. Everything here goes through src/lib/content.
  */
 
-export type { RubricScore } from "@/lib/content/schema";
+export type { MoveSource, RubricScore } from "@/lib/content/schema";
 
 export type Move = {
   slug: string;
@@ -36,6 +41,8 @@ export type Move = {
   soWhat: string;
   rubric: RubricScore[];
   verified: boolean;
+  /** Reporting to link out to (§9). */
+  sources: MoveSource[];
 };
 
 const MONTHS = [
@@ -97,6 +104,7 @@ function toMove(frontmatter: Frontmatter): Move {
     soWhat: frontmatter.summary,
     rubric: m.rubric,
     verified: m.verified,
+    sources: m.sources,
   };
 }
 

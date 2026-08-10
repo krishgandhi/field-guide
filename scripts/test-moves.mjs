@@ -57,8 +57,10 @@ function parseFrontmatter(raw, file) {
   };
 
   let move = null;
-  let rubric = null;
-  let axis = null;
+  // The two sequence-of-map keys inside `move`. `list` is whichever one we're
+  // currently inside; `item` is the map being filled.
+  let list = null;
+  let item = null;
 
   for (const line of lines) {
     if (!line.trim() || line.trim().startsWith("#")) continue;
@@ -81,7 +83,7 @@ function parseFrontmatter(raw, file) {
       if (key === "move") {
         move = {};
         root.move = move;
-        rubric = null;
+        list = null;
       } else {
         root[key] = parseScalar(value);
       }
@@ -94,33 +96,34 @@ function parseFrontmatter(raw, file) {
     if (indent === 2) {
       const [, key, value] = trimmed.match(/^([\w]+):\s*(.*)$/) ?? [];
       if (!key) continue;
-      if (key === "rubric") {
-        rubric = value.trim() === "[]" ? [] : [];
-        move.rubric = rubric;
+      if (key === "rubric" || key === "sources") {
+        list = [];
+        item = null;
+        move[key] = list;
       } else {
         move[key] = parseScalar(value);
       }
       continue;
     }
 
-    if (!rubric) continue;
+    if (!list) continue;
 
-    // Inside rubric:
+    // Inside a sequence of maps:
     if (trimmed.startsWith("- ")) {
-      axis = {};
-      rubric.push(axis);
+      item = {};
+      list.push(item);
       const [, key, value] = trimmed.slice(2).match(/^([\w]+):\s*(.*)$/) ?? [];
-      if (key) axis[key] = parseScalar(value);
+      if (key) item[key] = parseScalar(value);
       continue;
     }
-    if (!axis) continue;
+    if (!item) continue;
     const [, key, value] = trimmed.match(/^([\w]+):\s*(.*)$/) ?? [];
     if (!key) continue;
     if (value.trim() === ">-" || value.trim() === ">") {
-      const target = axis;
+      const target = item;
       fold = { indent, parts: [], set: (v) => (target[key] = v) };
     } else {
-      axis[key] = parseScalar(value);
+      item[key] = parseScalar(value);
     }
   }
   if (fold) fold.set(fold.parts.join(" "));
@@ -150,6 +153,7 @@ const files = readdirSync(DIR).filter((f) => f.endsWith(".mdx"));
 if (files.length === 0) failures.push("no move files found");
 
 const bigness = [];
+const allSources = [];
 
 for (const file of files) {
   const parsed = parseFrontmatter(readFileSync(path.join(DIR, file), "utf8"), file);
@@ -168,6 +172,31 @@ for (const file of files) {
   }
 
   bigness.push([fm.slug, move.bigness]);
+
+  // The filename's date and move.date are two sources of truth that can drift.
+  // Require the filename prefix to be a PREFIX of the date rather than equal to
+  // it, which accepts the honest variation in precision — 2026-allen ↔ "2026",
+  // 2026-03-linderbaum ↔ "2026-03-12" — while catching a slug that says June
+  // when the frontmatter says March.
+  const prefix = (String(fm.slug).match(/^\d{4}(-\d{2})?/) ?? [])[0];
+  if (!prefix) {
+    fail(file, "filename should start with the date, e.g. 2026-06-");
+  } else if (!String(move.date).startsWith(prefix)) {
+    fail(file, `filename says ${prefix} but move.date is ${move.date}`);
+  }
+
+  // §9: always link to the source.
+  const sources = move.sources ?? [];
+  for (const src of sources) {
+    if (!src.label) fail(file, "a source has no label");
+    if (!/^https:\/\/\S+\.\S+/.test(String(src.url ?? ""))) {
+      fail(file, `source url isn't a well-formed https link: ${src.url}`);
+    }
+    allSources.push([file, src.label, src.url]);
+  }
+  if (move.verified === true && sources.length === 0) {
+    fail(file, "verified: true but no sources — §9 requires linking out");
+  }
 
   // §5: a move's summary is the one-line "why care".
   if (sentences(String(fm.summary)) > 1) {
@@ -226,6 +255,31 @@ notes.push(
     .map(([, b]) => `${b}`)
     .join(" ")}`,
 );
+
+notes.push(`  ${allSources.length} source links`);
+
+// Opt-in: the normal run stays offline and fast. A source that 404s is real
+// rot, but not something to discover on every build.
+if (process.argv.includes("--links")) {
+  console.log("\n  checking source links…");
+  for (const [file, label, url] of allSources) {
+    let status = 0;
+    try {
+      const res = await fetch(url, {
+        method: "GET",
+        redirect: "follow",
+        headers: { "user-agent": "Mozilla/5.0 (field-guide link check)" },
+        signal: AbortSignal.timeout(15000),
+      });
+      status = res.status;
+    } catch {
+      status = 0;
+    }
+    const ok = status >= 200 && status < 400;
+    console.log(`    ${ok ? "ok " : "DEAD"} ${status || "err"}  ${label}`);
+    if (!ok) fail(file, `source link is dead (${status || "no response"}): ${url}`);
+  }
+}
 
 console.log(notes.join("\n"));
 if (failures.length > 0) {

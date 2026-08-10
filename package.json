@@ -15,7 +15,12 @@
     "test:watchability": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/test-watchability.mjs",
     "write:reasons": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/write-reasons.mjs",
     "fetch:standings": "node scripts/fetch-standings.mjs",
-    "test:moves": "node scripts/test-moves.mjs"
+    "test:moves": "node scripts/test-moves.mjs",
+    "detect:moves": "node scripts/detect-moves.mjs",
+    "draft:moves": "node scripts/draft-moves.mjs",
+    "test:drafts": "node scripts/test-draft-validation.mjs",
+    "drafts": "node scripts/list-drafts.mjs",
+    "test:filters": "node scripts/test-moves-filters.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

@@ -57,16 +57,6 @@ const rubricScore = z.strictObject({
 });
 
 /**
- * Structured half of a move entry.
- *
- * §7's rubric is data — six axes, each a score plus prose — so it lives in
- * frontmatter where it can be read without parsing the body. The MDX body
- * carries the "so what". Both halves get glossary auto-linking, by different
- * routes: the body through MdxContent, these notes through createExplainer.
- *
- * Strict like its parent, so a typo inside `move:` fails the build too.
- */
-/**
  * A move's date, at whatever precision is actually known: 2026, 2026-03 or
  * 2026-03-12.
  *
@@ -87,6 +77,30 @@ const partialDate = z
       ),
   );
 
+/**
+ * Where the facts came from (§9).
+ *
+ * The copyright rule is summarise in original words, never reproduce article
+ * text, always link to the source. We had the first two and not the third, so
+ * every entry dead-ended at my summary with no way to go and read the actual
+ * reporting.
+ */
+const source = z.strictObject({
+  /** The publisher, as a reader would name it: "ESPN", "NFL.com". */
+  label: z.string().min(1),
+  url: z.url().startsWith("https://", "must be an https:// link"),
+});
+
+/**
+ * Structured half of a move entry.
+ *
+ * §7's rubric is data — six axes, each a score plus prose — so it lives in
+ * frontmatter where it can be read without parsing the body. The MDX body
+ * carries the "so what". Both halves get glossary auto-linking, by different
+ * routes: the body through MdxContent, these notes through createExplainer.
+ *
+ * Strict like its parent, so a typo inside `move:` fails the build too.
+ */
 const move = z.strictObject({
   date: partialDate,
   /** Team abbreviations. Cross-checked against the real 32 in the loader. */
@@ -102,6 +116,11 @@ const move = z.strictObject({
   bigness: z.number().int().min(1).max(5),
   /** True only for entries built from events verified against a source. */
   verified: z.boolean(),
+  /**
+   * Reporting to link out to. Optional in the schema because a draft won't
+   * always have one; test:moves reports any `verified: true` entry missing it.
+   */
+  sources: z.array(source).default([]),
   /**
    * All six axes or none. A partial set is always a half-written entry, and
    * the empty case is real: §7 doesn't apply to a coaching change.
@@ -120,6 +139,7 @@ const move = z.strictObject({
 
 export type RubricAxis = (typeof RUBRIC_AXES)[number];
 export type RubricScore = z.infer<typeof rubricScore>;
+export type MoveSource = z.infer<typeof source>;
 export type MoveMeta = z.infer<typeof move>;
 
 /**

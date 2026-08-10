@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx-content";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
@@ -118,6 +119,34 @@ export default async function MoveDetailPage({ params }: PageProps) {
         <>
           <SectionHeader title="What to take from it" />
           <MdxContent source={move.body} linked={linked} />
+        </>
+      ) : null}
+
+      {/* §9: summarise in original words, never reproduce article text, always
+          link to the source. Everything above is my summary; this is where the
+          actual reporting lives. */}
+      {move.sources.length > 0 ? (
+        <>
+          <SectionHeader title="Read the reporting" />
+          <ul className="space-y-2">
+            {move.sources.map((src) => (
+              <li key={src.url}>
+                <a
+                  href={src.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-line bg-surface px-4 transition-colors hover:border-fg/20"
+                >
+                  <span className="text-sm font-medium text-fg">{src.label}</span>
+                  <ExternalLink
+                    className="h-4 w-4 shrink-0 text-fg-dim"
+                    aria-hidden
+                  />
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </>
       ) : null}
     </PageShell>
