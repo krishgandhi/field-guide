@@ -4,7 +4,7 @@ import Link from "next/link";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card, PageHeader, PageShell } from "@/components/ui/page-header";
-import { MOVES_BY_BIGNESS } from "@/lib/mock/moves";
+import { getMoves } from "@/lib/moves";
 import { teamLogo, teamName } from "@/lib/teams";
 
 export const metadata: Metadata = {
@@ -41,14 +41,14 @@ export default function MovesPage() {
       <SampleDataBadge note="Real events. The 1–5 scores are judgement calls, not sourced facts." />
 
       <div className="mt-5 space-y-3">
-        {MOVES_BY_BIGNESS.map((move) => (
+        {getMoves().map((move) => (
           <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
             <Card className="transition-colors hover:border-fg/20">
               <div className="mb-2 flex items-center justify-between gap-3">
                 <span className="flex items-center gap-2">
                   <TeamCrests ids={move.teams} />
                   <span className="text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
-                    {move.date}
+                    {move.dateLabel}
                   </span>
                 </span>
                 <BignessPill value={move.bigness} />

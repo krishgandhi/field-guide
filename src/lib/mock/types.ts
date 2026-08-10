@@ -48,47 +48,6 @@ export type Game = {
   reason: string;
 };
 
-/** §7's six axes, in the spec's order. */
-export type RubricAxis =
-  | "Player quality"
-  | "Positional value"
-  | "Cost paid"
-  | "Cap mechanics"
-  | "Competitive windows"
-  | "Narrative violation";
-
-export type RubricScore = {
-  axis: RubricAxis;
-  /** 1–5. */
-  score: number;
-  /** Two sentences, max — §5's word budget for a move. */
-  note: string;
-};
-
-export type Move = {
-  slug: string;
-  headline: string;
-  date: string;
-  teams: TeamId[];
-  /**
-   * 1–5, "how big is this actually".
-   *
-   * Deliberately NOT the mean of the six axes. Averaging inflates routine moves:
-   * a quarterback restructure scores 5 on player quality and 5 on positional
-   * value before anything has happened, dragging a piece of paperwork up to ~3.3.
-   * The axes explain a move; this number ranks it, and it stays a judgement call.
-   */
-  bigness: number;
-  /** One sentence: why a newcomer should care at all. */
-  soWhat: string;
-  rubric: RubricScore[];
-  /**
-   * True only for entries built from events verified against a source.
-   * Everything else is a placeholder and must say so on screen.
-   */
-  verified: boolean;
-};
-
 export type CalendarItem = {
   slug: string;
   label: string;

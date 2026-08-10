@@ -8,7 +8,7 @@ import { getAllEntries } from "@/lib/content";
 import { CALENDAR } from "@/lib/mock/games";
 import { SLATE } from "@/lib/slate";
 import { sortForViewing } from "@/lib/watchability";
-import { MOVES_BY_BIGNESS } from "@/lib/mock/moves";
+import { getMoves } from "@/lib/moves";
 
 const fmt = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
@@ -28,7 +28,7 @@ export default function ThisWeekPage() {
   const slate = sortForViewing(SLATE.games, SLATE.week);
   const billsGame = slate.find((g) => g.home === "BUF" || g.away === "BUF");
   const alsoWatch = slate.filter((g) => g !== billsGame).slice(0, 2);
-  const topMove = MOVES_BY_BIGNESS[0];
+  const topMove = getMoves()[0];
   const nextDate = CALENDAR[0];
   const glossaryCount = getAllEntries("glossary").length;
 

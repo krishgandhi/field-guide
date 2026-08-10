@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/page-header";
 import { getEntry } from "@/lib/content";
 import { SLATE, injuriesFor } from "@/lib/slate";
-import { MOVES } from "@/lib/mock/moves";
+import { getMovesForTeam } from "@/lib/moves";
 import { TEAMS, getTeam } from "@/lib/mock/teams";
 import { teamColor, teamLogo } from "@/lib/teams";
 
@@ -59,7 +59,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
     (g) => g.home === team.id || g.away === team.id,
   );
   const knocks = injuriesFor(team.id);
-  const teamMoves = MOVES.filter((m) => m.teams.includes(team.id));
+  const teamMoves = getMovesForTeam(team.id);
 
   return (
     <PageShell flaggable>

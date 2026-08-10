@@ -41,13 +41,14 @@ export type Flag = {
  *
  * Deliberately NOT the full list from §5. The first real flag came from a
  * /moves page and confidently reported its source as
- * content/moves/2026-06-garrett-to-rams.mdx — a file that does not exist,
- * because move text still lives in src/lib/mock/moves.ts. Naming a file that
- * isn't there sends me editing nothing.
+ * content/moves/2026-06-garrett-to-rams.mdx — a file that did not exist,
+ * because move text lived in src/lib/mock/moves.ts. It was removed from this
+ * list rather than left lying, and added back once the file was real. Naming a
+ * file that isn't there sends me editing nothing.
  *
  * Add a type here when its content directory gains real files.
  */
-const ROUTES_WITH_FILES = ["glossary", "teams"];
+const ROUTES_WITH_FILES = ["glossary", "teams", "moves"];
 
 /** /glossary/dead-money → content/glossary/dead-money.mdx, or null if unknown. */
 export function sourceFileFor(path: string): string | null {

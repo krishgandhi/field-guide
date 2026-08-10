@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { MdxContent } from "@/components/mdx-content";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
 import {
@@ -9,14 +10,14 @@ import {
   PageShell,
   SectionHeader,
 } from "@/components/ui/page-header";
-import { MOVES, getMove } from "@/lib/mock/moves";
+import { getMove, getMoveSlugs } from "@/lib/moves";
 import { createExplainer } from "@/lib/glossary/explain";
 import { teamLogo, teamName } from "@/lib/teams";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return MOVES.map((m) => ({ slug: m.slug }));
+  return getMoveSlugs().map((slug) => ({ slug }));
 }
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -39,8 +40,11 @@ export default async function MoveDetailPage({ params }: PageProps) {
   const move = getMove(slug);
   if (!move) notFound();
 
-  // One explainer for the whole page so a term links on first appearance only.
-  const explain = createExplainer();
+  // One set for the whole page so a term links on first appearance only (§6a),
+  // shared with the MDX body below. It's mutated as the JSX is built, which is
+  // why the body renders last — see rehypeGlossaryLinks's `linked` option.
+  const linked = new Set<string>();
+  const explain = createExplainer(undefined, linked);
 
   return (
     <PageShell flaggable>
@@ -63,7 +67,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
           })}
         </span>
         <span className="text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
-          {move.date}
+          {move.dateLabel}
         </span>
         <BignessPill value={move.bigness} />
       </div>
@@ -106,6 +110,16 @@ export default async function MoveDetailPage({ params }: PageProps) {
           </Card>
         </>
       )}
+
+      {/* Last on the page on purpose: the closing "what to take from it" reads
+          better after the scores, and it keeps §6a's link order matching the
+          reading order. */}
+      {move.body.trim() ? (
+        <>
+          <SectionHeader title="What to take from it" />
+          <MdxContent source={move.body} linked={linked} />
+        </>
+      ) : null}
     </PageShell>
   );
 }
