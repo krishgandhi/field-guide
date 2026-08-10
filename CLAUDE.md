@@ -63,6 +63,7 @@ content/
   positions/      ~25 files   — edge-rusher.mdx
   glossary/       ~50 files   — dead-money.mdx
   moves/          growing     — 2026-06-garrett-to-rams.mdx
+    _drafts/                  — machine-drafted, never published (see §9)
   calendar/       ~12 files   — franchise-tag-deadline.mdx
   rivalries/      ~10 files   — bills-chiefs.mdx
 ```
@@ -81,6 +82,24 @@ flaggedTerms: []                     # jargon he flagged inside this entry
 lastUpdated: 2026-07-29
 ---
 ```
+
+`type: moves` carries one extra block, and nothing else may:
+
+```yaml
+move:
+  date: "2026-06"        # YYYY, YYYY-MM or YYYY-MM-DD — whatever is actually
+                         # known. Never pad it out to a day nobody reported.
+  teams: [CLE, LAR]
+  bigness: 5             # 1–5, a judgement, NOT the mean of the six axes
+  verified: true         # false until the facts are checked against a source
+  sources:               # §9 requires linking out. Verified entries need one.
+    - label: ESPN
+      url: https://...
+  rubric: []             # all six axes from §7, or none — never a partial set
+```
+
+The filename's date prefix must be a prefix of `move.date`. `npm run test:moves`
+enforces that, plus §5's two-sentences-per-axis budget.
 
 `reviewed: false` renders a small marker in development only — never in production. It's a to-do list, not a disclaimer to the reader.
 
@@ -166,7 +185,19 @@ Phase 3 and later. **Verify each one still works before building against it** �
 | Player metadata, trending players | Sleeper API | Free, no key |
 | Betting spreads | The Odds API | Free tier, needs a key |
 | Contracts, cap | Over The Cap | No API — likely manual entry |
+| Transaction candidates | ESPN news (`/nfl/news`) | Tagged by team and athlete. **Not** `/nfl/transactions` — that returns waived long snappers, checked twice |
 | College (Phase 5) | CollegeFootballData.com | Free with key |
+
+**Moves are written, not ingested.** A cron job proposes candidates from the
+news feed and Claude drafts the rubric, but drafts land in
+`content/moves/_drafts/` — a directory the content loader cannot see, because
+`getSlugs` filters on `.mdx` and a directory name never matches. Reaching the
+site takes a deliberate `git mv` plus `verified: true`. §13's warning about
+unreviewed generated text is the whole reason for the gap.
+
+Drafts are validated before they are written: every number in a draft must
+appear in the source headline, or it is rejected as fabricated. `npm run drafts`
+lists what is waiting.
 
 **Copyright rule for any news ingestion:** summarize in original words. Never reproduce article text, never store scraped article bodies, always link to the source. If a summary would need the original phrasing to work, link out instead.
 

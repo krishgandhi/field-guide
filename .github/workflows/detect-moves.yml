@@ -1,0 +1,77 @@
+name: Detect moves
+
+# Scans ESPN's news feed for transactions worth writing up, and has Claude
+# draft the §7 rubric for the ones that survive.
+#
+# NOTHING THIS JOB PRODUCES IS PUBLISHED. Drafts land in content/moves/_drafts/,
+# which the content loader cannot see, and reaching the site takes a deliberate
+# `git mv`. CLAUDE.md §13: unreviewed generated text is a debt, not an asset.
+#
+# Separate from refresh-slate.yml on purpose: the slate has a hard September 9
+# deadline and must never fail because a news endpoint changed shape.
+
+on:
+  schedule:
+    # 12:00 UTC daily, an hour after the slate refresh so the two don't race
+    # for the same push.
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: detect-moves
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # Builtins only — no install needed, so a broken dependency can't stop
+      # detection. Out of season this correctly finds nothing.
+      - name: Detect candidates
+        run: node scripts/detect-moves.mjs
+        continue-on-error: true
+
+      # Only the drafting step needs the SDK.
+      - name: Install
+        run: npm ci
+
+      # Exits 0 with no key, which is the current state — ANTHROPIC_API_KEY is
+      # not yet in repo secrets, so this writes nothing until it is.
+      - name: Draft candidates
+        run: npm run draft:moves
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Guard against the one thing that must never happen: a generated file
+      # landing where the site would render it.
+      - name: Refuse to commit drafts outside _drafts/
+        run: |
+          if git status --porcelain content/moves/*.mdx | grep -q .; then
+            echo "A published move file changed. This job may only write to _drafts/."
+            git status --porcelain content/moves/
+            exit 1
+          fi
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- src/data/ content/moves/_drafts/; then
+            echo "Nothing new."
+            exit 0
+          fi
+          git config user.name  "field-guide bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add src/data/ content/moves/_drafts/
+          # "draft:" prefix so these filter out of the history that should read
+          # as a record of actual work (§3).
+          git commit -m "draft: move candidates ($(date -u +%Y-%m-%d))"
+          git push
