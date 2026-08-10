@@ -29,13 +29,25 @@ const SKIP_INSIDE = new Set([
 export type Options = {
   /** The entry currently being rendered, so it never links to itself. */
   currentSlug?: string;
+  /**
+   * Terms already linked elsewhere on the same page.
+   *
+   * A move page draws prose from two places — the MDX body through this
+   * plugin, the rubric notes through createExplainer — and §6a's "first
+   * occurrence per page" has to hold across both. Pass one set to both and it
+   * does. Order matters: explain() runs while the JSX is built, MdxContent
+   * resolves after, so the MDX has to sit below anything explain() handles or
+   * a term underlines in the lower block and stays plain in the upper one.
+   */
+  linked?: Set<string>;
 };
 
-export function rehypeGlossaryLinks({ currentSlug }: Options = {}) {
+export function rehypeGlossaryLinks({ currentSlug, linked: shared }: Options = {}) {
   return (tree: Root) => {
-    // One set per transform. unified runs the transformer once per document,
-    // so "first occurrence per page" falls out of this naturally.
-    const linked = new Set<string>();
+    // One set per transform unless the page supplies its own. unified runs the
+    // transformer once per document, so "first occurrence per page" falls out
+    // of this naturally for pages that are a single MDX body.
+    const linked = shared ?? new Set<string>();
 
     visitParents(tree, "text", (node: Text, ancestors) => {
       if (

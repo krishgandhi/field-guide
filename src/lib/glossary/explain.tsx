@@ -15,8 +15,15 @@ import { findTerms } from "./terms";
  * page" across separate paragraphs — not per string, which would link the same
  * term in six consecutive rubric cards.
  */
-export function createExplainer(currentSlug?: string) {
-  const linked = new Set<string>();
+export function createExplainer(
+  currentSlug?: string,
+  /**
+   * Pass a set to share it with MdxContent, for pages that render both strings
+   * and an MDX body. Anything explain() handles must sit above the MDX on the
+   * page — see the note on rehypeGlossaryLinks's `linked` option.
+   */
+  linked: Set<string> = new Set<string>(),
+) {
 
   return function explain(text: string): React.ReactNode {
     const matches = findTerms(text, { linked, currentSlug });

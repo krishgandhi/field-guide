@@ -117,9 +117,12 @@ export function MdxContent({
   source,
   /** Slug of the entry being rendered, so it never links to itself (§6a). */
   currentSlug,
+  /** Shared with createExplainer when a page has prose from both sources. */
+  linked,
 }: {
   source: string;
   currentSlug?: string;
+  linked?: Set<string>;
 }) {
   return (
     <MDXRemote
@@ -132,7 +135,7 @@ export function MdxContent({
           // Tuple form, not rehypeGlossaryLinks({...}). unified treats a bare
           // function in this list as an attacher and calls it with no
           // arguments; passing [attacher, options] is how it gets them.
-          rehypePlugins: [[rehypeGlossaryLinks, { currentSlug }]],
+          rehypePlugins: [[rehypeGlossaryLinks, { currentSlug, linked }]],
         },
       }}
     />
