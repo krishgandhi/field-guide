@@ -1,6 +1,7 @@
 import type { Game } from "@/lib/slate";
 import { hasStarQb, isRivalry } from "@/lib/slate/context";
 import { isDivisional } from "@/lib/teams";
+import { noteFor } from "@/lib/slate/notes";
 
 /**
  * Watchability scoring — CLAUDE.md §8.
@@ -29,6 +30,29 @@ export type Factor = {
   reason: string;
 };
 
+/**
+ * Pick one phrasing for this game, stably.
+ *
+ * Sixteen games all saying "The bookmakers can barely separate these two" is
+ * what made the templated version read as machine-assembled. Several phrasings
+ * per factor fixes that — but the choice has to be deterministic, or a static
+ * rebuild would silently reword every game and the diff would be noise.
+ *
+ * A hash of the game id gives variety across the slate and stability across
+ * builds.
+ */
+function hash(seed: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return Math.abs(h);
+}
+
+const pick = (options: string[], seed: string, salt: number) =>
+  options[(hash(seed) + salt) % options.length];
+
 /** A standalone window is one where this is the only game on. */
 function isStandalone(game: Game): boolean {
   const tv = game.broadcast?.toLowerCase() ?? "";
@@ -50,25 +74,52 @@ function isStandalone(game: Game): boolean {
 export function factorsFor(game: Game, week: number): Factor[] {
   const found: Factor[] = [];
 
+  const seed = game.id;
+
   // 1. The market thinks it'll be close.
   if (game.spread !== null) {
     if (game.spread < 4) {
       found.push({
         points: 3,
         priority: 1,
-        reason: "The bookmakers can barely separate these two",
+        reason: pick(
+          [
+            "Nobody can separate these two",
+            "This one should go to the wire",
+            "As even a game as the week offers",
+            "Expect it to be tight the whole way",
+          ],
+          seed,
+          0,
+        ),
       });
     } else if (game.spread < 7) {
       found.push({
         points: 1,
         priority: 5,
-        reason: "Should be competitive without being a coin flip",
+        reason: pick(
+          [
+            "One side is favoured, but not by much",
+            "Competitive without being a coin flip",
+            "Closer than it looks on paper",
+          ],
+          seed,
+          1,
+        ),
       });
     } else {
       found.push({
         points: 0,
         priority: 9,
-        reason: "One side is a clear favourite",
+        reason: pick(
+          [
+            "One side is a heavy favourite",
+            "This could get away from someone early",
+            "Not much doubt about who wins",
+          ],
+          seed,
+          2,
+        ),
       });
     }
   }
@@ -80,8 +131,24 @@ export function factorsFor(game: Game, week: number): Factor[] {
       points: late ? 2 : 1,
       priority: 2,
       reason: late
-        ? "Same division, and this late it goes a long way to deciding who wins it"
-        : "Same division — they play twice a year and it counts double in the standings",
+        ? pick(
+            [
+              "Same division, and this late that goes a long way to settling it",
+              "A division game with the standings nearly decided",
+              "These two are fighting for the same playoff spot",
+            ],
+            seed,
+            3,
+          )
+        : pick(
+            [
+              "Same division, so it counts double in the standings",
+              "They play twice a year and both games matter",
+              "A division game, which is worth more than the record suggests",
+            ],
+            seed,
+            4,
+          ),
     });
   }
 
@@ -91,13 +158,28 @@ export function factorsFor(game: Game, week: number): Factor[] {
     found.push({
       points: 2,
       priority: 3,
-      reason: "Two of the best quarterbacks in the league, head to head",
+      reason: pick(
+        [
+          "Two of the best quarterbacks alive, head to head",
+          "Both quarterbacks are worth watching on their own",
+          "A quarterback matchup people will talk about all week",
+        ],
+        seed,
+        5,
+      ),
     });
   } else if (stars === 1) {
     found.push({
       points: 1,
       priority: 6,
-      reason: "One of the best quarterbacks in the league is playing",
+      reason: pick(
+        [
+          "One of the league's best quarterbacks is playing",
+          "Worth it for one quarterback alone",
+        ],
+        seed,
+        6,
+      ),
     });
   }
 
@@ -106,7 +188,15 @@ export function factorsFor(game: Game, week: number): Factor[] {
     found.push({
       points: 1,
       priority: 7,
-      reason: "Primetime, with no other game to flick between",
+      reason: pick(
+        [
+          "Primetime, with nothing else on",
+          "It has the night to itself",
+          "The only game in this window",
+        ],
+        seed,
+        7,
+      ),
     });
   }
 
@@ -115,7 +205,15 @@ export function factorsFor(game: Game, week: number): Factor[] {
     found.push({
       points: 1,
       priority: 4,
-      reason: "These two genuinely don't like each other",
+      reason: pick(
+        [
+          "These two genuinely don't like each other",
+          "There's real history here",
+          "An old grudge, and both sides remember it",
+        ],
+        seed,
+        8,
+      ),
     });
   }
 
@@ -140,12 +238,12 @@ export function watchability(game: Game, week: number): Watchability {
   const factors = factorsFor(game, week);
   const points = factors.reduce((sum, f) => sum + f.points, 0);
 
-  // A Claude-written sentence, generated by the daily job and validated before
-  // it was stored, wins. The template is the fallback — it's always correct but
-  // reads assembled-from-parts across sixteen games in a row.
-  if (game.reason) {
-    return { score: toScore(points), reason: game.reason };
-  }
+  // Precedence, most deliberate first: a hand-written note, then a validated
+  // model-written sentence, then the template. The score is computed from the
+  // factors either way — better prose must never make a game look better.
+  const note = noteFor(week, game.away, game.home);
+  if (note) return { score: toScore(points), reason: note };
+  if (game.reason) return { score: toScore(points), reason: game.reason };
 
   const spoken = [...factors]
     .sort((a, b) => a.priority - b.priority)

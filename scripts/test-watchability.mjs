@@ -112,5 +112,46 @@ for (const [label, g] of [["tight divisional primetime", tight], ["blowout", blo
   console.log(`  ${w.score}/5  ${label}: ${w.reason}`);
 }
 
+// --- notes must not contradict the market ---------------------------------
+// Six of the first sixteen hand-written notes dismissed games the betting line
+// said were coin flips, because they were written from earlier invented values.
+// Prose and data disagreeing is the exact failure this product exists to avoid,
+// so it's checked rather than trusted.
+const { SLATE } = await import("../src/lib/slate/index.ts");
+const { noteFor } = await import("../src/lib/slate/notes.ts");
+const { teamName } = await import("../src/lib/teams/index.ts");
+
+const DISMISSIVE = [
+  "skip it", "not much here", "isn't competitive", "rarely close",
+  "not today", "nothing much", "one-sided", "no contest",
+];
+const contradictions = [];
+let noted = 0;
+
+for (const g of SLATE.games) {
+  const note = noteFor(SLATE.week, g.away, g.home);
+  if (!note) continue;
+  noted++;
+  if (g.spread !== null && g.spread < 4) {
+    const bad = DISMISSIVE.find((p) => note.toLowerCase().includes(p));
+    if (bad) {
+      contradictions.push(
+        `${teamName(g.away)} at ${teamName(g.home)} (line ${g.spread}) says "${bad}"`,
+      );
+    }
+  }
+}
+
+check(
+  `every game in the slate has a note (${noted}/${SLATE.games.length})`,
+  noted === SLATE.games.length,
+  noted === SLATE.games.length ? "" : "a key probably doesn't match after normalisation",
+);
+check(
+  "no note dismisses a game the line says is close",
+  contradictions.length === 0,
+  contradictions.join(" | "),
+);
+
 console.log(`\n${failures === 0 ? "all checks passed" : `${failures} FAILED`}`);
 process.exit(failures === 0 ? 0 : 1);
