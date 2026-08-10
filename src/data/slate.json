@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-09T11:24:47.299Z",
+  "fetchedAt": "2026-08-10T11:43:59.835Z",
   "games": [
     {
       "id": "401872656",
@@ -164,7 +164,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "LAC",
       "away": "ARI",
-      "spread": 11.5,
+      "spread": 10.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -277,16 +277,6 @@
         "player": "Micah Parsons",
         "position": "DE",
         "status": "Out"
-      },
-      {
-        "player": "Chris Brooks",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Luke Musgrave",
-        "position": "TE",
-        "status": "Out"
       }
     ],
     "HOU": [
@@ -332,13 +322,6 @@
         "status": "Out"
       }
     ],
-    "NO": [
-      {
-        "player": "Mason Tipton",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "NYJ": [
       {
         "player": "Joseph Ossai",
@@ -379,13 +362,6 @@
       {
         "player": "Zach Charbonnet",
         "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "TB": [
-      {
-        "player": "Chase Lucas",
-        "position": "CB",
         "status": "Out"
       }
     ],
