@@ -13,7 +13,8 @@
     "test:flags": "node scripts/test-flag-queue.mjs",
     "fetch:slate": "node scripts/fetch-slate.mjs",
     "test:watchability": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/test-watchability.mjs",
-    "write:reasons": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/write-reasons.mjs"
+    "write:reasons": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/write-reasons.mjs",
+    "fetch:standings": "node scripts/fetch-standings.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

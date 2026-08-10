@@ -28,11 +28,8 @@ export type Team = {
   name: string;
   conference: "AFC" | "NFC";
   division: "East" | "North" | "South" | "West";
-  /** ~60 words, §5. Are they good, who's the QB, identity, one thing a fan mentions. */
-  blurb: string;
-  quarterback: string;
-  /** One line a newcomer could repeat and sound reasonable. */
-  oneThingToKnow: string;
+  // Write-ups are not fields here — they're content/teams/*.mdx (§5), read
+  // through getEntry("teams", slug) so §6a auto-linking applies to them.
 };
 
 export type Game = {

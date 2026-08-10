@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHeader, PageShell } from "@/components/ui/page-header";
 import { TEAMS } from "@/lib/mock/teams";
+import { getSlugs } from "@/lib/content";
 import { teamLogo } from "@/lib/teams";
+import { recordFor, recordLabel } from "@/lib/standings";
 import type { Team } from "@/lib/mock/types";
 
 export const metadata: Metadata = {
@@ -25,7 +27,7 @@ const ORDER: [Team["conference"], Team["division"]][] = [
  * 32px crest and the team name without truncating any of them.
  */
 export default function TeamsPage() {
-  const written = TEAMS.filter((t) => t.blurb).length;
+  const written = getSlugs("teams").length;
 
   return (
     <PageShell>
@@ -45,6 +47,7 @@ export default function TeamsPage() {
               (t) => t.conference === conference && t.division === division,
             ).map((team) => {
               const logo = teamLogo(team.id);
+              const record = recordFor(team.id);
               return (
                 <Link
                   key={team.id}
@@ -64,12 +67,11 @@ export default function TeamsPage() {
                     <span className="block truncate text-sm font-semibold text-fg">
                       {team.name}
                     </span>
-                    {/* No "not written" label on the 31 blank teams — repeated
-                        31 times it reads as broken rather than in progress.
-                        The count above the list carries that information once. */}
-                    {team.quarterback ? (
-                      <span className="block truncate text-[0.7rem] text-fg-dim">
-                        {team.quarterback}
+                    {/* Record rather than a "not written" label: it's real for
+                        all 32, so the grid is useful before the write-ups exist. */}
+                    {record ? (
+                      <span className="tnum block text-[0.7rem] text-fg-dim">
+                        {recordLabel(record)}
                       </span>
                     ) : null}
                   </span>

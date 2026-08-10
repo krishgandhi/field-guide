@@ -40,6 +40,15 @@ jobs:
       - name: Fetch slate
         run: node scripts/fetch-slate.mjs
 
+      # Also builtins-only. continue-on-error is load-bearing: without it a
+      # standings outage aborts the job before the commit step and the slate
+      # refresh is lost too — the opposite of the point of splitting them.
+      # The slate step above stays blocking, because that one failing is worth
+      # a red build.
+      - name: Fetch standings
+        run: node scripts/fetch-standings.mjs
+        continue-on-error: true
+
       # Only the prose step needs dependencies.
       - name: Install
         run: npm ci
@@ -56,14 +65,14 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- src/data/slate.json; then
+          if git diff --quiet -- src/data/; then
             echo "No change — nothing to commit."
             exit 0
           fi
           git config user.name  "field-guide bot"
           git config user.email "bot@users.noreply.github.com"
-          git add src/data/slate.json
+          git add src/data/
           # "data:" prefix so these filter out of the history that should stay
           # readable as a record of actual work (§3).
-          git commit -m "data: refresh slate ($(date -u +%Y-%m-%d))"
+          git commit -m "data: refresh ($(date -u +%Y-%m-%d))"
           git push

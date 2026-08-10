@@ -44,7 +44,7 @@ const SCREENS = [
   ["move-no-rubric", "/moves/2026-01-brady-replaces-mcdermott"],
   ["teams", "/teams"],
   ["team-written", "/teams/buffalo-bills"],
-  ["team-unwritten", "/teams/miami-dolphins"],
+  ["team-unwritten", "/teams/chicago-bears"],  // keep pointing at a team with no write-up
   ["glossary", "/glossary"],
   ["glossary-entry", "/glossary/dead-money"],
 ];

@@ -47,7 +47,7 @@ export type Flag = {
  *
  * Add a type here when its content directory gains real files.
  */
-const ROUTES_WITH_FILES = ["glossary"];
+const ROUTES_WITH_FILES = ["glossary", "teams"];
 
 /** /glossary/dead-money → content/glossary/dead-money.mdx, or null if unknown. */
 export function sourceFileFor(path: string): string | null {

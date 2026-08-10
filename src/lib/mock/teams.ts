@@ -4,14 +4,9 @@ import type { Team, TeamId } from "./types";
  * All 32 teams. Names, cities, conferences and divisions are stable facts and
  * are safe to hard-code — the divisions haven't changed since 2002.
  *
- * `blurb`, `quarterback` and `oneThingToKnow` are left EMPTY for every team
- * except Buffalo. That is deliberate, not laziness: inventing a plausible
- * quarterback or team identity for 31 teams would put confident-sounding
- * fiction on screen, which is the exact failure CLAUDE.md §1 and §3 exist to
- * prevent. Empty renders as "not written yet", which shows the shape and
- * doubles as a visible content backlog.
- *
- * Buffalo's copy is written from facts verified against sources this session.
+ * Write-ups are NOT here — they live in content/teams/*.mdx per §5, so that
+ * glossary terms inside them get auto-linked (§6a) and the flag queue can name
+ * the file to edit. This module is only the roster of who exists and where.
  */
 
 type Seed = [TeamId, string, string, Team["conference"], Team["division"]];
@@ -51,17 +46,6 @@ const SEEDS: Seed[] = [
   ["SEA", "Seattle", "Seahawks", "NFC", "West"],
 ];
 
-/** Only entries here get real copy. Everything else renders as unwritten. */
-const WRITTEN: Partial<Record<TeamId, Pick<Team, "blurb" | "quarterback" | "oneThingToKnow">>> = {
-  BUF: {
-    quarterback: "Josh Allen",
-    blurb:
-      "Perennially good, perennially short of the ending they want. Josh Allen is the whole offence — he throws it and he runs it, and the team goes as far as he carries them. New voice in charge this year after a long run under the same coach, and the books are tight enough that roster moves are forced rather than chosen.",
-    oneThingToKnow:
-      "Sean McDermott was fired after nine seasons and Joe Brady moved up from offensive coordinator — the first real change at the top in a decade.",
-  },
-};
-
 export const TEAMS: Team[] = SEEDS.map(([id, city, name, conference, division]) => ({
   id,
   slug: `${city} ${name}`.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
@@ -69,9 +53,6 @@ export const TEAMS: Team[] = SEEDS.map(([id, city, name, conference, division]) 
   name,
   conference,
   division,
-  blurb: WRITTEN[id]?.blurb ?? "",
-  quarterback: WRITTEN[id]?.quarterback ?? "",
-  oneThingToKnow: WRITTEN[id]?.oneThingToKnow ?? "",
 }));
 
 export const TEAMS_BY_ID = Object.fromEntries(
