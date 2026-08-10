@@ -14,7 +14,8 @@
     "fetch:slate": "node scripts/fetch-slate.mjs",
     "test:watchability": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/test-watchability.mjs",
     "write:reasons": "node --experimental-strip-types --import ./scripts/register-alias.mjs scripts/write-reasons.mjs",
-    "fetch:standings": "node scripts/fetch-standings.mjs"
+    "fetch:standings": "node scripts/fetch-standings.mjs",
+    "test:moves": "node scripts/test-moves.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

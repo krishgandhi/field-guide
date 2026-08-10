@@ -42,6 +42,9 @@ const SCREENS = [
   ["moves", "/moves"],
   ["move-detail", "/moves/2026-06-garrett-to-rams"],
   ["move-no-rubric", "/moves/2026-01-brady-replaces-mcdermott"],
+  // The deliberately-low entry: keeps an eye on how a rubric full of 1s and 2s
+  // reads, which is a different layout problem from a page of 5s.
+  ["move-low-score", "/moves/2026-03-linderbaum-to-raiders"],
   ["teams", "/teams"],
   ["team-written", "/teams/buffalo-bills"],
   ["team-unwritten", "/teams/chicago-bears"],  // keep pointing at a team with no write-up
