@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-10T11:43:59.835Z",
+  "fetchedAt": "2026-08-11T11:41:13.677Z",
   "games": [
     {
       "id": "401872656",
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -198,6 +198,13 @@
   ],
   "byes": [],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Josh Sweat",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "ATL": [
       {
         "player": "Zach Harrison",
@@ -244,11 +251,6 @@
         "player": "Keyshaun Elliott",
         "position": "LB",
         "status": "Out"
-      },
-      {
-        "player": "Noah Sewell",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "CIN": [
@@ -265,13 +267,6 @@
         "status": "Out"
       }
     ],
-    "DET": [
-      {
-        "player": "Tyler Conklin",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
     "GB": [
       {
         "player": "Micah Parsons",
@@ -280,11 +275,6 @@
       }
     ],
     "HOU": [
-      {
-        "player": "Jaylin Noel",
-        "position": "WR",
-        "status": "Out"
-      },
       {
         "player": "E.J. Speed",
         "position": "LB",
@@ -358,10 +348,24 @@
         "status": "Out"
       }
     ],
+    "SF": [
+      {
+        "player": "George Kittle",
+        "position": "TE",
+        "status": "Out"
+      }
+    ],
     "SEA": [
       {
         "player": "Zach Charbonnet",
         "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Chase Lucas",
+        "position": "CB",
         "status": "Out"
       }
     ],
