@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-11T11:41:13.677Z",
+  "fetchedAt": "2026-08-12T11:42:42.482Z",
   "games": [
     {
       "id": "401872656",
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -246,11 +246,6 @@
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
-      },
-      {
-        "player": "Keyshaun Elliott",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "CIN": [
@@ -264,13 +259,6 @@
       {
         "player": "Jordan Turner",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "GB": [
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
         "status": "Out"
       }
     ],
