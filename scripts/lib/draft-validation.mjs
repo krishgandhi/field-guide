@@ -73,6 +73,11 @@ export function problemsWith(entry, candidate) {
     problems.push("axes out of §7 order");
   }
   for (const r of rubric) {
+    // Enforced here rather than in the JSON schema: structured outputs reject
+    // minimum/maximum on an integer, so this is the only thing checking it.
+    if (!Number.isInteger(r.score) || r.score < 1 || r.score > 5) {
+      problems.push(`${r.axis}: score ${r.score} outside 1–5`);
+    }
     if (sentenceCount(r.note) > 2) {
       problems.push(`${r.axis}: over the two-sentence budget`);
     }

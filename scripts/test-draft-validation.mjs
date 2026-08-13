@@ -130,6 +130,26 @@ check(
     (p) => p.includes("exactly one sentence"),
   ),
 );
+// The JSON schema used to carry minimum/maximum on these integers, until the
+// API rejected those keywords outright. problemsWith is now the only guard.
+check(
+  "a rubric score outside 1-5 is rejected",
+  problemsWith(
+    goodEntry({
+      rubric: goodEntry().rubric.map((r, i) => (i === 3 ? { ...r, score: 7 } : r)),
+    }),
+    candidate,
+  ).some((p) => p.includes("outside 1–5")),
+);
+check(
+  "a non-integer rubric score is rejected",
+  problemsWith(
+    goodEntry({
+      rubric: goodEntry().rubric.map((r, i) => (i === 1 ? { ...r, score: 2.5 } : r)),
+    }),
+    candidate,
+  ).some((p) => p.includes("outside 1–5")),
+);
 check(
   "bigness outside 1-5 is rejected",
   problemsWith(goodEntry({ bigness: 9 }), candidate).some((p) =>

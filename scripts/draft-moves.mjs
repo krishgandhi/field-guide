@@ -126,7 +126,11 @@ const schema = {
           },
           title: { type: "string" },
           summary: { type: "string" },
-          bigness: { type: "integer", minimum: 1, maximum: 5 },
+          // No minimum/maximum: structured outputs reject those on integers
+          // ("For 'integer' type, properties maximum, minimum are not
+          // supported"). The range goes in the description for the model and
+          // is enforced for real in problemsWith().
+          bigness: { type: "integer", description: "1 to 5" },
           teams: {
             type: "array",
             items: { type: "string" },
@@ -148,7 +152,7 @@ const schema = {
                     "Narrative violation",
                   ],
                 },
-                score: { type: "integer", minimum: 1, maximum: 5 },
+                score: { type: "integer", description: "1 to 5" },
                 note: { type: "string" },
               },
               required: ["axis", "score", "note"],
