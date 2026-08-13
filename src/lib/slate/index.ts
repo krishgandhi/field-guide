@@ -42,6 +42,17 @@ const slateSchema = z.strictObject({
   season: z.number(),
   week: z.number().min(1).max(18),
   fetchedAt: z.string(),
+  /**
+   * When write-reasons.mjs last wrote the per-game prose. Optional because the
+   * slate is fetched first and the reasons step is allowed to fail.
+   *
+   * This key broke the build the first time that step ever succeeded: with no
+   * API key it had always exited early, so the strict schema had never seen
+   * the field it writes. Strictness caught it, which is the point — but the
+   * lesson is that a `continue-on-error` step which never runs is a step whose
+   * output is never validated.
+   */
+  reasonsWrittenAt: z.string().optional(),
   games: z.array(gameSchema),
   byes: z.array(z.string()),
   injuries: z.record(z.string(), z.array(injurySchema)),
