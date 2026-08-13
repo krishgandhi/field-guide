@@ -60,13 +60,6 @@ const FIXTURE_REPORTING = [
 ];
 
 /**
- * What the model is allowed to know about each game.
- *
- * Only verified inputs, described in words rather than handed over as raw
- * numbers, so there is nothing for it to misquote. It never sees a team's
- * record, a player's name, or anything we haven't checked.
- */
-/**
  * Games that still need a sentence.
  *
  * A hand-written note in src/lib/slate/notes.ts outranks anything generated
@@ -183,6 +176,13 @@ console.log(
   `${withPreviews}/${needsReason.length} games have preview reporting to draw on.`,
 );
 
+/**
+ * What the model is allowed to know about each game.
+ *
+ * Verified inputs only, described in words rather than handed over as raw
+ * numbers so there is nothing to misquote — plus the preview reporting above,
+ * which is the one place real names enter and is checked against the output.
+ */
 const games = needsReason.map((game) => {
   const factors = factorsFor(game, slate.week);
   const closeness =
