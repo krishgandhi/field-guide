@@ -290,6 +290,12 @@ ${entry.body.trim()}
 console.log(
   `\n${written} draft(s), ${skipped} skipped by the model, ${rejected} rejected by validation.`,
 );
+// Logged because write-reasons.mjs logs it and this one didn't, which made the
+// spend impossible to attribute between them. This is the pricier of the two:
+// high effort plus adaptive thinking, and thinking bills as output.
+console.log(
+  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
+);
 if (written > 0) {
   console.log(`Review them in ${DRAFTS}/ — nothing is published until you move it up a level.`);
 }

@@ -81,4 +81,15 @@ jobs:
           # "draft:" prefix so these filter out of the history that should read
           # as a record of actual work (§3).
           git commit -m "draft: move candidates ($(date -u +%Y-%m-%d))"
-          git push
+          # Push can lose a race with a human pushing to main — that is exactly
+          # how the 13 August refresh was lost, after committing cleanly. Rebase
+          # onto whatever landed and try again rather than dropping the data.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto origin/main."
+            git pull --rebase --autostash || exit 1
+          done
+          echo "Still could not push after three attempts."
+          exit 1
