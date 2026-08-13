@@ -253,7 +253,7 @@ move:
     - label: ESPN
       url: ${candidate.url}
   rubric:
-${rubric
+${(entry.rubric ?? [])
   .map(
     (r) =>
       `    - axis: ${r.axis}\n      score: ${r.score}\n      note: >-\n${yamlFold(r.note)}`,
