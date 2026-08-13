@@ -28,6 +28,7 @@ export type MoveListItem = {
   dateLabel: string;
   teams: string[];
   bigness: number;
+  kind: string;
   soWhat: string;
   /** Pre-resolved server-side: teamLogo/teamName read JSON the client shouldn't ship. */
   crests: { id: string; name: string; logo: string | null }[];
@@ -46,6 +47,21 @@ const SIZES = [
   { value: "3", label: "Notable" },
   { value: "1-2", label: "Minor" },
 ];
+
+/**
+ * What each kind is called on screen. Moves covers more than transactions now
+ * — a starting job changing hands matters as much as a trade — and the chip is
+ * what tells you which you're looking at without opening it.
+ */
+const KIND_LABEL: Record<string, string> = {
+  trade: "Trade",
+  signing: "Signing",
+  contract: "Contract",
+  release: "Release",
+  role: "Role change",
+  injury: "Injury",
+  coaching: "Coaching",
+};
 
 function matchesSize(bigness: number, filter: string): boolean {
   if (filter === "all") return true;
@@ -93,6 +109,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
   const [sort, setSort] = useState<Sort>("newest");
   const [teamFilter, setTeamFilter] = useState("all");
   const [sizeFilter, setSizeFilter] = useState("all");
+  const [kindFilter, setKindFilter] = useState("all");
 
   // Only teams that actually appear, so the picker never offers a dead end.
   const teams = useMemo(() => {
@@ -103,10 +120,18 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
     return [...seen].sort((a, b) => a[1].localeCompare(b[1]));
   }, [moves]);
 
+  // Only kinds present in the entries, in the order KIND_LABEL declares them,
+  // so the picker never offers something that matches nothing.
+  const kinds = useMemo(() => {
+    const present = new Set(moves.map((m) => m.kind));
+    return Object.keys(KIND_LABEL).filter((k) => present.has(k));
+  }, [moves]);
+
   const shown = useMemo(() => {
     const filtered = moves.filter(
       (m) =>
         (teamFilter === "all" || m.teams.includes(teamFilter)) &&
+        (kindFilter === "all" || m.kind === kindFilter) &&
         matchesSize(m.bigness, sizeFilter),
     );
     // Ties break on the other axis so the order is always fully determined —
@@ -116,7 +141,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         ? b.date.localeCompare(a.date) || b.bigness - a.bigness
         : b.bigness - a.bigness || b.date.localeCompare(a.date),
     );
-  }, [moves, sort, teamFilter, sizeFilter]);
+  }, [moves, sort, teamFilter, sizeFilter, kindFilter]);
 
   return (
     <>
@@ -149,7 +174,20 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
+          <Picker
+            label="Filter by type"
+            value={kindFilter}
+            onChange={setKindFilter}
+          >
+            <option value="all">All types</option>
+            {kinds.map((k) => (
+              <option key={k} value={k}>
+                {KIND_LABEL[k]}
+              </option>
+            ))}
+          </Picker>
+
           <Picker
             label="Filter by team"
             value={teamFilter}
@@ -211,11 +249,16 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
                         ) : null,
                       )}
                     </span>
-                    <span className="text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+                    <span className="tnum text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
                       {move.dateLabel}
                     </span>
                   </span>
-                  <BignessPill value={move.bigness} />
+                  <span className="flex shrink-0 items-center gap-1.5">
+                    <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-fg-dim">
+                      {KIND_LABEL[move.kind] ?? move.kind}
+                    </span>
+                    <BignessPill value={move.bigness} />
+                  </span>
                 </div>
 
                 <h2 className="text-[1.05rem] font-semibold leading-snug text-fg">

@@ -29,15 +29,15 @@ const count = () => page.locator(CARD).count();
 
 // --- default: newest first -------------------------------------------------
 const initial = await headlines();
-check("all seven show by default", initial.length === 7, `got ${initial.length}`);
+check("all eight show by default", initial.length === 8, `got ${initial.length}`);
 check(
   "Newest is the default sort",
   (await page.getByRole("button", { name: "Newest" }).getAttribute("aria-pressed")) ===
     "true",
 );
 check(
-  "newest entry is a June move",
-  /Garrett|Brown/.test(initial[0] ?? ""),
+  "newest entry is the August role change",
+  /Murray/.test(initial[0] ?? ""),
   initial[0],
 );
 check(
@@ -73,7 +73,7 @@ check(
 );
 check(
   "counter reflects the filter",
-  (await page.getByText(/^2 of 7$/i).count()) === 1,
+  (await page.getByText(/^2 of 8$/i).count()) === 1,
 );
 
 // --- combining filters to an empty result ---------------------------------
@@ -87,7 +87,7 @@ check("empty state is shown", empty);
 await page.getByLabel("Filter by team").selectOption({ label: "All teams" });
 await page.getByLabel("Filter by how big").selectOption({ label: "Any size" });
 await page.waitForTimeout(200);
-check("clearing filters restores all seven", (await count()) === 7);
+check("clearing filters restores all eight", (await count()) === 8);
 
 // --- size filter on its own ------------------------------------------------
 await page.getByLabel("Filter by how big").selectOption({ label: "Minor" });
@@ -99,6 +99,46 @@ check(
   minor.every((h) => /Linderbaum|Allen/.test(h)),
   minor.join(" / "),
 );
+
+// --- type filter -----------------------------------------------------------
+await page.getByLabel("Filter by how big").selectOption({ label: "Any size" });
+await page.getByLabel("Filter by type").selectOption({ label: "Trade" });
+await page.waitForTimeout(200);
+const trades = await headlines();
+check("Trade filter narrows to trades", trades.length === 3, `got ${trades.length}`);
+check(
+  "and they are the three trades",
+  trades.every((h) => /Garrett|Brown|McDuffie/.test(h)),
+  trades.join(" / "),
+);
+
+await page.getByLabel("Filter by type").selectOption({ label: "Role change" });
+await page.waitForTimeout(200);
+const roles = await headlines();
+check("Role change finds the Murray entry", roles.length === 1, `got ${roles.length}`);
+check("and it is Murray", /Murray/.test(roles[0] ?? ""), roles[0]);
+
+// The type picker must not offer a kind nothing uses.
+const kindOptions = await page
+  .getByLabel("Filter by type")
+  .locator("option")
+  .allTextContents();
+check(
+  "picker offers no empty categories",
+  !kindOptions.includes("Injury") && !kindOptions.includes("Release"),
+  kindOptions.join(", "),
+);
+
+await page.getByLabel("Filter by type").selectOption({ label: "All types" });
+await page.waitForTimeout(200);
+
+// --- dates render at one precision -----------------------------------------
+const dates = await page
+  .locator('a[href^="/moves/"] span.tnum')
+  .allTextContents();
+check("every card shows a full day-month-year", dates.length === 8, `got ${dates.length}`);
+const badDate = dates.find((d) => !/^\d{1,2}\s+\w+\s+\d{4}$/.test(d.trim()));
+check("no partial dates left", !badDate, badDate ?? "");
 
 // --- quality floor ---------------------------------------------------------
 await page.getByLabel("Filter by how big").selectOption({ label: "Any size" });

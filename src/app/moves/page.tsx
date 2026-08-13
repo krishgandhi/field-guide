@@ -25,6 +25,7 @@ export default function MovesPage() {
     dateLabel: move.dateLabel,
     teams: move.teams,
     bigness: move.bigness,
+    kind: move.kind,
     soWhat: move.soWhat,
     crests: move.teams.map((id) => ({
       id,

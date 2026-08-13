@@ -140,6 +140,10 @@ function sentences(text) {
     .filter(Boolean).length;
 }
 
+const KINDS = [
+  "trade", "signing", "contract", "release", "role", "injury", "coaching",
+];
+
 const AXES = [
   "Player quality",
   "Positional value",
@@ -154,6 +158,7 @@ if (files.length === 0) failures.push("no move files found");
 
 const bigness = [];
 const allSources = [];
+const kindCounts = new Map();
 
 for (const file of files) {
   const parsed = parseFrontmatter(readFileSync(path.join(DIR, file), "utf8"), file);
@@ -172,17 +177,32 @@ for (const file of files) {
   }
 
   bigness.push([fm.slug, move.bigness]);
+  kindCounts.set(move.kind, (kindCounts.get(move.kind) ?? 0) + 1);
 
   // The filename's date and move.date are two sources of truth that can drift.
-  // Require the filename prefix to be a PREFIX of the date rather than equal to
-  // it, which accepts the honest variation in precision — 2026-allen ↔ "2026",
-  // 2026-03-linderbaum ↔ "2026-03-12" — while catching a slug that says June
-  // when the frontmatter says March.
+  // The slug carries YYYY-MM and the date carries the full day, so require the
+  // former to be a prefix of the latter: 2026-03-linderbaum ↔ "2026-03-12"
+  // passes, while a slug saying June when the frontmatter says March fails.
   const prefix = (String(fm.slug).match(/^\d{4}(-\d{2})?/) ?? [])[0];
   if (!prefix) {
     fail(file, "filename should start with the date, e.g. 2026-06-");
   } else if (!String(move.date).startsWith(prefix)) {
     fail(file, `filename says ${prefix} but move.date is ${move.date}`);
+  }
+
+  // Every entry declares what kind of change it is; the card chip and the
+  // list filter both key off it.
+  if (!KINDS.includes(move.kind)) {
+    fail(file, `kind "${move.kind}" is not one of ${KINDS.join(", ")}`);
+  }
+
+  // The rubric is built for things where a team chose to pay a price. It has
+  // nothing to say about a coach being fired or a knee giving way, and those
+  // two are allowed to score nothing — but a trade with no rubric is just an
+  // unfinished entry.
+  const rubricOptional = ["coaching", "injury"].includes(move.kind);
+  if (!rubricOptional && (move.rubric ?? []).length === 0) {
+    fail(file, `kind "${move.kind}" must score the six axes`);
   }
 
   // §9: always link to the source.
@@ -249,6 +269,7 @@ if (linderbaum && garrett && linderbaum[1] >= garrett[1]) {
   );
 }
 
+notes.push(`  kinds: ${[...kindCounts].map(([k, n]) => `${k} ${n}`).join(", ")}`);
 notes.push(
   `  ${files.length} moves, bigness ${bigness
     .sort((a, b) => b[1] - a[1])
