@@ -1,0 +1,36 @@
+name: Check Claude key
+
+# On-demand: does ANTHROPIC_API_KEY work, and does the API still accept the
+# request shape draft-moves.mjs sends?
+#
+# Worth having because the drafting step is idle for months at a time. Out of
+# season the detector correctly finds nothing, so the API call never runs — and
+# a step that never runs is a step whose output has never been validated. That
+# is exactly how a bad key in slate.json reached production.
+#
+# Writes nothing. Run it from the Actions tab after rotating the key, or before
+# a trade deadline when the pipeline is about to matter.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install
+        run: npm ci
+
+      - name: Call the API with a fixture
+        run: npm run draft:moves -- --self-test
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -30,6 +30,35 @@ import { problemsWith, yamlFold } from "./lib/draft-validation.mjs";
 const CANDIDATES = "src/data/move-candidates.json";
 const DRAFTS = "content/moves/_drafts";
 
+/**
+ * --self-test: exercise the API call against a fixture and write nothing.
+ *
+ * Out of season the detector correctly finds nothing for months, which means
+ * the Anthropic call in this script can sit unexercised until the day it
+ * matters. That is how the reasonsWrittenAt bug reached production — a step
+ * that never ran was a step never validated. This proves the key works and the
+ * request shape is still accepted, on demand, without touching the repo.
+ *
+ * The fixture player is fictional on purpose: a real name with invented
+ * contract terms would be misinformation, which is the whole thing this
+ * pipeline is built to avoid.
+ */
+const SELF_TEST = process.argv.includes("--self-test");
+
+const FIXTURE = [
+  {
+    id: "self-test",
+    headline:
+      "Springfield Atoms trade QB Rex Fictional to the Shelbyville Ferrets for 3 draft picks",
+    description:
+      "The Ferrets sent a 2027 first round pick and 2 later selections for the 28 year old quarterback, who signed a 4 year extension worth $50 million.",
+    published: "2026-08-13",
+    teams: ["Springfield Atoms"],
+    athletes: ["Rex Fictional"],
+    url: "https://www.espn.com/nfl/",
+  },
+];
+
 // No key: exit clean. Same posture as write-reasons.mjs — this is the normal
 // state locally and on a fork, not an error.
 if (!process.env.ANTHROPIC_API_KEY) {
@@ -37,15 +66,20 @@ if (!process.env.ANTHROPIC_API_KEY) {
   process.exit(0);
 }
 
-if (!existsSync(CANDIDATES)) {
-  console.log("No candidates file. Run detect-moves.mjs first.");
-  process.exit(0);
-}
-
-const { candidates = [] } = JSON.parse(readFileSync(CANDIDATES, "utf8"));
-if (candidates.length === 0) {
-  console.log("No candidates to draft.");
-  process.exit(0);
+let candidates;
+if (SELF_TEST) {
+  console.log("Self-test: calling the API with a fixture. Nothing will be written.\n");
+  candidates = FIXTURE;
+} else {
+  if (!existsSync(CANDIDATES)) {
+    console.log("No candidates file. Run detect-moves.mjs first.");
+    process.exit(0);
+  }
+  ({ candidates = [] } = JSON.parse(readFileSync(CANDIDATES, "utf8")));
+  if (candidates.length === 0) {
+    console.log("No candidates to draft.");
+    process.exit(0);
+  }
 }
 
 const client = new Anthropic();
@@ -167,7 +201,7 @@ if (!payload) {
 
 const { entries } = JSON.parse(payload);
 
-mkdirSync(DRAFTS, { recursive: true });
+if (!SELF_TEST) mkdirSync(DRAFTS, { recursive: true });
 
 let written = 0;
 let skipped = 0;
@@ -225,6 +259,13 @@ ${rubric
 
 ${entry.body.trim()}
 `;
+
+  if (SELF_TEST) {
+    written++;
+    console.log(`  would write ${slug}.mdx  (self-test: not written)`);
+    console.log(`\n${mdx}`);
+    continue;
+  }
 
   writeFileSync(`${DRAFTS}/${slug}.mdx`, mdx);
   written++;
