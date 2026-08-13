@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-12T11:42:42.482Z",
+  "fetchedAt": "2026-08-13T10:20:08.021Z",
   "games": [
     {
       "id": "401872656",
@@ -13,7 +13,8 @@
       "overUnder": 44.5,
       "broadcast": "NBC",
       "venue": "Lumen Field",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "A night game between two sides nobody can pick apart, which is about as good as an evening gets."
     },
     {
       "id": "401872657",
@@ -25,7 +26,8 @@
       "overUnder": 48.5,
       "broadcast": "Netflix",
       "venue": "Melbourne Cricket Ground",
-      "neutralSite": true
+      "neutralSite": true,
+      "reason": "Two neighbours who have been trading blows for decades, dead even, with one genuinely great thrower involved."
     },
     {
       "id": "401872925",
@@ -37,7 +39,8 @@
       "overUnder": 51.5,
       "broadcast": "FOX",
       "venue": "Paycor Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "No history between them, but it should stay tight to the end, so it earns a look."
     },
     {
       "id": "401872923",
@@ -46,10 +49,11 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 49.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "One team is expected to roll over the other, so keep it on in the background at best."
     },
     {
       "id": "401872924",
@@ -61,7 +65,8 @@
       "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Low on glamour, yet close enough on paper that the finish might actually be worth staying for."
     },
     {
       "id": "401872659",
@@ -73,7 +78,8 @@
       "overUnder": 48.5,
       "broadcast": "CBS",
       "venue": "Lucas Oil Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Expected to be a coin flip, which usually means a tense fourth quarter even without any bad blood."
     },
     {
       "id": "401872658",
@@ -85,7 +91,8 @@
       "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Nothing personal between these two, but the game itself looks evenly balanced and should hold together."
     },
     {
       "id": "401872661",
@@ -97,7 +104,8 @@
       "overUnder": 46.5,
       "broadcast": "FOX",
       "venue": "Bank of America Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Two sides sized up as equals, so the entertainment comes from the closeness rather than anything bigger."
     },
     {
       "id": "401872922",
@@ -109,7 +117,8 @@
       "overUnder": 40.5,
       "broadcast": "CBS",
       "venue": "EverBank Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "A lopsided one on paper, and there's no rivalry here to rescue it if it goes as expected."
     },
     {
       "id": "401872660",
@@ -121,7 +130,8 @@
       "overUnder": 44.5,
       "broadcast": "CBS",
       "venue": "NRG Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Your Bills are in a proper toss-up against a top thrower, so clear the afternoon for this one."
     },
     {
       "id": "401872928",
@@ -133,7 +143,8 @@
       "overUnder": 40.5,
       "broadcast": "FOX",
       "venue": "Allegiant Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Two evenly matched teams and little else going on, which is fine if you just want a tight game."
     },
     {
       "id": "401872927",
@@ -145,7 +156,8 @@
       "overUnder": 45.5,
       "broadcast": "CBS",
       "venue": "U.S. Bank Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "An old cold-weather grudge between division neighbours who can't be separated, and those rarely disappoint."
     },
     {
       "id": "401872929",
@@ -157,7 +169,8 @@
       "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Lincoln Financial Field",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Same division, and one side is only slightly favoured, so there's real reason to check in."
     },
     {
       "id": "401872926",
@@ -169,7 +182,8 @@
       "overUnder": 46.5,
       "broadcast": "CBS",
       "venue": "SoFi Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "One team should win comfortably and there's no bite to the meeting, so skip it without regret."
     },
     {
       "id": "401872930",
@@ -181,7 +195,8 @@
       "overUnder": 48.5,
       "broadcast": "NBC",
       "venue": "MetLife Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Bad blood going back generations, same division, and a game too close to call before kickoff."
     },
     {
       "id": "401872931",
@@ -193,7 +208,8 @@
       "overUnder": 42.5,
       "broadcast": "ESPN, ABC",
       "venue": "GEHA Field at Arrowhead Stadium",
-      "neutralSite": false
+      "neutralSite": false,
+      "reason": "Division enemies, a fine quarterback, prime time, and no separating them; this is the game of the week."
     }
   ],
   "byes": [],
@@ -262,6 +278,13 @@
         "status": "Out"
       }
     ],
+    "GB": [
+      {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
     "HOU": [
       {
         "player": "E.J. Speed",
@@ -290,13 +313,6 @@
       {
         "player": "Storm Duck",
         "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "NE": [
-      {
-        "player": "Harold Landry III",
-        "position": "LB",
         "status": "Out"
       }
     ],
@@ -364,5 +380,6 @@
         "status": "Out"
       }
     ]
-  }
+  },
+  "reasonsWrittenAt": "2026-08-13T10:20:42.858Z"
 }
