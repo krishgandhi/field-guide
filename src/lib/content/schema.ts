@@ -57,25 +57,29 @@ const rubricScore = z.strictObject({
 });
 
 /**
- * A move's date, at whatever precision is actually known: 2026, 2026-03 or
- * 2026-03-12.
+ * What kind of change this is.
  *
- * Not `isoDate`, deliberately. Reporting gives "a post-June 1 trade" or "the
- * 2026 offseason" and pinning that to a day means inventing one — the exact
- * confident guess §3 rules out. All three forms still sort correctly as
- * strings, and the UI renders each at its own precision.
+ * Moves started as transactions only, which left no home for things that
+ * plainly matter — a quarterback being handed the starting job isn't a trade,
+ * and neither is a season-ending injury. The kind drives a chip on the card
+ * and a filter on the list.
+ *
+ * Routine weekly injuries are deliberately NOT in scope: those are live data
+ * already shown on game cards and team pages, and an MDX file for a
+ * "questionable" ankle is stale within days. `injury` here means season-
+ * altering.
  */
-const partialDate = z
-  .union([z.date(), z.string()])
-  .transform((v) => (v instanceof Date ? v.toISOString().slice(0, 10) : v.trim()))
-  .pipe(
-    z
-      .string()
-      .regex(
-        /^\d{4}(-\d{2}(-\d{2})?)?$/,
-        "must be YYYY, YYYY-MM or YYYY-MM-DD — quote it so YAML keeps it a string",
-      ),
-  );
+export const MOVE_KINDS = [
+  "trade",
+  "signing",
+  "contract",
+  "release",
+  "role",
+  "injury",
+  "coaching",
+] as const;
+
+export type MoveKind = (typeof MOVE_KINDS)[number];
 
 /**
  * Where the facts came from (§9).
@@ -102,7 +106,16 @@ const source = z.strictObject({
  * Strict like its parent, so a typo inside `move:` fails the build too.
  */
 const move = z.strictObject({
-  date: partialDate,
+  /**
+   * The day it happened, always YYYY-MM-DD.
+   *
+   * This used to accept 2026 or 2026-03 too, so an entry could render "June
+   * 2026" next to "12 March 2026". That was over-caution on my part: every
+   * move has a reportable date, and requiring it forces the writer to find one
+   * rather than shrug. Same discipline as `verified`.
+   */
+  date: isoDate,
+  kind: z.enum(MOVE_KINDS),
   /** Team abbreviations. Cross-checked against the real 32 in the loader. */
   teams: z.array(z.string().regex(/^[A-Z]{2,3}$/)).min(1),
   /**

@@ -1,6 +1,7 @@
 import { getAllEntries, getEntry, getSlugs } from "@/lib/content";
 import type {
   Frontmatter,
+  MoveKind,
   MoveMeta,
   MoveSource,
   RubricScore,
@@ -25,16 +26,17 @@ import { team } from "@/lib/teams";
  * No new filesystem code. Everything here goes through src/lib/content.
  */
 
-export type { MoveSource, RubricScore } from "@/lib/content/schema";
+export type { MoveKind, MoveSource, RubricScore } from "@/lib/content/schema";
 
 export type Move = {
   slug: string;
   /** Frontmatter `title`. Named headline at the call sites. */
   headline: string;
-  /** Sortable: 2026, 2026-03 or 2026-03-12. */
+  /** YYYY-MM-DD. Sorts correctly as a string. */
   date: string;
-  /** Human-readable at whatever precision is actually known. */
+  /** "2 June 2026". */
   dateLabel: string;
+  kind: MoveKind;
   teams: string[];
   bigness: number;
   /** One sentence: why a newcomer should care at all. */
@@ -50,17 +52,10 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December",
 ];
 
-/**
- * "2026" → "2026 offseason", "2026-06" → "June 2026", "2026-03-12" → "12 March 2026".
- *
- * Renders each date at the precision we actually have rather than padding it
- * out to a day nobody reported.
- */
+/** "2026-06-02" → "2 June 2026". One format everywhere; the schema guarantees the day. */
 export function formatMoveDate(date: string): string {
   const [year, month, day] = date.split("-");
-  if (!month) return `${year} offseason`;
-  const name = MONTHS[Number(month) - 1] ?? month;
-  return day ? `${Number(day)} ${name} ${year}` : `${name} ${year}`;
+  return `${Number(day)} ${MONTHS[Number(month) - 1] ?? month} ${year}`;
 }
 
 /**
@@ -99,6 +94,7 @@ function toMove(frontmatter: Frontmatter): Move {
     headline: frontmatter.title,
     date: m.date,
     dateLabel: formatMoveDate(m.date),
+    kind: m.kind,
     teams: m.teams,
     bigness: m.bigness,
     soWhat: frontmatter.summary,
