@@ -54,6 +54,9 @@ const FIXTURE = [
       "The Ferrets sent a 2027 first round pick and 2 later selections for the 28 year old quarterback, who signed a 4 year extension worth $50 million.",
     published: "2026-08-13",
     teams: ["Springfield Atoms"],
+    // Real ids so the self-test exercises the write path; the event is fake
+    // and nothing is written to disk.
+    teamIds: ["LAR", "SEA"],
     athletes: ["Rex Fictional"],
     url: "https://www.espn.com/nfl/",
   },
@@ -233,7 +236,15 @@ for (const entry of entries) {
 
   const date = candidate.published || new Date().toISOString().slice(0, 10);
   const slug = `${date.slice(0, 7)}-${entry.slug}`;
-  const teams = (entry.teams ?? []).filter((t) => /^[A-Z]{2,3}$/.test(t));
+  // The detector's ids, not the model's. They're derived from ESPN's own team
+  // tags rather than generated, so there is nothing to hallucinate.
+  const teams = candidate.teamIds ?? [];
+  if (teams.length === 0) {
+    console.log(`  REJECT ${candidate.headline}`);
+    console.log(`         no recognised team — the schema requires at least one`);
+    rejected++;
+    continue;
+  }
 
   const mdx = `---
 title: ${entry.title}

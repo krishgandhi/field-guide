@@ -59,6 +59,22 @@ function readJson(path, fallback) {
   }
 }
 
+/**
+ * ESPN tags articles with display names ("New England Patriots"); everything
+ * downstream keys off abbreviations. §13's abbreviation trap, normalised once
+ * here at the boundary rather than guessed later — the model should never be
+ * inventing team codes, and a draft with no teams fails the schema on
+ * promotion because it requires at least one.
+ */
+const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
+const BY_NAME = new Map(TEAMS.map((t) => [t.displayName.toLowerCase(), t.id]));
+
+function abbreviate(names) {
+  return [...new Set(names.map((n) => BY_NAME.get(String(n).toLowerCase())))].filter(
+    Boolean,
+  );
+}
+
 function categoryValues(article, type) {
   return (article.categories ?? [])
     .filter((c) => c?.type === type)
@@ -99,12 +115,15 @@ for (const article of articles) {
   const athletes = categoryValues(article, "athlete");
   if (athletes.length === 0) continue;
 
+  const teamNames = categoryValues(article, "team");
   candidates.push({
     id,
     headline,
     description,
     published: (article.published ?? "").slice(0, 10),
-    teams: categoryValues(article, "team"),
+    teams: teamNames,
+    /** Normalised at the boundary — what the draft actually writes. */
+    teamIds: abbreviate(teamNames),
     athletes,
     url: article.links?.web?.href ?? "",
   });
@@ -139,6 +158,6 @@ if (candidates.length === 0) {
   console.log(`\n${candidates.length} candidate(s):`);
   for (const c of candidates) {
     console.log(`  ${c.published}  ${c.headline}`);
-    console.log(`             ${c.teams.join(", ") || "no team tag"}`);
+    console.log(`             ${c.teamIds.join(", ") || "no team tag"}`);
   }
 }
