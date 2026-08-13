@@ -27,6 +27,7 @@ import Anthropic from "@anthropic-ai/sdk";
 const SLATE = "src/data/slate.json";
 
 const { factorsFor } = await import("../src/lib/watchability.ts");
+const { noteFor } = await import("../src/lib/slate/notes.ts");
 const { teamName, isDivisional } = await import("../src/lib/teams/index.ts");
 const { isRivalry, hasStarQb } = await import("../src/lib/slate/context.ts");
 
@@ -46,7 +47,27 @@ const slate = JSON.parse(await readFile(SLATE, "utf8"));
  * numbers, so there is nothing for it to misquote. It never sees a team's
  * record, a player's name, or anything we haven't checked.
  */
-const games = slate.games.map((game) => {
+/**
+ * Games that still need a sentence.
+ *
+ * A hand-written note in src/lib/slate/notes.ts outranks anything generated
+ * here (see the precedence in watchability.ts), so asking the model for those
+ * produces prose that can never be displayed. Week 1 is fully hand-written,
+ * which made the first successful run generate sixteen sentences and show
+ * none of them.
+ */
+const needsReason = slate.games.filter(
+  (game) => !noteFor(slate.week, game.away, game.home),
+);
+
+if (needsReason.length === 0) {
+  console.log(
+    `All ${slate.games.length} games in week ${slate.week} have hand-written notes. Nothing to generate.`,
+  );
+  process.exit(0);
+}
+
+const games = needsReason.map((game) => {
   const factors = factorsFor(game, slate.week);
   const closeness =
     game.spread === null
