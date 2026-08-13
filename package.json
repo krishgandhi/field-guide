@@ -20,7 +20,9 @@
     "draft:moves": "node scripts/draft-moves.mjs",
     "test:drafts": "node scripts/test-draft-validation.mjs",
     "drafts": "node scripts/list-drafts.mjs",
-    "test:filters": "node scripts/test-moves-filters.mjs"
+    "test:filters": "node scripts/test-moves-filters.mjs",
+    "test:reasons": "node scripts/test-reason-validation.mjs",
+    "test:patterns": "node scripts/test-detect-patterns.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

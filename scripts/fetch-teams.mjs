@@ -168,6 +168,12 @@ for (const t of list) {
 
   teams.push({
     id: abbr,
+    /**
+     * ESPN's own numeric id. Needed for `news?team=<id>`, the only feed that
+     * returns team-specific stories — the per-game summary endpoint serves the
+     * same generic league-wide list for every event.
+     */
+    espnId: String(t.id),
     slug: t.displayName.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
     location: t.location,
     name: t.name,

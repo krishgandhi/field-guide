@@ -87,8 +87,11 @@ lastUpdated: 2026-07-29
 
 ```yaml
 move:
-  date: "2026-06"        # YYYY, YYYY-MM or YYYY-MM-DD — whatever is actually
-                         # known. Never pad it out to a day nobody reported.
+  date: "2026-06-02"     # always YYYY-MM-DD. Every move has a reportable date;
+                         # find it rather than shrug. Partial dates used to be
+                         # allowed and just produced an inconsistent list.
+  kind: trade            # trade | signing | contract | release | role |
+                         # injury | coaching
   teams: [CLE, LAR]
   bigness: 5             # 1–5, a judgement, NOT the mean of the six axes
   verified: true         # false until the facts are checked against a source
@@ -97,6 +100,14 @@ move:
       url: https://...
   rubric: []             # all six axes from §7, or none — never a partial set
 ```
+
+**Moves is not only transactions.** A starting job changing hands matters as
+much as a trade — Minnesota naming Kyler Murray over J.J. McCarthy moved no
+money and no picks and is the story of their season — so `role` entries score
+the full rubric. `coaching` and `injury` may score none, and `injury` means
+season-altering only: routine weekly knocks are live data, already shown on
+game cards and team pages, and an MDX file for a "questionable" ankle is stale
+in three days.
 
 The filename's date prefix must be a prefix of `move.date`. `npm run test:moves`
 enforces that, plus §5's two-sentences-per-axis budget.
@@ -186,6 +197,7 @@ Phase 3 and later. **Verify each one still works before building against it** �
 | Betting spreads | The Odds API | Free tier, needs a key |
 | Contracts, cap | Over The Cap | No API — likely manual entry |
 | Transaction candidates | ESPN news (`/nfl/news`) | Tagged by team and athlete. **Not** `/nfl/transactions` — that returns waived long snappers, checked twice |
+| Game preview reporting | ESPN news filtered by team (`/nfl/news?team=<espnId>`) | Needs the numeric id, stored as `espnId`. **Not** `summary?event=` — its `news.articles` is the same generic league-wide list for every game, verified across three events |
 | College (Phase 5) | CollegeFootballData.com | Free with key |
 
 **Moves are written, not ingested.** A cron job proposes candidates from the

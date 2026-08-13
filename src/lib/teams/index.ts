@@ -10,6 +10,13 @@ import data from "./nfl-teams.json";
 
 export type NflTeam = {
   id: string;
+  /**
+   * ESPN's numeric id, for `news?team=<id>` — the only feed that returns
+   * team-specific stories. The per-game summary endpoint looks like it should
+   * work and doesn't: it serves the same generic league-wide article list for
+   * every event.
+   */
+  espnId: string;
   slug: string;
   location: string;
   name: string;

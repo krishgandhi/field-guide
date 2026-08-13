@@ -23,12 +23,22 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import Anthropic from "@anthropic-ai/sdk";
+import { problemWith } from "./lib/reason-validation.mjs";
 
 const SLATE = "src/data/slate.json";
 
+/**
+ * --self-test: run one fixture game through the real API and write nothing.
+ *
+ * Week 1 is entirely hand-written and previews don't exist until September, so
+ * this code path is otherwise unreachable until the moment it matters. Three
+ * bugs reached main that way already.
+ */
+const SELF_TEST = process.argv.includes("--self-test");
+
 const { factorsFor } = await import("../src/lib/watchability.ts");
 const { noteFor } = await import("../src/lib/slate/notes.ts");
-const { teamName, isDivisional } = await import("../src/lib/teams/index.ts");
+const { teamName, isDivisional, team } = await import("../src/lib/teams/index.ts");
 const { isRivalry, hasStarQb } = await import("../src/lib/slate/context.ts");
 
 // No key: leave the templates in place and exit clean. This is the normal
@@ -39,6 +49,15 @@ if (!process.env.ANTHROPIC_API_KEY) {
 }
 
 const slate = JSON.parse(await readFile(SLATE, "utf8"));
+
+/** A real fixture: Bills at Texans, with plausible preview reporting. */
+const FIXTURE_REPORTING = [
+  {
+    headline: "Josh Allen and the Bills open at Houston under a new head coach",
+    description:
+      "Joe Brady takes charge for the first time since replacing Sean McDermott, against the team that knocked Buffalo out last season.",
+  },
+];
 
 /**
  * What the model is allowed to know about each game.
@@ -56,9 +75,13 @@ const slate = JSON.parse(await readFile(SLATE, "utf8"));
  * which made the first successful run generate sixteen sentences and show
  * none of them.
  */
-const needsReason = slate.games.filter(
-  (game) => !noteFor(slate.week, game.away, game.home),
-);
+const needsReason = SELF_TEST
+  ? slate.games.slice(0, 1)
+  : slate.games.filter((game) => !noteFor(slate.week, game.away, game.home));
+
+if (SELF_TEST) {
+  console.log("Self-test: one fixture game, real API call, nothing written.\n");
+}
 
 if (needsReason.length === 0) {
   console.log(
@@ -66,6 +89,96 @@ if (needsReason.length === 0) {
   );
   process.exit(0);
 }
+
+/**
+ * Preview reporting for each game, so the sentences can say what is actually
+ * going on rather than "two evenly matched teams".
+ *
+ * Uses `news?team=<espnId>`, NOT the per-game summary endpoint. The latter
+ * looks right and isn't: its news.articles is the same generic league-wide
+ * list for every event — verified against a September game and two different
+ * preseason games, identical six stories each time.
+ *
+ * §9: headlines and descriptions are used here and never written to disk. Only
+ * the generated sentence and the source link are stored.
+ */
+const NEWS = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news";
+const PREVIEW_WINDOW_DAYS = 10;
+
+async function teamArticles(teamId) {
+  const espnId = team(teamId)?.espnId;
+  if (!espnId) return [];
+  try {
+    const res = await fetch(`${NEWS}?team=${espnId}&limit=30`, {
+      headers: { "user-agent": "field-guide (personal, non-commercial)" },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) return [];
+    const { articles = [] } = await res.json();
+    return articles;
+  } catch {
+    // Losing preview colour is cosmetic; the sentence still gets written from
+    // the structured facts.
+    return [];
+  }
+}
+
+/** Articles near kickoff that mention the opponent — that's what a preview is. */
+function previewsFor(articles, opponentId, kickoff) {
+  const opponent = team(opponentId);
+  if (!opponent) return [];
+  const when = new Date(kickoff).getTime();
+  const needles = [opponent.name, opponent.location, opponent.displayName]
+    .filter(Boolean)
+    .map((n) => n.toLowerCase());
+
+  return articles.filter((a) => {
+    const published = new Date(a.published ?? 0).getTime();
+    if (!published) return false;
+    const days = Math.abs(when - published) / 86400000;
+    if (days > PREVIEW_WINDOW_DAYS) return false;
+    const text = `${a.headline ?? ""} ${a.description ?? ""}`.toLowerCase();
+    return needles.some((n) => text.includes(n));
+  });
+}
+
+// One request per team, not per game — both sides of a game share the fetch.
+const playing = [...new Set(needsReason.flatMap((g) => [g.home, g.away]))];
+const articlesByTeam = SELF_TEST
+  ? new Map()
+  : new Map(
+      await Promise.all(playing.map(async (id) => [id, await teamArticles(id)])),
+    );
+
+/** gameId -> [{headline, description, link}], for the prompt and the guard. */
+const previews = new Map();
+for (const game of needsReason) {
+  if (SELF_TEST) {
+    previews.set(game.id, FIXTURE_REPORTING.map((r) => ({ ...r, link: "" })));
+    continue;
+  }
+  const found = [
+    ...previewsFor(articlesByTeam.get(game.home) ?? [], game.away, game.kickoff),
+    ...previewsFor(articlesByTeam.get(game.away) ?? [], game.home, game.kickoff),
+  ];
+  const seen = new Set();
+  previews.set(
+    game.id,
+    found
+      .filter((a) => !seen.has(a.id) && seen.add(a.id))
+      .slice(0, 3)
+      .map((a) => ({
+        headline: a.headline ?? "",
+        description: a.description ?? "",
+        link: a.links?.web?.href ?? "",
+      })),
+  );
+}
+
+const withPreviews = [...previews.values()].filter((p) => p.length > 0).length;
+console.log(
+  `${withPreviews}/${needsReason.length} games have preview reporting to draw on.`,
+);
 
 const games = needsReason.map((game) => {
   const factors = factorsFor(game, slate.week);
@@ -88,6 +201,11 @@ const games = needsReason.map((game) => {
     eliteQuarterbacks: [game.home, game.away].filter(hasStarQb).length,
     primetime: factors.some((f) => f.reason.startsWith("Primetime")),
     involvesBills: game.home === "BUF" || game.away === "BUF",
+    // Headlines only, never article bodies (§9).
+    reporting: (previews.get(game.id) ?? []).map((p) => ({
+      headline: p.headline,
+      description: p.description,
+    })),
   };
 });
 
@@ -96,8 +214,11 @@ const client = new Anthropic();
 const SYSTEM = `You write one-sentence explanations of why an NFL game is or isn't worth watching, for someone who has watched a bit of football but has no feel for what makes a game matter.
 
 Rules, all of them hard:
-- Use ONLY the facts given for that game. You know nothing else about these teams.
-- Never state a number, statistic, record, score, or player name. Not one.
+- Use ONLY the facts given for that game, including anything in its "reporting" list. You know nothing else about these teams.
+- "reporting" is recent coverage of this game. Use it to say what is actually going on — a quarterback's first start, a coach facing his old team, a rematch of something. That specificity is the whole point; without it you will write something bland and useless.
+- Summarise reporting in your own words. Never copy a phrase from a headline.
+- You MAY name a player, but ONLY if that exact name appears in "reporting". If it isn't there, describe the situation instead ("their new quarterback").
+- Never state a number, statistic, record, or score. Not one, ever, even from reporting.
 - No jargon. Banned outright: leverage, implications, seeding, efficiency, variance, spread, matchup, elite, storyline, momentum.
 - Plain spoken English, one sentence, roughly 10 to 20 words, ending in a full stop.
 - Say why it is or isn't worth turning on. If nothing is riding on it, say so plainly rather than inventing interest.
@@ -162,30 +283,8 @@ const { reasons } = JSON.parse(payload);
 
 // --- validation ------------------------------------------------------------
 
-const BANNED = [
-  "leverage", "implication", "seeding", "efficiency", "variance",
-  "spread", "matchup", "elite", "storyline", "momentum",
-];
-
 /** Every team nickname, so a sentence can't name a side that isn't playing. */
-const ALL_NAMES = slate.games.flatMap((g) => [teamName(g.home), teamName(g.away)]);
-
-function problemWith(text, game) {
-  const words = text.trim().split(/\s+/).length;
-  if (words < 6 || words > 26) return `${words} words`;
-  if (!/[.!?]$/.test(text.trim())) return "no end punctuation";
-  if (/\d/.test(text)) return "contains a number";
-
-  const lower = text.toLowerCase();
-  const banned = BANNED.find((w) => lower.includes(w));
-  if (banned) return `jargon "${banned}"`;
-
-  const ours = new Set([teamName(game.home), teamName(game.away)]);
-  const stray = ALL_NAMES.find((n) => !ours.has(n) && text.includes(n));
-  if (stray) return `names "${stray}", who aren't in this game`;
-
-  return null;
-}
+const allTeamNames = slate.games.flatMap((g) => [teamName(g.home), teamName(g.away)]);
 
 const byId = new Map(slate.games.map((g) => [g.id, g]));
 let accepted = 0;
@@ -197,7 +296,10 @@ for (const { id, reason } of reasons ?? []) {
     rejected.push(`unknown game id ${id}`);
     continue;
   }
-  const problem = problemWith(reason, game);
+  const sourceText = (previews.get(game.id) ?? [])
+    .map((p) => `${p.headline} ${p.description}`)
+    .join(" ");
+  const problem = problemWith(reason, game, { teamName, allTeamNames, sourceText });
   if (problem) {
     rejected.push(`${id}: ${problem} — "${reason}"`);
     continue;
@@ -206,10 +308,20 @@ for (const { id, reason } of reasons ?? []) {
   accepted++;
 }
 
-slate.reasonsWrittenAt = new Date().toISOString();
-await writeFile(SLATE, `${JSON.stringify(slate, null, 2)}\n`);
+if (SELF_TEST) {
+  console.log("Self-test — the sentence it produced, not written to disk:\n");
+  for (const game of needsReason) {
+    console.log(`  ${teamName(game.away)} at ${teamName(game.home)}`);
+    console.log(`  "${game.reason ?? "(rejected)"}"\n`);
+  }
+} else {
+  slate.reasonsWrittenAt = new Date().toISOString();
+  await writeFile(SLATE, `${JSON.stringify(slate, null, 2)}\n`);
+}
 
-console.log(`${accepted}/${slate.games.length} reasons accepted`);
+console.log(
+  `${accepted}/${SELF_TEST ? needsReason.length : slate.games.length} reasons accepted`,
+);
 for (const r of rejected) console.log(`  rejected — ${r}`);
 console.log(
   `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,

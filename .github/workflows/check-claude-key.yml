@@ -30,7 +30,14 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Call the API with a fixture
+      - name: Draft a move from a fixture
         run: npm run draft:moves -- --self-test
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Runs regardless of the step above, so one failure doesn't hide the other.
+      - name: Write a game preview from a fixture
+        if: always()
+        run: npm run write:reasons -- --self-test
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

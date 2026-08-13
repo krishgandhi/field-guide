@@ -1,6 +1,7 @@
 [
   {
     "id": "ARI",
+    "espnId": "22",
     "slug": "arizona-cardinals",
     "location": "Arizona",
     "name": "Cardinals",
@@ -11,6 +12,7 @@
   },
   {
     "id": "ATL",
+    "espnId": "1",
     "slug": "atlanta-falcons",
     "location": "Atlanta",
     "name": "Falcons",
@@ -21,6 +23,7 @@
   },
   {
     "id": "BAL",
+    "espnId": "33",
     "slug": "baltimore-ravens",
     "location": "Baltimore",
     "name": "Ravens",
@@ -31,6 +34,7 @@
   },
   {
     "id": "BUF",
+    "espnId": "2",
     "slug": "buffalo-bills",
     "location": "Buffalo",
     "name": "Bills",
@@ -41,6 +45,7 @@
   },
   {
     "id": "CAR",
+    "espnId": "29",
     "slug": "carolina-panthers",
     "location": "Carolina",
     "name": "Panthers",
@@ -51,6 +56,7 @@
   },
   {
     "id": "CHI",
+    "espnId": "3",
     "slug": "chicago-bears",
     "location": "Chicago",
     "name": "Bears",
@@ -61,6 +67,7 @@
   },
   {
     "id": "CIN",
+    "espnId": "4",
     "slug": "cincinnati-bengals",
     "location": "Cincinnati",
     "name": "Bengals",
@@ -71,6 +78,7 @@
   },
   {
     "id": "CLE",
+    "espnId": "5",
     "slug": "cleveland-browns",
     "location": "Cleveland",
     "name": "Browns",
@@ -81,6 +89,7 @@
   },
   {
     "id": "DAL",
+    "espnId": "6",
     "slug": "dallas-cowboys",
     "location": "Dallas",
     "name": "Cowboys",
@@ -91,6 +100,7 @@
   },
   {
     "id": "DEN",
+    "espnId": "7",
     "slug": "denver-broncos",
     "location": "Denver",
     "name": "Broncos",
@@ -101,6 +111,7 @@
   },
   {
     "id": "DET",
+    "espnId": "8",
     "slug": "detroit-lions",
     "location": "Detroit",
     "name": "Lions",
@@ -111,6 +122,7 @@
   },
   {
     "id": "GB",
+    "espnId": "9",
     "slug": "green-bay-packers",
     "location": "Green Bay",
     "name": "Packers",
@@ -121,6 +133,7 @@
   },
   {
     "id": "HOU",
+    "espnId": "34",
     "slug": "houston-texans",
     "location": "Houston",
     "name": "Texans",
@@ -131,6 +144,7 @@
   },
   {
     "id": "IND",
+    "espnId": "11",
     "slug": "indianapolis-colts",
     "location": "Indianapolis",
     "name": "Colts",
@@ -141,6 +155,7 @@
   },
   {
     "id": "JAX",
+    "espnId": "30",
     "slug": "jacksonville-jaguars",
     "location": "Jacksonville",
     "name": "Jaguars",
@@ -151,6 +166,7 @@
   },
   {
     "id": "KC",
+    "espnId": "12",
     "slug": "kansas-city-chiefs",
     "location": "Kansas City",
     "name": "Chiefs",
@@ -161,6 +177,7 @@
   },
   {
     "id": "LAC",
+    "espnId": "24",
     "slug": "los-angeles-chargers",
     "location": "Los Angeles",
     "name": "Chargers",
@@ -171,6 +188,7 @@
   },
   {
     "id": "LAR",
+    "espnId": "14",
     "slug": "los-angeles-rams",
     "location": "Los Angeles",
     "name": "Rams",
@@ -181,6 +199,7 @@
   },
   {
     "id": "LV",
+    "espnId": "13",
     "slug": "las-vegas-raiders",
     "location": "Las Vegas",
     "name": "Raiders",
@@ -191,6 +210,7 @@
   },
   {
     "id": "MIA",
+    "espnId": "15",
     "slug": "miami-dolphins",
     "location": "Miami",
     "name": "Dolphins",
@@ -201,6 +221,7 @@
   },
   {
     "id": "MIN",
+    "espnId": "16",
     "slug": "minnesota-vikings",
     "location": "Minnesota",
     "name": "Vikings",
@@ -211,6 +232,7 @@
   },
   {
     "id": "NE",
+    "espnId": "17",
     "slug": "new-england-patriots",
     "location": "New England",
     "name": "Patriots",
@@ -221,6 +243,7 @@
   },
   {
     "id": "NO",
+    "espnId": "18",
     "slug": "new-orleans-saints",
     "location": "New Orleans",
     "name": "Saints",
@@ -231,6 +254,7 @@
   },
   {
     "id": "NYG",
+    "espnId": "19",
     "slug": "new-york-giants",
     "location": "New York",
     "name": "Giants",
@@ -241,6 +265,7 @@
   },
   {
     "id": "NYJ",
+    "espnId": "20",
     "slug": "new-york-jets",
     "location": "New York",
     "name": "Jets",
@@ -251,6 +276,7 @@
   },
   {
     "id": "PHI",
+    "espnId": "21",
     "slug": "philadelphia-eagles",
     "location": "Philadelphia",
     "name": "Eagles",
@@ -261,6 +287,7 @@
   },
   {
     "id": "PIT",
+    "espnId": "23",
     "slug": "pittsburgh-steelers",
     "location": "Pittsburgh",
     "name": "Steelers",
@@ -271,6 +298,7 @@
   },
   {
     "id": "SEA",
+    "espnId": "26",
     "slug": "seattle-seahawks",
     "location": "Seattle",
     "name": "Seahawks",
@@ -281,6 +309,7 @@
   },
   {
     "id": "SF",
+    "espnId": "25",
     "slug": "san-francisco-49ers",
     "location": "San Francisco",
     "name": "49ers",
@@ -291,6 +320,7 @@
   },
   {
     "id": "TB",
+    "espnId": "27",
     "slug": "tampa-bay-buccaneers",
     "location": "Tampa Bay",
     "name": "Buccaneers",
@@ -301,6 +331,7 @@
   },
   {
     "id": "TEN",
+    "espnId": "10",
     "slug": "tennessee-titans",
     "location": "Tennessee",
     "name": "Titans",
@@ -311,6 +342,7 @@
   },
   {
     "id": "WSH",
+    "espnId": "28",
     "slug": "washington-commanders",
     "location": "Washington",
     "name": "Commanders",
