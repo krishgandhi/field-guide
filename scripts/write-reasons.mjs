@@ -75,8 +75,11 @@ const FIXTURE_REPORTING = [
  * which made the first successful run generate sixteen sentences and show
  * none of them.
  */
+// The Bills game, so the fixture reporting below actually belongs to it. With
+// a mismatched pairing the model correctly ignores the article and the
+// self-test proves nothing about the feature it exists to test.
 const needsReason = SELF_TEST
-  ? slate.games.slice(0, 1)
+  ? [slate.games.find((g) => g.home === "BUF" || g.away === "BUF") ?? slate.games[0]]
   : slate.games.filter((game) => !noteFor(slate.week, game.away, game.home));
 
 if (SELF_TEST) {
