@@ -1,0 +1,12 @@
+Machine-drafted move entries land here. Nothing in this directory is published.
+
+The content loader cannot see it: getSlugs filters readdirSync on ".mdx", and a
+directory name never matches. Reaching the site takes a deliberate `git mv` up
+one level plus setting `verified: true` once the facts are checked.
+
+This file exists so the directory does. Git doesn't track empty directories,
+and the daily workflow's `git add content/moves/_drafts/` fails with a pathspec
+error when the path is missing — which is exactly what happened on the first
+two scheduled runs.
+
+`npm run drafts` lists what's waiting.

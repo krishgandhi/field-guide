@@ -64,7 +64,14 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- src/data/ content/moves/_drafts/; then
+          # The directory is kept in the repo by a .gitkeep, but create it
+          # anyway: with no API key the drafting script exits before it would
+          # mkdir, and a missing path makes `git add` fail with exit 128.
+          mkdir -p content/moves/_drafts
+          # status --porcelain, not diff --quiet: a newly written draft is an
+          # UNTRACKED file, which diff does not report. That would have
+          # silently dropped the first draft this job ever produced.
+          if [ -z "$(git status --porcelain -- src/data/ content/moves/_drafts/)" ]; then
             echo "Nothing new."
             exit 0
           fi
