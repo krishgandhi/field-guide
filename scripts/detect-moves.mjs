@@ -22,6 +22,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { classify } from "./lib/detect-patterns.mjs";
 
 const FEED =
   "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50";
@@ -36,17 +37,6 @@ const OUT = "src/data/move-candidates.json";
  * Capped so it can't grow without limit in the repo.
  */
 const SEEN_LIMIT = 500;
-
-/** Words that suggest a transaction rather than a game story. */
-const TRANSACTION =
-  /\b(traded?|trades|trading|acquires?|acquired|signs?|signed|signing|agrees? to terms|extension|extends?|released?|cut|franchise tag|restructur\w*|claimed off waivers)\b/i;
-
-/**
- * Noise that survives the verb filter. Fantasy is the biggest category in the
- * feed by volume, and none of it is a move.
- */
-const NOISE =
-  /\b(fantasy|start[\s/]?sit|waiver wire|draft kit|power rankings?|mock draft|betting odds|best bets|prop bets?|survivor pool|injury report|questionable|doubtful|ruled out|expected to miss|practice squad|preseason recap)\b/i;
 
 function readJson(path, fallback) {
   if (!existsSync(path)) return fallback;
@@ -107,8 +97,9 @@ for (const article of articles) {
   const description = article.description ?? "";
   const text = `${headline} ${description}`;
 
-  if (!TRANSACTION.test(text)) continue;
-  if (NOISE.test(text)) continue;
+  // A hint, not a decision — the model still judges what this really is.
+  const likelyKind = classify(text);
+  if (!likelyKind) continue;
 
   // Require a named player. A move is about a person; a story tagged only with
   // a team is usually a season preview.
@@ -121,6 +112,7 @@ for (const article of articles) {
     headline,
     description,
     published: (article.published ?? "").slice(0, 10),
+    likelyKind,
     teams: teamNames,
     /** Normalised at the boundary — what the draft actually writes. */
     teamIds: abbreviate(teamNames),
@@ -157,7 +149,7 @@ if (candidates.length === 0) {
 } else {
   console.log(`\n${candidates.length} candidate(s):`);
   for (const c of candidates) {
-    console.log(`  ${c.published}  ${c.headline}`);
+    console.log(`  ${c.published}  [${c.likelyKind}] ${c.headline}`);
     console.log(`             ${c.teamIds.join(", ") || "no team tag"}`);
   }
 }
