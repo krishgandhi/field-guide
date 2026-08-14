@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-13T11:52:54.157Z",
+  "fetchedAt": "2026-08-14T11:41:27.777Z",
   "games": [
     {
       "id": "401872656",
@@ -141,7 +141,7 @@
       "home": "MIN",
       "away": "GB",
       "spread": 1.5,
-      "favourite": "away",
+      "favourite": "home",
       "overUnder": 45.5,
       "broadcast": "CBS",
       "venue": "U.S. Bank Stadium",
@@ -322,16 +322,6 @@
     "PIT": [
       {
         "player": "Joey Porter Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Donte Kent",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Jalen Ramsey",
         "position": "CB",
         "status": "Out"
       }
