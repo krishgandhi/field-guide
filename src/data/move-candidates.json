@@ -1,64 +1,39 @@
 {
-  "generatedAt": "2026-08-14T12:57:05.927Z",
+  "generatedAt": "2026-08-15T12:29:32.348Z",
   "candidates": [
     {
-      "id": "49601790",
-      "headline": "Rookie Caleb Douglas atop Dolphins WR depth chart for preseason opener",
-      "description": "Miami's thin wide receiver room created an opportunity for Caleb Douglas to make an early impact, which he has done so far.",
-      "published": "2026-08-14",
-      "likelyKind": "role",
-      "teams": [
-        "Miami Dolphins"
-      ],
-      "teamIds": [
-        "MIA"
-      ],
-      "athletes": [
-        "Caleb Douglas"
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49601790/dolphins-wr-caleb-douglas-depth-chart-starting-preseason-games"
-    },
-    {
-      "id": "49604057",
-      "headline": "Sources: Facing charges, Terrion Arnold set to join Seahawks",
-      "description": "Terrion Arnold, who sources told NFL Network plans to sign a one-year deal with the Seahawks, also had visited the Texans, Saints and Giants before choosing the Seahawks.",
-      "published": "2026-08-14",
+      "id": "49614342",
+      "headline": "Steelers' Keeanu Benton agrees to 4-year, $72M extension, sources say",
+      "description": "The Steelers and defensive tackle Keeanu Benton agreed to a four-year, $72 million extension, sources told NFL Network's Ian Rapoport on Friday night.",
+      "published": "2026-08-15",
       "likelyKind": "transaction",
       "teams": [
-        "Seattle Seahawks",
-        "Detroit Lions",
-        "New Orleans Saints",
-        "Houston Texans",
-        "New York Giants"
+        "Pittsburgh Steelers"
       ],
       "teamIds": [
-        "SEA",
-        "DET",
-        "NO",
-        "HOU",
-        "NYG"
+        "PIT"
       ],
       "athletes": [
-        "Terrion Arnold"
+        "Keeanu Benton"
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49604057/sources-terrion-arnold-plans-sign-seahawks"
+      "url": "https://www.espn.com/nfl/story/_/id/49614342/steelers-keeanu-benton-agrees-4-year-72m-extension-sources-say"
     },
     {
-      "id": "49603782",
-      "headline": "Jerry Jones: Very happy with Cowboys post-Micah Parsons trade",
-      "description": "Jerry Jones likened the Micah Parsons deal to the 1989 trade of running back Herschel Walker to the Vikings that helped build the Cowboys' dynasty of the 1990s.",
-      "published": "2026-08-13",
-      "likelyKind": "transaction",
+      "id": "49613585",
+      "headline": "Sources: Cardinals OL Bisontis' season in doubt with torn MCL",
+      "description": "Chase Bisontis, the Cardinals' second-round pick who was expected to push starter Isaiah Adams for playing time, could miss the season after tearing his left MCL in Thursday night's preseason game, sources told NFL Network.",
+      "published": "2026-08-15",
+      "likelyKind": "injury",
       "teams": [
-        "Dallas Cowboys"
+        "Arizona Cardinals"
       ],
       "teamIds": [
-        "DAL"
+        "ARI"
       ],
       "athletes": [
-        "Micah Parsons"
+        "Chase Bisontis"
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49603782/jerry-jones-very-happy-cowboys-post-micah-parsons-trade"
+      "url": "https://www.espn.com/nfl/story/_/id/49613585/cardinals-ol-bisontis-season-doubt-torn-mcl"
     }
   ]
 }
