@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-14T11:41:27.777Z",
+  "fetchedAt": "2026-08-15T11:16:10.533Z",
   "games": [
     {
       "id": "401872656",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 49.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -215,11 +215,6 @@
         "player": "DeAngelo Malone",
         "position": "LB",
         "status": "Out"
-      },
-      {
-        "player": "Billy Bowman Jr.",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "BAL": [
@@ -262,20 +257,6 @@
         "status": "Out"
       }
     ],
-    "GB": [
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "HOU": [
-      {
-        "player": "E.J. Speed",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
     "IND": [
       {
         "player": "Alec Pierce",
@@ -288,26 +269,11 @@
         "player": "Chris Bell",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "Darrell Baker Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Storm Duck",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "NYJ": [
       {
         "player": "Joseph Ossai",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Tyler Baron",
         "position": "DE",
         "status": "Out"
       }
@@ -344,13 +310,6 @@
       {
         "player": "Chase Lucas",
         "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "WSH": [
-      {
-        "player": "Deatrich Wise Jr.",
-        "position": "DE",
         "status": "Out"
       }
     ]
