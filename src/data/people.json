@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T10:45:30.631Z",
+  "fetchedAt": "2026-08-16T10:47:50.899Z",
   "people": {
     "3122132": {
       "id": "3122132",
@@ -47,7 +47,7 @@
       "draft": "2018: Rd 1, Pk 7 (BUF)",
       "college": "Wyoming",
       "headshot": "/players/3918298.png",
-      "blurb": null
+      "blurb": "Buffalo's quarterback, taken seventh overall out of Wyoming in 2018 and now in his ninth season, recently reworked his deal to free about $12 million for this year."
     },
     "4047646": {
       "id": "4047646",
@@ -95,7 +95,7 @@
       "draft": "2022: Rd 3, Pk 86 (TEN)",
       "college": "Liberty",
       "headshot": "/players/4242512.png",
-      "blurb": null
+      "blurb": "A quarterback taken in the third round by Tennessee in 2022, now in his fifth season and signed by Miami for $67.5 million to run their offense after years as a backup."
     },
     "4360499": {
       "id": "4360499",
@@ -111,7 +111,7 @@
       "draft": "2022: Rd 1, Pk 25 (BAL)",
       "college": "Iowa",
       "headshot": "/players/4360499.png",
-      "blurb": null
+      "blurb": "A center, the lineman who snaps the ball to start each play, drafted 25th overall by Baltimore in 2022 and now in Las Vegas on the richest deal ever given to an inside offensive lineman."
     },
     "4426405": {
       "id": "4426405",
@@ -159,7 +159,7 @@
       "draft": "2023: Rd 1, Pk 5 (SEA)",
       "college": "Illinois",
       "headshot": "/players/4575431.png",
-      "blurb": null
+      "blurb": "A cornerback whose job is covering opposing receivers, picked fifth overall by Seattle in 2023 and just re-signed there for $132 million over four years."
     },
     "4578085": {
       "id": "4578085",
@@ -194,5 +194,5 @@
       "blurb": "A cornerback Detroit picked in the first round out of Alabama in 2024 who, for reasons unrelated to football, joined Seattle for the league minimum salary."
     }
   },
-  "profilesWrittenAt": "2026-08-16T10:46:15.887Z"
+  "profilesWrittenAt": "2026-08-16T10:48:16.832Z"
 }
