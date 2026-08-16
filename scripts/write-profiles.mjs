@@ -5,14 +5,22 @@
  * one. Cached in src/data/people.json, so a sentence is generated once per
  * person rather than per build (§13).
  *
- * THE LINE EXPLAINS THE FIELDS. IT DOES NOT ADD SCOUTING KNOWLEDGE.
+ * IT CHARACTERISES, BUT ONLY FROM SUPPLIED EVIDENCE.
  *
- * "A first-round corner in his fourth season" is a translation of
- * "2023: Rd 1, Pk 5" into English, which is precisely this product's job.
- * "A press corner who plays bigger than his size" is outside knowledge about a
- * real person that nothing here can check — the confident-error failure §1 and
- * §3 exist to prevent. The model gets the ESPN record and the move entry's own
- * already-sourced prose, and nothing else.
+ * The first version banned characterisation outright, and the lines came out
+ * as database rows: "picked seventh overall in 2018, now in his ninth season."
+ * True, useless. What a newcomer needs is that Josh Allen is one of the best
+ * quarterbacks alive and runs like a running back — that IS the translation
+ * layer, and refusing to do it missed the point of the product.
+ *
+ * The fix is evidence, not licence. The model gets awards (Allen's MVP),
+ * career and season splits (4,721 career rushing yards for a quarterback), and
+ * this site's own already-sourced prose about the person. It may say anything
+ * that evidence supports, and nothing it doesn't. A thin résumé gets a factual
+ * line — that restraint is the point.
+ *
+ * Note this does NOT make the card a stats page (§1). The numbers go in and
+ * meaning comes out; the card itself still displays no statistics.
  *
  * Usage:
  *   ANTHROPIC_API_KEY=... npm run write:profiles
@@ -56,7 +64,14 @@ const cache = SELF_TEST
   ? { people: { "self-test": FIXTURE } }
   : JSON.parse(readFileSync(PEOPLE, "utf8"));
 
-/** Whatever the entries already say about this person — sourced prose. */
+/**
+ * Whatever this site already says about the person — all of it sourced.
+ *
+ * Includes the rubric notes, not just the summary, because that is where the
+ * checkable claims live. ESPN's awards feed only carries major honours, so
+ * Devon Witherspoon comes back with none despite three Pro Bowls — and his
+ * entry says "named to the Pro Bowl three times" in a rubric note.
+ */
 function contextFor(id) {
   const lines = [];
   for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
@@ -64,6 +79,9 @@ function contextFor(id) {
     if (!raw.includes(`"${id}"`)) continue;
     const summary = raw.match(/^summary: (.+)$/m)?.[1];
     if (summary) lines.push(summary);
+    for (const note of raw.matchAll(/^ {6}note: >-\n((?: {8}.*\n)+)/gm)) {
+      lines.push(note[1].split(/\s+/).filter(Boolean).join(" "));
+    }
   }
   return lines;
 }
@@ -77,18 +95,28 @@ console.log(`${todo.length} profile line(s) to write.\n`);
 
 const client = new Anthropic();
 
-const SYSTEM = `You write one sentence introducing an NFL player to someone who has watched a bit of football but does not follow it closely and has never heard of this person.
+const SYSTEM = `You introduce an NFL player to someone who has watched a bit of football, does not follow it closely, and has never heard of this person.
 
-You are given that player's record: position, age, size, draft, college, experience, current team. You may also be given sentences from articles on the site that mention him.
+You get his record (position, age, size, draft, college, experience, team), his awards, his career and season statistics, and sentences about him from articles on this site. That is your evidence. You have no other knowledge of him and must not draw on any you think you have.
 
-Rules, all of them hard:
-- Use ONLY the facts supplied. You know nothing else about this player, and you must not draw on anything you may recall about him.
-- Do NOT characterise how he plays. "A press corner who plays bigger than his size" is a scouting opinion you cannot support from a draft position. Translate the record instead: what being a first-round pick means, how far into his career he is, what his position does.
-- Never state a number that is not in the supplied record. No statistics at all.
-- One sentence, roughly 12 to 28 words, ending in a full stop.
-- Plain spoken English. Say "picked fifth overall" rather than "Rd 1, Pk 5".
-- Do not repeat his name — the card shows it directly above your sentence.
-- No jargon a newcomer wouldn't know.`;
+Write TWO sentences:
+1. Who he is — position, where he was drafted, how far into his career he is.
+2. What kind of player he is, and how good.
+
+The second sentence is the one that matters. "Picked seventh overall in 2018" tells the reader nothing useful; "one of the best quarterbacks in the league, and he runs almost as much as he throws" is what they came for. Say it plainly.
+
+Ground every judgement in the evidence:
+- An MVP or a major award earns "one of the best" outright.
+- Pro Bowls mentioned in the site sentences count as evidence too.
+- Heavy rushing volume for a quarterback earns "runs a lot". A high yards-per-attempt earns "throws downfield". Big tackle totals for a defensive back earn "busy" or "physical".
+- If the evidence is thin — a young player, few starts, no awards — SAY SO plainly, or stay factual. "Still early in his career and yet to establish himself" is a good, honest line. Do not inflate someone the evidence does not support. This restraint matters more than sounding impressive.
+
+Hard rules:
+- Never state a number that is not in the supplied evidence. Prefer words to figures anyway: "more than four thousand career rushing yards" is fine, an invented completion percentage is not.
+- Do not repeat his name — the card shows it directly above your sentences.
+- Plain spoken English, roughly 45 to 65 words total, ending in a full stop.
+- Explain a position the first time it would puzzle someone: "a centre, the lineman who snaps the ball".
+- No jargon a newcomer wouldn't know, and no fantasy-football framing.`;
 
 const schema = {
   type: "object",
@@ -117,6 +145,9 @@ const input = todo.map((p) => ({
   draft: p.draft,
   college: p.college,
   currentTeam: p.team,
+  awards: p.awards ?? [],
+  careerStats: p.career ?? {},
+  lastSeasonStats: p.season ?? {},
   mentionedOnSiteAs: contextFor(p.id),
 }));
 
@@ -156,12 +187,11 @@ const byId = new Map(todo.map((p) => [p.id, p]));
 export function problemWithBlurb(text, person, context = []) {
   const trimmed = String(text ?? "").trim();
   const words = trimmed.split(/\s+/).length;
-  // 40, not 34: the first run rejected a genuinely good line at 36 words
-  // because it paused to explain what a centre does — which is the entire job
-  // of this site, not padding.
-  if (words < 8 || words > 40) return `${words} words`;
+  // Two sentences now: one placing him, one saying what kind of player he is.
+  if (words < 25 || words > 75) return `${words} words`;
   if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
-  if (sentenceCount(trimmed) > 1) return "more than one sentence";
+  const sentences = sentenceCount(trimmed);
+  if (sentences > 3) return `${sentences} sentences, expected two`;
 
   // Every figure must come from something we supplied — the ESPN record OR the
   // site's own already-sourced prose, which is handed over as context.
@@ -178,6 +208,11 @@ export function problemWithBlurb(text, person, context = []) {
         person.experience,
         person.height,
         person.weight,
+        // Awards and stats are evidence the model is meant to use, so their
+        // figures have to be allowed through the same guard.
+        JSON.stringify(person.awards ?? []),
+        JSON.stringify(person.career ?? {}),
+        JSON.stringify(person.season ?? {}),
         ...context,
       ]
         .filter(Boolean)

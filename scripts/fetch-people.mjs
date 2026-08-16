@@ -31,6 +31,7 @@ import {
   writeFileSync,
 } from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const MOVES = "content/moves";
 const OUT = "src/data/people.json";
@@ -82,6 +83,73 @@ async function fetchPerson(id) {
   };
 }
 
+/**
+ * Awards and career numbers — the evidence a profile line is allowed to
+ * characterise from.
+ *
+ * Without this the line can only restate the draft position, which is a
+ * database row rather than a translation. Josh Allen comes back with an MVP
+ * and 4,721 career rushing yards, which is what turns "picked seventh overall"
+ * into "one of the best, and he runs like a running back".
+ *
+ * ESPN only carries major honours here — Devon Witherspoon returns none
+ * despite three Pro Bowls. That gap is filled from this site's own sourced
+ * prose, in write-profiles.mjs.
+ */
+async function fetchEvidence(id) {
+  try {
+    const res = await fetch(`${ATHLETE}/${id}/overview`, {
+      headers: { "user-agent": "field-guide (personal, non-commercial)" },
+      signal: AbortSignal.timeout(20000),
+    });
+    if (!res.ok) return { awards: [], career: {}, season: {} };
+    const body = await res.json();
+
+    const awards = (body.awards ?? []).map((a) => ({
+      name: a.name ?? null,
+      count: a.displayCount ?? null,
+      seasons: a.seasons ?? [],
+    }));
+
+    // Columns are position-aware: passing and rushing for a quarterback,
+    // tackles and sacks for a cornerback. Zip labels to values so the model
+    // never has to guess what a bare number means.
+    const stats = body.statistics ?? {};
+    const labels = stats.displayNames ?? [];
+    const split = (name) => {
+      const row = (stats.splits ?? []).find((s) => s.displayName === name);
+      if (!row?.stats) return {};
+      return Object.fromEntries(
+        labels.map((l, i) => [l, row.stats[i]]).filter(([, v]) => v != null),
+      );
+    };
+
+    return { awards, career: split("Career"), season: split("Regular Season") };
+  } catch {
+    return { awards: [], career: {}, season: {} };
+  }
+}
+
+/**
+ * Fingerprint of everything a profile line is written from.
+ *
+ * write-profiles rewrites a line only when this moves. Without it the line is
+ * either frozen forever — Allen wins a second MVP and the card never says so —
+ * or rewritten daily for no reason, which §13 rules out.
+ */
+function evidenceHash(person, evidence) {
+  const material = JSON.stringify([
+    person.position,
+    person.team,
+    person.experience,
+    person.draft,
+    evidence.awards,
+    evidence.career,
+    evidence.season,
+  ]);
+  return createHash("sha256").update(material).digest("hex").slice(0, 16);
+}
+
 async function saveHeadshot(id) {
   const file = path.join(SHOTS, `${id}.png`);
   // Headshots don't change; re-downloading a dozen of them daily is waste.
@@ -113,16 +181,21 @@ let failed = 0;
 for (const id of ids) {
   try {
     const person = await fetchPerson(id);
+    const evidence = await fetchEvidence(id);
     const shot = await saveHeadshot(id);
+    const hash = evidenceHash(person, evidence);
     people[id] = {
       ...person,
+      ...evidence,
       headshot: shot === "missing" ? null : `/players/${id}.png`,
-      // Preserved across refreshes; regenerating it daily would burn tokens
-      // rewriting the same sentence (§13).
-      blurb: existing[id]?.blurb ?? null,
+      evidenceHash: hash,
+      // Kept unless the evidence itself changed — see evidenceHash above.
+      blurb: existing[id]?.evidenceHash === hash ? existing[id].blurb : null,
     };
     console.log(
-      `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"} (headshot ${shot})`,
+      `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"}` +
+        ` (headshot ${shot}, ${evidence.awards.length} award(s),` +
+        ` ${Object.keys(evidence.career).length} career stats)`,
     );
   } catch (err) {
     failed++;
