@@ -32,6 +32,13 @@ import Anthropic from "@anthropic-ai/sdk";
 import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
 
 const PEOPLE = "src/data/people.json";
+
+/**
+ * Bump when the brief below changes materially, so existing lines are rewritten.
+ * The evidence hash only catches changes in the FACTS; without this, a better
+ * prompt would never reach the players already done.
+ */
+const PROMPT_VERSION = 2;
 const MOVES = "content/moves";
 
 /** --self-test: one fixture person through the real API, writing nothing. */
@@ -86,7 +93,9 @@ function contextFor(id) {
   return lines;
 }
 
-const todo = Object.values(cache.people).filter((p) => !p.blurb && p.name);
+const todo = Object.values(cache.people).filter(
+  (p) => p.name && (!p.blurb || p.promptVersion !== PROMPT_VERSION),
+);
 if (todo.length === 0) {
   console.log("Every profile already has a line. Nothing to generate.");
   process.exit(0);
@@ -112,7 +121,8 @@ Ground every judgement in the evidence:
 - If the evidence is thin — a young player, few starts, no awards — SAY SO plainly, or stay factual. "Still early in his career and yet to establish himself" is a good, honest line. Do not inflate someone the evidence does not support. This restraint matters more than sounding impressive.
 
 Hard rules:
-- Never state a number that is not in the supplied evidence. Prefer words to figures anyway: "more than four thousand career rushing yards" is fine, an invented completion percentage is not.
+- Never state a number that is not in the supplied evidence.
+- Use AT MOST two figures, and spell them out: "more than four thousand career rushing yards". A line that ends in a list of totals reads like a stat sheet, which is the thing this site replaces. One vivid number beats four.
 - Do not repeat his name — the card shows it directly above your sentences.
 - Plain spoken English, roughly 45 to 65 words total, ending in a full stop.
 - Explain a position the first time it would puzzle someone: "a centre, the lineman who snaps the ball".
@@ -188,7 +198,7 @@ export function problemWithBlurb(text, person, context = []) {
   const trimmed = String(text ?? "").trim();
   const words = trimmed.split(/\s+/).length;
   // Two sentences now: one placing him, one saying what kind of player he is.
-  if (words < 25 || words > 75) return `${words} words`;
+  if (words < 25 || words > 80) return `${words} words`;
   if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
   const sentences = sentenceCount(trimmed);
   if (sentences > 3) return `${sentences} sentences, expected two`;
@@ -245,6 +255,7 @@ for (const { id, blurb } of profiles ?? []) {
     continue;
   }
   cache.people[id].blurb = blurb.trim();
+  cache.people[id].promptVersion = PROMPT_VERSION;
   accepted++;
   console.log(`  ${person.name}\n    "${blurb.trim()}"`);
 }

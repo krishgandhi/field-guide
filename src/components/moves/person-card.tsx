@@ -27,40 +27,44 @@ export function PersonCard({
     .join(" · ");
 
   return (
-    <div className="flex gap-3.5 rounded-xl border border-line bg-surface p-3.5">
-      {person.headshot ? (
-        <Image
-          src={person.headshot}
-          alt=""
-          width={56}
-          height={56}
-          className="h-14 w-14 shrink-0 rounded-full bg-surface-2 object-cover"
-        />
+    <div className="rounded-xl border border-line bg-surface p-3.5">
+      {/* Identity beside the headshot; the prose below at full width. Running
+          65 words down a narrow column next to a 56px image is unreadable on a
+          phone — it was taller than the viewport. */}
+      <div className="flex items-center gap-3">
+        {person.headshot ? (
+          <Image
+            src={person.headshot}
+            alt=""
+            width={48}
+            height={48}
+            className="h-12 w-12 shrink-0 rounded-full bg-surface-2 object-cover"
+          />
+        ) : null}
+        <div className="min-w-0">
+          <p className="truncate text-[0.95rem] font-semibold leading-tight text-fg">
+            {person.name}
+          </p>
+          {facts ? (
+            <p className="tnum mt-0.5 text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+              {facts}
+            </p>
+          ) : null}
+        </div>
+      </div>
+
+      {person.blurb ? (
+        <p className="mt-3 text-sm leading-relaxed text-fg-dim">
+          {explain(person.blurb)}
+        </p>
       ) : null}
 
-      <div className="min-w-0">
-        <p className="text-[0.95rem] font-semibold leading-tight text-fg">
-          {person.name}
+      {/* Last, and quiet: useful once you care, noise before that. */}
+      {drafted || person.college || person.team ? (
+        <p className="mt-2.5 text-[0.75rem] leading-snug text-fg-dim/80">
+          {[drafted, person.college, person.team].filter(Boolean).join(" · ")}
         </p>
-        {facts ? (
-          <p className="tnum mt-0.5 text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
-            {facts}
-          </p>
-        ) : null}
-
-        {person.blurb ? (
-          <p className="mt-2 text-sm leading-snug text-fg-dim">
-            {explain(person.blurb)}
-          </p>
-        ) : null}
-
-        {/* Last, and quiet: useful once you care, noise before that. */}
-        {drafted || person.college || person.team ? (
-          <p className="mt-2 text-[0.75rem] leading-snug text-fg-dim/80">
-            {[drafted, person.college, person.team].filter(Boolean).join(" · ")}
-          </p>
-        ) : null}
-      </div>
+      ) : null}
     </div>
   );
 }
