@@ -202,7 +202,10 @@ Phase 3 and later. **Verify each one still works before building against it** �
 | Contracts, cap | Over The Cap | No API — likely manual entry |
 | Transaction candidates | ESPN news (`/nfl/news`) | Tagged by team and athlete. **Not** `/nfl/transactions` — that returns waived long snappers, checked twice |
 | Game preview reporting | ESPN news filtered by team (`/nfl/news?team=<espnId>`) | Needs the numeric id, stored as `espnId`. **Not** `summary?event=` — its `news.articles` is the same generic league-wide list for every game, verified across three events |
-| Player profiles + headshots | ESPN athlete (`common/v3/.../athletes/{id}`) | Gives position, age, size, college and `displayDraft` ("2023: Rd 1, Pk 5"). Ids resolve off `teams/{abbr}/roster` — match the **full** name, since "Arnold" also returns Sam Darnold. **No coach or GM equivalent exists**: `/coaches` 404s and the team payload has no coach field. Don't re-research it |
+| Player profiles + headshots | ESPN athlete (`common/v3/.../athletes/{id}`) | Gives position, age, size, college and `displayDraft` ("2023: Rd 1, Pk 5"). Ids resolve off `teams/{abbr}/roster` — match the **full** name, since "Arnold" also returns Sam Darnold |
+| Depth charts | **core** api `/seasons/{yr}/teams/{id}/depthcharts` | The site api's `/depthchart` returns 200 with `{}`, which reads as "no data" rather than "wrong endpoint". Groups are named by formation (`Base 3-4 D` vs `Base 4-3 D`) with different slot keys, so classify by contents: has `qb` → offence, has `pk` → special teams |
+| Head coach | **core** api `/seasons/{yr}/teams/{id}/coaches` | Head coach only — no coordinators, no title field, verified across several teams. An earlier session checked only the *site* api and wrongly recorded that ESPN has no coach data at all |
+| Team unit ranks | core `/seasons/{yr}/types/2/teams/{id}/statistics` | Every stat carries a league rank 1–32. Points allowed is **not** here (a team's own stats are its production) — take it from standings `pointsAgainst` and rank across the 32 |
 | College (Phase 5) | CollegeFootballData.com | Free with key |
 
 **Moves auto-publish, with the honesty carried in the UI.** A cron job finds
@@ -336,5 +339,9 @@ Only after a full NFL month of real use. Revisit scope then; it may not be worth
 - **Generate explanatory prose once and cache it.** Regenerating on every page load is slow and pointless — the facts haven't changed.
 - **The glossary index must be built, not computed per-request.** It touches every page.
 - **Bye weeks.** A team not playing is not a bug, and the UI should say so explicitly. This confuses newcomers every single year.
+- **ESPN serves PRESEASON by default.** The scoreboard needs `seasontype=2`,
+  and so does the standings endpoint — without it, all of August returns
+  preseason results and the whole league renders 1-0. A "has most of the league
+  played?" guard does not catch this, because in preseason every team has.
 - **Team abbreviations are inconsistent across data sources.** `BUF` vs `Buffalo` vs `Bills` vs numeric IDs. Normalize once, in one place, the first time you touch two sources.
 - **Don't let the site become a wall of unreviewed generated text.** Content with `reviewed: false` is a debt, not an asset. If the queue grows faster than he reads, slow down generation.

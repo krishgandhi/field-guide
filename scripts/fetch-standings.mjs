@@ -51,6 +51,9 @@ function readStandings(payload) {
           losses: num("losses") ?? 0,
           ties: num("ties") ?? 0,
           pointDifferential: num("pointDifferential"),
+          /** Feeds the offence and defence ratings on a team page. */
+          pointsFor: num("pointsFor"),
+          pointsAgainst: num("pointsAgainst"),
           /**
            * ESPN calls this playoffSeed, but in final standings it ranks all
            * 16 teams in the conference, not just the qualifiers — the 3-14 Jets
@@ -68,13 +71,16 @@ function readStandings(payload) {
 /**
  * Has the regular season actually started?
  *
- * Not "has anyone played a game" — ESPN folds preseason results into these
- * standings. Today Carolina sit 1-0 and Arizona 0-1 off a single August
- * friendly, and ESPN has gone as far as giving Carolina the number one playoff
- * seed for it. A zero-check would pass and every page would render 0-0.
+ * This is now a second line of defence. The real fix is `seasontype=2` on the
+ * request: the bare endpoint defaults to whatever is being played, so through
+ * August it returns PRESEASON results.
  *
- * In a real week every team plays, so requiring most of the league to have a
- * result is immune to a stray exhibition game.
+ * The earlier version of this guard reasoned that a stray exhibition game
+ * couldn't fool a "most of the league has played" test. That was wrong — by
+ * mid-August every team has played one, so all 32 carried a record and the
+ * site showed the entire league at 1-0. With seasontype=2 the same request
+ * returns 32 teams and zero records, which is the truth, and this correctly
+ * falls back to last season.
  */
 function seasonHasStarted(rows) {
   const withGames = rows.filter((r) => r.wins + r.losses + r.ties > 0).length;
@@ -85,13 +91,19 @@ const teamGames = (rows) => rows.reduce((n, r) => n + r.wins + r.losses + r.ties
 
 async function main() {
   let season = SEASON;
-  let rows = readStandings(await getJson(`${BASE}/standings?season=${season}`));
+  // seasontype=2 is load-bearing: without it ESPN serves preseason through
+  // August and the whole league renders 1-0.
+  let rows = readStandings(
+    await getJson(`${BASE}/standings?season=${season}&seasontype=2`),
+  );
 
   // Nothing meaningful played yet — last season's finals are what's useful.
   let isPreviousSeason = false;
   if (!seasonHasStarted(rows)) {
     season = SEASON - 1;
-    rows = readStandings(await getJson(`${BASE}/standings?season=${season}`));
+    rows = readStandings(
+      await getJson(`${BASE}/standings?season=${season}&seasontype=2`),
+    );
     isPreviousSeason = true;
   }
 

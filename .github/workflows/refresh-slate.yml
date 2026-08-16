@@ -49,6 +49,12 @@ jobs:
         run: node scripts/fetch-standings.mjs
         continue-on-error: true
 
+      # Depth charts, coaches and unit ratings. Reads standings.json, so it
+      # must run after the standings step above.
+      - name: Fetch team detail
+        run: node scripts/fetch-team-detail.mjs
+        continue-on-error: true
+
       # Profiles for the people named in move entries, plus their headshots.
       # Builtins-only and continue-on-error: a missing profile card is
       # cosmetic, and must never cost the slate.

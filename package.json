@@ -24,7 +24,8 @@
     "test:reasons": "node scripts/test-reason-validation.mjs",
     "test:patterns": "node scripts/test-detect-patterns.mjs",
     "fetch:people": "node scripts/fetch-people.mjs",
-    "write:profiles": "node scripts/write-profiles.mjs"
+    "write:profiles": "node scripts/write-profiles.mjs",
+    "fetch:teamdetail": "node scripts/fetch-team-detail.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

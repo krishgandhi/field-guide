@@ -16,6 +16,13 @@ import {
 import { getEntry } from "@/lib/content";
 import { SLATE, injuriesFor } from "@/lib/slate";
 import { getMovesForTeam } from "@/lib/moves";
+import { UnitCard } from "@/components/teams/unit-card";
+import {
+  coachTenure,
+  detailFor,
+  UNIT_LABEL,
+  UNIT_ORDER,
+} from "@/lib/team-detail";
 import { TEAMS, getTeam } from "@/lib/mock/teams";
 import { teamColor, teamLogo } from "@/lib/teams";
 
@@ -60,6 +67,9 @@ export default async function TeamDetailPage({ params }: PageProps) {
   );
   const knocks = injuriesFor(team.id);
   const teamMoves = getMovesForTeam(team.id);
+  // Null renders nothing: a team absent from the cache loses this section
+  // rather than the page.
+  const detail = detailFor(team.id);
 
   return (
     <PageShell flaggable>
@@ -113,8 +123,8 @@ export default async function TeamDetailPage({ params }: PageProps) {
         /* §10: empty states are invitations, not apologies. */
         <Card className="mt-5">
           <p className="text-sm leading-relaxed text-fg-dim">
-            No write-up yet. The record above is real — what&rsquo;s missing is
-            who these are and why they matter.
+            No write-up yet. The record and the squad below are real —
+            what&rsquo;s missing is what this team is actually about.
           </p>
           <Link
             href="/teams/buffalo-bills"
@@ -125,6 +135,39 @@ export default async function TeamDetailPage({ params }: PageProps) {
           </Link>
         </Card>
       )}
+
+      {detail ? (
+        <>
+          <SectionHeader
+            title="The squad"
+            aside={detail.previousSeason ? `${detail.statsSeason} form` : "This season"}
+          />
+
+          {detail.coach ? (
+            <Card className="mb-2.5">
+              <p className="text-sm text-fg">
+                <span className="text-fg-dim">Head coach</span>{" "}
+                <span className="font-semibold">{detail.coach.name}</span>
+              </p>
+              {coachTenure(detail.coach.experience) ? (
+                <p className="mt-0.5 text-[0.8rem] text-fg-dim">
+                  {coachTenure(detail.coach.experience)}
+                </p>
+              ) : null}
+            </Card>
+          ) : null}
+
+          <div className="space-y-2.5">
+            {UNIT_ORDER.map((unit) => (
+              <UnitCard
+                key={unit}
+                title={UNIT_LABEL[unit]}
+                unit={detail.units[unit]}
+              />
+            ))}
+          </div>
+        </>
+      ) : null}
 
       {knocks.length > 0 ? (
         <>

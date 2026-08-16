@@ -1,0 +1,3079 @@
+{
+  "fetchedAt": "2026-08-16T12:11:33.383Z",
+  "statsSeason": 2025,
+  "previousSeason": true,
+  "teams": {
+    "ARI": {
+      "coach": {
+        "name": "Mike LaFleur",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "2578570",
+              "name": "Jacoby Brissett",
+              "label": "QB"
+            },
+            {
+              "id": "4870808",
+              "name": "Jeremiyah Love",
+              "label": "RB"
+            },
+            {
+              "id": "4432708",
+              "name": "Marvin Harrison Jr.",
+              "label": "WR"
+            },
+            {
+              "id": "4360761",
+              "name": "Michael Wilson",
+              "label": "WR"
+            },
+            {
+              "id": "4361307",
+              "name": "Trey McBride",
+              "label": "TE"
+            },
+            {
+              "id": "4428991",
+              "name": "Paris Johnson Jr.",
+              "label": "OT"
+            }
+          ],
+          "rank": 23,
+          "score": 2,
+          "note": "Below average for points scored last season, 23rd of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3693166",
+              "name": "Josh Sweat",
+              "label": "LB"
+            },
+            {
+              "id": "4569480",
+              "name": "Darius Robinson",
+              "label": "DE"
+            },
+            {
+              "id": "4244606",
+              "name": "Zaven Collins",
+              "label": "LB"
+            },
+            {
+              "id": "4685408",
+              "name": "Will Johnson",
+              "label": "CB"
+            },
+            {
+              "id": "4432668",
+              "name": "Denzel Burke",
+              "label": "CB"
+            }
+          ],
+          "rank": 29,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 29th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4363538",
+              "name": "Chad Ryland",
+              "label": "K"
+            },
+            {
+              "id": "4039050",
+              "name": "Devin Duvernay",
+              "label": "KR"
+            }
+          ],
+          "rank": 30,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 30th of 32."
+        }
+      }
+    },
+    "ATL": {
+      "coach": {
+        "name": "Kevin Stefanski",
+        "experience": 6
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4241479",
+              "name": "Tua Tagovailoa",
+              "label": "QB"
+            },
+            {
+              "id": "4430807",
+              "name": "Bijan Robinson",
+              "label": "RB"
+            },
+            {
+              "id": "4426502",
+              "name": "Drake London",
+              "label": "WR"
+            },
+            {
+              "id": "4361409",
+              "name": "Jahan Dotson",
+              "label": "WR"
+            },
+            {
+              "id": "4360248",
+              "name": "Kyle Pitts Sr.",
+              "label": "TE"
+            },
+            {
+              "id": "16713",
+              "name": "Jake Matthews",
+              "label": "OT"
+            }
+          ],
+          "rank": 24,
+          "score": 2,
+          "note": "Below average for points scored last season, 24th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4427090",
+              "name": "Brandon Dorlus",
+              "label": "DT"
+            },
+            {
+              "id": "4426412",
+              "name": "Zach Harrison",
+              "label": "DE"
+            },
+            {
+              "id": "3045527",
+              "name": "Samson Ebukam",
+              "label": "DE"
+            },
+            {
+              "id": "4239995",
+              "name": "A.J. Terrell Jr.",
+              "label": "CB"
+            },
+            {
+              "id": "3895841",
+              "name": "Mike Hughes",
+              "label": "CB"
+            }
+          ],
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 19th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "10621",
+              "name": "Nick Folk",
+              "label": "K"
+            },
+            {
+              "id": "4870612",
+              "name": "Zachariah Branch",
+              "label": "KR"
+            }
+          ],
+          "rank": 24,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 24th of 32."
+        }
+      }
+    },
+    "BAL": {
+      "coach": {
+        "name": "Jesse Minter",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3916387",
+              "name": "Lamar Jackson",
+              "label": "QB"
+            },
+            {
+              "id": "3043078",
+              "name": "Derrick Henry",
+              "label": "RB"
+            },
+            {
+              "id": "4429615",
+              "name": "Zay Flowers",
+              "label": "WR"
+            },
+            {
+              "id": "4360939",
+              "name": "Rashod Bateman",
+              "label": "WR"
+            },
+            {
+              "id": "3116365",
+              "name": "Mark Andrews",
+              "label": "TE"
+            },
+            {
+              "id": "2980153",
+              "name": "Ronnie Stanley",
+              "label": "OT"
+            }
+          ],
+          "rank": 11,
+          "score": 4,
+          "note": "Better than most for points scored last season, 11th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4035245",
+              "name": "Nnamdi Madubuike",
+              "label": "DT"
+            },
+            {
+              "id": "11284",
+              "name": "Calais Campbell",
+              "label": "DE"
+            },
+            {
+              "id": "3052743",
+              "name": "Trey Hendrickson",
+              "label": "LB"
+            },
+            {
+              "id": "4601278",
+              "name": "Nate Wiggins",
+              "label": "CB"
+            },
+            {
+              "id": "3126356",
+              "name": "Marlon Humphrey",
+              "label": "CB"
+            }
+          ],
+          "rank": 18,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 18th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4697745",
+              "name": "Tyler Loop",
+              "label": "K"
+            },
+            {
+              "id": "4690013",
+              "name": "Rasheen Ali",
+              "label": "KR"
+            }
+          ],
+          "rank": 12,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 12th of 32."
+        }
+      }
+    },
+    "BUF": {
+      "coach": {
+        "name": "Joe Brady",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3918298",
+              "name": "Josh Allen",
+              "label": "QB"
+            },
+            {
+              "id": "4379399",
+              "name": "James Cook III",
+              "label": "RB"
+            },
+            {
+              "id": "3915416",
+              "name": "DJ Moore",
+              "label": "WR"
+            },
+            {
+              "id": "4373678",
+              "name": "Khalil Shakir",
+              "label": "WR"
+            },
+            {
+              "id": "4385690",
+              "name": "Dalton Kincaid",
+              "label": "TE"
+            },
+            {
+              "id": "3051324",
+              "name": "Dion Dawkins",
+              "label": "OT"
+            }
+          ],
+          "rank": 4,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 4th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4684527",
+              "name": "T.J. Sanders",
+              "label": "DT"
+            },
+            {
+              "id": "4039303",
+              "name": "Ed Oliver",
+              "label": "DT"
+            },
+            {
+              "id": "3116733",
+              "name": "Bradley Chubb",
+              "label": "LB"
+            },
+            {
+              "id": "4379778",
+              "name": "Christian Benford",
+              "label": "CB"
+            },
+            {
+              "id": "4688931",
+              "name": "Maxwell Hairston",
+              "label": "CB"
+            }
+          ],
+          "rank": 12,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 12th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3917232",
+              "name": "Tyler Bass",
+              "label": "K"
+            },
+            {
+              "id": "4429501",
+              "name": "Ray Davis",
+              "label": "KR"
+            }
+          ],
+          "rank": 8,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 8th of 32."
+        }
+      }
+    },
+    "CAR": {
+      "coach": {
+        "name": "Dave Canales",
+        "experience": 2
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4685720",
+              "name": "Bryce Young",
+              "label": "QB"
+            },
+            {
+              "id": "4241416",
+              "name": "Chuba Hubbard",
+              "label": "RB"
+            },
+            {
+              "id": "4685472",
+              "name": "Tetairoa McMillan",
+              "label": "WR"
+            },
+            {
+              "id": "4695883",
+              "name": "Jalen Coker",
+              "label": "WR"
+            },
+            {
+              "id": "4372780",
+              "name": "Tommy Tremble",
+              "label": "TE"
+            },
+            {
+              "id": "4427132",
+              "name": "Ikem Ekwonu",
+              "label": "OT"
+            }
+          ],
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 27th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4035495",
+              "name": "Derrick Brown",
+              "label": "DT"
+            },
+            {
+              "id": "4058925",
+              "name": "Tershawn Wharton",
+              "label": "DT"
+            },
+            {
+              "id": "4242975",
+              "name": "Jaelan Phillips",
+              "label": "LB"
+            },
+            {
+              "id": "3917853",
+              "name": "Mike Jackson",
+              "label": "CB"
+            },
+            {
+              "id": "4362847",
+              "name": "Jaycee Horn",
+              "label": "CB"
+            }
+          ],
+          "rank": 15,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 15th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4568263",
+              "name": "Ryan Fitzgerald",
+              "label": "K"
+            },
+            {
+              "id": "4685350",
+              "name": "Trevor Etienne",
+              "label": "KR"
+            }
+          ],
+          "rank": 22,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 22nd of 32."
+        }
+      }
+    },
+    "CHI": {
+      "coach": {
+        "name": "Ben Johnson",
+        "experience": 1
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4431611",
+              "name": "Caleb Williams",
+              "label": "QB"
+            },
+            {
+              "id": "4259545",
+              "name": "D'Andre Swift",
+              "label": "RB"
+            },
+            {
+              "id": "4431299",
+              "name": "Rome Odunze",
+              "label": "WR"
+            },
+            {
+              "id": "4685278",
+              "name": "Luther Burden III",
+              "label": "WR"
+            },
+            {
+              "id": "4723086",
+              "name": "Colston Loveland",
+              "label": "TE"
+            },
+            {
+              "id": "4251007",
+              "name": "Braxton Jones",
+              "label": "OT"
+            }
+          ],
+          "rank": 9,
+          "score": 4,
+          "note": "Better than most for points scored last season, 9th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3134690",
+              "name": "Montez Sweat",
+              "label": "DE"
+            },
+            {
+              "id": "4242659",
+              "name": "Dayo Odeyingbo",
+              "label": "DE"
+            },
+            {
+              "id": "4241007",
+              "name": "D'Marco Jackson",
+              "label": "LB"
+            },
+            {
+              "id": "4243253",
+              "name": "Jaylon Johnson",
+              "label": "CB"
+            },
+            {
+              "id": "4426374",
+              "name": "Tyrique Stevenson",
+              "label": "CB"
+            }
+          ],
+          "rank": 23,
+          "score": 2,
+          "note": "Below average for points allowed last season, 23rd of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "17427",
+              "name": "Cairo Santos",
+              "label": "K"
+            },
+            {
+              "id": "4869748",
+              "name": "Zavion Thomas",
+              "label": "KR"
+            }
+          ],
+          "rank": 18,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 18th of 32."
+        }
+      }
+    },
+    "CIN": {
+      "coach": {
+        "name": "Zac Taylor",
+        "experience": 7
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3915511",
+              "name": "Joe Burrow",
+              "label": "QB"
+            },
+            {
+              "id": "4362238",
+              "name": "Chase Brown",
+              "label": "RB"
+            },
+            {
+              "id": "4362628",
+              "name": "Ja'Marr Chase",
+              "label": "WR"
+            },
+            {
+              "id": "4239993",
+              "name": "Tee Higgins",
+              "label": "WR"
+            },
+            {
+              "id": "3116164",
+              "name": "Mike Gesicki",
+              "label": "TE"
+            },
+            {
+              "id": "3116370",
+              "name": "Orlando Brown Jr.",
+              "label": "OT"
+            }
+          ],
+          "rank": 12,
+          "score": 4,
+          "note": "Better than most for points scored last season, 12th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4240754",
+              "name": "Boye Mafe",
+              "label": "DE"
+            },
+            {
+              "id": "4428985",
+              "name": "Myles Murphy",
+              "label": "DE"
+            },
+            {
+              "id": "3051746",
+              "name": "Oren Burks",
+              "label": "LB"
+            },
+            {
+              "id": "4426422",
+              "name": "Dax Hill",
+              "label": "CB"
+            },
+            {
+              "id": "4572036",
+              "name": "DJ Turner II",
+              "label": "CB"
+            }
+          ],
+          "rank": 30,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 30th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4360234",
+              "name": "Evan McPherson",
+              "label": "K"
+            },
+            {
+              "id": "4257188",
+              "name": "Charlie Jones",
+              "label": "KR"
+            }
+          ],
+          "rank": 9,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 9th of 32."
+        }
+      }
+    },
+    "CLE": {
+      "coach": {
+        "name": "Todd Monken",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3122840",
+              "name": "Deshaun Watson",
+              "label": "QB"
+            },
+            {
+              "id": "4685702",
+              "name": "Quinshon Judkins",
+              "label": "RB"
+            },
+            {
+              "id": "4241463",
+              "name": "Jerry Jeudy",
+              "label": "WR"
+            },
+            {
+              "id": "4870653",
+              "name": "KC Concepcion",
+              "label": "WR"
+            },
+            {
+              "id": "5083076",
+              "name": "Harold Fannin Jr.",
+              "label": "TE"
+            },
+            {
+              "id": "4870723",
+              "name": "Spencer Fano",
+              "label": "OT"
+            }
+          ],
+          "rank": 31,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 31st of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4570119",
+              "name": "Alex Wright",
+              "label": "DE"
+            },
+            {
+              "id": "4578085",
+              "name": "Jared Verse",
+              "label": "DE"
+            },
+            {
+              "id": "3110565",
+              "name": "Quincy Williams",
+              "label": "LB"
+            },
+            {
+              "id": "3915535",
+              "name": "Denzel Ward",
+              "label": "CB"
+            },
+            {
+              "id": "4379397",
+              "name": "Tyson Campbell",
+              "label": "CB"
+            }
+          ],
+          "rank": 14,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 14th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4258620",
+              "name": "Andre Szmyt",
+              "label": "K"
+            },
+            {
+              "id": "4613104",
+              "name": "Malachi Corley",
+              "label": "KR"
+            }
+          ],
+          "rank": 10,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 10th of 32."
+        }
+      }
+    },
+    "DAL": {
+      "coach": {
+        "name": "Brian Schottenheimer",
+        "experience": 1
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "2577417",
+              "name": "Dak Prescott",
+              "label": "QB"
+            },
+            {
+              "id": "4361579",
+              "name": "Javonte Williams",
+              "label": "RB"
+            },
+            {
+              "id": "4241389",
+              "name": "CeeDee Lamb",
+              "label": "WR"
+            },
+            {
+              "id": "4426354",
+              "name": "George Pickens",
+              "label": "WR"
+            },
+            {
+              "id": "4242355",
+              "name": "Jake Ferguson",
+              "label": "TE"
+            },
+            {
+              "id": "4609048",
+              "name": "Tyler Guyton",
+              "label": "OT"
+            }
+          ],
+          "rank": 7,
+          "score": 4,
+          "note": "Better than most for points scored last season, 7th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4040982",
+              "name": "Quinnen Williams",
+              "label": "DT"
+            },
+            {
+              "id": "3122752",
+              "name": "Kenny Clark",
+              "label": "DT"
+            },
+            {
+              "id": "4683848",
+              "name": "Donovan Ezeiruaku",
+              "label": "LB"
+            },
+            {
+              "id": "4384549",
+              "name": "Cobie Durant",
+              "label": "CB"
+            },
+            {
+              "id": "4248911",
+              "name": "DaRon Bland",
+              "label": "CB"
+            }
+          ],
+          "rank": 32,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 32nd of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3953687",
+              "name": "Brandon Aubrey",
+              "label": "K"
+            },
+            {
+              "id": "3676833",
+              "name": "KaVontae Turpin",
+              "label": "KR"
+            }
+          ],
+          "rank": 16,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 16th of 32."
+        }
+      }
+    },
+    "DEN": {
+      "coach": {
+        "name": "Sean Payton",
+        "experience": 18
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4426338",
+              "name": "Bo Nix",
+              "label": "QB"
+            },
+            {
+              "id": "4241985",
+              "name": "J.K. Dobbins",
+              "label": "RB"
+            },
+            {
+              "id": "3128429",
+              "name": "Courtland Sutton",
+              "label": "WR"
+            },
+            {
+              "id": "4372016",
+              "name": "Jaylen Waddle",
+              "label": "WR"
+            },
+            {
+              "id": "3051876",
+              "name": "Evan Engram",
+              "label": "TE"
+            },
+            {
+              "id": "4035662",
+              "name": "Garett Bolles",
+              "label": "OT"
+            }
+          ],
+          "rank": 14,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 14th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4039064",
+              "name": "Malcolm Roach",
+              "label": "DT"
+            },
+            {
+              "id": "3915282",
+              "name": "Zach Allen",
+              "label": "DE"
+            },
+            {
+              "id": "4360259",
+              "name": "Nik Bonitto",
+              "label": "LB"
+            },
+            {
+              "id": "4372012",
+              "name": "Pat Surtain II",
+              "label": "CB"
+            },
+            {
+              "id": "4382401",
+              "name": "Riley Moss",
+              "label": "CB"
+            }
+          ],
+          "rank": 3,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 3rd of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "2985659",
+              "name": "Wil Lutz",
+              "label": "K"
+            },
+            {
+              "id": "4686472",
+              "name": "Marvin Mims Jr.",
+              "label": "KR"
+            }
+          ],
+          "rank": 14,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 14th of 32."
+        }
+      }
+    },
+    "DET": {
+      "coach": {
+        "name": "Dan Campbell",
+        "experience": 6
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3046779",
+              "name": "Jared Goff",
+              "label": "QB"
+            },
+            {
+              "id": "4429795",
+              "name": "Jahmyr Gibbs",
+              "label": "RB"
+            },
+            {
+              "id": "4374302",
+              "name": "Amon-Ra St. Brown",
+              "label": "WR"
+            },
+            {
+              "id": "4426388",
+              "name": "Jameson Williams",
+              "label": "WR"
+            },
+            {
+              "id": "4430027",
+              "name": "Sam LaPorta",
+              "label": "TE"
+            },
+            {
+              "id": "4373825",
+              "name": "Penei Sewell",
+              "label": "OT"
+            }
+          ],
+          "rank": 5,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 5th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4372099",
+              "name": "Aidan Hutchinson",
+              "label": "DE"
+            },
+            {
+              "id": "4038849",
+              "name": "DJ Wonnum",
+              "label": "LB"
+            },
+            {
+              "id": "4241411",
+              "name": "Malcolm Rodriguez",
+              "label": "LB"
+            },
+            {
+              "id": "3139387",
+              "name": "D.J. Reed",
+              "label": "CB"
+            },
+            {
+              "id": "5093004",
+              "name": "Keith Abney II",
+              "label": "CB"
+            }
+          ],
+          "rank": 22,
+          "score": 2,
+          "note": "Below average for points allowed last season, 22nd of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4689936",
+              "name": "Jake Bates",
+              "label": "K"
+            },
+            {
+              "id": "4383429",
+              "name": "Jacob Saylors",
+              "label": "KR"
+            }
+          ],
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 27th of 32."
+        }
+      }
+    },
+    "GB": {
+      "coach": {
+        "name": "Matt LaFleur",
+        "experience": 7
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4036378",
+              "name": "Jordan Love",
+              "label": "QB"
+            },
+            {
+              "id": "4047365",
+              "name": "Josh Jacobs",
+              "label": "RB"
+            },
+            {
+              "id": "4248528",
+              "name": "Christian Watson",
+              "label": "WR"
+            },
+            {
+              "id": "4362249",
+              "name": "Jayden Reed",
+              "label": "WR"
+            },
+            {
+              "id": "4572680",
+              "name": "Tucker Kraft",
+              "label": "TE"
+            },
+            {
+              "id": "3821571",
+              "name": "Jordan Morgan",
+              "label": "G"
+            }
+          ],
+          "rank": 16,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 16th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4373423",
+              "name": "Karl Brooks",
+              "label": "DT"
+            },
+            {
+              "id": "4361791",
+              "name": "Devonte Wyatt",
+              "label": "DT"
+            },
+            {
+              "id": "4361423",
+              "name": "Micah Parsons",
+              "label": "DE"
+            },
+            {
+              "id": "4259493",
+              "name": "Keisean Nixon",
+              "label": "CB"
+            },
+            {
+              "id": "4430965",
+              "name": "Carrington Valentine",
+              "label": "CB"
+            }
+          ],
+          "rank": 11,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 11th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4869461",
+              "name": "Trey Smack",
+              "label": "K"
+            },
+            {
+              "id": "4430191",
+              "name": "Skyy Moore",
+              "label": "KR"
+            }
+          ],
+          "rank": 23,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 23rd of 32."
+        }
+      }
+    },
+    "HOU": {
+      "coach": {
+        "name": "DeMeco Ryans",
+        "experience": 3
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4432577",
+              "name": "C.J. Stroud",
+              "label": "QB"
+            },
+            {
+              "id": "4035538",
+              "name": "David Montgomery",
+              "label": "RB"
+            },
+            {
+              "id": "4258173",
+              "name": "Nico Collins",
+              "label": "WR"
+            },
+            {
+              "id": "4877706",
+              "name": "Jayden Higgins",
+              "label": "WR"
+            },
+            {
+              "id": "3117256",
+              "name": "Dalton Schultz",
+              "label": "TE"
+            },
+            {
+              "id": "4429693",
+              "name": "Aireontae Ersery",
+              "label": "OT"
+            }
+          ],
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most for points scored last season, 13th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4685724",
+              "name": "Will Anderson Jr.",
+              "label": "DE"
+            },
+            {
+              "id": "2976560",
+              "name": "Danielle Hunter",
+              "label": "DE"
+            },
+            {
+              "id": "3071353",
+              "name": "E.J. Speed",
+              "label": "LB"
+            },
+            {
+              "id": "4426434",
+              "name": "Derek Stingley Jr.",
+              "label": "CB"
+            },
+            {
+              "id": "4602699",
+              "name": "Kamari Lassiter",
+              "label": "CB"
+            }
+          ],
+          "rank": 2,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 2nd of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "2971573",
+              "name": "Ka'imi Fairbairn",
+              "label": "K"
+            },
+            {
+              "id": "4586312",
+              "name": "Jaylin Noel",
+              "label": "KR"
+            }
+          ],
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 6th of 32."
+        }
+      }
+    },
+    "IND": {
+      "coach": {
+        "name": "Shane Steichen",
+        "experience": 3
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3917792",
+              "name": "Daniel Jones",
+              "label": "QB"
+            },
+            {
+              "id": "4242335",
+              "name": "Jonathan Taylor",
+              "label": "RB"
+            },
+            {
+              "id": "4360078",
+              "name": "Alec Pierce",
+              "label": "WR"
+            },
+            {
+              "id": "4688813",
+              "name": "Josh Downs",
+              "label": "WR"
+            },
+            {
+              "id": "4431459",
+              "name": "Tyler Warren",
+              "label": "TE"
+            },
+            {
+              "id": "4362580",
+              "name": "Bernhard Raimann",
+              "label": "OT"
+            }
+          ],
+          "rank": 8,
+          "score": 4,
+          "note": "Better than most for points scored last season, 8th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3843843",
+              "name": "Arden Key",
+              "label": "DE"
+            },
+            {
+              "id": "4426473",
+              "name": "Laiatu Latu",
+              "label": "DE"
+            },
+            {
+              "id": "5088571",
+              "name": "Bryce Boettcher",
+              "label": "LB"
+            },
+            {
+              "id": "4427250",
+              "name": "Sauce Gardner",
+              "label": "CB"
+            },
+            {
+              "id": "4037361",
+              "name": "Charvarius Ward",
+              "label": "CB"
+            }
+          ],
+          "rank": 21,
+          "score": 2,
+          "note": "Below average for points allowed last season, 21st of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4259619",
+              "name": "Blake Grupe",
+              "label": "K"
+            },
+            {
+              "id": "4429684",
+              "name": "Anthony Gould",
+              "label": "KR"
+            }
+          ],
+          "rank": 2,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 2nd of 32."
+        }
+      }
+    },
+    "JAX": {
+      "coach": {
+        "name": "Liam Coen",
+        "experience": 1
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4360310",
+              "name": "Trevor Lawrence",
+              "label": "QB"
+            },
+            {
+              "id": "4882093",
+              "name": "Bhayshul Tuten",
+              "label": "RB"
+            },
+            {
+              "id": "4432773",
+              "name": "Brian Thomas Jr.",
+              "label": "WR"
+            },
+            {
+              "id": "4432620",
+              "name": "Parker Washington",
+              "label": "WR"
+            },
+            {
+              "id": "4430539",
+              "name": "Brenton Strange",
+              "label": "TE"
+            },
+            {
+              "id": "4035791",
+              "name": "Cole Van Lanen",
+              "label": "OT"
+            }
+          ],
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 6th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4426349",
+              "name": "Travon Walker",
+              "label": "DE"
+            },
+            {
+              "id": "3915239",
+              "name": "Josh Hines-Allen",
+              "label": "DE"
+            },
+            {
+              "id": "4427716",
+              "name": "Jack Kiser",
+              "label": "LB"
+            },
+            {
+              "id": "4685415",
+              "name": "Travis Hunter",
+              "label": "WR"
+            },
+            {
+              "id": "4242149",
+              "name": "Montaric Brown",
+              "label": "CB"
+            }
+          ],
+          "rank": 8,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 8th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4686361",
+              "name": "Cam Little",
+              "label": "K"
+            },
+            {
+              "id": "4882093",
+              "name": "Bhayshul Tuten",
+              "label": "KR"
+            }
+          ],
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 13th of 32."
+        }
+      }
+    },
+    "KC": {
+      "coach": {
+        "name": "Andy Reid",
+        "experience": 27
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3139477",
+              "name": "Patrick Mahomes",
+              "label": "QB"
+            },
+            {
+              "id": "4567048",
+              "name": "Kenneth Walker III",
+              "label": "RB"
+            },
+            {
+              "id": "4428331",
+              "name": "Rashee Rice",
+              "label": "WR"
+            },
+            {
+              "id": "4683062",
+              "name": "Xavier Worthy",
+              "label": "WR"
+            },
+            {
+              "id": "15847",
+              "name": "Travis Kelce",
+              "label": "TE"
+            },
+            {
+              "id": "4569659",
+              "name": "Josh Simmons",
+              "label": "OT"
+            }
+          ],
+          "rank": 21,
+          "score": 2,
+          "note": "Below average for points scored last season, 21st of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4426659",
+              "name": "George Karlaftis",
+              "label": "DE"
+            },
+            {
+              "id": "4612387",
+              "name": "Felix Anudike-Uzomah",
+              "label": "DE"
+            },
+            {
+              "id": "4036959",
+              "name": "Cole Christiansen",
+              "label": "LB"
+            },
+            {
+              "id": "4040432",
+              "name": "L'Jarius Sneed",
+              "label": "CB"
+            },
+            {
+              "id": "4880124",
+              "name": "Mansoor Delane",
+              "label": "CB"
+            }
+          ],
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 6th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3055899",
+              "name": "Harrison Butker",
+              "label": "K"
+            },
+            {
+              "id": "4372716",
+              "name": "Nikko Remigio",
+              "label": "KR"
+            }
+          ],
+          "rank": 15,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 15th of 32."
+        }
+      }
+    },
+    "LAC": {
+      "coach": {
+        "name": "Jim Harbaugh",
+        "experience": 6
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4038941",
+              "name": "Justin Herbert",
+              "label": "QB"
+            },
+            {
+              "id": "4685382",
+              "name": "Omarion Hampton",
+              "label": "RB"
+            },
+            {
+              "id": "4612826",
+              "name": "Ladd McConkey",
+              "label": "WR"
+            },
+            {
+              "id": "4429025",
+              "name": "Quentin Johnston",
+              "label": "WR"
+            },
+            {
+              "id": "4595342",
+              "name": "Oronde Gadsden",
+              "label": "TE"
+            },
+            {
+              "id": "4242283",
+              "name": "Rashawn Slater",
+              "label": "OT"
+            }
+          ],
+          "rank": 20,
+          "score": 2,
+          "note": "Below average for points scored last season, 20th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4374269",
+              "name": "Teair Tart",
+              "label": "DT"
+            },
+            {
+              "id": "5089178",
+              "name": "Jamaree Caldwell",
+              "label": "DT"
+            },
+            {
+              "id": "16710",
+              "name": "Khalil Mack",
+              "label": "LB"
+            },
+            {
+              "id": "4427404",
+              "name": "Cam Hart",
+              "label": "CB"
+            },
+            {
+              "id": "3843769",
+              "name": "Donte Jackson",
+              "label": "CB"
+            }
+          ],
+          "rank": 9,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 9th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4362081",
+              "name": "Cameron Dicker",
+              "label": "K"
+            },
+            {
+              "id": "4362477",
+              "name": "Derius Davis",
+              "label": "KR"
+            }
+          ],
+          "rank": 5,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 5th of 32."
+        }
+      }
+    },
+    "LAR": {
+      "coach": {
+        "name": "Sean McVay",
+        "experience": 9
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "12483",
+              "name": "Matthew Stafford",
+              "label": "QB"
+            },
+            {
+              "id": "4430737",
+              "name": "Kyren Williams",
+              "label": "RB"
+            },
+            {
+              "id": "4426515",
+              "name": "Puka Nacua",
+              "label": "WR"
+            },
+            {
+              "id": "16800",
+              "name": "Davante Adams",
+              "label": "WR"
+            },
+            {
+              "id": "4242557",
+              "name": "Colby Parkinson",
+              "label": "TE"
+            },
+            {
+              "id": "4036135",
+              "name": "Alaric Jackson",
+              "label": "OT"
+            }
+          ],
+          "rank": 1,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 1st of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4250621",
+              "name": "Kobie Turner",
+              "label": "DE"
+            },
+            {
+              "id": "4362245",
+              "name": "Braden Fiske",
+              "label": "DE"
+            },
+            {
+              "id": "3122132",
+              "name": "Myles Garrett",
+              "label": "DE"
+            },
+            {
+              "id": "4697639",
+              "name": "Jaylen Watson",
+              "label": "CB"
+            },
+            {
+              "id": "4426405",
+              "name": "Trent McDuffie",
+              "label": "CB"
+            }
+          ],
+          "rank": 10,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 10th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4574716",
+              "name": "Harrison Mevis",
+              "label": "K"
+            },
+            {
+              "id": "4569382",
+              "name": "Jordan Whittington",
+              "label": "KR"
+            }
+          ],
+          "rank": 28,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 28th of 32."
+        }
+      }
+    },
+    "LV": {
+      "coach": {
+        "name": "Klint Kubiak",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "14880",
+              "name": "Kirk Cousins",
+              "label": "QB"
+            },
+            {
+              "id": "4890973",
+              "name": "Ashton Jeanty",
+              "label": "RB"
+            },
+            {
+              "id": "4428718",
+              "name": "Tre Tucker",
+              "label": "WR"
+            },
+            {
+              "id": "4382466",
+              "name": "Jalen Nailor",
+              "label": "WR"
+            },
+            {
+              "id": "4432665",
+              "name": "Brock Bowers",
+              "label": "TE"
+            },
+            {
+              "id": "3134312",
+              "name": "Kolton Miller",
+              "label": "OT"
+            }
+          ],
+          "rank": 32,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 32nd of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4360749",
+              "name": "Thomas Booker IV",
+              "label": "DT"
+            },
+            {
+              "id": "4373956",
+              "name": "Jonah Laulu",
+              "label": "DT"
+            },
+            {
+              "id": "4258194",
+              "name": "Kwity Paye",
+              "label": "DE"
+            },
+            {
+              "id": "4259561",
+              "name": "Eric Stokes",
+              "label": "CB"
+            },
+            {
+              "id": "4430330",
+              "name": "Darien Porter",
+              "label": "CB"
+            }
+          ],
+          "rank": 25,
+          "score": 2,
+          "note": "Below average for points allowed last season, 25th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4249087",
+              "name": "Matt Gay",
+              "label": "K"
+            },
+            {
+              "id": "4428718",
+              "name": "Tre Tucker",
+              "label": "KR"
+            }
+          ],
+          "rank": 25,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 25th of 32."
+        }
+      }
+    },
+    "MIA": {
+      "coach": {
+        "name": "Jeff Hafley",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4242512",
+              "name": "Malik Willis",
+              "label": "QB"
+            },
+            {
+              "id": "4429160",
+              "name": "De'Von Achane",
+              "label": "RB"
+            },
+            {
+              "id": "4569603",
+              "name": "Malik Washington",
+              "label": "WR"
+            },
+            {
+              "id": "4249417",
+              "name": "Jalen Tolbert",
+              "label": "WR"
+            },
+            {
+              "id": "4367209",
+              "name": "Greg Dulcich",
+              "label": "TE"
+            },
+            {
+              "id": "4567493",
+              "name": "Patrick Paul",
+              "label": "OT"
+            }
+          ],
+          "rank": 25,
+          "score": 2,
+          "note": "Below average for points scored last season, 25th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4431586",
+              "name": "Chop Robinson",
+              "label": "LB"
+            },
+            {
+              "id": "4046528",
+              "name": "Josh Uche",
+              "label": "LB"
+            },
+            {
+              "id": "4879212",
+              "name": "Trey Moore",
+              "label": "LB"
+            },
+            {
+              "id": "4432730",
+              "name": "Jason Marshall Jr.",
+              "label": "CB"
+            },
+            {
+              "id": "4360488",
+              "name": "JuJu Brents",
+              "label": "CB"
+            }
+          ],
+          "rank": 24,
+          "score": 2,
+          "note": "Below average for points allowed last season, 24th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4243371",
+              "name": "Riley Patterson",
+              "label": "K"
+            },
+            {
+              "id": "4569603",
+              "name": "Malik Washington",
+              "label": "KR"
+            }
+          ],
+          "rank": 4,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 4th of 32."
+        }
+      }
+    },
+    "MIN": {
+      "coach": {
+        "name": "Kevin O'Connell",
+        "experience": 4
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3917315",
+              "name": "Kyler Murray",
+              "label": "QB"
+            },
+            {
+              "id": "3042519",
+              "name": "Aaron Jones Sr.",
+              "label": "RB"
+            },
+            {
+              "id": "4262921",
+              "name": "Justin Jefferson",
+              "label": "WR"
+            },
+            {
+              "id": "4429205",
+              "name": "Jordan Addison",
+              "label": "WR"
+            },
+            {
+              "id": "4036133",
+              "name": "T.J. Hockenson",
+              "label": "TE"
+            },
+            {
+              "id": "4361985",
+              "name": "Christian Darrisaw",
+              "label": "OT"
+            }
+          ],
+          "rank": 26,
+          "score": 2,
+          "note": "Below average for points scored last season, 26th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "5093973",
+              "name": "Levi Drake Rodriguez",
+              "label": "DT"
+            },
+            {
+              "id": "4360277",
+              "name": "Jalen Redmond",
+              "label": "DT"
+            },
+            {
+              "id": "4565190",
+              "name": "Dallas Turner",
+              "label": "LB"
+            },
+            {
+              "id": "4044540",
+              "name": "Isaiah Rodgers",
+              "label": "CB"
+            },
+            {
+              "id": "4259252",
+              "name": "James Pierre",
+              "label": "CB"
+            }
+          ],
+          "rank": 7,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 7th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4567104",
+              "name": "Will Reichard",
+              "label": "K"
+            },
+            {
+              "id": "4430656",
+              "name": "Myles Price",
+              "label": "KR"
+            }
+          ],
+          "rank": 3,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 3rd of 32."
+        }
+      }
+    },
+    "NE": {
+      "coach": {
+        "name": "Mike Vrabel",
+        "experience": 7
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4431452",
+              "name": "Drake Maye",
+              "label": "QB"
+            },
+            {
+              "id": "4569173",
+              "name": "Rhamondre Stevenson",
+              "label": "RB"
+            },
+            {
+              "id": "4047646",
+              "name": "A.J. Brown",
+              "label": "WR"
+            },
+            {
+              "id": "4361432",
+              "name": "Romeo Doubs",
+              "label": "WR"
+            },
+            {
+              "id": "3046439",
+              "name": "Hunter Henry",
+              "label": "TE"
+            },
+            {
+              "id": "4685298",
+              "name": "Will Campbell",
+              "label": "OT"
+            }
+          ],
+          "rank": 2,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 2nd of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4372030",
+              "name": "Christian Barmore",
+              "label": "DT"
+            },
+            {
+              "id": "4239699",
+              "name": "Milton Williams",
+              "label": "DT"
+            },
+            {
+              "id": "3915525",
+              "name": "Dre'Mont Jones",
+              "label": "DE"
+            },
+            {
+              "id": "3916923",
+              "name": "Carlton Davis III",
+              "label": "CB"
+            },
+            {
+              "id": "4686772",
+              "name": "Christian Gonzalez",
+              "label": "CB"
+            }
+          ],
+          "rank": 4,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 4th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4569923",
+              "name": "Andy Borregales",
+              "label": "K"
+            },
+            {
+              "id": "4613202",
+              "name": "Kyle Williams",
+              "label": "KR"
+            }
+          ],
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 19th of 32."
+        }
+      }
+    },
+    "NO": {
+      "coach": {
+        "name": "Kellen Moore",
+        "experience": 1
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4360689",
+              "name": "Tyler Shough",
+              "label": "QB"
+            },
+            {
+              "id": "4239996",
+              "name": "Travis Etienne Jr.",
+              "label": "RB"
+            },
+            {
+              "id": "4361370",
+              "name": "Chris Olave",
+              "label": "WR"
+            },
+            {
+              "id": "4880281",
+              "name": "Jordyn Tyson",
+              "label": "WR"
+            },
+            {
+              "id": "3929645",
+              "name": "Juwan Johnson",
+              "label": "TE"
+            },
+            {
+              "id": "4685260",
+              "name": "Kelvin Banks Jr.",
+              "label": "OT"
+            }
+          ],
+          "rank": 28,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 28th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "13971",
+              "name": "Cameron Jordan",
+              "label": "DE"
+            },
+            {
+              "id": "4248047",
+              "name": "John Ridgeway III",
+              "label": "DT"
+            },
+            {
+              "id": "4241986",
+              "name": "Chase Young",
+              "label": "DE"
+            },
+            {
+              "id": "4433975",
+              "name": "Kool-Aid McKinstry",
+              "label": "CB"
+            },
+            {
+              "id": "4428350",
+              "name": "Quincy Riley",
+              "label": "CB"
+            }
+          ],
+          "rank": 16,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 16th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "5208518",
+              "name": "Charlie Smyth",
+              "label": "K"
+            },
+            {
+              "id": "4698597",
+              "name": "Barion Brown",
+              "label": "KR"
+            }
+          ],
+          "rank": 32,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 32nd of 32."
+        }
+      }
+    },
+    "NYG": {
+      "coach": {
+        "name": "John Harbaugh",
+        "experience": 18
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4689114",
+              "name": "Jaxson Dart",
+              "label": "QB"
+            },
+            {
+              "id": "4696981",
+              "name": "Cam Skattebo",
+              "label": "RB"
+            },
+            {
+              "id": "4595348",
+              "name": "Malik Nabers",
+              "label": "WR"
+            },
+            {
+              "id": "3916945",
+              "name": "Darius Slayton",
+              "label": "WR"
+            },
+            {
+              "id": "4361050",
+              "name": "Isaiah Likely",
+              "label": "TE"
+            },
+            {
+              "id": "4259566",
+              "name": "Andrew Thomas",
+              "label": "OT"
+            }
+          ],
+          "rank": 17,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 17th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "16837",
+              "name": "Shelby Harris",
+              "label": "DT"
+            },
+            {
+              "id": "4426542",
+              "name": "Darius Alexander",
+              "label": "DT"
+            },
+            {
+              "id": "4725996",
+              "name": "Abdul Carter",
+              "label": "LB"
+            },
+            {
+              "id": "4242547",
+              "name": "Paulson Adebo",
+              "label": "CB"
+            },
+            {
+              "id": "4361266",
+              "name": "Greg Newsome II",
+              "label": "CB"
+            }
+          ],
+          "rank": 26,
+          "score": 2,
+          "note": "Below average for points allowed last season, 26th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4566158",
+              "name": "Ben Sauls",
+              "label": "K"
+            },
+            {
+              "id": "4428328",
+              "name": "Deonte Banks",
+              "label": "KR"
+            }
+          ],
+          "rank": 11,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 11th of 32."
+        }
+      }
+    },
+    "NYJ": {
+      "coach": {
+        "name": "Aaron Glenn",
+        "experience": 1
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "15864",
+              "name": "Geno Smith",
+              "label": "QB"
+            },
+            {
+              "id": "4427366",
+              "name": "Breece Hall",
+              "label": "RB"
+            },
+            {
+              "id": "4569618",
+              "name": "Garrett Wilson",
+              "label": "WR"
+            },
+            {
+              "id": "4597500",
+              "name": "Adonai Mitchell",
+              "label": "WR"
+            },
+            {
+              "id": "5083315",
+              "name": "Kenyon Sadiq",
+              "label": "TE"
+            },
+            {
+              "id": "4431809",
+              "name": "Olu Fashanu",
+              "label": "OT"
+            }
+          ],
+          "rank": 29,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 29th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4362840",
+              "name": "Kingsley Enagbare",
+              "label": "LB"
+            },
+            {
+              "id": "4361767",
+              "name": "Will McDonald IV",
+              "label": "DE"
+            },
+            {
+              "id": "4700136",
+              "name": "Kiko Mauigoa",
+              "label": "LB"
+            },
+            {
+              "id": "4570470",
+              "name": "Nahshon Wright",
+              "label": "CB"
+            },
+            {
+              "id": "4035824",
+              "name": "Brandon Stephens",
+              "label": "CB"
+            }
+          ],
+          "rank": 31,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 31st of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3124679",
+              "name": "Jason Sanders",
+              "label": "K"
+            },
+            {
+              "id": "4035537",
+              "name": "Kene Nwangwu",
+              "label": "KR"
+            }
+          ],
+          "rank": 1,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 1st of 32."
+        }
+      }
+    },
+    "PHI": {
+      "coach": {
+        "name": "Nick Sirianni",
+        "experience": 5
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4040715",
+              "name": "Jalen Hurts",
+              "label": "QB"
+            },
+            {
+              "id": "3929630",
+              "name": "Saquon Barkley",
+              "label": "RB"
+            },
+            {
+              "id": "4241478",
+              "name": "DeVonta Smith",
+              "label": "WR"
+            },
+            {
+              "id": "4428850",
+              "name": "Dontayvion Wicks",
+              "label": "WR"
+            },
+            {
+              "id": "3121023",
+              "name": "Dallas Goedert",
+              "label": "TE"
+            },
+            {
+              "id": "4334215",
+              "name": "Jordan Mailata",
+              "label": "OT"
+            }
+          ],
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 19th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4685759",
+              "name": "Jalen Carter",
+              "label": "DT"
+            },
+            {
+              "id": "4362116",
+              "name": "Moro Ojomo",
+              "label": "DT"
+            },
+            {
+              "id": "3916409",
+              "name": "Jonathan Greenard",
+              "label": "LB"
+            },
+            {
+              "id": "4245185",
+              "name": "Riq Woolen",
+              "label": "CB"
+            },
+            {
+              "id": "4686273",
+              "name": "Quinyon Mitchell",
+              "label": "CB"
+            }
+          ],
+          "rank": 5,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 5th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3050478",
+              "name": "Jake Elliott",
+              "label": "K"
+            },
+            {
+              "id": "4431545",
+              "name": "Will Shipley",
+              "label": "KR"
+            }
+          ],
+          "rank": 31,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 31st of 32."
+        }
+      }
+    },
+    "PIT": {
+      "coach": {
+        "name": "Mike McCarthy",
+        "experience": 18
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "8439",
+              "name": "Aaron Rodgers",
+              "label": "QB"
+            },
+            {
+              "id": "4569987",
+              "name": "Jaylen Warren",
+              "label": "RB"
+            },
+            {
+              "id": "4047650",
+              "name": "DK Metcalf",
+              "label": "WR"
+            },
+            {
+              "id": "4035687",
+              "name": "Michael Pittman Jr.",
+              "label": "WR"
+            },
+            {
+              "id": "4361411",
+              "name": "Pat Freiermuth",
+              "label": "TE"
+            },
+            {
+              "id": "4427170",
+              "name": "Troy Fautanu",
+              "label": "OT"
+            }
+          ],
+          "rank": 15,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 15th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4682980",
+              "name": "Derrick Harmon",
+              "label": "DT"
+            },
+            {
+              "id": "13977",
+              "name": "Cameron Heyward",
+              "label": "DT"
+            },
+            {
+              "id": "4037333",
+              "name": "Alex Highsmith",
+              "label": "LB"
+            },
+            {
+              "id": "4426506",
+              "name": "Joey Porter Jr.",
+              "label": "CB"
+            },
+            {
+              "id": "3873935",
+              "name": "Jamel Dean",
+              "label": "CB"
+            }
+          ],
+          "rank": 17,
+          "score": 3,
+          "note": "Middle of the league for points allowed last season, 17th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "17372",
+              "name": "Chris Boswell",
+              "label": "K"
+            },
+            {
+              "id": "5081338",
+              "name": "Kaden Wetjen",
+              "label": "KR"
+            }
+          ],
+          "rank": 20,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 20th of 32."
+        }
+      }
+    },
+    "SEA": {
+      "coach": {
+        "name": "Mike Macdonald",
+        "experience": 2
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3912547",
+              "name": "Sam Darnold",
+              "label": "QB"
+            },
+            {
+              "id": "4426385",
+              "name": "Zach Charbonnet",
+              "label": "RB"
+            },
+            {
+              "id": "4430878",
+              "name": "Jaxon Smith-Njigba",
+              "label": "WR"
+            },
+            {
+              "id": "4032473",
+              "name": "Rashid Shaheed",
+              "label": "WR"
+            },
+            {
+              "id": "4576297",
+              "name": "AJ Barner",
+              "label": "TE"
+            },
+            {
+              "id": "4426376",
+              "name": "Charles Cross",
+              "label": "OT"
+            }
+          ],
+          "rank": 3,
+          "score": 5,
+          "note": "Among the best in the league for points scored last season — 3rd of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "2971622",
+              "name": "Leonard Williams",
+              "label": "DT"
+            },
+            {
+              "id": "3115312",
+              "name": "Jarran Reed",
+              "label": "DT"
+            },
+            {
+              "id": "3120358",
+              "name": "Uchenna Nwosu",
+              "label": "LB"
+            },
+            {
+              "id": "4575431",
+              "name": "Devon Witherspoon",
+              "label": "CB"
+            },
+            {
+              "id": "4372020",
+              "name": "Josh Jobe",
+              "label": "CB"
+            }
+          ],
+          "rank": 1,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 1st of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "2473037",
+              "name": "Jason Myers",
+              "label": "K"
+            },
+            {
+              "id": "4032473",
+              "name": "Rashid Shaheed",
+              "label": "KR"
+            }
+          ],
+          "rank": 17,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 17th of 32."
+        }
+      }
+    },
+    "SF": {
+      "coach": {
+        "name": "Kyle Shanahan",
+        "experience": 9
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4361741",
+              "name": "Brock Purdy",
+              "label": "QB"
+            },
+            {
+              "id": "3117251",
+              "name": "Christian McCaffrey",
+              "label": "RB"
+            },
+            {
+              "id": "16737",
+              "name": "Mike Evans",
+              "label": "WR"
+            },
+            {
+              "id": "3126486",
+              "name": "Deebo Samuel Sr.",
+              "label": "WR"
+            },
+            {
+              "id": "3040151",
+              "name": "George Kittle",
+              "label": "TE"
+            },
+            {
+              "id": "13241",
+              "name": "Trent Williams",
+              "label": "OT"
+            }
+          ],
+          "rank": 10,
+          "score": 4,
+          "note": "Better than most for points scored last season, 10th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4686308",
+              "name": "C.J. West",
+              "label": "DT"
+            },
+            {
+              "id": "4035840",
+              "name": "Osa Odighizuwa",
+              "label": "DT"
+            },
+            {
+              "id": "4685623",
+              "name": "Mykel Williams",
+              "label": "DE"
+            },
+            {
+              "id": "4242488",
+              "name": "Deommodore Lenoir",
+              "label": "CB"
+            },
+            {
+              "id": "4427325",
+              "name": "Renardo Green",
+              "label": "CB"
+            }
+          ],
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most for points allowed last season, 13th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4034949",
+              "name": "Eddy Pineiro",
+              "label": "K"
+            },
+            {
+              "id": "4372561",
+              "name": "Isaac Guerendo",
+              "label": "KR"
+            }
+          ],
+          "rank": 7,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 7th of 32."
+        }
+      }
+    },
+    "TB": {
+      "coach": {
+        "name": "Todd Bowles",
+        "experience": 9
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "3052587",
+              "name": "Baker Mayfield",
+              "label": "QB"
+            },
+            {
+              "id": "4596448",
+              "name": "Bucky Irving",
+              "label": "RB"
+            },
+            {
+              "id": "4567750",
+              "name": "Emeka Egbuka",
+              "label": "WR"
+            },
+            {
+              "id": "3116165",
+              "name": "Chris Godwin Jr.",
+              "label": "WR"
+            },
+            {
+              "id": "4243331",
+              "name": "Cade Otton",
+              "label": "TE"
+            },
+            {
+              "id": "4240589",
+              "name": "Tristan Wirfs",
+              "label": "OT"
+            }
+          ],
+          "rank": 18,
+          "score": 3,
+          "note": "Middle of the league for points scored last season, 18th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4690795",
+              "name": "Elijah Roberts",
+              "label": "DE"
+            },
+            {
+              "id": "3054857",
+              "name": "A'Shawn Robinson",
+              "label": "DT"
+            },
+            {
+              "id": "4686334",
+              "name": "Yaya Diaby",
+              "label": "LB"
+            },
+            {
+              "id": "4250392",
+              "name": "Zyon McCollum",
+              "label": "CB"
+            },
+            {
+              "id": "4816107",
+              "name": "Benjamin Morrison",
+              "label": "CB"
+            }
+          ],
+          "rank": 20,
+          "score": 2,
+          "note": "Below average for points allowed last season, 20th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3150744",
+              "name": "Chase McLaughlin",
+              "label": "K"
+            },
+            {
+              "id": "4371733",
+              "name": "Kenny Gainwell",
+              "label": "KR"
+            }
+          ],
+          "rank": 21,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 21st of 32."
+        }
+      }
+    },
+    "TEN": {
+      "coach": {
+        "name": "Robert Saleh",
+        "experience": 4
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4688380",
+              "name": "Cam Ward",
+              "label": "QB"
+            },
+            {
+              "id": "3916148",
+              "name": "Tony Pollard",
+              "label": "RB"
+            },
+            {
+              "id": "4871023",
+              "name": "Carnell Tate",
+              "label": "WR"
+            },
+            {
+              "id": "4569587",
+              "name": "Wan'Dale Robinson",
+              "label": "WR"
+            },
+            {
+              "id": "4686728",
+              "name": "Gunnar Helm",
+              "label": "TE"
+            },
+            {
+              "id": "4240920",
+              "name": "Dan Moore Jr.",
+              "label": "OT"
+            }
+          ],
+          "rank": 30,
+          "score": 1,
+          "note": "Among the worst in the league for points scored last season — 30th of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3120464",
+              "name": "John Franklin-Myers",
+              "label": "DE"
+            },
+            {
+              "id": "4567962",
+              "name": "Jermaine Johnson II",
+              "label": "DE"
+            },
+            {
+              "id": "4431613",
+              "name": "James Williams Sr.",
+              "label": "LB"
+            },
+            {
+              "id": "4429607",
+              "name": "Cor'Dale Flott",
+              "label": "CB"
+            },
+            {
+              "id": "4369835",
+              "name": "Alontae Taylor",
+              "label": "CB"
+            }
+          ],
+          "rank": 28,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 28th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "3124084",
+              "name": "Joey Slye",
+              "label": "K"
+            },
+            {
+              "id": "4431268",
+              "name": "Chimere Dike",
+              "label": "KR"
+            }
+          ],
+          "rank": 26,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 26th of 32."
+        }
+      }
+    },
+    "WSH": {
+      "coach": {
+        "name": "Dan Quinn",
+        "experience": 8
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4426348",
+              "name": "Jayden Daniels",
+              "label": "QB"
+            },
+            {
+              "id": "4575131",
+              "name": "Jacory Croskey-Merritt",
+              "label": "RB"
+            },
+            {
+              "id": "3121422",
+              "name": "Terry McLaurin",
+              "label": "WR"
+            },
+            {
+              "id": "2976212",
+              "name": "Stefon Diggs",
+              "label": "WR"
+            },
+            {
+              "id": "4360635",
+              "name": "Chig Okonkwo",
+              "label": "TE"
+            },
+            {
+              "id": "3042702",
+              "name": "Andrew Wylie",
+              "label": "G"
+            }
+          ],
+          "rank": 22,
+          "score": 2,
+          "note": "Below average for points scored last season, 22nd of 32."
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3929956",
+              "name": "Tim Settle",
+              "label": "DT"
+            },
+            {
+              "id": "4259491",
+              "name": "Javon Kinlaw",
+              "label": "DT"
+            },
+            {
+              "id": "4242205",
+              "name": "K'Lavon Chaisson",
+              "label": "LB"
+            },
+            {
+              "id": "4574689",
+              "name": "Trey Amos",
+              "label": "CB"
+            },
+            {
+              "id": "4428414",
+              "name": "Mike Sainristil",
+              "label": "CB"
+            }
+          ],
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 27th of 32."
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "5081335",
+              "name": "Drew Stevens",
+              "label": "K"
+            },
+            {
+              "id": "4426948",
+              "name": "Luke McCaffrey",
+              "label": "KR"
+            }
+          ],
+          "rank": 29,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 29th of 32."
+        }
+      }
+    }
+  }
+}
