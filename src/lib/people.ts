@@ -51,15 +51,22 @@ const ROUNDS = [
   "Fifth", "Sixth", "Seventh",
 ];
 
+/** 1 → 1st, 2 → 2nd, 11 → 11th, 21 → 21st. */
+function ordinal(n: number): string {
+  const rest = n % 100;
+  if (rest >= 11 && rest <= 13) return `${n}th`;
+  return `${n}${["th", "st", "nd", "rd"][n % 10] ?? "th"}`;
+}
+
 export function draftLabel(draft: string | null): string | null {
   if (!draft) return null;
   const year = draft.match(/^(\d{4})/)?.[1];
   const round = Number(draft.match(/Rd (\d+)/)?.[1]);
-  const pick = draft.match(/Pk (\d+)/)?.[1];
+  const pick = Number(draft.match(/Pk (\d+)/)?.[1]);
   if (!year) return null;
   if (!round) return `Undrafted, ${year}`;
   const name = ROUNDS[round - 1] ?? `Round ${round}`;
   return pick
-    ? `${name}-round pick, ${year} — ${pick} overall`
+    ? `${name}-round pick, ${year} — ${ordinal(pick)} overall`
     : `${name}-round pick, ${year}`;
 }

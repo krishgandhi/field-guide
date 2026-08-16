@@ -45,6 +45,8 @@ const SCREENS = [
   // The deliberately-low entry: keeps an eye on how a rubric full of 1s and 2s
   // reads, which is a different layout problem from a page of 5s.
   ["move-low-score", "/moves/2026-03-linderbaum-to-raiders"],
+  // Two profile cards stacked, which is the tightest layout case for them.
+  ["move-two-people", "/moves/2026-03-willis-to-dolphins"],
   ["teams", "/teams"],
   ["team-written", "/teams/buffalo-bills"],
   ["team-unwritten", "/teams/chicago-bears"],  // keep pointing at a team with no write-up

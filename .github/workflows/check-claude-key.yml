@@ -35,9 +35,15 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      # Runs regardless of the step above, so one failure doesn't hide the other.
+      # Each runs regardless of the last, so one failure doesn't hide another.
       - name: Write a game preview from a fixture
         if: always()
         run: npm run write:reasons -- --self-test
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Write a profile line from a fixture
+        if: always()
+        run: npm run write:profiles -- --self-test
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
