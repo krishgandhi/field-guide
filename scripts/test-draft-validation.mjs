@@ -220,6 +220,22 @@ check("isSensitive spots a charge", isSensitive("He is facing felony charges."))
 check("isSensitive spots a suspension", isSensitive("He was suspended six games."));
 check("isSensitive ignores ordinary football", !isSensitive("He signed a three-year deal."));
 
+// Cap vocabulary must never trip the legal rule. This exact sentence came out
+// of the pipeline and held a routine contract extension:
+check(
+  "a CAP charge is not an accusation",
+  !isSensitive("Deals are structured so the early-year charges are modest and the pain lands later."),
+);
+check(
+  "dead money charges are not an accusation",
+  !isSensitive("Cleveland is left paying dead money, and that charge is the reason."),
+);
+check(
+  "but a criminal charge still is",
+  isSensitive("He is facing criminal charges in Florida."),
+);
+check("\"charged with\" still is", isSensitive("He was charged with two counts."));
+
 check(
   "an accusation without the denial is rejected",
   (fairnessProblem(

@@ -25,8 +25,40 @@ export const AXES = [
  * These entries still publish — they're the news — but they carry a louder
  * badge and they have to clear the fairness rule below.
  */
-const SENSITIVE =
-  /\b(charge[sd]?|felony|felonies|arrest(?:ed)?|indict\w*|lawsuit|sued|allegation|alleged\w*|assault|domestic violence|misconduct|investigation|suspended|suspension|banned|DUI|convicted)\b/i;
+const SENSITIVE = new RegExp(
+  [
+    // "charge" needs legal context. Bare \bcharges\b matched "the early-year
+    // charges are modest" — a CAP charge — and held a routine contract
+    // extension. Cap charge is core vocabulary on this site; the Garrett entry
+    // uses it too.
+    "criminal charges?",
+    "felony charges?",
+    "charged with",
+    "facing (?:\\w+ )?charges",
+    "press(?:ed|ing) charges",
+    "drop(?:ped)? the charges",
+    // Everything below is unambiguous on its own.
+    "felony",
+    "felonies",
+    "arrest(?:ed)?",
+    "indict\\w*",
+    "lawsuit",
+    "\\bsued\\b",
+    "allegations?",
+    "alleged\\w*",
+    "assault",
+    "domestic violence",
+    "misconduct",
+    "under investigation",
+    "suspend(?:ed|s)?",
+    "suspension",
+    "\\bbanned\\b",
+    "\\bDUI\\b",
+    "convicted",
+    "pleaded (?:not )?guilty",
+  ].join("|"),
+  "i",
+);
 
 /** Words that mean the accusation is answered or unproven. */
 const BALANCING =
