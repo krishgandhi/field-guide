@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-08-15T11:16:10.939Z",
+  "fetchedAt": "2026-08-16T10:08:12.219Z",
   "teams": {
     "LAC": {
       "wins": 1,
@@ -10,19 +10,26 @@
       "pointDifferential": 20,
       "conferenceRank": 1
     },
+    "BUF": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 15,
+      "conferenceRank": 2
+    },
     "PIT": {
       "wins": 1,
       "losses": 0,
       "ties": 0,
       "pointDifferential": 19,
-      "conferenceRank": 2
+      "conferenceRank": 3
     },
-    "TEN": {
+    "JAX": {
       "wins": 1,
       "losses": 0,
       "ties": 0,
-      "pointDifferential": 6,
-      "conferenceRank": 3
+      "pointDifferential": 4,
+      "conferenceRank": 4
     },
     "DEN": {
       "wins": 1,
@@ -31,74 +38,67 @@
       "pointDifferential": 20,
       "conferenceRank": 5
     },
+    "BAL": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 17,
+      "conferenceRank": 6
+    },
+    "TEN": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 6,
+      "conferenceRank": 7
+    },
     "CIN": {
       "wins": 1,
       "losses": 0,
       "ties": 0,
       "pointDifferential": 2,
-      "conferenceRank": 6
-    },
-    "BUF": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "CLE": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "KC": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "JAX": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "BAL": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "NE": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 1,
-      "pointDifferential": 0,
-      "conferenceRank": 4
+      "conferenceRank": 8
     },
     "IND": {
       "wins": 0,
       "losses": 0,
       "ties": 1,
       "pointDifferential": 0,
-      "conferenceRank": 12
+      "conferenceRank": 9
+    },
+    "NE": {
+      "wins": 0,
+      "losses": 0,
+      "ties": 1,
+      "pointDifferential": 0,
+      "conferenceRank": 10
     },
     "HOU": {
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "pointDifferential": -20,
-      "conferenceRank": 13
+      "conferenceRank": 11
     },
     "NYJ": {
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "pointDifferential": -8,
+      "conferenceRank": 12
+    },
+    "KC": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -8,
+      "conferenceRank": 13
+    },
+    "CLE": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -24,
       "conferenceRank": 14
     },
     "MIA": {
@@ -115,18 +115,18 @@
       "pointDifferential": -13,
       "conferenceRank": 16
     },
-    "CAR": {
+    "DAL": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 10,
+      "conferenceRank": 1
+    },
+    "MIN": {
       "wins": 1,
       "losses": 0,
       "ties": 0,
       "pointDifferential": 3,
-      "conferenceRank": 1
-    },
-    "WSH": {
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 13,
       "conferenceRank": 2
     },
     "TB": {
@@ -134,90 +134,90 @@
       "losses": 0,
       "ties": 0,
       "pointDifferential": 8,
+      "conferenceRank": 3
+    },
+    "LAR": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 8,
+      "conferenceRank": 4
+    },
+    "CHI": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 24,
       "conferenceRank": 5
+    },
+    "WSH": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 13,
+      "conferenceRank": 6
+    },
+    "CAR": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -12,
+      "conferenceRank": 7
     },
     "ARI": {
       "wins": 1,
       "losses": 1,
       "ties": 0,
       "pointDifferential": 10,
-      "conferenceRank": 3
-    },
-    "CHI": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "DAL": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "LAR": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "MIN": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "NO": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
+      "conferenceRank": 8
     },
     "NYG": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
-    },
-    "PHI": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
+      "pointDifferential": -3,
+      "conferenceRank": 9
     },
     "SEA": {
       "wins": 0,
-      "losses": 0,
+      "losses": 1,
       "ties": 0,
-      "pointDifferential": 0,
-      "conferenceRank": 0
+      "pointDifferential": -10,
+      "conferenceRank": 10
+    },
+    "NO": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -4,
+      "conferenceRank": 11
     },
     "DET": {
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "pointDifferential": -2,
-      "conferenceRank": 4
+      "conferenceRank": 12
     },
     "SF": {
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "pointDifferential": -6,
-      "conferenceRank": 14
+      "conferenceRank": 13
     },
     "GB": {
       "wins": 0,
       "losses": 1,
       "ties": 0,
       "pointDifferential": -19,
+      "conferenceRank": 14
+    },
+    "PHI": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -17,
       "conferenceRank": 15
     },
     "ATL": {

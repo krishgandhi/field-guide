@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-15T11:16:10.533Z",
+  "fetchedAt": "2026-08-16T10:08:11.634Z",
   "games": [
     {
       "id": "401872656",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 49.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -282,13 +282,6 @@
       {
         "player": "Jonathan Greenard",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "PIT": [
-      {
-        "player": "Joey Porter Jr.",
-        "position": "CB",
         "status": "Out"
       }
     ],
