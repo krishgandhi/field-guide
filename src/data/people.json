@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T11:07:40.598Z",
+  "fetchedAt": "2026-08-16T11:09:48.676Z",
   "people": {
     "3122132": {
       "id": "3122132",
@@ -62,7 +62,7 @@
       },
       "headshot": "/players/3122132.png",
       "evidenceHash": "aba138afc7e912cd",
-      "blurb": null
+      "blurb": "He's a defensive end — the pass rusher who lines up on the edge and chases the quarterback — taken first overall in 2017 and now a decade into his career, currently with the Rams after a blockbuster trade out of Cleveland. He is simply the best defensive player in football: a two-time Defensive Player of the Year with more than a hundred and twenty career sacks, including a record-setting twenty-three last season alone."
     },
     "3917315": {
       "id": "3917315",
@@ -122,7 +122,7 @@
       },
       "headshot": "/players/3917315.png",
       "evidenceHash": "7c6ff70c35ff10b0",
-      "blurb": null
+      "blurb": "A quarterback picked first overall in 2019 and now in his eighth season, most recently signed by Minnesota after Arizona released him. He was Offensive Rookie of the Year and has close to ninety career starts plus over three thousand rushing yards, so he runs a lot, but nobody has paid him like a starter lately — he arrived on backup money and won the job by default."
     },
     "3918298": {
       "id": "3918298",
@@ -182,7 +182,7 @@
       },
       "headshot": "/players/3918298.png",
       "evidenceHash": "f2cd73d25366cae1",
-      "blurb": null
+      "blurb": "A quarterback drafted seventh overall in 2018, now in his ninth season and the undisputed face of the Buffalo Bills. He is one of the best players in the league — the reigning MVP — a big man who throws for thirty thousand yards and change while also running like a power back, with nearly eighty career rushing touchdowns to go with more than two hundred passing ones."
     },
     "4047646": {
       "id": "4047646",
@@ -232,7 +232,7 @@
       },
       "headshot": "/players/4047646.png",
       "evidenceHash": "e6475e83ae9e0033",
-      "blurb": null
+      "blurb": "A wide receiver taken in the second round in 2019, now in his eighth season and freshly traded to New England for future draft picks. He's a genuine number one receiver, the kind of player a defence has to plan its whole week around: more than eight thousand yards and fifty-plus touchdowns, and a thousand-yard season just last year."
     },
     "4241479": {
       "id": "4241479",
@@ -284,7 +284,7 @@
       },
       "headshot": "/players/4241479.png",
       "evidenceHash": "7f1eb4b94524eb9a",
-      "blurb": null
+      "blurb": "A quarterback picked fifth overall in 2020, now in his seventh season and with Atlanta after Miami released him. He's an accurate short-to-medium passer who barely runs at all, with a solid career touchdown-to-interception record, but Miami swallowed a record amount of dead money to move on from him — a loud verdict from the team that had paid him like a franchise player."
     },
     "4242512": {
       "id": "4242512",
@@ -356,7 +356,7 @@
       "season": {},
       "headshot": "/players/4360499.png",
       "evidenceHash": "e2e359683af96de1",
-      "blurb": null
+      "blurb": "A centre — the lineman who snaps the ball and anchors the middle of the offensive line — drafted in the first round in 2022 and now in his fifth season, having just left Baltimore for Las Vegas. He's among the very best at the job: three straight Pro Bowls, a start in every game he's played, and Baltimore led the league in yards per carry running behind him."
     },
     "4426405": {
       "id": "4426405",
@@ -410,7 +410,7 @@
       },
       "headshot": "/players/4426405.png",
       "evidenceHash": "4bcf3cfb2e8d880e",
-      "blurb": null
+      "blurb": "A cornerback — one of the defenders who covers receivers — taken twenty-first overall in 2022, now in his fifth season and traded from Kansas City to the Rams for a bundle of picks. He's an All-Pro still only twenty-five, paid like the best in the league at his position, and a busy tackler who blitzes too; the only worry is the knee injury that ended his last season early."
     },
     "4433970": {
       "id": "4433970",
@@ -462,7 +462,7 @@
       },
       "headshot": "/players/4433970.png",
       "evidenceHash": "b7a6f9253aedc1de",
-      "blurb": null
+      "blurb": "A quarterback drafted tenth overall in 2024, now in his third season with Minnesota but with only one year of real playing time behind him. It hasn't gone well so far — more interceptions than touchdowns and a low completion rate — and the Vikings have just benched him for a veteran they signed for backup money, so he is still very much unproven."
     },
     "4575431": {
       "id": "4575431",
@@ -516,7 +516,7 @@
       },
       "headshot": "/players/4575431.png",
       "evidenceHash": "b148f3eb172e1286",
-      "blurb": null
+      "blurb": "A cornerback — the defender who covers receivers — picked fifth overall in 2023 and now in his fourth season with Seattle, who have just signed him to a huge extension. He's one of the best young players at the position, a three-time Pro Bowler who tackles a lot and even rushes the quarterback, and the money says Seattle have no doubts about him."
     },
     "4578085": {
       "id": "4578085",
@@ -578,7 +578,7 @@
       },
       "headshot": "/players/4578085.png",
       "evidenceHash": "695cae91185ce3dc",
-      "blurb": null
+      "blurb": "A defensive end — an edge pass rusher — taken nineteenth overall in 2024 and now in his third season, having just been traded from the Rams to Cleveland in the deal for Myles Garrett. He was Defensive Rookie of the Year and has been productive since, with a dozen sacks so far and a knack for knocking the ball loose; a good young rusher, though not yet a proven star."
     },
     "4592837": {
       "id": "4592837",
@@ -632,7 +632,8 @@
       },
       "headshot": "/players/4592837.png",
       "evidenceHash": "c836f1db9bdae604",
-      "blurb": null
+      "blurb": "A cornerback — the defender who covers receivers — drafted twenty-fourth overall in 2024 and now in his fourth season, released by Detroit and picked up by Seattle for close to the league minimum. That tells the story: real first-round pedigree without the production to match it yet, a decent tackler with plenty of passes knocked away but hardly any interceptions, and he has plenty still to prove."
     }
-  }
+  },
+  "profilesWrittenAt": "2026-08-16T11:10:32.133Z"
 }
