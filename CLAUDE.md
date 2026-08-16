@@ -238,10 +238,20 @@ logos (§10). ESPN's combiner resizes them — `?img=/i/headshots/nfl/players/fu
 turns 600×436 / 283KB into 160×160 / 28KB — which is what makes bundling one
 per person named in a move affordable.
 
-**A profile line explains the record; it never adds scouting knowledge.**
-"A first-round corner in his fourth season" translates a draft position, which
-is the job. "A press corner who plays bigger than his size" is an opinion about
-a real person that nothing in the pipeline can check, and is refused.
+**A profile line characterises, but only from supplied evidence.** The first
+version banned characterisation and produced database rows — "picked seventh
+overall in 2018" — which is true and useless. What a newcomer needs is that
+Josh Allen is one of the best quarterbacks alive and runs like a power back.
+
+The evidence is ESPN's awards feed, career and season splits, and this site's
+own already-sourced prose. An MVP earns "one of the best"; 4,721 career rushing
+yards for a quarterback earns "runs a lot"; a thin résumé earns an honest "yet
+to establish himself" rather than an inflated line. ESPN's awards only carry
+major honours — Witherspoon returns none despite three Pro Bowls — which is why
+the rubric notes are part of the evidence.
+
+This does not make the card a stats page (§1). Numbers go in, meaning comes
+out, and the card itself displays no statistics.
 
 **Copyright rule for any news ingestion:** summarize in original words. Never reproduce article text, never store scraped article bodies, always link to the source. If a summary would need the original phrasing to work, link out instead.
 

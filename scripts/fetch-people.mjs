@@ -190,7 +190,14 @@ for (const id of ids) {
       headshot: shot === "missing" ? null : `/players/${id}.png`,
       evidenceHash: hash,
       // Kept unless the evidence itself changed — see evidenceHash above.
+      //
+      // promptVersion travels WITH the blurb. Carrying one without the other
+      // made write-profiles see a version mismatch every single day and
+      // rewrite all twelve lines, which is the daily token burn the hash
+      // exists to prevent (§13).
       blurb: existing[id]?.evidenceHash === hash ? existing[id].blurb : null,
+      promptVersion:
+        existing[id]?.evidenceHash === hash ? existing[id].promptVersion : null,
     };
     console.log(
       `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"}` +
