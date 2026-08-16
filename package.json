@@ -22,7 +22,9 @@
     "drafts": "node scripts/list-drafts.mjs",
     "test:filters": "node scripts/test-moves-filters.mjs",
     "test:reasons": "node scripts/test-reason-validation.mjs",
-    "test:patterns": "node scripts/test-detect-patterns.mjs"
+    "test:patterns": "node scripts/test-detect-patterns.mjs",
+    "fetch:people": "node scripts/fetch-people.mjs",
+    "write:profiles": "node scripts/write-profiles.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

@@ -281,6 +281,11 @@ move:
   sources:
     - label: ESPN
       url: ${candidate.url}
+  people: [${(candidate.players ?? [])
+    .map((pl) => pl.id)
+    .filter(Boolean)
+    .map((id) => `"${id}"`)
+    .join(", ")}]
   rubric:
 ${(entry.rubric ?? [])
   .map(

@@ -205,6 +205,19 @@ for (const file of files) {
     fail(file, `kind "${move.kind}" must score the six axes`);
   }
 
+  // Profile cards key off these. Malformed ids fail silently as a missing
+  // card, so catch them here instead.
+  for (const id of move.people ?? []) {
+    if (!/^\d+$/.test(String(id))) {
+      fail(file, `people id "${id}" is not an ESPN athlete id`);
+    }
+  }
+  // Coaching changes have no player data to fetch, by design. Everything else
+  // is about someone, and an entry with nobody named renders no card.
+  if (move.kind !== "coaching" && (move.people ?? []).length === 0) {
+    fail(file, `kind "${move.kind}" names nobody — add people: [espnId]`);
+  }
+
   // §9: always link to the source.
   const sources = move.sources ?? [];
   for (const src of sources) {

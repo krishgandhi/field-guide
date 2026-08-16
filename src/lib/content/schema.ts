@@ -144,6 +144,27 @@ const move = z.strictObject({
    */
   sources: z.array(source).default([]),
   /**
+   * ESPN athlete ids for the people this move is about.
+   *
+   * Ids only — never the facts. A profile goes stale fast: Arnold's team
+   * changed the same week his entry was written, so a baked-in "Detroit Lions"
+   * would have been wrong within days. The details live in
+   * src/data/people.json, refreshed by cron, and the page reads that (§4, §13).
+   *
+   * Players only. ESPN publishes no coach or GM data, so a coaching entry
+   * carries none and simply renders no card.
+   */
+  people: z
+    .array(
+      // Coerced: YAML reads a bare 3918298 as a number, and quoting is easy to
+      // forget — including for the pipeline that writes these files.
+      z
+        .union([z.string(), z.number()])
+        .transform(String)
+        .pipe(z.string().regex(/^\d+$/, "must be an ESPN athlete id")),
+    )
+    .default([]),
+  /**
    * All six axes or none. A partial set is always a half-written entry, and
    * the empty case is real: §7 doesn't apply to a coaching change.
    */

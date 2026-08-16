@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx-content";
+import { PersonCard } from "@/components/moves/person-card";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { UncheckedBadge } from "@/components/ui/unchecked-badge";
 import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
@@ -14,6 +15,7 @@ import {
 } from "@/components/ui/page-header";
 import { getMove, getMoveSlugs } from "@/lib/moves";
 import { createExplainer } from "@/lib/glossary/explain";
+import { peopleByIds } from "@/lib/people";
 import { teamLogo, teamName } from "@/lib/teams";
 
 export const dynamicParams = false;
@@ -47,6 +49,10 @@ export default async function MoveDetailPage({ params }: PageProps) {
   // why the body renders last — see rehypeGlossaryLinks's `linked` option.
   const linked = new Set<string>();
   const explain = createExplainer(undefined, linked);
+
+  // Absent for a coaching change: ESPN publishes no coach data, so those
+  // entries carry no ids and simply render no card.
+  const people = peopleByIds(move.people);
 
   return (
     <PageShell flaggable>
@@ -116,6 +122,22 @@ export default async function MoveDetailPage({ params }: PageProps) {
           </Card>
         </>
       )}
+
+      {/* Who these people are, before the closing thought that assumes you
+          know. Above MdxContent, so the shared glossary set is claimed in
+          reading order (§6a) — see the note on rehypeGlossaryLinks. */}
+      {people.length > 0 ? (
+        <>
+          <SectionHeader
+            title={people.length > 1 ? "Who they are" : "Who he is"}
+          />
+          <div className="space-y-2.5">
+            {people.map((person) => (
+              <PersonCard key={person.id} person={person} explain={explain} />
+            ))}
+          </div>
+        </>
+      ) : null}
 
       {/* Last on the page on purpose: the closing "what to take from it" reads
           better after the scores, and it keeps §6a's link order matching the

@@ -46,6 +46,8 @@ export type Move = {
   sensitive: boolean;
   /** Reporting to link out to (§9). */
   sources: MoveSource[];
+  /** ESPN athlete ids; details come from src/data/people.json. */
+  people: string[];
 };
 
 const MONTHS = [
@@ -103,6 +105,7 @@ function toMove(frontmatter: Frontmatter): Move {
     verified: m.verified,
     sensitive: m.sensitive,
     sources: m.sources,
+    people: m.people,
   };
 }
 

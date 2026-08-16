@@ -98,6 +98,10 @@ move:
   sources:               # §9 requires linking out. Verified entries need one.
     - label: ESPN
       url: https://...
+  people: ["4575431"]    # ESPN athlete ids. IDS ONLY — the facts live in
+                         # src/data/people.json, refreshed daily, because a
+                         # profile goes stale (a traded player's team changes
+                         # within days). Players only; ESPN has no coach data.
   rubric: []             # all six axes from §7, or none — never a partial set
 ```
 
@@ -198,6 +202,7 @@ Phase 3 and later. **Verify each one still works before building against it** �
 | Contracts, cap | Over The Cap | No API — likely manual entry |
 | Transaction candidates | ESPN news (`/nfl/news`) | Tagged by team and athlete. **Not** `/nfl/transactions` — that returns waived long snappers, checked twice |
 | Game preview reporting | ESPN news filtered by team (`/nfl/news?team=<espnId>`) | Needs the numeric id, stored as `espnId`. **Not** `summary?event=` — its `news.articles` is the same generic league-wide list for every game, verified across three events |
+| Player profiles + headshots | ESPN athlete (`common/v3/.../athletes/{id}`) | Gives position, age, size, college and `displayDraft` ("2023: Rd 1, Pk 5"). Ids resolve off `teams/{abbr}/roster` — match the **full** name, since "Arnold" also returns Sam Darnold. **No coach or GM equivalent exists**: `/coaches` 404s and the team payload has no coach field. Don't re-research it |
 | College (Phase 5) | CollegeFootballData.com | Free with key |
 
 **Moves auto-publish, with the honesty carried in the UI.** A cron job finds
@@ -227,6 +232,16 @@ Three validation rules carry the weight:
   said he had pleaded not guilty. A badge saying "unchecked" does not fix an
   account that is unfair; the content rule does. Those entries also set
   `sensitive: true`, which renders a louder badge.
+
+**Headshots are downloaded, not hotlinked**, on the same reasoning as team
+logos (§10). ESPN's combiner resizes them — `?img=/i/headshots/nfl/players/full/{id}.png&w=160&h=160`
+turns 600×436 / 283KB into 160×160 / 28KB — which is what makes bundling one
+per person named in a move affordable.
+
+**A profile line explains the record; it never adds scouting knowledge.**
+"A first-round corner in his fourth season" translates a draft position, which
+is the job. "A press corner who plays bigger than his size" is an opinion about
+a real person that nothing in the pipeline can check, and is refused.
 
 **Copyright rule for any news ingestion:** summarize in original words. Never reproduce article text, never store scraped article bodies, always link to the source. If a summary would need the original phrasing to work, link out instead.
 
