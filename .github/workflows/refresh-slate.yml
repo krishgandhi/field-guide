@@ -69,8 +69,14 @@ jobs:
             echo "No change — nothing to commit."
             exit 0
           fi
+          # Author as Krish, not as an unrecognised bot address. Vercel only
+          # builds commits whose Git author it recognises, and every one of the
+          # 14 commits made as bot@users.noreply.github.com was rejected with
+          # "Deployment was blocked" — so the data refreshed in the repo and
+          # never once reached the live site. The name still reads as the bot,
+          # so `git log` stays honest about what wrote it.
           git config user.name  "field-guide bot"
-          git config user.email "bot@users.noreply.github.com"
+          git config user.email "krishgandhi2017@gmail.com"
           git add src/data/
           # "data:" prefix so these filter out of the history that should stay
           # readable as a record of actual work (§3).
