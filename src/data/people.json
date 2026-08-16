@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T11:16:08.844Z",
+  "fetchedAt": "2026-08-16T11:21:14.291Z",
   "people": {
     "3122132": {
       "id": "3122132",
@@ -62,7 +62,8 @@
       },
       "headshot": "/players/3122132.png",
       "evidenceHash": "aba138afc7e912cd",
-      "blurb": "He's a defensive end — the pass rusher who lines up on the edge and chases the quarterback — taken first overall in 2017 and now a decade into his career, currently with the Rams after a blockbuster trade out of Cleveland. He is simply the best defensive player in football: a two-time Defensive Player of the Year with more than a hundred and twenty career sacks, including a record-setting twenty-three last season alone."
+      "blurb": "A defensive end — one of the linemen whose main job is chasing the quarterback — taken first overall in 2017 and now a decade into his career, currently with the Rams after a blockbuster trade out of Cleveland. He has won Defensive Player of the Year twice and has more than a hundred and twenty career sacks, including a single-season record on his way out of Cleveland; simply put, the best defensive player in football.",
+      "promptVersion": 2
     },
     "3917315": {
       "id": "3917315",
@@ -122,7 +123,8 @@
       },
       "headshot": "/players/3917315.png",
       "evidenceHash": "7c6ff70c35ff10b0",
-      "blurb": "A quarterback picked first overall in 2019 and now in his eighth season, most recently signed by Minnesota after Arizona released him. He was Offensive Rookie of the Year and has close to ninety career starts plus over three thousand rushing yards, so he runs a lot, but nobody has paid him like a starter lately — he arrived on backup money and won the job by default."
+      "blurb": "A quarterback picked first overall in 2019, now in his eighth season and on his second team after Arizona released him. He was Rookie of the Year and has nearly ninety starts behind him, and he runs well for a quarterback, but nobody has paid him like a starter lately — Minnesota signed him for backup money and then handed him the job anyway.",
+      "promptVersion": 2
     },
     "3918298": {
       "id": "3918298",
@@ -182,7 +184,8 @@
       },
       "headshot": "/players/3918298.png",
       "evidenceHash": "f2cd73d25366cae1",
-      "blurb": "A quarterback drafted seventh overall in 2018, now in his ninth season and the undisputed face of the Buffalo Bills. He is one of the best players in the league — the reigning MVP — a big man who throws for thirty thousand yards and change while also running like a power back, with nearly eighty career rushing touchdowns to go with more than two hundred passing ones."
+      "blurb": "A quarterback drafted seventh overall in 2018, now nine seasons in and still the face of the Buffalo Bills. He won MVP and is one of the very best in the league, a big man who runs as dangerously as he throws — nearly five thousand career rushing yards and almost eighty rushing touchdowns is unheard of at the position.",
+      "promptVersion": 2
     },
     "4047646": {
       "id": "4047646",
@@ -232,7 +235,8 @@
       },
       "headshot": "/players/4047646.png",
       "evidenceHash": "e6475e83ae9e0033",
-      "blurb": "A wide receiver taken in the second round in 2019, now in his eighth season and freshly traded to New England for future draft picks. He's a genuine number one receiver, the kind of player a defence has to plan its whole week around: more than eight thousand yards and fifty-plus touchdowns, and a thousand-yard season just last year."
+      "blurb": "A wide receiver taken in the second round in 2019, now in his eighth season and on his third team after a June trade to New England. He is a genuine number one receiver, the kind a defence has to plan its whole week around, with more than eight thousand career yards and a thousand-yard season behind him.",
+      "promptVersion": 2
     },
     "4241479": {
       "id": "4241479",
@@ -284,7 +288,8 @@
       },
       "headshot": "/players/4241479.png",
       "evidenceHash": "7f1eb4b94524eb9a",
-      "blurb": "A quarterback picked fifth overall in 2020, now in his seventh season and with Atlanta after Miami released him. He's an accurate short-to-medium passer who barely runs at all, with a solid career touchdown-to-interception record, but Miami swallowed a record amount of dead money to move on from him — a loud verdict from the team that had paid him like a franchise player."
+      "blurb": "A quarterback drafted fifth overall in 2020, now seven seasons in and starting over in Atlanta after Miami released him. He is accurate and efficient rather than mobile, with a solid career passer rating, but Miami paid an enormous price to walk away from him — a sign the league is no longer sure he is a franchise quarterback.",
+      "promptVersion": 2
     },
     "4242512": {
       "id": "4242512",
@@ -336,7 +341,8 @@
       },
       "headshot": "/players/4242512.png",
       "evidenceHash": "c524c9fce9c26529",
-      "blurb": null
+      "blurb": "A quarterback taken in the third round in 2022, now in his fifth season and just signed by Miami to start. He is a career backup who has only started a handful of games, mostly filling in for an injured starter in Green Bay, and he looked good doing it — he runs well and his numbers are strong — but on this little evidence nobody really knows what he is.",
+      "promptVersion": 2
     },
     "4360499": {
       "id": "4360499",
@@ -356,7 +362,8 @@
       "season": {},
       "headshot": "/players/4360499.png",
       "evidenceHash": "e2e359683af96de1",
-      "blurb": "A centre — the lineman who snaps the ball and anchors the middle of the offensive line — drafted in the first round in 2022 and now in his fifth season, having just left Baltimore for Las Vegas. He's among the very best at the job: three straight Pro Bowls, a start in every game he's played, and Baltimore led the league in yards per carry running behind him."
+      "blurb": "A centre — the lineman who snaps the ball to the quarterback — drafted twenty-fifth overall in 2022 and now in his fifth season, having left Baltimore for Las Vegas in free agency. He has made the Pro Bowl three years running and started every game he has played, and Baltimore's running game was the league's most efficient in front of him; the Raiders gave him the biggest contract an interior lineman has ever had.",
+      "promptVersion": 2
     },
     "4426405": {
       "id": "4426405",
@@ -410,7 +417,8 @@
       },
       "headshot": "/players/4426405.png",
       "evidenceHash": "4bcf3cfb2e8d880e",
-      "blurb": "A cornerback — one of the defenders who covers receivers — taken twenty-first overall in 2022, now in his fifth season and traded from Kansas City to the Rams for a bundle of picks. He's an All-Pro still only twenty-five, paid like the best in the league at his position, and a busy tackler who blitzes too; the only worry is the knee injury that ended his last season early."
+      "blurb": "A cornerback — one of the defenders who covers receivers — picked twenty-first overall in 2022 and now in his fifth season, traded from Kansas City to the Rams. He is an All-Pro still only twenty-five, the sort of player teams simply do not sell, and the Rams paid him like the best in the league; the one worry is the knee injury that ended his last season.",
+      "promptVersion": 2
     },
     "4433970": {
       "id": "4433970",
@@ -516,7 +524,8 @@
       },
       "headshot": "/players/4575431.png",
       "evidenceHash": "b148f3eb172e1286",
-      "blurb": "A cornerback — the defender who covers receivers — picked fifth overall in 2023 and now in his fourth season with Seattle, who have just signed him to a huge extension. He's one of the best young players at the position, a three-time Pro Bowler who tackles a lot and even rushes the quarterback, and the money says Seattle have no doubts about him."
+      "blurb": "A cornerback, the position that covers receivers, drafted fifth overall in 2023 and now in his fourth season, all of them in Seattle. He has already been to three Pro Bowls, tackles plenty and once returned an interception nearly the length of the field — one of the best young cover men in football, and Seattle just paid him accordingly.",
+      "promptVersion": 2
     },
     "4578085": {
       "id": "4578085",
@@ -578,7 +587,8 @@
       },
       "headshot": "/players/4578085.png",
       "evidenceHash": "695cae91185ce3dc",
-      "blurb": "A defensive end — an edge pass rusher — taken nineteenth overall in 2024 and now in his third season, having just been traded from the Rams to Cleveland in the deal for Myles Garrett. He was Defensive Rookie of the Year and has been productive since, with a dozen sacks so far and a knack for knocking the ball loose; a good young rusher, though not yet a proven star."
+      "blurb": "A defensive end — a lineman whose job is hunting the quarterback — taken nineteenth overall in 2024 and now in his third season, traded from the Rams to Cleveland. He won Defensive Rookie of the Year and already has a dozen career sacks, which is a promising start, though he is young enough that the best of it is still ahead.",
+      "promptVersion": 2
     },
     "4592837": {
       "id": "4592837",
@@ -632,8 +642,9 @@
       },
       "headshot": "/players/4592837.png",
       "evidenceHash": "c836f1db9bdae604",
-      "blurb": "A cornerback — the defender who covers receivers — drafted twenty-fourth overall in 2024 and now in his fourth season, released by Detroit and picked up by Seattle for close to the league minimum. That tells the story: real first-round pedigree without the production to match it yet, a decent tackler with plenty of passes knocked away but hardly any interceptions, and he has plenty still to prove."
+      "blurb": "A cornerback, the defender who covers receivers, taken twenty-fourth overall in 2024 and now in his fourth season, signed by Seattle for close to the league minimum after Detroit released him. There is real draft pedigree here but almost no production to match it yet — one career interception and a modest tackle count — so he arrives as depth rather than a proven starter.",
+      "promptVersion": 2
     }
   },
-  "profilesWrittenAt": "2026-08-16T11:16:35.084Z"
+  "profilesWrittenAt": "2026-08-16T11:21:57.485Z"
 }
