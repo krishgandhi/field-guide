@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T11:24:25.837Z",
+  "fetchedAt": "2026-08-16T11:26:00.301Z",
   "people": {
     "3122132": {
       "id": "3122132",
@@ -470,7 +470,8 @@
       },
       "headshot": "/players/4433970.png",
       "evidenceHash": "b7a6f9253aedc1de",
-      "blurb": "A quarterback drafted tenth overall in 2024, now in his third season with Minnesota but with only one year of real playing time behind him. It hasn't gone well so far — more interceptions than touchdowns and a low completion rate — and the Vikings have just benched him for a veteran they signed for backup money, so he is still very much unproven."
+      "blurb": "A quarterback taken tenth overall by Minnesota in 2024, now in his third season but with only one year of real playing time behind him. That year went poorly — more interceptions than touchdowns, well under sixty percent of his passes completed, and a willingness to run that produced a few scores; Minnesota have since benched him for a cheap veteran signing, so he has yet to prove he can hold the job.",
+      "promptVersion": 2
     },
     "4575431": {
       "id": "4575431",
@@ -645,5 +646,6 @@
       "blurb": "A cornerback, the defender who covers receivers, taken twenty-fourth overall in 2024 and now in his fourth season, signed by Seattle for close to the league minimum after Detroit released him. There is real draft pedigree here but almost no production to match it yet — one career interception and a modest tackle count — so he arrives as depth rather than a proven starter.",
       "promptVersion": 2
     }
-  }
+  },
+  "profilesWrittenAt": "2026-08-16T11:26:23.147Z"
 }
