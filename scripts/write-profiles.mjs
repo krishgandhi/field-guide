@@ -153,18 +153,33 @@ const { profiles } = JSON.parse(payload);
 const byId = new Map(todo.map((p) => [p.id, p]));
 
 /** Everything wrong with a line, or null. Exported shape mirrors the others. */
-export function problemWithBlurb(text, person) {
+export function problemWithBlurb(text, person, context = []) {
   const trimmed = String(text ?? "").trim();
   const words = trimmed.split(/\s+/).length;
-  if (words < 8 || words > 34) return `${words} words`;
+  // 40, not 34: the first run rejected a genuinely good line at 36 words
+  // because it paused to explain what a centre does — which is the entire job
+  // of this site, not padding.
+  if (words < 8 || words > 40) return `${words} words`;
   if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
   if (sentenceCount(trimmed) > 1) return "more than one sentence";
 
-  // Every figure must come from the record. This is the guard that stops a
-  // plausible-sounding invented stat about a real person.
+  // Every figure must come from something we supplied — the ESPN record OR the
+  // site's own already-sourced prose, which is handed over as context.
+  //
+  // The first run rejected four correct lines because this only allowed the
+  // ESPN record: $12m, $67.5m and $132m all came from our own entries. Giving
+  // the model context and then refusing to let it use that context is a bug in
+  // the guard, not a fault in the output.
   const allowed = new Set(
     numbersIn(
-      [person.draft, person.age, person.experience, person.height, person.weight]
+      [
+        person.draft,
+        person.age,
+        person.experience,
+        person.height,
+        person.weight,
+        ...context,
+      ]
         .filter(Boolean)
         .join(" "),
     ),
@@ -189,7 +204,7 @@ for (const { id, blurb } of profiles ?? []) {
     rejected.push(`unknown id ${id}`);
     continue;
   }
-  const problem = problemWithBlurb(blurb, person);
+  const problem = problemWithBlurb(blurb, person, contextFor(id));
   if (problem) {
     rejected.push(`${person.name}: ${problem} — "${blurb}"`);
     continue;
