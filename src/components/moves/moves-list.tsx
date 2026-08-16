@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card } from "@/components/ui/page-header";
+import { UncheckedBadge } from "@/components/ui/unchecked-badge";
 
 /**
  * The Moves list, with sorting and filtering.
@@ -29,6 +30,8 @@ export type MoveListItem = {
   teams: string[];
   bigness: number;
   kind: string;
+  verified: boolean;
+  sensitive: boolean;
   soWhat: string;
   /** Pre-resolved server-side: teamLogo/teamName read JSON the client shouldn't ship. */
   crests: { id: string; name: string; logo: string | null }[];
@@ -233,7 +236,10 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
           {shown.map((move) => (
             <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
               <Card className="transition-colors hover:border-fg/20">
-                <div className="mb-2 flex items-center justify-between gap-3">
+                {/* Wraps rather than compresses: with an Unverified badge alongside the
+                    type and size, a fixed row squeezed "14 August 2026" onto three
+                    lines and ran it into the crests. */}
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
                   <span className="flex items-center gap-2">
                     <span className="flex items-center gap-1.5">
                       {move.crests.map((crest) =>
@@ -249,11 +255,14 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
                         ) : null,
                       )}
                     </span>
-                    <span className="tnum text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+                    <span className="tnum whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
                       {move.dateLabel}
                     </span>
                   </span>
-                  <span className="flex shrink-0 items-center gap-1.5">
+                  <span className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
+                    {move.verified ? null : (
+                      <UncheckedBadge sensitive={move.sensitive} />
+                    )}
                     <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-fg-dim">
                       {KIND_LABEL[move.kind] ?? move.kind}
                     </span>

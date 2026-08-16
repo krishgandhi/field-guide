@@ -27,23 +27,27 @@ const CARD = 'a[href^="/moves/"] h2';
 const headlines = () => page.locator(CARD).allTextContents();
 const count = () => page.locator(CARD).count();
 
+// Counts are derived, never hardcoded: entries auto-publish daily now, so a
+// literal "8" would break this test every time the pipeline finds something.
+const TOTAL = (await headlines()).length;
+
 // --- default: newest first -------------------------------------------------
 const initial = await headlines();
-check("all eight show by default", initial.length === 8, `got ${initial.length}`);
+check("the list renders", TOTAL > 0, `${TOTAL} entries`);
 check(
   "Newest is the default sort",
   (await page.getByRole("button", { name: "Newest" }).getAttribute("aria-pressed")) ===
     "true",
 );
+// Assert the ORDER rather than which entry happens to be newest today.
+const dateText = () =>
+  page.locator('a[href^="/moves/"] span.tnum').allTextContents();
+const asDate = (t) => new Date(t.trim()).getTime();
+const initialDates = (await dateText()).map(asDate);
 check(
-  "newest entry is the August role change",
-  /Murray/.test(initial[0] ?? ""),
-  initial[0],
-);
-check(
-  "oldest entry is last",
-  /McDermott/.test(initial.at(-1) ?? ""),
-  initial.at(-1),
+  "Newest sorts strictly newest-first",
+  initialDates.every((d, i) => i === 0 || initialDates[i - 1] >= d),
+  initialDates.map((d) => new Date(d).toISOString().slice(0, 10)).join(" "),
 );
 
 // --- switching to Biggest reorders ----------------------------------------
@@ -73,7 +77,8 @@ check(
 );
 check(
   "counter reflects the filter",
-  (await page.getByText(/^2 of 8$/i).count()) === 1,
+  (await page.getByText(new RegExp(`^${bills.length} of ${TOTAL}$`, "i")).count()) === 1,
+  `${bills.length} of ${TOTAL}`,
 );
 
 // --- combining filters to an empty result ---------------------------------
@@ -87,16 +92,17 @@ check("empty state is shown", empty);
 await page.getByLabel("Filter by team").selectOption({ label: "All teams" });
 await page.getByLabel("Filter by how big").selectOption({ label: "Any size" });
 await page.waitForTimeout(200);
-check("clearing filters restores all eight", (await count()) === 8);
+check("clearing filters restores everything", (await count()) === TOTAL);
 
 // --- size filter on its own ------------------------------------------------
 await page.getByLabel("Filter by how big").selectOption({ label: "Minor" });
 await page.waitForTimeout(200);
 const minor = await headlines();
-check("Minor shows the two low-scored moves", minor.length === 2, `got ${minor.length}`);
+check("Minor narrows the list", minor.length > 0 && minor.length < TOTAL, `got ${minor.length}`);
 check(
-  "and they are the ones expected",
-  minor.every((h) => /Linderbaum|Allen/.test(h)),
+  "and every card shown reads Minor",
+  (await page.locator('a[href^="/moves/"]').getByText("Minor", { exact: true }).count()) ===
+    minor.length,
   minor.join(" / "),
 );
 
@@ -105,18 +111,18 @@ await page.getByLabel("Filter by how big").selectOption({ label: "Any size" });
 await page.getByLabel("Filter by type").selectOption({ label: "Trade" });
 await page.waitForTimeout(200);
 const trades = await headlines();
-check("Trade filter narrows to trades", trades.length === 3, `got ${trades.length}`);
+check("Trade filter narrows the list", trades.length > 0 && trades.length < TOTAL, `got ${trades.length}`);
 check(
-  "and they are the three trades",
-  trades.every((h) => /Garrett|Brown|McDuffie/.test(h)),
+  "and every card shown reads Trade",
+  (await page.locator('a[href^="/moves/"]').getByText("Trade", { exact: true }).count()) ===
+    trades.length,
   trades.join(" / "),
 );
 
 await page.getByLabel("Filter by type").selectOption({ label: "Role change" });
 await page.waitForTimeout(200);
 const roles = await headlines();
-check("Role change finds the Murray entry", roles.length === 1, `got ${roles.length}`);
-check("and it is Murray", /Murray/.test(roles[0] ?? ""), roles[0]);
+check("Role change finds the Murray entry", roles.some((h) => /Murray/.test(h)), roles.join(" / "));
 
 // The type picker must not offer a kind nothing uses.
 const kindOptions = await page
@@ -136,7 +142,7 @@ await page.waitForTimeout(200);
 const dates = await page
   .locator('a[href^="/moves/"] span.tnum')
   .allTextContents();
-check("every card shows a full day-month-year", dates.length === 8, `got ${dates.length}`);
+check("every card shows a full day-month-year", dates.length === TOTAL, `got ${dates.length}`);
 const badDate = dates.find((d) => !/^\d{1,2}\s+\w+\s+\d{4}$/.test(d.trim()));
 check("no partial dates left", !badDate, badDate ?? "");
 

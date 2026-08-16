@@ -26,6 +26,8 @@ export default function MovesPage() {
     teams: move.teams,
     bigness: move.bigness,
     kind: move.kind,
+    verified: move.verified,
+    sensitive: move.sensitive,
     soWhat: move.soWhat,
     crests: move.teams.map((id) => ({
       id,

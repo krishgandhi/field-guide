@@ -200,16 +200,33 @@ Phase 3 and later. **Verify each one still works before building against it** �
 | Game preview reporting | ESPN news filtered by team (`/nfl/news?team=<espnId>`) | Needs the numeric id, stored as `espnId`. **Not** `summary?event=` — its `news.articles` is the same generic league-wide list for every game, verified across three events |
 | College (Phase 5) | CollegeFootballData.com | Free with key |
 
-**Moves are written, not ingested.** A cron job proposes candidates from the
-news feed and Claude drafts the rubric, but drafts land in
-`content/moves/_drafts/` — a directory the content loader cannot see, because
-`getSlugs` filters on `.mdx` and a directory name never matches. Reaching the
-site takes a deliberate `git mv` plus `verified: true`. §13's warning about
-unreviewed generated text is the whole reason for the gap.
+**Moves auto-publish, with the honesty carried in the UI.** A cron job finds
+candidates in the news feed, Claude drafts the rubric, and what passes
+validation goes straight onto the site carrying `verified: false` — which
+renders a visible "not checked yet" badge. Krish wants to open the site and
+find the news there, not run a command, so the gate is mechanical.
 
-Drafts are validated before they are written: every number in a draft must
-appear in the source headline, or it is rejected as fabricated. `npm run drafts`
-lists what is waiting.
+What FAILS validation goes to `content/moves/_drafts/`, which the loader cannot
+see (`getSlugs` filters on `.mdx`; a directory name never matches). **The
+failure mode is a missing entry, never a wrong one.** `npm run drafts` lists
+what was held; an empty list is the healthy result. The workflow also refuses
+to modify an entry that already exists, so a generated file can never overwrite
+a hand-checked one.
+
+Three validation rules carry the weight:
+
+- **No invented figures.** Every number in a draft must appear in the source
+  headline or description.
+- **No invented teams.** Teams must be a subset of what ESPN tagged, capped at
+  three — ESPN tags every club that gave a player a visit, which once produced
+  a five-team entry for a two-team signing.
+- **No one-sided accusations.** If a draft mentions charges, an arrest, a
+  lawsuit or a suspension, it must also carry the denial or say the person has
+  not been convicted. The first real draft this pipeline produced said a player
+  had "criminal charges hanging over him" and stopped there, when the reporting
+  said he had pleaded not guilty. A badge saying "unchecked" does not fix an
+  account that is unfair; the content rule does. Those entries also set
+  `sensitive: true`, which renders a louder badge.
 
 **Copyright rule for any news ingestion:** summarize in original words. Never reproduce article text, never store scraped article bodies, always link to the source. If a summary would need the original phrasing to work, link out instead.
 

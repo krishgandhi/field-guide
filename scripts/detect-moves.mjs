@@ -65,6 +65,48 @@ function abbreviate(names) {
   );
 }
 
+/**
+ * Look up a player's real position.
+ *
+ * The single biggest source of error in a generated rubric. §7 makes
+ * positional value the axis that decides everything, and the model was scoring
+ * it off the headline — so a cornerback whose headline never said "CB" got a
+ * neutral 3 with "the report does not spell out where he lines up". A
+ * cornerback is a 4. One lookup removes that whole class of mistake.
+ */
+const ATHLETE =
+  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
+
+async function playerDetail(athleteId, name) {
+  try {
+    const res = await fetch(`${ATHLETE}/${athleteId}`, {
+      headers: { "user-agent": "field-guide (personal, non-commercial)" },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (!res.ok) return { name };
+    const body = await res.json();
+    const a = body.athlete ?? body;
+    return {
+      name: a.displayName ?? name,
+      position: a.position?.displayName ?? null,
+      currentTeam: a.team?.abbreviation ?? null,
+    };
+  } catch {
+    // Losing the position only costs accuracy on one axis; it must never stop
+    // detection.
+    return { name };
+  }
+}
+
+function athleteTags(article) {
+  return (article.categories ?? [])
+    .filter((c) => c?.type === "athlete" && c.athleteId)
+    .map((c) => ({
+      id: c.athleteId,
+      name: c.description ?? c.athlete?.description ?? "",
+    }));
+}
+
 function categoryValues(article, type) {
   return (article.categories ?? [])
     .filter((c) => c?.type === type)
@@ -103,8 +145,8 @@ for (const article of articles) {
 
   // Require a named player. A move is about a person; a story tagged only with
   // a team is usually a season preview.
-  const athletes = categoryValues(article, "athlete");
-  if (athletes.length === 0) continue;
+  const tagged = athleteTags(article);
+  if (tagged.length === 0) continue;
 
   const teamNames = categoryValues(article, "team");
   candidates.push({
@@ -116,9 +158,17 @@ for (const article of articles) {
     teams: teamNames,
     /** Normalised at the boundary — what the draft actually writes. */
     teamIds: abbreviate(teamNames),
-    athletes,
+    /** Filled in below with real positions. */
+    players: tagged.slice(0, 3),
     url: article.links?.web?.href ?? "",
   });
+}
+
+// Positions, only for the handful that survived the filter.
+for (const c of candidates) {
+  c.players = await Promise.all(
+    c.players.map((p) => playerDetail(p.id, p.name)),
+  );
 }
 
 // Mark everything examined as seen, not just the survivors — otherwise the
@@ -150,6 +200,10 @@ if (candidates.length === 0) {
   console.log(`\n${candidates.length} candidate(s):`);
   for (const c of candidates) {
     console.log(`  ${c.published}  [${c.likelyKind}] ${c.headline}`);
-    console.log(`             ${c.teamIds.join(", ") || "no team tag"}`);
+    console.log(
+      `             ${c.teamIds.join(", ") || "no team tag"}  —  ${c.players
+        .map((p) => `${p.name}${p.position ? ` (${p.position})` : ""}`)
+        .join(", ")}`,
+    );
   }
 }

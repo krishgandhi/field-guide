@@ -1,14 +1,18 @@
 /**
- * Turn detected candidates into draft move entries, using Claude.
+ * Turn detected candidates into move entries, using Claude.
  *
- * Runs after detect-moves.mjs. Reads src/data/move-candidates.json and writes
- * MDX into content/moves/_drafts/.
+ * Runs after detect-moves.mjs, and PUBLISHES what passes validation. Krish
+ * doesn't want to run a command to see the news; he wants to open the site and
+ * find it there. So the gate is mechanical rather than human.
  *
- * NOTHING HERE IS PUBLISHED. §13 warns against letting the site become a wall
- * of unreviewed generated text, so drafts land in a directory the content
- * loader cannot see: getSlugs filters readdirSync on .endsWith(".mdx"), and a
- * directory name never matches. Promoting a draft is a deliberate two steps —
- * `git mv` it up a level and set `reviewed: true`.
+ * Everything written here carries `verified: false`, which renders a visible
+ * "not checked yet" badge. That is the honest trade: the entry is there
+ * immediately, and the reader is told plainly that nobody has been through it.
+ *
+ * A draft that FAILS validation goes to content/moves/_drafts/ instead, which
+ * the loader cannot see — getSlugs filters readdirSync on ".mdx" and a
+ * directory name never matches. So the failure mode is a missing entry, never
+ * a wrong one. `npm run drafts` lists what got held back.
  *
  * The model's most useful output is often "skip". Deciding that a headline
  * isn't a Moves entry is exactly the judgement a regex can't make, and most
@@ -25,10 +29,12 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import Anthropic from "@anthropic-ai/sdk";
-import { problemsWith, yamlFold } from "./lib/draft-validation.mjs";
+import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
 
 const CANDIDATES = "src/data/move-candidates.json";
-const DRAFTS = "content/moves/_drafts";
+const PUBLISHED = "content/moves";
+/** Where a draft goes when it fails validation — never rendered by the site. */
+const HELD = "content/moves/_drafts";
 
 /**
  * --self-test: exercise the API call against a fixture and write nothing.
@@ -104,6 +110,12 @@ When you do write one, score all six axes of this rubric 1-5, each with AT MOST 
 
 Also give a "bigness" 1-5. This is NOT the average of the axes — averaging inflates routine moves. It is a judgement about how much the move actually matters. A record contract for a guard or centre is still a low number.
 
+Each candidate lists the players involved with their real positions. USE THEM — positional value is the axis that decides everything, and guessing it from the headline is how a cornerback ends up scored as a neutral mid-tier player.
+
+Set "teams" to the clubs actually party to the move, chosen from the candidate's teamIds. A player visiting four clubs before signing for one is a move between two of them, not five.
+
+If the story touches charges, an arrest, an investigation, a lawsuit or a suspension, you MUST also state that the person denies it or has not been convicted, wherever the source supports it. An accusation without the answer to it is unfair and will be rejected.
+
 ABSOLUTE RULES:
 - Use ONLY facts present in the headline and description you are given. You have no other knowledge of this event.
 - Every number you write must appear in the supplied text. Do not state a contract figure, a draft pick, a year or an age that is not there. If you don't have the number, write around it.
@@ -128,6 +140,13 @@ const schema = {
             description: "kebab-case, no date prefix, e.g. henry-extension",
           },
           title: { type: "string" },
+          kind: {
+            type: "string",
+            enum: [
+              "trade", "signing", "contract", "release",
+              "role", "injury", "coaching",
+            ],
+          },
           summary: { type: "string" },
           // No minimum/maximum: structured outputs reject those on integers
           // ("For 'integer' type, properties maximum, minimum are not
@@ -137,7 +156,8 @@ const schema = {
           teams: {
             type: "array",
             items: { type: "string" },
-            description: "NFL team abbreviations, e.g. BUF, NE, KC",
+            description:
+              "Only the clubs party to the move, chosen from the candidate's teamIds. Two or three at most.",
           },
           rubric: {
             type: "array",
@@ -208,7 +228,7 @@ if (!payload) {
 
 const { entries } = JSON.parse(payload);
 
-if (!SELF_TEST) mkdirSync(DRAFTS, { recursive: true });
+if (!SELF_TEST) mkdirSync(HELD, { recursive: true });
 
 let written = 0;
 let skipped = 0;
@@ -227,24 +247,20 @@ for (const entry of entries) {
 
   const problems = problemsWith(entry, candidate);
 
-  if (problems.length > 0) {
-    rejected++;
-    console.log(`  REJECT ${candidate.headline}`);
-    for (const p of problems) console.log(`         ${p}`);
-    continue;
-  }
+  // Held, not discarded: a rejected draft is still a signal that something
+  // happened, and it may only need one line fixing by hand.
+  const held = problems.length > 0;
 
   const date = candidate.published || new Date().toISOString().slice(0, 10);
   const slug = `${date.slice(0, 7)}-${entry.slug}`;
-  // The detector's ids, not the model's. They're derived from ESPN's own team
-  // tags rather than generated, so there is nothing to hallucinate.
-  const teams = candidate.teamIds ?? [];
-  if (teams.length === 0) {
-    console.log(`  REJECT ${candidate.headline}`);
-    console.log(`         no recognised team — the schema requires at least one`);
-    rejected++;
-    continue;
-  }
+  // The model picks which of ESPN's tagged clubs are actually party to the
+  // move; problemsWith has already checked they're a subset, so there is
+  // nothing invented here.
+  const teams = entry.teams ?? [];
+
+  const sensitive =
+    isSensitive(`${entry.summary} ${entry.body}`) ||
+    isSensitive(`${candidate.headline} ${candidate.description}`);
 
   const mdx = `---
 title: ${entry.title}
@@ -255,11 +271,13 @@ reviewed: false
 lastUpdated: ${new Date().toISOString().slice(0, 10)}
 move:
   date: "${date}"
+  kind: ${entry.kind}
   teams: [${teams.join(", ")}]
   bigness: ${entry.bigness}
-  # Only a headline was sourced, so the rubric below is unconfirmed by
-  # construction. Check it against the reporting before promoting this.
+  # Machine-written from a single headline. verified stays false until a human
+  # has read it against the reporting linked below.
   verified: false
+  sensitive: ${sensitive}
   sources:
     - label: ESPN
       url: ${candidate.url}
@@ -277,18 +295,29 @@ ${entry.body.trim()}
 
   if (SELF_TEST) {
     written++;
-    console.log(`  would write ${slug}.mdx  (self-test: not written)`);
+    console.log(
+      `  would ${held ? "HOLD" : "publish"} ${slug}.mdx  (self-test: not written)`,
+    );
+    if (held) for (const p of problems) console.log(`         ${p}`);
     console.log(`\n${mdx}`);
     continue;
   }
 
-  writeFileSync(`${DRAFTS}/${slug}.mdx`, mdx);
+  if (held) {
+    writeFileSync(`${HELD}/${slug}.mdx`, mdx);
+    rejected++;
+    console.log(`  HELD    ${slug}.mdx`);
+    for (const p of problems) console.log(`          ${p}`);
+    continue;
+  }
+
+  writeFileSync(`${PUBLISHED}/${slug}.mdx`, mdx);
   written++;
-  console.log(`  draft  ${slug}.mdx`);
+  console.log(`  publish ${slug}.mdx${sensitive ? "  (sensitive)" : ""}`);
 }
 
 console.log(
-  `\n${written} draft(s), ${skipped} skipped by the model, ${rejected} rejected by validation.`,
+  `\n${written} published, ${skipped} skipped by the model, ${rejected} held for review.`,
 );
 // Logged because write-reasons.mjs logs it and this one didn't, which made the
 // spend impossible to attribute between them. This is the pricier of the two:
@@ -296,6 +325,6 @@ console.log(
 console.log(
   `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
 );
-if (written > 0) {
-  console.log(`Review them in ${DRAFTS}/ — nothing is published until you move it up a level.`);
+if (rejected > 0) {
+  console.log(`Held entries are in ${HELD}/ and are NOT on the site. npm run drafts lists them.`);
 }

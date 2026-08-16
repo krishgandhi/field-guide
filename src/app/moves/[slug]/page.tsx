@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { notFound } from "next/navigation";
 import { MdxContent } from "@/components/mdx-content";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
+import { UncheckedBadge } from "@/components/ui/unchecked-badge";
 import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
 import {
   Card,
@@ -77,7 +78,11 @@ export default async function MoveDetailPage({ params }: PageProps) {
         {explain(move.soWhat)}
       </p>
 
-      <SampleDataBadge note="Real event. The scores below are judgement calls." />
+      {move.verified ? (
+        <SampleDataBadge note="Real event. The scores below are judgement calls." />
+      ) : (
+        <UncheckedBadge sensitive={move.sensitive} full />
+      )}
 
       {move.rubric.length > 0 ? (
         <>

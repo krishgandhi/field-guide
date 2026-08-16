@@ -43,6 +43,7 @@ export type Move = {
   soWhat: string;
   rubric: RubricScore[];
   verified: boolean;
+  sensitive: boolean;
   /** Reporting to link out to (§9). */
   sources: MoveSource[];
 };
@@ -100,6 +101,7 @@ function toMove(frontmatter: Frontmatter): Move {
     soWhat: frontmatter.summary,
     rubric: m.rubric,
     verified: m.verified,
+    sensitive: m.sensitive,
     sources: m.sources,
   };
 }

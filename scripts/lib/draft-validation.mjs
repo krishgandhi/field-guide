@@ -6,6 +6,10 @@
  * confidently wrong statement about a real person, so they get a test.
  */
 
+export const KINDS = [
+  "trade", "signing", "contract", "release", "role", "injury", "coaching",
+];
+
 export const AXES = [
   "Player quality",
   "Positional value",
@@ -14,6 +18,45 @@ export const AXES = [
   "Competitive windows",
   "Narrative violation",
 ];
+
+/**
+ * Subjects where getting it wrong harms a real person, not just the rubric.
+ *
+ * These entries still publish — they're the news — but they carry a louder
+ * badge and they have to clear the fairness rule below.
+ */
+const SENSITIVE =
+  /\b(charge[sd]?|felony|felonies|arrest(?:ed)?|indict\w*|lawsuit|sued|allegation|alleged\w*|assault|domestic violence|misconduct|investigation|suspended|suspension|banned|DUI|convicted)\b/i;
+
+/** Words that mean the accusation is answered or unproven. */
+const BALANCING =
+  /\b(denie[sd]|denial|not guilty|pleaded not guilty|pled not guilty|innocen\w+|unproven|not been convicted|no conviction|disputes?|contests?|awaiting trial|has not been charged|presumed innocent)\b/i;
+
+export function isSensitive(text) {
+  return SENSITIVE.test(String(text ?? ""));
+}
+
+/**
+ * An accusation must not travel without the answer to it.
+ *
+ * The first real draft this pipeline produced said a player had "criminal
+ * charges hanging over him" and stopped there. The reporting said he had
+ * pleaded not guilty and denied it. Publishing the first half alone is unfair
+ * to a real person, and no "unverified" badge fixes that — the badge says
+ * nobody checked, when the problem is that the account is one-sided.
+ *
+ * So: if a draft raises an accusation, it must also carry the response. This
+ * is a content rule, not a review gate — it costs the reader nothing and it
+ * keeps a human out of the critical path.
+ */
+export function fairnessProblem(prose, sourceText) {
+  if (!isSensitive(prose)) return null;
+  if (BALANCING.test(prose)) return null;
+  const sourceHasBalance = BALANCING.test(String(sourceText ?? ""));
+  return sourceHasBalance
+    ? "raises an accusation without the denial that is in the source"
+    : "raises an accusation and neither it nor the source says it is unproven";
+}
 
 /** Numbers as a reader meets them: 67.5, 20, 2027. */
 export function numbersIn(text) {
@@ -59,6 +102,7 @@ export function problemsWith(entry, candidate) {
     problems.push(`bad slug: ${entry.slug}`);
   }
   if (!entry.title?.trim()) problems.push("no title");
+  if (!KINDS.includes(entry.kind)) problems.push(`kind "${entry.kind}" is not valid`);
   if (!entry.summary || sentenceCount(entry.summary) !== 1) {
     problems.push("summary must be exactly one sentence");
   }
@@ -85,6 +129,22 @@ export function problemsWith(entry, candidate) {
   }
 
   if (!entry.body?.trim()) problems.push("empty body");
+
+  // Teams must be a subset of what ESPN tagged, so nothing is invented — and
+  // capped, because ESPN tags every club that gave a player a visit. The first
+  // real draft came out with five teams for a two-team signing.
+  const tagged = new Set(candidate.teamIds ?? []);
+  const teams = entry.teams ?? [];
+  if (teams.length === 0) problems.push("no teams");
+  if (teams.length > 3) problems.push(`${teams.length} teams — a move involves two or three`);
+  const untagged = teams.filter((t) => !tagged.has(t));
+  if (untagged.length > 0) {
+    problems.push(`teams not tagged on the source article: ${untagged.join(", ")}`);
+  }
+
+  const source = `${candidate.headline ?? ""} ${candidate.description ?? ""}`;
+  const unfair = fairnessProblem(prose, source);
+  if (unfair) problems.push(unfair);
 
   return problems;
 }

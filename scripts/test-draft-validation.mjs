@@ -11,7 +11,13 @@
  *   npm run test:drafts
  */
 
-import { problemsWith, sentenceCount, yamlFold } from "./lib/draft-validation.mjs";
+import {
+  fairnessProblem,
+  isSensitive,
+  problemsWith,
+  sentenceCount,
+  yamlFold,
+} from "./lib/draft-validation.mjs";
 
 let failures = 0;
 
@@ -25,6 +31,7 @@ const candidate = {
   headline: "Patriots TE Hunter Henry signs extension worth up to $20M",
   description:
     "New England and the tight end agreed to a 2 year deal on Monday.",
+  teamIds: ["NE"],
 };
 
 const AXES = [
@@ -42,6 +49,7 @@ function goodEntry(overrides = {}) {
     id: "1",
     skip: false,
     slug: "henry-extension",
+    kind: "contract",
     title: "Patriots extend Hunter Henry",
     summary: "New England kept a reliable target rather than let him leave.",
     bigness: 2,
@@ -167,6 +175,86 @@ check(
   problemsWith(goodEntry({ slug: "Henry Extension!" }), candidate).some((p) =>
     p.includes("bad slug"),
   ),
+);
+
+// --- teams must come from what ESPN tagged ---------------------------------
+// The first real draft listed five teams for a two-team signing, because ESPN
+// tags every club that gave the player a visit.
+check(
+  "a team not tagged on the article is rejected",
+  problemsWith(goodEntry({ teams: ["NE", "SEA"] }), candidate).some((p) =>
+    p.includes("not tagged"),
+  ),
+);
+check(
+  "more than three teams is rejected",
+  problemsWith(
+    goodEntry({ teams: ["NE", "NE", "NE", "NE"] }),
+    { ...candidate, teamIds: ["NE"] },
+  ).some((p) => p.includes("a move involves two or three")),
+);
+check(
+  "no teams is rejected",
+  problemsWith(goodEntry({ teams: [] }), candidate).some((p) => p === "no teams"),
+);
+check(
+  "an invalid kind is rejected",
+  problemsWith(goodEntry({ kind: "blockbuster" }), candidate).some((p) =>
+    p.includes("is not valid"),
+  ),
+);
+
+// --- fairness: an accusation must not travel without the answer ------------
+// This is the rule that exists because the first real draft said a player had
+// "criminal charges hanging over him" and stopped there, when the reporting
+// said he had pleaded not guilty.
+const legalCandidate = {
+  id: "2",
+  headline: "Facing charges, Terrion Arnold set to join Seahawks",
+  description:
+    "Arnold faces felony charges in Florida. He has pleaded not guilty and denied the allegations through his representatives.",
+  teamIds: ["SEA", "DET"],
+};
+
+check("isSensitive spots a charge", isSensitive("He is facing felony charges."));
+check("isSensitive spots a suspension", isSensitive("He was suspended six games."));
+check("isSensitive ignores ordinary football", !isSensitive("He signed a three-year deal."));
+
+check(
+  "an accusation without the denial is rejected",
+  (fairnessProblem(
+    "A defensive back with criminal charges hanging over him signed a short deal.",
+    legalCandidate.description,
+  ) ?? "").includes("without the denial"),
+);
+check(
+  "the same sentence passes once it carries the denial",
+  fairnessProblem(
+    "A defensive back facing charges he denies signed a short deal.",
+    legalCandidate.description,
+  ) === null,
+);
+check(
+  "'not convicted' also satisfies it",
+  fairnessProblem(
+    "He faces charges and has not been convicted of anything.",
+    legalCandidate.description,
+  ) === null,
+);
+check(
+  "ordinary football prose is untouched by the rule",
+  fairnessProblem("A quiet extension for a reliable target.", "") === null,
+);
+check(
+  "the rule fires inside a full entry too",
+  problemsWith(
+    {
+      ...goodEntry(),
+      teams: ["SEA"],
+      body: "A defensive back with criminal charges hanging over him joins Seattle.",
+    },
+    legalCandidate,
+  ).some((p) => p.includes("accusation")),
 );
 
 // --- helpers ---------------------------------------------------------------

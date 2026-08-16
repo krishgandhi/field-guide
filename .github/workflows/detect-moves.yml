@@ -3,9 +3,13 @@ name: Detect moves
 # Scans ESPN's news feed for transactions worth writing up, and has Claude
 # draft the §7 rubric for the ones that survive.
 #
-# NOTHING THIS JOB PRODUCES IS PUBLISHED. Drafts land in content/moves/_drafts/,
-# which the content loader cannot see, and reaching the site takes a deliberate
-# `git mv`. CLAUDE.md §13: unreviewed generated text is a debt, not an asset.
+# What passes validation IS published, carrying a visible "not checked yet"
+# badge. Krish wants to open the site and find the news there rather than run a
+# command, so the gate is mechanical instead of human.
+#
+# What FAILS validation goes to content/moves/_drafts/, which the loader cannot
+# see. So the failure mode is a missing entry, never a wrong one. The guard
+# below also stops the job from ever modifying an entry that already exists.
 #
 # Separate from refresh-slate.yml on purpose: the slate has a hard September 9
 # deadline and must never fail because a news endpoint changed shape.
@@ -54,11 +58,16 @@ jobs:
 
       # Guard against the one thing that must never happen: a generated file
       # landing where the site would render it.
-      - name: Refuse to commit drafts outside _drafts/
+      # The job now publishes, so it must be allowed to ADD entries — but it
+      # must never touch one that already exists. Hand-written entries have
+      # been fact-checked; a generated file overwriting one would silently
+      # replace verified content with a machine guess.
+      - name: Refuse to modify an existing move
         run: |
-          if git status --porcelain content/moves/*.mdx | grep -q .; then
-            echo "A published move file changed. This job may only write to _drafts/."
-            git status --porcelain content/moves/
+          changed=$(git status --porcelain -- content/moves/ ':!content/moves/_drafts/' | grep -v '^??' || true)
+          if [ -n "$changed" ]; then
+            echo "This job may only add new move files, never change existing ones:"
+            echo "$changed"
             exit 1
           fi
 
@@ -71,16 +80,17 @@ jobs:
           # status --porcelain, not diff --quiet: a newly written draft is an
           # UNTRACKED file, which diff does not report. That would have
           # silently dropped the first draft this job ever produced.
-          if [ -z "$(git status --porcelain -- src/data/ content/moves/_drafts/)" ]; then
+          if [ -z "$(git status --porcelain -- src/data/ content/moves/)" ]; then
             echo "Nothing new."
             exit 0
           fi
           git config user.name  "field-guide bot"
           git config user.email "bot@users.noreply.github.com"
-          git add src/data/ content/moves/_drafts/
+          git add src/data/ content/moves/
           # "draft:" prefix so these filter out of the history that should read
           # as a record of actual work (§3).
-          git commit -m "draft: move candidates ($(date -u +%Y-%m-%d))"
+          # "moves:" rather than "draft:" — these reach the site now.
+          git commit -m "moves: auto-published ($(date -u +%Y-%m-%d))"
           # Push can lose a race with a human pushing to main — that is exactly
           # how the 13 August refresh was lost, after committing cleanly. Rebase
           # onto whatever landed and try again rather than dropping the data.

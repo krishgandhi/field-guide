@@ -130,6 +130,15 @@ const move = z.strictObject({
   /** True only for entries built from events verified against a source. */
   verified: z.boolean(),
   /**
+   * Touches charges, an investigation, a suspension or similar.
+   *
+   * Renders a louder badge than plain `verified: false`. These publish like
+   * anything else — they are the news — but the reader is told plainly that
+   * the account is machine-written and unchecked, and the drafting pipeline
+   * refuses to raise an accusation without also carrying the denial.
+   */
+  sensitive: z.boolean().default(false),
+  /**
    * Reporting to link out to. Optional in the schema because a draft won't
    * always have one; test:moves reports any `verified: true` entry missing it.
    */

@@ -1,8 +1,12 @@
 /**
- * What's waiting for review in content/moves/_drafts/.
+ * Entries the pipeline wrote but REFUSED to publish.
  *
- * Drafts are invisible to the site by design, which means they're also easy to
- * forget. This is the reminder.
+ * Anything that passes validation goes straight onto the site with a "not
+ * checked yet" badge. What lands here failed a check — an invented figure, a
+ * team ESPN never tagged, or an accusation without the denial — so it is
+ * deliberately invisible and usually needs a line fixed by hand.
+ *
+ * An empty list is the normal, healthy result.
  *
  *   npm run drafts
  */
@@ -13,17 +17,17 @@ import path from "node:path";
 const DIR = "content/moves/_drafts";
 
 if (!existsSync(DIR)) {
-  console.log("No drafts. Nothing waiting for review.");
+  console.log("Nothing held back. Everything the pipeline wrote is on the site.");
   process.exit(0);
 }
 
 const files = readdirSync(DIR).filter((f) => f.endsWith(".mdx"));
 if (files.length === 0) {
-  console.log("No drafts. Nothing waiting for review.");
+  console.log("Nothing held back. Everything the pipeline wrote is on the site.");
   process.exit(0);
 }
 
-console.log(`${files.length} draft(s) awaiting review:\n`);
+console.log(`${files.length} entr(y/ies) HELD BACK — not on the site:\n`);
 
 for (const file of files) {
   const raw = readFileSync(path.join(DIR, file), "utf8");
@@ -36,7 +40,7 @@ for (const file of files) {
   console.log();
 }
 
-console.log("These are unverified — only a headline was sourced. To publish one:");
-console.log(`  1. check it against the reporting linked in its sources`);
-console.log(`  2. git mv ${DIR}/<file> content/moves/`);
-console.log(`  3. set verified: true once you've confirmed the facts`);
+console.log("Each failed validation. To publish one:");
+console.log(`  1. read it against the reporting linked in its sources`);
+console.log(`  2. fix whatever the pipeline objected to`);
+console.log(`  3. git mv ${DIR}/<file> content/moves/  and set verified: true`);
