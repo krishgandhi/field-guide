@@ -97,15 +97,22 @@ jobs:
           # as a record of actual work (§3).
           # "moves:" rather than "draft:" — these reach the site now.
           git commit -m "moves: auto-published ($(date -u +%Y-%m-%d))"
-          # Push can lose a race with a human pushing to main — that is exactly
-          # how the 13 August refresh was lost, after committing cleanly. Rebase
-          # onto whatever landed and try again rather than dropping the data.
+          # Push can lose a race with another push to main. Rebase and retry,
+          # preferring OUR version of any conflict: everything this job commits
+          # is generated output, and the fresh run is by definition the correct
+          # one. A plain rebase deadlocked on slate.json, where two runs rewrite
+          # the same timestamped file and every line conflicts.
           for attempt in 1 2 3; do
             if git push; then
               exit 0
             fi
             echo "Push rejected (attempt $attempt) — rebasing onto origin/main."
-            git pull --rebase --autostash || exit 1
+            git fetch origin main || exit 1
+            if ! git rebase -X theirs origin/main; then
+              git rebase --abort || true
+              echo "Rebase failed outright; leaving main untouched."
+              exit 1
+            fi
           done
           echo "Still could not push after three attempts."
           exit 1
