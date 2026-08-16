@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T10:40:39.148Z",
+  "fetchedAt": "2026-08-16T10:45:30.631Z",
   "people": {
     "3122132": {
       "id": "3122132",
@@ -15,7 +15,7 @@
       "draft": "2017: Rd 1, Pk 1 (CLE)",
       "college": "Texas A&M",
       "headshot": "/players/3122132.png",
-      "blurb": null
+      "blurb": "A pass rusher taken first overall by Cleveland in 2017 out of Texas A&M, now in his tenth season and playing for the Rams after Cleveland traded him for draft picks."
     },
     "3917315": {
       "id": "3917315",
@@ -31,7 +31,7 @@
       "draft": "2019: Rd 1, Pk 1 (ARI)",
       "college": "Oklahoma",
       "headshot": "/players/3917315.png",
-      "blurb": null
+      "blurb": "A quarterback taken first overall by Arizona in 2019 out of Oklahoma, now in his eighth season and starting for Minnesota after signing there for the price of a backup."
     },
     "3918298": {
       "id": "3918298",
@@ -63,7 +63,7 @@
       "draft": "2019: Rd 2, Pk 51 (TEN)",
       "college": "Ole Miss",
       "headshot": "/players/4047646.png",
-      "blurb": null
+      "blurb": "A wide receiver taken in the second round out of Ole Miss in 2019, now in his eighth season and brought to New England to be their top target."
     },
     "4241479": {
       "id": "4241479",
@@ -79,7 +79,7 @@
       "draft": "2020: Rd 1, Pk 5 (MIA)",
       "college": "Alabama",
       "headshot": "/players/4241479.png",
-      "blurb": null
+      "blurb": "A quarterback picked fifth overall by Miami in 2020 out of Alabama, now in his seventh season with Atlanta after Miami took a record financial hit to move on from him."
     },
     "4242512": {
       "id": "4242512",
@@ -127,7 +127,7 @@
       "draft": "2022: Rd 1, Pk 21 (KC)",
       "college": "Washington",
       "headshot": "/players/4426405.png",
-      "blurb": null
+      "blurb": "A cornerback taken in the first round by Kansas City in 2022 out of Washington, traded to the Rams for four picks and paid among the very best at his position."
     },
     "4433970": {
       "id": "4433970",
@@ -143,7 +143,7 @@
       "draft": "2024: Rd 1, Pk 10 (MIN)",
       "college": "Michigan",
       "headshot": "/players/4433970.png",
-      "blurb": null
+      "blurb": "A young quarterback Minnesota picked tenth overall out of Michigan in 2024, and who has since been benched in favour of a cheaper signing."
     },
     "4575431": {
       "id": "4575431",
@@ -175,7 +175,7 @@
       "draft": "2024: Rd 1, Pk 19 (LAR)",
       "college": "Florida State",
       "headshot": "/players/4578085.png",
-      "blurb": null
+      "blurb": "A pass rusher the Rams picked in the first round out of Florida State in 2024, now in Cleveland after being part of a trade for one of the league's top defenders."
     },
     "4592837": {
       "id": "4592837",
@@ -191,7 +191,8 @@
       "draft": "2024: Rd 1, Pk 24 (DET)",
       "college": "Alabama",
       "headshot": "/players/4592837.png",
-      "blurb": null
+      "blurb": "A cornerback Detroit picked in the first round out of Alabama in 2024 who, for reasons unrelated to football, joined Seattle for the league minimum salary."
     }
-  }
+  },
+  "profilesWrittenAt": "2026-08-16T10:46:15.887Z"
 }
