@@ -22,7 +22,7 @@
  *   node scripts/fetch-team-detail.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 
 const CORE = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl";
 const SITE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
@@ -380,6 +380,13 @@ for (const team of TEAMS) {
 }
 
 // Pass two: rank and write.
+// Blurbs are owned by write-unit-notes.mjs and must survive a refresh. This
+// script rebuilt each unit from scratch, wiping them, so all 96 were rewritten
+// every single day — the same waste the people cache already had to fix (§13).
+const previous = existsSync(OUT)
+  ? JSON.parse(readFileSync(OUT, "utf8")).teams ?? {}
+  : {};
+
 const teams = {};
 for (const team of TEAMS) {
   const got = gathered.get(team.id);
@@ -404,6 +411,16 @@ for (const team of TEAMS) {
             rank: ranks[u],
             score: scoreFromRank(ranks[u]),
             note: noteFor(u, ranks[u], previousSeason),
+            ...(() => {
+              const was = previous[team.id]?.units?.[u];
+              return was?.blurb
+                ? {
+                    blurb: was.blurb,
+                    blurbHash: was.blurbHash,
+                    promptVersion: was.promptVersion,
+                  }
+                : {};
+            })(),
             /** Evidence for write-unit-notes.mjs; never rendered directly. */
             stats: stats?.[u] ?? {},
             ...(u === "offence"
