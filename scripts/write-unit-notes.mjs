@@ -16,7 +16,7 @@
  * league in rushing attempts last season, and the obvious reading — a
  * run-first team — is wrong: 112 of those carries were Josh Allen's own, 40
  * sacks never appear in the pass column, and a 12-5 team runs out a lot of
- * clocks. Adjusted, they sat 27th of 32 in pass share against a league median
+ * clocks. Adjusted, they sat 28th of 32 in pass share against a league median
  * of 58.8%. Mildly run-leaning, not a philosophy. Volume ranks cannot tell
  * intent from circumstance, so they don't get shown.
  *
@@ -30,13 +30,13 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import Anthropic from "@anthropic-ai/sdk";
-import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
+import { problemWithNote } from "./lib/unit-note-validation.mjs";
 
 const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 4;
+const PROMPT_VERSION = 5;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -94,6 +94,12 @@ function evidenceFor(teamId, team, unit) {
       drafted: p.draftedBy ?? null,
     })),
     headCoach: team.coach?.name ?? null,
+    // ESPN counts seasons as an NFL head coach ANYWHERE, not with this club, so
+    // 0 proves the man is new and any other number proves nothing either way —
+    // Vrabel reads 7 in his second year at New England. It is enough to stop
+    // the model calling a coach new from memory, which is what it did when all
+    // it had was a name.
+    headCoachSeasonsAsHeadCoach: team.coach?.experience ?? null,
     recentMovesInvolvingThisTeam: movesFor(teamId),
   };
 }
@@ -141,6 +147,8 @@ THE READING IS YOURS. You may interpret what the numbers imply, connect them to 
 Two things follow from that, and they matter:
 
 1. THE STATISTICS DESCRIBE LAST SEASON. If the evidence shows the head coach changed, last season's tendencies belong to the previous regime and you should say so rather than presenting them as what this team is. A note that describes a team as its fired coach built it is worse than useless to someone about to talk about this year.
+
+Only two things in the evidence show a coaching change: headCoachSeasonsAsHeadCoach is 0, or a coaching move appears in recentMovesInvolvingThisTeam. If neither holds, the coach is NOT new — name him if he is worth naming, but do not say he took over, arrived, is new, or inherited anything from a previous staff. Any other number in that field proves nothing: it counts seasons as a head coach anywhere in the league, so a coach in his first year with this team can read 7.
 
 2. NEVER SAY A PLAYER IS NEW, CAME FROM ANYWHERE, WAS SIGNED, OR WAS TRADED unless that exact move appears in recentMovesInvolvingThisTeam.
 
@@ -224,40 +232,8 @@ for (let i = 0; i < batch.length; i += CHUNK) {
 
 // --- validation ------------------------------------------------------------
 
-/**
- * Phrases that assert a transfer. The draft field cannot support any of them:
- * it says who drafted a player, not who he last played for. Left unchecked,
- * this produced "Bradley Chubb, who came from Denver" for a player Denver
- * drafted eight years ago — across 29 of 96 notes.
- */
-const ARRIVAL =
-  /\b(came from|arrived from|joined from|signed from|acquired from|newly signed|new signing|just signed|traded for|brought in from)\b/i;
-
-export function problemWithNote(text, evidence) {
-  const trimmed = String(text ?? "").trim();
-  const words = trimmed.split(/\s+/).length;
-  if (words < 8 || words > 50) return `${words} words`;
-  if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
-  if (sentenceCount(trimmed) > 2) return "more than two sentences";
-
-  // Same guard as everywhere else: a figure must trace to what we supplied.
-  const allowed = new Set(numbersIn(JSON.stringify(evidence)));
-  const invented = numbersIn(trimmed).filter((n) => !allowed.has(n));
-  if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
-
-  // An arrival may only be asserted when a move entry for this team records
-  // it. Everything else is inference from a draft position.
-  const arrival = trimmed.match(ARRIVAL);
-  if (arrival) {
-    const moves = (evidence.recentMovesInvolvingThisTeam ?? []).join(" ");
-    const named = [...trimmed.matchAll(/\b[A-Z][\w.'-]*(?:\s+[A-Z][\w.'-]*)+/g)]
-      .map((m) => m[0])
-      .filter((n) => n.split(/\s+/).length >= 2);
-    const backed = named.some((n) => moves.includes(n.split(/\s+/).at(-1)));
-    if (!backed) return `claims an arrival ("${arrival[0]}") with no move to support it`;
-  }
-  return null;
-}
+// The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
+// without an API key — importing this file starts calling the model.
 
 let accepted = 0;
 const rejected = [];
