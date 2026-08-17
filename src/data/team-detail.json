@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-16T12:14:17.366Z",
+  "fetchedAt": "2026-08-17T11:20:51.979Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -1356,38 +1356,7 @@
       "previousSeason": true,
       "units": {
         "offence": {
-          "players": [
-            {
-              "id": "4360310",
-              "name": "Trevor Lawrence",
-              "label": "QB"
-            },
-            {
-              "id": "4882093",
-              "name": "Bhayshul Tuten",
-              "label": "RB"
-            },
-            {
-              "id": "4432773",
-              "name": "Brian Thomas Jr.",
-              "label": "WR"
-            },
-            {
-              "id": "4432620",
-              "name": "Parker Washington",
-              "label": "WR"
-            },
-            {
-              "id": "4430539",
-              "name": "Brenton Strange",
-              "label": "TE"
-            },
-            {
-              "id": "4035791",
-              "name": "Cole Van Lanen",
-              "label": "OT"
-            }
-          ],
+          "players": [],
           "rank": 6,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 6th of 32."
@@ -1400,24 +1369,9 @@
               "label": "DE"
             },
             {
-              "id": "3915239",
-              "name": "Josh Hines-Allen",
-              "label": "DE"
-            },
-            {
-              "id": "4427716",
-              "name": "Jack Kiser",
-              "label": "LB"
-            },
-            {
               "id": "4685415",
               "name": "Travis Hunter",
               "label": "WR"
-            },
-            {
-              "id": "4242149",
-              "name": "Montaric Brown",
-              "label": "CB"
             }
           ],
           "rank": 8,
@@ -1425,18 +1379,7 @@
           "note": "Better than most for points allowed last season, 8th of 32."
         },
         "specialTeams": {
-          "players": [
-            {
-              "id": "4686361",
-              "name": "Cam Little",
-              "label": "K"
-            },
-            {
-              "id": "4882093",
-              "name": "Bhayshul Tuten",
-              "label": "KR"
-            }
-          ],
+          "players": [],
           "rank": 13,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 13th of 32."
