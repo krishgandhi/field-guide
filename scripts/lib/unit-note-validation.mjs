@@ -40,10 +40,20 @@ const TENURE = [
   [/\bthird[- ]year\b/i, 3],
 ];
 
-/** Capitalised runs of two or more words — near enough to "a person's name". */
+/**
+ * Capitalised runs of two or more words — near enough to "a person's name".
+ *
+ * The character class has to admit a period, or "A.J. Terrell" arrives as two
+ * fragments. That also means a name ending a sentence swallows the full stop
+ * and runs into whatever is capitalised next: "second-year Maxwell Hairston.
+ * Joe Brady's promotion" came back as one name and matched nobody, so the
+ * guard rejected two notes that were correct. Split where a period follows a
+ * real word — an initial is a single letter, so "A.J." survives.
+ */
 function namesIn(text) {
   return [...text.matchAll(/\b[A-Z][\w.'-]*(?:\s+[A-Z][\w.'-]*)+/g)]
-    .map((m) => m[0])
+    .flatMap((m) => m[0].split(/(?<=[a-z]{2})\.\s+/))
+    .map((n) => n.replace(/[.,;:]+$/, "").trim())
     .filter((n) => n.split(/\s+/).length >= 2);
 }
 
@@ -85,15 +95,13 @@ export function problemWithNote(text, evidence) {
   // "Rookie" and "second-year" must match somebody in the unit. Checked against
   // the players actually named in the note, so a note calling one man a rookie
   // while another rookie stands nearby still fails.
-  const named = namesIn(trimmed);
-  const players = evidence.keyPlayers ?? [];
+  // Straight substring search rather than namesIn: we are asking which of a
+  // known list of players the note mentions, and a capitalised word in front
+  // of a name ("Rookie Mansoor Delane") defeats any attempt to extract it.
+  const mentioned = (evidence.keyPlayers ?? []).filter((p) => trimmed.includes(p.name));
   for (const [pattern, season] of TENURE) {
     if (!pattern.test(trimmed)) continue;
-    const matches = named
-      .map((n) => players.find((p) => p.name === n))
-      .filter(Boolean)
-      .some((p) => p.seasonInTheLeague === season);
-    if (!matches) {
+    if (!mentioned.some((p) => p.seasonInTheLeague === season)) {
       return `says "${trimmed.match(pattern)[0]}" of nobody it names who is in season ${season}`;
     }
   }

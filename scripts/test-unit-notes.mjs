@@ -138,6 +138,18 @@ check(
   bills,
 );
 check(
+  "accept",
+  "a name at the end of a sentence, followed by another name",
+  "Cornerbacks Christian Benford and second-year Maxwell Hairston. Joe Brady's promotion may bring changes.",
+  bills,
+);
+check(
+  "accept",
+  "an initialled name in the same note",
+  "Rookie Mansoor Delane starts opposite A.J. Terrell, and the pair should see plenty of work early on.",
+  { ...bills, keyPlayers: [...bills.keyPlayers, { name: "A.J. Terrell", position: "CB", seasonInTheLeague: 6 }] },
+);
+check(
   "reject",
   "a rookie claim about a player the note does not name",
   "The corners are quick and the rookie in the group is expected to start, which is a lot to ask of anyone.",

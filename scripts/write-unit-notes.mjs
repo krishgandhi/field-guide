@@ -180,7 +180,7 @@ Hard rules:
 - If nothing is distinctive, name the players and what the unit is built around. Silence about character is better than a verdict that fights the rating.
 - Never mention a player who is not in the evidence.
 - Do not describe a team's "philosophy" or "identity" as though you know their intent. Describe what the numbers show them doing.
-- Plain spoken English, roughly 15 to 40 words. No jargon a newcomer wouldn't know, and no fantasy framing.`;
+- Plain spoken English, 15 to 40 words, and never more than 45. Anything longer is thrown away, and a long sentence is the first thing to go when you have too much to say. No jargon a newcomer wouldn't know, and no fantasy framing.`;
 
 const schema = {
   type: "object",
