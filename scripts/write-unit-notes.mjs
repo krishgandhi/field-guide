@@ -36,7 +36,7 @@ const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 1;
+const PROMPT_VERSION = 2;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -142,7 +142,9 @@ Hard rules:
 - Never state a number that is not in the evidence. Prefer plain words: "ran the ball more than any other team" rather than "547 carries".
 - Use at most one figure, and only if it genuinely helps.
 - Do not restate the rank. "Fourth-best for points scored" already appears directly above your sentence; repeating it wastes the only two sentences you get.
-- If the evidence says nothing distinctive, say something honest and small rather than inventing character. "A middling unit without an obvious strength" is a fine answer.
+- Do NOT pass judgement on the unit overall — no "middling", "strong", "poor", "ordinary", "unremarkable" about the unit as a whole. The rating beside you already says how good it is, and one of these words next to four dots out of five reads as a contradiction. Describe traits instead: what they do a lot of, what they do well, what they don't.
+- You MAY say a specific thing is a weakness ("rarely gets to the quarterback") when a rank supports it. That is a trait, not a verdict on the unit.
+- If nothing is distinctive, name the players and what the unit is built around. Silence about character is better than a verdict that fights the rating.
 - Never mention a player who is not in the evidence.
 - Do not describe a team's "philosophy" or "identity" as though you know their intent. Describe what the numbers show them doing.
 - Plain spoken English, roughly 15 to 40 words. No jargon a newcomer wouldn't know, and no fantasy framing.`;
