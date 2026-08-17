@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T13:17:54.286Z",
+  "fetchedAt": "2026-08-17T13:40:13.442Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -16,32 +16,50 @@
             {
               "id": "2578570",
               "name": "Jacoby Brissett",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 3, Pk 91 (NE)"
             },
             {
               "id": "4870808",
               "name": "Jeremiyah Love",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 3 (ARI)"
             },
             {
               "id": "4432708",
               "name": "Marvin Harrison Jr.",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 4 (ARI)"
             },
             {
               "id": "4360761",
               "name": "Michael Wilson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 94 (ARI)"
             },
             {
               "id": "4361307",
               "name": "Trey McBride",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 55 (ARI)"
             },
             {
               "id": "4428991",
               "name": "Paris Johnson Jr.",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 6 (ARI)"
             }
           ],
           "rank": 23,
@@ -93,27 +111,42 @@
             {
               "id": "3693166",
               "name": "Josh Sweat",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 4, Pk 130 (PHI)"
             },
             {
               "id": "4569480",
               "name": "Darius Robinson",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 27 (ARI)"
             },
             {
               "id": "4244606",
               "name": "Zaven Collins",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 16 (ARI)"
             },
             {
               "id": "4685408",
               "name": "Will Johnson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 47 (ARI)"
             },
             {
               "id": "4432668",
               "name": "Denzel Burke",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 174 (ARI)"
             }
           ],
           "rank": 29,
@@ -138,12 +171,18 @@
             {
               "id": "4363538",
               "name": "Chad Ryland",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 112 (NE)"
             },
             {
               "id": "4039050",
               "name": "Devin Duvernay",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": 2020,
+              "experience": 6,
+              "draftedBy": "2020: Rd 3, Pk 92 (BAL)"
             }
           ],
           "rank": 30,
@@ -174,32 +213,50 @@
             {
               "id": "4241479",
               "name": "Tua Tagovailoa",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 5 (MIA)"
             },
             {
               "id": "4430807",
               "name": "Bijan Robinson",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 8 (ATL)"
             },
             {
               "id": "4426502",
               "name": "Drake London",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 8 (ATL)"
             },
             {
               "id": "4361409",
               "name": "Jahan Dotson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 16 (WSH)"
             },
             {
               "id": "4360248",
               "name": "Kyle Pitts Sr.",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2021: Rd 1, Pk 4 (ATL)"
             },
             {
               "id": "16713",
               "name": "Jake Matthews",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2014,
+              "experience": 13,
+              "draftedBy": "2014: Rd 1, Pk 6 (ATL)"
             }
           ],
           "rank": 24,
@@ -251,27 +308,42 @@
             {
               "id": "4427090",
               "name": "Brandon Dorlus",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 109 (ATL)"
             },
             {
               "id": "4426412",
               "name": "Zach Harrison",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 75 (ATL)"
             },
             {
               "id": "3045527",
               "name": "Samson Ebukam",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 4, Pk 125 (LAR)"
             },
             {
               "id": "4239995",
               "name": "A.J. Terrell Jr.",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 16 (ATL)"
             },
             {
               "id": "3895841",
               "name": "Mike Hughes",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 30 (MIN)"
             }
           ],
           "rank": 19,
@@ -296,12 +368,18 @@
             {
               "id": "10621",
               "name": "Nick Folk",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2007,
+              "experience": 19,
+              "draftedBy": "2007: Rd 6, Pk 178 (DAL)"
             },
             {
               "id": "4870612",
               "name": "Zachariah Branch",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 79 (ATL)"
             }
           ],
           "rank": 24,
@@ -332,32 +410,50 @@
             {
               "id": "3916387",
               "name": "Lamar Jackson",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 32 (BAL)"
             },
             {
               "id": "3043078",
               "name": "Derrick Henry",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 2, Pk 45 (TEN)"
             },
             {
               "id": "4429615",
               "name": "Zay Flowers",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 22 (BAL)"
             },
             {
               "id": "4360939",
               "name": "Rashod Bateman",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 27 (BAL)"
             },
             {
               "id": "3116365",
               "name": "Mark Andrews",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 86 (BAL)"
             },
             {
               "id": "2980153",
               "name": "Ronnie Stanley",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 1, Pk 6 (BAL)"
             }
           ],
           "rank": 11,
@@ -409,27 +505,42 @@
             {
               "id": "4035245",
               "name": "Nnamdi Madubuike",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 3, Pk 71 (BAL)"
             },
             {
               "id": "11284",
               "name": "Calais Campbell",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2008,
+              "experience": 19,
+              "draftedBy": "2008: Rd 2, Pk 50 (ARI)"
             },
             {
               "id": "3052743",
               "name": "Trey Hendrickson",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 3, Pk 103 (NO)"
             },
             {
               "id": "4601278",
               "name": "Nate Wiggins",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 30 (BAL)"
             },
             {
               "id": "3126356",
               "name": "Marlon Humphrey",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 1, Pk 16 (BAL)"
             }
           ],
           "rank": 18,
@@ -454,12 +565,18 @@
             {
               "id": "4697745",
               "name": "Tyler Loop",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 6, Pk 186 (BAL)"
             },
             {
               "id": "4690013",
               "name": "Rasheen Ali",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 165 (BAL)"
             }
           ],
           "rank": 12,
@@ -490,32 +607,50 @@
             {
               "id": "3918298",
               "name": "Josh Allen",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 7 (BUF)"
             },
             {
               "id": "4379399",
               "name": "James Cook III",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 63 (BUF)"
             },
             {
               "id": "3915416",
               "name": "DJ Moore",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 24 (CAR)"
             },
             {
               "id": "4373678",
               "name": "Khalil Shakir",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 148 (BUF)"
             },
             {
               "id": "4385690",
               "name": "Dalton Kincaid",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 25 (BUF)"
             },
             {
               "id": "3051324",
               "name": "Dion Dawkins",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 2, Pk 63 (BUF)"
             }
           ],
           "rank": 4,
@@ -567,27 +702,42 @@
             {
               "id": "4684527",
               "name": "T.J. Sanders",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 41 (BUF)"
             },
             {
               "id": "4039303",
               "name": "Ed Oliver",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 9 (BUF)"
             },
             {
               "id": "3116733",
               "name": "Bradley Chubb",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 5 (DEN)"
             },
             {
               "id": "4379778",
               "name": "Christian Benford",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 6, Pk 185 (BUF)"
             },
             {
               "id": "4688931",
               "name": "Maxwell Hairston",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 30 (BUF)"
             }
           ],
           "rank": 12,
@@ -612,12 +762,18 @@
             {
               "id": "3917232",
               "name": "Tyler Bass",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 6, Pk 188 (BUF)"
             },
             {
               "id": "4429501",
               "name": "Ray Davis",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 128 (BUF)"
             }
           ],
           "rank": 8,
@@ -648,32 +804,50 @@
             {
               "id": "4685720",
               "name": "Bryce Young",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 1 (CAR)"
             },
             {
               "id": "4241416",
               "name": "Chuba Hubbard",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 126 (CAR)"
             },
             {
               "id": "4685472",
               "name": "Tetairoa McMillan",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 8 (CAR)"
             },
             {
               "id": "4695883",
               "name": "Jalen Coker",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": null
             },
             {
               "id": "4372780",
               "name": "Tommy Tremble",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 83 (CAR)"
             },
             {
               "id": "4427132",
               "name": "Ikem Ekwonu",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 6 (CAR)"
             }
           ],
           "rank": 27,
@@ -725,27 +899,42 @@
             {
               "id": "4035495",
               "name": "Derrick Brown",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 7 (CAR)"
             },
             {
               "id": "4058925",
               "name": "Tershawn Wharton",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             },
             {
               "id": "4242975",
               "name": "Jaelan Phillips",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 18 (MIA)"
             },
             {
               "id": "3917853",
               "name": "Mike Jackson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2019,
+              "experience": 6,
+              "draftedBy": "2019: Rd 5, Pk 158 (DAL)"
             },
             {
               "id": "4362847",
               "name": "Jaycee Horn",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 8 (CAR)"
             }
           ],
           "rank": 15,
@@ -770,12 +959,18 @@
             {
               "id": "4568263",
               "name": "Ryan Fitzgerald",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             },
             {
               "id": "4685350",
               "name": "Trevor Etienne",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 114 (CAR)"
             }
           ],
           "rank": 22,
@@ -806,32 +1001,50 @@
             {
               "id": "4431611",
               "name": "Caleb Williams",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 1 (CHI)"
             },
             {
               "id": "4259545",
               "name": "D'Andre Swift",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 35 (DET)"
             },
             {
               "id": "4431299",
               "name": "Rome Odunze",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 9 (CHI)"
             },
             {
               "id": "4685278",
               "name": "Luther Burden III",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 39 (CHI)"
             },
             {
               "id": "4723086",
               "name": "Colston Loveland",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 10 (CHI)"
             },
             {
               "id": "4251007",
               "name": "Braxton Jones",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 168 (CHI)"
             }
           ],
           "rank": 9,
@@ -875,7 +1088,7 @@
             }
           },
           "passPlayShare": 58.3,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 77
         },
         "defence": {
@@ -883,27 +1096,42 @@
             {
               "id": "3134690",
               "name": "Montez Sweat",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 26 (WSH)"
             },
             {
               "id": "4242659",
               "name": "Dayo Odeyingbo",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 54 (IND)"
             },
             {
               "id": "4241007",
               "name": "D'Marco Jackson",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 161 (NO)"
             },
             {
               "id": "4243253",
               "name": "Jaylon Johnson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 50 (CHI)"
             },
             {
               "id": "4426374",
               "name": "Tyrique Stevenson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 56 (CHI)"
             }
           ],
           "rank": 23,
@@ -928,12 +1156,18 @@
             {
               "id": "17427",
               "name": "Cairo Santos",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2014,
+              "experience": 13,
+              "draftedBy": null
             },
             {
               "id": "4869748",
               "name": "Zavion Thomas",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 89 (CHI)"
             }
           ],
           "rank": 18,
@@ -964,32 +1198,50 @@
             {
               "id": "3915511",
               "name": "Joe Burrow",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 1 (CIN)"
             },
             {
               "id": "4362238",
               "name": "Chase Brown",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 5, Pk 163 (CIN)"
             },
             {
               "id": "4362628",
               "name": "Ja'Marr Chase",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 5 (CIN)"
             },
             {
               "id": "4239993",
               "name": "Tee Higgins",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 33 (CIN)"
             },
             {
               "id": "3116164",
               "name": "Mike Gesicki",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 2, Pk 42 (MIA)"
             },
             {
               "id": "3116370",
               "name": "Orlando Brown Jr.",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 83 (BAL)"
             }
           ],
           "rank": 12,
@@ -1041,27 +1293,42 @@
             {
               "id": "4240754",
               "name": "Boye Mafe",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 40 (SEA)"
             },
             {
               "id": "4428985",
               "name": "Myles Murphy",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 28 (CIN)"
             },
             {
               "id": "3051746",
               "name": "Oren Burks",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 88 (GB)"
             },
             {
               "id": "4426422",
               "name": "Dax Hill",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 31 (CIN)"
             },
             {
               "id": "4572036",
               "name": "DJ Turner II",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 60 (CIN)"
             }
           ],
           "rank": 30,
@@ -1086,12 +1353,18 @@
             {
               "id": "4360234",
               "name": "Evan McPherson",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 5, Pk 149 (CIN)"
             },
             {
               "id": "4257188",
               "name": "Charlie Jones",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 131 (CIN)"
             }
           ],
           "rank": 9,
@@ -1122,32 +1395,50 @@
             {
               "id": "3122840",
               "name": "Deshaun Watson",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 1, Pk 12 (HOU)"
             },
             {
               "id": "4685702",
               "name": "Quinshon Judkins",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 36 (CLE)"
             },
             {
               "id": "4241463",
               "name": "Jerry Jeudy",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 15 (DEN)"
             },
             {
               "id": "4870653",
               "name": "KC Concepcion",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 24 (CLE)"
             },
             {
               "id": "5083076",
               "name": "Harold Fannin Jr.",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 67 (CLE)"
             },
             {
               "id": "4870723",
               "name": "Spencer Fano",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 9 (CLE)"
             }
           ],
           "rank": 31,
@@ -1191,7 +1482,7 @@
             }
           },
           "passPlayShare": 61,
-          "passPlayShareRank": 10,
+          "passPlayShareRank": 9,
           "quarterbackCarries": 31
         },
         "defence": {
@@ -1199,27 +1490,42 @@
             {
               "id": "4570119",
               "name": "Alex Wright",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 78 (CLE)"
             },
             {
               "id": "4578085",
               "name": "Jared Verse",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 19 (LAR)"
             },
             {
               "id": "3110565",
               "name": "Quincy Williams",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 98 (JAX)"
             },
             {
               "id": "3915535",
               "name": "Denzel Ward",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 4 (CLE)"
             },
             {
               "id": "4379397",
               "name": "Tyson Campbell",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 33 (JAX)"
             }
           ],
           "rank": 14,
@@ -1244,12 +1550,18 @@
             {
               "id": "4258620",
               "name": "Andre Szmyt",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             },
             {
               "id": "4613104",
               "name": "Malachi Corley",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 65 (NYJ)"
             }
           ],
           "rank": 10,
@@ -1280,32 +1592,50 @@
             {
               "id": "2577417",
               "name": "Dak Prescott",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 4, Pk 135 (DAL)"
             },
             {
               "id": "4361579",
               "name": "Javonte Williams",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 35 (DEN)"
             },
             {
               "id": "4241389",
               "name": "CeeDee Lamb",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 17 (DAL)"
             },
             {
               "id": "4426354",
               "name": "George Pickens",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 52 (PIT)"
             },
             {
               "id": "4242355",
               "name": "Jake Ferguson",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 129 (DAL)"
             },
             {
               "id": "4609048",
               "name": "Tyler Guyton",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 29 (DAL)"
             }
           ],
           "rank": 7,
@@ -1349,7 +1679,7 @@
             }
           },
           "passPlayShare": 61.4,
-          "passPlayShareRank": 9,
+          "passPlayShareRank": 8,
           "quarterbackCarries": 53
         },
         "defence": {
@@ -1357,27 +1687,42 @@
             {
               "id": "4040982",
               "name": "Quinnen Williams",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 3 (NYJ)"
             },
             {
               "id": "3122752",
               "name": "Kenny Clark",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 1, Pk 27 (GB)"
             },
             {
               "id": "4683848",
               "name": "Donovan Ezeiruaku",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 44 (DAL)"
             },
             {
               "id": "4384549",
               "name": "Cobie Durant",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 142 (LAR)"
             },
             {
               "id": "4248911",
               "name": "DaRon Bland",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 167 (DAL)"
             }
           ],
           "rank": 32,
@@ -1402,12 +1747,18 @@
             {
               "id": "3953687",
               "name": "Brandon Aubrey",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": null
             },
             {
               "id": "3676833",
               "name": "KaVontae Turpin",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             }
           ],
           "rank": 16,
@@ -1434,38 +1785,7 @@
       "previousSeason": true,
       "units": {
         "offence": {
-          "players": [
-            {
-              "id": "4426338",
-              "name": "Bo Nix",
-              "label": "QB"
-            },
-            {
-              "id": "4241985",
-              "name": "J.K. Dobbins",
-              "label": "RB"
-            },
-            {
-              "id": "3128429",
-              "name": "Courtland Sutton",
-              "label": "WR"
-            },
-            {
-              "id": "4372016",
-              "name": "Jaylen Waddle",
-              "label": "WR"
-            },
-            {
-              "id": "3051876",
-              "name": "Evan Engram",
-              "label": "TE"
-            },
-            {
-              "id": "4035662",
-              "name": "Garett Bolles",
-              "label": "OT"
-            }
-          ],
+          "players": [],
           "rank": 14,
           "score": 3,
           "note": "Middle of the league for points scored last season, 14th of 32.",
@@ -1506,36 +1826,51 @@
               "rank": 21
             }
           },
-          "passPlayShare": 63,
-          "passPlayShareRank": 5,
-          "quarterbackCarries": 83
+          "passPlayShare": 58.2,
+          "passPlayShareRank": 21,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
             {
               "id": "4039064",
               "name": "Malcolm Roach",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             },
             {
               "id": "3915282",
               "name": "Zach Allen",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 65 (ARI)"
             },
             {
               "id": "4360259",
               "name": "Nik Bonitto",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 64 (DEN)"
             },
             {
               "id": "4372012",
               "name": "Pat Surtain II",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 9 (DEN)"
             },
             {
               "id": "4382401",
               "name": "Riley Moss",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 83 (DEN)"
             }
           ],
           "rank": 3,
@@ -1556,18 +1891,7 @@
           }
         },
         "specialTeams": {
-          "players": [
-            {
-              "id": "2985659",
-              "name": "Wil Lutz",
-              "label": "K"
-            },
-            {
-              "id": "4686472",
-              "name": "Marvin Mims Jr.",
-              "label": "KR"
-            }
-          ],
+          "players": [],
           "rank": 14,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 14th of 32.",
@@ -1596,32 +1920,50 @@
             {
               "id": "3046779",
               "name": "Jared Goff",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 1, Pk 1 (LAR)"
             },
             {
               "id": "4429795",
               "name": "Jahmyr Gibbs",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 12 (DET)"
             },
             {
               "id": "4374302",
               "name": "Amon-Ra St. Brown",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 112 (DET)"
             },
             {
               "id": "4426388",
               "name": "Jameson Williams",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 12 (DET)"
             },
             {
               "id": "4430027",
               "name": "Sam LaPorta",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 34 (DET)"
             },
             {
               "id": "4373825",
               "name": "Penei Sewell",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 7 (DET)"
             }
           ],
           "rank": 5,
@@ -1665,7 +2007,7 @@
             }
           },
           "passPlayShare": 59.5,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 19
         },
         "defence": {
@@ -1673,27 +2015,42 @@
             {
               "id": "4372099",
               "name": "Aidan Hutchinson",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 2 (DET)"
             },
             {
               "id": "4038849",
               "name": "DJ Wonnum",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 4, Pk 117 (MIN)"
             },
             {
               "id": "4241411",
               "name": "Malcolm Rodriguez",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 6, Pk 188 (DET)"
             },
             {
               "id": "3139387",
               "name": "D.J. Reed",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 5, Pk 142 (SF)"
             },
             {
               "id": "5093004",
               "name": "Keith Abney II",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 5, Pk 157 (DET)"
             }
           ],
           "rank": 22,
@@ -1718,12 +2075,18 @@
             {
               "id": "4689936",
               "name": "Jake Bates",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": null
             },
             {
               "id": "4383429",
               "name": "Jacob Saylors",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             }
           ],
           "rank": 27,
@@ -1754,32 +2117,50 @@
             {
               "id": "4036378",
               "name": "Jordan Love",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 26 (GB)"
             },
             {
               "id": "4047365",
               "name": "Josh Jacobs",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 24 (OAK)"
             },
             {
               "id": "4248528",
               "name": "Christian Watson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 34 (GB)"
             },
             {
               "id": "4362249",
               "name": "Jayden Reed",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 50 (GB)"
             },
             {
               "id": "4572680",
               "name": "Tucker Kraft",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 78 (GB)"
             },
             {
               "id": "3821571",
               "name": "Jordan Morgan",
-              "label": "G"
+              "label": "G",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 25 (GB)"
             }
           ],
           "rank": 16,
@@ -1831,27 +2212,42 @@
             {
               "id": "4373423",
               "name": "Karl Brooks",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 6, Pk 179 (GB)"
             },
             {
               "id": "4361791",
               "name": "Devonte Wyatt",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 28 (GB)"
             },
             {
               "id": "4361423",
               "name": "Micah Parsons",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 12 (DAL)"
             },
             {
               "id": "4259493",
               "name": "Keisean Nixon",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "4430965",
               "name": "Carrington Valentine",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 7, Pk 232 (GB)"
             }
           ],
           "rank": 11,
@@ -1876,12 +2272,18 @@
             {
               "id": "4869461",
               "name": "Trey Smack",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 6, Pk 216 (GB)"
             },
             {
               "id": "4430191",
               "name": "Skyy Moore",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 54 (KC)"
             }
           ],
           "rank": 23,
@@ -1912,32 +2314,50 @@
             {
               "id": "4432577",
               "name": "C.J. Stroud",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 2 (HOU)"
             },
             {
               "id": "4035538",
               "name": "David Montgomery",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 73 (CHI)"
             },
             {
               "id": "4258173",
               "name": "Nico Collins",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 89 (HOU)"
             },
             {
               "id": "4877706",
               "name": "Jayden Higgins",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 34 (HOU)"
             },
             {
               "id": "3117256",
               "name": "Dalton Schultz",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 4, Pk 137 (DAL)"
             },
             {
               "id": "4429693",
               "name": "Aireontae Ersery",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 48 (HOU)"
             }
           ],
           "rank": 13,
@@ -1981,7 +2401,7 @@
             }
           },
           "passPlayShare": 58.9,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 48
         },
         "defence": {
@@ -1989,27 +2409,42 @@
             {
               "id": "4685724",
               "name": "Will Anderson Jr.",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 3 (HOU)"
             },
             {
               "id": "2976560",
               "name": "Danielle Hunter",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": "2015: Rd 3, Pk 88 (MIN)"
             },
             {
               "id": "3071353",
               "name": "E.J. Speed",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 5, Pk 164 (IND)"
             },
             {
               "id": "4426434",
               "name": "Derek Stingley Jr.",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 3 (HOU)"
             },
             {
               "id": "4602699",
               "name": "Kamari Lassiter",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 42 (HOU)"
             }
           ],
           "rank": 2,
@@ -2034,12 +2469,18 @@
             {
               "id": "2971573",
               "name": "Ka'imi Fairbairn",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": null
             },
             {
               "id": "4586312",
               "name": "Jaylin Noel",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 79 (HOU)"
             }
           ],
           "rank": 6,
@@ -2070,32 +2511,50 @@
             {
               "id": "3917792",
               "name": "Daniel Jones",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 6 (NYG)"
             },
             {
               "id": "4242335",
               "name": "Jonathan Taylor",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 41 (IND)"
             },
             {
               "id": "4360078",
               "name": "Alec Pierce",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 53 (IND)"
             },
             {
               "id": "4688813",
               "name": "Josh Downs",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 79 (IND)"
             },
             {
               "id": "4431459",
               "name": "Tyler Warren",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 14 (IND)"
             },
             {
               "id": "4362580",
               "name": "Bernhard Raimann",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 77 (IND)"
             }
           ],
           "rank": 8,
@@ -2139,7 +2598,7 @@
             }
           },
           "passPlayShare": 59.2,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -2147,27 +2606,42 @@
             {
               "id": "3843843",
               "name": "Arden Key",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 87 (OAK)"
             },
             {
               "id": "4426473",
               "name": "Laiatu Latu",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 15 (IND)"
             },
             {
               "id": "5088571",
               "name": "Bryce Boettcher",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 4, Pk 135 (IND)"
             },
             {
               "id": "4427250",
               "name": "Sauce Gardner",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 4 (NYJ)"
             },
             {
               "id": "4037361",
               "name": "Charvarius Ward",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": null
             }
           ],
           "rank": 21,
@@ -2192,12 +2666,18 @@
             {
               "id": "4259619",
               "name": "Blake Grupe",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": null
             },
             {
               "id": "4429684",
               "name": "Anthony Gould",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 142 (IND)"
             }
           ],
           "rank": 2,
@@ -2228,32 +2708,50 @@
             {
               "id": "4360310",
               "name": "Trevor Lawrence",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 1 (JAX)"
             },
             {
               "id": "4882093",
               "name": "Bhayshul Tuten",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 104 (JAX)"
             },
             {
               "id": "4432773",
               "name": "Brian Thomas Jr.",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 23 (JAX)"
             },
             {
               "id": "4432620",
               "name": "Parker Washington",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 6, Pk 185 (JAX)"
             },
             {
               "id": "4430539",
               "name": "Brenton Strange",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 61 (JAX)"
             },
             {
               "id": "4035791",
               "name": "Cole Van Lanen",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 6, Pk 214 (GB)"
             }
           ],
           "rank": 6,
@@ -2297,7 +2795,7 @@
             }
           },
           "passPlayShare": 59.7,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 82
         },
         "defence": {
@@ -2305,27 +2803,42 @@
             {
               "id": "4426349",
               "name": "Travon Walker",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 1 (JAX)"
             },
             {
               "id": "3915239",
               "name": "Josh Hines-Allen",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 7 (JAX)"
             },
             {
               "id": "4427716",
               "name": "Jack Kiser",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 107 (JAX)"
             },
             {
               "id": "4685415",
               "name": "Travis Hunter",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 2 (JAX)"
             },
             {
               "id": "4242149",
               "name": "Montaric Brown",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 7, Pk 222 (JAX)"
             }
           ],
           "rank": 8,
@@ -2350,12 +2863,18 @@
             {
               "id": "4686361",
               "name": "Cam Little",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 212 (JAX)"
             },
             {
               "id": "4882093",
               "name": "Bhayshul Tuten",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 104 (JAX)"
             }
           ],
           "rank": 13,
@@ -2386,32 +2905,50 @@
             {
               "id": "3139477",
               "name": "Patrick Mahomes",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 1, Pk 10 (KC)"
             },
             {
               "id": "4567048",
               "name": "Kenneth Walker III",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 41 (SEA)"
             },
             {
               "id": "4428331",
               "name": "Rashee Rice",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 55 (KC)"
             },
             {
               "id": "4683062",
               "name": "Xavier Worthy",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 28 (KC)"
             },
             {
               "id": "15847",
               "name": "Travis Kelce",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2013,
+              "experience": 14,
+              "draftedBy": "2013: Rd 3, Pk 63 (KC)"
             },
             {
               "id": "4569659",
               "name": "Josh Simmons",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 32 (KC)"
             }
           ],
           "rank": 21,
@@ -2463,27 +3000,42 @@
             {
               "id": "4426659",
               "name": "George Karlaftis",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 30 (KC)"
             },
             {
               "id": "4612387",
               "name": "Felix Anudike-Uzomah",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 31 (KC)"
             },
             {
               "id": "4036959",
               "name": "Cole Christiansen",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 2,
+              "draftedBy": null
             },
             {
               "id": "4040432",
               "name": "L'Jarius Sneed",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 4, Pk 138 (KC)"
             },
             {
               "id": "4880124",
               "name": "Mansoor Delane",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 6 (KC)"
             }
           ],
           "rank": 6,
@@ -2508,12 +3060,18 @@
             {
               "id": "3055899",
               "name": "Harrison Butker",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 7, Pk 233 (CAR)"
             },
             {
               "id": "4372716",
               "name": "Nikko Remigio",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             }
           ],
           "rank": 15,
@@ -2544,32 +3102,50 @@
             {
               "id": "4038941",
               "name": "Justin Herbert",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 6 (LAC)"
             },
             {
               "id": "4685382",
               "name": "Omarion Hampton",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 22 (LAC)"
             },
             {
               "id": "4612826",
               "name": "Ladd McConkey",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 34 (LAC)"
             },
             {
               "id": "4429025",
               "name": "Quentin Johnston",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 21 (LAC)"
             },
             {
               "id": "4595342",
               "name": "Oronde Gadsden",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 165 (LAC)"
             },
             {
               "id": "4242283",
               "name": "Rashawn Slater",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 13 (LAC)"
             }
           ],
           "rank": 20,
@@ -2613,7 +3189,7 @@
             }
           },
           "passPlayShare": 62.2,
-          "passPlayShareRank": 6,
+          "passPlayShareRank": 5,
           "quarterbackCarries": 83
         },
         "defence": {
@@ -2621,27 +3197,42 @@
             {
               "id": "4374269",
               "name": "Teair Tart",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             },
             {
               "id": "5089178",
               "name": "Jamaree Caldwell",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 86 (LAC)"
             },
             {
               "id": "16710",
               "name": "Khalil Mack",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2014,
+              "experience": 13,
+              "draftedBy": "2014: Rd 1, Pk 5 (OAK)"
             },
             {
               "id": "4427404",
               "name": "Cam Hart",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 140 (LAC)"
             },
             {
               "id": "3843769",
               "name": "Donte Jackson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 8,
+              "draftedBy": "2018: Rd 2, Pk 55 (CAR)"
             }
           ],
           "rank": 9,
@@ -2666,12 +3257,18 @@
             {
               "id": "4362081",
               "name": "Cameron Dicker",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             },
             {
               "id": "4362477",
               "name": "Derius Davis",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 125 (LAC)"
             }
           ],
           "rank": 5,
@@ -2702,32 +3299,50 @@
             {
               "id": "12483",
               "name": "Matthew Stafford",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2009,
+              "experience": 18,
+              "draftedBy": "2009: Rd 1, Pk 1 (DET)"
             },
             {
               "id": "4430737",
               "name": "Kyren Williams",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 164 (LAR)"
             },
             {
               "id": "4426515",
               "name": "Puka Nacua",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 5, Pk 177 (LAR)"
             },
             {
               "id": "16800",
               "name": "Davante Adams",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2014,
+              "experience": 13,
+              "draftedBy": "2014: Rd 2, Pk 53 (GB)"
             },
             {
               "id": "4242557",
               "name": "Colby Parkinson",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 4, Pk 133 (SEA)"
             },
             {
               "id": "4036135",
               "name": "Alaric Jackson",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": null
             }
           ],
           "rank": 1,
@@ -2771,7 +3386,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -2779,27 +3394,42 @@
             {
               "id": "4250621",
               "name": "Kobie Turner",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 89 (LAR)"
             },
             {
               "id": "4362245",
               "name": "Braden Fiske",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 39 (LAR)"
             },
             {
               "id": "3122132",
               "name": "Myles Garrett",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 1, Pk 1 (CLE)"
             },
             {
               "id": "4697639",
               "name": "Jaylen Watson",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 7, Pk 243 (KC)"
             },
             {
               "id": "4426405",
               "name": "Trent McDuffie",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 21 (KC)"
             }
           ],
           "rank": 10,
@@ -2824,12 +3454,18 @@
             {
               "id": "4574716",
               "name": "Harrison Mevis",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             },
             {
               "id": "4569382",
               "name": "Jordan Whittington",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 213 (LAR)"
             }
           ],
           "rank": 28,
@@ -2860,32 +3496,50 @@
             {
               "id": "14880",
               "name": "Kirk Cousins",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2012,
+              "experience": 15,
+              "draftedBy": "2012: Rd 4, Pk 102 (WSH)"
             },
             {
               "id": "4890973",
               "name": "Ashton Jeanty",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 6 (LV)"
             },
             {
               "id": "4428718",
               "name": "Tre Tucker",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 100 (LV)"
             },
             {
               "id": "4382466",
               "name": "Jalen Nailor",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 6, Pk 191 (MIN)"
             },
             {
               "id": "4432665",
               "name": "Brock Bowers",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 13 (LV)"
             },
             {
               "id": "3134312",
               "name": "Kolton Miller",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 15 (OAK)"
             }
           ],
           "rank": 32,
@@ -2929,7 +3583,7 @@
             }
           },
           "passPlayShare": 62,
-          "passPlayShareRank": 8,
+          "passPlayShareRank": 7,
           "quarterbackCarries": 14
         },
         "defence": {
@@ -2937,27 +3591,42 @@
             {
               "id": "4360749",
               "name": "Thomas Booker IV",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2022: Rd 5, Pk 150 (HOU)"
             },
             {
               "id": "4373956",
               "name": "Jonah Laulu",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 7, Pk 234 (IND)"
             },
             {
               "id": "4258194",
               "name": "Kwity Paye",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 21 (IND)"
             },
             {
               "id": "4259561",
               "name": "Eric Stokes",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 29 (GB)"
             },
             {
               "id": "4430330",
               "name": "Darien Porter",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 68 (LV)"
             }
           ],
           "rank": 25,
@@ -2982,12 +3651,18 @@
             {
               "id": "4249087",
               "name": "Matt Gay",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2019,
+              "experience": 7,
+              "draftedBy": "2019: Rd 5, Pk 145 (TB)"
             },
             {
               "id": "4428718",
               "name": "Tre Tucker",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 100 (LV)"
             }
           ],
           "rank": 25,
@@ -3018,32 +3693,50 @@
             {
               "id": "4242512",
               "name": "Malik Willis",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 86 (TEN)"
             },
             {
               "id": "4429160",
               "name": "De'Von Achane",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 84 (MIA)"
             },
             {
               "id": "4569603",
               "name": "Malik Washington",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 184 (MIA)"
             },
             {
               "id": "4249417",
               "name": "Jalen Tolbert",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 88 (DAL)"
             },
             {
               "id": "4367209",
               "name": "Greg Dulcich",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 80 (DEN)"
             },
             {
               "id": "4567493",
               "name": "Patrick Paul",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 55 (MIA)"
             }
           ],
           "rank": 25,
@@ -3095,27 +3788,42 @@
             {
               "id": "4431586",
               "name": "Chop Robinson",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 21 (MIA)"
             },
             {
               "id": "4046528",
               "name": "Josh Uche",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 60 (NE)"
             },
             {
               "id": "4879212",
               "name": "Trey Moore",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 4, Pk 130 (MIA)"
             },
             {
               "id": "4432730",
               "name": "Jason Marshall Jr.",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 150 (MIA)"
             },
             {
               "id": "4360488",
               "name": "JuJu Brents",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 44 (IND)"
             }
           ],
           "rank": 24,
@@ -3140,12 +3848,18 @@
             {
               "id": "4243371",
               "name": "Riley Patterson",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": null
             },
             {
               "id": "4569603",
               "name": "Malik Washington",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 184 (MIA)"
             }
           ],
           "rank": 4,
@@ -3176,32 +3890,50 @@
             {
               "id": "3917315",
               "name": "Kyler Murray",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 1 (ARI)"
             },
             {
               "id": "3042519",
               "name": "Aaron Jones Sr.",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 5, Pk 182 (GB)"
             },
             {
               "id": "4262921",
               "name": "Justin Jefferson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 22 (MIN)"
             },
             {
               "id": "4429205",
               "name": "Jordan Addison",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 23 (MIN)"
             },
             {
               "id": "4036133",
               "name": "T.J. Hockenson",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 8 (DET)"
             },
             {
               "id": "4361985",
               "name": "Christian Darrisaw",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 23 (MIN)"
             }
           ],
           "rank": 26,
@@ -3245,7 +3977,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -3253,27 +3985,42 @@
             {
               "id": "5093973",
               "name": "Levi Drake Rodriguez",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 7, Pk 232 (MIN)"
             },
             {
               "id": "4360277",
               "name": "Jalen Redmond",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": null
             },
             {
               "id": "4565190",
               "name": "Dallas Turner",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 17 (MIN)"
             },
             {
               "id": "4044540",
               "name": "Isaiah Rodgers",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2020,
+              "experience": 6,
+              "draftedBy": "2020: Rd 6, Pk 211 (IND)"
             },
             {
               "id": "4259252",
               "name": "James Pierre",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             }
           ],
           "rank": 7,
@@ -3298,12 +4045,18 @@
             {
               "id": "4567104",
               "name": "Will Reichard",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 203 (MIN)"
             },
             {
               "id": "4430656",
               "name": "Myles Price",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             }
           ],
           "rank": 3,
@@ -3334,32 +4087,50 @@
             {
               "id": "4431452",
               "name": "Drake Maye",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 3 (NE)"
             },
             {
               "id": "4569173",
               "name": "Rhamondre Stevenson",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 120 (NE)"
             },
             {
               "id": "4047646",
               "name": "A.J. Brown",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 2, Pk 51 (TEN)"
             },
             {
               "id": "4361432",
               "name": "Romeo Doubs",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 132 (GB)"
             },
             {
               "id": "3046439",
               "name": "Hunter Henry",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 2, Pk 35 (SD)"
             },
             {
               "id": "4685298",
               "name": "Will Campbell",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 4 (NE)"
             }
           ],
           "rank": 2,
@@ -3403,7 +4174,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -3411,27 +4182,42 @@
             {
               "id": "4372030",
               "name": "Christian Barmore",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 38 (NE)"
             },
             {
               "id": "4239699",
               "name": "Milton Williams",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 73 (PHI)"
             },
             {
               "id": "3915525",
               "name": "Dre'Mont Jones",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 71 (DEN)"
             },
             {
               "id": "3916923",
               "name": "Carlton Davis III",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2018,
+              "experience": 8,
+              "draftedBy": "2018: Rd 2, Pk 63 (TB)"
             },
             {
               "id": "4686772",
               "name": "Christian Gonzalez",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 17 (NE)"
             }
           ],
           "rank": 4,
@@ -3456,12 +4242,18 @@
             {
               "id": "4569923",
               "name": "Andy Borregales",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 6, Pk 182 (NE)"
             },
             {
               "id": "4613202",
               "name": "Kyle Williams",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 69 (NE)"
             }
           ],
           "rank": 19,
@@ -3492,32 +4284,50 @@
             {
               "id": "4360689",
               "name": "Tyler Shough",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 40 (NO)"
             },
             {
               "id": "4239996",
               "name": "Travis Etienne Jr.",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 25 (JAX)"
             },
             {
               "id": "4361370",
               "name": "Chris Olave",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 11 (NO)"
             },
             {
               "id": "4880281",
               "name": "Jordyn Tyson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 8 (NO)"
             },
             {
               "id": "3929645",
               "name": "Juwan Johnson",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             },
             {
               "id": "4685260",
               "name": "Kelvin Banks Jr.",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 9 (NO)"
             }
           ],
           "rank": 28,
@@ -3561,7 +4371,7 @@
             }
           },
           "passPlayShare": 62.1,
-          "passPlayShareRank": 7,
+          "passPlayShareRank": 6,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -3569,27 +4379,42 @@
             {
               "id": "13971",
               "name": "Cameron Jordan",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2011,
+              "experience": 16,
+              "draftedBy": "2011: Rd 1, Pk 24 (NO)"
             },
             {
               "id": "4248047",
               "name": "John Ridgeway III",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 178 (DAL)"
             },
             {
               "id": "4241986",
               "name": "Chase Young",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 2 (WSH)"
             },
             {
               "id": "4433975",
               "name": "Kool-Aid McKinstry",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 41 (NO)"
             },
             {
               "id": "4428350",
               "name": "Quincy Riley",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 131 (NO)"
             }
           ],
           "rank": 16,
@@ -3614,12 +4439,18 @@
             {
               "id": "5208518",
               "name": "Charlie Smyth",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             },
             {
               "id": "4698597",
               "name": "Barion Brown",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 6, Pk 190 (NO)"
             }
           ],
           "rank": 32,
@@ -3650,32 +4481,50 @@
             {
               "id": "4689114",
               "name": "Jaxson Dart",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 25 (NYG)"
             },
             {
               "id": "4696981",
               "name": "Cam Skattebo",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 105 (NYG)"
             },
             {
               "id": "4595348",
               "name": "Malik Nabers",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 6 (NYG)"
             },
             {
               "id": "3916945",
               "name": "Darius Slayton",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 5, Pk 171 (NYG)"
             },
             {
               "id": "4361050",
               "name": "Isaiah Likely",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 139 (BAL)"
             },
             {
               "id": "4259566",
               "name": "Andrew Thomas",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 4 (NYG)"
             }
           ],
           "rank": 17,
@@ -3727,27 +4576,42 @@
             {
               "id": "16837",
               "name": "Shelby Harris",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2014,
+              "experience": 12,
+              "draftedBy": "2014: Rd 7, Pk 235 (OAK)"
             },
             {
               "id": "4426542",
               "name": "Darius Alexander",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 65 (NYG)"
             },
             {
               "id": "4725996",
               "name": "Abdul Carter",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 3 (NYG)"
             },
             {
               "id": "4242547",
               "name": "Paulson Adebo",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 76 (NO)"
             },
             {
               "id": "4361266",
               "name": "Greg Newsome II",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 26 (CLE)"
             }
           ],
           "rank": 26,
@@ -3772,12 +4636,18 @@
             {
               "id": "4566158",
               "name": "Ben Sauls",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 1,
+              "draftedBy": null
             },
             {
               "id": "4428328",
               "name": "Deonte Banks",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
             }
           ],
           "rank": 11,
@@ -3808,32 +4678,50 @@
             {
               "id": "15864",
               "name": "Geno Smith",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2013,
+              "experience": 14,
+              "draftedBy": "2013: Rd 2, Pk 39 (NYJ)"
             },
             {
               "id": "4427366",
               "name": "Breece Hall",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 36 (NYJ)"
             },
             {
               "id": "4569618",
               "name": "Garrett Wilson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 10 (NYJ)"
             },
             {
               "id": "4597500",
               "name": "Adonai Mitchell",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 52 (IND)"
             },
             {
               "id": "5083315",
               "name": "Kenyon Sadiq",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 16 (NYJ)"
             },
             {
               "id": "4431809",
               "name": "Olu Fashanu",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 11 (NYJ)"
             }
           ],
           "rank": 29,
@@ -3885,27 +4773,42 @@
             {
               "id": "4362840",
               "name": "Kingsley Enagbare",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 179 (GB)"
             },
             {
               "id": "4361767",
               "name": "Will McDonald IV",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 15 (NYJ)"
             },
             {
               "id": "4700136",
               "name": "Kiko Mauigoa",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 162 (NYJ)"
             },
             {
               "id": "4570470",
               "name": "Nahshon Wright",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 99 (DAL)"
             },
             {
               "id": "4035824",
               "name": "Brandon Stephens",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 104 (BAL)"
             }
           ],
           "rank": 31,
@@ -3930,12 +4833,18 @@
             {
               "id": "3124679",
               "name": "Jason Sanders",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 7, Pk 229 (MIA)"
             },
             {
               "id": "4035537",
               "name": "Kene Nwangwu",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 119 (MIN)"
             }
           ],
           "rank": 1,
@@ -3966,32 +4875,50 @@
             {
               "id": "4040715",
               "name": "Jalen Hurts",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 53 (PHI)"
             },
             {
               "id": "3929630",
               "name": "Saquon Barkley",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 2 (NYG)"
             },
             {
               "id": "4241478",
               "name": "DeVonta Smith",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 10 (PHI)"
             },
             {
               "id": "4428850",
               "name": "Dontayvion Wicks",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 5, Pk 159 (GB)"
             },
             {
               "id": "3121023",
               "name": "Dallas Goedert",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 2, Pk 49 (PHI)"
             },
             {
               "id": "4334215",
               "name": "Jordan Mailata",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 7, Pk 233 (PHI)"
             }
           ],
           "rank": 19,
@@ -4035,7 +4962,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -4043,27 +4970,42 @@
             {
               "id": "4685759",
               "name": "Jalen Carter",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 9 (PHI)"
             },
             {
               "id": "4362116",
               "name": "Moro Ojomo",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 7, Pk 249 (PHI)"
             },
             {
               "id": "3916409",
               "name": "Jonathan Greenard",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 3, Pk 90 (HOU)"
             },
             {
               "id": "4245185",
               "name": "Riq Woolen",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 153 (SEA)"
             },
             {
               "id": "4686273",
               "name": "Quinyon Mitchell",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 22 (PHI)"
             }
           ],
           "rank": 5,
@@ -4088,12 +5030,18 @@
             {
               "id": "3050478",
               "name": "Jake Elliott",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 5, Pk 153 (CIN)"
             },
             {
               "id": "4431545",
               "name": "Will Shipley",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 127 (PHI)"
             }
           ],
           "rank": 31,
@@ -4124,32 +5072,50 @@
             {
               "id": "8439",
               "name": "Aaron Rodgers",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2005,
+              "experience": 22,
+              "draftedBy": "2005: Rd 1, Pk 24 (GB)"
             },
             {
               "id": "4569987",
               "name": "Jaylen Warren",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             },
             {
               "id": "4047650",
               "name": "DK Metcalf",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 2, Pk 64 (SEA)"
             },
             {
               "id": "4035687",
               "name": "Michael Pittman Jr.",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 34 (IND)"
             },
             {
               "id": "4361411",
               "name": "Pat Freiermuth",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 55 (PIT)"
             },
             {
               "id": "4427170",
               "name": "Troy Fautanu",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 20 (PIT)"
             }
           ],
           "rank": 15,
@@ -4193,7 +5159,7 @@
             }
           },
           "passPlayShare": 60.1,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 21
         },
         "defence": {
@@ -4201,27 +5167,42 @@
             {
               "id": "4682980",
               "name": "Derrick Harmon",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 21 (PIT)"
             },
             {
               "id": "13977",
               "name": "Cameron Heyward",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2011,
+              "experience": 16,
+              "draftedBy": "2011: Rd 1, Pk 31 (PIT)"
             },
             {
               "id": "4037333",
               "name": "Alex Highsmith",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 3, Pk 102 (PIT)"
             },
             {
               "id": "4426506",
               "name": "Joey Porter Jr.",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 32 (PIT)"
             },
             {
               "id": "3873935",
               "name": "Jamel Dean",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 94 (TB)"
             }
           ],
           "rank": 17,
@@ -4246,12 +5227,18 @@
             {
               "id": "17372",
               "name": "Chris Boswell",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2014,
+              "experience": 12,
+              "draftedBy": null
             },
             {
               "id": "5081338",
               "name": "Kaden Wetjen",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 4, Pk 121 (PIT)"
             }
           ],
           "rank": 20,
@@ -4282,32 +5269,50 @@
             {
               "id": "3912547",
               "name": "Sam Darnold",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 3 (NYJ)"
             },
             {
               "id": "4426385",
               "name": "Zach Charbonnet",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 2, Pk 52 (SEA)"
             },
             {
               "id": "4430878",
               "name": "Jaxon Smith-Njigba",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 20 (SEA)"
             },
             {
               "id": "4032473",
               "name": "Rashid Shaheed",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             },
             {
               "id": "4576297",
               "name": "AJ Barner",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 121 (SEA)"
             },
             {
               "id": "4426376",
               "name": "Charles Cross",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 9 (SEA)"
             }
           ],
           "rank": 3,
@@ -4359,27 +5364,42 @@
             {
               "id": "2971622",
               "name": "Leonard Williams",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": "2015: Rd 1, Pk 6 (NYJ)"
             },
             {
               "id": "3115312",
               "name": "Jarran Reed",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 2, Pk 49 (SEA)"
             },
             {
               "id": "3120358",
               "name": "Uchenna Nwosu",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 2, Pk 48 (LAC)"
             },
             {
               "id": "4575431",
               "name": "Devon Witherspoon",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 5 (SEA)"
             },
             {
               "id": "4372020",
               "name": "Josh Jobe",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             }
           ],
           "rank": 1,
@@ -4404,12 +5424,18 @@
             {
               "id": "2473037",
               "name": "Jason Myers",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": null
             },
             {
               "id": "4032473",
               "name": "Rashid Shaheed",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             }
           ],
           "rank": 17,
@@ -4440,32 +5466,50 @@
             {
               "id": "4361741",
               "name": "Brock Purdy",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 7, Pk 262 (SF)"
             },
             {
               "id": "3117251",
               "name": "Christian McCaffrey",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 1, Pk 8 (CAR)"
             },
             {
               "id": "16737",
               "name": "Mike Evans",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2014,
+              "experience": 13,
+              "draftedBy": "2014: Rd 1, Pk 7 (TB)"
             },
             {
               "id": "3126486",
               "name": "Deebo Samuel Sr.",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 2, Pk 36 (SF)"
             },
             {
               "id": "3040151",
               "name": "George Kittle",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 5, Pk 146 (SF)"
             },
             {
               "id": "13241",
               "name": "Trent Williams",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2010,
+              "experience": 17,
+              "draftedBy": "2010: Rd 1, Pk 4 (WSH)"
             }
           ],
           "rank": 10,
@@ -4517,27 +5561,42 @@
             {
               "id": "4686308",
               "name": "C.J. West",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 113 (SF)"
             },
             {
               "id": "4035840",
               "name": "Osa Odighizuwa",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 75 (DAL)"
             },
             {
               "id": "4685623",
               "name": "Mykel Williams",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 11 (SF)"
             },
             {
               "id": "4242488",
               "name": "Deommodore Lenoir",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 5, Pk 172 (SF)"
             },
             {
               "id": "4427325",
               "name": "Renardo Green",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 64 (SF)"
             }
           ],
           "rank": 13,
@@ -4562,12 +5621,18 @@
             {
               "id": "4034949",
               "name": "Eddy Pineiro",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": null
             },
             {
               "id": "4372561",
               "name": "Isaac Guerendo",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 129 (SF)"
             }
           ],
           "rank": 7,
@@ -4598,32 +5663,50 @@
             {
               "id": "3052587",
               "name": "Baker Mayfield",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 1, Pk 1 (CLE)"
             },
             {
               "id": "4596448",
               "name": "Bucky Irving",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 125 (TB)"
             },
             {
               "id": "4567750",
               "name": "Emeka Egbuka",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 19 (TB)"
             },
             {
               "id": "3116165",
               "name": "Chris Godwin Jr.",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": "2017: Rd 3, Pk 84 (TB)"
             },
             {
               "id": "4243331",
               "name": "Cade Otton",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 106 (TB)"
             },
             {
               "id": "4240589",
               "name": "Tristan Wirfs",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 13 (TB)"
             }
           ],
           "rank": 18,
@@ -4667,7 +5750,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 55
         },
         "defence": {
@@ -4675,27 +5758,42 @@
             {
               "id": "4690795",
               "name": "Elijah Roberts",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 157 (TB)"
             },
             {
               "id": "3054857",
               "name": "A'Shawn Robinson",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 2, Pk 46 (DET)"
             },
             {
               "id": "4686334",
               "name": "Yaya Diaby",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 82 (TB)"
             },
             {
               "id": "4250392",
               "name": "Zyon McCollum",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 157 (TB)"
             },
             {
               "id": "4816107",
               "name": "Benjamin Morrison",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 53 (TB)"
             }
           ],
           "rank": 20,
@@ -4720,12 +5818,18 @@
             {
               "id": "3150744",
               "name": "Chase McLaughlin",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "4371733",
               "name": "Kenny Gainwell",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 5, Pk 150 (PHI)"
             }
           ],
           "rank": 21,
@@ -4756,32 +5860,50 @@
             {
               "id": "4688380",
               "name": "Cam Ward",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 1 (TEN)"
             },
             {
               "id": "3916148",
               "name": "Tony Pollard",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 4, Pk 128 (DAL)"
             },
             {
               "id": "4871023",
               "name": "Carnell Tate",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 4 (TEN)"
             },
             {
               "id": "4569587",
               "name": "Wan'Dale Robinson",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 43 (NYG)"
             },
             {
               "id": "4686728",
               "name": "Gunnar Helm",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 120 (TEN)"
             },
             {
               "id": "4240920",
               "name": "Dan Moore Jr.",
-              "label": "OT"
+              "label": "OT",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 128 (PIT)"
             }
           ],
           "rank": 30,
@@ -4833,27 +5955,42 @@
             {
               "id": "3120464",
               "name": "John Franklin-Myers",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 4, Pk 135 (LAR)"
             },
             {
               "id": "4567962",
               "name": "Jermaine Johnson II",
-              "label": "DE"
+              "label": "DE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 26 (NYJ)"
             },
             {
               "id": "4431613",
               "name": "James Williams Sr.",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 7, Pk 242 (TEN)"
             },
             {
               "id": "4429607",
               "name": "Cor'Dale Flott",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 81 (NYG)"
             },
             {
               "id": "4369835",
               "name": "Alontae Taylor",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 49 (NO)"
             }
           ],
           "rank": 28,
@@ -4878,12 +6015,18 @@
             {
               "id": "3124084",
               "name": "Joey Slye",
-              "label": "K"
+              "label": "K",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "4431268",
               "name": "Chimere Dike",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 103 (TEN)"
             }
           ],
           "rank": 26,
@@ -4914,32 +6057,50 @@
             {
               "id": "4426348",
               "name": "Jayden Daniels",
-              "label": "QB"
+              "label": "QB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 2 (WSH)"
             },
             {
               "id": "4575131",
               "name": "Jacory Croskey-Merritt",
-              "label": "RB"
+              "label": "RB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 7, Pk 245 (WSH)"
             },
             {
               "id": "3121422",
               "name": "Terry McLaurin",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 3, Pk 76 (WSH)"
             },
             {
               "id": "2976212",
               "name": "Stefon Diggs",
-              "label": "WR"
+              "label": "WR",
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": "2015: Rd 5, Pk 146 (MIN)"
             },
             {
               "id": "4360635",
               "name": "Chig Okonkwo",
-              "label": "TE"
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 143 (TEN)"
             },
             {
               "id": "3042702",
               "name": "Andrew Wylie",
-              "label": "G"
+              "label": "G",
+              "debutYear": 2017,
+              "experience": 9,
+              "draftedBy": null
             }
           ],
           "rank": 22,
@@ -4991,27 +6152,42 @@
             {
               "id": "3929956",
               "name": "Tim Settle",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 5, Pk 163 (WSH)"
             },
             {
               "id": "4259491",
               "name": "Javon Kinlaw",
-              "label": "DT"
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 14 (SF)"
             },
             {
               "id": "4242205",
               "name": "K'Lavon Chaisson",
-              "label": "LB"
+              "label": "LB",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 20 (JAX)"
             },
             {
               "id": "4574689",
               "name": "Trey Amos",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 61 (WSH)"
             },
             {
               "id": "4428414",
               "name": "Mike Sainristil",
-              "label": "CB"
+              "label": "CB",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 2, Pk 50 (WSH)"
             }
           ],
           "rank": 27,
@@ -5036,12 +6212,18 @@
             {
               "id": "5081335",
               "name": "Drew Stevens",
-              "label": "K"
+              "label": "K",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": null
             },
             {
               "id": "4426948",
               "name": "Luke McCaffrey",
-              "label": "KR"
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 100 (WSH)"
             }
           ],
           "rank": 29,

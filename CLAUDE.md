@@ -241,6 +241,21 @@ logos (§10). ESPN's combiner resizes them — `?img=/i/headshots/nfl/players/fu
 turns 600×436 / 283KB into 160×160 / 28KB — which is what makes bundling one
 per person named in a move affordable.
 
+**A number can be true and still be the wrong thing to say.** Buffalo ranked
+first in the league in rushing attempts last season. Adjusting for Josh Allen's
+own 112 carries and for sacks still left them 28th of 32 in pass share, and the
+neutral-down data agrees — they passed on 33.3% of neutral first downs, the
+lowest rate in football. So "run-heavy" survives every check.
+
+It was still the wrong thing to tell a newcomer, because that identity was Sean
+McDermott's and he was fired in January. Reporting expects Joe Brady to open it
+up. Last season's numbers described a team coached by someone who no longer
+works there.
+
+This is why generated notes are allowed to reason rather than only report:
+facts must come from the evidence, but the reading is the model's, and a
+coaching change is licence to treat last year's tendencies as the old regime's.
+
 **A profile line characterises, but only from supplied evidence.** The first
 version banned characterisation and produced database rows — "picked seventh
 overall in 2018" — which is true and useless. What a newcomer needs is that

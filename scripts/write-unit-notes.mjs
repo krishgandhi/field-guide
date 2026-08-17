@@ -36,7 +36,7 @@ const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 2;
+const PROMPT_VERSION = 3;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -86,9 +86,13 @@ function evidenceFor(teamId, team, unit) {
           quarterbackOwnCarries: u.quarterbackCarries,
         }
       : {}),
-    keyPlayers: (u.players ?? []).map(
-      (p) => `${p.label} ${p.name}`,
-    ),
+    keyPlayers: (u.players ?? []).map((p) => ({
+      position: p.label,
+      name: p.name,
+      // "(CAR)" on a player now in Buffalo is a sourced hint that he came from
+      // elsewhere. It does NOT say when, and the brief forbids guessing.
+      drafted: p.draftedBy ?? null,
+    })),
     headCoach: team.coach?.name ?? null,
     recentMovesInvolvingThisTeam: movesFor(teamId),
   };
@@ -126,7 +130,19 @@ const client = new Anthropic();
 
 const SYSTEM = `You describe one unit of an NFL team — its offence, its defence or its special teams — to someone who has watched a bit of football but does not follow it closely.
 
-You get that unit's league ranks out of 32, its key players, the head coach, and summaries of recent moves involving the team from this site. That is your evidence. You have no other knowledge and must not use any you think you have.
+You get that unit's league ranks out of 32, its key players with where each was drafted, the head coach, and summaries of recent moves involving the team from this site.
+
+There are two different rules for facts and for reading them.
+
+FACTS MUST COME FROM THE EVIDENCE. Every number, player name, award, coaching change and transaction you mention has to be in what you were given. You may not add one from memory.
+
+THE READING IS YOURS. You may interpret what the numbers imply, connect them to a coaching change, and say what looks likely to change. That is the job — a list of ranks is not worth reading.
+
+Two things follow from that, and they matter:
+
+1. THE STATISTICS DESCRIBE LAST SEASON. If the evidence shows the head coach changed, last season's tendencies belong to the previous regime and you should say so rather than presenting them as what this team is. A note that describes a team as its fired coach built it is worse than useless to someone about to talk about this year.
+
+2. NEVER SAY A PLAYER IS NEW, WAS SIGNED, OR WAS TRADED unless that move appears in recentMovesInvolvingThisTeam. If a key player was drafted by a different club, you know only that he arrived from somewhere at some point — you may say he "came from" that team, never when or how. Guessing a transaction is the one mistake that makes this site untrustworthy.
 
 For an offence you also get passPlaySharePct: the share of plays that were pass plays, already adjusted for sacks and for the quarterback's own carries, with the league median for comparison. USE THIS, not your instincts, to judge whether a team leans run or pass. It is the honest version — raw carry counts are inflated by quarterback scrambles and by teams running out the clock when ahead.
 
@@ -136,7 +152,7 @@ The useful things to say, when the evidence supports them:
 - How they play, judged from passPlaySharePct against the league median. A team well below the median leans on the run; well above, they throw. Close to it, say nothing about balance — most teams are unremarkable here and pretending otherwise is worse than silence.
 - If quarterbackOwnCarries is high, the interesting fact is that the quarterback is a major part of the running game, NOT that the team is run-heavy.
 - Who it runs through. Name the player the unit is built around if the evidence points at one.
-- What just changed. If a recent move brought someone in, lost someone, or changed the coach, that is often the most interesting thing about the unit this year.
+- What just changed, and what it points to. A new head coach, a move in the list, or a key player drafted elsewhere are all signals about direction. A unit that ran a lot under a coach who has since been fired may not run a lot now, and saying so is more useful than repeating last year's split.
 
 Hard rules:
 - Never state a number that is not in the evidence. Prefer plain words: "ran the ball more than any other team" rather than "547 carries".

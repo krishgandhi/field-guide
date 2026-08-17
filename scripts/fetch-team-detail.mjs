@@ -29,6 +29,7 @@ const SITE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
 const ATHLETE_OVERVIEW =
   "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 const OUT = "src/data/team-detail.json";
+const DRAFTS = "src/data/draft-origins.json";
 const SEASON = 2026;
 
 const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
@@ -83,6 +84,10 @@ async function rosterIndex(abbr) {
         out.set(String(a.id), {
           name: a.fullName ?? a.displayName ?? null,
           position: a.position?.abbreviation ?? null,
+          // Free in this payload, and useful context: a rookie and a
+          // ten-year veteran at the same slot mean very different things.
+          debutYear: a.debutYear ?? null,
+          experience: a.experience?.years ?? null,
         });
       }
     }
@@ -129,6 +134,8 @@ async function depthChart(espnId, roster) {
           id,
           name: person.name,
           label: useRole ? label : person.position ?? label,
+          debutYear: person.debutYear,
+          experience: person.experience,
         });
       }
     }
@@ -219,6 +226,36 @@ function passRate({ rushAttempts, passAttempts, sacks, qbRushAttempts }) {
   const plays = dropbacks + designedRuns;
   if (!plays) return null;
   return Math.round((dropbacks / plays) * 1000) / 10;
+}
+
+/**
+ * Which club drafted a player, cached across runs.
+ *
+ * A grounded hint that someone arrived from elsewhere: "2018: Rd 1, Pk 24
+ * (CAR)" on a player now in Buffalo says he came from somewhere, without
+ * claiming when. It is the honest half of the DJ Moore question — his ARRIVAL
+ * isn't sourceable anywhere in our data, but his origin is.
+ *
+ * Cached because there are roughly 400 key players league-wide and their draft
+ * position never changes. First run pays; later runs don't.
+ */
+const draftCache = existsSync(DRAFTS)
+  ? JSON.parse(readFileSync(DRAFTS, "utf8"))
+  : {};
+let draftFetches = 0;
+
+async function draftedBy(athleteId) {
+  if (!athleteId) return null;
+  if (athleteId in draftCache) return draftCache[athleteId];
+  try {
+    const d = await getJson(`${ATHLETE_OVERVIEW}/${athleteId}`);
+    const a = d.athlete ?? d;
+    draftCache[athleteId] = a.displayDraft ?? null;
+  } catch {
+    draftCache[athleteId] = null;
+  }
+  draftFetches++;
+  return draftCache[athleteId];
 }
 
 /** The starting quarterback's own carries, so they can be taken back out. */
@@ -357,6 +394,10 @@ for (const team of TEAMS) {
       headCoach(team.espnId).catch(() => null),
       teamStats(team.espnId, statsSeason),
     ]);
+    for (const unit of Object.values(units)) {
+      for (const player of unit) player.draftedBy = await draftedBy(player.id);
+    }
+
     const qbId = (units.offence ?? []).find((p) => p.label === "QB")?.id;
     const qbCarries = await qbRushing(qbId);
 
@@ -451,6 +492,8 @@ for (const team of TEAMS) {
 }
 
 mkdirSync("src/data", { recursive: true });
+writeFileSync(DRAFTS, `${JSON.stringify(draftCache, null, 2)}\n`);
+if (draftFetches) console.log(`\nLooked up ${draftFetches} new draft origins.`);
 writeFileSync(
   OUT,
   `${JSON.stringify(
