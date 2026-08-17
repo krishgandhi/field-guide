@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T12:46:38.640Z",
+  "fetchedAt": "2026-08-17T12:53:21.841Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -83,7 +83,10 @@
           },
           "passPlayShare": 68.3,
           "passPlayShareRank": 1,
-          "quarterbackCarries": 38
+          "quarterbackCarries": 38,
+          "blurb": "They threw the ball more often than anyone else in the league, and it showed in the touchdown split — plenty through the air, hardly any on the ground, with Trey McBride and Marvin Harrison Jr. the main targets for Jacoby Brissett.",
+          "blurbHash": "c54bb28d7449f8c3",
+          "promptVersion": 1
         },
         "defence": {
           "players": [
@@ -126,7 +129,7 @@
               "rank": 19
             }
           },
-          "blurb": "A defence that rarely gets to the quarterback, leaning on a young cornerback pairing of Will Johnson and Denzel Burke behind pass rushers Josh Sweat and Darius Robinson.",
+          "blurb": "A unit that struggles to get to the quarterback despite paying for pass rushers like Josh Sweat, and takes the ball away only about as often as the average team.",
           "blurbHash": "2d710a6e7b7ad197",
           "promptVersion": 1
         },
@@ -152,7 +155,7 @@
               "rank": 4
             }
           },
-          "blurb": "Chad Ryland has been reliable on field goals; little else here stands out, good or bad.",
+          "blurb": "Chad Ryland has been reliable enough on field goals; the trouble sits everywhere else in the kicking game, with Devin Duvernay handling returns.",
           "blurbHash": "dc724113acf21eb5",
           "promptVersion": 1
         }
@@ -239,7 +242,7 @@
           "passPlayShare": 55.5,
           "passPlayShareRank": 27,
           "quarterbackCarries": 20,
-          "blurb": "They run more than most teams do, and it goes through Bijan Robinson. Tua Tagovailoa throws mainly to Drake London, under new head coach Kevin Stefanski.",
+          "blurb": "They run more than most teams do, leaning on Bijan Robinson, and Tua Tagovailoa's passing rarely finds the end zone — Drake London aside, there's little threat downfield. Kevin Stefanski is the new head coach.",
           "blurbHash": "890446c2b985b300",
           "promptVersion": 1
         },
@@ -283,7 +286,10 @@
               "value": "23",
               "rank": 7
             }
-          }
+          },
+          "blurb": "Built on pressure — they got to the quarterback more than almost anyone and took the ball away often, with A.J. Terrell holding up behind a rotating cast of pass rushers.",
+          "blurbHash": "55a595e3ab70e157",
+          "promptVersion": 1
         },
         "specialTeams": {
           "players": [
@@ -307,7 +313,7 @@
               "rank": 10
             }
           },
-          "blurb": "Veteran kicker Nick Folk plus rookie returner Zachariah Branch; nothing here that clearly defines the unit.",
+          "blurb": "Nick Folk is steady on field goals and Zachariah Branch brings speed to returns, but nothing else here stands out.",
           "blurbHash": "f50b81677870a06d",
           "promptVersion": 1
         }
@@ -394,7 +400,7 @@
           "passPlayShare": 51.5,
           "passPlayShareRank": 32,
           "quarterbackCarries": 67,
-          "blurb": "No team passed less often. It's a running offence through Derrick Henry and Lamar Jackson himself, who carried it a lot, and they've lost centre Tyler Linderbaum and changed head coach.",
+          "blurb": "The most run-leaning offence in the league, and it works — nobody gained more per carry, with Derrick Henry carrying and Lamar Jackson himself a big part of the running game.",
           "blurbHash": "c6a7582bea605309",
           "promptVersion": 1
         },
@@ -439,7 +445,7 @@
               "rank": 15
             }
           },
-          "blurb": "Full of names — Madubuike, Campbell, Hendrickson, Humphrey — but the sack numbers say the pressure hasn't come, and new coach Jesse Minter inherits it.",
+          "blurb": "Plenty of names up front, including Trey Hendrickson and Nnamdi Madubuike, yet the pass rush produced very little; the young cornerback pairing of Nate Wiggins and Marlon Humphrey is the strength.",
           "blurbHash": "085c358a1dbdcc9b",
           "promptVersion": 1
         },
@@ -465,7 +471,7 @@
               "rank": 9
             }
           },
-          "blurb": "Young kicker Tyler Loop has been accurate; otherwise a fairly ordinary group.",
+          "blurb": "An unremarkable group whose most dependable feature is Tyler Loop's kicking.",
           "blurbHash": "1a8f33d0ded0e680",
           "promptVersion": 1
         }
@@ -552,7 +558,7 @@
           "passPlayShare": 55.2,
           "passPlayShareRank": 28,
           "quarterbackCarries": 112,
-          "blurb": "They pass less than most, partly because Josh Allen runs it himself so often, and they score touchdowns on the ground as well as anyone. Joe Brady has been promoted to head coach.",
+          "blurb": "They run more than most and score on the ground better than anyone, largely because Josh Allen keeps the ball himself so often — well over a hundred carries of his own — alongside James Cook.",
           "blurbHash": "91fedbc1ddc883df",
           "promptVersion": 1
         },
@@ -597,7 +603,7 @@
               "rank": 15
             }
           },
-          "blurb": "A defence that gets by without much of a pass rush, relying on cornerbacks Christian Benford and Maxwell Hairston to force the mistakes.",
+          "blurb": "A middling group that neither pressures the quarterback much nor forces many mistakes, though the cornerbacks Christian Benford and Maxwell Hairston give it a solid back end.",
           "blurbHash": "bed0ed4f30d9d0e6",
           "promptVersion": 1
         },
@@ -623,7 +629,7 @@
               "rank": 3
             }
           },
-          "blurb": "Tyler Bass has been among the most accurate kickers in the league, which is most of what this unit is.",
+          "blurb": "A dependable unit whose strongest piece is Tyler Bass, one of the more accurate kickers on field goals.",
           "blurbHash": "7262fb870f5bd4b1",
           "promptVersion": 1
         }
@@ -710,7 +716,7 @@
           "passPlayShare": 57.5,
           "passPlayShareRank": 22,
           "quarterbackCarries": 54,
-          "blurb": "A run-leaning offence by modern standards, and one that struggles to gain much through the air with Bryce Young, though Chuba Hubbard's carries at least move the chains. Rookie receiver Tetairoa McMillan is the new piece to watch.",
+          "blurb": "A young passing game still finding its feet — Bryce Young's throws gained less than almost anyone's, with rookie receiver Tetairoa McMillan and Chuba Hubbard the main outlets. Balance between run and pass is about league-normal.",
           "blurbHash": "e7ca366f85e3b8e3",
           "promptVersion": 1
         },
@@ -755,7 +761,7 @@
               "rank": 10
             }
           },
-          "blurb": "A defence that gets its hands on the ball reasonably often but almost never gets to the quarterback, so the pressure has to come from Derrick Brown pushing up the middle.",
+          "blurb": "A defence that takes the ball away at a healthy rate but gets very little pressure on the quarterback, leaning on Derrick Brown inside and Jaycee Horn in coverage.",
           "blurbHash": "c4124c7d455467ca",
           "promptVersion": 1
         },
@@ -781,7 +787,7 @@
               "rank": 8
             }
           },
-          "blurb": "Reliable kicking from Ryan Fitzgerald is the one clear strength; the rest of the return and coverage work drags the unit down.",
+          "blurb": "Ryan Fitzgerald has been reliable on field goals; beyond the kicking there's little here that stands out either way.",
           "blurbHash": "8dcc1dfe916d9e66",
           "promptVersion": 1
         }
@@ -868,7 +874,7 @@
           "passPlayShare": 58.3,
           "passPlayShareRank": 21,
           "quarterbackCarries": 77,
-          "blurb": "Ben Johnson's offence runs the ball as well as almost anyone and hardly ever turns it over, with Caleb Williams himself a big part of the running game alongside D'Andre Swift.",
+          "blurb": "Ben Johnson's first-year offence runs the ball as well as anyone and barely ever gives it away, with Caleb Williams himself a regular carrier alongside D'Andre Swift.",
           "blurbHash": "4a3fe1597a086ba5",
           "promptVersion": 1
         },
@@ -913,7 +919,7 @@
               "rank": 1
             }
           },
-          "blurb": "A defence that lives on taking the ball away — nobody forced more turnovers — while rarely sacking the quarterback, so it swings between big plays and long drives allowed.",
+          "blurb": "A ball-hawking group that takes the ball away more often than any other defence, but doesn't get to the quarterback much, with Jaylon Johnson leading the back end.",
           "blurbHash": "4de364d3d41a4ba1",
           "promptVersion": 1
         },
@@ -939,7 +945,7 @@
               "rank": 6
             }
           },
-          "blurb": "Cairo Santos is dependable on field goals; beyond the kicking there's little that stands out either way.",
+          "blurb": "Cairo Santos keeps making his field goals; the rest of the unit is fairly ordinary.",
           "blurbHash": "c8298d08f57810d1",
           "promptVersion": 1
         }
@@ -1026,7 +1032,7 @@
           "passPlayShare": 64.8,
           "passPlayShareRank": 3,
           "quarterbackCarries": 14,
-          "blurb": "One of the most pass-happy offences in the league, built around Joe Burrow throwing to Ja'Marr Chase and Tee Higgins. Plenty of touchdowns through the air, but the running game and the turnovers are a problem.",
+          "blurb": "One of the most pass-leaning offences in the league, funnelled through Joe Burrow to Ja'Marr Chase and Tee Higgins — lots of touchdowns through the air, very little on the ground.",
           "blurbHash": "10b938be5a73057e",
           "promptVersion": 1
         },
@@ -1071,7 +1077,7 @@
               "rank": 10
             }
           },
-          "blurb": "A defence with little pass rush and a young secondary, giving up ground steadily even though it forces a fair number of turnovers.",
+          "blurb": "A defence that forces a fair number of turnovers but rarely pressures the quarterback, with a thin, young pass rush around Boye Mafe.",
           "blurbHash": "ffb62193fd814655",
           "promptVersion": 1
         },
@@ -1097,7 +1103,7 @@
               "rank": 7
             }
           },
-          "blurb": "Evan McPherson's accurate kicking anchors a solid, fuss-free unit.",
+          "blurb": "Built around a dependable kicker in Evan McPherson, with Charlie Jones handling returns; nothing else especially distinctive.",
           "blurbHash": "8e7b849e3aa8e737",
           "promptVersion": 1
         }
@@ -1184,7 +1190,7 @@
           "passPlayShare": 61,
           "passPlayShareRank": 10,
           "quarterbackCarries": 31,
-          "blurb": "An offence that throws slightly more than most despite gaining less per pass than any other team, and that hands the ball to the opposition far too often. Rookie back Quinshon Judkins is about the only settled piece.",
+          "blurb": "Almost nothing works here — Deshaun Watson's throws gained less per attempt than any other team's, and the running behind rookie Quinshon Judkins hasn't picked up the slack.",
           "blurbHash": "e31da9db489c2f49",
           "promptVersion": 1
         },
@@ -1229,7 +1235,7 @@
               "rank": 22
             }
           },
-          "blurb": "A ferocious pass-rushing group that gets to the quarterback as often as almost anyone, now doing it without Myles Garrett after he was traded away, with Jared Verse and Alex Wright leading the charge.",
+          "blurb": "A defence that gets after the quarterback as well as almost anyone but seldom takes the ball away — and it did that after trading Myles Garrett away, with Jared Verse and Alex Wright now leading the rush.",
           "blurbHash": "18ccc240813d55ca",
           "promptVersion": 1
         },
@@ -1255,7 +1261,7 @@
               "rank": 8
             }
           },
-          "blurb": "Steady, unglamorous unit: Andre Szmyt makes his kicks and little else stands out.",
+          "blurb": "Andre Szmyt has been accurate on field goals; otherwise a quiet unit with no particular strength or weakness.",
           "blurbHash": "f9f47dacfc843990",
           "promptVersion": 1
         }
@@ -1342,7 +1348,7 @@
           "passPlayShare": 61.4,
           "passPlayShareRank": 9,
           "quarterbackCarries": 53,
-          "blurb": "Built around Dak Prescott throwing to CeeDee Lamb and George Pickens, and they throw a bit more than most teams do. Efficient in the air, with plenty of touchdown passes, though they hand the ball over a fair amount.",
+          "blurb": "A throwing offence, tilted a little more toward the pass than most teams, with Dak Prescott spreading it around to CeeDee Lamb, George Pickens and Jake Ferguson and finding the end zone through the air often.",
           "blurbHash": "1f0efa4f1518b6c7",
           "promptVersion": 1
         },
@@ -1387,7 +1393,7 @@
               "rank": 30
             }
           },
-          "blurb": "A unit that neither pressures the quarterback much nor takes the ball away, despite big names inside in Quinnen Williams and Kenny Clark. Veteran pass rusher Von Miller has just been added on a cheap one-year deal.",
+          "blurb": "A unit that neither pressures the quarterback much nor forces mistakes, despite big names inside in Quinnen Williams and Kenny Clark; veteran pass rusher Von Miller has just been added on a cheap one-year deal.",
           "blurbHash": "7dd5759568a3fac8",
           "promptVersion": 1
         },
@@ -1413,7 +1419,7 @@
               "rank": 2
             }
           },
-          "blurb": "Brandon Aubrey is about as reliable as kickers get, and KaVontae Turpin handles returns; the rest of the unit is ordinary enough that it evens out.",
+          "blurb": "Built around Brandon Aubrey, one of the surest field-goal kickers in the league, with KaVontae Turpin handling returns; the rest of the unit is ordinary.",
           "blurbHash": "608db5a74f9eab52",
           "promptVersion": 1
         }
@@ -1500,7 +1506,7 @@
           "passPlayShare": 63,
           "passPlayShareRank": 5,
           "quarterbackCarries": 83,
-          "blurb": "They pass more often than almost anyone, but the throws are short and don't gain much — and Bo Nix carries the ball himself a lot, making the quarterback a real part of the run game.",
+          "blurb": "They pass more than almost anyone, but without much reward per throw, and Bo Nix runs a fair bit himself, making the quarterback a real part of the running game.",
           "blurbHash": "58d12dbf6d9c669f",
           "promptVersion": 1
         },
@@ -1545,7 +1551,7 @@
               "rank": 26
             }
           },
-          "blurb": "A unit defined by getting after the quarterback — no team sacked him more, with Nik Bonitto and Zach Allen leading it. Interceptions and fumble recoveries are rare, so pressure is the whole story.",
+          "blurb": "A defence defined by pressure — nobody sacked the quarterback more — with Nik Bonitto and Zach Allen up front and Pat Surtain II covering, though the takeaways rarely come.",
           "blurbHash": "e57b80be06b4f4dd",
           "promptVersion": 1
         },
@@ -1571,7 +1577,7 @@
               "rank": 2
             }
           },
-          "blurb": "Wil Lutz rarely misses a field goal and Marvin Mims Jr. returns kicks, but the unit as a whole sits in the middle of the pack.",
+          "blurb": "Wil Lutz is dependable on field goals and Marvin Mims Jr. handles returns; beyond the kicking there's little that stands out either way.",
           "blurbHash": "8210ded614cc5895",
           "promptVersion": 1
         }
@@ -1658,7 +1664,7 @@
           "passPlayShare": 59.5,
           "passPlayShareRank": 13,
           "quarterbackCarries": 19,
-          "blurb": "An even mix of run and pass with Jared Goff throwing and Jahmyr Gibbs carrying, and plenty of scoring both ways. They also look after the ball better than most.",
+          "blurb": "A balanced attack that does everything well, moving the ball efficiently on the ground with Jahmyr Gibbs and through the air from Jared Goff to Amon-Ra St. Brown.",
           "blurbHash": "ba75180fe7692594",
           "promptVersion": 1
         },
@@ -1703,7 +1709,7 @@
               "rank": 19
             }
           },
-          "blurb": "Aidan Hutchinson leads a front that gets to the quarterback often, but there is little behind it and few takeaways. Cornerback Terrion Arnold has just left for Seattle.",
+          "blurb": "A defence that gets after the quarterback, with Aidan Hutchinson leading one of the league's better pass-rushing groups, but doesn't do much else to stand out.",
           "blurbHash": "7b8c12e5042ae13d",
           "promptVersion": 1
         },
@@ -1729,7 +1735,7 @@
               "rank": 11
             }
           },
-          "blurb": "Jake Bates kicks respectably, but there is little else here — returns and coverage are where this unit loses ground.",
+          "blurb": "Jake Bates is a reasonable kicker, but the rest of the unit — coverage and returns — drags it down.",
           "blurbHash": "9c34ccb57d370d97",
           "promptVersion": 1
         }
@@ -1816,7 +1822,7 @@
           "passPlayShare": 53.8,
           "passPlayShareRank": 30,
           "quarterbackCarries": 47,
-          "blurb": "One of the more run-leaning offences in the league, leaning on Josh Jacobs even though the ground game isn't especially productive. When Jordan Love does throw it goes a long way, and they almost never turn the ball over.",
+          "blurb": "One of the most run-leaning offences in the league, handing off to Josh Jacobs even though the ground game isn't especially efficient; when Jordan Love does throw, it's productive, and they hardly ever turn the ball over.",
           "blurbHash": "369b58c8279c476d",
           "promptVersion": 1
         },
@@ -1861,7 +1867,7 @@
               "rank": 26
             }
           },
-          "blurb": "A solid, unspectacular unit that doesn't sack the quarterback or take the ball away much. The arrival of pass rusher Micah Parsons is the big change.",
+          "blurb": "A solid but quiet defence that neither piles up sacks nor takes the ball away, now with Micah Parsons added on the edge to change that.",
           "blurbHash": "1f9a5c3f9a777e06",
           "promptVersion": 1
         },
@@ -1887,7 +1893,7 @@
               "rank": 9
             }
           },
-          "blurb": "Trey Smack has been dependable on field goals, but the wider unit, including returns, gives more back than it gains.",
+          "blurb": "Trey Smack is fine on field goals, but the rest of the unit, including Skyy Moore's returns, offers little.",
           "blurbHash": "46185f155b6bcb32",
           "promptVersion": 1
         }
@@ -1973,7 +1979,10 @@
           },
           "passPlayShare": 58.9,
           "passPlayShareRank": 15,
-          "quarterbackCarries": 48
+          "quarterbackCarries": 48,
+          "blurb": "A C.J. Stroud passing offence that takes very good care of the ball, but gets almost nothing on the ground — few rushing scores and little room per carry, with Nico Collins the main outlet.",
+          "blurbHash": "1222a873dbaecd25",
+          "promptVersion": 1
         },
         "defence": {
           "players": [
@@ -2039,7 +2048,7 @@
               "rank": 5
             }
           },
-          "blurb": "A reliable group whose strength is Ka'imi Fairbairn's accuracy on field goals; nothing else stands out either way.",
+          "blurb": "Anchored by a very reliable Ka'imi Fairbairn on field goals, with Jaylin Noel handling kick returns.",
           "blurbHash": "43f24dd6f2185bcf",
           "promptVersion": 1
         }
@@ -2126,7 +2135,7 @@
           "passPlayShare": 59.2,
           "passPlayShareRank": 14,
           "quarterbackCarries": 45,
-          "blurb": "Balanced in play-calling and solid at everything, with Jonathan Taylor pounding in touchdowns on the ground — only one team scored more rushing scores. They do hand the ball over a fair bit.",
+          "blurb": "A balanced group that does its best work near the goal line, where Jonathan Taylor and the run game score at will; the giveaways are the one real blemish.",
           "blurbHash": "365c15d3d6b4df22",
           "promptVersion": 1
         },
@@ -2171,7 +2180,7 @@
               "rank": 10
             }
           },
-          "blurb": "A middling unit that gets by on turnovers, with Sauce Gardner and Charvarius Ward giving it two established cornerbacks; the pass rush is ordinary.",
+          "blurb": "An unremarkable pass rush paired with a cornerback group of Sauce Gardner and Charvarius Ward that gets its hands on a fair number of passes.",
           "blurbHash": "016ad0065c8da8e8",
           "promptVersion": 1
         },
@@ -2197,7 +2206,7 @@
               "rank": 2
             }
           },
-          "blurb": "Blake Grupe has been about as accurate a kicker as the league has, and that is the main thing this group does well.",
+          "blurb": "Blake Grupe barely misses a field goal, and Anthony Gould takes the kick returns.",
           "blurbHash": "acc34e1e752fc627",
           "promptVersion": 1
         }
@@ -2283,7 +2292,10 @@
           },
           "passPlayShare": 59.7,
           "passPlayShareRank": 12,
-          "quarterbackCarries": 82
+          "quarterbackCarries": 82,
+          "blurb": "Trevor Lawrence throws for plenty of touchdowns and runs it himself a lot — he's a real part of the ground game, which otherwise gains little per carry behind Bhayshul Tuten.",
+          "blurbHash": "ced53ca808e1c790",
+          "promptVersion": 1
         },
         "defence": {
           "players": [
@@ -2326,7 +2338,7 @@
               "rank": 2
             }
           },
-          "blurb": "A ball-hawking group that takes the ball away about as often as any team, but almost never gets to the quarterback despite Travon Walker and Josh Hines-Allen up front.",
+          "blurb": "A group that thrives on takeaways rather than sacks, with Travon Walker and Josh Hines-Allen up front and two-way man Travis Hunter also listed here.",
           "blurbHash": "74fafded10941d1f",
           "promptVersion": 1
         },
@@ -2352,7 +2364,7 @@
               "rank": 9
             }
           },
-          "blurb": "An ordinary group overall, though Cam Little has been dependable on field goals.",
+          "blurb": "Cam Little is dependable on field goals and Bhayshul Tuten doubles up as the kick returner; otherwise nothing stands out.",
           "blurbHash": "88eb7fb04de907e5",
           "promptVersion": 1
         }
@@ -2439,7 +2451,7 @@
           "passPlayShare": 63.3,
           "passPlayShareRank": 4,
           "quarterbackCarries": 64,
-          "blurb": "One of the most pass-heavy attacks in the league, with Patrick Mahomes throwing often and also running plenty himself, yet the yards per throw are modest.",
+          "blurb": "One of the most pass-leaning offences in the league, with Mahomes throwing to Rashee Rice, Xavier Worthy and Travis Kelce, and also carrying it himself fairly often; the yards per play are modest.",
           "blurbHash": "30e3ee37874caf52",
           "promptVersion": 1
         },
@@ -2484,7 +2496,7 @@
               "rank": 26
             }
           },
-          "blurb": "A stingy unit that wins by not giving up much rather than by making plays — few sacks, few takeaways. It just lost All-Pro cornerback Trent McDuffie in a trade to the Rams.",
+          "blurb": "A group that neither sacks the quarterback often nor forces many turnovers, and it just traded away its best cornerback in Trent McDuffie, leaving L'Jarius Sneed and Mansoor Delane outside.",
           "blurbHash": "a0981f0506d81710",
           "promptVersion": 1
         },
@@ -2510,7 +2522,7 @@
               "rank": 3
             }
           },
-          "blurb": "An unremarkable group, with Harrison Butker's field-goal kicking the one dependable part.",
+          "blurb": "Harrison Butker is accurate on field goals, with Nikko Remigio returning kicks; little else to separate this unit.",
           "blurbHash": "1cd5718d5c1b8337",
           "promptVersion": 1
         }
@@ -2597,7 +2609,7 @@
           "passPlayShare": 62.2,
           "passPlayShareRank": 6,
           "quarterbackCarries": 83,
-          "blurb": "One of the more pass-heavy attacks in the league, run through Justin Herbert, who is also a real part of the running game with his own scrambles. Ladd McConkey is the main target; rushing touchdowns are hard to come by.",
+          "blurb": "One of the more pass-leaning attacks in the league, running through Justin Herbert, who also takes off with the ball himself often enough to be a real part of the running game alongside Omarion Hampton.",
           "blurbHash": "d2f30fa2ff4153ff",
           "promptVersion": 1
         },
@@ -2642,7 +2654,7 @@
               "rank": 7
             }
           },
-          "blurb": "A defence that gets after the quarterback and takes the ball away at a good clip, with Khalil Mack still the name that stands out up front.",
+          "blurb": "A defence that gets after the quarterback and takes the ball away at a healthy rate, with Khalil Mack still the name up front under Jim Harbaugh.",
           "blurbHash": "9d1684c2dd60e902",
           "promptVersion": 1
         },
@@ -2668,7 +2680,7 @@
               "rank": 1
             }
           },
-          "blurb": "Built around Cameron Dicker, who made his field goals at a higher rate than any other kicker, with Derius Davis handling returns.",
+          "blurb": "Built on kicking: Cameron Dicker makes his field goals as reliably as anyone in the league, with Derius Davis handling returns.",
           "blurbHash": "1f392b97140713b0",
           "promptVersion": 1
         }
@@ -2755,7 +2767,7 @@
           "passPlayShare": 58.8,
           "passPlayShareRank": 16,
           "quarterbackCarries": 29,
-          "blurb": "An even split between run and pass, with Matthew Stafford throwing for more touchdowns than anyone to a deep group in Puka Nacua and Davante Adams, while Kyren Williams carries the ground game.",
+          "blurb": "A balanced attack that scores through the air, with Matthew Stafford throwing to Puka Nacua and Davante Adams and Kyren Williams carrying, and it hangs onto the ball well.",
           "blurbHash": "cf89536bcfc85016",
           "promptVersion": 1
         },
@@ -2800,7 +2812,7 @@
               "rank": 5
             }
           },
-          "blurb": "A pressure-and-takeaway defence that has just been handed two star newcomers: Myles Garrett to rush the passer and Trent McDuffie to cover, both bought in by trade.",
+          "blurb": "A pass-rushing group that also forces plenty of turnovers, and it just got dramatically reshaped by trades for Myles Garrett and cornerback Trent McDuffie.",
           "blurbHash": "96b46d0c56f36172",
           "promptVersion": 1
         },
@@ -2826,7 +2838,7 @@
               "rank": 3
             }
           },
-          "blurb": "Harrison Mevis has been reliable enough on field goals, but the rest of the kicking game — coverage and Jordan Whittington's returns — is where this unit loses ground.",
+          "blurb": "Harrison Mevis is dependable enough on field goals, but there is little else here — the coverage and return work is where this unit loses ground.",
           "blurbHash": "c64037484698b184",
           "promptVersion": 1
         }
@@ -2913,7 +2925,7 @@
           "passPlayShare": 62,
           "passPlayShareRank": 8,
           "quarterbackCarries": 14,
-          "blurb": "They throw more than most teams despite gaining less per carry than anyone, with Kirk Cousins leaning on tight end Brock Bowers while rookie-ish back Ashton Jeanty finds little room. New head coach Klint Kubiak inherits it, and Tyler Linderbaum arrives on a record deal for an inside lineman.",
+          "blurb": "They throw more than most teams despite little success doing it, with Kirk Cousins under centre and Brock Bowers at tight end, while Ashton Jeanty gets almost nothing out of the run.",
           "blurbHash": "c5e5141b21bb7988",
           "promptVersion": 1
         },
@@ -2958,7 +2970,7 @@
               "rank": 23
             }
           },
-          "blurb": "A middling pass rush and few takeaways, without an obvious star; Kwity Paye is the closest thing to a focal point.",
+          "blurb": "A middling pass rush led by Kwity Paye and a secondary that rarely takes the ball away — no obvious strength to build on.",
           "blurbHash": "663cbba05bc61c8e",
           "promptVersion": 1
         },
@@ -2984,7 +2996,7 @@
               "rank": 4
             }
           },
-          "blurb": "Matt Gay is solid on field goals, but nothing else here stands out, with Tre Tucker doubling up as the kick returner.",
+          "blurb": "Matt Gay is steady on field goals, but the rest of the unit, including Tre Tucker's returns, gives little back.",
           "blurbHash": "3c73580a51f15576",
           "promptVersion": 1
         }
@@ -3071,7 +3083,7 @@
           "passPlayShare": 55.8,
           "passPlayShareRank": 26,
           "quarterbackCarries": 22,
-          "blurb": "Leans on the run more than most, and De'Von Achane makes that work with strong yards per carry. The big change is at quarterback, where Miami cut Tua Tagovailoa and handed the job to Malik Willis.",
+          "blurb": "Leans on the run more than most teams, and with good reason — De'Von Achane moves the ball well while Malik Willis, newly signed as the starter after Tua Tagovailoa's release, struggles through the air and gives the ball away a lot.",
           "blurbHash": "ed14205e773c5c2a",
           "promptVersion": 1
         },
@@ -3116,7 +3128,7 @@
               "rank": 15
             }
           },
-          "blurb": "A young, linebacker-heavy group under Jeff Hafley, with Chop Robinson leading the rush and an inexperienced pair of cornerbacks behind him.",
+          "blurb": "A young unit built around edge rushers Chop Robinson and Josh Uche, with unproven corners behind them and no standout number anywhere.",
           "blurbHash": "8be6539511925f34",
           "promptVersion": 1
         },
@@ -3142,7 +3154,7 @@
               "rank": 2
             }
           },
-          "blurb": "Riley Patterson has been about as accurate on field goals as any kicker in the league, and Malik Washington doubles as the return man.",
+          "blurb": "Riley Patterson barely misses a field goal, and Malik Washington doubles as the return man in one of the team's few dependable areas.",
           "blurbHash": "1a562be0aefd63a3",
           "promptVersion": 1
         }
@@ -3271,7 +3283,7 @@
               "rank": 10
             }
           },
-          "blurb": "A defence that gets after the quarterback — sacks are its calling card, with Dallas Turner and a rotation of interior rushers doing the damage — and it takes the ball away at a fair clip too.",
+          "blurb": "Built on pressure — they got to the quarterback about as often as anyone, with Dallas Turner and a rotation of interior linemen leading the way, and they take the ball away at a decent clip too.",
           "blurbHash": "421b4b2f727900bd",
           "promptVersion": 1
         },
@@ -3297,7 +3309,7 @@
               "rank": 1
             }
           },
-          "blurb": "A tidy, reliable group whose strength is kicker Will Reichard, who missed almost nothing all year.",
+          "blurb": "Anchored by kicker Will Reichard, who made his field goals more reliably than any other kicker in the league.",
           "blurbHash": "6cc3bde3d01f5ec9",
           "promptVersion": 1
         }
@@ -3426,7 +3438,7 @@
               "rank": 19
             }
           },
-          "blurb": "A defence that wins by keeping receivers covered rather than by pressure — Christian Gonzalez and Carlton Davis lead the back end, while sacks and takeaways are only ordinary.",
+          "blurb": "A unit that holds up without generating many sacks or turnovers, leaning instead on a strong cornerback pair in Christian Gonzalez and Carlton Davis III.",
           "blurbHash": "0b31330bbbdd0bfb",
           "promptVersion": 1
         },
@@ -3452,7 +3464,7 @@
               "rank": 4
             }
           },
-          "blurb": "A middling group overall, though kicker Andy Borregales has been dependable on field goals.",
+          "blurb": "Andy Borregales is dependable on field goals, but nothing else about the group stands out one way or the other.",
           "blurbHash": "baefcab894eef43e",
           "promptVersion": 1
         }
@@ -3539,7 +3551,7 @@
           "passPlayShare": 62.1,
           "passPlayShareRank": 7,
           "quarterbackCarries": 45,
-          "blurb": "They throw more than most teams, largely because the running game goes nowhere, and Tyler Shough's own carries make up a chunk of it. Chris Olave is the main target.",
+          "blurb": "They threw more than most teams, largely because the run game went almost nowhere, and Tyler Shough's group gave the ball away often. Chris Olave is the main target.",
           "blurbHash": "84fafcbe81d10856",
           "promptVersion": 1
         },
@@ -3584,7 +3596,7 @@
               "rank": 15
             }
           },
-          "blurb": "A middle-of-the-road defence whose best feature is a pass rush led by veterans Cameron Jordan and Chase Young.",
+          "blurb": "A middling group that gets after the quarterback reasonably well, with veterans Cameron Jordan and Chase Young up front and young corners behind them.",
           "blurbHash": "3b4bb059f5b50a0a",
           "promptVersion": 1
         },
@@ -3610,7 +3622,7 @@
               "rank": 16
             }
           },
-          "blurb": "A weak group across the board, with kicker Charlie Smyth missing more than you'd like and little coming back on returns.",
+          "blurb": "A weak unit across the board, with kicker Charlie Smyth missing more field goals than you'd like from a middle-of-the-pack leg.",
           "blurbHash": "3cd1e65446172ed3",
           "promptVersion": 1
         }
@@ -3697,7 +3709,7 @@
           "passPlayShare": 57.5,
           "passPlayShareRank": 23,
           "quarterbackCarries": 86,
-          "blurb": "An offence that scores its touchdowns on the ground, with Cam Skattebo and quarterback Jaxson Dart — who runs often himself — doing the work, while Malik Nabers leads the receivers.",
+          "blurb": "Jaxson Dart runs a lot himself — a big chunk of their carries are his — and they score plenty of rushing touchdowns while doing less damage through the air, with Malik Nabers the main receiving threat.",
           "blurbHash": "ed806576e31755c0",
           "promptVersion": 1
         },
@@ -3742,7 +3754,7 @@
               "rank": 25
             }
           },
-          "blurb": "A defence that rarely takes the ball away, leaning on young rusher Abdul Carter and a cornerback pair of Paulson Adebo and Greg Newsome.",
+          "blurb": "A defence that rarely takes the ball away, relying on Abdul Carter and the front to make things happen while the corners hold up behind.",
           "blurbHash": "ebd1979196a1cc37",
           "promptVersion": 1
         },
@@ -3768,7 +3780,7 @@
               "rank": 1
             }
           },
-          "blurb": "A solid unit whose most reliable piece is kicker Ben Sauls, who has been accurate on field goals.",
+          "blurb": "Ben Sauls has been as accurate on field goals as any kicker in the league, and that's the clear strength here.",
           "blurbHash": "b64b92db0644d2e3",
           "promptVersion": 1
         }
@@ -3855,7 +3867,7 @@
           "passPlayShare": 57.2,
           "passPlayShareRank": 25,
           "quarterbackCarries": 41,
-          "blurb": "A run-leaning group that moves the ball fine on the ground with Breece Hall but gets very little out of each throw, with Garrett Wilson the main target for Geno Smith.",
+          "blurb": "A run-first group under Aaron Glenn: the ground game with Breece Hall moves the ball fine, but almost nothing happens through the air, with Garrett Wilson the one receiver worth fearing.",
           "blurbHash": "f6d83402110184e3",
           "promptVersion": 1
         },
@@ -3900,7 +3912,7 @@
               "rank": 32
             }
           },
-          "blurb": "A defence that rarely gets to the quarterback and almost never takes the ball away, leaning on young pieces like Will McDonald IV up front.",
+          "blurb": "A defence that neither pressures the quarterback nor takes the ball away — almost no interceptions or fumble recoveries all year, leaving Will McDonald to generate what little disruption there is.",
           "blurbHash": "e9b4f335d4ed2b82",
           "promptVersion": 1
         },
@@ -3926,7 +3938,7 @@
               "rank": 1
             }
           },
-          "blurb": "Built around a kicker in Jason Sanders who almost never misses, with Kene Nwangwu returning kicks.",
+          "blurb": "Built on a kicker who essentially never misses, with Kene Nwangwu giving them a genuine threat on returns.",
           "blurbHash": "ccccb546dda89109",
           "promptVersion": 1
         }
@@ -4012,10 +4024,7 @@
           },
           "passPlayShare": 58.8,
           "passPlayShareRank": 18,
-          "quarterbackCarries": 105,
-          "blurb": "Jalen Hurts is a big part of the running game himself, carrying the ball more than a hundred times alongside Saquon Barkley, and the receiving group now has to work without A.J. Brown, traded to New England.",
-          "blurbHash": "005c7c090d42cc17",
-          "promptVersion": 1
+          "quarterbackCarries": 105
         },
         "defence": {
           "players": [
@@ -4058,7 +4067,7 @@
               "rank": 10
             }
           },
-          "blurb": "A young, cornerback-heavy defence with Quinyon Mitchell and Jalen Carter at its centre, solid at both pressuring the quarterback and taking the ball away.",
+          "blurb": "Built around a strong interior with Jalen Carter, and a young cornerback pair in Quinyon Mitchell and Riq Woolen; steady at both pressuring quarterbacks and taking the ball away.",
           "blurbHash": "a4005a40a7dac2ed",
           "promptVersion": 1
         },
@@ -4084,7 +4093,7 @@
               "rank": 4
             }
           },
-          "blurb": "Jake Elliott is reliable enough on field goals, but the rest of the kicking and return work is where this unit loses ground.",
+          "blurb": "Jake Elliott is reliable enough on field goals, but the wider kicking and return work, with Will Shipley bringing balls back, drags the unit down.",
           "blurbHash": "0b355987d9d57c27",
           "promptVersion": 1
         }
@@ -4171,7 +4180,7 @@
           "passPlayShare": 60.1,
           "passPlayShareRank": 11,
           "quarterbackCarries": 21,
-          "blurb": "Throws it slightly more than most teams, with Aaron Rodgers spreading it to DK Metcalf and Michael Pittman Jr., though the passes don't travel far — plenty of touchdowns, modest yardage per throw.",
+          "blurb": "An Aaron Rodgers offence that throws a bit more than most teams, though the passes are mostly short ones, with DK Metcalf and Michael Pittman the main targets.",
           "blurbHash": "4cdc0825ba5b8397",
           "promptVersion": 1
         },
@@ -4216,7 +4225,7 @@
               "rank": 4
             }
           },
-          "blurb": "An aggressive defence that gets after the quarterback and forces plenty of mistakes, led by veteran Cameron Heyward and Alex Highsmith up front.",
+          "blurb": "An aggressive front that gets after the quarterback and forces plenty of turnovers, led by Alex Highsmith and the veteran Cameron Heyward, even if plenty of yards still get given up.",
           "blurbHash": "76fe6ab40b67d91f",
           "promptVersion": 1
         },
@@ -4242,7 +4251,7 @@
               "rank": 13
             }
           },
-          "blurb": "An unremarkable group, with long-serving kicker Chris Boswell the most familiar name.",
+          "blurb": "A middling group with no obvious strength; Chris Boswell handles the kicking, and the return work is in inexperienced hands.",
           "blurbHash": "4ec8523fd6747c70",
           "promptVersion": 1
         }
@@ -4329,7 +4338,7 @@
           "passPlayShare": 51.8,
           "passPlayShareRank": 31,
           "quarterbackCarries": 35,
-          "blurb": "Runs the ball far more often than almost any team, yet when Sam Darnold does throw it goes a long way, usually to Jaxon Smith-Njigba.",
+          "blurb": "One of the least pass-happy teams in the league, yet the throws they do make go a long way, with Jaxon Smith-Njigba the centrepiece. The trade-off is a lot of giveaways.",
           "blurbHash": "1d4de8815bfef847",
           "promptVersion": 1
         },
@@ -4374,7 +4383,7 @@
               "rank": 6
             }
           },
-          "blurb": "A well-rounded defence under Mike Macdonald that pressures and takes the ball away, built around cornerback Devon Witherspoon, whom Seattle just signed to a big four-year extension.",
+          "blurb": "Mike Macdonald's defence pressures quarterbacks and takes the ball away in equal measure, and they've just paid Devon Witherspoon heavily to stay while adding Terrion Arnold cheaply.",
           "blurbHash": "eaf14d844ef34050",
           "promptVersion": 1
         },
@@ -4400,7 +4409,7 @@
               "rank": 2
             }
           },
-          "blurb": "Jason Myers is dependable on field goals, and Rashid Shaheed doubles as the return man; otherwise a middling group.",
+          "blurb": "Jason Myers is dependable on field goals, and Rashid Shaheed doubles up as the return man; otherwise an unremarkable unit.",
           "blurbHash": "0dbfe45b4d476cba",
           "promptVersion": 1
         }
@@ -4487,7 +4496,7 @@
           "passPlayShare": 57.3,
           "passPlayShareRank": 24,
           "quarterbackCarries": 33,
-          "blurb": "A passing attack that does the damage — Brock Purdy throwing to Kittle, Deebo and Mike Evans, with plenty of touchdowns through the air, while the running game gains very little per carry despite McCaffrey.",
+          "blurb": "A passing offence in practice: they throw for plenty of touchdowns while the running game grinds out very little per carry, with Brock Purdy spreading it to Kittle, Deebo and Christian McCaffrey.",
           "blurbHash": "82e024b83afe0668",
           "promptVersion": 1
         },
@@ -4532,7 +4541,7 @@
               "rank": 23
             }
           },
-          "blurb": "A defence built on its cornerbacks, Lenoir and Green, rather than pressure — almost nobody got to the quarterback less often, and takeaways were scarce too.",
+          "blurb": "A defence that almost never gets to the quarterback and rarely takes the ball away, leaning instead on young linemen and a corner pair of Lenoir and Green.",
           "blurbHash": "70619d1a9a688c88",
           "promptVersion": 1
         },
@@ -4558,7 +4567,7 @@
               "rank": 1
             }
           },
-          "blurb": "Everything runs through kicker Eddy Pineiro, who was the most accurate on field goals in the league.",
+          "blurb": "Built around a kicker who barely misses — Eddy Pineiro was the most accurate in the league on field goals.",
           "blurbHash": "84e61ba3cd27d9f3",
           "promptVersion": 1
         }
@@ -4645,7 +4654,7 @@
           "passPlayShare": 58.8,
           "passPlayShareRank": 19,
           "quarterbackCarries": 55,
-          "blurb": "A fairly ordinary mix of run and pass under Baker Mayfield, who carries the ball himself a fair amount; Bucky Irving's runs don't go far, and the yardage comes in small chunks.",
+          "blurb": "A fairly ordinary mix of run and pass that gets its points through the air to Godwin and Egbuka, with Baker Mayfield carrying the ball himself a fair amount.",
           "blurbHash": "8e60a24f8b5143b5",
           "promptVersion": 1
         },
@@ -4690,7 +4699,7 @@
               "rank": 7
             }
           },
-          "blurb": "A ball-hunting defence — McCollum and Morrison help force plenty of turnovers — while the pass rush is only ordinary.",
+          "blurb": "A ball-hawking group that forces plenty of turnovers, though the pass rush around Diaby and Roberts is nothing special.",
           "blurbHash": "08a1eb3029969fb2",
           "promptVersion": 1
         },
@@ -4716,7 +4725,7 @@
               "rank": 7
             }
           },
-          "blurb": "A middling group whose one clear strength is Chase McLaughlin's reliable field goal kicking.",
+          "blurb": "Chase McLaughlin is reliable on field goals; the rest of the unit's work doesn't stand out.",
           "blurbHash": "2aa4f0605ba41ac4",
           "promptVersion": 1
         }
@@ -4803,7 +4812,7 @@
           "passPlayShare": 64.9,
           "passPlayShareRank": 2,
           "quarterbackCarries": 39,
-          "blurb": "They throw the ball about as often as anyone, with rookie-feeling quarterback Cam Ward, but the passes gain little and touchdowns are rare; Ward also runs a fair bit himself.",
+          "blurb": "One of the most pass-heavy offences in the league, though rookie-led throwing to Tate and Robinson gains little per attempt; Robert Saleh is new in charge.",
           "blurbHash": "c91b4c3130625fcd",
           "promptVersion": 1
         },
@@ -4848,7 +4857,7 @@
               "rank": 26
             }
           },
-          "blurb": "A unit that gets after the quarterback well enough through Franklin-Myers and Jermaine Johnson, but almost never takes the ball away.",
+          "blurb": "A defence that gets after the quarterback well enough with Franklin-Myers and Jermaine Johnson, but almost never comes away with the ball.",
           "blurbHash": "9d729438fa732843",
           "promptVersion": 1
         },
@@ -4874,7 +4883,7 @@
               "rank": 16
             }
           },
-          "blurb": "Not much to hang a hat on here — Joey Slye's kicking is middle of the road and the return work hasn't stood out.",
+          "blurb": "Nothing that stands out in either direction — an average kicking game with Joey Slye and Chimere Dike returning.",
           "blurbHash": "331b0079cfa4b3db",
           "promptVersion": 1
         }
@@ -4961,7 +4970,7 @@
           "passPlayShare": 54.3,
           "passPlayShareRank": 29,
           "quarterbackCarries": 58,
-          "blurb": "One of the most run-leaning offences in the league, and Jayden Daniels himself is a big part of that running game; the ground gains come easily, the passing touchdowns don't.",
+          "blurb": "They run far more than most teams and do it well, and Jayden Daniels is a big part of that himself; the passing to McLaurin and Diggs produces few touchdowns.",
           "blurbHash": "fbd1aac07aa59d9a",
           "promptVersion": 1
         },
@@ -5006,7 +5015,7 @@
               "rank": 31
             }
           },
-          "blurb": "A defence that gets decent pressure on the quarterback but almost never comes away with the ball, leaning on young corners Trey Amos and Mike Sainristil.",
+          "blurb": "They pressure the quarterback reasonably often but take the ball away less than nearly anyone, with Amos and Sainristil at corner.",
           "blurbHash": "32c076966f92e211",
           "promptVersion": 1
         },
@@ -5032,12 +5041,12 @@
               "rank": 3
             }
           },
-          "blurb": "A weak group overall, with Drew Stevens missing more field goals than most kickers and little coming back from returns.",
+          "blurb": "A shaky unit overall, though Drew Stevens has been dependable on field goals.",
           "blurbHash": "8f7445885403d637",
           "promptVersion": 1
         }
       }
     }
   },
-  "unitNotesWrittenAt": "2026-08-17T12:49:25.653Z"
+  "unitNotesWrittenAt": "2026-08-17T12:55:48.962Z"
 }
