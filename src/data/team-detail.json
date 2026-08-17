@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T12:41:19.997Z",
+  "fetchedAt": "2026-08-17T12:43:58.562Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -140,9 +140,9 @@
               "label": "KR"
             }
           ],
-          "rank": 29,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 29th of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "75.8",
@@ -231,7 +231,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 27,
           "quarterbackCarries": 20
         },
         "defence": {
@@ -289,9 +289,9 @@
               "label": "KR"
             }
           ],
-          "rank": 23,
+          "rank": 24,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 23rd of 32.",
+          "note": "Below average at kicking field goals last season, 24th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "82.1",
@@ -380,7 +380,7 @@
             }
           },
           "passPlayShare": 51.5,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 32,
           "quarterbackCarries": 67
         },
         "defence": {
@@ -438,9 +438,9 @@
               "label": "KR"
             }
           ],
-          "rank": 11,
+          "rank": 12,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 11th of 32.",
+          "note": "Better than most at kicking field goals last season, 12th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "88.2",
@@ -529,7 +529,7 @@
             }
           },
           "passPlayShare": 55.2,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 28,
           "quarterbackCarries": 112
         },
         "defence": {
@@ -587,9 +587,9 @@
               "label": "KR"
             }
           ],
-          "rank": 7,
+          "rank": 8,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 7th of 32.",
+          "note": "Better than most at kicking field goals last season, 8th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "90.5",
@@ -678,7 +678,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 22,
           "quarterbackCarries": 54
         },
         "defence": {
@@ -736,9 +736,9 @@
               "label": "KR"
             }
           ],
-          "rank": 21,
+          "rank": 22,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 21st of 32.",
+          "note": "Below average at kicking field goals last season, 22nd of 32.",
           "stats": {
             "field goal percentage": {
               "value": "82.8",
@@ -827,7 +827,7 @@
             }
           },
           "passPlayShare": 58.3,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 77
         },
         "defence": {
@@ -885,9 +885,9 @@
               "label": "KR"
             }
           ],
-          "rank": 17,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 17th of 32.",
+          "note": "Middle of the league at kicking field goals last season, 18th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "84.6",
@@ -1034,9 +1034,9 @@
               "label": "KR"
             }
           ],
-          "rank": 8,
+          "rank": 9,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 8th of 32.",
+          "note": "Better than most at kicking field goals last season, 9th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "89.3",
@@ -1183,9 +1183,9 @@
               "label": "KR"
             }
           ],
-          "rank": 9,
+          "rank": 10,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 9th of 32.",
+          "note": "Better than most at kicking field goals last season, 10th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "88.9",
@@ -1332,9 +1332,9 @@
               "label": "KR"
             }
           ],
-          "rank": 15,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 15th of 32.",
+          "note": "Middle of the league at kicking field goals last season, 16th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "85.7",
@@ -1481,9 +1481,9 @@
               "label": "KR"
             }
           ],
-          "rank": 13,
-          "score": 4,
-          "note": "Better than most at kicking field goals last season, 13th of 32.",
+          "rank": 14,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 14th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "87.5",
@@ -1630,9 +1630,9 @@
               "label": "KR"
             }
           ],
-          "rank": 26,
-          "score": 2,
-          "note": "Below average at kicking field goals last season, 26th of 32.",
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 27th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "79.4",
@@ -1721,7 +1721,7 @@
             }
           },
           "passPlayShare": 53.8,
-          "passPlayShareRank": 29,
+          "passPlayShareRank": 30,
           "quarterbackCarries": 47
         },
         "defence": {
@@ -1779,13 +1779,162 @@
               "label": "KR"
             }
           ],
-          "rank": 22,
+          "rank": 23,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 22nd of 32.",
+          "note": "Below average at kicking field goals last season, 23rd of 32.",
           "stats": {
             "field goal percentage": {
               "value": "82.4",
               "rank": 9
+            }
+          }
+        }
+      }
+    },
+    "HOU": {
+      "coach": {
+        "name": "DeMeco Ryans",
+        "experience": 3
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "4432577",
+              "name": "C.J. Stroud",
+              "label": "QB"
+            },
+            {
+              "id": "4035538",
+              "name": "David Montgomery",
+              "label": "RB"
+            },
+            {
+              "id": "4258173",
+              "name": "Nico Collins",
+              "label": "WR"
+            },
+            {
+              "id": "4877706",
+              "name": "Jayden Higgins",
+              "label": "WR"
+            },
+            {
+              "id": "3117256",
+              "name": "Dalton Schultz",
+              "label": "TE"
+            },
+            {
+              "id": "4429693",
+              "name": "Aireontae Ersery",
+              "label": "OT"
+            }
+          ],
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most for points scored last season, 13th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "475",
+              "rank": 13
+            },
+            "_passAttempts": {
+              "value": "582",
+              "rank": 8
+            },
+            "_sacks": {
+              "value": "31",
+              "rank": 22
+            },
+            "yards per carry": {
+              "value": "3.9",
+              "rank": 29
+            },
+            "yards per pass": {
+              "value": "6.8",
+              "rank": 19
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "24",
+              "rank": 19
+            },
+            "turnovers given away": {
+              "value": "12",
+              "rank": 31
+            }
+          },
+          "passPlayShare": 58.9,
+          "passPlayShareRank": 15,
+          "quarterbackCarries": 48
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "4685724",
+              "name": "Will Anderson Jr.",
+              "label": "DE"
+            },
+            {
+              "id": "2976560",
+              "name": "Danielle Hunter",
+              "label": "DE"
+            },
+            {
+              "id": "3071353",
+              "name": "E.J. Speed",
+              "label": "LB"
+            },
+            {
+              "id": "4426434",
+              "name": "Derek Stingley Jr.",
+              "label": "CB"
+            },
+            {
+              "id": "4602699",
+              "name": "Kamari Lassiter",
+              "label": "CB"
+            }
+          ],
+          "rank": 2,
+          "score": 5,
+          "note": "Among the best in the league for points allowed last season — 2nd of 32.",
+          "stats": {
+            "sacks": {
+              "value": "47",
+              "rank": 7
+            },
+            "takeaways": {
+              "value": "29",
+              "rank": 3
+            }
+          }
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "2971573",
+              "name": "Ka'imi Fairbairn",
+              "label": "K"
+            },
+            {
+              "id": "4586312",
+              "name": "Jaylin Noel",
+              "label": "KR"
+            }
+          ],
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 6th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "92.3",
+              "rank": 5
             }
           }
         }
@@ -2077,9 +2226,9 @@
               "label": "KR"
             }
           ],
-          "rank": 12,
+          "rank": 13,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 12th of 32.",
+          "note": "Better than most at kicking field goals last season, 13th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "88.2",
@@ -2226,9 +2375,9 @@
               "label": "KR"
             }
           ],
-          "rank": 14,
+          "rank": 15,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 14th of 32.",
+          "note": "Middle of the league at kicking field goals last season, 15th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "86.8",
@@ -2466,7 +2615,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -2524,9 +2673,9 @@
               "label": "KR"
             }
           ],
-          "rank": 27,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 27th of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 28th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "78.6",
@@ -2673,9 +2822,9 @@
               "label": "KR"
             }
           ],
-          "rank": 24,
+          "rank": 25,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 24th of 32.",
+          "note": "Below average at kicking field goals last season, 25th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "81.5",
@@ -2764,7 +2913,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 22
         },
         "defence": {
@@ -2913,7 +3062,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -3062,7 +3211,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -3120,9 +3269,9 @@
               "label": "KR"
             }
           ],
-          "rank": 18,
+          "rank": 19,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 18th of 32.",
+          "note": "Middle of the league at kicking field goals last season, 19th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "84.4",
@@ -3269,9 +3418,9 @@
               "label": "KR"
             }
           ],
-          "rank": 31,
+          "rank": 32,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 32nd of 32.",
           "stats": {
             "field goal percentage": {
               "value": "71.4",
@@ -3360,7 +3509,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 86
         },
         "defence": {
@@ -3418,9 +3567,9 @@
               "label": "KR"
             }
           ],
-          "rank": 10,
+          "rank": 11,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 10th of 32.",
+          "note": "Better than most at kicking field goals last season, 11th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "88.5",
@@ -3509,7 +3658,7 @@
             }
           },
           "passPlayShare": 57.2,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 41
         },
         "defence": {
@@ -3658,7 +3807,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -3716,9 +3865,9 @@
               "label": "KR"
             }
           ],
-          "rank": 30,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
           "stats": {
             "field goal percentage": {
               "value": "74.1",
@@ -3865,9 +4014,9 @@
               "label": "KR"
             }
           ],
-          "rank": 19,
-          "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 19th of 32.",
+          "rank": 20,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 20th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "84.4",
@@ -3956,7 +4105,7 @@
             }
           },
           "passPlayShare": 51.8,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 31,
           "quarterbackCarries": 35
         },
         "defence": {
@@ -4014,9 +4163,9 @@
               "label": "KR"
             }
           ],
-          "rank": 16,
+          "rank": 17,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 16th of 32.",
+          "note": "Middle of the league at kicking field goals last season, 17th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "85.4",
@@ -4105,7 +4254,7 @@
             }
           },
           "passPlayShare": 57.3,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 33
         },
         "defence": {
@@ -4163,9 +4312,9 @@
               "label": "KR"
             }
           ],
-          "rank": 6,
-          "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 6th of 32.",
+          "rank": 7,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 7th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "91.7",
@@ -4254,7 +4403,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 55
         },
         "defence": {
@@ -4312,9 +4461,9 @@
               "label": "KR"
             }
           ],
-          "rank": 20,
+          "rank": 21,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 20th of 32.",
+          "note": "Below average at kicking field goals last season, 21st of 32.",
           "stats": {
             "field goal percentage": {
               "value": "84.2",
@@ -4461,9 +4610,9 @@
               "label": "KR"
             }
           ],
-          "rank": 25,
+          "rank": 26,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 25th of 32.",
+          "note": "Below average at kicking field goals last season, 26th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "80.6",
@@ -4552,7 +4701,7 @@
             }
           },
           "passPlayShare": 54.3,
-          "passPlayShareRank": 28,
+          "passPlayShareRank": 29,
           "quarterbackCarries": 58
         },
         "defence": {
@@ -4610,9 +4759,9 @@
               "label": "KR"
             }
           ],
-          "rank": 28,
+          "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 28th of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 29th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "76.7",
