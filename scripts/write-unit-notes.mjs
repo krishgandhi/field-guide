@@ -244,6 +244,8 @@ for (let i = 0; i < batch.length; i += CHUNK) {
 
 let accepted = 0;
 const rejected = [];
+/** Superseded notes dropped because their replacement failed validation. */
+const cleared = [];
 
 for (const item of batch) {
   const blurb = results.get(item.key);
@@ -254,6 +256,20 @@ for (const item of batch) {
   const problem = problemWithNote(blurb, item.evidence);
   if (problem) {
     rejected.push(`${item.key}: ${problem} — "${blurb}"`);
+    // A rejection used to leave the previous note standing, which looks safe
+    // and isn't: when the brief has moved on, the rule the replacement broke
+    // is usually the rule the old note breaks too. Buffalo's defence kept
+    // calling a second-year corner a rookie for exactly that reason. §9's
+    // bargain is a missing entry, never a wrong one, so a superseded note goes.
+    if (!SELF_TEST) {
+      const unit = cache.teams[item.teamId].units[item.unit];
+      if (unit.blurb && unit.promptVersion !== PROMPT_VERSION) {
+        unit.blurb = null;
+        unit.blurbHash = null;
+        unit.promptVersion = null;
+        cleared.push(item.key);
+      }
+    }
     continue;
   }
   if (!SELF_TEST) {
@@ -275,4 +291,7 @@ if (!SELF_TEST) {
 
 console.log(`\n${accepted}/${batch.length} accepted`);
 for (const r of rejected.slice(0, 10)) console.log(`  rejected — ${r}`);
+if (cleared.length > 0) {
+  console.log(`dropped ${cleared.length} superseded note(s): ${cleared.join(", ")}`);
+}
 console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);

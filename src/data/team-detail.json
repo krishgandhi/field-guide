@@ -743,9 +743,9 @@
           "rank": 12,
           "score": 4,
           "note": "Better than most for points allowed last season, 12th of 32.",
-          "blurb": "Bradley Chubb and Ed Oliver lead a front that did not pile up sacks, while Christian Benford and first-round rookie Maxwell Hairston man the corners under newly promoted head coach Joe Brady.",
-          "blurbHash": "44e9ebb21509df8a",
-          "promptVersion": 5,
+          "blurb": null,
+          "blurbHash": null,
+          "promptVersion": null,
           "stats": {
             "sacks": {
               "value": "36",
