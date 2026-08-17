@@ -26,6 +26,8 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 
 const CORE = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl";
 const SITE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
+const ATHLETE_OVERVIEW =
+  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 const OUT = "src/data/team-detail.json";
 const SEASON = 2026;
 
@@ -146,6 +148,98 @@ async function headCoach(espnId) {
 }
 
 /**
+ * The stats that reveal what kind of team this is, per unit.
+ *
+ * A rank alone can only ever produce "fourth-best for points scored". What
+ * makes a team recognisable is the shape underneath: Buffalo ran the ball more
+ * often than anyone in the league last season (rushing attempts rank 1) while
+ * throwing it less than most (passing attempts rank 25). That is "a run-first
+ * team", and it is a fact rather than an impression.
+ */
+const UNIT_STATS = {
+  // Raw attempt and yardage totals are gathered for the pass-rate maths but
+  // deliberately NOT handed to the model: volume ranks conflate philosophy with
+  // game script, and reading them as identity is how "rushing attempts rank 1"
+  // became "Buffalo are a run-first team". Efficiency and scoring don't suffer
+  // that confound, so those stay.
+  offence: [
+    ["rushing", "Rushing Attempts", "_runAttempts"],
+    ["passing", "Passing Attempts", "_passAttempts"],
+    ["passing", "Total Sacks", "_sacks"],
+    ["rushing", "Yards Per Rush Attempt", "yards per carry"],
+    ["passing", "Yards Per Pass Attempt", "yards per pass"],
+    ["rushing", "Rushing Touchdowns", "rushing touchdowns"],
+    ["passing", "Passing Touchdowns", "passing touchdowns"],
+    ["miscellaneous", "Total Giveaways", "turnovers given away"],
+  ],
+  defence: [
+    ["defensive", "Sacks", "sacks"],
+    ["miscellaneous", "Total Takeaways", "takeaways"],
+  ],
+  specialTeams: [["kicking", "Field Goal Percentage", "field goal percentage"]],
+};
+
+/** Labelled value+rank pairs, so the model never sees a bare number. */
+function unitStats(categories) {
+  const out = {};
+  for (const [unit, wanted] of Object.entries(UNIT_STATS)) {
+    out[unit] = {};
+    for (const [cat, name, label] of wanted) {
+      const c = categories.find((x) => x.name === cat);
+      const stat = (c?.stats ?? []).find((x) => x.displayName === name);
+      if (stat && typeof stat.rank === "number") {
+        out[unit][label] = { value: stat.displayValue, rank: stat.rank };
+      }
+    }
+  }
+  return out;
+}
+
+/**
+ * How often a team actually chose to pass, once the noise is removed.
+ *
+ * Raw attempt counts cannot tell philosophy from circumstance, and reading
+ * them as identity produces confident nonsense. Buffalo ranked FIRST in the
+ * league in rushing attempts last season, which looks like a run-first team
+ * and isn't:
+ *
+ *   - 112 of those 547 carries were Josh Allen's own. A scrambling quarterback
+ *     turns pass plays into rushing attempts in the box score.
+ *   - Sacks are pass plays that the pass column never sees. Buffalo took 40.
+ *   - They went 12-5. Teams that lead run the clock out, which inflates
+ *     carries without revealing a thing about intent.
+ *
+ * Adjusting for the first two: 535 dropbacks against 435 designed runs, a 55%
+ * pass rate — mid-pack, not the most run-heavy team in football.
+ */
+function passRate({ rushAttempts, passAttempts, sacks, qbRushAttempts }) {
+  if (!rushAttempts || !passAttempts) return null;
+  const dropbacks = passAttempts + (sacks ?? 0);
+  const designedRuns = Math.max(0, rushAttempts - (qbRushAttempts ?? 0));
+  const plays = dropbacks + designedRuns;
+  if (!plays) return null;
+  return Math.round((dropbacks / plays) * 1000) / 10;
+}
+
+/** The starting quarterback's own carries, so they can be taken back out. */
+async function qbRushing(athleteId) {
+  if (!athleteId) return null;
+  try {
+    const d = await getJson(`${ATHLETE_OVERVIEW}/${athleteId}/overview`);
+    const stats = d.statistics ?? {};
+    const labels = stats.displayNames ?? [];
+    const row = (stats.splits ?? []).find((x) => x.displayName === "Regular Season");
+    if (!row?.stats) return null;
+    const at = labels.indexOf("Rushing Attempts");
+    if (at === -1) return null;
+    const n = Number(String(row.stats[at]).replace(/,/g, ""));
+    return Number.isFinite(n) ? n : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Field goal percentage — the VALUE, not ESPN's rank.
  *
  * ESPN's own rank on this stat is wrong: it returns rank 1 for teams at 92.7%,
@@ -153,7 +247,7 @@ async function headCoach(espnId) {
  * kicking. The value is fine, so the rank is computed here across the 32, the
  * same way points scored and allowed already are.
  */
-async function fieldGoalPct(espnId, season) {
+async function teamStats(espnId, season) {
   try {
     const d = await getJson(
       `${CORE}/seasons/${season}/types/2/teams/${espnId}/statistics`,
@@ -163,9 +257,12 @@ async function fieldGoalPct(espnId, season) {
     const pct = (kicking?.stats ?? []).find(
       (s) => s.displayName === "Field Goal Percentage",
     );
-    return typeof pct?.value === "number" ? pct.value : null;
+    return {
+      fieldGoalPct: typeof pct?.value === "number" ? pct.value : null,
+      stats: unitStats(cats),
+    };
   } catch {
-    return null;
+    return { fieldGoalPct: null, stats: {} };
   }
 }
 
@@ -249,18 +346,33 @@ const pointsAgainst = new Map(
 // team's field goal percentage is known.
 const gathered = new Map();
 const fieldGoals = new Map();
+const passRates = new Map();
 let failed = 0;
 
 for (const team of TEAMS) {
   try {
     const roster = await rosterIndex(team.id);
-    const [units, coach, fgPct] = await Promise.all([
+    const [units, coach, stats] = await Promise.all([
       depthChart(team.espnId, roster),
       headCoach(team.espnId).catch(() => null),
-      fieldGoalPct(team.espnId, statsSeason),
+      teamStats(team.espnId, statsSeason),
     ]);
-    gathered.set(team.id, { units, coach });
-    fieldGoals.set(team.id, fgPct);
+    const qbId = (units.offence ?? []).find((p) => p.label === "QB")?.id;
+    const qbCarries = await qbRushing(qbId);
+
+    const raw = stats.stats?.offence ?? {};
+    const num = (k) =>
+      raw[k] ? Number(String(raw[k].value).replace(/,/g, "")) : null;
+    const rate = passRate({
+      rushAttempts: num("_runAttempts"),
+      passAttempts: num("_passAttempts"),
+      sacks: num("_sacks"),
+      qbRushAttempts: qbCarries,
+    });
+
+    gathered.set(team.id, { units, coach, stats: stats.stats, qbCarries, rate });
+    fieldGoals.set(team.id, stats.fieldGoalPct);
+    passRates.set(team.id, rate);
   } catch (err) {
     failed++;
     console.error(`  ${team.id}: ${err.message}`);
@@ -273,7 +385,7 @@ for (const team of TEAMS) {
   const got = gathered.get(team.id);
   if (!got) continue;
   {
-    const { units, coach } = got;
+    const { units, coach, stats, qbCarries, rate } = got;
     const ranks = {
       offence: rankBy(pointsFor, team.id),
       defence: rankBy(pointsAgainst, team.id, true),
@@ -292,6 +404,20 @@ for (const team of TEAMS) {
             rank: ranks[u],
             score: scoreFromRank(ranks[u]),
             note: noteFor(u, ranks[u], previousSeason),
+            /** Evidence for write-unit-notes.mjs; never rendered directly. */
+            stats: stats?.[u] ?? {},
+            ...(u === "offence"
+              ? {
+                  /**
+                   * The honest run/pass split. Raw attempt ranks conflate
+                   * philosophy with game script and with a scrambling
+                   * quarterback — see passRate() above.
+                   */
+                  passPlayShare: rate,
+                  passPlayShareRank: rankBy(passRates, team.id),
+                  quarterbackCarries: qbCarries,
+                }
+              : {}),
           },
         ]),
       ),

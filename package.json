@@ -25,7 +25,8 @@
     "test:patterns": "node scripts/test-detect-patterns.mjs",
     "fetch:people": "node scripts/fetch-people.mjs",
     "write:profiles": "node scripts/write-profiles.mjs",
-    "fetch:teamdetail": "node scripts/fetch-team-detail.mjs"
+    "fetch:teamdetail": "node scripts/fetch-team-detail.mjs",
+    "write:units": "node scripts/write-unit-notes.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.116.0",

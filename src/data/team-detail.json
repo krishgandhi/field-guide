@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T11:20:51.979Z",
+  "fetchedAt": "2026-08-17T12:41:19.997Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -46,7 +46,44 @@
           ],
           "rank": 23,
           "score": 2,
-          "note": "Below average for points scored last season, 23rd of 32."
+          "note": "Below average for points scored last season, 23rd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "366",
+              "rank": 32
+            },
+            "_passAttempts": {
+              "value": "649",
+              "rank": 1
+            },
+            "_sacks": {
+              "value": "59",
+              "rank": 5
+            },
+            "yards per carry": {
+              "value": "4.3",
+              "rank": 16
+            },
+            "yards per pass": {
+              "value": "6.7",
+              "rank": 23
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "29",
+              "rank": 7
+            },
+            "turnovers given away": {
+              "value": "21",
+              "rank": 14
+            }
+          },
+          "passPlayShare": 68.3,
+          "passPlayShareRank": 1,
+          "quarterbackCarries": 38
         },
         "defence": {
           "players": [
@@ -78,7 +115,17 @@
           ],
           "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 29th of 32."
+          "note": "Among the worst in the league for points allowed last season — 29th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "30",
+              "rank": 28
+            },
+            "takeaways": {
+              "value": "19",
+              "rank": 19
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -93,9 +140,15 @@
               "label": "KR"
             }
           ],
-          "rank": 30,
+          "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 30th of 32."
+          "note": "Among the worst in the league at kicking field goals last season — 29th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "75.8",
+              "rank": 4
+            }
+          }
         }
       }
     },
@@ -142,7 +195,44 @@
           ],
           "rank": 24,
           "score": 2,
-          "note": "Below average for points scored last season, 24th of 32."
+          "note": "Below average for points scored last season, 24th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "477",
+              "rank": 12
+            },
+            "_passAttempts": {
+              "value": "545",
+              "rank": 19
+            },
+            "_sacks": {
+              "value": "26",
+              "rank": 29
+            },
+            "yards per carry": {
+              "value": "4.5",
+              "rank": 12
+            },
+            "yards per pass": {
+              "value": "6.8",
+              "rank": 20
+            },
+            "rushing touchdowns": {
+              "value": "17",
+              "rank": 14
+            },
+            "passing touchdowns": {
+              "value": "19",
+              "rank": 26
+            },
+            "turnovers given away": {
+              "value": "18",
+              "rank": 19
+            }
+          },
+          "passPlayShare": 55.5,
+          "passPlayShareRank": 26,
+          "quarterbackCarries": 20
         },
         "defence": {
           "players": [
@@ -174,7 +264,17 @@
           ],
           "rank": 19,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 19th of 32."
+          "note": "Middle of the league for points allowed last season, 19th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "57",
+              "rank": 2
+            },
+            "takeaways": {
+              "value": "23",
+              "rank": 7
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -189,9 +289,15 @@
               "label": "KR"
             }
           ],
-          "rank": 24,
+          "rank": 23,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 24th of 32."
+          "note": "Below average at kicking field goals last season, 23rd of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "82.1",
+              "rank": 10
+            }
+          }
         }
       }
     },
@@ -238,7 +344,44 @@
           ],
           "rank": 11,
           "score": 4,
-          "note": "Better than most for points scored last season, 11th of 32."
+          "note": "Better than most for points scored last season, 11th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "507",
+              "rank": 3
+            },
+            "_passAttempts": {
+              "value": "422",
+              "rank": 32
+            },
+            "_sacks": {
+              "value": "45",
+              "rank": 12
+            },
+            "yards per carry": {
+              "value": "5.3",
+              "rank": 1
+            },
+            "yards per pass": {
+              "value": "7.8",
+              "rank": 7
+            },
+            "rushing touchdowns": {
+              "value": "23",
+              "rank": 3
+            },
+            "passing touchdowns": {
+              "value": "23",
+              "rank": 21
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 51.5,
+          "passPlayShareRank": 31,
+          "quarterbackCarries": 67
         },
         "defence": {
           "players": [
@@ -270,7 +413,17 @@
           ],
           "rank": 18,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 18th of 32."
+          "note": "Middle of the league for points allowed last season, 18th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "30",
+              "rank": 28
+            },
+            "takeaways": {
+              "value": "20",
+              "rank": 15
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -285,9 +438,15 @@
               "label": "KR"
             }
           ],
-          "rank": 12,
+          "rank": 11,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 12th of 32."
+          "note": "Better than most at kicking field goals last season, 11th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "88.2",
+              "rank": 9
+            }
+          }
         }
       }
     },
@@ -334,7 +493,44 @@
           ],
           "rank": 4,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 4th of 32."
+          "note": "Among the best in the league for points scored last season — 4th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "547",
+              "rank": 1
+            },
+            "_passAttempts": {
+              "value": "495",
+              "rank": 25
+            },
+            "_sacks": {
+              "value": "40",
+              "rank": 14
+            },
+            "yards per carry": {
+              "value": "5.0",
+              "rank": 2
+            },
+            "yards per pass": {
+              "value": "8.0",
+              "rank": 3
+            },
+            "rushing touchdowns": {
+              "value": "30",
+              "rank": 1
+            },
+            "passing touchdowns": {
+              "value": "29",
+              "rank": 7
+            },
+            "turnovers given away": {
+              "value": "19",
+              "rank": 17
+            }
+          },
+          "passPlayShare": 55.2,
+          "passPlayShareRank": 27,
+          "quarterbackCarries": 112
         },
         "defence": {
           "players": [
@@ -366,7 +562,17 @@
           ],
           "rank": 12,
           "score": 4,
-          "note": "Better than most for points allowed last season, 12th of 32."
+          "note": "Better than most for points allowed last season, 12th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "36",
+              "rank": 20
+            },
+            "takeaways": {
+              "value": "20",
+              "rank": 15
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -381,9 +587,15 @@
               "label": "KR"
             }
           ],
-          "rank": 8,
+          "rank": 7,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 8th of 32."
+          "note": "Better than most at kicking field goals last season, 7th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "90.5",
+              "rank": 3
+            }
+          }
         }
       }
     },
@@ -430,7 +642,44 @@
           ],
           "rank": 27,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 27th of 32."
+          "note": "Among the worst in the league for points scored last season — 27th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "461",
+              "rank": 18
+            },
+            "_passAttempts": {
+              "value": "515",
+              "rank": 21
+            },
+            "_sacks": {
+              "value": "35",
+              "rank": 20
+            },
+            "yards per carry": {
+              "value": "4.3",
+              "rank": 19
+            },
+            "yards per pass": {
+              "value": "6.4",
+              "rank": 27
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "24",
+              "rank": 19
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 57.5,
+          "passPlayShareRank": 21,
+          "quarterbackCarries": 54
         },
         "defence": {
           "players": [
@@ -462,7 +711,17 @@
           ],
           "rank": 15,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 15th of 32."
+          "note": "Middle of the league for points allowed last season, 15th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "30",
+              "rank": 28
+            },
+            "takeaways": {
+              "value": "21",
+              "rank": 10
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -477,9 +736,15 @@
               "label": "KR"
             }
           ],
-          "rank": 22,
+          "rank": 21,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 22nd of 32."
+          "note": "Below average at kicking field goals last season, 21st of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "82.8",
+              "rank": 8
+            }
+          }
         }
       }
     },
@@ -526,7 +791,44 @@
           ],
           "rank": 9,
           "score": 4,
-          "note": "Better than most for points scored last season, 9th of 32."
+          "note": "Better than most for points scored last season, 9th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "505",
+              "rank": 5
+            },
+            "_passAttempts": {
+              "value": "574",
+              "rank": 10
+            },
+            "_sacks": {
+              "value": "24",
+              "rank": 30
+            },
+            "yards per carry": {
+              "value": "4.9",
+              "rank": 3
+            },
+            "yards per pass": {
+              "value": "7.0",
+              "rank": 15
+            },
+            "rushing touchdowns": {
+              "value": "19",
+              "rank": 9
+            },
+            "passing touchdowns": {
+              "value": "28",
+              "rank": 10
+            },
+            "turnovers given away": {
+              "value": "11",
+              "rank": 32
+            }
+          },
+          "passPlayShare": 58.3,
+          "passPlayShareRank": 20,
+          "quarterbackCarries": 77
         },
         "defence": {
           "players": [
@@ -558,7 +860,17 @@
           ],
           "rank": 23,
           "score": 2,
-          "note": "Below average for points allowed last season, 23rd of 32."
+          "note": "Below average for points allowed last season, 23rd of 32.",
+          "stats": {
+            "sacks": {
+              "value": "35",
+              "rank": 22
+            },
+            "takeaways": {
+              "value": "33",
+              "rank": 1
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -573,9 +885,15 @@
               "label": "KR"
             }
           ],
-          "rank": 18,
+          "rank": 17,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 18th of 32."
+          "note": "Middle of the league at kicking field goals last season, 17th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "84.6",
+              "rank": 6
+            }
+          }
         }
       }
     },
@@ -622,7 +940,44 @@
           ],
           "rank": 12,
           "score": 4,
-          "note": "Better than most for points scored last season, 12th of 32."
+          "note": "Better than most for points scored last season, 12th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "381",
+              "rank": 29
+            },
+            "_passAttempts": {
+              "value": "640",
+              "rank": 2
+            },
+            "_sacks": {
+              "value": "36",
+              "rank": 19
+            },
+            "yards per carry": {
+              "value": "4.2",
+              "rank": 22
+            },
+            "yards per pass": {
+              "value": "6.6",
+              "rank": 24
+            },
+            "rushing touchdowns": {
+              "value": "11",
+              "rank": 23
+            },
+            "passing touchdowns": {
+              "value": "36",
+              "rank": 2
+            },
+            "turnovers given away": {
+              "value": "24",
+              "rank": 4
+            }
+          },
+          "passPlayShare": 64.8,
+          "passPlayShareRank": 3,
+          "quarterbackCarries": 14
         },
         "defence": {
           "players": [
@@ -654,7 +1009,17 @@
           ],
           "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 30th of 32."
+          "note": "Among the worst in the league for points allowed last season — 30th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "34",
+              "rank": 26
+            },
+            "takeaways": {
+              "value": "21",
+              "rank": 10
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -669,9 +1034,15 @@
               "label": "KR"
             }
           ],
-          "rank": 9,
+          "rank": 8,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 9th of 32."
+          "note": "Better than most at kicking field goals last season, 8th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "89.3",
+              "rank": 7
+            }
+          }
         }
       }
     },
@@ -718,7 +1089,44 @@
           ],
           "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 31st of 32."
+          "note": "Among the worst in the league for points scored last season — 31st of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "421",
+              "rank": 26
+            },
+            "_passAttempts": {
+              "value": "558",
+              "rank": 15
+            },
+            "_sacks": {
+              "value": "51",
+              "rank": 7
+            },
+            "yards per carry": {
+              "value": "3.9",
+              "rank": 28
+            },
+            "yards per pass": {
+              "value": "5.6",
+              "rank": 32
+            },
+            "rushing touchdowns": {
+              "value": "10",
+              "rank": 25
+            },
+            "passing touchdowns": {
+              "value": "16",
+              "rank": 30
+            },
+            "turnovers given away": {
+              "value": "25",
+              "rank": 3
+            }
+          },
+          "passPlayShare": 61,
+          "passPlayShareRank": 10,
+          "quarterbackCarries": 31
         },
         "defence": {
           "players": [
@@ -750,7 +1158,17 @@
           ],
           "rank": 14,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 14th of 32."
+          "note": "Middle of the league for points allowed last season, 14th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "53",
+              "rank": 3
+            },
+            "takeaways": {
+              "value": "18",
+              "rank": 22
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -765,9 +1183,15 @@
               "label": "KR"
             }
           ],
-          "rank": 10,
+          "rank": 9,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 10th of 32."
+          "note": "Better than most at kicking field goals last season, 9th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "88.9",
+              "rank": 8
+            }
+          }
         }
       }
     },
@@ -814,7 +1238,44 @@
           ],
           "rank": 7,
           "score": 4,
-          "note": "Better than most for points scored last season, 7th of 32."
+          "note": "Better than most for points scored last season, 7th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "465",
+              "rank": 16
+            },
+            "_passAttempts": {
+              "value": "624",
+              "rank": 3
+            },
+            "_sacks": {
+              "value": "31",
+              "rank": 22
+            },
+            "yards per carry": {
+              "value": "4.6",
+              "rank": 9
+            },
+            "yards per pass": {
+              "value": "7.6",
+              "rank": 8
+            },
+            "rushing touchdowns": {
+              "value": "18",
+              "rank": 11
+            },
+            "passing touchdowns": {
+              "value": "31",
+              "rank": 5
+            },
+            "turnovers given away": {
+              "value": "21",
+              "rank": 14
+            }
+          },
+          "passPlayShare": 61.4,
+          "passPlayShareRank": 9,
+          "quarterbackCarries": 53
         },
         "defence": {
           "players": [
@@ -846,7 +1307,17 @@
           ],
           "rank": 32,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 32nd of 32."
+          "note": "Among the worst in the league for points allowed last season — 32nd of 32.",
+          "stats": {
+            "sacks": {
+              "value": "35",
+              "rank": 22
+            },
+            "takeaways": {
+              "value": "12",
+              "rank": 30
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -861,9 +1332,15 @@
               "label": "KR"
             }
           ],
-          "rank": 16,
+          "rank": 15,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 16th of 32."
+          "note": "Middle of the league at kicking field goals last season, 15th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "85.7",
+              "rank": 2
+            }
+          }
         }
       }
     },
@@ -910,7 +1387,44 @@
           ],
           "rank": 14,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 14th of 32."
+          "note": "Middle of the league for points scored last season, 14th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "456",
+              "rank": 19
+            },
+            "_passAttempts": {
+              "value": "613",
+              "rank": 4
+            },
+            "_sacks": {
+              "value": "23",
+              "rank": 31
+            },
+            "yards per carry": {
+              "value": "4.4",
+              "rank": 15
+            },
+            "yards per pass": {
+              "value": "6.4",
+              "rank": 28
+            },
+            "rushing touchdowns": {
+              "value": "18",
+              "rank": 11
+            },
+            "passing touchdowns": {
+              "value": "25",
+              "rank": 16
+            },
+            "turnovers given away": {
+              "value": "17",
+              "rank": 21
+            }
+          },
+          "passPlayShare": 63,
+          "passPlayShareRank": 5,
+          "quarterbackCarries": 83
         },
         "defence": {
           "players": [
@@ -942,7 +1456,17 @@
           ],
           "rank": 3,
           "score": 5,
-          "note": "Among the best in the league for points allowed last season — 3rd of 32."
+          "note": "Among the best in the league for points allowed last season — 3rd of 32.",
+          "stats": {
+            "sacks": {
+              "value": "68",
+              "rank": 1
+            },
+            "takeaways": {
+              "value": "14",
+              "rank": 26
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -957,9 +1481,15 @@
               "label": "KR"
             }
           ],
-          "rank": 14,
-          "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 14th of 32."
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most at kicking field goals last season, 13th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "87.5",
+              "rank": 2
+            }
+          }
         }
       }
     },
@@ -1006,7 +1536,44 @@
           ],
           "rank": 5,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 5th of 32."
+          "note": "Among the best in the league for points scored last season — 5th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "442",
+              "rank": 21
+            },
+            "_passAttempts": {
+              "value": "582",
+              "rank": 8
+            },
+            "_sacks": {
+              "value": "39",
+              "rank": 15
+            },
+            "yards per carry": {
+              "value": "4.6",
+              "rank": 7
+            },
+            "yards per pass": {
+              "value": "7.8",
+              "rank": 6
+            },
+            "rushing touchdowns": {
+              "value": "21",
+              "rank": 7
+            },
+            "passing touchdowns": {
+              "value": "35",
+              "rank": 3
+            },
+            "turnovers given away": {
+              "value": "15",
+              "rank": 25
+            }
+          },
+          "passPlayShare": 59.5,
+          "passPlayShareRank": 13,
+          "quarterbackCarries": 19
         },
         "defence": {
           "players": [
@@ -1038,7 +1605,17 @@
           ],
           "rank": 22,
           "score": 2,
-          "note": "Below average for points allowed last season, 22nd of 32."
+          "note": "Below average for points allowed last season, 22nd of 32.",
+          "stats": {
+            "sacks": {
+              "value": "49",
+              "rank": 4
+            },
+            "takeaways": {
+              "value": "19",
+              "rank": 19
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1053,9 +1630,15 @@
               "label": "KR"
             }
           ],
-          "rank": 27,
-          "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 27th of 32."
+          "rank": 26,
+          "score": 2,
+          "note": "Below average at kicking field goals last season, 26th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "79.4",
+              "rank": 11
+            }
+          }
         }
       }
     },
@@ -1102,7 +1685,44 @@
           ],
           "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 16th of 32."
+          "note": "Middle of the league for points scored last season, 16th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "492",
+              "rank": 7
+            },
+            "_passAttempts": {
+              "value": "489",
+              "rank": 27
+            },
+            "_sacks": {
+              "value": "29",
+              "rank": 25
+            },
+            "yards per carry": {
+              "value": "4.1",
+              "rank": 24
+            },
+            "yards per pass": {
+              "value": "7.9",
+              "rank": 4
+            },
+            "rushing touchdowns": {
+              "value": "18",
+              "rank": 11
+            },
+            "passing touchdowns": {
+              "value": "26",
+              "rank": 11
+            },
+            "turnovers given away": {
+              "value": "13",
+              "rank": 30
+            }
+          },
+          "passPlayShare": 53.8,
+          "passPlayShareRank": 29,
+          "quarterbackCarries": 47
         },
         "defence": {
           "players": [
@@ -1134,7 +1754,17 @@
           ],
           "rank": 11,
           "score": 4,
-          "note": "Better than most for points allowed last season, 11th of 32."
+          "note": "Better than most for points allowed last season, 11th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "36",
+              "rank": 20
+            },
+            "takeaways": {
+              "value": "14",
+              "rank": 26
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1149,105 +1779,15 @@
               "label": "KR"
             }
           ],
-          "rank": 23,
+          "rank": 22,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 23rd of 32."
-        }
-      }
-    },
-    "HOU": {
-      "coach": {
-        "name": "DeMeco Ryans",
-        "experience": 3
-      },
-      "statsSeason": 2025,
-      "previousSeason": true,
-      "units": {
-        "offence": {
-          "players": [
-            {
-              "id": "4432577",
-              "name": "C.J. Stroud",
-              "label": "QB"
-            },
-            {
-              "id": "4035538",
-              "name": "David Montgomery",
-              "label": "RB"
-            },
-            {
-              "id": "4258173",
-              "name": "Nico Collins",
-              "label": "WR"
-            },
-            {
-              "id": "4877706",
-              "name": "Jayden Higgins",
-              "label": "WR"
-            },
-            {
-              "id": "3117256",
-              "name": "Dalton Schultz",
-              "label": "TE"
-            },
-            {
-              "id": "4429693",
-              "name": "Aireontae Ersery",
-              "label": "OT"
+          "note": "Below average at kicking field goals last season, 22nd of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "82.4",
+              "rank": 9
             }
-          ],
-          "rank": 13,
-          "score": 4,
-          "note": "Better than most for points scored last season, 13th of 32."
-        },
-        "defence": {
-          "players": [
-            {
-              "id": "4685724",
-              "name": "Will Anderson Jr.",
-              "label": "DE"
-            },
-            {
-              "id": "2976560",
-              "name": "Danielle Hunter",
-              "label": "DE"
-            },
-            {
-              "id": "3071353",
-              "name": "E.J. Speed",
-              "label": "LB"
-            },
-            {
-              "id": "4426434",
-              "name": "Derek Stingley Jr.",
-              "label": "CB"
-            },
-            {
-              "id": "4602699",
-              "name": "Kamari Lassiter",
-              "label": "CB"
-            }
-          ],
-          "rank": 2,
-          "score": 5,
-          "note": "Among the best in the league for points allowed last season — 2nd of 32."
-        },
-        "specialTeams": {
-          "players": [
-            {
-              "id": "2971573",
-              "name": "Ka'imi Fairbairn",
-              "label": "K"
-            },
-            {
-              "id": "4586312",
-              "name": "Jaylin Noel",
-              "label": "KR"
-            }
-          ],
-          "rank": 6,
-          "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 6th of 32."
+          }
         }
       }
     },
@@ -1294,7 +1834,44 @@
           ],
           "rank": 8,
           "score": 4,
-          "note": "Better than most for points scored last season, 8th of 32."
+          "note": "Better than most for points scored last season, 8th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "442",
+              "rank": 21
+            },
+            "_passAttempts": {
+              "value": "547",
+              "rank": 18
+            },
+            "_sacks": {
+              "value": "29",
+              "rank": 25
+            },
+            "yards per carry": {
+              "value": "4.5",
+              "rank": 10
+            },
+            "yards per pass": {
+              "value": "7.5",
+              "rank": 10
+            },
+            "rushing touchdowns": {
+              "value": "27",
+              "rank": 2
+            },
+            "passing touchdowns": {
+              "value": "25",
+              "rank": 16
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 59.2,
+          "passPlayShareRank": 14,
+          "quarterbackCarries": 45
         },
         "defence": {
           "players": [
@@ -1326,7 +1903,17 @@
           ],
           "rank": 21,
           "score": 2,
-          "note": "Below average for points allowed last season, 21st of 32."
+          "note": "Below average for points allowed last season, 21st of 32.",
+          "stats": {
+            "sacks": {
+              "value": "39",
+              "rank": 15
+            },
+            "takeaways": {
+              "value": "21",
+              "rank": 10
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1343,7 +1930,13 @@
           ],
           "rank": 2,
           "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 2nd of 32."
+          "note": "Among the best in the league at kicking field goals last season — 2nd of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "94.4",
+              "rank": 2
+            }
+          }
         }
       }
     },
@@ -1356,10 +1949,78 @@
       "previousSeason": true,
       "units": {
         "offence": {
-          "players": [],
+          "players": [
+            {
+              "id": "4360310",
+              "name": "Trevor Lawrence",
+              "label": "QB"
+            },
+            {
+              "id": "4882093",
+              "name": "Bhayshul Tuten",
+              "label": "RB"
+            },
+            {
+              "id": "4432773",
+              "name": "Brian Thomas Jr.",
+              "label": "WR"
+            },
+            {
+              "id": "4432620",
+              "name": "Parker Washington",
+              "label": "WR"
+            },
+            {
+              "id": "4430539",
+              "name": "Brenton Strange",
+              "label": "TE"
+            },
+            {
+              "id": "4035791",
+              "name": "Cole Van Lanen",
+              "label": "OT"
+            }
+          ],
           "rank": 6,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 6th of 32."
+          "note": "Among the best in the league for points scored last season — 6th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "489",
+              "rank": 8
+            },
+            "_passAttempts": {
+              "value": "563",
+              "rank": 14
+            },
+            "_sacks": {
+              "value": "41",
+              "rank": 13
+            },
+            "yards per carry": {
+              "value": "4.0",
+              "rank": 27
+            },
+            "yards per pass": {
+              "value": "7.2",
+              "rank": 11
+            },
+            "rushing touchdowns": {
+              "value": "22",
+              "rank": 4
+            },
+            "passing touchdowns": {
+              "value": "29",
+              "rank": 7
+            },
+            "turnovers given away": {
+              "value": "18",
+              "rank": 19
+            }
+          },
+          "passPlayShare": 59.7,
+          "passPlayShareRank": 12,
+          "quarterbackCarries": 82
         },
         "defence": {
           "players": [
@@ -1369,20 +2030,62 @@
               "label": "DE"
             },
             {
+              "id": "3915239",
+              "name": "Josh Hines-Allen",
+              "label": "DE"
+            },
+            {
+              "id": "4427716",
+              "name": "Jack Kiser",
+              "label": "LB"
+            },
+            {
               "id": "4685415",
               "name": "Travis Hunter",
               "label": "WR"
+            },
+            {
+              "id": "4242149",
+              "name": "Montaric Brown",
+              "label": "CB"
             }
           ],
           "rank": 8,
           "score": 4,
-          "note": "Better than most for points allowed last season, 8th of 32."
+          "note": "Better than most for points allowed last season, 8th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "32",
+              "rank": 27
+            },
+            "takeaways": {
+              "value": "31",
+              "rank": 2
+            }
+          }
         },
         "specialTeams": {
-          "players": [],
-          "rank": 13,
+          "players": [
+            {
+              "id": "4686361",
+              "name": "Cam Little",
+              "label": "K"
+            },
+            {
+              "id": "4882093",
+              "name": "Bhayshul Tuten",
+              "label": "KR"
+            }
+          ],
+          "rank": 12,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 13th of 32."
+          "note": "Better than most at kicking field goals last season, 12th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "88.2",
+              "rank": 9
+            }
+          }
         }
       }
     },
@@ -1429,7 +2132,44 @@
           ],
           "rank": 21,
           "score": 2,
-          "note": "Below average for points scored last season, 21st of 32."
+          "note": "Below average for points scored last season, 21st of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "430",
+              "rank": 25
+            },
+            "_passAttempts": {
+              "value": "584",
+              "rank": 7
+            },
+            "_sacks": {
+              "value": "47",
+              "rank": 11
+            },
+            "yards per carry": {
+              "value": "4.2",
+              "rank": 20
+            },
+            "yards per pass": {
+              "value": "6.7",
+              "rank": 22
+            },
+            "rushing touchdowns": {
+              "value": "15",
+              "rank": 18
+            },
+            "passing touchdowns": {
+              "value": "23",
+              "rank": 21
+            },
+            "turnovers given away": {
+              "value": "15",
+              "rank": 25
+            }
+          },
+          "passPlayShare": 63.3,
+          "passPlayShareRank": 4,
+          "quarterbackCarries": 64
         },
         "defence": {
           "players": [
@@ -1461,7 +2201,17 @@
           ],
           "rank": 6,
           "score": 5,
-          "note": "Among the best in the league for points allowed last season — 6th of 32."
+          "note": "Among the best in the league for points allowed last season — 6th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "35",
+              "rank": 22
+            },
+            "takeaways": {
+              "value": "14",
+              "rank": 26
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1476,9 +2226,15 @@
               "label": "KR"
             }
           ],
-          "rank": 15,
+          "rank": 14,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 15th of 32."
+          "note": "Middle of the league at kicking field goals last season, 14th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "86.8",
+              "rank": 3
+            }
+          }
         }
       }
     },
@@ -1525,7 +2281,44 @@
           ],
           "rank": 20,
           "score": 2,
-          "note": "Below average for points scored last season, 20th of 32."
+          "note": "Below average for points scored last season, 20th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "466",
+              "rank": 15
+            },
+            "_passAttempts": {
+              "value": "569",
+              "rank": 13
+            },
+            "_sacks": {
+              "value": "60",
+              "rank": 2
+            },
+            "yards per carry": {
+              "value": "4.4",
+              "rank": 13
+            },
+            "yards per pass": {
+              "value": "6.9",
+              "rank": 16
+            },
+            "rushing touchdowns": {
+              "value": "10",
+              "rank": 25
+            },
+            "passing touchdowns": {
+              "value": "26",
+              "rank": 11
+            },
+            "turnovers given away": {
+              "value": "21",
+              "rank": 14
+            }
+          },
+          "passPlayShare": 62.2,
+          "passPlayShareRank": 6,
+          "quarterbackCarries": 83
         },
         "defence": {
           "players": [
@@ -1557,7 +2350,17 @@
           ],
           "rank": 9,
           "score": 4,
-          "note": "Better than most for points allowed last season, 9th of 32."
+          "note": "Better than most for points allowed last season, 9th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "45",
+              "rank": 10
+            },
+            "takeaways": {
+              "value": "23",
+              "rank": 7
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1574,7 +2377,13 @@
           ],
           "rank": 5,
           "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 5th of 32."
+          "note": "Among the best in the league at kicking field goals last season — 5th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "92.7",
+              "rank": 1
+            }
+          }
         }
       }
     },
@@ -1621,7 +2430,44 @@
           ],
           "rank": 1,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 1st of 32."
+          "note": "Among the best in the league for points scored last season — 1st of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "465",
+              "rank": 16
+            },
+            "_passAttempts": {
+              "value": "598",
+              "rank": 5
+            },
+            "_sacks": {
+              "value": "23",
+              "rank": 31
+            },
+            "yards per carry": {
+              "value": "4.6",
+              "rank": 6
+            },
+            "yards per pass": {
+              "value": "7.8",
+              "rank": 5
+            },
+            "rushing touchdowns": {
+              "value": "17",
+              "rank": 14
+            },
+            "passing touchdowns": {
+              "value": "46",
+              "rank": 1
+            },
+            "turnovers given away": {
+              "value": "15",
+              "rank": 25
+            }
+          },
+          "passPlayShare": 58.8,
+          "passPlayShareRank": 15,
+          "quarterbackCarries": 29
         },
         "defence": {
           "players": [
@@ -1653,7 +2499,17 @@
           ],
           "rank": 10,
           "score": 4,
-          "note": "Better than most for points allowed last season, 10th of 32."
+          "note": "Better than most for points allowed last season, 10th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "47",
+              "rank": 7
+            },
+            "takeaways": {
+              "value": "26",
+              "rank": 5
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1668,9 +2524,15 @@
               "label": "KR"
             }
           ],
-          "rank": 28,
+          "rank": 27,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 28th of 32."
+          "note": "Among the worst in the league at kicking field goals last season — 27th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "78.6",
+              "rank": 3
+            }
+          }
         }
       }
     },
@@ -1717,7 +2579,44 @@
           ],
           "rank": 32,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 32nd of 32."
+          "note": "Among the worst in the league for points scored last season — 32nd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "369",
+              "rank": 31
+            },
+            "_passAttempts": {
+              "value": "515",
+              "rank": 21
+            },
+            "_sacks": {
+              "value": "64",
+              "rank": 1
+            },
+            "yards per carry": {
+              "value": "3.6",
+              "rank": 32
+            },
+            "yards per pass": {
+              "value": "6.4",
+              "rank": 29
+            },
+            "rushing touchdowns": {
+              "value": "5",
+              "rank": 32
+            },
+            "passing touchdowns": {
+              "value": "20",
+              "rank": 25
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 62,
+          "passPlayShareRank": 8,
+          "quarterbackCarries": 14
         },
         "defence": {
           "players": [
@@ -1749,7 +2648,17 @@
           ],
           "rank": 25,
           "score": 2,
-          "note": "Below average for points allowed last season, 25th of 32."
+          "note": "Below average for points allowed last season, 25th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "37",
+              "rank": 18
+            },
+            "takeaways": {
+              "value": "16",
+              "rank": 23
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1764,9 +2673,15 @@
               "label": "KR"
             }
           ],
-          "rank": 25,
+          "rank": 24,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 25th of 32."
+          "note": "Below average at kicking field goals last season, 24th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "81.5",
+              "rank": 4
+            }
+          }
         }
       }
     },
@@ -1813,7 +2728,44 @@
           ],
           "rank": 25,
           "score": 2,
-          "note": "Below average for points scored last season, 25th of 32."
+          "note": "Below average for points scored last season, 25th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "432",
+              "rank": 24
+            },
+            "_passAttempts": {
+              "value": "479",
+              "rank": 30
+            },
+            "_sacks": {
+              "value": "38",
+              "rank": 16
+            },
+            "yards per carry": {
+              "value": "4.7",
+              "rank": 4
+            },
+            "yards per pass": {
+              "value": "6.9",
+              "rank": 17
+            },
+            "rushing touchdowns": {
+              "value": "14",
+              "rank": 21
+            },
+            "passing touchdowns": {
+              "value": "23",
+              "rank": 21
+            },
+            "turnovers given away": {
+              "value": "24",
+              "rank": 4
+            }
+          },
+          "passPlayShare": 55.8,
+          "passPlayShareRank": 25,
+          "quarterbackCarries": 22
         },
         "defence": {
           "players": [
@@ -1845,7 +2797,17 @@
           ],
           "rank": 24,
           "score": 2,
-          "note": "Below average for points allowed last season, 24th of 32."
+          "note": "Below average for points allowed last season, 24th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "39",
+              "rank": 15
+            },
+            "takeaways": {
+              "value": "20",
+              "rank": 15
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1862,7 +2824,13 @@
           ],
           "rank": 4,
           "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 4th of 32."
+          "note": "Among the best in the league at kicking field goals last season — 4th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "93.1",
+              "rank": 2
+            }
+          }
         }
       }
     },
@@ -1909,7 +2877,44 @@
           ],
           "rank": 26,
           "score": 2,
-          "note": "Below average for points scored last season, 26th of 32."
+          "note": "Below average for points scored last season, 26th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "410",
+              "rank": 27
+            },
+            "_passAttempts": {
+              "value": "484",
+              "rank": 28
+            },
+            "_sacks": {
+              "value": "60",
+              "rank": 2
+            },
+            "yards per carry": {
+              "value": "4.5",
+              "rank": 11
+            },
+            "yards per pass": {
+              "value": "6.6",
+              "rank": 25
+            },
+            "rushing touchdowns": {
+              "value": "15",
+              "rank": 18
+            },
+            "passing touchdowns": {
+              "value": "18",
+              "rank": 29
+            },
+            "turnovers given away": {
+              "value": "30",
+              "rank": 1
+            }
+          },
+          "passPlayShare": 58.8,
+          "passPlayShareRank": 16,
+          "quarterbackCarries": 29
         },
         "defence": {
           "players": [
@@ -1941,7 +2946,17 @@
           ],
           "rank": 7,
           "score": 4,
-          "note": "Better than most for points allowed last season, 7th of 32."
+          "note": "Better than most for points allowed last season, 7th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "49",
+              "rank": 4
+            },
+            "takeaways": {
+              "value": "21",
+              "rank": 10
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -1958,7 +2973,13 @@
           ],
           "rank": 3,
           "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 3rd of 32."
+          "note": "Among the best in the league at kicking field goals last season — 3rd of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "94.3",
+              "rank": 1
+            }
+          }
         }
       }
     },
@@ -2005,7 +3026,44 @@
           ],
           "rank": 2,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 2nd of 32."
+          "note": "Among the best in the league for points scored last season — 2nd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "494",
+              "rank": 6
+            },
+            "_passAttempts": {
+              "value": "502",
+              "rank": 23
+            },
+            "_sacks": {
+              "value": "48",
+              "rank": 9
+            },
+            "yards per carry": {
+              "value": "4.4",
+              "rank": 14
+            },
+            "yards per pass": {
+              "value": "8.8",
+              "rank": 1
+            },
+            "rushing touchdowns": {
+              "value": "22",
+              "rank": 4
+            },
+            "passing touchdowns": {
+              "value": "31",
+              "rank": 5
+            },
+            "turnovers given away": {
+              "value": "16",
+              "rank": 23
+            }
+          },
+          "passPlayShare": 58.4,
+          "passPlayShareRank": 19,
+          "quarterbackCarries": 103
         },
         "defence": {
           "players": [
@@ -2037,7 +3095,17 @@
           ],
           "rank": 4,
           "score": 5,
-          "note": "Among the best in the league for points allowed last season — 4th of 32."
+          "note": "Among the best in the league for points allowed last season — 4th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "35",
+              "rank": 22
+            },
+            "takeaways": {
+              "value": "19",
+              "rank": 19
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2052,9 +3120,15 @@
               "label": "KR"
             }
           ],
-          "rank": 19,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 19th of 32."
+          "note": "Middle of the league at kicking field goals last season, 18th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "84.4",
+              "rank": 4
+            }
+          }
         }
       }
     },
@@ -2101,7 +3175,44 @@
           ],
           "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 28th of 32."
+          "note": "Among the worst in the league for points scored last season — 28th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "435",
+              "rank": 23
+            },
+            "_passAttempts": {
+              "value": "591",
+              "rank": 6
+            },
+            "_sacks": {
+              "value": "49",
+              "rank": 8
+            },
+            "yards per carry": {
+              "value": "3.7",
+              "rank": 31
+            },
+            "yards per pass": {
+              "value": "6.8",
+              "rank": 18
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "19",
+              "rank": 26
+            },
+            "turnovers given away": {
+              "value": "24",
+              "rank": 4
+            }
+          },
+          "passPlayShare": 62.1,
+          "passPlayShareRank": 7,
+          "quarterbackCarries": 45
         },
         "defence": {
           "players": [
@@ -2133,7 +3244,17 @@
           ],
           "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 16th of 32."
+          "note": "Middle of the league for points allowed last season, 16th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "45",
+              "rank": 10
+            },
+            "takeaways": {
+              "value": "20",
+              "rank": 15
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2148,9 +3269,15 @@
               "label": "KR"
             }
           ],
-          "rank": 32,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 32nd of 32."
+          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "71.4",
+              "rank": 16
+            }
+          }
         }
       }
     },
@@ -2197,7 +3324,44 @@
           ],
           "rank": 17,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 17th of 32."
+          "note": "Middle of the league for points scored last season, 17th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "511",
+              "rank": 2
+            },
+            "_passAttempts": {
+              "value": "526",
+              "rank": 20
+            },
+            "_sacks": {
+              "value": "48",
+              "rank": 9
+            },
+            "yards per carry": {
+              "value": "4.3",
+              "rank": 18
+            },
+            "yards per pass": {
+              "value": "7.0",
+              "rank": 13
+            },
+            "rushing touchdowns": {
+              "value": "22",
+              "rank": 4
+            },
+            "passing touchdowns": {
+              "value": "21",
+              "rank": 24
+            },
+            "turnovers given away": {
+              "value": "17",
+              "rank": 21
+            }
+          },
+          "passPlayShare": 57.5,
+          "passPlayShareRank": 22,
+          "quarterbackCarries": 86
         },
         "defence": {
           "players": [
@@ -2229,7 +3393,17 @@
           ],
           "rank": 26,
           "score": 2,
-          "note": "Below average for points allowed last season, 26th of 32."
+          "note": "Below average for points allowed last season, 26th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "39",
+              "rank": 15
+            },
+            "takeaways": {
+              "value": "15",
+              "rank": 25
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2244,9 +3418,15 @@
               "label": "KR"
             }
           ],
-          "rank": 11,
+          "rank": 10,
           "score": 4,
-          "note": "Better than most at kicking field goals last season, 11th of 32."
+          "note": "Better than most at kicking field goals last season, 10th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "88.5",
+              "rank": 1
+            }
+          }
         }
       }
     },
@@ -2293,7 +3473,44 @@
           ],
           "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 29th of 32."
+          "note": "Among the worst in the league for points scored last season — 29th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "456",
+              "rank": 19
+            },
+            "_passAttempts": {
+              "value": "494",
+              "rank": 26
+            },
+            "_sacks": {
+              "value": "60",
+              "rank": 2
+            },
+            "yards per carry": {
+              "value": "4.6",
+              "rank": 8
+            },
+            "yards per pass": {
+              "value": "5.6",
+              "rank": 31
+            },
+            "rushing touchdowns": {
+              "value": "11",
+              "rank": 23
+            },
+            "passing touchdowns": {
+              "value": "15",
+              "rank": 31
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 57.2,
+          "passPlayShareRank": 24,
+          "quarterbackCarries": 41
         },
         "defence": {
           "players": [
@@ -2325,7 +3542,17 @@
           ],
           "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 31st of 32."
+          "note": "Among the worst in the league for points allowed last season — 31st of 32.",
+          "stats": {
+            "sacks": {
+              "value": "26",
+              "rank": 31
+            },
+            "takeaways": {
+              "value": "4",
+              "rank": 32
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2342,7 +3569,13 @@
           ],
           "rank": 1,
           "score": 5,
-          "note": "Among the best in the league at kicking field goals last season — 1st of 32."
+          "note": "Among the best in the league at kicking field goals last season — 1st of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "96.6",
+              "rank": 1
+            }
+          }
         }
       }
     },
@@ -2389,7 +3622,44 @@
           ],
           "rank": 19,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 19th of 32."
+          "note": "Middle of the league for points scored last season, 19th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "478",
+              "rank": 11
+            },
+            "_passAttempts": {
+              "value": "497",
+              "rank": 24
+            },
+            "_sacks": {
+              "value": "35",
+              "rank": 20
+            },
+            "yards per carry": {
+              "value": "4.2",
+              "rank": 23
+            },
+            "yards per pass": {
+              "value": "7.0",
+              "rank": 14
+            },
+            "rushing touchdowns": {
+              "value": "17",
+              "rank": 14
+            },
+            "passing touchdowns": {
+              "value": "26",
+              "rank": 11
+            },
+            "turnovers given away": {
+              "value": "15",
+              "rank": 25
+            }
+          },
+          "passPlayShare": 58.8,
+          "passPlayShareRank": 17,
+          "quarterbackCarries": 105
         },
         "defence": {
           "players": [
@@ -2421,7 +3691,17 @@
           ],
           "rank": 5,
           "score": 5,
-          "note": "Among the best in the league for points allowed last season — 5th of 32."
+          "note": "Among the best in the league for points allowed last season — 5th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "42",
+              "rank": 12
+            },
+            "takeaways": {
+              "value": "21",
+              "rank": 10
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2436,9 +3716,15 @@
               "label": "KR"
             }
           ],
-          "rank": 31,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 31st of 32."
+          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "74.1",
+              "rank": 4
+            }
+          }
         }
       }
     },
@@ -2485,7 +3771,44 @@
           ],
           "rank": 15,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 15th of 32."
+          "note": "Middle of the league for points scored last season, 15th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "407",
+              "rank": 28
+            },
+            "_passAttempts": {
+              "value": "550",
+              "rank": 17
+            },
+            "_sacks": {
+              "value": "31",
+              "rank": 22
+            },
+            "yards per carry": {
+              "value": "4.3",
+              "rank": 17
+            },
+            "yards per pass": {
+              "value": "6.6",
+              "rank": 26
+            },
+            "rushing touchdowns": {
+              "value": "16",
+              "rank": 17
+            },
+            "passing touchdowns": {
+              "value": "26",
+              "rank": 11
+            },
+            "turnovers given away": {
+              "value": "15",
+              "rank": 25
+            }
+          },
+          "passPlayShare": 60.1,
+          "passPlayShareRank": 11,
+          "quarterbackCarries": 21
         },
         "defence": {
           "players": [
@@ -2517,7 +3840,17 @@
           ],
           "rank": 17,
           "score": 3,
-          "note": "Middle of the league for points allowed last season, 17th of 32."
+          "note": "Middle of the league for points allowed last season, 17th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "48",
+              "rank": 6
+            },
+            "takeaways": {
+              "value": "27",
+              "rank": 4
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2532,9 +3865,15 @@
               "label": "KR"
             }
           ],
-          "rank": 20,
-          "score": 2,
-          "note": "Below average at kicking field goals last season, 20th of 32."
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals last season, 19th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "84.4",
+              "rank": 13
+            }
+          }
         }
       }
     },
@@ -2581,7 +3920,44 @@
           ],
           "rank": 3,
           "score": 5,
-          "note": "Among the best in the league for points scored last season — 3rd of 32."
+          "note": "Among the best in the league for points scored last season — 3rd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "507",
+              "rank": 3
+            },
+            "_passAttempts": {
+              "value": "481",
+              "rank": 29
+            },
+            "_sacks": {
+              "value": "27",
+              "rank": 27
+            },
+            "yards per carry": {
+              "value": "4.1",
+              "rank": 25
+            },
+            "yards per pass": {
+              "value": "8.4",
+              "rank": 2
+            },
+            "rushing touchdowns": {
+              "value": "19",
+              "rank": 9
+            },
+            "passing touchdowns": {
+              "value": "25",
+              "rank": 16
+            },
+            "turnovers given away": {
+              "value": "28",
+              "rank": 2
+            }
+          },
+          "passPlayShare": 51.8,
+          "passPlayShareRank": 30,
+          "quarterbackCarries": 35
         },
         "defence": {
           "players": [
@@ -2613,7 +3989,17 @@
           ],
           "rank": 1,
           "score": 5,
-          "note": "Among the best in the league for points allowed last season — 1st of 32."
+          "note": "Among the best in the league for points allowed last season — 1st of 32.",
+          "stats": {
+            "sacks": {
+              "value": "47",
+              "rank": 7
+            },
+            "takeaways": {
+              "value": "25",
+              "rank": 6
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2628,9 +4014,15 @@
               "label": "KR"
             }
           ],
-          "rank": 17,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league at kicking field goals last season, 17th of 32."
+          "note": "Middle of the league at kicking field goals last season, 16th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "85.4",
+              "rank": 2
+            }
+          }
         }
       }
     },
@@ -2677,7 +4069,44 @@
           ],
           "rank": 10,
           "score": 4,
-          "note": "Better than most for points scored last season, 10th of 32."
+          "note": "Better than most for points scored last season, 10th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "481",
+              "rank": 10
+            },
+            "_passAttempts": {
+              "value": "574",
+              "rank": 10
+            },
+            "_sacks": {
+              "value": "27",
+              "rank": 27
+            },
+            "yards per carry": {
+              "value": "3.8",
+              "rank": 30
+            },
+            "yards per pass": {
+              "value": "7.5",
+              "rank": 9
+            },
+            "rushing touchdowns": {
+              "value": "15",
+              "rank": 18
+            },
+            "passing touchdowns": {
+              "value": "33",
+              "rank": 4
+            },
+            "turnovers given away": {
+              "value": "22",
+              "rank": 13
+            }
+          },
+          "passPlayShare": 57.3,
+          "passPlayShareRank": 23,
+          "quarterbackCarries": 33
         },
         "defence": {
           "players": [
@@ -2709,7 +4138,17 @@
           ],
           "rank": 13,
           "score": 4,
-          "note": "Better than most for points allowed last season, 13th of 32."
+          "note": "Better than most for points allowed last season, 13th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "20",
+              "rank": 32
+            },
+            "takeaways": {
+              "value": "16",
+              "rank": 23
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2724,9 +4163,15 @@
               "label": "KR"
             }
           ],
-          "rank": 7,
-          "score": 4,
-          "note": "Better than most at kicking field goals last season, 7th of 32."
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league at kicking field goals last season — 6th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "91.7",
+              "rank": 1
+            }
+          }
         }
       }
     },
@@ -2773,7 +4218,44 @@
           ],
           "rank": 18,
           "score": 3,
-          "note": "Middle of the league for points scored last season, 18th of 32."
+          "note": "Middle of the league for points scored last season, 18th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "472",
+              "rank": 14
+            },
+            "_passAttempts": {
+              "value": "558",
+              "rank": 15
+            },
+            "_sacks": {
+              "value": "38",
+              "rank": 16
+            },
+            "yards per carry": {
+              "value": "4.1",
+              "rank": 26
+            },
+            "yards per pass": {
+              "value": "6.7",
+              "rank": 21
+            },
+            "rushing touchdowns": {
+              "value": "13",
+              "rank": 22
+            },
+            "passing touchdowns": {
+              "value": "26",
+              "rank": 11
+            },
+            "turnovers given away": {
+              "value": "16",
+              "rank": 23
+            }
+          },
+          "passPlayShare": 58.8,
+          "passPlayShareRank": 18,
+          "quarterbackCarries": 55
         },
         "defence": {
           "players": [
@@ -2805,7 +4287,17 @@
           ],
           "rank": 20,
           "score": 2,
-          "note": "Below average for points allowed last season, 20th of 32."
+          "note": "Below average for points allowed last season, 20th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "37",
+              "rank": 18
+            },
+            "takeaways": {
+              "value": "23",
+              "rank": 7
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2820,9 +4312,15 @@
               "label": "KR"
             }
           ],
-          "rank": 21,
+          "rank": 20,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 21st of 32."
+          "note": "Below average at kicking field goals last season, 20th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "84.2",
+              "rank": 7
+            }
+          }
         }
       }
     },
@@ -2869,7 +4367,44 @@
           ],
           "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league for points scored last season — 30th of 32."
+          "note": "Among the worst in the league for points scored last season — 30th of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "378",
+              "rank": 30
+            },
+            "_passAttempts": {
+              "value": "570",
+              "rank": 12
+            },
+            "_sacks": {
+              "value": "56",
+              "rank": 6
+            },
+            "yards per carry": {
+              "value": "4.2",
+              "rank": 21
+            },
+            "yards per pass": {
+              "value": "5.7",
+              "rank": 30
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "15",
+              "rank": 31
+            },
+            "turnovers given away": {
+              "value": "19",
+              "rank": 17
+            }
+          },
+          "passPlayShare": 64.9,
+          "passPlayShareRank": 2,
+          "quarterbackCarries": 39
         },
         "defence": {
           "players": [
@@ -2901,7 +4436,17 @@
           ],
           "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 28th of 32."
+          "note": "Among the worst in the league for points allowed last season — 28th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "42",
+              "rank": 12
+            },
+            "takeaways": {
+              "value": "14",
+              "rank": 26
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -2916,9 +4461,15 @@
               "label": "KR"
             }
           ],
-          "rank": 26,
+          "rank": 25,
           "score": 2,
-          "note": "Below average at kicking field goals last season, 26th of 32."
+          "note": "Below average at kicking field goals last season, 25th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "80.6",
+              "rank": 16
+            }
+          }
         }
       }
     },
@@ -2965,7 +4516,44 @@
           ],
           "rank": 22,
           "score": 2,
-          "note": "Below average for points scored last season, 22nd of 32."
+          "note": "Below average for points scored last season, 22nd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "484",
+              "rank": 9
+            },
+            "_passAttempts": {
+              "value": "469",
+              "rank": 31
+            },
+            "_sacks": {
+              "value": "37",
+              "rank": 18
+            },
+            "yards per carry": {
+              "value": "4.7",
+              "rank": 4
+            },
+            "yards per pass": {
+              "value": "7.1",
+              "rank": 12
+            },
+            "rushing touchdowns": {
+              "value": "20",
+              "rank": 8
+            },
+            "passing touchdowns": {
+              "value": "19",
+              "rank": 26
+            },
+            "turnovers given away": {
+              "value": "23",
+              "rank": 7
+            }
+          },
+          "passPlayShare": 54.3,
+          "passPlayShareRank": 28,
+          "quarterbackCarries": 58
         },
         "defence": {
           "players": [
@@ -2997,7 +4585,17 @@
           ],
           "rank": 27,
           "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 27th of 32."
+          "note": "Among the worst in the league for points allowed last season — 27th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "42",
+              "rank": 12
+            },
+            "takeaways": {
+              "value": "10",
+              "rank": 31
+            }
+          }
         },
         "specialTeams": {
           "players": [
@@ -3012,9 +4610,15 @@
               "label": "KR"
             }
           ],
-          "rank": 29,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 29th of 32."
+          "note": "Among the worst in the league at kicking field goals last season — 28th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "76.7",
+              "rank": 3
+            }
+          }
         }
       }
     }

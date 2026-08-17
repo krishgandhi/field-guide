@@ -23,7 +23,10 @@ export type Unit = {
   rank: number | null;
   /** 1–5, the same shape as every other rating on the site. */
   score: number | null;
+  /** Deterministic, pairs with the meter, always true. */
   note: string;
+  /** What KIND of unit this is — written from evidence. Absent until generated. */
+  blurb?: string | null;
 };
 
 export type TeamDetail = {

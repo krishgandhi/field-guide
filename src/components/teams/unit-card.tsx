@@ -27,7 +27,19 @@ export function UnitCard({ title, unit }: { title: string; unit: Unit }) {
         ) : null}
       </div>
 
-      <p className="mt-1.5 text-sm leading-snug text-fg-dim">{unit.note}</p>
+      {/* The characterisation leads, because "a run-first team built around
+          Josh Allen" is what someone actually wants to know. The rank sits
+          under it as the caption for the meter — short, and never wrong. */}
+      {unit.blurb ? (
+        <p className="mt-1.5 text-sm leading-snug text-fg">{unit.blurb}</p>
+      ) : null}
+      <p
+        className={`text-[0.78rem] leading-snug text-fg-dim ${
+          unit.blurb ? "mt-1.5" : "mt-1.5 text-sm"
+        }`}
+      >
+        {unit.note}
+      </p>
 
       {hasPlayers ? (
         <ul className="mt-3 space-y-1.5">

@@ -1,0 +1,254 @@
+/**
+ * Write the "what kind of unit is this" line for each team's offence, defence
+ * and special teams, using Claude.
+ *
+ * The rank sentence beside the meter is templated and always true, but it can
+ * only ever say "fourth-best for points scored". It cannot tell you Buffalo
+ * ran the ball more than anyone in the league, or that Seattle just paid their
+ * best cornerback and added another. That is what a fan would actually say
+ * about a unit, and it is what this writes.
+ *
+ * Same discipline as write-profiles.mjs: characterise from supplied evidence
+ * only. The model gets efficiency and scoring ranks, an ADJUSTED run/pass
+ * split, the unit's key players, and this site's own sourced move entries.
+ *
+ * It is deliberately NOT given raw attempt counts. Buffalo ranked first in the
+ * league in rushing attempts last season, and the obvious reading — a
+ * run-first team — is wrong: 112 of those carries were Josh Allen's own, 40
+ * sacks never appear in the pass column, and a 12-5 team runs out a lot of
+ * clocks. Adjusted, they sat 27th of 32 in pass share against a league median
+ * of 58.8%. Mildly run-leaning, not a philosophy. Volume ranks cannot tell
+ * intent from circumstance, so they don't get shown.
+ *
+ * Cached in src/data/team-detail.json and regenerated only when the evidence
+ * or the brief changes (§13).
+ *
+ *   ANTHROPIC_API_KEY=... npm run write:units
+ */
+
+import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
+import path from "node:path";
+import { createHash } from "node:crypto";
+import Anthropic from "@anthropic-ai/sdk";
+import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
+
+const DETAIL = "src/data/team-detail.json";
+const MOVES = "content/moves";
+
+/** Bump when the brief changes materially, to rewrite existing lines. */
+const PROMPT_VERSION = 1;
+
+const SELF_TEST = process.argv.includes("--self-test");
+
+if (!process.env.ANTHROPIC_API_KEY) {
+  console.log("No ANTHROPIC_API_KEY — no unit notes written.");
+  process.exit(0);
+}
+if (!existsSync(DETAIL)) {
+  console.log("No team detail cache. Run fetch-team-detail.mjs first.");
+  process.exit(0);
+}
+
+const cache = JSON.parse(readFileSync(DETAIL, "utf8"));
+const UNITS = ["offence", "defence", "specialTeams"];
+
+/** What this site already says about the team — sourced prose, safe to reuse. */
+function movesFor(teamId) {
+  const out = [];
+  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
+    const raw = readFileSync(path.join(MOVES, file), "utf8");
+    const teams = raw.match(/^ {2}teams: \[([^\]]*)\]/m)?.[1] ?? "";
+    if (!teams.split(",").some((t) => t.trim() === teamId)) continue;
+    const title = raw.match(/^title: (.+)$/m)?.[1];
+    const summary = raw.match(/^summary: (.+)$/m)?.[1];
+    if (title) out.push(summary ? `${title} — ${summary}` : title);
+  }
+  return out;
+}
+
+function evidenceFor(teamId, team, unit) {
+  const u = team.units[unit];
+  // Underscore keys are inputs to the pass-rate maths, not evidence. Handing
+  // over "rushing attempts rank 1" invites exactly the wrong conclusion.
+  const stats = Object.fromEntries(
+    Object.entries(u.stats ?? {}).filter(([k]) => !k.startsWith("_")),
+  );
+  return {
+    unit,
+    rankInLeague: u.rank,
+    statRanksOutOf32: stats,
+    ...(unit === "offence"
+      ? {
+          /** Adjusted for the quarterback's own carries and for sacks. */
+          passPlaySharePct: u.passPlayShare,
+          passPlayShareRank: u.passPlayShareRank,
+          leagueMedianPassShare: 58.8,
+          quarterbackOwnCarries: u.quarterbackCarries,
+        }
+      : {}),
+    keyPlayers: (u.players ?? []).map(
+      (p) => `${p.label} ${p.name}`,
+    ),
+    headCoach: team.coach?.name ?? null,
+    recentMovesInvolvingThisTeam: movesFor(teamId),
+  };
+}
+
+const hashOf = (evidence) =>
+  createHash("sha256").update(JSON.stringify(evidence)).digest("hex").slice(0, 16);
+
+// --- what needs writing ----------------------------------------------------
+
+const todo = [];
+for (const [teamId, team] of Object.entries(cache.teams ?? {})) {
+  for (const unit of UNITS) {
+    const u = team.units[unit];
+    const evidence = evidenceFor(teamId, team, unit);
+    const hash = hashOf(evidence);
+    if (u.blurb && u.blurbHash === hash && u.promptVersion === PROMPT_VERSION) {
+      continue;
+    }
+    todo.push({ key: `${teamId}:${unit}`, teamId, unit, evidence, hash });
+  }
+}
+
+if (todo.length === 0) {
+  console.log("Every unit already has a line. Nothing to generate.");
+  process.exit(0);
+}
+
+const batch = SELF_TEST ? todo.slice(0, 3) : todo;
+console.log(
+  `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
+);
+
+const client = new Anthropic();
+
+const SYSTEM = `You describe one unit of an NFL team — its offence, its defence or its special teams — to someone who has watched a bit of football but does not follow it closely.
+
+You get that unit's league ranks out of 32, its key players, the head coach, and summaries of recent moves involving the team from this site. That is your evidence. You have no other knowledge and must not use any you think you have.
+
+For an offence you also get passPlaySharePct: the share of plays that were pass plays, already adjusted for sacks and for the quarterback's own carries, with the league median for comparison. USE THIS, not your instincts, to judge whether a team leans run or pass. It is the honest version — raw carry counts are inflated by quarterback scrambles and by teams running out the clock when ahead.
+
+Write ONE or TWO sentences saying what kind of unit this is. Not how good — a rating already sits next to your words and says that. What KIND.
+
+The useful things to say, when the evidence supports them:
+- How they play, judged from passPlaySharePct against the league median. A team well below the median leans on the run; well above, they throw. Close to it, say nothing about balance — most teams are unremarkable here and pretending otherwise is worse than silence.
+- If quarterbackOwnCarries is high, the interesting fact is that the quarterback is a major part of the running game, NOT that the team is run-heavy.
+- Who it runs through. Name the player the unit is built around if the evidence points at one.
+- What just changed. If a recent move brought someone in, lost someone, or changed the coach, that is often the most interesting thing about the unit this year.
+
+Hard rules:
+- Never state a number that is not in the evidence. Prefer plain words: "ran the ball more than any other team" rather than "547 carries".
+- Use at most one figure, and only if it genuinely helps.
+- Do not restate the rank. "Fourth-best for points scored" already appears directly above your sentence; repeating it wastes the only two sentences you get.
+- If the evidence says nothing distinctive, say something honest and small rather than inventing character. "A middling unit without an obvious strength" is a fine answer.
+- Never mention a player who is not in the evidence.
+- Do not describe a team's "philosophy" or "identity" as though you know their intent. Describe what the numbers show them doing.
+- Plain spoken English, roughly 15 to 40 words. No jargon a newcomer wouldn't know, and no fantasy framing.`;
+
+const schema = {
+  type: "object",
+  properties: {
+    notes: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: { key: { type: "string" }, blurb: { type: "string" } },
+        required: ["key", "blurb"],
+        additionalProperties: false,
+      },
+    },
+  },
+  required: ["notes"],
+  additionalProperties: false,
+};
+
+/** Batched so one request covers many units; 96 separate calls would be silly. */
+const CHUNK = 12;
+const results = new Map();
+let tokensIn = 0;
+let tokensOut = 0;
+
+for (let i = 0; i < batch.length; i += CHUNK) {
+  const slice = batch.slice(i, i + CHUNK);
+  const response = await client.beta.messages.create({
+    model: "claude-opus-5",
+    max_tokens: 8000,
+    system: SYSTEM,
+    output_config: { effort: "medium", format: { type: "json_schema", schema } },
+    betas: ["server-side-fallback-2026-07-01"],
+    fallbacks: "default",
+    messages: [
+      {
+        role: "user",
+        content: `Write one entry per unit.\n\n${JSON.stringify(
+          slice.map((t) => ({ key: t.key, ...t.evidence })),
+          null,
+          2,
+        )}`,
+      },
+    ],
+  });
+
+  if (response.stop_reason === "refusal") {
+    console.error("Model declined a batch. Skipping it.");
+    continue;
+  }
+  const payload = response.content.find((b) => b.type === "text")?.text;
+  if (!payload) continue;
+  for (const n of JSON.parse(payload).notes ?? []) results.set(n.key, n.blurb);
+  tokensIn += response.usage.input_tokens;
+  tokensOut += response.usage.output_tokens;
+}
+
+// --- validation ------------------------------------------------------------
+
+export function problemWithNote(text, evidence) {
+  const trimmed = String(text ?? "").trim();
+  const words = trimmed.split(/\s+/).length;
+  if (words < 8 || words > 50) return `${words} words`;
+  if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
+  if (sentenceCount(trimmed) > 2) return "more than two sentences";
+
+  // Same guard as everywhere else: a figure must trace to what we supplied.
+  const allowed = new Set(numbersIn(JSON.stringify(evidence)));
+  const invented = numbersIn(trimmed).filter((n) => !allowed.has(n));
+  if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
+  return null;
+}
+
+let accepted = 0;
+const rejected = [];
+
+for (const item of batch) {
+  const blurb = results.get(item.key);
+  if (!blurb) {
+    rejected.push(`${item.key}: no response`);
+    continue;
+  }
+  const problem = problemWithNote(blurb, item.evidence);
+  if (problem) {
+    rejected.push(`${item.key}: ${problem} — "${blurb}"`);
+    continue;
+  }
+  if (!SELF_TEST) {
+    const unit = cache.teams[item.teamId].units[item.unit];
+    unit.blurb = blurb.trim();
+    unit.blurbHash = item.hash;
+    unit.promptVersion = PROMPT_VERSION;
+  }
+  accepted++;
+  if (SELF_TEST) console.log(`  ${item.key}\n    "${blurb.trim()}"`);
+}
+
+if (!SELF_TEST) {
+  cache.unitNotesWrittenAt = new Date().toISOString();
+  writeFileSync(DETAIL, `${JSON.stringify(cache, null, 2)}\n`);
+} else {
+  console.log("\n(self-test: nothing written)");
+}
+
+console.log(`\n${accepted}/${batch.length} accepted`);
+for (const r of rejected.slice(0, 10)) console.log(`  rejected — ${r}`);
+console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);
