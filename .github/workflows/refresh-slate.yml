@@ -84,6 +84,14 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # What KIND of unit each one is. Hashed on its evidence, so this is a
+      # no-op on most days.
+      - name: Write unit notes
+        run: npm run write:units
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Commit if changed
         run: |
           if [ -z "$(git status --porcelain -- src/data/ public/players/)" ]; then
