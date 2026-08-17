@@ -95,10 +95,22 @@ export function numbersIn(text) {
   return (String(text ?? "").match(/\d+(?:\.\d+)?/g) ?? []).map(Number);
 }
 
-/** Sentence count that doesn't trip on "$67.5 million". */
+/**
+ * Sentence count that doesn't trip on "$67.5 million" or "A.J. Terrell Jr."
+ *
+ * Names are the common case in football writing and every period in one looked
+ * like a full stop. That threw away seven perfectly good unit notes in a single
+ * run — every rejection contained an initial or a suffix.
+ */
 export function sentenceCount(text) {
   return String(text ?? "")
     .replace(/\$?\d+(\.\d+)?/g, "N")
+    // A period after a lone capital is an initial, never a full stop:
+    // "A.J.", "C.J.", "J.J.". The word boundary keeps "LA." safe, since the
+    // A there isn't at a boundary.
+    .replace(/(\b[A-Z])\./g, "$1")
+    // Suffixes and titles that carry a period mid-sentence.
+    .replace(/\b(Jr|Sr|St|Mr|Mrs|Dr|vs|No|Inc)\./g, "$1")
     .split(/[.!?]+(?:\s|$)/)
     .map((s) => s.trim())
     .filter(Boolean).length;

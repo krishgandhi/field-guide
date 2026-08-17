@@ -83,10 +83,14 @@ async function playerDetail(athleteId, name) {
       headers: { "user-agent": "field-guide (personal, non-commercial)" },
       signal: AbortSignal.timeout(15000),
     });
-    if (!res.ok) return { name };
+    if (!res.ok) return { id: athleteId, name };
     const body = await res.json();
     const a = body.athlete ?? body;
+    // The id must survive: draft-moves writes it into `people:`, which is what
+    // puts a profile card on the entry. Dropping it here published a signing
+    // with people: [] and no card, and test:moves caught it.
     return {
+      id: String(athleteId),
       name: a.displayName ?? name,
       position: a.position?.displayName ?? null,
       currentTeam: a.team?.abbreviation ?? null,
@@ -94,7 +98,7 @@ async function playerDetail(athleteId, name) {
   } catch {
     // Losing the position only costs accuracy on one axis; it must never stop
     // detection.
-    return { name };
+    return { id: athleteId, name };
   }
 }
 
