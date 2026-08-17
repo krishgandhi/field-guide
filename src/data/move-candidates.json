@@ -1,4 +1,89 @@
 {
-  "generatedAt": "2026-08-16T12:30:54.632Z",
-  "candidates": []
+  "generatedAt": "2026-08-17T12:35:21.616Z",
+  "candidates": [
+    {
+      "id": "49634196",
+      "headline": "Von Miller agrees to terms with Cowboys; 1-year deal per source",
+      "description": "Veteran OLB Von Miller has agreed to terms with the Dallas Cowboys -- a source telling ESPN that it's a one-year deal.",
+      "published": "2026-08-17",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "DAL"
+      ],
+      "players": [
+        {
+          "name": "Von Miller",
+          "position": "Linebacker",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49634196/von-miller-expected-sign-dallas-cowboys"
+    },
+    {
+      "id": "49631890",
+      "headline": "CB Keisean Nixon not guaranteed starting role with Packers",
+      "description": "The deeper the Packers get into training camp, the more uncertain it is that Keisean Nixon will be one of their opening-day starting cornerbacks.",
+      "published": "2026-08-16",
+      "likelyKind": "role",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "name": "Keisean Nixon",
+          "position": "Cornerback",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49631890/cb-keisean-nixon-not-guaranteed-starting-role-packers"
+    },
+    {
+      "id": "49631705",
+      "headline": "49ers' George Kittle eyes return to practice, opener in Australia",
+      "description": "George Kittle, who suffered a torn Achilles in January, said he might be able to practice soon with the hope that he'll be ready for the 49ers' opener vs. the Rams.",
+      "published": "2026-08-16",
+      "likelyKind": "injury",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "name": "George Kittle",
+          "position": "Tight End",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49631705/49ers-george-kittle-eyes-return-practice-opener-australia"
+    },
+    {
+      "id": "49631637",
+      "headline": "LT Ozzy Trapilo (knee) now eligible to practice with Bears",
+      "description": "The Bears activated Ozzy Trapilo off the physically unable to perform list on Sunday, seven months after the left tackle ruptured his patellar tendon in the postseason.",
+      "published": "2026-08-16",
+      "likelyKind": "injury",
+      "teams": [
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "CHI"
+      ],
+      "players": [
+        {
+          "name": "Ozzy Trapilo",
+          "position": "Offensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49631637/lt-ozzy-trapilo-knee-now-eligible-practice-bears"
+    }
+  ]
 }
