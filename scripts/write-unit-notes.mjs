@@ -36,7 +36,7 @@ const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 5;
+const PROMPT_VERSION = 6;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -92,6 +92,11 @@ function evidenceFor(teamId, team, unit) {
       // "(CAR)" on a player now in Buffalo is a sourced hint that he came from
       // elsewhere. It does NOT say when, and the brief forbids guessing.
       drafted: p.draftedBy ?? null,
+      // Which season this is for him, counting from 1. ESPN's own field uses 0
+      // for a rookie and then counts inclusively — a 2025 pick reads 2 in 2026
+      // — so it is handed over normalised. Reading the draft year as "this
+      // year" made the model call ten second-year players rookies.
+      seasonInTheLeague: p.experience === 0 ? 1 : (p.experience ?? null),
     })),
     headCoach: team.coach?.name ?? null,
     // ESPN counts seasons as an NFL head coach ANYWHERE, not with this club, so
@@ -151,6 +156,8 @@ Two things follow from that, and they matter:
 Only two things in the evidence show a coaching change: headCoachSeasonsAsHeadCoach is 0, or a coaching move appears in recentMovesInvolvingThisTeam. If neither holds, the coach is NOT new — name him if he is worth naming, but do not say he took over, arrived, is new, or inherited anything from a previous staff. Any other number in that field proves nothing: it counts seasons as a head coach anywhere in the league, so a coach in his first year with this team can read 7.
 
 2. NEVER SAY A PLAYER IS NEW, CAME FROM ANYWHERE, WAS SIGNED, OR WAS TRADED unless that exact move appears in recentMovesInvolvingThisTeam.
+
+3. A PLAYER IS A ROOKIE ONLY IF seasonInTheLeague IS 1. Do not work it out from the draft year — the most recent draft in the data is not necessarily this year's. Second-year, third-year and so on follow the same field: 2 means his second season. If the field is missing, say nothing about how long he has been around.
 
 The "drafted" field says WHO DRAFTED HIM, not where he was last. A player drafted by Denver in 2018 and now in Buffalo has probably played for other clubs in between — writing "came from Denver" is simply false. You may say "a first-round pick of Denver's" or "drafted fifth overall by Denver", because those are what the field actually says. You may not turn it into a transfer.
 

@@ -29,6 +29,17 @@ export const ARRIVAL =
 export const COACH_CHANGE =
   /\b(new head coach|new coach|newly appointed|takes? over|took over|is new|arriv\w+ to|new staff|previous staff|old staff|previous regime|old regime|since (?:been )?fired|was fired|replaced|inherit\w+)\b/i;
 
+/**
+ * How long a player has been in the league, as the note claims it. The model
+ * inferred this from the draft year and called ten second-year players rookies
+ * — the newest draft class in the data is not necessarily this year's.
+ */
+const TENURE = [
+  [/\brookie\b/i, 1],
+  [/\b(second[- ]year|sophomore)\b/i, 2],
+  [/\bthird[- ]year\b/i, 3],
+];
+
 /** Capitalised runs of two or more words — near enough to "a person's name". */
 function namesIn(text) {
   return [...text.matchAll(/\b[A-Z][\w.'-]*(?:\s+[A-Z][\w.'-]*)+/g)]
@@ -68,6 +79,22 @@ export function problemWithNote(text, evidence) {
     const inMoves = Boolean(surname) && moves.includes(surname);
     if (!firstSeason && !inMoves) {
       return `claims a coaching change ("${change[0]}") that the evidence does not show`;
+    }
+  }
+
+  // "Rookie" and "second-year" must match somebody in the unit. Checked against
+  // the players actually named in the note, so a note calling one man a rookie
+  // while another rookie stands nearby still fails.
+  const named = namesIn(trimmed);
+  const players = evidence.keyPlayers ?? [];
+  for (const [pattern, season] of TENURE) {
+    if (!pattern.test(trimmed)) continue;
+    const matches = named
+      .map((n) => players.find((p) => p.name === n))
+      .filter(Boolean)
+      .some((p) => p.seasonInTheLeague === season);
+    if (!matches) {
+      return `says "${trimmed.match(pattern)[0]}" of nobody it names who is in season ${season}`;
     }
   }
 

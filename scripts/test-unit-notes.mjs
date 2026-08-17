@@ -105,6 +105,45 @@ check(
   patriots,
 );
 
+// --- how long a player has been around -------------------------------------
+
+const bills = {
+  headCoach: "Joe Brady",
+  headCoachSeasonsAsHeadCoach: 0,
+  recentMovesInvolvingThisTeam: [],
+  keyPlayers: [
+    // A 2025 first-rounder, so this is his second season, not his first.
+    { name: "Maxwell Hairston", position: "CB", seasonInTheLeague: 2 },
+    { name: "Christian Benford", position: "CB", seasonInTheLeague: 5 },
+    { name: "Mansoor Delane", position: "CB", seasonInTheLeague: 1 },
+  ],
+};
+
+check(
+  "reject",
+  "a second-year player called a rookie",
+  "Christian Benford and first-round rookie Maxwell Hairston man the corners, a pairing with plenty of speed.",
+  bills,
+);
+check(
+  "accept",
+  "the same player called second-year",
+  "Christian Benford and second-year corner Maxwell Hairston man the corners, a pairing with plenty of speed.",
+  bills,
+);
+check(
+  "accept",
+  "an actual rookie called a rookie",
+  "Christian Benford and rookie Mansoor Delane man the corners, a pairing with plenty of speed to burn.",
+  bills,
+);
+check(
+  "reject",
+  "a rookie claim about a player the note does not name",
+  "The corners are quick and the rookie in the group is expected to start, which is a lot to ask of anyone.",
+  bills,
+);
+
 // --- the older rules still hold -------------------------------------------
 
 check(
