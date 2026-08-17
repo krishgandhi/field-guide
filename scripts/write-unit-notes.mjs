@@ -36,7 +36,7 @@ const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 3;
+const PROMPT_VERSION = 4;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -142,7 +142,9 @@ Two things follow from that, and they matter:
 
 1. THE STATISTICS DESCRIBE LAST SEASON. If the evidence shows the head coach changed, last season's tendencies belong to the previous regime and you should say so rather than presenting them as what this team is. A note that describes a team as its fired coach built it is worse than useless to someone about to talk about this year.
 
-2. NEVER SAY A PLAYER IS NEW, WAS SIGNED, OR WAS TRADED unless that move appears in recentMovesInvolvingThisTeam. If a key player was drafted by a different club, you know only that he arrived from somewhere at some point — you may say he "came from" that team, never when or how. Guessing a transaction is the one mistake that makes this site untrustworthy.
+2. NEVER SAY A PLAYER IS NEW, CAME FROM ANYWHERE, WAS SIGNED, OR WAS TRADED unless that exact move appears in recentMovesInvolvingThisTeam.
+
+The "drafted" field says WHO DRAFTED HIM, not where he was last. A player drafted by Denver in 2018 and now in Buffalo has probably played for other clubs in between — writing "came from Denver" is simply false. You may say "a first-round pick of Denver's" or "drafted fifth overall by Denver", because those are what the field actually says. You may not turn it into a transfer.
 
 For an offence you also get passPlaySharePct: the share of plays that were pass plays, already adjusted for sacks and for the quarterback's own carries, with the league median for comparison. USE THIS, not your instincts, to judge whether a team leans run or pass. It is the honest version — raw carry counts are inflated by quarterback scrambles and by teams running out the clock when ahead.
 
@@ -152,7 +154,7 @@ The useful things to say, when the evidence supports them:
 - How they play, judged from passPlaySharePct against the league median. A team well below the median leans on the run; well above, they throw. Close to it, say nothing about balance — most teams are unremarkable here and pretending otherwise is worse than silence.
 - If quarterbackOwnCarries is high, the interesting fact is that the quarterback is a major part of the running game, NOT that the team is run-heavy.
 - Who it runs through. Name the player the unit is built around if the evidence points at one.
-- What just changed, and what it points to. A new head coach, a move in the list, or a key player drafted elsewhere are all signals about direction. A unit that ran a lot under a coach who has since been fired may not run a lot now, and saying so is more useful than repeating last year's split.
+- What just changed, and what it points to. A new head coach or a move in the list are signals about direction. A key player drafted by another club is a weaker hint — it tells you he was acquired at some point, not recently. A unit that ran a lot under a coach who has since been fired may not run a lot now, and saying so is more useful than repeating last year's split.
 
 Hard rules:
 - Never state a number that is not in the evidence. Prefer plain words: "ran the ball more than any other team" rather than "547 carries".
@@ -222,6 +224,15 @@ for (let i = 0; i < batch.length; i += CHUNK) {
 
 // --- validation ------------------------------------------------------------
 
+/**
+ * Phrases that assert a transfer. The draft field cannot support any of them:
+ * it says who drafted a player, not who he last played for. Left unchecked,
+ * this produced "Bradley Chubb, who came from Denver" for a player Denver
+ * drafted eight years ago — across 29 of 96 notes.
+ */
+const ARRIVAL =
+  /\b(came from|arrived from|joined from|signed from|acquired from|newly signed|new signing|just signed|traded for|brought in from)\b/i;
+
 export function problemWithNote(text, evidence) {
   const trimmed = String(text ?? "").trim();
   const words = trimmed.split(/\s+/).length;
@@ -233,6 +244,18 @@ export function problemWithNote(text, evidence) {
   const allowed = new Set(numbersIn(JSON.stringify(evidence)));
   const invented = numbersIn(trimmed).filter((n) => !allowed.has(n));
   if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
+
+  // An arrival may only be asserted when a move entry for this team records
+  // it. Everything else is inference from a draft position.
+  const arrival = trimmed.match(ARRIVAL);
+  if (arrival) {
+    const moves = (evidence.recentMovesInvolvingThisTeam ?? []).join(" ");
+    const named = [...trimmed.matchAll(/\b[A-Z][\w.'-]*(?:\s+[A-Z][\w.'-]*)+/g)]
+      .map((m) => m[0])
+      .filter((n) => n.split(/\s+/).length >= 2);
+    const backed = named.some((n) => moves.includes(n.split(/\s+/).at(-1)));
+    if (!backed) return `claims an arrival ("${arrival[0]}") with no move to support it`;
+  }
   return null;
 }
 
