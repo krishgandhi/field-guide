@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T13:08:58.198Z",
+  "fetchedAt": "2026-08-17T13:18:02.319Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -68,8 +68,8 @@
       },
       "headshot": "/players/13976.png",
       "evidenceHash": "2f312184eb475ba9",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "An outside linebacker whose job is rushing the passer, taken second overall in the 2011 draft and now in his sixteenth season, having just signed a one-year deal with Dallas. He was Defensive Rookie of the Year and a Super Bowl MVP, and with well over a hundred career sacks he is one of the great pass rushers of his era, though at thirty-seven the short contract suggests a team checking what is left rather than counting on it.",
+      "promptVersion": 2
     },
     "3122132": {
       "id": "3122132",
@@ -717,5 +717,5 @@
       "promptVersion": 2
     }
   },
-  "profilesWrittenAt": "2026-08-17T13:09:23.215Z"
+  "profilesWrittenAt": "2026-08-17T13:18:26.556Z"
 }
