@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T14:11:51.141Z",
+  "fetchedAt": "2026-08-17T14:21:48.671Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -152,9 +152,9 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 29th of 32.",
-          "blurb": "Getting to the quarterback is the clear shortfall, with Josh Sweat and Darius Robinson leading a pass rush that seldom arrives; the young corners Will Johnson and Denzel Burke are now under new head coach Mike LaFleur.",
-          "blurbHash": "830ad4330a3ede55",
-          "promptVersion": 5,
+          "blurb": "A unit that rarely gets to the quarterback, with Josh Sweat and Darius Robinson leading the rush and two second-year cornerbacks, Will Johnson and Denzel Burke, on the outside. Mike LaFleur has just taken charge.",
+          "blurbHash": "3d947b82ad2a77fa",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "30",
@@ -188,9 +188,9 @@
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
-          "blurb": "Chad Ryland was among the most accurate kickers in the league, so whatever holds this group back is happening elsewhere — Devin Duvernay handles the kick returns.",
-          "blurbHash": "cbd99cc9a1d115cb",
-          "promptVersion": 5,
+          "blurb": "Chad Ryland was among the more accurate kickers in the league on field goals, and Devin Duvernay handles kick returns. Mike LaFleur has just taken over as head coach.",
+          "blurbHash": "97ed1ddc18fdde62",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "75.8",
@@ -262,9 +262,9 @@
           "rank": 24,
           "score": 2,
           "note": "Below average for points scored last season, 24th of 32.",
-          "blurb": "They run a little more than most teams do, built around Bijan Robinson on the ground and Drake London and Kyle Pitts as targets, with Tua Tagovailoa throwing behind long-serving tackle Jake Matthews.",
-          "blurbHash": "e88f5c8959002e00",
-          "promptVersion": 5,
+          "blurb": "They lean on the run more than most, with Bijan Robinson the centrepiece, while Tua Tagovailoa throws to Drake London and Kyle Pitts. Touchdowns through the air were scarce.",
+          "blurbHash": "7a07a50544d94c32",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "477",
@@ -349,9 +349,9 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 19th of 32.",
-          "blurb": "A group that hunts the quarterback hard — only one team recorded more sacks — and takes the ball away often, with A.J. Terrell the established name in the secondary.",
-          "blurbHash": "36c8446376c21b29",
-          "promptVersion": 5,
+          "blurb": "Built on pressure — only one team sacked the quarterback more often — with Samson Ebukam and Zach Harrison rushing and A.J. Terrell Jr. leading a secondary that takes the ball away regularly.",
+          "blurbHash": "1fc555087bf291a2",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "57",
@@ -385,9 +385,9 @@
           "rank": 24,
           "score": 2,
           "note": "Below average at kicking field goals last season, 24th of 32.",
-          "blurb": "Veteran Nick Folk handles the kicking and has been reliable on field goals; rookie Zachariah Branch, a third-round pick, is the man returning kicks.",
-          "blurbHash": "8cfde89f779a309c",
-          "promptVersion": 5,
+          "blurb": "Nick Folk, in his nineteenth season, is a reliable field-goal kicker, and rookie Zachariah Branch takes the kick returns.",
+          "blurbHash": "710f2137f9b18f6b",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "82.1",
@@ -459,9 +459,9 @@
           "rank": 11,
           "score": 4,
           "note": "Better than most for points scored last season, 11th of 32.",
-          "blurb": "Built on the run more than any other team last year, with Derrick Henry carrying and Lamar Jackson himself a major runner, though new head coach Jesse Minter inherits those tendencies rather than setting them.",
-          "blurbHash": "8c51d1612cb839f5",
-          "promptVersion": 5,
+          "blurb": "No team passed less last season, and none gained more per carry, with Derrick Henry and Lamar Jackson's own running both central. That was the old staff's work — Jesse Minter is now the head coach.",
+          "blurbHash": "333b225f5b75ae01",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "507",
@@ -546,9 +546,9 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 18th of 32.",
-          "blurb": "Plenty of famous names up front in Trey Hendrickson, Nnamdi Madubuike and Calais Campbell, yet the sacks did not come last season; Marlon Humphrey and Nate Wiggins hold the corners under new coach Jesse Minter.",
-          "blurbHash": "e465177842498003",
-          "promptVersion": 5,
+          "blurb": "Experienced through the middle and back, with Nnamdi Madubuike, Calais Campbell, Marlon Humphrey and Nate Wiggins, but sacks were hard to come by. Jesse Minter has just taken over as head coach.",
+          "blurbHash": "1c771f7131391f67",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "30",
@@ -582,9 +582,9 @@
           "rank": 12,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 12th of 32.",
-          "blurb": "Young kicker Tyler Loop, a sixth-round pick, made a high share of his field goals, with Rasheen Ali returning kicks.",
-          "blurbHash": "74914b716eb2d80b",
-          "promptVersion": 5,
+          "blurb": "Second-year kicker Tyler Loop was accurate on field goals, with Rasheen Ali returning kicks, under new head coach Jesse Minter.",
+          "blurbHash": "19a61203624fbb9c",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "88.2",
@@ -656,9 +656,9 @@
           "rank": 4,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 4th of 32.",
-          "blurb": "Everything runs through Josh Allen, who carried the ball himself more than most running backs do, and they score on the ground as well as anyone; Joe Brady has been promoted to head coach.",
-          "blurbHash": "0183b670141926a8",
-          "promptVersion": 5,
+          "blurb": "They lean slightly towards the run and scored more rushing touchdowns than anyone, with Josh Allen himself carrying well over a hundred times; Joe Brady has been promoted from within to lead it.",
+          "blurbHash": "060e05d41b912792",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "547",
@@ -779,9 +779,9 @@
           "rank": 8,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 8th of 32.",
-          "blurb": "Tyler Bass was one of the surest field goal kickers in the league, and running back Ray Davis doubles up on kick returns.",
-          "blurbHash": "f51dae35454c790b",
-          "promptVersion": 5,
+          "blurb": "Tyler Bass was one of the most accurate field-goal kickers in the league, with Ray Davis returning kicks, now under newly promoted head coach Joe Brady.",
+          "blurbHash": "790b7b4b08949635",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "90.5",
@@ -853,9 +853,9 @@
           "rank": 27,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 27th of 32.",
-          "blurb": "An offence built around first-overall pick Bryce Young, with Chuba Hubbard carrying and 2025 top-ten pick Tetairoa McMillan the newest target. They gained little per pass attempt and scored few rushing touchdowns.",
-          "blurbHash": "29f70dcdd349c661",
-          "promptVersion": 5,
+          "blurb": "Built around Bryce Young, the first pick of the 2023 draft, with Chuba Hubbard carrying and Tetairoa McMillan outside; they leaned on the run a little more than most teams and gained less per pass than nearly anyone.",
+          "blurbHash": "150128fd0cb6c66f",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "461",
@@ -940,9 +940,9 @@
           "rank": 15,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 15th of 32.",
-          "blurb": "A unit that takes the ball away at a decent clip but rarely gets to the quarterback, with few sacks all year. Derrick Brown anchors the line and Jaycee Horn leads the secondary.",
-          "blurbHash": "b9fdf3221113e2d1",
-          "promptVersion": 5,
+          "blurb": "A front anchored by Derrick Brown and Tershawn Wharton that rarely gets to the quarterback, but the back end, with Jaycee Horn at corner, takes the ball away at a decent clip.",
+          "blurbHash": "439136167c7114c2",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "30",
@@ -976,9 +976,9 @@
           "rank": 22,
           "score": 2,
           "note": "Below average at kicking field goals last season, 22nd of 32.",
-          "blurb": "Ryan Fitzgerald was reliable on field goals, hitting better than four in five, while fourth-round rookie Trevor Etienne handles the kick returns.",
-          "blurbHash": "a8c104eafafc27f1",
-          "promptVersion": 5,
+          "blurb": "Kicker Ryan Fitzgerald was reliable on field goals; Trevor Etienne, a fourth-round pick of Carolina's, handles kick returns.",
+          "blurbHash": "98e59f8dd7188ff4",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "82.8",
@@ -1050,9 +1050,9 @@
           "rank": 9,
           "score": 4,
           "note": "Better than most for points scored last season, 9th of 32.",
-          "blurb": "They ran the ball efficiently and almost never gave it away — fewer turnovers than any team. Caleb Williams is a real part of the running game himself, with young pass-catchers Rome Odunze, Luther Burden III and Colston Loveland around him.",
-          "blurbHash": "f2b27aee3bc36f1d",
-          "promptVersion": 5,
+          "blurb": "Runs the ball as efficiently as almost anyone and hardly ever turns it over, with Caleb Williams a real part of the running game himself alongside D'Andre Swift, plus a young receiving group in Rome Odunze, Luther Burden III and Colston Loveland.",
+          "blurbHash": "7ad07b3ca003cb8c",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "505",
@@ -1137,9 +1137,9 @@
           "rank": 23,
           "score": 2,
           "note": "Below average for points allowed last season, 23rd of 32.",
-          "blurb": "A ball-hawking group that forced more turnovers than anyone in the league, though the pass rush led by Montez Sweat and Dayo Odeyingbo produced few sacks.",
-          "blurbHash": "f87fbe5218302fdf",
-          "promptVersion": 5,
+          "blurb": "Takes the ball away more than any other defence, though the pass rush from Montez Sweat and Dayo Odeyingbo does not get home often; Jaylon Johnson and Tyrique Stevenson man the corners.",
+          "blurbHash": "6c87d318162f166e",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "35",
@@ -1173,9 +1173,9 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 18th of 32.",
-          "blurb": "Cairo Santos was accurate on field goals, making better than five of every six, with rookie Zavion Thomas returning kicks.",
-          "blurbHash": "aac4f9801bd5510c",
-          "promptVersion": 5,
+          "blurb": "Long-serving kicker Cairo Santos was accurate on field goals, with rookie Zavion Thomas returning kicks.",
+          "blurbHash": "fa6f287458b88f5c",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "84.6",
@@ -1247,9 +1247,9 @@
           "rank": 12,
           "score": 4,
           "note": "Better than most for points scored last season, 12th of 32.",
-          "blurb": "One of the most pass-happy offences in football, throwing far more than the typical team, with Joe Burrow feeding Ja'Marr Chase and Tee Higgins for plenty of touchdowns. The running game does little.",
-          "blurbHash": "2d3093f17bec5129",
-          "promptVersion": 5,
+          "blurb": "One of the most pass-heavy attacks in the league, throwing to Ja'Marr Chase and Tee Higgins with Joe Burrow; the running game gains little and scores rarely, and the ball gets given away a lot.",
+          "blurbHash": "ec22ef57dc46e90f",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "381",
@@ -1334,9 +1334,9 @@
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 30th of 32.",
-          "blurb": "A defence that gets after the quarterback less than most, built on young first- and second-round secondary picks in Dax Hill and DJ Turner II alongside Myles Murphy and Boye Mafe up front.",
-          "blurbHash": "6700eee486ac31ea",
-          "promptVersion": 5,
+          "blurb": "A young secondary of Dax Hill and DJ Turner II behind a front, led by Boye Mafe and Myles Murphy, that struggles to sack the quarterback.",
+          "blurbHash": "7c16e25838312029",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "34",
@@ -1370,9 +1370,9 @@
           "rank": 9,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 9th of 32.",
-          "blurb": "Evan McPherson, a fifth-round pick of Cincinnati's, made close to nine in ten field goals, with Charlie Jones handling kick returns.",
-          "blurbHash": "0e44d07b6fb63e57",
-          "promptVersion": 5,
+          "blurb": "Evan McPherson makes his field goals at a high rate, and Charlie Jones handles kick returns.",
+          "blurbHash": "44a9b221a7a31ec0",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "89.3",
@@ -1444,9 +1444,9 @@
           "rank": 31,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 31st of 32.",
-          "blurb": "Todd Monken takes over, so last season's numbers — the fewest yards per pass in the league — belong to the previous staff. The pieces are strikingly young: Quinshon Judkins, Harold Fannin Jr., KC Concepcion and rookie tackle Spencer Fano.",
-          "blurbHash": "4b7e30e783343956",
-          "promptVersion": 5,
+          "blurb": "Todd Monken takes over a group that gained less per pass than any team in the league and gave the ball away often; the pieces are very young, with rookies KC Concepcion and left tackle Spencer Fano joining Quinshon Judkins in the backfield.",
+          "blurbHash": "412b7ce7bcbac697",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "421",
@@ -1531,9 +1531,9 @@
           "rank": 14,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 14th of 32.",
-          "blurb": "Last year's heavy sack total came before Myles Garrett was traded to the Rams, and Todd Monken now takes charge, so the pass rush should look different. Denzel Ward and Tyson Campbell hold up the corners.",
-          "blurbHash": "8413d422447068d1",
-          "promptVersion": 5,
+          "blurb": "Gets to the quarterback about as well as any defence, through Jared Verse and Alex Wright, though it forces few turnovers; Cleveland traded away Myles Garrett for picks, and Todd Monken is in his first year as head coach.",
+          "blurbHash": "cb12bead36508d13",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "53",
@@ -1567,9 +1567,9 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 10th of 32.",
-          "blurb": "Undrafted kicker Andre Szmyt converted close to nine in ten field goals, with Malachi Corley returning kicks under new head coach Todd Monken.",
-          "blurbHash": "db249a678bc40aa0",
-          "promptVersion": 5,
+          "blurb": "Andre Szmyt was accurate on field goals, with Malachi Corley, a third-round pick of the Jets, returning kicks.",
+          "blurbHash": "2575057ebd320d57",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "88.9",
@@ -1641,9 +1641,9 @@
           "rank": 7,
           "score": 4,
           "note": "Better than most for points scored last season, 7th of 32.",
-          "blurb": "A passing team a little more than most, running through Dak Prescott to CeeDee Lamb and George Pickens, with Javonte Williams carrying the ball; most of their touchdowns came through the air.",
-          "blurbHash": "af1a5071d7e92ee4",
-          "promptVersion": 5,
+          "blurb": "A throwing offence built around Dak Prescott with CeeDee Lamb and George Pickens outside and Jake Ferguson at tight end; they passed a bit more than most teams and scored through the air more than on the ground.",
+          "blurbHash": "30caeb1de7efaca3",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "465",
@@ -1728,9 +1728,9 @@
           "rank": 32,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 32nd of 32.",
-          "blurb": "A unit that rarely takes the ball away and doesn't get to the quarterback often, built around interior linemen Quinnen Williams and Kenny Clark plus corner DaRon Bland. Veteran pass rusher Von Miller has agreed to a one-year deal.",
-          "blurbHash": "43f6ea7d575663b9",
-          "promptVersion": 5,
+          "blurb": "A unit that rarely takes the ball away and doesn't get to the quarterback often, leaning on interior linemen Quinnen Williams and Kenny Clark plus corner DaRon Bland; veteran pass rusher Von Miller has agreed to a one-year deal to help there.",
+          "blurbHash": "b77b621007e9c8e1",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "35",
@@ -1764,9 +1764,9 @@
           "rank": 16,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 16th of 32.",
-          "blurb": "Kicker Brandon Aubrey is the centrepiece, making field goals at nearly the best rate in the league, with KaVontae Turpin handling kick returns.",
-          "blurbHash": "e0b359245dd60e69",
-          "promptVersion": 5,
+          "blurb": "Kicker Brandon Aubrey makes almost everything he tries, among the most accurate in the league, with KaVontae Turpin handling kick returns.",
+          "blurbHash": "6d7dc8c4f018d617",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "85.7",
@@ -1838,9 +1838,9 @@
           "rank": 14,
           "score": 3,
           "note": "Middle of the league for points scored last season, 14th of 32.",
-          "blurb": "They throw more than most teams, but in short bites — few teams gained less per pass — and Bo Nix is a real part of the run game with his own carries alongside J.K. Dobbins.",
-          "blurbHash": "c6fa175f20d32a54",
-          "promptVersion": 5,
+          "blurb": "Bo Nix throws often but short, with modest gains per pass, and he is a real part of the running game himself; Courtland Sutton, Jaylen Waddle and Evan Engram are the targets.",
+          "blurbHash": "81251bfcbc2e5d99",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "456",
@@ -1925,9 +1925,9 @@
           "rank": 3,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 3rd of 32.",
-          "blurb": "No team sacked the quarterback more often, led by Zach Allen and Nik Bonitto up front with Pat Surtain II in coverage, though they seldom force turnovers.",
-          "blurbHash": "334f1f918a45cb75",
-          "promptVersion": 5,
+          "blurb": "A pass-rushing unit above all — nobody in the league sacked the quarterback more, with Nik Bonitto and Zach Allen up front and Pat Surtain II covering — though they seldom force turnovers.",
+          "blurbHash": "ec426613c08b1f79",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "68",
@@ -1961,9 +1961,9 @@
           "rank": 14,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 14th of 32.",
-          "blurb": "Wil Lutz was among the most accurate kickers in the league, and Marvin Mims Jr. handles the returns.",
-          "blurbHash": "f54301dd6f1aac8f",
-          "promptVersion": 5,
+          "blurb": "Veteran Wil Lutz was one of the most accurate kickers in the league, and Marvin Mims Jr. takes the kick returns.",
+          "blurbHash": "a9f6c807a735d2a1",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "87.5",
@@ -2035,9 +2035,9 @@
           "rank": 5,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 5th of 32.",
-          "blurb": "Built around Jared Goff throwing to Amon-Ra St. Brown and Sam LaPorta with Jahmyr Gibbs running behind Penei Sewell; they scored plenty both ways and gave the ball away less often than most.",
-          "blurbHash": "f7b115d2ceb8c8cf",
-          "promptVersion": 5,
+          "blurb": "Jared Goff throws to Amon-Ra St. Brown and Sam LaPorta while Jahmyr Gibbs carries, and they moved the ball well both ways without giving it away often.",
+          "blurbHash": "8ef384982c0a075b",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "442",
@@ -2122,9 +2122,9 @@
           "rank": 22,
           "score": 2,
           "note": "Below average for points allowed last season, 22nd of 32.",
-          "blurb": "A group whose strength is the pass rush, with Aidan Hutchinson leading one of the league's best sack totals, while takeaways come less often. D.J. Reed and rookie Keith Abney II play the corners.",
-          "blurbHash": "ff07857d5e4193a5",
-          "promptVersion": 5,
+          "blurb": "A unit that gets after the quarterback as well as almost anyone, led by Aidan Hutchinson, with D.J. Reed at corner and rookie Keith Abney II behind him.",
+          "blurbHash": "5e476416072fe6d1",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "49",
@@ -2158,9 +2158,9 @@
           "rank": 27,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 27th of 32.",
-          "blurb": "Jake Bates handles the kicking and Jacob Saylors the kick returns; the field goals go in at a decent clip, the rest of the phase less so.",
-          "blurbHash": "0b9e60372b1feb4e",
-          "promptVersion": 5,
+          "blurb": "Kicker Jake Bates is the main name here, with Jacob Saylors returning kicks; the kicking has been fairly dependable, the return and coverage work less so.",
+          "blurbHash": "c8683d7765755d5f",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "79.4",
@@ -2232,9 +2232,9 @@
           "rank": 16,
           "score": 3,
           "note": "Middle of the league for points scored last season, 16th of 32.",
-          "blurb": "One of the most run-leaning teams in the league, handing off to Josh Jacobs, though when Jordan Love does throw the ball travels a long way, and they rarely turn it over.",
-          "blurbHash": "b70ecf51160f27ca",
-          "promptVersion": 5,
+          "blurb": "One of the most run-leaning offences in the league, with Josh Jacobs carrying, though Jordan Love gained a lot per throw to Tucker Kraft and Jayden Reed and they hardly ever turned the ball over.",
+          "blurbHash": "064096b96c32c751",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "492",
@@ -2319,9 +2319,9 @@
           "rank": 11,
           "score": 4,
           "note": "Better than most for points allowed last season, 11th of 32.",
-          "blurb": "Micah Parsons, a first-round pick of Dallas's, headlines a front that didn't produce many sacks last season, and the group takes the ball away about as seldom as anyone.",
-          "blurbHash": "f24e51a7f5a13acc",
-          "promptVersion": 5,
+          "blurb": "Built around pass rusher Micah Parsons, a first-round pick of Dallas's, but the group as a whole rarely reaches the quarterback and takes the ball away less than most.",
+          "blurbHash": "a63213eb677b7803",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "36",
@@ -2355,9 +2355,9 @@
           "rank": 23,
           "score": 2,
           "note": "Below average at kicking field goals last season, 23rd of 32.",
-          "blurb": "Rookie sixth-round pick Trey Smack does the kicking, with Skyy Moore returning kicks.",
-          "blurbHash": "704377410b62a92d",
-          "promptVersion": 5,
+          "blurb": "Rookie kicker Trey Smack handles the field goals, which have gone in at a good rate, with Skyy Moore returning kicks.",
+          "blurbHash": "920bee470176b449",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "82.4",
@@ -2429,9 +2429,9 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most for points scored last season, 13th of 32.",
-          "blurb": "Built around C.J. Stroud and Nico Collins, with a running game that gains little per carry and rarely reaches the end zone. Its clearest strength is ball security — few offences gave the ball away less.",
-          "blurbHash": "b535a51745ef8fc8",
-          "promptVersion": 5,
+          "blurb": "Built around C.J. Stroud throwing to Nico Collins, with Dalton Schultz and Jayden Higgins alongside. The running game gained little per carry and reached the end zone rarely, though they were careful with the ball.",
+          "blurbHash": "497c2ffa7f5611fc",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "475",
@@ -2516,9 +2516,9 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 2nd of 32.",
-          "blurb": "A unit that gets after the quarterback through Will Anderson Jr. and Danielle Hunter and takes the ball away as often as almost anyone, with Derek Stingley Jr. and Kamari Lassiter at cornerback.",
-          "blurbHash": "c3eed1d7d8c9d77e",
-          "promptVersion": 5,
+          "blurb": "A pass rush led by Will Anderson Jr. and Danielle Hunter, behind cornerbacks Derek Stingley Jr. and Kamari Lassiter, and they took the ball away about as often as anyone.",
+          "blurbHash": "cd212861b6027238",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "47",
@@ -2552,9 +2552,9 @@
           "rank": 6,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 6th of 32.",
-          "blurb": "Kicking is the calling card, with Ka'imi Fairbairn making almost everything he tries; rookie third-rounder Jaylin Noel handles kick returns.",
-          "blurbHash": "0a86ceff74819d2b",
-          "promptVersion": 5,
+          "blurb": "Leans on the long-serving Ka'imi Fairbairn, who made better than nine in ten of his field goals, with Jaylin Noel returning kicks.",
+          "blurbHash": "37032be3efc303fc",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "92.3",
@@ -2626,9 +2626,9 @@
           "rank": 8,
           "score": 4,
           "note": "Better than most for points scored last season, 8th of 32.",
-          "blurb": "Runs through Jonathan Taylor, who helps make this one of the league's best offences at scoring on the ground, with Daniel Jones throwing to Josh Downs and rookie tight end Tyler Warren.",
-          "blurbHash": "f4212538e0f00326",
-          "promptVersion": 5,
+          "blurb": "Runs through Jonathan Taylor — almost nobody scored more rushing touchdowns — with Daniel Jones throwing to Alec Pierce, Josh Downs and tight end Tyler Warren.",
+          "blurbHash": "afcca033c063dd50",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "442",
@@ -2713,9 +2713,9 @@
           "rank": 21,
           "score": 2,
           "note": "Below average for points allowed last season, 21st of 32.",
-          "blurb": "Takes the ball away at a decent clip, with Sauce Gardner — a fourth overall pick of the Jets — and Charvarius Ward covering and Laiatu Latu rushing off the edge.",
-          "blurbHash": "2a1c5141e0177869",
-          "promptVersion": 5,
+          "blurb": "Fronted by Laiatu Latu and Arden Key with Sauce Gardner and Charvarius Ward at cornerback; they force a fair number of turnovers but don't get to the quarterback often.",
+          "blurbHash": "89019a287badaa3c",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "39",
@@ -2749,9 +2749,9 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 2nd of 32.",
-          "blurb": "Blake Grupe misses almost nothing from placekicking range, and Anthony Gould handles the kick returns.",
-          "blurbHash": "1f47fc262ccc9cd5",
-          "promptVersion": 5,
+          "blurb": "Blake Grupe missed almost nothing from field-goal range, and Anthony Gould handles the kick returns.",
+          "blurbHash": "975523b570a56762",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "94.4",
@@ -2823,9 +2823,9 @@
           "rank": 6,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 6th of 32.",
-          "blurb": "Trevor Lawrence is a big part of the running game himself, carrying the ball far more than most quarterbacks, and the team scores plenty of rushing touchdowns despite gaining little per carry. Brian Thomas Jr. is the main target.",
-          "blurbHash": "913a2d96991bbe5d",
-          "promptVersion": 5,
+          "blurb": "Trevor Lawrence is a big part of the running game himself, carrying often, and the ground game scored plenty of touchdowns despite short gains; Brian Thomas Jr. is the main target.",
+          "blurbHash": "c66a10647a14d6e4",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "489",
@@ -2910,9 +2910,9 @@
           "rank": 8,
           "score": 4,
           "note": "Better than most for points allowed last season, 8th of 32.",
-          "blurb": "Takes the ball away about as often as any defence in the league but seldom gets to the quarterback, despite Travon Walker and Josh Hines-Allen on the edges. Travis Hunter, the second pick in 2025, features too.",
-          "blurbHash": "2b7c0ea48f2b30c7",
-          "promptVersion": 5,
+          "blurb": "Takes the ball away as well as almost any team, but rarely sacks the quarterback despite Travon Walker and Josh Hines-Allen up front. Travis Hunter is in his second season.",
+          "blurbHash": "5fed7e21a508741f",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "32",
@@ -2946,9 +2946,9 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 13th of 32.",
-          "blurb": "Cam Little, a sixth-round pick, does the kicking accurately, with running back Bhayshul Tuten doubling up on kick returns.",
-          "blurbHash": "e63a7bba9fa83593",
-          "promptVersion": 5,
+          "blurb": "Kicker Cam Little handles the field goals and Bhayshul Tuten doubles up as the kick returner.",
+          "blurbHash": "ff9031c65e9e8d4b",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "88.2",
@@ -3020,9 +3020,9 @@
           "rank": 21,
           "score": 2,
           "note": "Below average for points scored last season, 21st of 32.",
-          "blurb": "One of the most pass-heavy offences in the league, well above the league norm, with Patrick Mahomes also carrying the ball a fair bit himself and throwing to Rashee Rice, Xavier Worthy and Travis Kelce.",
-          "blurbHash": "054b6871611eb7ee",
-          "promptVersion": 5,
+          "blurb": "Throws more than nearly every team, with Patrick Mahomes spreading it to Rashee Rice, Xavier Worthy and Travis Kelce, and Mahomes himself carrying a fair bit.",
+          "blurbHash": "2af5dffdb01913ec",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "430",
@@ -3107,9 +3107,9 @@
           "rank": 6,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 6th of 32.",
-          "blurb": "Rarely pressures the quarterback and forces very few turnovers, and it just traded away All-Pro cornerback Trent McDuffie to the Rams for four picks, leaving L'Jarius Sneed and rookie first-rounder Mansoor Delane in coverage.",
-          "blurbHash": "0bc85bfe3c698663",
-          "promptVersion": 5,
+          "blurb": "Stingy without doing the flashy things — few sacks and few takeaways. They also traded away All-Pro cornerback Trent McDuffie, leaving L'Jarius Sneed and rookie Mansoor Delane at the position.",
+          "blurbHash": "698060de71fe9ee3",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "35",
@@ -3143,9 +3143,9 @@
           "rank": 15,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 15th of 32.",
-          "blurb": "Kicking runs through Harrison Butker, a seventh-round pick who converts at a high rate, with Nikko Remigio returning kicks.",
-          "blurbHash": "ae1241601aefa893",
-          "promptVersion": 5,
+          "blurb": "Centred on veteran kicker Harrison Butker, who converted a high share of his field goals, with Nikko Remigio returning kicks.",
+          "blurbHash": "c75cbede6da48cf0",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "86.8",
@@ -3217,9 +3217,9 @@
           "rank": 20,
           "score": 2,
           "note": "Below average for points scored last season, 20th of 32.",
-          "blurb": "A throwing offence — few teams put the ball in the air more often — built around Justin Herbert, second-year receiver Ladd McConkey and rookie back Omarion Hampton, with Herbert himself running a fair bit. Scoring on the ground was rare.",
-          "blurbHash": "452ddcf495b1b542",
-          "promptVersion": 5,
+          "blurb": "A pass-first group under Jim Harbaugh, throwing more often than most teams, with Justin Herbert also carrying the ball himself a fair amount and Ladd McConkey his main target. Running the ball into the end zone is the thing they do least well.",
+          "blurbHash": "7d07d4d7b3b958b6",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "466",
@@ -3304,9 +3304,9 @@
           "rank": 9,
           "score": 4,
           "note": "Better than most for points allowed last season, 9th of 32.",
-          "blurb": "A group that gets its hands on the ball, among the league leaders in takeaways, with veteran pass rusher Khalil Mack, a fifth overall pick back in 2014, still the name up front.",
-          "blurbHash": "524b2e3ef7535f1c",
-          "promptVersion": 5,
+          "blurb": "A defence that takes the ball away at a good rate and gets after the quarterback, with 13th-season veteran Khalil Mack, a fifth overall pick of Oakland's back in 2014, still the headline name.",
+          "blurbHash": "3f774b24c7060bd6",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "45",
@@ -3340,9 +3340,9 @@
           "rank": 5,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 5th of 32.",
-          "blurb": "Built on kicker Cameron Dicker, who made a higher share of his field goals than anyone in the league, with Derius Davis handling kick returns.",
-          "blurbHash": "c36ad4782d34996a",
-          "promptVersion": 5,
+          "blurb": "Kicking is the strength here: Cameron Dicker made a higher share of his field goals than any other kicker, with Derius Davis handling kick returns.",
+          "blurbHash": "ca5eeb791644bb71",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "92.7",
@@ -3414,9 +3414,9 @@
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 1st of 32.",
-          "blurb": "An offence that threw more touchdown passes than anyone, splitting run and pass right at the league average, with Matthew Stafford feeding Puka Nacua and Davante Adams and Kyren Williams carrying the ground game.",
-          "blurbHash": "b9f8686e1edc14f1",
-          "promptVersion": 5,
+          "blurb": "Balanced between run and pass, but the passing is where the damage comes from — Matthew Stafford threw for more touchdowns than anyone, to Puka Nacua and Davante Adams, and the team rarely gave the ball away.",
+          "blurbHash": "292aaf1490f980d2",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "465",
@@ -3501,9 +3501,9 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most for points allowed last season, 10th of 32.",
-          "blurb": "A pass rush that piled up sacks and a secondary that forces turnovers, and it just got two enormous additions: Myles Garrett in a trade from Cleveland and cornerback Trent McDuffie from Kansas City.",
-          "blurbHash": "0849b1bb4cf8db48",
-          "promptVersion": 5,
+          "blurb": "A front that pressures the quarterback and forces plenty of turnovers, and it has just been reinforced twice over: Myles Garrett arrived in a trade from Cleveland and cornerback Trent McDuffie in one from Kansas City.",
+          "blurbHash": "a915914f573b4aff",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "47",
@@ -3537,9 +3537,9 @@
           "rank": 28,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 28th of 32.",
-          "blurb": "Kicker Harrison Mevis has been accurate on field goals, with sixth-round pick Jordan Whittington returning kicks.",
-          "blurbHash": "f631911d69e81cc4",
-          "promptVersion": 5,
+          "blurb": "Harrison Mevis, in his second season, was accurate on field goals, with Jordan Whittington returning kicks; the return and coverage work is where the value drains away.",
+          "blurbHash": "26fe120726c659be",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "78.6",
@@ -3611,9 +3611,9 @@
           "rank": 32,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 32nd of 32.",
-          "blurb": "Klint Kubiak is in his first year as head coach, so last season's pass-heavy, hard-to-run profile belongs to the old staff; expect the ball to run through rookie back Ashton Jeanty and tight end Brock Bowers, behind a line that just paid Tyler Linderbaum a record deal.",
-          "blurbHash": "31fa6ac652597820",
-          "promptVersion": 5,
+          "blurb": "Klint Kubiak has taken over, so last year's pass-heavy tilt belongs to the previous staff; what he inherits is Ashton Jeanty and Brock Bowers, plus a run game that gained less per carry than any other team's and almost never scored on the ground.",
+          "blurbHash": "fc515d85471b0bf6",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "369",
@@ -3698,9 +3698,9 @@
           "rank": 25,
           "score": 2,
           "note": "Below average for points allowed last season, 25th of 32.",
-          "blurb": "A new head coach in Klint Kubiak takes over a unit that neither sacked the quarterback often nor forced many turnovers last year, with Kwity Paye and young corner Darien Porter among the pieces.",
-          "blurbHash": "b83a1b68e0a505c2",
-          "promptVersion": 5,
+          "blurb": "A unit under new head coach Klint Kubiak that seldom takes the ball away, built around edge rusher Kwity Paye, a first-round pick of Indianapolis's, and young corner Darien Porter.",
+          "blurbHash": "ef94ea314c85ae4d",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "37",
@@ -3734,9 +3734,9 @@
           "rank": 25,
           "score": 2,
           "note": "Below average at kicking field goals last season, 25th of 32.",
-          "blurb": "Kicker Matt Gay handles the placekicking and receiver Tre Tucker doubles as the kick returner, under first-year head coach Klint Kubiak.",
-          "blurbHash": "e7c75388a5a5d9f5",
-          "promptVersion": 5,
+          "blurb": "Matt Gay was reliable on field goals and Tre Tucker doubles up as the kick returner, all now under new head coach Klint Kubiak.",
+          "blurbHash": "5bbcaad5e2a2a87f",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "81.5",
@@ -3808,9 +3808,9 @@
           "rank": 25,
           "score": 2,
           "note": "Below average for points scored last season, 25th of 32.",
-          "blurb": "Jeff Hafley is new as head coach, so last year's run-leaning, ball-losing habits came under the old regime; the ground game is quietly efficient through De'Von Achane, and Malik Willis was signed to start after Tua Tagovailoa was released.",
-          "blurbHash": "ed4e093194c64703",
-          "promptVersion": 5,
+          "blurb": "Jeff Hafley has taken charge and the quarterback job has changed hands — Malik Willis signed, Tua Tagovailoa released — so last year's run-leaning approach may not hold; De'Von Achane's yards per carry is the clearest asset, and giveaways were frequent.",
+          "blurbHash": "1dbaf88ed6545405",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "432",
@@ -3895,9 +3895,9 @@
           "rank": 24,
           "score": 2,
           "note": "Below average for points allowed last season, 24th of 32.",
-          "blurb": "Under new head coach Jeff Hafley, a young front led by 2024 first-rounder Chop Robinson and a very inexperienced pair of cornerbacks.",
-          "blurbHash": "bd51b7baa6178a79",
-          "promptVersion": 5,
+          "blurb": "A young pass-rushing group under new head coach Jeff Hafley, led by Chop Robinson with rookie Trey Moore behind him, and an inexperienced pair of cornerbacks.",
+          "blurbHash": "0c32e63883cf6284",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "39",
@@ -3931,9 +3931,9 @@
           "rank": 4,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 4th of 32.",
-          "blurb": "Riley Patterson made almost all his field goals, and Malik Washington doubles as receiver and kick returner, with Jeff Hafley now in charge.",
-          "blurbHash": "a339f8f888d1c8a0",
-          "promptVersion": 5,
+          "blurb": "Riley Patterson was among the most accurate kickers in the league, and Malik Washington doubles as the kick returner, with Jeff Hafley now overseeing the whole operation.",
+          "blurbHash": "ea9234b55caf8598",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "93.1",
@@ -4005,9 +4005,9 @@
           "rank": 26,
           "score": 2,
           "note": "Below average for points scored last season, 26th of 32.",
-          "blurb": "A group built around Justin Jefferson and T.J. Hockenson that struggled to move the ball through the air and gave it away more often than any other team. Kyler Murray has now been named the starter ahead of J.J. McCarthy.",
-          "blurbHash": "d488ff5cc2782916",
-          "promptVersion": 5,
+          "blurb": "Justin Jefferson and Jordan Addison give this offence its shape, but it gained little per throw and gave the ball away more often than any other team. Kyler Murray has been named the starter ahead of J.J. McCarthy, so the passing game runs through a new pair of hands.",
+          "blurbHash": "45bb38c1f9a8d942",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "410",
@@ -4092,9 +4092,9 @@
           "rank": 7,
           "score": 4,
           "note": "Better than most for points allowed last season, 7th of 32.",
-          "blurb": "Built on pressure — few teams got to the quarterback more often, with first-round pick Dallas Turner leading the rush, and they take the ball away at a decent clip too.",
-          "blurbHash": "3a1491d3e172010a",
-          "promptVersion": 5,
+          "blurb": "A pass rush that gets to the quarterback often, led by a young front with 2024 first-rounder Dallas Turner, and a group that also collects a fair share of turnovers behind cornerback Isaiah Rodgers.",
+          "blurbHash": "e1beab7cd5a5b305",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "49",
@@ -4128,9 +4128,9 @@
           "rank": 3,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 3rd of 32.",
-          "blurb": "Everything runs through kicker Will Reichard, who made a higher share of his field goals than anyone in the league last season, with Myles Price handling kick returns.",
-          "blurbHash": "5ca0923086e65e75",
-          "promptVersion": 5,
+          "blurb": "Built around kicker Will Reichard, who was the most accurate field-goal kicker in the league, with Myles Price handling kick returns.",
+          "blurbHash": "88c53a0eaf487d5e",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "94.3",
@@ -4202,9 +4202,9 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 2nd of 32.",
-          "blurb": "Gained more yards per pass than any other team, with Drake Maye also a real part of the running game on his own legs. A.J. Brown arrives by trade from Philadelphia to headline the receivers.",
-          "blurbHash": "8872e0d5ad097b27",
-          "promptVersion": 5,
+          "blurb": "They gained more per pass than anyone with Drake Maye throwing, and Maye is a big part of the running game himself, carrying it far more than most quarterbacks. A.J. Brown has since been traded in from Philadelphia to headline the receivers.",
+          "blurbHash": "a97d5932e72d5329",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "494",
@@ -4289,9 +4289,9 @@
           "rank": 4,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 4th of 32.",
-          "blurb": "A unit that leans on its cornerbacks, Christian Gonzalez and Carlton Davis III, rather than the pass rush — sacks and takeaways were both hard to come by.",
-          "blurbHash": "b4e3b15b8556f0b2",
-          "promptVersion": 5,
+          "blurb": "A coverage-first group with Christian Gonzalez and Carlton Davis III at cornerback; it rarely gets to the quarterback and does not force many turnovers, leaning instead on the interior pair of Christian Barmore and Milton Williams.",
+          "blurbHash": "1953996740738c14",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "35",
@@ -4325,9 +4325,9 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 19th of 32.",
-          "blurb": "Rookie kicker Andy Borregales was among the most accurate in the league on field goals; Kyle Williams, a third-round pick, handles kick returns.",
-          "blurbHash": "808f940596cc3669",
-          "promptVersion": 5,
+          "blurb": "Kicker Andy Borregales was among the most accurate on field goals, with Kyle Williams returning kicks.",
+          "blurbHash": "c492e26f2be5968f",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "84.4",
@@ -4399,9 +4399,9 @@
           "rank": 28,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 28th of 32.",
-          "blurb": "Throws more than most teams, partly because the running game gained less per carry than almost anyone. Young quarterback Tyler Shough works behind a line fronted by Kelvin Banks Jr., with Chris Olave the main target.",
-          "blurbHash": "be0f6ce892f9ffce",
-          "promptVersion": 5,
+          "blurb": "They throw more than most teams, which is just as well — they gained less per carry than almost anyone. Tyler Shough is the quarterback, with Chris Olave and rookie first-round pick Jordyn Tyson outside.",
+          "blurbHash": "3056c15a0dafcd17",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "435",
@@ -4486,9 +4486,9 @@
           "rank": 16,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 16th of 32.",
-          "blurb": "Gets after the quarterback well, with veteran Cameron Jordan and Chase Young up front, and a young secondary in Kool-Aid McKinstry and Quincy Riley.",
-          "blurbHash": "804906f45f66013e",
-          "promptVersion": 5,
+          "blurb": "Gets to the quarterback often, with 16th-season veteran Cameron Jordan and Chase Young rushing off the edge and young cornerbacks Kool-Aid McKinstry and Quincy Riley behind them.",
+          "blurbHash": "8b660677a2f8c2b0",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "45",
@@ -4522,9 +4522,9 @@
           "rank": 32,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 32nd of 32.",
-          "blurb": "Charlie Smyth kicks and rookie Barion Brown returns kicks; the field-goal accuracy sits in the middle of the pack and little else stands out.",
-          "blurbHash": "13aa3050405c8510",
-          "promptVersion": 5,
+          "blurb": "Charlie Smyth handles the kicking and rookie Barion Brown the kick returns, so it is a young and largely untested group.",
+          "blurbHash": "6ab412420dfb85a2",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "71.4",
@@ -4596,9 +4596,9 @@
           "rank": 17,
           "score": 3,
           "note": "Middle of the league for points scored last season, 17th of 32.",
-          "blurb": "Scores its touchdowns on the ground more than through the air, and quarterback Jaxson Dart is a big part of the running game himself alongside Cam Skattebo. Malik Nabers is the main receiving threat.",
-          "blurbHash": "20198097efa2a592",
-          "promptVersion": 5,
+          "blurb": "Jaxson Dart is a big part of the running game himself, carrying far more than most quarterbacks, and the unit scores plenty of rushing touchdowns while finding the end zone through the air much less often. Malik Nabers is the main target.",
+          "blurbHash": "ad42467bca06113e",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "511",
@@ -4683,9 +4683,9 @@
           "rank": 26,
           "score": 2,
           "note": "Below average for points allowed last season, 26th of 32.",
-          "blurb": "Rarely takes the ball away, so it depends on the front — first-round rookie Abdul Carter — and a cornerback pairing of Paulson Adebo and Greg Newsome II.",
-          "blurbHash": "f13a9bf107540873",
-          "promptVersion": 5,
+          "blurb": "Forces few turnovers, and the pressure comes mostly from Abdul Carter, the third overall pick in 2025, with Paulson Adebo and Greg Newsome II covering outside.",
+          "blurbHash": "11e29c4d3c1c45e4",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "39",
@@ -4719,9 +4719,9 @@
           "rank": 11,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 11th of 32.",
-          "blurb": "Kicker Ben Sauls was the most accurate on field goals in the league last season, with cornerback Deonte Banks doubling up on kick returns.",
-          "blurbHash": "a701ff5a143576c9",
-          "promptVersion": 5,
+          "blurb": "Rookie kicker Ben Sauls was the most accurate in the league on field goals, with cornerback Deonte Banks doubling up on kick returns.",
+          "blurbHash": "3c71921987a19f9b",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "88.5",
@@ -4793,9 +4793,9 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 29th of 32.",
-          "blurb": "A unit built around Breece Hall's running and Garrett Wilson catching passes from Geno Smith, and one that throws a little less than most teams — the ground game gained yards while the passing game managed few touchdowns.",
-          "blurbHash": "4c3102d04f9b1061",
-          "promptVersion": 5,
+          "blurb": "Runs a little more than most teams, with Breece Hall behind a line built around Olu Fashanu, while Geno Smith's throws to Garrett Wilson gained less per attempt than almost anyone; rookie tight end Kenyon Sadiq was a first-round pick.",
+          "blurbHash": "ab7339828d30e5a4",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "456",
@@ -4880,9 +4880,9 @@
           "rank": 31,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 31st of 32.",
-          "blurb": "A group that rarely gets to the quarterback and almost never takes the ball away, leaning on first-round pass rusher Will McDonald IV and cornerbacks Brandon Stephens and Nahshon Wright.",
-          "blurbHash": "e6a2b059faaaf287",
-          "promptVersion": 5,
+          "blurb": "A unit that rarely gets to the quarterback and forced fewer turnovers than any other team, leaning on Will McDonald IV up front and cornerbacks Brandon Stephens and Nahshon Wright.",
+          "blurbHash": "c811c4bcaf858273",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "26",
@@ -4916,9 +4916,9 @@
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 1st of 32.",
-          "blurb": "Kicker Jason Sanders missed almost nothing all season, the best accuracy in the league, with Kene Nwangwu handling kick returns.",
-          "blurbHash": "a2a8f23c47802873",
-          "promptVersion": 5,
+          "blurb": "Built around Jason Sanders, who missed barely a kick all year, with Kene Nwangwu handling kick returns.",
+          "blurbHash": "08f07b42e84411b4",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "96.6",
@@ -4990,9 +4990,9 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league for points scored last season, 19th of 32.",
-          "blurb": "Jalen Hurts is a big part of the running game himself, carrying the ball far more than most quarterbacks, alongside Saquon Barkley. With A.J. Brown traded to New England, more of the passing work falls to DeVonta Smith and Dallas Goedert.",
-          "blurbHash": "26ed2c2a84a2bf00",
-          "promptVersion": 5,
+          "blurb": "Jalen Hurts is a big part of the running game himself, carrying it far more than most quarterbacks alongside Saquon Barkley; with A.J. Brown traded to New England, more of the throwing now goes through DeVonta Smith and Dallas Goedert.",
+          "blurbHash": "23e19379b6acf4d2",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "478",
@@ -5077,9 +5077,9 @@
           "rank": 5,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 5th of 32.",
-          "blurb": "A front built around Jalen Carter and Jonathan Greenard that gets after the quarterback, with young first-round corner Quinyon Mitchell behind them; they take the ball away at a good rate.",
-          "blurbHash": "b3c7d600fc6b6fd3",
-          "promptVersion": 5,
+          "blurb": "Built around Jalen Carter inside and Jonathan Greenard rushing off the edge, with young cornerback Quinyon Mitchell and Riq Woolen outside.",
+          "blurbHash": "1411e1ff39d2df0e",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "42",
@@ -5113,9 +5113,9 @@
           "rank": 31,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
-          "blurb": "Jake Elliott was among the more accurate kickers in the league, with Will Shipley returning kicks.",
-          "blurbHash": "a44238e336a14f38",
-          "promptVersion": 5,
+          "blurb": "Rests largely on long-serving kicker Jake Elliott, with Will Shipley taking the kick returns.",
+          "blurbHash": "3a95c56cd81e506b",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "74.1",
@@ -5187,9 +5187,9 @@
           "rank": 15,
           "score": 3,
           "note": "Middle of the league for points scored last season, 15th of 32.",
-          "blurb": "Aaron Rodgers throws to two big targets in DK Metcalf and Michael Pittman Jr., though the passing game did not produce many yards per attempt; Jaylen Warren carries the ball.",
-          "blurbHash": "9899b1758508179d",
-          "promptVersion": 5,
+          "blurb": "Throws slightly more than the league norm with Aaron Rodgers to DK Metcalf and Michael Pittman Jr., though the passes tended to be short — yards per throw was among the lowest — with Jaylen Warren carrying.",
+          "blurbHash": "d0fa5c63842e4e75",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "407",
@@ -5274,9 +5274,9 @@
           "rank": 17,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 17th of 32.",
-          "blurb": "A disruptive group: few teams sacked the quarterback or forced turnovers more often, with Cameron Heyward and Alex Highsmith up front and Joey Porter Jr. at cornerback.",
-          "blurbHash": "f0cefd70c2f9eb21",
-          "promptVersion": 5,
+          "blurb": "A pressure-and-takeaway defence, among the leaders in both sacks and balls won back, driven by Cameron Heyward and Alex Highsmith with Joey Porter Jr. at cornerback.",
+          "blurbHash": "6733e50c4b43e022",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "48",
@@ -5384,9 +5384,9 @@
           "rank": 3,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 3rd of 32.",
-          "blurb": "One of the most run-leaning teams in the league by play calls, yet when Sam Darnold does throw, almost nobody gains more per attempt — largely through Jaxon Smith-Njigba, with Zach Charbonnet carrying.",
-          "blurbHash": "9e54999f4bdf9cdd",
-          "promptVersion": 5,
+          "blurb": "One of the least pass-heavy teams in the league, yet when Sam Darnold does throw — usually to Jaxon Smith-Njigba — it gains more than almost anywhere else; Zach Charbonnet handles the carries.",
+          "blurbHash": "a9b3199ed8084084",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "507",
@@ -5471,9 +5471,9 @@
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 1st of 32.",
-          "blurb": "A pressure-and-turnover unit under Mike Macdonald, anchored by Leonard Williams inside and cornerback Devon Witherspoon, who has just been kept on a four-year, $132m extension; Terrion Arnold has also been signed for a year.",
-          "blurbHash": "312c976d60f4e5ab",
-          "promptVersion": 5,
+          "blurb": "Gets after the quarterback and takes the ball away regularly, with Leonard Williams and Jarran Reed inside and a secondary Seattle have just committed $132m to keep Devon Witherspoon in, adding Terrion Arnold on a one-year deal.",
+          "blurbHash": "9a0cc83ca9dfc5f2",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "47",
@@ -5507,9 +5507,9 @@
           "rank": 17,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 17th of 32.",
-          "blurb": "Jason Myers was one of the most accurate kickers in the league, and Rashid Shaheed doubles as the kick returner.",
-          "blurbHash": "c7612d6dd3eb998d",
-          "promptVersion": 5,
+          "blurb": "Jason Myers is reliable from placekicks and Rashid Shaheed, also a receiver, handles kick returns.",
+          "blurbHash": "061669fc58a28f03",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "85.4",
@@ -5581,9 +5581,9 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most for points scored last season, 10th of 32.",
-          "blurb": "A passing group built around Brock Purdy throwing to George Kittle, Deebo Samuel and Mike Evans, with plenty of touchdowns through the air; running the ball, even with Christian McCaffrey, gains very little per carry.",
-          "blurbHash": "570d33ca3aba9ac9",
-          "promptVersion": 5,
+          "blurb": "A throwing offence in practice — Brock Purdy found the end zone through the air often, while the ground game gained little per carry despite Christian McCaffrey. George Kittle, Deebo Samuel and Mike Evans give Purdy plenty to aim at.",
+          "blurbHash": "cb05f580b5752fb7",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "481",
@@ -5668,9 +5668,9 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most for points allowed last season, 13th of 32.",
-          "blurb": "A front that almost never reaches the quarterback — no team managed fewer sacks — and doesn't force many turnovers either, leaning on young first-rounder Mykel Williams and corners Deommodore Lenoir and Renardo Green.",
-          "blurbHash": "259bfcb92e785b3a",
-          "promptVersion": 5,
+          "blurb": "A unit that almost never sacked the quarterback last season and didn't force many turnovers, now leaning on young front men like Mykel Williams, the 11th pick, alongside corners Deommodore Lenoir and Renardo Green.",
+          "blurbHash": "cc1504c8d67297d9",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "20",
@@ -5704,9 +5704,9 @@
           "rank": 7,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 7th of 32.",
-          "blurb": "Kicking is the strength here: Eddy Pineiro was the most accurate field-goal kicker in the league, with Isaac Guerendo handling kick returns.",
-          "blurbHash": "5bb3c8e0fe065092",
-          "promptVersion": 5,
+          "blurb": "Built on kicking accuracy — Eddy Pineiro made a higher share of his field goals than anyone in the league, with Isaac Guerendo handling kick returns.",
+          "blurbHash": "bd0e6aeb14e09911",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "91.7",
@@ -5778,9 +5778,9 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league for points scored last season, 18th of 32.",
-          "blurb": "A fairly even run-pass mix around Baker Mayfield, who carries the ball himself a good deal, with Bucky Irving running and Chris Godwin and rookie first-rounder Emeka Egbuka catching.",
-          "blurbHash": "8bc2c0d0182dfba6",
-          "promptVersion": 5,
+          "blurb": "A balanced run-pass split, with Baker Mayfield carrying the ball himself fairly often and Bucky Irving doing the rest of the running; Chris Godwin and Emeka Egbuka are the main targets.",
+          "blurbHash": "f5d369b943e2bebb",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "472",
@@ -5865,9 +5865,9 @@
           "rank": 20,
           "score": 2,
           "note": "Below average for points allowed last season, 20th of 32.",
-          "blurb": "A unit that takes the ball away as often as almost anyone while getting to the quarterback at a fairly typical rate, with young corners Zyon McCollum and Benjamin Morrison behind Yaya Diaby.",
-          "blurbHash": "2671ecf7ae33688c",
-          "promptVersion": 5,
+          "blurb": "A defence that takes the ball away as often as almost anyone, with Zyon McCollum and second-year corner Benjamin Morrison at the back and Yaya Diaby leading the rush.",
+          "blurbHash": "56dc1cc6d272d8c8",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "37",
@@ -5901,9 +5901,9 @@
           "rank": 21,
           "score": 2,
           "note": "Below average at kicking field goals last season, 21st of 32.",
-          "blurb": "Chase McLaughlin is reliable from distance on field goals; Kenny Gainwell handles the kick returns.",
-          "blurbHash": "7355e7971d445f95",
-          "promptVersion": 5,
+          "blurb": "Chase McLaughlin is a reliable field-goal kicker, and Kenny Gainwell handles kick returns.",
+          "blurbHash": "580f087471e9bfff",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "84.2",
@@ -5975,9 +5975,9 @@
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 30th of 32.",
-          "blurb": "They throw about as often as any team in the league, yet gain less per pass than nearly all of them, with first overall pick Cam Ward at quarterback and Tony Pollard running.",
-          "blurbHash": "6625e9296492ea82",
-          "promptVersion": 5,
+          "blurb": "They threw the ball more than nearly every team last season, but gained less per pass than almost anyone — it now runs through second-year quarterback Cam Ward, with rookie Carnell Tate, taken fourth overall, joining Wan'Dale Robinson out wide.",
+          "blurbHash": "bd6ecd338bf53689",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "378",
@@ -6062,9 +6062,9 @@
           "rank": 28,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 28th of 32.",
-          "blurb": "A pass rush led by Jermaine Johnson and John Franklin-Myers gets home reasonably often, but the group very rarely takes the ball away from opponents.",
-          "blurbHash": "5f0890d265a62139",
-          "promptVersion": 5,
+          "blurb": "They get after the quarterback well enough through John Franklin-Myers and Jermaine Johnson, but rarely take the ball away from opponents.",
+          "blurbHash": "8f9161f53898569f",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "42",
@@ -6098,9 +6098,9 @@
           "rank": 26,
           "score": 2,
           "note": "Below average at kicking field goals last season, 26th of 32.",
-          "blurb": "Joey Slye handles the kicking and rookie draft pick Chimere Dike returns kicks.",
-          "blurbHash": "afcc2ca8c4d083c7",
-          "promptVersion": 5,
+          "blurb": "Joey Slye handles the kicking, with Chimere Dike returning kicks.",
+          "blurbHash": "179be1ed950b206a",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "80.6",
@@ -6172,9 +6172,9 @@
           "rank": 22,
           "score": 2,
           "note": "Below average for points scored last season, 22nd of 32.",
-          "blurb": "One of the most run-heavy attacks in the league, and Jayden Daniels is a big part of that himself with plenty of his own carries; they move the ball well on the ground but score less through the air, with Terry McLaurin and Stefon Diggs outside.",
-          "blurbHash": "c8fb2398a2a54846",
-          "promptVersion": 5,
+          "blurb": "One of the most run-leaning offences in the league, and Jayden Daniels is a big part of that himself — his carries add to a ground game that gains a lot per attempt. Terry McLaurin and Stefon Diggs are the receivers, though passing scores were scarce.",
+          "blurbHash": "b2c91cd2317e6603",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "484",
@@ -6259,9 +6259,9 @@
           "rank": 27,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 27th of 32.",
-          "blurb": "A group that gets after the quarterback at a decent rate but forces turnovers about as rarely as any defence, with young corners Trey Amos and Mike Sainristil in the secondary.",
-          "blurbHash": "4618819438089549",
-          "promptVersion": 5,
+          "blurb": "They pressure the quarterback reasonably often but almost never take the ball away, with young corners Trey Amos and Mike Sainristil behind a front led by Javon Kinlaw and K'Lavon Chaisson.",
+          "blurbHash": "a03e8f2b0ad9a4dc",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "42",
@@ -6295,9 +6295,9 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 29th of 32.",
-          "blurb": "Drew Stevens does the place-kicking, with Luke McCaffrey, a third-round pick of Washington's, returning kicks.",
-          "blurbHash": "e39f79915dbc8e4e",
-          "promptVersion": 5,
+          "blurb": "Kicking duties sit with Drew Stevens, a rookie, while Luke McCaffrey returns kicks.",
+          "blurbHash": "c9f289dd2e978e70",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "76.7",
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-08-17T14:15:39.194Z"
+  "unitNotesWrittenAt": "2026-08-17T14:25:19.655Z"
 }
