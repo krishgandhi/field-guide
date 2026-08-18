@@ -1,10 +1,32 @@
 {
-  "generatedAt": "2026-08-17T12:35:21.616Z",
+  "generatedAt": "2026-08-18T12:36:56.326Z",
   "candidates": [
     {
-      "id": "49634196",
-      "headline": "Von Miller agrees to terms with Cowboys; 1-year deal per source",
-      "description": "Veteran OLB Von Miller has agreed to terms with the Dallas Cowboys -- a source telling ESPN that it's a one-year deal.",
+      "id": "49640061",
+      "headline": "Texans ready to feature David Montgomery's dual-threat ability",
+      "description": "Houston traded for the running back and hopes he will complement quarterback C.J. Stroud.",
+      "published": "2026-08-18",
+      "likelyKind": "transaction",
+      "teams": [
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4035538",
+          "name": "David Montgomery",
+          "position": "Running Back",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49640061/houston-texans-rb-david-montgomery-spark-offense-cj-stroud"
+    },
+    {
+      "id": "49640032",
+      "headline": "DeMarcus Ware on Von Miller to Cowboys: 'This is all he wanted'",
+      "description": "Signing with the Cowboys, Miller is headed back home to Texas, where he grew up and played for Texas A&M.",
       "published": "2026-08-17",
       "likelyKind": "transaction",
       "teams": [
@@ -15,75 +37,47 @@
       ],
       "players": [
         {
-          "name": "Von Miller",
+          "id": "8426",
+          "name": "DeMarcus Ware",
           "position": "Linebacker",
-          "currentTeam": "DAL"
+          "currentTeam": "DEN"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49634196/von-miller-expected-sign-dallas-cowboys"
+      "url": "https://www.espn.com/nfl/story/_/id/49640032/nfl-dallas-cowboys-von-miller-demarcus-ware"
     },
     {
-      "id": "49631890",
-      "headline": "CB Keisean Nixon not guaranteed starting role with Packers",
-      "description": "The deeper the Packers get into training camp, the more uncertain it is that Keisean Nixon will be one of their opening-day starting cornerbacks.",
-      "published": "2026-08-16",
-      "likelyKind": "role",
+      "id": "49640649",
+      "headline": "Source: Commanders to cut struggling placekicker Jake Moody",
+      "description": "The Washington Commanders are set to release placekicker Jake Moody and go with undrafted rookie Drew Stevens, a source confirmed to ESPN.",
+      "published": "2026-08-17",
+      "likelyKind": "transaction",
       "teams": [
-        "Green Bay Packers"
+        "Washington Commanders"
       ],
       "teamIds": [
-        "GB"
+        "WSH"
       ],
       "players": [
         {
-          "name": "Keisean Nixon",
-          "position": "Cornerback",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49631890/cb-keisean-nixon-not-guaranteed-starting-role-packers"
-    },
-    {
-      "id": "49631705",
-      "headline": "49ers' George Kittle eyes return to practice, opener in Australia",
-      "description": "George Kittle, who suffered a torn Achilles in January, said he might be able to practice soon with the hope that he'll be ready for the 49ers' opener vs. the Rams.",
-      "published": "2026-08-16",
-      "likelyKind": "injury",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
+          "id": "4372066",
+          "name": "Jake Moody",
+          "position": "Place Kicker",
+          "currentTeam": "WSH"
+        },
         {
-          "name": "George Kittle",
-          "position": "Tight End",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49631705/49ers-george-kittle-eyes-return-practice-opener-australia"
-    },
-    {
-      "id": "49631637",
-      "headline": "LT Ozzy Trapilo (knee) now eligible to practice with Bears",
-      "description": "The Bears activated Ozzy Trapilo off the physically unable to perform list on Sunday, seven months after the left tackle ruptured his patellar tendon in the postseason.",
-      "published": "2026-08-16",
-      "likelyKind": "injury",
-      "teams": [
-        "Chicago Bears"
-      ],
-      "teamIds": [
-        "CHI"
-      ],
-      "players": [
+          "id": "5081335",
+          "name": "Drew Stevens",
+          "position": "Place Kicker",
+          "currentTeam": "WSH"
+        },
         {
-          "name": "Ozzy Trapilo",
-          "position": "Offensive Tackle",
-          "currentTeam": "CHI"
+          "id": "4421446",
+          "name": "Craig Reynolds",
+          "position": "Running Back",
+          "currentTeam": "NE"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49631637/lt-ozzy-trapilo-knee-now-eligible-practice-bears"
+      "url": "https://www.espn.com/nfl/story/_/id/49640649/source-commanders-cut-struggling-placekicker-jake-moody"
     }
   ]
 }
