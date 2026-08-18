@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T14:35:38.736Z",
+  "fetchedAt": "2026-08-18T11:21:23.346Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -10,8 +10,8 @@
       "teamId": "DAL",
       "age": 37,
       "height": "6' 3\"",
-      "weight": "250 lbs",
-      "experience": "16th Season",
+      "weight": "245 lbs",
+      "experience": "15th Season",
       "draft": "2011: Rd 1, Pk 2 (DEN)",
       "college": "Texas A&M",
       "awards": [
@@ -67,9 +67,9 @@
         "Kicks Blocked": "0"
       },
       "headshot": "/players/13976.png",
-      "evidenceHash": "2f312184eb475ba9",
-      "blurb": "An outside linebacker whose job is rushing the passer, taken second overall in the 2011 draft and now in his sixteenth season, having just signed a one-year deal with Dallas. He was Defensive Rookie of the Year and a Super Bowl MVP, and with well over a hundred career sacks he is one of the great pass rushers of his era, though at thirty-seven the short contract suggests a team checking what is left rather than counting on it.",
-      "promptVersion": 2
+      "evidenceHash": "3bd51217bc96dc23",
+      "blurb": null,
+      "promptVersion": null
     },
     "3122132": {
       "id": "3122132",

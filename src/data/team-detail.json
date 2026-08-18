@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-17T14:35:36.315Z",
+  "fetchedAt": "2026-08-18T11:21:19.507Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -743,9 +743,6 @@
           "rank": 12,
           "score": 4,
           "note": "Better than most for points allowed last season, 12th of 32.",
-          "blurb": null,
-          "blurbHash": null,
-          "promptVersion": null,
           "stats": {
             "sacks": {
               "value": "36",
@@ -2599,12 +2596,12 @@
               "draftedBy": "2022: Rd 2, Pk 53 (IND)"
             },
             {
-              "id": "4688813",
-              "name": "Josh Downs",
+              "id": "15818",
+              "name": "Keenan Allen",
               "label": "WR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 79 (IND)"
+              "debutYear": 2013,
+              "experience": 13,
+              "draftedBy": "2013: Rd 3, Pk 76 (SD)"
             },
             {
               "id": "4431459",
@@ -4073,12 +4070,12 @@
               "draftedBy": "2024: Rd 1, Pk 17 (MIN)"
             },
             {
-              "id": "4044540",
-              "name": "Isaiah Rodgers",
+              "id": "5091793",
+              "name": "Charles Demmings",
               "label": "CB",
-              "debutYear": 2020,
-              "experience": 6,
-              "draftedBy": "2020: Rd 6, Pk 211 (IND)"
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 5, Pk 163 (MIN)"
             },
             {
               "id": "4259252",

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-17T14:35:26.215Z",
+  "fetchedAt": "2026-08-18T11:21:05.069Z",
   "games": [
     {
       "id": "401872656",
@@ -228,11 +228,6 @@
       {
         "player": "Tyrell Shavers",
         "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Dorian Strong",
-        "position": "CB",
         "status": "Out"
       }
     ],
