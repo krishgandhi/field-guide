@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-18T11:21:19.507Z",
+  "fetchedAt": "2026-08-19T11:21:22.688Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -2596,12 +2596,12 @@
               "draftedBy": "2022: Rd 2, Pk 53 (IND)"
             },
             {
-              "id": "15818",
-              "name": "Keenan Allen",
+              "id": "4688813",
+              "name": "Josh Downs",
               "label": "WR",
-              "debutYear": 2013,
-              "experience": 13,
-              "draftedBy": "2013: Rd 3, Pk 76 (SD)"
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 79 (IND)"
             },
             {
               "id": "4431459",
@@ -2809,12 +2809,12 @@
               "draftedBy": "2023: Rd 2, Pk 61 (JAX)"
             },
             {
-              "id": "4035791",
-              "name": "Cole Van Lanen",
+              "id": "4692525",
+              "name": "Anton Harrison",
               "label": "OT",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 6, Pk 214 (GB)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 27 (JAX)"
             }
           ],
           "rank": 6,
@@ -6158,12 +6158,12 @@
               "draftedBy": "2022: Rd 4, Pk 143 (TEN)"
             },
             {
-              "id": "3042702",
-              "name": "Andrew Wylie",
+              "id": "4685030",
+              "name": "Brandon Coleman",
               "label": "G",
-              "debutYear": 2017,
-              "experience": 9,
-              "draftedBy": null
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 67 (WSH)"
             }
           ],
           "rank": 22,

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-18T11:21:05.069Z",
+  "fetchedAt": "2026-08-19T11:21:12.665Z",
   "games": [
     {
       "id": "401872656",
@@ -94,7 +94,7 @@
       "away": "CHI",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 46.5,
+      "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -282,6 +282,11 @@
     ],
     "SF": [
       {
+        "player": "Mykel Williams",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
         "player": "George Kittle",
         "position": "TE",
         "status": "Out"
@@ -291,13 +296,6 @@
       {
         "player": "Zach Charbonnet",
         "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "TB": [
-      {
-        "player": "Chase Lucas",
-        "position": "CB",
         "status": "Out"
       }
     ]
