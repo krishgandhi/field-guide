@@ -1,83 +1,89 @@
 {
-  "generatedAt": "2026-08-18T12:36:56.326Z",
+  "generatedAt": "2026-08-19T12:38:21.080Z",
   "candidates": [
     {
-      "id": "49640061",
-      "headline": "Texans ready to feature David Montgomery's dual-threat ability",
-      "description": "Houston traded for the running back and hopes he will complement quarterback C.J. Stroud.",
+      "id": "49650142",
+      "headline": "RB Najee Harris has 'a lot to prove' after signing with Giants",
+      "description": "The Giants have signed free agent running back Najee Harris to a one-year deal, the team announced Tuesday.",
       "published": "2026-08-18",
       "likelyKind": "transaction",
       "teams": [
-        "Houston Texans"
+        "New York Giants"
       ],
       "teamIds": [
-        "HOU"
+        "NYG"
       ],
       "players": [
         {
-          "id": "4035538",
-          "name": "David Montgomery",
-          "position": "Running Back",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49640061/houston-texans-rb-david-montgomery-spark-offense-cj-stroud"
-    },
-    {
-      "id": "49640032",
-      "headline": "DeMarcus Ware on Von Miller to Cowboys: 'This is all he wanted'",
-      "description": "Signing with the Cowboys, Miller is headed back home to Texas, where he grew up and played for Texas A&M.",
-      "published": "2026-08-17",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys"
-      ],
-      "teamIds": [
-        "DAL"
-      ],
-      "players": [
-        {
-          "id": "8426",
-          "name": "DeMarcus Ware",
+          "id": "2987659",
+          "name": "Najee Harris",
           "position": "Linebacker",
-          "currentTeam": "DEN"
+          "currentTeam": "LV"
+        },
+        {
+          "id": "3120348",
+          "name": "JuJu Smith-Schuster",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49640032/nfl-dallas-cowboys-von-miller-demarcus-ware"
+      "url": "https://www.espn.com/nfl/story/_/id/49650142/sources-giants-signing-rb-najee-harris-one-year-deal"
     },
     {
-      "id": "49640649",
-      "headline": "Source: Commanders to cut struggling placekicker Jake Moody",
-      "description": "The Washington Commanders are set to release placekicker Jake Moody and go with undrafted rookie Drew Stevens, a source confirmed to ESPN.",
-      "published": "2026-08-17",
+      "id": "49649996",
+      "headline": "Sources: Seahawks still plan on signing Terrion Arnold",
+      "description": "The Seattle Seahawks are still planning to sign cornerback Terrion Arnold, but it will take a while, as they are working through the timing, sources told NFL Network.",
+      "published": "2026-08-18",
       "likelyKind": "transaction",
       "teams": [
-        "Washington Commanders"
+        "Seattle Seahawks"
       ],
       "teamIds": [
-        "WSH"
+        "SEA"
       ],
       "players": [
         {
-          "id": "4372066",
-          "name": "Jake Moody",
-          "position": "Place Kicker",
-          "currentTeam": "WSH"
-        },
-        {
-          "id": "5081335",
-          "name": "Drew Stevens",
-          "position": "Place Kicker",
-          "currentTeam": "WSH"
-        },
-        {
-          "id": "4421446",
-          "name": "Craig Reynolds",
-          "position": "Running Back",
-          "currentTeam": "NE"
+          "id": "4592837",
+          "name": "Terrion Arnold",
+          "position": "Cornerback",
+          "currentTeam": "SEA"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49640649/source-commanders-cut-struggling-placekicker-jake-moody"
+      "url": "https://www.espn.com/nfl/story/_/id/49649996/sources-seahawks-plan-signing-terrion-arnold"
+    },
+    {
+      "id": "49648078",
+      "headline": "Falcons sign veteran Za'Darius Smith to aid pass rush",
+      "description": "Za'Darius Smith has signed a one-year deal with the Falcons to help bolster their pass rush after losing Jalon Walker and James Pearce Jr. for an extended period.",
+      "published": "2026-08-18",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "3043168",
+          "name": "Za'Darius Smith",
+          "position": "Defensive End",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4685597",
+          "name": "Jalon Walker",
+          "position": "Linebacker",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "5081394",
+          "name": "James Pearce Jr.",
+          "position": "Linebacker",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49648078/falcons-sign-veteran-zadarius-smith-bolster-pass-rush"
     }
   ]
 }
