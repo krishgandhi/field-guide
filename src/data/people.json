@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-19T11:21:25.562Z",
+  "fetchedAt": "2026-08-20T11:22:19.355Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -11,7 +11,7 @@
       "age": 37,
       "height": "6' 3\"",
       "weight": "245 lbs",
-      "experience": "15th Season",
+      "experience": "16th Season",
       "draft": "2011: Rd 1, Pk 2 (DEN)",
       "college": "Texas A&M",
       "awards": [
@@ -67,7 +67,7 @@
         "Kicks Blocked": "0"
       },
       "headshot": "/players/13976.png",
-      "evidenceHash": "3bd51217bc96dc23",
+      "evidenceHash": "2f312184eb475ba9",
       "blurb": null,
       "promptVersion": null
     },

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-19T11:21:22.688Z",
+  "fetchedAt": "2026-08-20T11:22:16.888Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -374,12 +374,12 @@
               "draftedBy": "2007: Rd 6, Pk 178 (DAL)"
             },
             {
-              "id": "4870612",
-              "name": "Zachariah Branch",
+              "id": "4241474",
+              "name": "Brian Robinson Jr.",
               "label": "KR",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 3, Pk 79 (ATL)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 98 (WSH)"
             }
           ],
           "rank": 24,

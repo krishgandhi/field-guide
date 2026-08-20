@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-19T11:21:12.665Z",
+  "fetchedAt": "2026-08-20T11:22:07.430Z",
   "games": [
     {
       "id": "401872656",
@@ -120,7 +120,7 @@
       "favourite": "away",
       "overUnder": 44.5,
       "broadcast": "CBS",
-      "venue": "NRG Stadium",
+      "venue": "Reliant Stadium",
       "neutralSite": false
     },
     {
@@ -192,7 +192,7 @@
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "ESPN, ABC",
-      "venue": "GEHA Field at Arrowhead Stadium",
+      "venue": "Arrowhead Stadium",
       "neutralSite": false
     }
   ],
@@ -207,19 +207,7 @@
     ],
     "ATL": [
       {
-        "player": "Zach Harrison",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
         "player": "DeAngelo Malone",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "BAL": [
-      {
-        "player": "Teddye Buchanan",
         "position": "LB",
         "status": "Out"
       }
@@ -238,18 +226,11 @@
         "status": "Out"
       }
     ],
-    "CIN": [
+    "HOU": [
       {
-        "player": "Josh Kattus",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "DEN": [
-      {
-        "player": "Jordan Turner",
-        "position": "LB",
-        "status": "Out"
+        "player": "Jayden Higgins",
+        "position": "WR",
+        "status": "Doubtful"
       }
     ],
     "IND": [
@@ -259,18 +240,11 @@
         "status": "Out"
       }
     ],
-    "MIA": [
+    "NO": [
       {
-        "player": "Chris Bell",
+        "player": "Jordyn Tyson",
         "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "NYJ": [
-      {
-        "player": "Joseph Ossai",
-        "position": "DE",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "PHI": [
