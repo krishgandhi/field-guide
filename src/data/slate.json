@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-20T11:22:07.430Z",
+  "fetchedAt": "2026-08-21T11:21:17.554Z",
   "games": [
     {
       "id": "401872656",
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -200,6 +200,11 @@
   "injuries": {
     "ARI": [
       {
+        "player": "Tip Reiman",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Josh Sweat",
         "position": "LB",
         "status": "Out"
@@ -256,13 +261,13 @@
     ],
     "SF": [
       {
-        "player": "Mykel Williams",
-        "position": "DE",
+        "player": "George Kittle",
+        "position": "TE",
         "status": "Out"
       },
       {
-        "player": "George Kittle",
-        "position": "TE",
+        "player": "Mykel Williams",
+        "position": "DE",
         "status": "Out"
       }
     ],

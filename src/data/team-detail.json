@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-20T11:22:16.888Z",
+  "fetchedAt": "2026-08-21T11:21:21.806Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -300,7 +300,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 20
         },
         "defence": {
@@ -888,7 +888,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 54
         },
         "defence": {
@@ -1085,7 +1085,7 @@
             }
           },
           "passPlayShare": 58.3,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 77
         },
         "defence": {
@@ -1479,7 +1479,7 @@
             }
           },
           "passPlayShare": 61,
-          "passPlayShareRank": 10,
+          "passPlayShareRank": 9,
           "quarterbackCarries": 31
         },
         "defence": {
@@ -1676,7 +1676,7 @@
             }
           },
           "passPlayShare": 61.4,
-          "passPlayShareRank": 9,
+          "passPlayShareRank": 8,
           "quarterbackCarries": 53
         },
         "defence": {
@@ -2070,7 +2070,7 @@
             }
           },
           "passPlayShare": 59.5,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 19
         },
         "defence": {
@@ -2463,9 +2463,9 @@
               "rank": 31
             }
           },
-          "passPlayShare": 58.9,
-          "passPlayShareRank": 15,
-          "quarterbackCarries": 48
+          "passPlayShare": 56.3,
+          "passPlayShareRank": 24,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -2661,7 +2661,7 @@
             }
           },
           "passPlayShare": 59.2,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -2858,7 +2858,7 @@
             }
           },
           "passPlayShare": 59.7,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 82
         },
         "defence": {
@@ -3251,9 +3251,9 @@
               "rank": 14
             }
           },
-          "passPlayShare": 62.2,
-          "passPlayShareRank": 6,
-          "quarterbackCarries": 83
+          "passPlayShare": 57.4,
+          "passPlayShareRank": 22,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -3449,7 +3449,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -3646,7 +3646,7 @@
             }
           },
           "passPlayShare": 62,
-          "passPlayShareRank": 8,
+          "passPlayShareRank": 7,
           "quarterbackCarries": 14
         },
         "defence": {
@@ -3843,7 +3843,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 22
         },
         "defence": {
@@ -4040,7 +4040,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -4237,7 +4237,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -4434,7 +4434,7 @@
             }
           },
           "passPlayShare": 62.1,
-          "passPlayShareRank": 7,
+          "passPlayShareRank": 6,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -4631,7 +4631,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 86
         },
         "defence": {
@@ -4828,7 +4828,7 @@
             }
           },
           "passPlayShare": 57.2,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 41
         },
         "defence": {
@@ -5025,7 +5025,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -5222,7 +5222,7 @@
             }
           },
           "passPlayShare": 60.1,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 21
         },
         "defence": {
@@ -5615,9 +5615,9 @@
               "rank": 13
             }
           },
-          "passPlayShare": 57.3,
-          "passPlayShareRank": 24,
-          "quarterbackCarries": 33
+          "passPlayShare": 55.5,
+          "passPlayShareRank": 27,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -5813,7 +5813,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 55
         },
         "defence": {
