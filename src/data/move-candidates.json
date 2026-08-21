@@ -1,10 +1,68 @@
 {
-  "generatedAt": "2026-08-20T12:39:21.961Z",
+  "generatedAt": "2026-08-21T12:38:09.690Z",
   "candidates": [
     {
-      "id": "49664105",
-      "headline": "Bucs, DT Vita Vea agree to 1-year extension to end hold-in",
-      "description": "Two-time Pro Bowl defensive tackle Vita Vea and the Tampa Bay Buccaneers have agreed on a one-year extension that guarantees him $30 million, sources told ESPN on Wednesday.",
+      "id": "49677418",
+      "headline": "Kubiak keeps Raiders' QB race going: 'We got another week'",
+      "description": "With one week left in the preseason, Raiders coach Klint Kubiak said he wasn't prepared to name a starting quarterback, adding \"I don't want anyone to be comfortable in their job.\"",
+      "published": "2026-08-21",
+      "likelyKind": "role",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49677418/kubiak-keeps-raiders-qb-race-going-got-another-week"
+    },
+    {
+      "id": "49672812",
+      "headline": "A.J. Brown, Jalen Hurts reunite briefly amid post-trade rift",
+      "description": "A.J. Brown and Jalen Hurts caught up for a few minutes after practice Thursday -- a notable development after the Patriots receiver revealed Wednesday that the former teammates had not spoken since he was traded to New England by the Eagles.",
+      "published": "2026-08-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "New England Patriots",
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "NE",
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4040715",
+          "name": "Jalen Hurts",
+          "position": "Quarterback",
+          "currentTeam": "PHI"
+        },
+        {
+          "id": "4047646",
+          "name": "A.J. Brown",
+          "position": "Wide Receiver",
+          "currentTeam": "NE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49672812/aj-brown-jalen-hurts-reunite-briefly-amid-post-trade-rift"
+    },
+    {
+      "id": "49672527",
+      "headline": "Vita Vea dismisses trade drama: I want 'to be a Buc for life'",
+      "description": "Vita Vea says his end goal was never a trade away from Tampa Bay, adding he wants to be \"a Buc for life.\"",
       "published": "2026-08-20",
       "likelyKind": "transaction",
       "teams": [
@@ -21,73 +79,7 @@
           "currentTeam": "TB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49664105/bucs-dt-vita-vea-agree-1-year-extension-end-hold-in"
-    },
-    {
-      "id": "49661802",
-      "headline": "Source: CB Trevon Diggs signing 1-year deal with Seahawks",
-      "description": "Former Cowboys Pro Bowl cornerback Trevon Diggs plans to sign a one-year deal with the Seahawks, a source told ESPN's Adam Schefter on Wednesday.",
-      "published": "2026-08-19",
-      "likelyKind": "transaction",
-      "teams": [
-        "Seattle Seahawks"
-      ],
-      "teamIds": [
-        "SEA"
-      ],
-      "players": [
-        {
-          "id": "4040966",
-          "name": "Trevon Diggs",
-          "position": "Cornerback",
-          "currentTeam": "SEA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49661802/source-seahawks-sign-former-pro-bowl-cb-trevon-diggs"
-    },
-    {
-      "id": "49660991",
-      "headline": "Shedeur Sanders not feeling pressure about Browns' QB decision",
-      "description": "With a decision at starting quarterback looming, Browns quarterback Shedeur Sanders said Wednesday he's not feeling pressure ahead of joint practice with the Bills on Thursday and his start in the second preseason game at home Saturday.",
-      "published": "2026-08-20",
-      "likelyKind": "role",
-      "teams": [
-        "Cleveland Browns"
-      ],
-      "teamIds": [
-        "CLE"
-      ],
-      "players": [
-        {
-          "id": "4432762",
-          "name": "Shedeur Sanders",
-          "position": "Quarterback",
-          "currentTeam": "CLE"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49660991/shedeur-sanders-not-worried-browns-qb-decision"
-    },
-    {
-      "id": "49660770",
-      "headline": "Sources: Texans' Jayden Higgins has torn ACL, out for season",
-      "description": "Texans second-year wideout Jayden Higgins will miss the season after suffering a torn ACL during a joint practice with the Raiders, sources told NFL Network.",
-      "published": "2026-08-19",
-      "likelyKind": "injury",
-      "teams": [
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "4877706",
-          "name": "Jayden Higgins",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49660770/sources-texans-jayden-higgins-torn-acl-season"
+      "url": "https://www.espn.com/nfl/story/_/id/49672527/vita-vea-dismisses-trade-drama-want-buc-life"
     }
   ]
 }
