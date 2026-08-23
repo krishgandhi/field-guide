@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-22T11:17:31.535Z",
+  "fetchedAt": "2026-08-23T11:17:54.092Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -521,27 +521,11 @@
         "Rushing Touchdowns": "4",
         "Long Rushing": "26"
       },
-      "season": {
-        "Completions": "140",
-        "Passing Attempts": "243",
-        "Completion Percentage": "57.6",
-        "Passing Yards": "1,632",
-        "Yards Per Pass Attempt": "6.7",
-        "Passing Touchdowns": "11",
-        "Interceptions": "12",
-        "Longest Pass": "62",
-        "Total Sacks": "27",
-        "Passer Rating": "72.6",
-        "Rushing Attempts": "37",
-        "Rushing Yards": "181",
-        "Yards Per Rush Attempt": "4.9",
-        "Rushing Touchdowns": "4",
-        "Long Rushing": "26"
-      },
+      "season": {},
       "headshot": "/players/4433970.png",
-      "evidenceHash": "b7a6f9253aedc1de",
-      "blurb": "A quarterback taken tenth overall by Minnesota in 2024, now in his third season but with only one year of real playing time behind him. That year went poorly — more interceptions than touchdowns, well under sixty percent of his passes completed, and a willingness to run that produced a few scores; Minnesota have since benched him for a cheap veteran signing, so he has yet to prove he can hold the job.",
-      "promptVersion": 2
+      "evidenceHash": "81dc2a9128167f20",
+      "blurb": null,
+      "promptVersion": null
     },
     "4575431": {
       "id": "4575431",
