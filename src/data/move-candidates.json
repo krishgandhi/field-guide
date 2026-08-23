@@ -1,4 +1,33 @@
 {
-  "generatedAt": "2026-08-22T12:30:26.134Z",
-  "candidates": []
+  "generatedAt": "2026-08-23T12:31:24.463Z",
+  "candidates": [
+    {
+      "id": "49693366",
+      "headline": "Seahawks place WR Bobo on season-ending IR, re-sign WR Hicks",
+      "description": "The Seahawks have placed wide receiver Jake Bobo on season-ending injured reserve with a serious knee injury and re-signed wideout Julian Hicks.",
+      "published": "2026-08-22",
+      "likelyKind": "injury",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "4360405",
+          "name": "Jake Bobo",
+          "position": "Wide Receiver",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "4244768",
+          "name": "Julian Hicks",
+          "position": "Wide Receiver",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49693366/seahawks-place-wr-bobo-season-ending-ir-re-sign-wr-hicks"
+    }
+  ]
 }
