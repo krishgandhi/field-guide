@@ -1,33 +1,127 @@
 {
-  "generatedAt": "2026-08-23T12:31:24.463Z",
+  "generatedAt": "2026-08-24T12:40:57.703Z",
   "candidates": [
     {
-      "id": "49693366",
-      "headline": "Seahawks place WR Bobo on season-ending IR, re-sign WR Hicks",
-      "description": "The Seahawks have placed wide receiver Jake Bobo on season-ending injured reserve with a serious knee injury and re-signed wideout Julian Hicks.",
-      "published": "2026-08-22",
-      "likelyKind": "injury",
+      "id": "49638752",
+      "headline": "Green Bay Packers: Projecting final 53-man roster",
+      "description": "Will the Packers trade or release CB Keisean Nixon? Will rookie kicker Trey Smack make the cut?",
+      "published": "2026-08-24",
+      "likelyKind": "transaction",
       "teams": [
-        "Seattle Seahawks"
+        "Green Bay Packers"
       ],
       "teamIds": [
-        "SEA"
+        "GB"
       ],
       "players": [
         {
-          "id": "4360405",
-          "name": "Jake Bobo",
-          "position": "Wide Receiver",
-          "currentTeam": "SEA"
+          "id": "4259493",
+          "name": "Keisean Nixon",
+          "position": "Cornerback",
+          "currentTeam": "GB"
         },
         {
-          "id": "4244768",
-          "name": "Julian Hicks",
-          "position": "Wide Receiver",
-          "currentTeam": "SEA"
+          "id": "4869461",
+          "name": "Trey Smack",
+          "position": "Place Kicker",
+          "currentTeam": "GB"
+        },
+        {
+          "id": "4259762",
+          "name": "Jonathan Ford",
+          "position": "Defensive Tackle",
+          "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49693366/seahawks-place-wr-bobo-season-ending-ir-re-sign-wr-hicks"
+      "url": "https://www.espn.com/nfl/story/_/id/49638752/2026-nfl-season-green-bay-packers-final-roster-projection-depth-chart"
+    },
+    {
+      "id": "49662375",
+      "headline": "2026 Miami Dolphins: Projecting final 53-man roster",
+      "description": "Who sticks at wide receiver? Which cornerbacks make the cut? Dolphins reporter Marcel Louis-Jacques makes his predictions.",
+      "published": "2026-08-24",
+      "likelyKind": "transaction",
+      "teams": [
+        "Miami Dolphins"
+      ],
+      "teamIds": [
+        "MIA"
+      ],
+      "players": [
+        {
+          "id": "4242512",
+          "name": "Malik Willis",
+          "position": "Quarterback",
+          "currentTeam": "MIA"
+        },
+        {
+          "id": "4429160",
+          "name": "De'Von Achane",
+          "position": "Running Back",
+          "currentTeam": "MIA"
+        },
+        {
+          "id": "4043130",
+          "name": "Jordyn Brooks",
+          "position": "Linebacker",
+          "currentTeam": "MIA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49662375/2026-nfl-season-miami-dolphins-final-roster-projection-depth-chart"
+    },
+    {
+      "id": "49707873",
+      "headline": "Sources: 49ers trade Zamir White to Saints for Deion Jones",
+      "description": "The Saints acquired RB Zamir White in a trade that sent veteran LB Deion Jones to the 49ers, sources told ESPN's Adam Schefter on Sunday night.",
+      "published": "2026-08-24",
+      "likelyKind": "transaction",
+      "teams": [
+        "San Francisco 49ers",
+        "New Orleans Saints"
+      ],
+      "teamIds": [
+        "SF",
+        "NO"
+      ],
+      "players": [
+        {
+          "id": "4361777",
+          "name": "Zamir White",
+          "position": "Running Back",
+          "currentTeam": "SF"
+        },
+        {
+          "id": "2976545",
+          "name": "Deion Jones",
+          "position": "Linebacker",
+          "currentTeam": "NO"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49707873/sources-49ers-trade-zamir-white-saints-deion-jones"
+    },
+    {
+      "id": "49705433",
+      "headline": "Agents: Dae'Quan Wright to be waived by Browns, set to join LSU",
+      "description": "The Browns are waiving tight end Dae'Quan Wright, who has an agreement in place for the 2026 season to play for LSU if he clears waivers, agents Drew Rosenhaus and Kyle Lincoln told ESPN's Adam Schefter.",
+      "published": "2026-08-24",
+      "likelyKind": "transaction",
+      "teams": [
+        "LSU Tigers",
+        "Louisiana State University",
+        "Cleveland Browns"
+      ],
+      "teamIds": [
+        "CLE"
+      ],
+      "players": [
+        {
+          "id": "4838696",
+          "name": "Dae'Quan Wright",
+          "position": "Tight End",
+          "currentTeam": "CLE"
+        }
+      ],
+      "url": "https://www.espn.com/college-football/story/_/id/49705433/agents-daequan-wright-waived-browns-set-join-lsu"
     }
   ]
 }
