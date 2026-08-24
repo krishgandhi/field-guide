@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-23T11:17:52.270Z",
+  "fetchedAt": "2026-08-24T11:23:18.709Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -1282,7 +1282,7 @@
             }
           },
           "passPlayShare": 64.8,
-          "passPlayShareRank": 3,
+          "passPlayShareRank": 2,
           "quarterbackCarries": 14
         },
         "defence": {
@@ -1485,12 +1485,12 @@
         "defence": {
           "players": [
             {
-              "id": "4570119",
-              "name": "Alex Wright",
+              "id": "4427963",
+              "name": "Isaiah McGuire",
               "label": "DE",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 3, Pk 78 (CLE)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 126 (CLE)"
             },
             {
               "id": "4578085",
@@ -2486,12 +2486,12 @@
               "draftedBy": "2015: Rd 3, Pk 88 (MIN)"
             },
             {
-              "id": "3071353",
-              "name": "E.J. Speed",
+              "id": "4033812",
+              "name": "Jake Hansen",
               "label": "LB",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 5, Pk 164 (IND)"
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": null
             },
             {
               "id": "4426434",
@@ -3055,7 +3055,7 @@
             }
           },
           "passPlayShare": 63.3,
-          "passPlayShareRank": 4,
+          "passPlayShareRank": 3,
           "quarterbackCarries": 64
         },
         "defence": {
@@ -6009,9 +6009,9 @@
               "rank": 17
             }
           },
-          "passPlayShare": 64.9,
-          "passPlayShareRank": 2,
-          "quarterbackCarries": 39
+          "passPlayShare": 62.4,
+          "passPlayShareRank": 4,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [

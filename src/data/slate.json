@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-23T11:17:03.164Z",
+  "fetchedAt": "2026-08-24T11:23:11.892Z",
   "games": [
     {
       "id": "401872656",
@@ -231,6 +231,13 @@
         "status": "Out"
       }
     ],
+    "HOU": [
+      {
+        "player": "E.J. Speed",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "IND": [
       {
         "player": "Alec Pierce",
@@ -249,13 +256,6 @@
       {
         "player": "Jonathan Greenard",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "SF": [
-      {
-        "player": "George Kittle",
-        "position": "TE",
         "status": "Out"
       }
     ],
