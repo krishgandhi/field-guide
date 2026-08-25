@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-24T11:23:11.892Z",
+  "fetchedAt": "2026-08-25T11:23:08.157Z",
   "games": [
     {
       "id": "401872656",
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -203,11 +203,6 @@
         "player": "Tip Reiman",
         "position": "TE",
         "status": "Out"
-      },
-      {
-        "player": "Josh Sweat",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "ATL": [
@@ -217,21 +212,12 @@
         "status": "Out"
       }
     ],
-    "BUF": [
-      {
-        "player": "Tyrell Shavers",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Kyler Gordon",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
     "HOU": [
+      {
+        "player": "Dylan Horton",
+        "position": "DE",
+        "status": "Doubtful"
+      },
       {
         "player": "E.J. Speed",
         "position": "LB",

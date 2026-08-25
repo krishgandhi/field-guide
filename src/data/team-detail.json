@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-24T11:23:18.709Z",
+  "fetchedAt": "2026-08-25T11:23:15.754Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -3195,12 +3195,12 @@
               "draftedBy": "2023: Rd 1, Pk 21 (LAC)"
             },
             {
-              "id": "4595342",
-              "name": "Oronde Gadsden",
+              "id": "4241263",
+              "name": "Charlie Kolar",
               "label": "TE",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 5, Pk 165 (LAC)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 128 (BAL)"
             },
             {
               "id": "4242283",
