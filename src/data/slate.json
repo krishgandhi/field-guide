@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-25T11:23:08.157Z",
+  "fetchedAt": "2026-08-26T11:25:21.683Z",
   "games": [
     {
       "id": "401872656",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 49.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -154,7 +154,7 @@
       "away": "WSH",
       "spread": 4.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 46.5,
       "broadcast": "FOX",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -214,11 +214,6 @@
     ],
     "HOU": [
       {
-        "player": "Dylan Horton",
-        "position": "DE",
-        "status": "Doubtful"
-      },
-      {
         "player": "E.J. Speed",
         "position": "LB",
         "status": "Out"
@@ -228,6 +223,13 @@
       {
         "player": "Alec Pierce",
         "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Trey Moore",
+        "position": "LB",
         "status": "Out"
       }
     ],

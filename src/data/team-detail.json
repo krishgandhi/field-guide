@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-25T11:23:15.754Z",
+  "fetchedAt": "2026-08-26T11:25:28.139Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -3865,12 +3865,12 @@
               "draftedBy": "2020: Rd 2, Pk 60 (NE)"
             },
             {
-              "id": "4879212",
-              "name": "Trey Moore",
+              "id": "4259804",
+              "name": "Willie Gay Jr.",
               "label": "LB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 4, Pk 130 (MIA)"
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 63 (KC)"
             },
             {
               "id": "4432730",
