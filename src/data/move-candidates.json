@@ -1,203 +1,223 @@
 {
-  "generatedAt": "2026-08-25T12:39:20.005Z",
+  "generatedAt": "2026-08-26T12:42:47.407Z",
   "candidates": [
     {
-      "id": "48915601",
-      "headline": "2026 NFL offseason trade grades: Kayshon Boutte, Myles Garrett",
-      "description": "We're sizing up post-June 1 deals, including the blockbuster A.J. Brown and Myles Garrett trades along with Kayshon Boutte going to Houston.",
-      "published": "2026-08-24",
-      "likelyKind": "transaction",
-      "teams": [
-        "Los Angeles Rams",
-        "Cleveland Browns",
-        "New England Patriots",
-        "Philadelphia Eagles",
-        "Atlanta Falcons",
-        "Kansas City Chiefs",
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "LAR",
-        "CLE",
-        "NE",
-        "PHI",
-        "ATL",
-        "KC",
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "3122132",
-          "name": "Myles Garrett",
-          "position": "Defensive End",
-          "currentTeam": "LAR"
-        },
-        {
-          "id": "4578085",
-          "name": "Jared Verse",
-          "position": "Defensive End",
-          "currentTeam": "CLE"
-        },
-        {
-          "id": "4047646",
-          "name": "A.J. Brown",
-          "position": "Wide Receiver",
-          "currentTeam": "NE"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/48915601/2026-nfl-offseason-trade-grades-best-worst-moves-training-camp-preseason"
-    },
-    {
-      "id": "49714805",
-      "headline": "Ravens believe center Danny Pinter is out for season",
-      "description": "The Ravens now believe center Danny Pinter is out for the season and are unsure whether Pro Bowl defensive tackle Nnamdi Madubuike will be ready for the start of the regular season.",
-      "published": "2026-08-24",
+      "id": "49731270",
+      "headline": "Source: Giants WR Calvin Austin (torn ACL) out for season",
+      "description": "Giants wide receiver Calvin Austin III will miss the upcoming season after suffering a torn ACL in his right knee while running a route at Tuesday's training camp practice, a source told ESPN's Adam Schefter.",
+      "published": "2026-08-26",
       "likelyKind": "injury",
       "teams": [
-        "Baltimore Ravens"
+        "New York Giants"
       ],
       "teamIds": [
-        "BAL"
+        "NYG"
       ],
       "players": [
         {
-          "id": "3915470",
-          "name": "Danny Pinter",
-          "position": "Center",
-          "currentTeam": "BAL"
-        },
-        {
-          "id": "4035245",
-          "name": "Nnamdi Madubuike",
-          "position": "Defensive Tackle",
-          "currentTeam": "BAL"
+          "id": "4243389",
+          "name": "Calvin Austin III",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49714805/ravens-believe-center-danny-pinter-season"
+      "url": "https://www.espn.com/nfl/story/_/id/49731270/source-giants-wr-calvin-austin-miss-upcoming-season"
     },
     {
-      "id": "49714729",
-      "headline": "How Colts' Anthony Richardson is fighting back from adversity",
-      "description": "He was benched, injured and asked to be traded, but Richardson remains in Indy, and he's persevering.",
+      "id": "49727700",
+      "headline": "Sources: Giants trading OL Josh Ezeudu to Chiefs for '28 pick",
+      "description": "The Giants are trading offensive lineman Josh Ezeudu to the Chiefs for a 2028 seventh-round pick, sources said.",
+      "published": "2026-08-26",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants",
+        "Kansas City Chiefs"
+      ],
+      "teamIds": [
+        "NYG",
+        "KC"
+      ],
+      "players": [
+        {
+          "id": "4373280",
+          "name": "Joshua Ezeudu",
+          "position": "Guard",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49727700/sources-giants-trading-ol-josh-ezeudu-chiefs-28-pick"
+    },
+    {
+      "id": "49725854",
+      "headline": "Gonzalez focused on season, but irked by talks with Patriots",
+      "description": "Cornerback Christian Gonzalez, 24, and the New England Patriots continue to discuss a contract extension, and with the regular-season opener Sept. 9 closing in, the veteran defensive back expressed disappointment the sides have yet to reach an agreement.",
       "published": "2026-08-25",
       "likelyKind": "transaction",
       "teams": [
-        "Indianapolis Colts"
-      ],
-      "teamIds": [
-        "IND"
-      ],
-      "players": [
-        {
-          "id": "4429084",
-          "name": "Anthony Richardson Sr.",
-          "position": "Quarterback",
-          "currentTeam": "IND"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49714729/colts-quarterback-anthony-richardson-reflects-adversity-optimism"
-    },
-    {
-      "id": "49714288",
-      "headline": "Patriots trade Kayshon Boutte to Texans for Jaylen Reed, pick",
-      "description": "The Texans acquired wide receiver Kayshon Boutte in a trade with the Patriots on Monday.",
-      "published": "2026-08-24",
-      "likelyKind": "transaction",
-      "teams": [
-        "Houston Texans",
         "New England Patriots"
       ],
       "teamIds": [
-        "HOU",
         "NE"
       ],
       "players": [
         {
-          "id": "4429022",
-          "name": "Kayshon Boutte",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "4432758",
-          "name": "Jaylen Reed",
-          "position": "Safety",
+          "id": "4686772",
+          "name": "Christian Gonzalez",
+          "position": "Cornerback",
           "currentTeam": "NE"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49714288/patriots-trading-boutte-texans-reed-draft-pick"
+      "url": "https://www.espn.com/nfl/story/_/id/49725854/gonzalez-focused-season-irked-talks-patriots"
     },
     {
-      "id": "49713714",
-      "headline": "Bengals release offensive lineman Cody Ford after three seasons",
-      "description": "The Bengals released offensive lineman Cody Ford on Monday.",
-      "published": "2026-08-24",
+      "id": "49725757",
+      "headline": "Panthers coach Canales backs QB Young, defers on extension",
+      "description": "Dave Canales reiterated Carolina's commitment to Bryce Young for the 2026 season but said any talk of a potential long-term pact with the quarterback will be the responsibility of the front office.",
+      "published": "2026-08-25",
       "likelyKind": "transaction",
       "teams": [
-        "Cincinnati Bengals"
+        "Carolina Panthers"
       ],
       "teamIds": [
-        "CIN"
+        "CAR"
       ],
       "players": [
         {
-          "id": "3707061",
-          "name": "Cody Ford",
-          "position": "Offensive Tackle",
-          "currentTeam": "CIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49713714/bengals-release-offensive-lineman-cody-ford-three-seasons"
-    },
-    {
-      "id": "49712363",
-      "headline": "Saints to sign two-time All-Pro kicker Daniel Carlson",
-      "description": "The Saints are signing free agent kicker Daniel Carlson, his agents told The NFL Network's Mike Garafolo and Ian Rapoport.",
-      "published": "2026-08-24",
-      "likelyKind": "transaction",
-      "teams": [
-        "New Orleans Saints"
-      ],
-      "teamIds": [
-        "NO"
-      ],
-      "players": [
-        {
-          "id": "3051909",
-          "name": "Daniel Carlson",
-          "position": "Place Kicker",
-          "currentTeam": "NO"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49712363/saints-sign-two-all-pro-kicker-daniel-carlson"
-    },
-    {
-      "id": "49711613",
-      "headline": "Deshaun Watson named Browns' QB1, says he regrets fan comments",
-      "description": "Deshaun Watson will open the season as the Browns' starting quarterback, coach Todd Monken announced Monday.",
-      "published": "2026-08-24",
-      "likelyKind": "role",
-      "teams": [
-        "Cleveland Browns"
-      ],
-      "teamIds": [
-        "CLE"
-      ],
-      "players": [
-        {
-          "id": "3122840",
-          "name": "Deshaun Watson",
+          "id": "4685720",
+          "name": "Bryce Young",
           "position": "Quarterback",
-          "currentTeam": "CLE"
+          "currentTeam": "CAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49725757/panthers-coach-canales-backs-qb-young-defers-extension"
+    },
+    {
+      "id": "49725726",
+      "headline": "Commanders to sign veteran tackle Humphries, source says",
+      "description": "The Commanders, who lost Laremy Tunsil to a torn triceps on Aug. 5, are signing veteran tackle D.J. Humphries, a source told ESPN.",
+      "published": "2026-08-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "2971048",
+          "name": "D.J. Humphries",
+          "position": "Offensive Tackle",
+          "currentTeam": "LAR"
         },
         {
-          "id": "4432762",
-          "name": "Shedeur Sanders",
-          "position": "Quarterback",
-          "currentTeam": "CLE"
+          "id": "3051890",
+          "name": "Laremy Tunsil",
+          "position": "Offensive Tackle",
+          "currentTeam": "WSH"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49711613/sources-browns-tab-deshaun-watson-not-shedeur-sanders-qb1"
+      "url": "https://www.espn.com/nfl/story/_/id/49725726/commanders-sign-veteran-tackle-humphries-source-says"
+    },
+    {
+      "id": "49725451",
+      "headline": "Seahawks put Clark, Richman on season-ending injured reserve",
+      "description": "Seahawks rookie safety Bud Clark and offensive lineman Mason Richman, who were both injured in the team's preseason game against the Titans on Sunday, will miss the 2026 season after being placed on injured reserve Tuesday.",
+      "published": "2026-08-25",
+      "likelyKind": "injury",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "4430262",
+          "name": "Bud Clark",
+          "position": "Safety",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "4432525",
+          "name": "Mason Richman",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49725451/seahawks-put-clark-richman-season-ending-injured-reserve"
+    },
+    {
+      "id": "49724505",
+      "headline": "New York Giants WR Calvin Austin carted off practice field",
+      "description": "New York receiver Calvin Austin III, 27, who signed with the Giants after spending four seasons with Pittsburgh, suffered a \"serious\" injury to his right knee while running a route at Tuesday's training camp practice, a source told ESPN's Adam Schefter.",
+      "published": "2026-08-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "4243389",
+          "name": "Calvin Austin III",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49724505/new-york-giants-wr-calvin-austin-carted-practice-field"
+    },
+    {
+      "id": "49723682",
+      "headline": "Sources: Cardinals, Hjalte Froholdt reach 2-year, $20M extension",
+      "description": "The Cardinals and center Hjalte Froholdt have agreed to terms on a two-year, $20 million contract extension, sources told NFL Network's Ian Rapoport on Tuesday.",
+      "published": "2026-08-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "3886633",
+          "name": "Hjalte Froholdt",
+          "position": "Center",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49723682/sources-cardinals-hjalte-froholdt-reach-2-year-20m-extension"
+    },
+    {
+      "id": "49721716",
+      "headline": "Commanders release S Will Harris, place LB Drake Jackson on IR",
+      "description": "The Commanders released veteran safety Will Harris on Tuesday, one year after he had opened the season as a starter.",
+      "published": "2026-08-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "3915297",
+          "name": "Will Harris",
+          "position": "Safety",
+          "currentTeam": "WSH"
+        },
+        {
+          "id": "4569511",
+          "name": "Drake Jackson",
+          "position": "Defensive End",
+          "currentTeam": "WSH"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49721716/commanders-release-s-harris-place-lb-drake-jackson-ir"
     }
   ]
 }
