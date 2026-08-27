@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-26T11:25:21.683Z",
+  "fetchedAt": "2026-08-27T20:53:17.180Z",
   "games": [
     {
       "id": "401872656",
@@ -34,7 +34,7 @@
       "away": "TB",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 51.5,
+      "overUnder": 50.5,
       "broadcast": "FOX",
       "venue": "Paycor Stadium",
       "neutralSite": false
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 49.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -219,13 +219,6 @@
         "status": "Out"
       }
     ],
-    "IND": [
-      {
-        "player": "Alec Pierce",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "MIA": [
       {
         "player": "Trey Moore",
@@ -238,6 +231,13 @@
         "player": "Jordyn Tyson",
         "position": "WR",
         "status": "Doubtful"
+      }
+    ],
+    "NYG": [
+      {
+        "player": "Calvin Austin III",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "PHI": [

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-26T11:25:28.139Z",
+  "fetchedAt": "2026-08-27T20:53:22.136Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -1873,7 +1873,7 @@
             }
           },
           "passPlayShare": 58.2,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3252,7 +3252,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3358,56 +3358,7 @@
       "previousSeason": true,
       "units": {
         "offence": {
-          "players": [
-            {
-              "id": "12483",
-              "name": "Matthew Stafford",
-              "label": "QB",
-              "debutYear": 2009,
-              "experience": 18,
-              "draftedBy": "2009: Rd 1, Pk 1 (DET)"
-            },
-            {
-              "id": "4430737",
-              "name": "Kyren Williams",
-              "label": "RB",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 5, Pk 164 (LAR)"
-            },
-            {
-              "id": "4426515",
-              "name": "Puka Nacua",
-              "label": "WR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 5, Pk 177 (LAR)"
-            },
-            {
-              "id": "16800",
-              "name": "Davante Adams",
-              "label": "WR",
-              "debutYear": 2014,
-              "experience": 13,
-              "draftedBy": "2014: Rd 2, Pk 53 (GB)"
-            },
-            {
-              "id": "4242557",
-              "name": "Colby Parkinson",
-              "label": "TE",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 4, Pk 133 (SEA)"
-            },
-            {
-              "id": "4036135",
-              "name": "Alaric Jackson",
-              "label": "OT",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": null
-            }
-          ],
+          "players": [],
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 1st of 32.",
@@ -3448,53 +3399,12 @@
               "rank": 25
             }
           },
-          "passPlayShare": 58.8,
-          "passPlayShareRank": 13,
-          "quarterbackCarries": 29
+          "passPlayShare": 57.2,
+          "passPlayShareRank": 19,
+          "quarterbackCarries": null
         },
         "defence": {
-          "players": [
-            {
-              "id": "4250621",
-              "name": "Kobie Turner",
-              "label": "DE",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 89 (LAR)"
-            },
-            {
-              "id": "4362245",
-              "name": "Braden Fiske",
-              "label": "DE",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 2, Pk 39 (LAR)"
-            },
-            {
-              "id": "3122132",
-              "name": "Myles Garrett",
-              "label": "DE",
-              "debutYear": 2017,
-              "experience": 10,
-              "draftedBy": "2017: Rd 1, Pk 1 (CLE)"
-            },
-            {
-              "id": "4697639",
-              "name": "Jaylen Watson",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 7, Pk 243 (KC)"
-            },
-            {
-              "id": "4426405",
-              "name": "Trent McDuffie",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 1, Pk 21 (KC)"
-            }
-          ],
+          "players": [],
           "rank": 10,
           "score": 4,
           "note": "Better than most for points allowed last season, 10th of 32.",
@@ -4040,7 +3950,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -4237,7 +4147,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -4631,7 +4541,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 86
         },
         "defence": {
@@ -4771,12 +4681,12 @@
               "draftedBy": "2024: Rd 2, Pk 52 (IND)"
             },
             {
-              "id": "5083315",
-              "name": "Kenyon Sadiq",
+              "id": "4808766",
+              "name": "Mason Taylor",
               "label": "TE",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 1, Pk 16 (NYJ)"
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 42 (NYJ)"
             },
             {
               "id": "4431809",
@@ -5025,7 +4935,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 105
         },
         "defence": {
