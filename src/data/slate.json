@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-27T20:53:17.180Z",
+  "fetchedAt": "2026-08-28T21:18:45.076Z",
   "games": [
     {
       "id": "401872656",
@@ -226,18 +226,18 @@
         "status": "Out"
       }
     ],
+    "NE": [
+      {
+        "player": "Harold Landry III",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "NO": [
       {
         "player": "Jordyn Tyson",
         "position": "WR",
         "status": "Doubtful"
-      }
-    ],
-    "NYG": [
-      {
-        "player": "Calvin Austin III",
-        "position": "WR",
-        "status": "Out"
       }
     ],
     "PHI": [
