@@ -1,19 +1,17 @@
 {
-  "generatedAt": "2026-08-27T21:40:23.067Z",
+  "generatedAt": "2026-08-28T21:41:13.056Z",
   "candidates": [
     {
-      "id": "49744695",
-      "headline": "Dolphins trade WR Tutu Atwell to Rams for RB Jarquez Hunter",
-      "description": "The Dolphins have traded wide receiver Tutu Atwell back to the Rams in exchange for running back Jarquez Hunter, the teams announced on Thursday.",
-      "published": "2026-08-27",
+      "id": "49750040",
+      "headline": "Rams' McVay: Atwell trade about depth, not possible Nacua ban",
+      "description": "Rams coach Sean McVay said the team acquired Tutu Atwell to add depth to the receiver room and had \"nothing to do\" with a possible suspension for Puka Nacua.",
+      "published": "2026-08-28",
       "likelyKind": "transaction",
       "teams": [
-        "Los Angeles Rams",
-        "Miami Dolphins"
+        "Los Angeles Rams"
       ],
       "teamIds": [
-        "LAR",
-        "MIA"
+        "LAR"
       ],
       "players": [
         {
@@ -23,101 +21,13 @@
           "currentTeam": "LAR"
         },
         {
-          "id": "4710341",
-          "name": "Jarquez Hunter",
-          "position": "Running Back",
-          "currentTeam": "MIA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49744695/dolphins-trade-tutu-atwell-rams-jarquez-hunter"
-    },
-    {
-      "id": "49743030",
-      "headline": "Packers sign veteran TE Jonnu Smith to one-year deal",
-      "description": "The Packers signed tight end Jonnu Smith to a one-year contract.",
-      "published": "2026-08-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "3054212",
-          "name": "Jonnu Smith",
-          "position": "Tight End",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49743030/sources-packers-adding-te-jonnu-smith-one-year-deal"
-    },
-    {
-      "id": "49742460",
-      "headline": "Browns release veteran WR Cedric Tillman",
-      "description": "The Browns released veteran wide receiver Cedric Tillman.",
-      "published": "2026-08-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Cleveland Browns"
-      ],
-      "teamIds": [
-        "CLE"
-      ],
-      "players": [
-        {
-          "id": "4369863",
-          "name": "Cedric Tillman",
+          "id": "4426515",
+          "name": "Puka Nacua",
           "position": "Wide Receiver",
-          "currentTeam": "CLE"
+          "currentTeam": "LAR"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49742460/sources-browns-releasing-veteran-wr-cedric-tillman"
-    },
-    {
-      "id": "49742399",
-      "headline": "Sources: Seahawks' Leonard Williams lands 3-year, $90M extension",
-      "description": "The Seahawks are signing Leonard Williams to a three-year, $90 million contract extension that will make him one of the NFL's highest-paid defensive tackles, sources told ESPN.",
-      "published": "2026-08-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Seattle Seahawks"
-      ],
-      "teamIds": [
-        "SEA"
-      ],
-      "players": [
-        {
-          "id": "2971622",
-          "name": "Leonard Williams",
-          "position": "Defensive Tackle",
-          "currentTeam": "SEA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49742399/sources-seahawks-leonard-williams-lands-3-year-90m-extension"
-    },
-    {
-      "id": "49735271",
-      "headline": "Signs calling out Deshaun Watson's past taped to Jim Brown statue",
-      "description": "Someone taped signs on Hall of Famer Jim Brown's statue outside the Cleveland Browns ' stadium criticizing the team for having quarterback Deshaun Watson on its roster because of his checkered past.",
-      "published": "2026-08-26",
-      "likelyKind": "transaction",
-      "teams": [
-        "Cleveland Browns"
-      ],
-      "teamIds": [
-        "CLE"
-      ],
-      "players": [
-        {
-          "id": "3122840",
-          "name": "Deshaun Watson",
-          "position": "Quarterback",
-          "currentTeam": "CLE"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49735271/signs-taped-jim-brown-statue-browns-stadium-call-deshaun-watson-past"
+      "url": "https://www.espn.com/nfl/story/_/id/49750040/atwell-trade-depth-not-possible-nacua-ban"
     }
   ]
 }
