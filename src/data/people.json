@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-28T21:18:54.004Z",
+  "fetchedAt": "2026-08-29T15:26:42.926Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -339,27 +339,11 @@
         "Rushing Touchdowns": "6",
         "Long Rushing": "23"
       },
-      "season": {
-        "Completions": "260",
-        "Passing Attempts": "384",
-        "Completion Percentage": "67.7",
-        "Passing Yards": "2,660",
-        "Yards Per Pass Attempt": "6.9",
-        "Passing Touchdowns": "20",
-        "Interceptions": "15",
-        "Longest Pass": "47",
-        "Total Sacks": "30",
-        "Passer Rating": "88.5",
-        "Rushing Attempts": "20",
-        "Rushing Yards": "43",
-        "Yards Per Rush Attempt": "2.2",
-        "Rushing Touchdowns": "0",
-        "Long Rushing": "8"
-      },
+      "season": {},
       "headshot": "/players/4241479.png",
-      "evidenceHash": "7f1eb4b94524eb9a",
-      "blurb": "A quarterback drafted fifth overall in 2020, now seven seasons in and starting over in Atlanta after Miami released him. He is accurate and efficient rather than mobile, with a solid career passer rating, but Miami paid an enormous price to walk away from him — a sign the league is no longer sure he is a franchise quarterback.",
-      "promptVersion": 2
+      "evidenceHash": "37f3f150ca22482a",
+      "blurb": null,
+      "promptVersion": null
     },
     "4242512": {
       "id": "4242512",

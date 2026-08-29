@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-28T21:18:45.076Z",
+  "fetchedAt": "2026-08-29T15:26:31.682Z",
   "games": [
     {
       "id": "401872656",
@@ -154,7 +154,7 @@
       "away": "WSH",
       "spread": 4.5,
       "favourite": "home",
-      "overUnder": 46.5,
+      "overUnder": 45.5,
       "broadcast": "FOX",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -205,13 +205,6 @@
         "status": "Out"
       }
     ],
-    "ATL": [
-      {
-        "player": "DeAngelo Malone",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
     "HOU": [
       {
         "player": "E.J. Speed",
@@ -231,13 +224,6 @@
         "player": "Harold Landry III",
         "position": "LB",
         "status": "Out"
-      }
-    ],
-    "NO": [
-      {
-        "player": "Jordyn Tyson",
-        "position": "WR",
-        "status": "Doubtful"
       }
     ],
     "PHI": [

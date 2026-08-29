@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-08-28T21:18:52.020Z",
+  "fetchedAt": "2026-08-29T15:26:40.898Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -299,9 +299,9 @@
               "rank": 19
             }
           },
-          "passPlayShare": 55.5,
-          "passPlayShareRank": 23,
-          "quarterbackCarries": 20
+          "passPlayShare": 54.5,
+          "passPlayShareRank": 26,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -694,7 +694,7 @@
             }
           },
           "passPlayShare": 55.2,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 112
         },
         "defence": {
@@ -4697,11 +4697,11 @@
         "specialTeams": {
           "players": [
             {
-              "id": "4566158",
-              "name": "Ben Sauls",
+              "id": "5082424",
+              "name": "Dominic Zvada",
               "label": "K",
               "debutYear": null,
-              "experience": 1,
+              "experience": 0,
               "draftedBy": null
             },
             {
@@ -4828,7 +4828,7 @@
             }
           },
           "passPlayShare": 54.9,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5616,7 +5616,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": null
         },
         "defence": {
