@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-29T15:26:31.682Z",
+  "fetchedAt": "2026-08-30T15:09:05.589Z",
   "games": [
     {
       "id": "401872656",
@@ -226,6 +226,13 @@
         "status": "Out"
       }
     ],
+    "NO": [
+      {
+        "player": "Mason Tipton",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
     "PHI": [
       {
         "player": "Jonathan Greenard",
@@ -234,6 +241,11 @@
       }
     ],
     "SEA": [
+      {
+        "player": "Terrion Arnold",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Zach Charbonnet",
         "position": "RB",
