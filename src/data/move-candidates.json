@@ -1,101 +1,133 @@
 {
-  "generatedAt": "2026-08-29T16:08:12.393Z",
+  "generatedAt": "2026-08-30T15:57:34.125Z",
   "candidates": [
     {
-      "id": "49762865",
-      "headline": "Source: Bills releasing veterans Hardman, Wishnowsky",
-      "description": "The Bills are releasing veteran returner and wide receiver Mecole Hardman Jr., a source told ESPN's Jeremy Fowler. A source also confirmed to ESPN that the team is releasing veteran punter Mitch Wishnowsky.",
-      "published": "2026-08-29",
+      "id": "49773129",
+      "headline": "Sources: Dolphins releasing ex-starting LB Tyrel Dodson",
+      "description": "The Dolphins are releasing linebacker Tyrel Dodson, a source confirmed Sunday to ESPN, after two seasons with the team.",
+      "published": "2026-08-30",
       "likelyKind": "transaction",
       "teams": [
-        "Buffalo Bills"
+        "Miami Dolphins"
       ],
       "teamIds": [
-        "BUF"
+        "MIA"
       ],
       "players": [
         {
-          "id": "4035004",
-          "name": "Mecole Hardman Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "BUF"
+          "id": "4035232",
+          "name": "Tyrel Dodson",
+          "position": "Linebacker",
+          "currentTeam": "MIA"
         },
         {
-          "id": "4035685",
-          "name": "Mitch Wishnowsky",
-          "position": "Punter",
-          "currentTeam": "BUF"
+          "id": "4566094",
+          "name": "Jacob Rodriguez",
+          "position": "Linebacker",
+          "currentTeam": "MIA"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49762865/source-bills-releasing-veterans-hardman-wishnowsky"
+      "url": "https://www.espn.com/nfl/story/_/id/49773129/sources-dolphins-releasing-ex-starting-lb-tyrel-dodson"
     },
     {
-      "id": "49762578",
-      "headline": "Sources: Giants trade for DT CJ Okoye from Ravens for '28 pick",
-      "description": "The Giants have acquired defensive tackle CJ Okoye from the Ravens for a 2028 seventh-round pick, according to NFL Network's Ian Rapoport and Mike Garafolo.",
-      "published": "2026-08-29",
+      "id": "49771892",
+      "headline": "Sources: Falcons add Gervon Dexter Sr. in trade with Bears",
+      "description": "The Falcons traded for defensive tackle Gervon Dexter Sr. in a deal with the Bears, sources told ESPN.",
+      "published": "2026-08-30",
       "likelyKind": "transaction",
       "teams": [
-        "New York Giants",
-        "Baltimore Ravens"
+        "Atlanta Falcons",
+        "Chicago Bears"
       ],
       "teamIds": [
-        "NYG",
-        "BAL"
+        "ATL",
+        "CHI"
       ],
       "players": [
         {
-          "id": "5144942",
-          "name": "CJ Okoye",
+          "id": "4429014",
+          "name": "Gervon Dexter Sr.",
           "position": "Defensive Tackle",
-          "currentTeam": "NYG"
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4429067",
+          "name": "Clark Phillips III",
+          "position": "Cornerback",
+          "currentTeam": "ATL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49762578/sources-giants-acquire-dt-okoye-ravens-28-pick"
+      "url": "https://www.espn.com/nfl/story/_/id/49771892/sources-falcons-add-gervon-dexter-sr-trade-bears"
     },
     {
-      "id": "49758243",
-      "headline": "Bucs GM Jason Licht 'optimistic' about re-signing Baker Mayfield",
-      "description": "Buccaneers general manager Jason Licht said Friday that he is \"very optimistic\" about quarterback Baker Mayfield playing in Tampa beyond the 2026 season despite Mayfield saying he felt \"disrespected\" by the Bucs' initial offer.",
-      "published": "2026-08-29",
+      "id": "49766398",
+      "headline": "Sources: Cowboys acquire OT Jones in exchange for draft picks",
+      "description": "The Steelers are sending 2023 first-round pick Broderick Jones and a fourth-round pick in 2027 to the Cowboys in exchange for a 2027 third- and sixth-round pick.",
+      "published": "2026-08-30",
       "likelyKind": "transaction",
       "teams": [
-        "Tampa Bay Buccaneers"
+        "Pittsburgh Steelers",
+        "Dallas Cowboys"
       ],
       "teamIds": [
-        "TB"
+        "PIT",
+        "DAL"
       ],
       "players": [
         {
-          "id": "3052587",
-          "name": "Baker Mayfield",
-          "position": "Quarterback",
-          "currentTeam": "TB"
+          "id": "4428990",
+          "name": "Broderick Jones",
+          "position": "Offensive Tackle",
+          "currentTeam": "DAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49758243/bucs-gm-jason-licht-optimistic-re-signing-baker-mayfield"
+      "url": "https://www.espn.com/nfl/story/_/id/49766398/sources-cowboys-acquire-ot-jones-exchange-two-draft-picks"
     },
     {
-      "id": "49756697",
-      "headline": "Polymarket withdraws market on Mahomes' return from injury",
-      "description": "Polymarket US said it withdrew plans to offer trading on Patrick Mahomes' return to the field, a type of market the NFL says should be prohibited.",
-      "published": "2026-08-29",
+      "id": "49766035",
+      "headline": "Jaguars acquire Quinn Ewers in trade with Dolphins",
+      "description": "The Jaguars have traded for quarterback Quinn Ewers, who played in four games for the Dolphins last season and completed 66.3% of his passes, sending a 2018 sixth-round pick to Miami in return.",
+      "published": "2026-08-30",
       "likelyKind": "transaction",
       "teams": [
-        "Kansas City Chiefs"
+        "Miami Dolphins",
+        "Jacksonville Jaguars"
       ],
       "teamIds": [
-        "KC"
+        "MIA",
+        "JAX"
       ],
       "players": [
         {
-          "id": "3139477",
-          "name": "Patrick Mahomes",
+          "id": "4889929",
+          "name": "Quinn Ewers",
           "position": "Quarterback",
-          "currentTeam": "KC"
+          "currentTeam": "JAX"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49756697/polymarket-withdraws-market-mahomes-return-injury"
+      "url": "https://www.espn.com/nfl/story/_/id/49766035/jacksonville-jaguars-acquire-quinn-ewers-miami-dolphins"
+    },
+    {
+      "id": "49764268",
+      "headline": "Source: Panthers agree with veteran LB Bobby Okereke",
+      "description": "The Carolina Panthers agreed to terms on a one-year deal with veteran inside linebacker Bobby Okereke on Saturday, a source told ESPN's Jeremy Fowler.",
+      "published": "2026-08-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Carolina Panthers"
+      ],
+      "teamIds": [
+        "CAR"
+      ],
+      "players": [
+        {
+          "id": "3117253",
+          "name": "Bobby Okereke",
+          "position": "Linebacker",
+          "currentTeam": "CAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49764268/source-panthers-agree-veteran-lb-bobby-okereke"
     }
   ]
 }
