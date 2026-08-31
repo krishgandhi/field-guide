@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-30T15:09:05.589Z",
+  "fetchedAt": "2026-08-31T17:49:48.792Z",
   "games": [
     {
       "id": "401872656",
@@ -34,7 +34,7 @@
       "away": "TB",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 50.5,
+      "overUnder": 51.5,
       "broadcast": "FOX",
       "venue": "Paycor Stadium",
       "neutralSite": false
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 49.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -56,7 +56,7 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "TEN",
       "away": "NYJ",
-      "spread": 3,
+      "spread": 1.5,
       "favourite": "home",
       "overUnder": 38.5,
       "broadcast": "CBS",
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -205,16 +205,66 @@
         "status": "Out"
       }
     ],
-    "HOU": [
+    "ATL": [
       {
-        "player": "E.J. Speed",
+        "player": "DeAngelo Malone",
         "position": "LB",
         "status": "Out"
       }
     ],
-    "MIA": [
+    "BUF": [
       {
-        "player": "Trey Moore",
+        "player": "Tyrell Shavers",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "CHI": [
+      {
+        "player": "Noah Sewell",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Kyler Gordon",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "CLE": [
+      {
+        "player": "Joe Royer",
+        "position": "TE",
+        "status": "Out"
+      }
+    ],
+    "DEN": [
+      {
+        "player": "Jonathon Cooper",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "GB": [
+      {
+        "player": "Luke Musgrave",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "E.J. Speed",
         "position": "LB",
         "status": "Out"
       }
@@ -240,15 +290,29 @@
         "status": "Out"
       }
     ],
+    "SF": [
+      {
+        "player": "Isaac Guerendo",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "SEA": [
+      {
+        "player": "Zach Charbonnet",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Terrion Arnold",
         "position": "CB",
         "status": "Out"
-      },
+      }
+    ],
+    "WSH": [
       {
-        "player": "Zach Charbonnet",
-        "position": "RB",
+        "player": "Deatrich Wise Jr.",
+        "position": "DE",
         "status": "Out"
       }
     ]
