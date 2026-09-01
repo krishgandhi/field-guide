@@ -1,205 +1,8 @@
 {
-  "fetchedAt": "2026-08-31T17:49:55.228Z",
+  "fetchedAt": "2026-09-01T15:22:40.916Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
-    "ARI": {
-      "coach": {
-        "name": "Mike LaFleur",
-        "experience": 0
-      },
-      "statsSeason": 2025,
-      "previousSeason": true,
-      "units": {
-        "offence": {
-          "players": [
-            {
-              "id": "2578570",
-              "name": "Jacoby Brissett",
-              "label": "QB",
-              "debutYear": 2016,
-              "experience": 11,
-              "draftedBy": "2016: Rd 3, Pk 91 (NE)"
-            },
-            {
-              "id": "4870808",
-              "name": "Jeremiyah Love",
-              "label": "RB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 1, Pk 3 (ARI)"
-            },
-            {
-              "id": "4432708",
-              "name": "Marvin Harrison Jr.",
-              "label": "WR",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 4 (ARI)"
-            },
-            {
-              "id": "4360761",
-              "name": "Michael Wilson",
-              "label": "WR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 94 (ARI)"
-            },
-            {
-              "id": "4361307",
-              "name": "Trey McBride",
-              "label": "TE",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 2, Pk 55 (ARI)"
-            },
-            {
-              "id": "4428991",
-              "name": "Paris Johnson Jr.",
-              "label": "OT",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 1, Pk 6 (ARI)"
-            }
-          ],
-          "rank": 23,
-          "score": 2,
-          "note": "Below average for points scored last season, 23rd of 32.",
-          "blurb": "They threw more often than anyone last season, but that was under the previous staff — Mike LaFleur now takes charge, with Jacoby Brissett throwing to Trey McBride and Marvin Harrison Jr., and a running back taken third overall to feed.",
-          "blurbHash": "0f28d0183fa800a1",
-          "promptVersion": 5,
-          "stats": {
-            "_runAttempts": {
-              "value": "366",
-              "rank": 32
-            },
-            "_passAttempts": {
-              "value": "649",
-              "rank": 1
-            },
-            "_sacks": {
-              "value": "59",
-              "rank": 5
-            },
-            "yards per carry": {
-              "value": "4.3",
-              "rank": 16
-            },
-            "yards per pass": {
-              "value": "6.7",
-              "rank": 23
-            },
-            "rushing touchdowns": {
-              "value": "9",
-              "rank": 27
-            },
-            "passing touchdowns": {
-              "value": "29",
-              "rank": 7
-            },
-            "turnovers given away": {
-              "value": "21",
-              "rank": 14
-            }
-          },
-          "passPlayShare": 68.3,
-          "passPlayShareRank": 1,
-          "quarterbackCarries": 38
-        },
-        "defence": {
-          "players": [
-            {
-              "id": "3693166",
-              "name": "Josh Sweat",
-              "label": "LB",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 4, Pk 130 (PHI)"
-            },
-            {
-              "id": "4569480",
-              "name": "Darius Robinson",
-              "label": "DE",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 27 (ARI)"
-            },
-            {
-              "id": "4244606",
-              "name": "Zaven Collins",
-              "label": "LB",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 1, Pk 16 (ARI)"
-            },
-            {
-              "id": "4685408",
-              "name": "Will Johnson",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 2, Pk 47 (ARI)"
-            },
-            {
-              "id": "4432668",
-              "name": "Denzel Burke",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 5, Pk 174 (ARI)"
-            }
-          ],
-          "rank": 29,
-          "score": 1,
-          "note": "Among the worst in the league for points allowed last season — 29th of 32.",
-          "blurb": "A unit that rarely gets to the quarterback, with Josh Sweat and Darius Robinson leading the rush and two second-year cornerbacks, Will Johnson and Denzel Burke, on the outside. Mike LaFleur has just taken charge.",
-          "blurbHash": "3d947b82ad2a77fa",
-          "promptVersion": 6,
-          "stats": {
-            "sacks": {
-              "value": "30",
-              "rank": 28
-            },
-            "takeaways": {
-              "value": "19",
-              "rank": 19
-            }
-          }
-        },
-        "specialTeams": {
-          "players": [
-            {
-              "id": "4363538",
-              "name": "Chad Ryland",
-              "label": "K",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 4, Pk 112 (NE)"
-            },
-            {
-              "id": "4039050",
-              "name": "Devin Duvernay",
-              "label": "KR",
-              "debutYear": 2020,
-              "experience": 6,
-              "draftedBy": "2020: Rd 3, Pk 92 (BAL)"
-            }
-          ],
-          "rank": 30,
-          "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
-          "blurb": "Chad Ryland was among the more accurate kickers in the league on field goals, and Devin Duvernay handles kick returns. Mike LaFleur has just taken over as head coach.",
-          "blurbHash": "97ed1ddc18fdde62",
-          "promptVersion": 6,
-          "stats": {
-            "field goal percentage": {
-              "value": "75.8",
-              "rank": 4
-            }
-          }
-        }
-      }
-    },
     "ATL": {
       "coach": {
         "name": "Kevin Stefanski",
@@ -300,7 +103,7 @@
             }
           },
           "passPlayShare": 54.5,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": null
         },
         "defence": {
@@ -497,7 +300,7 @@
             }
           },
           "passPlayShare": 51.5,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 29,
           "quarterbackCarries": 67
         },
         "defence": {
@@ -694,7 +497,7 @@
             }
           },
           "passPlayShare": 55.2,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 112
         },
         "defence": {
@@ -888,7 +691,7 @@
             }
           },
           "passPlayShare": 54.4,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1085,7 +888,7 @@
             }
           },
           "passPlayShare": 54.2,
-          "passPlayShareRank": 28,
+          "passPlayShareRank": 27,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1282,7 +1085,7 @@
             }
           },
           "passPlayShare": 64.8,
-          "passPlayShareRank": 2,
+          "passPlayShareRank": 1,
           "quarterbackCarries": 14
         },
         "defence": {
@@ -1479,7 +1282,7 @@
             }
           },
           "passPlayShare": 59.1,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1676,7 +1479,7 @@
             }
           },
           "passPlayShare": 61.4,
-          "passPlayShareRank": 6,
+          "passPlayShareRank": 5,
           "quarterbackCarries": 53
         },
         "defence": {
@@ -1873,7 +1676,7 @@
             }
           },
           "passPlayShare": 58.2,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2070,7 +1873,7 @@
             }
           },
           "passPlayShare": 59.5,
-          "passPlayShareRank": 10,
+          "passPlayShareRank": 9,
           "quarterbackCarries": 19
         },
         "defence": {
@@ -2267,7 +2070,7 @@
             }
           },
           "passPlayShare": 51.3,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 30,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2464,7 +2267,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2661,7 +2464,7 @@
             }
           },
           "passPlayShare": 59.2,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -2858,7 +2661,7 @@
             }
           },
           "passPlayShare": 59.7,
-          "passPlayShareRank": 9,
+          "passPlayShareRank": 8,
           "quarterbackCarries": 82
         },
         "defence": {
@@ -3055,7 +2858,7 @@
             }
           },
           "passPlayShare": 63.3,
-          "passPlayShareRank": 3,
+          "passPlayShareRank": 2,
           "quarterbackCarries": 64
         },
         "defence": {
@@ -3252,7 +3055,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3449,7 +3252,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -3646,7 +3449,7 @@
             }
           },
           "passPlayShare": 61.1,
-          "passPlayShareRank": 7,
+          "passPlayShareRank": 6,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3843,7 +3646,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 22
         },
         "defence": {
@@ -4040,7 +3843,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -4237,7 +4040,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -4434,7 +4237,7 @@
             }
           },
           "passPlayShare": 62.1,
-          "passPlayShareRank": 5,
+          "passPlayShareRank": 4,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -4448,12 +4251,12 @@
               "draftedBy": "2011: Rd 1, Pk 24 (NO)"
             },
             {
-              "id": "4248047",
-              "name": "John Ridgeway III",
+              "id": "4567224",
+              "name": "Colby Wooden",
               "label": "DT",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 5, Pk 178 (DAL)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 116 (GB)"
             },
             {
               "id": "4241986",
@@ -4516,9 +4319,9 @@
               "draftedBy": "2026: Rd 6, Pk 190 (NO)"
             }
           ],
-          "rank": 32,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 32nd of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
           "blurb": "Charlie Smyth handles the kicking and rookie Barion Brown the kick returns, so it is a young and largely untested group.",
           "blurbHash": "6ab412420dfb85a2",
           "promptVersion": 6,
@@ -4631,7 +4434,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 86
         },
         "defence": {
@@ -4828,7 +4631,7 @@
             }
           },
           "passPlayShare": 54.9,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4894,12 +4697,12 @@
         "specialTeams": {
           "players": [
             {
-              "id": "3124679",
-              "name": "Jason Sanders",
+              "id": "4259619",
+              "name": "Blake Grupe",
               "label": "K",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 7, Pk 229 (MIA)"
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": null
             },
             {
               "id": "4035537",
@@ -5025,7 +4828,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -5107,9 +4910,9 @@
               "draftedBy": "2024: Rd 4, Pk 127 (PHI)"
             }
           ],
-          "rank": 31,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
           "blurb": "Rests largely on long-serving kicker Jake Elliott, with Will Shipley taking the kick returns.",
           "blurbHash": "3a95c56cd81e506b",
           "promptVersion": 6,
@@ -5222,7 +5025,7 @@
             }
           },
           "passPlayShare": 60.1,
-          "passPlayShareRank": 8,
+          "passPlayShareRank": 7,
           "quarterbackCarries": 21
         },
         "defence": {
@@ -5419,7 +5222,7 @@
             }
           },
           "passPlayShare": 51.8,
-          "passPlayShareRank": 29,
+          "passPlayShareRank": 28,
           "quarterbackCarries": 35
         },
         "defence": {
@@ -5616,7 +5419,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5813,7 +5616,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6010,7 +5813,7 @@
             }
           },
           "passPlayShare": 62.4,
-          "passPlayShareRank": 4,
+          "passPlayShareRank": 3,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6207,7 +6010,7 @@
             }
           },
           "passPlayShare": 51.1,
-          "passPlayShareRank": 32,
+          "passPlayShareRank": 31,
           "quarterbackCarries": null
         },
         "defence": {

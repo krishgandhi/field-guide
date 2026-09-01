@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-08-31T17:49:48.792Z",
+  "fetchedAt": "2026-09-01T15:22:27.979Z",
   "games": [
     {
       "id": "401872656",
@@ -205,13 +205,6 @@
         "status": "Out"
       }
     ],
-    "ATL": [
-      {
-        "player": "DeAngelo Malone",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
     "BUF": [
       {
         "player": "Tyrell Shavers",
@@ -247,11 +240,6 @@
     ],
     "GB": [
       {
-        "player": "Luke Musgrave",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
         "player": "Micah Parsons",
         "position": "DE",
         "status": "Out"
@@ -260,12 +248,29 @@
         "player": "Josh Jacobs",
         "position": "RB",
         "status": "Out"
+      },
+      {
+        "player": "Luke Musgrave",
+        "position": "TE",
+        "status": "Out"
       }
     ],
     "HOU": [
       {
         "player": "E.J. Speed",
         "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Storm Duck",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Darrell Baker Jr.",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -283,6 +288,13 @@
         "status": "Out"
       }
     ],
+    "NYJ": [
+      {
+        "player": "Tyler Baron",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
     "PHI": [
       {
         "player": "Jonathan Greenard",
@@ -290,7 +302,19 @@
         "status": "Out"
       }
     ],
+    "PIT": [
+      {
+        "player": "Donte Kent",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "SF": [
+      {
+        "player": "Mykel Williams",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Isaac Guerendo",
         "position": "RB",
