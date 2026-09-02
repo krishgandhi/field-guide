@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-01T15:22:40.916Z",
+  "fetchedAt": "2026-09-02T14:55:59.635Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -2538,12 +2538,12 @@
               "draftedBy": null
             },
             {
-              "id": "4578436",
-              "name": "Coleman Owen",
+              "id": "4683151",
+              "name": "Deion Burks",
               "label": "KR",
               "debutYear": null,
-              "experience": 1,
-              "draftedBy": null
+              "experience": 0,
+              "draftedBy": "2026: Rd 7, Pk 254 (IND)"
             }
           ],
           "rank": 2,
@@ -3266,12 +3266,12 @@
               "draftedBy": "2023: Rd 3, Pk 89 (LAR)"
             },
             {
-              "id": "4362245",
-              "name": "Braden Fiske",
-              "label": "DE",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 2, Pk 39 (LAR)"
+              "id": "16716",
+              "name": "Aaron Donald",
+              "label": "DT",
+              "debutYear": 2014,
+              "experience": 10,
+              "draftedBy": "2014: Rd 1, Pk 13 (STL)"
             },
             {
               "id": "3122132",
