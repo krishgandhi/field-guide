@@ -1,77 +1,69 @@
 {
-  "generatedAt": "2026-09-01T15:59:53.697Z",
+  "generatedAt": "2026-09-02T15:53:58.448Z",
   "candidates": [
     {
-      "id": "49794128",
-      "headline": "Texans won't negotiate with Stroud during season, GM says",
-      "description": "The Texans have set a Week 1 deadline for agreeing to a contract extension with quarterback C.J. Stroud this year, general manager Nick Caserio said.",
+      "id": "49797170",
+      "headline": "11 NFL players to watch next offseason -- if they don't sign extensions",
+      "description": "From C.J. Stroud to top cornerbacks, we go through players up for extensions who could also be on the move in 2027.",
+      "published": "2026-09-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Detroit Lions",
+        "Atlanta Falcons",
+        "Cincinnati Bengals",
+        "Green Bay Packers",
+        "Pittsburgh Steelers",
+        "Baltimore Ravens",
+        "Houston Texans",
+        "Arizona Cardinals",
+        "Jacksonville Jaguars",
+        "Indianapolis Colts",
+        "New England Patriots"
+      ],
+      "teamIds": [
+        "DET",
+        "ATL",
+        "CIN",
+        "GB",
+        "PIT",
+        "BAL",
+        "HOU",
+        "ARI",
+        "JAX",
+        "IND",
+        "NE"
+      ],
+      "players": [
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49797170/nfl-player-extension-trade-free-agency"
+    },
+    {
+      "id": "49796601",
+      "headline": "Steelers' Joey Porter Jr. on playing without deal: 'I don't know'",
+      "description": "Steelers cornerback Joey Porter Jr. was noncommittal Tuesday when asked if he would play without a contract extension.",
       "published": "2026-09-01",
       "likelyKind": "transaction",
       "teams": [
-        "Houston Texans"
+        "Pittsburgh Steelers"
       ],
       "teamIds": [
-        "HOU"
+        "PIT"
       ],
       "players": [
         {
-          "id": "4432577",
-          "name": "C.J. Stroud",
-          "position": "Quarterback",
-          "currentTeam": "HOU"
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "PIT"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49794128/texans-negotiate-stroud-season-gm-says"
-    },
-    {
-      "id": "49784509",
-      "headline": "Cardinals QB Jacoby Brissett learning quickly under Mike LaFleur",
-      "description": "After an extended holdout/hold-in, Brissett is learning a new system and picking it up quickly.",
-      "published": "2026-09-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Arizona Cardinals"
-      ],
-      "teamIds": [
-        "ARI"
-      ],
-      "players": [
-        {
-          "id": "2578570",
-          "name": "Jacoby Brissett",
-          "position": "Quarterback",
-          "currentTeam": "ARI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49784509/jacoby-brissett-finding-groove-new-cardinals-coach-mike-lafleur"
-    },
-    {
-      "id": "49786242",
-      "headline": "Cowboys waive Joe Milton III, name Sam Howell backup QB",
-      "description": "The Cowboys named Sam Howell as the team's backup QB after waiving Joe Milton III on Monday to make room for free agent RB Emari Demercado.",
-      "published": "2026-08-31",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys"
-      ],
-      "teamIds": [
-        "DAL"
-      ],
-      "players": [
-        {
-          "id": "4360698",
-          "name": "Joe Milton III",
-          "position": "Quarterback",
-          "currentTeam": "DAL"
-        },
-        {
-          "id": "4426875",
-          "name": "Sam Howell",
-          "position": "Quarterback",
-          "currentTeam": "DAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49786242/cowboys-waive-joe-milton-iii-name-sam-howell-backup-qb"
+      "url": "https://www.espn.com/nfl/story/_/id/49796601/steelers-joey-porter-jr-playing-deal-know"
     }
   ]
 }
