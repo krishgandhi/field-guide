@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-02T14:55:49.971Z",
+  "fetchedAt": "2026-09-03T14:51:06.759Z",
   "games": [
     {
       "id": "401872656",
@@ -80,9 +80,9 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "PIT",
       "away": "ATL",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -152,7 +152,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "PHI",
       "away": "WSH",
-      "spread": 4.5,
+      "spread": 5.5,
       "favourite": "home",
       "overUnder": 45.5,
       "broadcast": "FOX",

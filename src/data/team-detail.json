@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-02T14:55:59.635Z",
+  "fetchedAt": "2026-09-03T14:51:11.265Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -5449,20 +5449,20 @@
               "draftedBy": "2023: Rd 2, Pk 46 (NE)"
             },
             {
-              "id": "4242488",
-              "name": "Deommodore Lenoir",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 5, Pk 172 (SF)"
-            },
-            {
               "id": "4427325",
               "name": "Renardo Green",
               "label": "CB",
               "debutYear": null,
               "experience": 3,
               "draftedBy": "2024: Rd 2, Pk 64 (SF)"
+            },
+            {
+              "id": "4242488",
+              "name": "Deommodore Lenoir",
+              "label": "CB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 5, Pk 172 (SF)"
             }
           ],
           "rank": 13,
@@ -5493,12 +5493,12 @@
               "draftedBy": null
             },
             {
-              "id": "4575665",
-              "name": "Jacob Cowing",
+              "id": "3126486",
+              "name": "Deebo Samuel Sr.",
               "label": "KR",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 4, Pk 135 (SF)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 2, Pk 36 (SF)"
             }
           ],
           "rank": 7,
