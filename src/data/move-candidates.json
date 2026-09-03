@@ -1,37 +1,17 @@
 {
-  "generatedAt": "2026-09-02T15:53:58.448Z",
+  "generatedAt": "2026-09-03T15:42:42.346Z",
   "candidates": [
     {
-      "id": "49797170",
-      "headline": "11 NFL players to watch next offseason -- if they don't sign extensions",
-      "description": "From C.J. Stroud to top cornerbacks, we go through players up for extensions who could also be on the move in 2027.",
-      "published": "2026-09-02",
+      "id": "49807799",
+      "headline": "Eric DeCosta 'optimistic' Ravens, Lamar Jackson can reach deal",
+      "description": "Ravens general manager Eric DeCosta expressed confidence Wednesday that the team can reach a contract extension with quarterback Lamar Jackson before March.",
+      "published": "2026-09-03",
       "likelyKind": "transaction",
       "teams": [
-        "Detroit Lions",
-        "Atlanta Falcons",
-        "Cincinnati Bengals",
-        "Green Bay Packers",
-        "Pittsburgh Steelers",
-        "Baltimore Ravens",
-        "Houston Texans",
-        "Arizona Cardinals",
-        "Jacksonville Jaguars",
-        "Indianapolis Colts",
-        "New England Patriots"
+        "Baltimore Ravens"
       ],
       "teamIds": [
-        "DET",
-        "ATL",
-        "CIN",
-        "GB",
-        "PIT",
-        "BAL",
-        "HOU",
-        "ARI",
-        "JAX",
-        "IND",
-        "NE"
+        "BAL"
       ],
       "players": [
         {
@@ -41,29 +21,63 @@
           "currentTeam": "BAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49797170/nfl-player-extension-trade-free-agency"
+      "url": "https://www.espn.com/nfl/story/_/id/49807799/eric-decosta-optimistic-ravens-lamar-jackson-reach-deal-march"
     },
     {
-      "id": "49796601",
-      "headline": "Steelers' Joey Porter Jr. on playing without deal: 'I don't know'",
-      "description": "Steelers cornerback Joey Porter Jr. was noncommittal Tuesday when asked if he would play without a contract extension.",
-      "published": "2026-09-01",
-      "likelyKind": "transaction",
+      "id": "49806953",
+      "headline": "As opener nears, Falcons still have not announced a QB1",
+      "description": "GM Ian Cunningham spoke Wednesday, and the only update he gave is that selecting the starting QB will be a group effort.",
+      "published": "2026-09-02",
+      "likelyKind": "role",
       "teams": [
-        "Pittsburgh Steelers"
+        "Atlanta Falcons"
       ],
       "teamIds": [
-        "PIT"
+        "ATL"
       ],
       "players": [
         {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
+          "id": "4241479",
+          "name": "Tua Tagovailoa",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4360423",
+          "name": "Michael Penix Jr.",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49796601/steelers-joey-porter-jr-playing-deal-know"
+      "url": "https://www.espn.com/nfl/story/_/id/49806953/falcons-not-announced-qb1-michael-penix-jr-tua-tagovailoa"
+    },
+    {
+      "id": "49804802",
+      "headline": "Raiders name Kirk Cousins starting QB for Week 1 over Fernando Mendoza",
+      "description": "Kirk Cousins will begin the season as the Raiders' starting quarterback over rookie Fernando Mendoza.",
+      "published": "2026-09-03",
+      "likelyKind": "role",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49804802/raiders-name-kirk-cousins-starting-qb-week-1-fernando-mendoza"
     }
   ]
 }
