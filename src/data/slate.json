@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-03T14:51:06.759Z",
+  "fetchedAt": "2026-09-04T14:44:33.966Z",
   "games": [
     {
       "id": "401872656",
@@ -34,7 +34,7 @@
       "away": "TB",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 50.5,
+      "overUnder": 51.5,
       "broadcast": "FOX",
       "venue": "Paycor Stadium",
       "neutralSite": false
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false

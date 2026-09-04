@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-03T14:51:11.265Z",
+  "fetchedAt": "2026-09-04T14:44:47.193Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -1603,20 +1603,20 @@
               "draftedBy": "2020: Rd 2, Pk 55 (BAL)"
             },
             {
-              "id": "3128429",
-              "name": "Courtland Sutton",
-              "label": "WR",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 2, Pk 40 (DEN)"
-            },
-            {
               "id": "4372016",
               "name": "Jaylen Waddle",
               "label": "WR",
               "debutYear": null,
               "experience": 6,
               "draftedBy": "2021: Rd 1, Pk 6 (MIA)"
+            },
+            {
+              "id": "3128429",
+              "name": "Courtland Sutton",
+              "label": "WR",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 2, Pk 40 (DEN)"
             },
             {
               "id": "3051876",
