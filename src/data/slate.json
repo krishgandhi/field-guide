@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-04T14:44:33.966Z",
+  "fetchedAt": "2026-09-05T13:39:35.328Z",
   "games": [
     {
       "id": "401872656",
@@ -34,7 +34,7 @@
       "away": "TB",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 51.5,
+      "overUnder": 50.5,
       "broadcast": "FOX",
       "venue": "Paycor Stadium",
       "neutralSite": false
@@ -58,7 +58,7 @@
       "away": "NYJ",
       "spread": 1.5,
       "favourite": "home",
-      "overUnder": 38.5,
+      "overUnder": 39.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
       "neutralSite": false
@@ -82,7 +82,7 @@
       "away": "ATL",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -142,7 +142,7 @@
       "away": "GB",
       "spread": 1.5,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 46.5,
       "broadcast": "CBS",
       "venue": "U.S. Bank Stadium",
       "neutralSite": false
@@ -154,7 +154,7 @@
       "away": "WSH",
       "spread": 5.5,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 44.5,
       "broadcast": "FOX",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -240,6 +240,11 @@
     ],
     "GB": [
       {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Luke Musgrave",
         "position": "TE",
         "status": "Out"
@@ -247,11 +252,6 @@
       {
         "player": "Micah Parsons",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Josh Jacobs",
-        "position": "RB",
         "status": "Out"
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-04T14:44:50.569Z",
+  "fetchedAt": "2026-09-05T13:39:41.090Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -174,27 +174,11 @@
         "Rushing Touchdowns": "32",
         "Long Rushing": "57"
       },
-      "season": {
-        "Completions": "110",
-        "Passing Attempts": "161",
-        "Completion Percentage": "68.3",
-        "Passing Yards": "962",
-        "Yards Per Pass Attempt": "6.0",
-        "Passing Touchdowns": "6",
-        "Interceptions": "3",
-        "Longest Pass": "45",
-        "Total Sacks": "16",
-        "Passer Rating": "88.6",
-        "Rushing Attempts": "29",
-        "Rushing Yards": "173",
-        "Yards Per Rush Attempt": "6.0",
-        "Rushing Touchdowns": "1",
-        "Long Rushing": "30"
-      },
+      "season": {},
       "headshot": "/players/3917315.png",
-      "evidenceHash": "7c6ff70c35ff10b0",
-      "blurb": "A quarterback picked first overall in 2019, now in his eighth season and on his second team after Arizona released him. He was Rookie of the Year and has nearly ninety starts behind him, and he runs well for a quarterback, but nobody has paid him like a starter lately — Minnesota signed him for backup money and then handed him the job anyway.",
-      "promptVersion": 2
+      "evidenceHash": "a635d889c78a2813",
+      "blurb": null,
+      "promptVersion": null
     },
     "3918298": {
       "id": "3918298",
@@ -235,27 +219,11 @@
         "Rushing Touchdowns": "79",
         "Long Rushing": "45"
       },
-      "season": {
-        "Completions": "319",
-        "Passing Attempts": "460",
-        "Completion Percentage": "69.3",
-        "Passing Yards": "3,668",
-        "Yards Per Pass Attempt": "8.0",
-        "Passing Touchdowns": "25",
-        "Interceptions": "10",
-        "Longest Pass": "54",
-        "Total Sacks": "40",
-        "Passer Rating": "102.2",
-        "Rushing Attempts": "112",
-        "Rushing Yards": "579",
-        "Yards Per Rush Attempt": "5.2",
-        "Rushing Touchdowns": "14",
-        "Long Rushing": "40"
-      },
+      "season": {},
       "headshot": "/players/3918298.png",
-      "evidenceHash": "f2cd73d25366cae1",
-      "blurb": "A quarterback drafted seventh overall in 2018, now nine seasons in and still the face of the Buffalo Bills. He won MVP and is one of the very best in the league, a big man who runs as dangerously as he throws — nearly five thousand career rushing yards and almost eighty rushing touchdowns is unheard of at the position.",
-      "promptVersion": 2
+      "evidenceHash": "c38149e8bbcded68",
+      "blurb": null,
+      "promptVersion": null
     },
     "4047646": {
       "id": "4047646",
@@ -376,27 +344,11 @@
         "Rushing Touchdowns": "4",
         "Long Rushing": "29"
       },
-      "season": {
-        "Completions": "30",
-        "Passing Attempts": "35",
-        "Completion Percentage": "85.7",
-        "Passing Yards": "422",
-        "Yards Per Pass Attempt": "12.1",
-        "Passing Touchdowns": "3",
-        "Interceptions": "0",
-        "Longest Pass": "40",
-        "Total Sacks": "3",
-        "Passer Rating": "145.5",
-        "Rushing Attempts": "22",
-        "Rushing Yards": "123",
-        "Yards Per Rush Attempt": "5.6",
-        "Rushing Touchdowns": "2",
-        "Long Rushing": "22"
-      },
+      "season": {},
       "headshot": "/players/4242512.png",
-      "evidenceHash": "c524c9fce9c26529",
-      "blurb": "A quarterback taken in the third round in 2022, now in his fifth season and just signed by Miami to start. He is a career backup who has only started a handful of games, mostly filling in for an injured starter in Green Bay, and he looked good doing it — he runs well and his numbers are strong — but on this little evidence nobody really knows what he is.",
-      "promptVersion": 2
+      "evidenceHash": "4a71ef5e46689ff9",
+      "blurb": null,
+      "promptVersion": null
     },
     "4360499": {
       "id": "4360499",
@@ -606,28 +558,11 @@
         "Stuff Yards": "20",
         "Kicks Blocked": "2"
       },
-      "season": {
-        "Total Tackles": "58",
-        "Solo Tackles": "35",
-        "Assist Tackles": "23",
-        "Sacks": "7.5",
-        "Forced Fumbles": "3",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "1",
-        "Stuffs": "9.5",
-        "Stuff Yards": "7",
-        "Kicks Blocked": "2"
-      },
+      "season": {},
       "headshot": "/players/4578085.png",
-      "evidenceHash": "695cae91185ce3dc",
-      "blurb": "A defensive end — a lineman whose job is hunting the quarterback — taken nineteenth overall in 2024 and now in his third season, traded from the Rams to Cleveland. He won Defensive Rookie of the Year and already has a dozen career sacks, which is a promising start, though he is young enough that the best of it is still ahead.",
-      "promptVersion": 2
+      "evidenceHash": "44ba444c78d6c58d",
+      "blurb": null,
+      "promptVersion": null
     },
     "4592837": {
       "id": "4592837",
