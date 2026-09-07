@@ -1,4 +1,57 @@
 {
-  "generatedAt": "2026-09-06T14:51:22.684Z",
-  "candidates": []
+  "generatedAt": "2026-09-07T17:09:14.640Z",
+  "candidates": [
+    {
+      "id": "49858957",
+      "headline": "Falcons name Tua Tagovailoa Week 1 starting QB vs. Steelers",
+      "description": "Tua Tagovailoa will be the starting quarterback for the Falcons against the Steelers in Week 1.",
+      "published": "2026-09-07",
+      "likelyKind": "role",
+      "teams": [
+        "Atlanta Falcons",
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "ATL",
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "4241479",
+          "name": "Tua Tagovailoa",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4360423",
+          "name": "Michael Penix Jr.",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49858957/falcons-name-tua-tagovailoa-week-1-starting-qb-vs-steelers"
+    },
+    {
+      "id": "49852419",
+      "headline": "Giants reach 2-year extensions with Jameis Winston, Jon Runyan",
+      "description": "The Giants and backup quarterback Jameis Winston have agreed to a two-year, $13 million contract extension, a source confirmed to ESPN amid multiple reports.",
+      "published": "2026-09-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "2969939",
+          "name": "Jameis Winston",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49852419/source-giants-qb-jameis-winston-reach-2-year-13m-extension"
+    }
+  ]
 }
