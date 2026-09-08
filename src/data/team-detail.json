@@ -1,8 +1,196 @@
 {
-  "fetchedAt": "2026-09-07T16:15:33.325Z",
+  "fetchedAt": "2026-09-08T03:24:15.948Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
+    "ARI": {
+      "coach": {
+        "name": "Mike LaFleur",
+        "experience": 0
+      },
+      "statsSeason": 2025,
+      "previousSeason": true,
+      "units": {
+        "offence": {
+          "players": [
+            {
+              "id": "2578570",
+              "name": "Jacoby Brissett",
+              "label": "QB",
+              "debutYear": 2016,
+              "experience": 11,
+              "draftedBy": "2016: Rd 3, Pk 91 (NE)"
+            },
+            {
+              "id": "4870808",
+              "name": "Jeremiyah Love",
+              "label": "RB",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 3 (ARI)"
+            },
+            {
+              "id": "4432708",
+              "name": "Marvin Harrison Jr.",
+              "label": "WR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 4 (ARI)"
+            },
+            {
+              "id": "4360761",
+              "name": "Michael Wilson",
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 94 (ARI)"
+            },
+            {
+              "id": "4361307",
+              "name": "Trey McBride",
+              "label": "TE",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 55 (ARI)"
+            },
+            {
+              "id": "4428991",
+              "name": "Paris Johnson Jr.",
+              "label": "OT",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 6 (ARI)"
+            }
+          ],
+          "rank": 23,
+          "score": 2,
+          "note": "Below average for points scored last season, 23rd of 32.",
+          "stats": {
+            "_runAttempts": {
+              "value": "366",
+              "rank": 32
+            },
+            "_passAttempts": {
+              "value": "649",
+              "rank": 1
+            },
+            "_sacks": {
+              "value": "59",
+              "rank": 5
+            },
+            "yards per carry": {
+              "value": "4.3",
+              "rank": 16
+            },
+            "yards per pass": {
+              "value": "6.7",
+              "rank": 23
+            },
+            "rushing touchdowns": {
+              "value": "9",
+              "rank": 27
+            },
+            "passing touchdowns": {
+              "value": "29",
+              "rank": 7
+            },
+            "turnovers given away": {
+              "value": "21",
+              "rank": 14
+            }
+          },
+          "passPlayShare": 65.9,
+          "passPlayShareRank": 1,
+          "quarterbackCarries": null
+        },
+        "defence": {
+          "players": [
+            {
+              "id": "3693166",
+              "name": "Josh Sweat",
+              "label": "LB",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 4, Pk 130 (PHI)"
+            },
+            {
+              "id": "4569480",
+              "name": "Darius Robinson",
+              "label": "DE",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 27 (ARI)"
+            },
+            {
+              "id": "4244606",
+              "name": "Zaven Collins",
+              "label": "LB",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 16 (ARI)"
+            },
+            {
+              "id": "4685408",
+              "name": "Will Johnson",
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 47 (ARI)"
+            },
+            {
+              "id": "4432668",
+              "name": "Denzel Burke",
+              "label": "CB",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 5, Pk 174 (ARI)"
+            }
+          ],
+          "rank": 29,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed last season — 29th of 32.",
+          "stats": {
+            "sacks": {
+              "value": "30",
+              "rank": 28
+            },
+            "takeaways": {
+              "value": "19",
+              "rank": 19
+            }
+          }
+        },
+        "specialTeams": {
+          "players": [
+            {
+              "id": "4363538",
+              "name": "Chad Ryland",
+              "label": "K",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 4, Pk 112 (NE)"
+            },
+            {
+              "id": "4039050",
+              "name": "Devin Duvernay",
+              "label": "KR",
+              "debutYear": 2020,
+              "experience": 6,
+              "draftedBy": "2020: Rd 3, Pk 92 (BAL)"
+            }
+          ],
+          "rank": 30,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
+          "stats": {
+            "field goal percentage": {
+              "value": "75.8",
+              "rank": 4
+            }
+          }
+        }
+      }
+    },
     "ATL": {
       "coach": {
         "name": "Kevin Stefanski",
@@ -103,7 +291,7 @@
             }
           },
           "passPlayShare": 54.5,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 23,
           "quarterbackCarries": null
         },
         "defence": {
@@ -300,7 +488,7 @@
             }
           },
           "passPlayShare": 51.5,
-          "passPlayShareRank": 28,
+          "passPlayShareRank": 29,
           "quarterbackCarries": 67
         },
         "defence": {
@@ -497,7 +685,7 @@
             }
           },
           "passPlayShare": 49.4,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 32,
           "quarterbackCarries": null
         },
         "defence": {
@@ -691,7 +879,7 @@
             }
           },
           "passPlayShare": 54.4,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 25,
           "quarterbackCarries": null
         },
         "defence": {
@@ -888,7 +1076,7 @@
             }
           },
           "passPlayShare": 54.2,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 26,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1085,7 +1273,7 @@
             }
           },
           "passPlayShare": 64,
-          "passPlayShareRank": 1,
+          "passPlayShareRank": 2,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1282,7 +1470,7 @@
             }
           },
           "passPlayShare": 59.1,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 12,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1479,7 +1667,7 @@
             }
           },
           "passPlayShare": 61.4,
-          "passPlayShareRank": 5,
+          "passPlayShareRank": 6,
           "quarterbackCarries": 53
         },
         "defence": {
@@ -1676,7 +1864,7 @@
             }
           },
           "passPlayShare": 58.2,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 16,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1873,7 +2061,7 @@
             }
           },
           "passPlayShare": 59.5,
-          "passPlayShareRank": 9,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 19
         },
         "defence": {
@@ -2070,7 +2258,7 @@
             }
           },
           "passPlayShare": 51.3,
-          "passPlayShareRank": 29,
+          "passPlayShareRank": 30,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2108,12 +2296,12 @@
               "draftedBy": null
             },
             {
-              "id": "4430965",
-              "name": "Carrington Valentine",
+              "id": "5076652",
+              "name": "Brandon Cisse",
               "label": "CB",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 7, Pk 232 (GB)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 2, Pk 52 (GB)"
             }
           ],
           "rank": 11,
@@ -2267,7 +2455,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 19,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2464,7 +2652,7 @@
             }
           },
           "passPlayShare": 59.2,
-          "passPlayShareRank": 10,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -2661,7 +2849,7 @@
             }
           },
           "passPlayShare": 59.7,
-          "passPlayShareRank": 8,
+          "passPlayShareRank": 9,
           "quarterbackCarries": 82
         },
         "defence": {
@@ -2858,7 +3046,7 @@
             }
           },
           "passPlayShare": 63.3,
-          "passPlayShareRank": 2,
+          "passPlayShareRank": 3,
           "quarterbackCarries": 64
         },
         "defence": {
@@ -3055,7 +3243,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 17,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3252,7 +3440,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -3449,7 +3637,7 @@
             }
           },
           "passPlayShare": 61.1,
-          "passPlayShareRank": 6,
+          "passPlayShareRank": 7,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3646,7 +3834,7 @@
             }
           },
           "passPlayShare": 54.5,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 24,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3843,7 +4031,7 @@
             }
           },
           "passPlayShare": 57,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 18,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4040,7 +4228,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 103
         },
         "defence": {
@@ -4237,7 +4425,7 @@
             }
           },
           "passPlayShare": 62.1,
-          "passPlayShareRank": 4,
+          "passPlayShareRank": 5,
           "quarterbackCarries": 45
         },
         "defence": {
@@ -4319,9 +4507,9 @@
               "draftedBy": "2026: Rd 6, Pk 190 (NO)"
             }
           ],
-          "rank": 31,
+          "rank": 32,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 32nd of 32.",
           "blurb": "Charlie Smyth handles the kicking and rookie Barion Brown the kick returns, so it is a young and largely untested group.",
           "blurbHash": "6ab412420dfb85a2",
           "promptVersion": 6,
@@ -4369,12 +4557,12 @@
               "draftedBy": "2024: Rd 1, Pk 6 (NYG)"
             },
             {
-              "id": "3916945",
-              "name": "Darius Slayton",
+              "id": "4040655",
+              "name": "Darnell Mooney",
               "label": "WR",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 5, Pk 171 (NYG)"
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 5, Pk 173 (CHI)"
             },
             {
               "id": "4361050",
@@ -4434,7 +4622,7 @@
             }
           },
           "passPlayShare": 52.9,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 27,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4631,7 +4819,7 @@
             }
           },
           "passPlayShare": 54.9,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 22,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4828,7 +5016,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -4910,9 +5098,9 @@
               "draftedBy": "2024: Rd 4, Pk 127 (PHI)"
             }
           ],
-          "rank": 30,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
+          "note": "Among the worst in the league at kicking field goals last season — 31st of 32.",
           "blurb": "Rests largely on long-serving kicker Jake Elliott, with Will Shipley taking the kick returns.",
           "blurbHash": "3a95c56cd81e506b",
           "promptVersion": 6,
@@ -5025,7 +5213,7 @@
             }
           },
           "passPlayShare": 60.1,
-          "passPlayShareRank": 7,
+          "passPlayShareRank": 8,
           "quarterbackCarries": 21
         },
         "defence": {
@@ -5222,7 +5410,7 @@
             }
           },
           "passPlayShare": 51.8,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 28,
           "quarterbackCarries": 35
         },
         "defence": {
@@ -5419,7 +5607,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 21,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5616,7 +5804,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 20,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5813,7 +6001,7 @@
             }
           },
           "passPlayShare": 62.4,
-          "passPlayShareRank": 3,
+          "passPlayShareRank": 4,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6010,7 +6198,7 @@
             }
           },
           "passPlayShare": 51.1,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 31,
           "quarterbackCarries": null
         },
         "defence": {

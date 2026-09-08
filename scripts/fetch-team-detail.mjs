@@ -75,8 +75,47 @@ async function getJson(url) {
 }
 
 /** id → { name, position } for everyone on a roster, in one request. */
-async function rosterIndex(abbr) {
-  const d = await getJson(`${SITE}/teams/${abbr.toLowerCase()}/roster`);
+/**
+ * The same index from the core api, one request per player.
+ *
+ * Reached only when the site api 404s a team. That is not hypothetical: on
+ * 1 September 2026 `teams/ari/roster` and `teams/chi/roster` began returning
+ * 404 while all thirty other clubs returned 200, and they stayed broken. An
+ * undocumented endpoint does not have to fail all at once (§9). Eighty
+ * requests per team is far too many to do by default and cheap enough once.
+ */
+async function rosterFromCore(espnId) {
+  const list = await getJson(
+    `${CORE}/seasons/${SEASON}/teams/${espnId}/athletes?limit=200`,
+  );
+  const out = new Map();
+  for (const item of list.items ?? []) {
+    if (!item?.$ref) continue;
+    try {
+      const a = await getJson(item.$ref.replace(/^http:/, "https:"));
+      if (!a?.id) continue;
+      out.set(String(a.id), {
+        name: a.fullName ?? a.displayName ?? null,
+        position: a.position?.abbreviation ?? null,
+        debutYear: a.debutYear ?? null,
+        experience: a.experience?.years ?? null,
+      });
+    } catch {
+      // One unreadable player is not a missing team.
+    }
+  }
+  return out;
+}
+
+async function rosterIndex(abbr, espnId) {
+  const d = await getJson(`${SITE}/teams/${abbr.toLowerCase()}/roster`).catch(
+    (err) => {
+      if (!espnId) throw err;
+      console.log(`  ${abbr}: site roster ${err.message.slice(0, 3)}, using core api`);
+      return null;
+    },
+  );
+  if (!d) return rosterFromCore(espnId);
   const out = new Map();
   for (const group of d.athletes ?? []) {
     for (const a of group.items ?? [group]) {
@@ -388,7 +427,7 @@ let failed = 0;
 
 for (const team of TEAMS) {
   try {
-    const roster = await rosterIndex(team.id);
+    const roster = await rosterIndex(team.id, team.espnId);
     const [units, coach, stats] = await Promise.all([
       depthChart(team.espnId, roster),
       headCoach(team.espnId).catch(() => null),
@@ -429,9 +468,21 @@ const previous = existsSync(OUT)
   : {};
 
 const teams = {};
+const carried = [];
 for (const team of TEAMS) {
   const got = gathered.get(team.id);
-  if (!got) continue;
+  if (!got) {
+    // Yesterday's facts beat no facts. Dropping the team wrote a 31-team file
+    // and deleted Arizona's entire squad section from the site for a week — one
+    // failed ESPN call on 1 September, and every run after that just copied the
+    // gap forward. The blurbs below already work this way; the rest of the
+    // entry should too.
+    if (previous[team.id]) {
+      teams[team.id] = previous[team.id];
+      carried.push(team.id);
+    }
+    continue;
+  }
   {
     const { units, coach, stats, qbCarries, rate } = got;
     const ranks = {
@@ -503,5 +554,16 @@ writeFileSync(
   )}\n`,
 );
 console.log(
-  `\nWrote ${Object.keys(teams).length} teams to ${OUT}${failed ? `, ${failed} failed` : ""}.`,
+  `\nWrote ${Object.keys(teams).length} teams to ${OUT}${failed ? `, ${failed} failed` : ""}` +
+    `${carried.length ? `, kept yesterday's ${carried.join(", ")}` : ""}.`,
 );
+
+// Exit non-zero when the file is short of the league. The run that lost Arizona
+// printed "31 teams, 1 failed" and exited 0, so the workflow went green and
+// nothing surfaced it for a week.
+if (Object.keys(teams).length < TEAMS.length) {
+  console.error(
+    `\nOnly ${Object.keys(teams).length} of ${TEAMS.length} teams in ${OUT}.`,
+  );
+  process.exit(1);
+}
