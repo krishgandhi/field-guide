@@ -257,13 +257,17 @@ for (const item of batch) {
   if (problem) {
     rejected.push(`${item.key}: ${problem} — "${blurb}"`);
     // A rejection used to leave the previous note standing, which looks safe
-    // and isn't: when the brief has moved on, the rule the replacement broke
-    // is usually the rule the old note breaks too. Buffalo's defence kept
-    // calling a second-year corner a rookie for exactly that reason. §9's
-    // bargain is a missing entry, never a wrong one, so a superseded note goes.
+    // and isn't. Anything reaching this loop is here because its note is
+    // missing, or the brief has moved on, or the evidence has — so the stored
+    // note is stale by definition, and the rule the replacement broke is
+    // usually the rule the old note breaks too. Checking the prompt version
+    // alone missed the second case: New Orleans kept describing a receiver who
+    // had left the depth chart, because the note and the brief were the same
+    // vintage and only the roster had changed. §9's bargain is a missing entry,
+    // never a wrong one, so the stale note goes and the next run tries again.
     if (!SELF_TEST) {
       const unit = cache.teams[item.teamId].units[item.unit];
-      if (unit.blurb && unit.promptVersion !== PROMPT_VERSION) {
+      if (unit.blurb) {
         unit.blurb = null;
         unit.blurbHash = null;
         unit.promptVersion = null;
