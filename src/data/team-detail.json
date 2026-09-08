@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T12:12:11.674Z",
+  "fetchedAt": "2026-09-08T14:51:46.777Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -4569,12 +4569,12 @@
               "draftedBy": "2024: Rd 1, Pk 6 (NYG)"
             },
             {
-              "id": "4040655",
-              "name": "Darnell Mooney",
+              "id": "4682648",
+              "name": "Malachi Fields",
               "label": "WR",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 5, Pk 173 (CHI)"
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 74 (NYG)"
             },
             {
               "id": "4361050",
@@ -4596,8 +4596,8 @@
           "rank": 17,
           "score": 3,
           "note": "Middle of the league for points scored last season, 17th of 32.",
-          "blurb": "One of the run-leaning offences in the league, and it scored on the ground as often as almost anyone, with Cam Skattebo carrying. Jaxson Dart throws mostly to Malik Nabers.",
-          "blurbHash": "7b077499bdf85d0d",
+          "blurb": "A run-leaning group under John Harbaugh — they threw less than most teams and scored on the ground far more readily than through the air. Second-year quarterback Jaxson Dart, running back Cam Skattebo and receiver Malik Nabers are the core, with Darius Slayton released.",
+          "blurbHash": "b75cf9dffb003037",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-09-08T12:13:01.937Z"
+  "unitNotesWrittenAt": "2026-09-08T14:52:15.272Z"
 }
