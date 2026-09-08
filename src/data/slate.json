@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-07T16:15:22.273Z",
+  "fetchedAt": "2026-09-08T03:35:50.013Z",
   "games": [
     {
       "id": "401872656",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 50.5,
+      "overUnder": 49.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -68,7 +68,7 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "IND",
       "away": "BAL",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "away",
       "overUnder": 47.5,
       "broadcast": "CBS",
@@ -94,7 +94,7 @@
       "away": "CHI",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 46.5,
+      "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -117,7 +117,7 @@
       "home": "HOU",
       "away": "BUF",
       "spread": 1.5,
-      "favourite": "home",
+      "favourite": "away",
       "overUnder": 44.5,
       "broadcast": "CBS",
       "venue": "Reliant Stadium",
@@ -130,7 +130,7 @@
       "away": "MIA",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 40.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Allegiant Stadium",
       "neutralSite": false
@@ -152,7 +152,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "PHI",
       "away": "WSH",
-      "spread": 4.5,
+      "spread": 5.5,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "FOX",
@@ -188,7 +188,7 @@
       "kickoff": "2026-09-15T00:15Z",
       "home": "KC",
       "away": "DEN",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "ESPN, ABC",
@@ -299,13 +299,6 @@
       {
         "player": "Tyler Baron",
         "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "PHI": [
-      {
-        "player": "Jonathan Greenard",
-        "position": "LB",
         "status": "Out"
       }
     ],

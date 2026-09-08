@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-07T16:15:36.455Z",
+  "fetchedAt": "2026-09-08T03:36:10.954Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -68,8 +68,8 @@
       },
       "headshot": "/players/13976.png",
       "evidenceHash": "2f312184eb475ba9",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "An outside linebacker whose job is chasing quarterbacks, taken second overall in 2011 and now in a sixteenth season, most recently signing a one-year deal with Dallas. He was Defensive Rookie of the Year and a Super Bowl MVP, and he has piled up well over a hundred career sacks, though at this age a short contract suggests a team checking what is left.",
+      "promptVersion": 2
     },
     "3122132": {
       "id": "3122132",
@@ -193,8 +193,8 @@
       },
       "headshot": "/players/3917315.png",
       "evidenceHash": "c2d7901990a414e6",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A quarterback picked first overall in 2019, now in his eighth season and starting for Minnesota after arriving on a cheap one-year deal. He was Offensive Rookie of the Year and has nearly ninety starts behind him, a proven if not elite starter who runs a great deal — more than three thousand career rushing yards — but Arizona let him go and nobody paid him like a franchise man.",
+      "promptVersion": 2
     },
     "3918298": {
       "id": "3918298",
@@ -254,8 +254,8 @@
       },
       "headshot": "/players/3918298.png",
       "evidenceHash": "78ed11a0593a0fda",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A quarterback taken seventh overall in 2018 and now in his ninth season, all of them with Buffalo. He is one of the best players in football, the reigning MVP, and he is as dangerous running as throwing: nearly eighty career rushing touchdowns, a total most running backs never approach. Buffalo build everything around him and pay him accordingly.",
+      "promptVersion": 2
     },
     "4047646": {
       "id": "4047646",
@@ -358,8 +358,8 @@
       },
       "headshot": "/players/4241479.png",
       "evidenceHash": "1b90978190e7df77",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A quarterback drafted fifth overall in 2020, now in his seventh season and starting for Atlanta after Miami released him. He is an accurate, quick-release passer who completes about sixty-eight percent of his throws and rarely runs, but no Pro Bowls or awards here — and his old team took a record salary-cap hit simply to be rid of the contract, which says plenty.",
+      "promptVersion": 2
     },
     "4242512": {
       "id": "4242512",
@@ -411,8 +411,8 @@
       },
       "headshot": "/players/4242512.png",
       "evidenceHash": "2cef51deeb5de746",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A quarterback taken in the third round in 2022, now in his fifth season and handed the starting job in Miami on a large contract. He has been a career backup with only a handful of starts, mostly covering for an injured teammate in Green Bay, and he looked lively doing it, throwing efficiently and running well — but that is a long way from proof he can start.",
+      "promptVersion": 2
     },
     "4360499": {
       "id": "4360499",
@@ -540,8 +540,8 @@
       },
       "headshot": "/players/4433970.png",
       "evidenceHash": "e812348d70880959",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A quarterback taken tenth overall in 2024, now in his third season with Minnesota. He has thrown more interceptions than touchdowns across a small sample of games, and the Vikings have benched him in favour of a veteran they signed for backup money — so he is still unproven, and his own team is not yet convinced.",
+      "promptVersion": 2
     },
     "4575431": {
       "id": "4575431",
@@ -658,8 +658,8 @@
       },
       "headshot": "/players/4578085.png",
       "evidenceHash": "f603311711af2fe1",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A defensive end — one of the linemen whose main job is getting to the quarterback — picked nineteenth overall in 2024 and now in his third season, having just been traded to Cleveland. He was Defensive Rookie of the Year and has a dozen sacks already, so the early signs are strong, but he is young enough that the big years are still ahead of him.",
+      "promptVersion": 2
     },
     "4592837": {
       "id": "4592837",
@@ -716,5 +716,6 @@
       "blurb": "A cornerback, the defender who covers receivers, taken twenty-fourth overall in 2024 and now in his fourth season, signed by Seattle for close to the league minimum after Detroit released him. There is real draft pedigree here but almost no production to match it yet — one career interception and a modest tackle count — so he arrives as depth rather than a proven starter.",
       "promptVersion": 2
     }
-  }
+  },
+  "profilesWrittenAt": "2026-09-08T03:36:49.934Z"
 }
