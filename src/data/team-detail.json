@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T03:36:05.545Z",
+  "fetchedAt": "2026-09-08T12:12:11.674Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -65,6 +65,9 @@
           "rank": 23,
           "score": 2,
           "note": "Below average for points scored last season, 23rd of 32.",
+          "blurb": "They threw the ball more often than anyone else last year, though that was under the previous staff — Mike LaFleur is now in charge, with Jacoby Brissett throwing to Marvin Harrison Jr. and Trey McBride, and rookie back Jeremiyah Love added third overall.",
+          "blurbHash": "6f108adb1400f139",
+          "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "366",
@@ -101,10 +104,7 @@
           },
           "passPlayShare": 65.9,
           "passPlayShareRank": 1,
-          "quarterbackCarries": null,
-          "blurb": "They threw the ball more often than anyone else last year, though that was under the previous staff — Mike LaFleur is now in charge, with Jacoby Brissett throwing to Marvin Harrison Jr. and Trey McBride, and rookie back Jeremiyah Love added third overall.",
-          "blurbHash": "6f108adb1400f139",
-          "promptVersion": 6
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -152,6 +152,9 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 29th of 32.",
+          "blurb": "A group that rarely gets to the quarterback, leaning on two second-year corners in Will Johnson and Denzel Burke alongside Josh Sweat, and now working under new head coach Mike LaFleur.",
+          "blurbHash": "3d947b82ad2a77fa",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "30",
@@ -161,10 +164,7 @@
               "value": "19",
               "rank": 19
             }
-          },
-          "blurb": "A group that rarely gets to the quarterback, leaning on two second-year corners in Will Johnson and Denzel Burke alongside Josh Sweat, and now working under new head coach Mike LaFleur.",
-          "blurbHash": "3d947b82ad2a77fa",
-          "promptVersion": 6
+          }
         },
         "specialTeams": {
           "players": [
@@ -188,15 +188,15 @@
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 30th of 32.",
+          "blurb": "Chad Ryland has been among the more accurate kickers on field goals, with Devin Duvernay handling kick returns, and the whole operation reports to new head coach Mike LaFleur.",
+          "blurbHash": "97ed1ddc18fdde62",
+          "promptVersion": 6,
           "stats": {
             "field goal percentage": {
               "value": "75.8",
               "rank": 4
             }
-          },
-          "blurb": "Chad Ryland has been among the more accurate kickers on field goals, with Devin Duvernay handling kick returns, and the whole operation reports to new head coach Mike LaFleur.",
-          "blurbHash": "97ed1ddc18fdde62",
-          "promptVersion": 6
+          }
         }
       }
     },
@@ -743,6 +743,9 @@
           "rank": 12,
           "score": 4,
           "note": "Better than most for points allowed last season, 12th of 32.",
+          "blurb": "Sacks and takeaways both come at a modest rate; the group leans on Ed Oliver and Bradley Chubb up front and young corners Christian Benford and Maxwell Hairston, now under new head coach Joe Brady.",
+          "blurbHash": "7b6b784a1b3abed1",
+          "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "36",
@@ -752,10 +755,7 @@
               "value": "20",
               "rank": 15
             }
-          },
-          "blurb": "Sacks and takeaways both come at a modest rate; the group leans on Ed Oliver and Bradley Chubb up front and young corners Christian Benford and Maxwell Hairston, now under new head coach Joe Brady.",
-          "blurbHash": "7b6b784a1b3abed1",
-          "promptVersion": 6
+          }
         },
         "specialTeams": {
           "players": [
@@ -2626,8 +2626,8 @@
           "rank": 8,
           "score": 4,
           "note": "Better than most for points scored last season, 8th of 32.",
-          "blurb": "Runs through Jonathan Taylor — almost nobody scored more rushing touchdowns — with Daniel Jones throwing to Alec Pierce, Josh Downs and tight end Tyler Warren.",
-          "blurbHash": "afcca033c063dd50",
+          "blurb": "Built around Jonathan Taylor, who gets it into the end zone as well as almost any back in the league, with Daniel Jones throwing to Alec Pierce, Josh Downs and tight end Tyler Warren. No real tilt toward run or pass.",
+          "blurbHash": "876d339613e35c1d",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4202,8 +4202,8 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 2nd of 32.",
-          "blurb": "They gained more per pass than anyone, and Drake Maye's own running is a real part of the ground game. A.J. Brown, acquired in a trade with Philadelphia, joins Hunter Henry as targets.",
-          "blurbHash": "6c4b360b5490682d",
+          "blurb": "Drake Maye gains more per throw than any other passer and is a big part of the running game himself, carrying it often. A.J. Brown was traded in from Philadelphia to be the main target.",
+          "blurbHash": "9987aa489810d69f",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4289,8 +4289,8 @@
           "rank": 4,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 4th of 32.",
-          "blurb": "A coverage-first group with Christian Gonzalez and Carlton Davis III at cornerback; it rarely gets to the quarterback and does not force many turnovers, leaning instead on the interior pair of Christian Barmore and Milton Williams.",
-          "blurbHash": "1953996740738c14",
+          "blurb": "A unit fronted by interior men Christian Barmore and Milton Williams and by Christian Gonzalez, just made the league's best-paid cornerback. It rarely sacks the quarterback or forces turnovers.",
+          "blurbHash": "1b9cc7330cd79fde",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -4325,8 +4325,8 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 19th of 32.",
-          "blurb": "Kicker Andy Borregales was among the most accurate on field goals, with Kyle Williams returning kicks.",
-          "blurbHash": "c492e26f2be5968f",
+          "blurb": "Andy Borregales makes his field goals at close to the best rate in the league; Kyle Williams handles kick returns.",
+          "blurbHash": "cf84b47dbd3cd0b8",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -4399,8 +4399,8 @@
           "rank": 28,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 28th of 32.",
-          "blurb": "They throw more than most teams, which is just as well — they gained less per carry than almost anyone. Tyler Shough is the quarterback, with Chris Olave and rookie first-round pick Jordyn Tyson outside.",
-          "blurbHash": "3056c15a0dafcd17",
+          "blurb": "Throws more than most teams, partly because the running game gains less per carry than almost anyone. Young quarterback Tyler Shough, with Chris Olave the main receiver behind a line featuring Kelvin Banks Jr.",
+          "blurbHash": "1edb6b1991b61058",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4596,8 +4596,8 @@
           "rank": 17,
           "score": 3,
           "note": "Middle of the league for points scored last season, 17th of 32.",
-          "blurb": "One of the run-heaviest teams in the league, scoring plenty on the ground with Cam Skattebo, while Jaxson Dart throws less often to Malik Nabers behind tackle Andrew Thomas.",
-          "blurbHash": "09791b6fbda207c6",
+          "blurb": "One of the run-leaning offences in the league, and it scored on the ground as often as almost anyone, with Cam Skattebo carrying. Jaxson Dart throws mostly to Malik Nabers.",
+          "blurbHash": "7b077499bdf85d0d",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4683,8 +4683,8 @@
           "rank": 26,
           "score": 2,
           "note": "Below average for points allowed last season, 26th of 32.",
-          "blurb": "Forces few turnovers, and the pressure comes mostly from Abdul Carter, the third overall pick in 2025, with Paulson Adebo and Greg Newsome II covering outside.",
-          "blurbHash": "11e29c4d3c1c45e4",
+          "blurb": "Gets a reasonable number of sacks but takes the ball away about as seldom as any defence. Abdul Carter, the third pick of the 2025 draft, leads the rush; Paulson Adebo and Greg Newsome II play corner.",
+          "blurbHash": "86a1dd5ff5c7741c",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -4719,8 +4719,8 @@
           "rank": 11,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 11th of 32.",
-          "blurb": "Rookie kicker Dominic Zvada made a higher share of his field goals than anyone in the league; Deonte Banks, a first-round pick, handles kick returns.",
-          "blurbHash": "307228120891a470",
+          "blurb": "Rookie kicker Dominic Zvada made a higher share of his field goals than anyone else in the league, with cornerback Deonte Banks doubling up on kick returns.",
+          "blurbHash": "1b0d6fda389eecb5",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-09-08T03:38:48.727Z"
+  "unitNotesWrittenAt": "2026-09-08T12:13:01.937Z"
 }

@@ -1,14 +1,14 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-08T03:35:50.013Z",
+  "fetchedAt": "2026-09-08T12:11:59.077Z",
   "games": [
     {
       "id": "401872656",
       "kickoff": "2026-09-10T00:20Z",
       "home": "SEA",
       "away": "NE",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "NBC",
@@ -188,7 +188,7 @@
       "kickoff": "2026-09-15T00:15Z",
       "home": "KC",
       "away": "DEN",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "ESPN, ABC",

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T03:36:10.954Z",
+  "fetchedAt": "2026-09-08T12:12:16.387Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -133,6 +133,57 @@
       "headshot": "/players/3122132.png",
       "evidenceHash": "aba138afc7e912cd",
       "blurb": "A defensive end — one of the linemen whose main job is chasing the quarterback — taken first overall in 2017 and now a decade into his career, currently with the Rams after a blockbuster trade out of Cleveland. He has won Defensive Player of the Year twice and has more than a hundred and twenty career sacks, including a single-season record on his way out of Cleveland; simply put, the best defensive player in football.",
+      "promptVersion": 2
+    },
+    "3916945": {
+      "id": "3916945",
+      "name": "Darius Slayton",
+      "position": "Wide Receiver",
+      "positionShort": "WR",
+      "team": "New York Giants",
+      "teamId": "NYG",
+      "age": 29,
+      "height": "6' 1\"",
+      "weight": "198 lbs",
+      "experience": "8th Season",
+      "draft": "2019: Rd 5, Pk 171 (NYG)",
+      "college": "Auburn",
+      "awards": [],
+      "career": {
+        "Receptions": "296",
+        "Receiving Targets": "522",
+        "Receiving Yards": "4,435",
+        "Yards Per Reception": "15.0",
+        "Receiving Touchdowns": "22",
+        "Long Reception": "80",
+        "Receiving First Downs": "198",
+        "Rushing Attempts": "5",
+        "Rushing Yards": "3",
+        "Yards Per Rush Attempt": "0.6",
+        "Rushing Touchdowns": "0",
+        "Long Rushing": "11",
+        "Fumbles": "6",
+        "Fumbles Lost": "4"
+      },
+      "season": {
+        "Receptions": "-",
+        "Receiving Targets": "-",
+        "Receiving Yards": "-",
+        "Yards Per Reception": "-",
+        "Receiving Touchdowns": "-",
+        "Long Reception": "-",
+        "Receiving First Downs": "-",
+        "Rushing Attempts": "-",
+        "Rushing Yards": "-",
+        "Yards Per Rush Attempt": "-",
+        "Rushing Touchdowns": "-",
+        "Long Rushing": "-",
+        "Fumbles": "-",
+        "Fumbles Lost": "-"
+      },
+      "headshot": "/players/3916945.png",
+      "evidenceHash": "538dfc5cd34e84a9",
+      "blurb": "A wide receiver taken in the fifth round by the Giants in 2019, now eight seasons into his career with the same club. He has been a steady, useful contributor rather than a star — more than four thousand receiving yards and a healthy fifteen yards per catch, but no Pro Bowls and no season where he was the man defences worried about, and New York has now released him despite his being its longest-serving player.",
       "promptVersion": 2
     },
     "3917315": {
@@ -715,7 +766,62 @@
       "evidenceHash": "c836f1db9bdae604",
       "blurb": "A cornerback, the defender who covers receivers, taken twenty-fourth overall in 2024 and now in his fourth season, signed by Seattle for close to the league minimum after Detroit released him. There is real draft pedigree here but almost no production to match it yet — one career interception and a modest tackle count — so he arrives as depth rather than a proven starter.",
       "promptVersion": 2
+    },
+    "4686772": {
+      "id": "4686772",
+      "name": "Christian Gonzalez",
+      "position": "Cornerback",
+      "positionShort": "CB",
+      "team": "New England Patriots",
+      "teamId": "NE",
+      "age": 24,
+      "height": "6' 1\"",
+      "weight": "205 lbs",
+      "experience": "4th Season",
+      "draft": "2023: Rd 1, Pk 17 (NE)",
+      "college": "Oregon",
+      "awards": [],
+      "career": {
+        "Total Tackles": "145",
+        "Solo Tackles": "118",
+        "Assist Tackles": "27",
+        "Sacks": "1",
+        "Forced Fumbles": "0",
+        "Fumbles Recovered": "1",
+        "Fumbles Recovered Yards": "63",
+        "Interceptions": "3",
+        "Interception Yards": "2",
+        "Average Interception Yards": "0.7",
+        "Interception Touchdowns": "0",
+        "Long Interception": "2",
+        "Passes Defended": "24",
+        "Stuffs": "2",
+        "Stuff Yards": "2",
+        "Kicks Blocked": "0"
+      },
+      "season": {
+        "Total Tackles": "69",
+        "Solo Tackles": "54",
+        "Assist Tackles": "15",
+        "Sacks": "0",
+        "Forced Fumbles": "0",
+        "Fumbles Recovered": "0",
+        "Fumbles Recovered Yards": "0",
+        "Interceptions": "0",
+        "Interception Yards": "0",
+        "Average Interception Yards": "0.0",
+        "Interception Touchdowns": "0",
+        "Long Interception": "0",
+        "Passes Defended": "10",
+        "Stuffs": "1",
+        "Stuff Yards": "1",
+        "Kicks Blocked": "0"
+      },
+      "headshot": "/players/4686772.png",
+      "evidenceHash": "6d79d0133aec128d",
+      "blurb": "A cornerback — one of the defenders who covers receivers — picked seventeenth overall by New England in 2023 and now in his fourth season. He is the team's clear number one at the position and has been busy in coverage, with well over a hundred tackles already and plenty of passes knocked away, and New England has just made him the highest-paid cornerback in the league's history.",
+      "promptVersion": 2
     }
   },
-  "profilesWrittenAt": "2026-09-08T03:36:49.934Z"
+  "profilesWrittenAt": "2026-09-08T12:12:42.810Z"
 }
