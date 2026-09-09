@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T02:16:49.592Z",
+  "fetchedAt": "2026-09-09T02:21:35.769Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -140,8 +140,8 @@
       },
       "headshot": "/players/16716.png",
       "evidenceHash": "5b8a547a12dbb702",
-      "blurb": null,
-      "promptVersion": null
+      "blurb": "A defensive tackle — an interior lineman whose job is to blow up plays from the middle of the defence — taken in the first round in 2014 and now in his tenth season with the Rams, having un-retired at thirty-five. Three Defensive Player of the Year awards and more than a hundred career sacks make him one of the best defenders anyone has watched, though the question now is how much is left.",
+      "promptVersion": 2
     },
     "3052587": {
       "id": "3052587",
@@ -948,5 +948,5 @@
       "promptVersion": 2
     }
   },
-  "profilesWrittenAt": "2026-09-09T02:17:12.006Z"
+  "profilesWrittenAt": "2026-09-09T02:21:51.488Z"
 }
