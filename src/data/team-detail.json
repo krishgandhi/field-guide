@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T02:21:31.105Z",
+  "fetchedAt": "2026-09-09T15:00:00.903Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -3655,20 +3655,20 @@
         "defence": {
           "players": [
             {
-              "id": "4360749",
-              "name": "Thomas Booker IV",
-              "label": "DT",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2022: Rd 5, Pk 150 (HOU)"
-            },
-            {
               "id": "4373956",
               "name": "Jonah Laulu",
               "label": "DT",
               "debutYear": null,
               "experience": 3,
               "draftedBy": "2024: Rd 7, Pk 234 (IND)"
+            },
+            {
+              "id": "4429109",
+              "name": "Tonka Hemingway",
+              "label": "DT",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 135 (LV)"
             },
             {
               "id": "4258194",
@@ -3698,8 +3698,8 @@
           "rank": 25,
           "score": 2,
           "note": "Below average for points allowed last season, 25th of 32.",
-          "blurb": "A unit under new head coach Klint Kubiak that seldom takes the ball away, built around edge rusher Kwity Paye, a first-round pick of Indianapolis's, and young corner Darien Porter.",
-          "blurbHash": "ef94ea314c85ae4d",
+          "blurb": "Last year's front rarely forced turnovers and got only moderate pressure, but that was under the previous staff — Klint Kubiak takes over this year. The line leans on Kwity Paye, a first-round pick of Indianapolis's, with corners Eric Stokes and Darien Porter behind.",
+          "blurbHash": "501980e1bb8d7b49",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -5625,28 +5625,28 @@
         "defence": {
           "players": [
             {
-              "id": "4686308",
-              "name": "C.J. West",
-              "label": "DT",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 4, Pk 113 (SF)"
-            },
-            {
-              "id": "4035840",
-              "name": "Osa Odighizuwa",
-              "label": "DT",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 3, Pk 75 (DAL)"
-            },
-            {
               "id": "4243493",
               "name": "Keion White",
               "label": "DE",
               "debutYear": null,
               "experience": 4,
               "draftedBy": "2023: Rd 2, Pk 46 (NE)"
+            },
+            {
+              "id": "4040605",
+              "name": "Nick Bosa",
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 2 (SF)"
+            },
+            {
+              "id": "3116097",
+              "name": "Luke Gifford",
+              "label": "LB",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "4427325",
@@ -5668,8 +5668,8 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most for points allowed last season, 13th of 32.",
-          "blurb": "Got to the quarterback less than any other team last season and forced few turnovers, leaning instead on cornerbacks Deommodore Lenoir and Renardo Green.",
-          "blurbHash": "289f2353b9431562",
+          "blurb": "A unit that got to the quarterback less than anyone else last season and forced few turnovers, still built around Nick Bosa up front and homegrown corners Deommodore Lenoir and Renardo Green.",
+          "blurbHash": "643b27e3c5386aac",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -6307,5 +6307,6 @@
         }
       }
     }
-  }
+  },
+  "unitNotesWrittenAt": "2026-09-09T15:00:31.631Z"
 }
