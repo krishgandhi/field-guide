@@ -1,27 +1,6 @@
 {
-  "generatedAt": "2026-09-09T01:39:47.861Z",
+  "generatedAt": "2026-09-09T01:46:27.508Z",
   "candidates": [
-    {
-      "id": "49775423",
-      "headline": "With deal done, Donald '100% committed' to Rams' title chase",
-      "description": "Aaron Donald, 35, a three-time Defensive Player of the Year and an eight-time first-team All-Pro, formally returned from retirement on Sunday, signing a one-year, $20 million contract with the Los Angeles Rams.",
-      "published": "2026-08-31",
-      "likelyKind": "signing",
-      "teams": [
-        "Los Angeles Rams"
-      ],
-      "teamIds": [
-        "LAR"
-      ],
-      "players": [
-        {
-          "id": "16716",
-          "name": "Aaron Donald",
-          "position": "Defensive Tackle"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49775423/sources-aaron-donald-unretires-reaches-20m-deal-rams"
-    },
     {
       "id": "49872406",
       "headline": "Buccaneers extend Baker Mayfield: Key intel and a grade",
@@ -65,6 +44,27 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49872379/bucs-baker-mayfield-agree-3-year-extension-sources-say"
+    },
+    {
+      "id": "49775423",
+      "headline": "With deal done, Donald '100% committed' to Rams' title chase",
+      "description": "Aaron Donald, 35, a three-time Defensive Player of the Year and an eight-time first-team All-Pro, formally returned from retirement on Sunday, signing a one-year, $20 million contract with the Los Angeles Rams.",
+      "published": "2026-08-31",
+      "likelyKind": "signing",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "16716",
+          "name": "Aaron Donald",
+          "position": "Defensive Tackle"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49775423/sources-aaron-donald-unretires-reaches-20m-deal-rams"
     }
   ]
 }
