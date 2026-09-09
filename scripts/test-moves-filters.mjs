@@ -125,14 +125,26 @@ const roles = await headlines();
 check("Role change finds the Murray entry", roles.some((h) => /Murray/.test(h)), roles.join(" / "));
 
 // The type picker must not offer a kind nothing uses.
-const kindOptions = await page
-  .getByLabel("Filter by type")
-  .locator("option")
-  .allTextContents();
+//
+// This named Injury and Release as the forbidden pair, which was true the day
+// it was written and stopped being true the moment the pipeline published a
+// release — the picker correctly grew a Release option and the test called it
+// a bug. Same trap as TOTAL above: derive it. Select each option and require
+// at least one card behind it.
+const kindOptions = (
+  await page.getByLabel("Filter by type").locator("option").allTextContents()
+).filter((label) => label !== "All types");
+
+const emptyKinds = [];
+for (const label of kindOptions) {
+  await page.getByLabel("Filter by type").selectOption({ label });
+  await page.waitForTimeout(200);
+  if ((await count()) === 0) emptyKinds.push(label);
+}
 check(
   "picker offers no empty categories",
-  !kindOptions.includes("Injury") && !kindOptions.includes("Release"),
-  kindOptions.join(", "),
+  emptyKinds.length === 0,
+  emptyKinds.length ? `empty: ${emptyKinds.join(", ")}` : kindOptions.join(", "),
 );
 
 await page.getByLabel("Filter by type").selectOption({ label: "All types" });

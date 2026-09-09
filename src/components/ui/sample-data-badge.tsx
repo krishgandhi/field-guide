@@ -9,7 +9,21 @@ import { FlaskConical } from "lucide-react";
  *
  * Remove it from a screen only when that screen's data is genuinely real.
  */
-export function SampleDataBadge({ note }: { note?: string }) {
+export function SampleDataBadge({
+  note,
+  /**
+   * Override the lead when a screen's data is real but still needs a caveat.
+   *
+   * Moves carried "Sample data. Real events." — two claims that contradict
+   * each other, and the first one stopped being true when entries started
+   * auto-publishing from the wire. Calling real reporting about real people
+   * "sample data" is its own kind of confidently wrong.
+   */
+  lead = "Sample data.",
+}: {
+  note?: string;
+  lead?: string;
+}) {
   return (
     <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-amber/25 bg-amber/[0.07] px-3 py-2.5">
       <FlaskConical
@@ -18,7 +32,7 @@ export function SampleDataBadge({ note }: { note?: string }) {
         aria-hidden
       />
       <p className="text-[0.8rem] leading-snug text-fg-dim">
-        <span className="font-semibold text-amber">Sample data.</span>{" "}
+        <span className="font-semibold text-amber">{lead}</span>{" "}
         {note ?? "Placeholder values, not real."}
       </p>
     </div>

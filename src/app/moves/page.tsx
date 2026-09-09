@@ -38,9 +38,12 @@ export default function MovesPage() {
 
   return (
     <PageShell>
-      <PageHeader kicker="2026 offseason" title="Moves" />
+      <PageHeader kicker="2026 season" title="Moves" />
 
-      <SampleDataBadge note="Real events. The 1–5 scores are judgement calls, not sourced facts." />
+      <SampleDataBadge
+        lead="Real events."
+        note="Every entry links its source. The 1–5 scores are judgement calls, not sourced facts."
+      />
 
       <MovesList moves={moves} />
     </PageShell>
