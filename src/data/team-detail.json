@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T14:51:46.777Z",
+  "fetchedAt": "2026-09-09T02:12:36.425Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -117,12 +117,12 @@
               "draftedBy": "2018: Rd 4, Pk 130 (PHI)"
             },
             {
-              "id": "4569480",
-              "name": "Darius Robinson",
-              "label": "DE",
+              "id": "4362225",
+              "name": "Dante Stills",
+              "label": "DT",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 27 (ARI)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 6, Pk 213 (ARI)"
             },
             {
               "id": "4244606",
@@ -152,8 +152,8 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league for points allowed last season — 29th of 32.",
-          "blurb": "A group that rarely gets to the quarterback, leaning on two second-year corners in Will Johnson and Denzel Burke alongside Josh Sweat, and now working under new head coach Mike LaFleur.",
-          "blurbHash": "3d947b82ad2a77fa",
+          "blurb": "Mike LaFleur takes over, so last year's numbers — very little pressure on the quarterback — belong to the old staff. Josh Sweat and Zaven Collins lead a back end leaning on second-year corners Will Johnson and Denzel Burke.",
+          "blurbHash": "5a2e6a786e589973",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -1162,19 +1162,19 @@
               "draftedBy": null
             },
             {
-              "id": "4869748",
-              "name": "Zavion Thomas",
+              "id": "2973405",
+              "name": "Kalif Raymond",
               "label": "KR",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 3, Pk 89 (CHI)"
+              "debutYear": 2016,
+              "experience": 10,
+              "draftedBy": null
             }
           ],
           "rank": 18,
           "score": 3,
           "note": "Middle of the league at kicking field goals last season, 18th of 32.",
-          "blurb": "Long-serving kicker Cairo Santos was accurate on field goals, with rookie Zavion Thomas returning kicks.",
-          "blurbHash": "fa6f287458b88f5c",
+          "blurb": "Built around Cairo Santos, a 13-season kicker who made better than eight in ten field goals, with veteran Kalif Raymond handling kick returns.",
+          "blurbHash": "da2416e3457b4366",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -1359,19 +1359,19 @@
               "draftedBy": "2021: Rd 5, Pk 149 (CIN)"
             },
             {
-              "id": "3116389",
-              "name": "Samaje Perine",
+              "id": "4570738",
+              "name": "Ke'Shawn Williams",
               "label": "KR",
-              "debutYear": 2017,
-              "experience": 10,
-              "draftedBy": "2017: Rd 4, Pk 114 (WSH)"
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
             }
           ],
           "rank": 9,
           "score": 4,
           "note": "Better than most at kicking field goals last season, 9th of 32.",
-          "blurb": "Built around kicker Evan McPherson, who makes a high share of his field goals, with Samaje Perine handling kick returns.",
-          "blurbHash": "57a9e94a0b43df80",
+          "blurb": "Runs through Evan McPherson, a Cincinnati draft pick who converted close to nine in ten field goals, with Ke'Shawn Williams returning kicks.",
+          "blurbHash": "fea055f68f928f4b",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -2402,12 +2402,12 @@
               "draftedBy": "2021: Rd 3, Pk 89 (HOU)"
             },
             {
-              "id": "4686422",
-              "name": "Xavier Hutchinson",
+              "id": "4429022",
+              "name": "Kayshon Boutte",
               "label": "WR",
               "debutYear": null,
               "experience": 4,
-              "draftedBy": "2023: Rd 6, Pk 205 (HOU)"
+              "draftedBy": "2023: Rd 6, Pk 187 (NE)"
             },
             {
               "id": "3117256",
@@ -2429,8 +2429,8 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most for points scored last season, 13th of 32.",
-          "blurb": "Struggles to gain ground on the run and seldom scores that way, so it runs through C.J. Stroud and Nico Collins. Very careful with the ball.",
-          "blurbHash": "5657e666b8e211b2",
+          "blurb": "Built around C.J. Stroud throwing to Nico Collins, and they slightly favour the pass. The running game gains little per carry and rarely reaches the end zone, but they hand the ball over less than almost anyone.",
+          "blurbHash": "884b25243e1a6a15",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -2489,8 +2489,8 @@
               "draftedBy": "2015: Rd 3, Pk 88 (MIN)"
             },
             {
-              "id": "4033812",
-              "name": "Jake Hansen",
+              "id": "4241250",
+              "name": "Jake Hummel",
               "label": "LB",
               "debutYear": null,
               "experience": 5,
@@ -2516,8 +2516,8 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 2nd of 32.",
-          "blurb": "Takes the ball away often and pressures the quarterback through Will Anderson Jr. and Danielle Hunter, with Derek Stingley Jr. and Kamari Lassiter at cornerback.",
-          "blurbHash": "be48e336467e78f1",
+          "blurb": "Gets after the quarterback through Will Anderson Jr. and Danielle Hunter, and takes the ball away as often as any defence, with Derek Stingley Jr. and Kamari Lassiter covering.",
+          "blurbHash": "01db2182df027051",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -2738,19 +2738,19 @@
               "draftedBy": null
             },
             {
-              "id": "4683151",
-              "name": "Deion Burks",
+              "id": "4061956",
+              "name": "Ashton Dulin",
               "label": "KR",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 7, Pk 254 (IND)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             }
           ],
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league at kicking field goals last season — 2nd of 32.",
-          "blurb": "Kicker Spencer Shrader missed almost nothing last season, and Deion Burks, a seventh-round pick in his first year, handles the kick returns.",
-          "blurbHash": "2cdff2599322fdcd",
+          "blurb": "Kicking is the strength here: Spencer Shrader missed barely anything, making better than nine in ten field goals, with Ashton Dulin returning kicks.",
+          "blurbHash": "d888e8befdfb015c",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -2883,11 +2883,11 @@
               "draftedBy": "2019: Rd 1, Pk 7 (JAX)"
             },
             {
-              "id": "4426646",
-              "name": "Jared Bartlett",
+              "id": "4334300",
+              "name": "Dennis Gardeck",
               "label": "LB",
-              "debutYear": null,
-              "experience": 1,
+              "debutYear": 2018,
+              "experience": 9,
               "draftedBy": null
             },
             {
@@ -2910,8 +2910,8 @@
           "rank": 8,
           "score": 4,
           "note": "Better than most for points allowed last season, 8th of 32.",
-          "blurb": "A unit that takes the ball away as well as almost anyone but rarely gets to the quarterback, despite two former first-overall-type pass rushers in Travon Walker and Josh Hines-Allen.",
-          "blurbHash": "a07c5810c39cb483",
+          "blurb": "Takes the ball away about as often as anyone, but rarely sacks the quarterback despite first-round pass rushers Travon Walker and Josh Hines-Allen. Travis Hunter also plays receiver.",
+          "blurbHash": "482200085bfd1544",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -3414,8 +3414,8 @@
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 1st of 32.",
-          "blurb": "Matthew Stafford threw more touchdown passes than any other quarterback, with Puka Nacua and Davante Adams outside and Kyren Williams running efficiently behind them.",
-          "blurbHash": "7786fd6b90a9650a",
+          "blurb": "Matthew Stafford threw more touchdown passes than any quarterback in the league, with Puka Nacua and Davante Adams catching them and Kyren Williams running efficiently behind them.",
+          "blurbHash": "fbfd33dd25732c47",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -3501,8 +3501,8 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most for points allowed last season, 10th of 32.",
-          "blurb": "A pass rush that already got home often has added Myles Garrett by trade, and Trent McDuffie arrives from Kansas City to join a secondary that takes the ball away.",
-          "blurbHash": "506e09ff277530ea",
+          "blurb": "Reshaped for now: Myles Garrett arrived by trade, Trent McDuffie was bought from Kansas City, and Aaron Donald has un-retired, joining a group that already rushed and took the ball away well.",
+          "blurbHash": "cda7fff9480edbbd",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -3537,8 +3537,8 @@
           "rank": 28,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals last season — 28th of 32.",
-          "blurb": "Harrison Mevis, in his second season, was accurate on field goals, with Jordan Whittington returning kicks; the return and coverage work is where the value drains away.",
-          "blurbHash": "26fe120726c659be",
+          "blurb": "A young kicker in Harrison Mevis handles the field goals, converting close to four in five, with Jordan Whittington returning kicks.",
+          "blurbHash": "08192efee2052236",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -3781,12 +3781,12 @@
               "draftedBy": "2024: Rd 6, Pk 184 (MIA)"
             },
             {
-              "id": "4249417",
-              "name": "Jalen Tolbert",
+              "id": "4869645",
+              "name": "Caleb Douglas",
               "label": "WR",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 3, Pk 88 (DAL)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 75 (MIA)"
             },
             {
               "id": "4367209",
@@ -3808,8 +3808,8 @@
           "rank": 25,
           "score": 2,
           "note": "Below average for points scored last season, 25th of 32.",
-          "blurb": "Leaned on the run more than most last season, with De'Von Achane gaining ground quickly. Jeff Hafley now takes charge, and Malik Willis has been signed to start in place of the released Tua Tagovailoa.",
-          "blurbHash": "6455cad1a3401851",
+          "blurb": "Jeff Hafley takes over, so last year's run-leaning shape isn't necessarily his. De'Von Achane gains ground quickly on the carry, and Malik Willis was signed to start after Tua Tagovailoa's release.",
+          "blurbHash": "2a1dc4d62ac5cd41",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4648,12 +4648,12 @@
               "draftedBy": "2014: Rd 7, Pk 235 (OAK)"
             },
             {
-              "id": "4426542",
-              "name": "Darius Alexander",
-              "label": "DT",
+              "id": "4036132",
+              "name": "Chauncey Golston",
+              "label": "DE",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 3, Pk 65 (NYG)"
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 84 (DAL)"
             },
             {
               "id": "4725996",
@@ -4664,12 +4664,12 @@
               "draftedBy": "2025: Rd 1, Pk 3 (NYG)"
             },
             {
-              "id": "4242547",
-              "name": "Paulson Adebo",
+              "id": "4428328",
+              "name": "Deonte Banks",
               "label": "CB",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 3, Pk 76 (NO)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
             },
             {
               "id": "4361266",
@@ -4683,8 +4683,8 @@
           "rank": 26,
           "score": 2,
           "note": "Below average for points allowed last season, 26th of 32.",
-          "blurb": "Gets a reasonable number of sacks but takes the ball away about as seldom as any defence. Abdul Carter, the third pick of the 2025 draft, leads the rush; Paulson Adebo and Greg Newsome II play corner.",
-          "blurbHash": "86a1dd5ff5c7741c",
+          "blurb": "Gets a fair amount of pressure but rarely forces fumbles or interceptions. Abdul Carter, the third pick overall, is in his second season alongside corners Deonte Banks and Greg Newsome II.",
+          "blurbHash": "cb71b771fb4138d9",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -5778,8 +5778,8 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league for points scored last season, 18th of 32.",
-          "blurb": "Baker Mayfield throws to a deep receiver group of Chris Godwin and second-year Emeka Egbuka, while Bucky Irving's runs rarely gained much ground.",
-          "blurbHash": "f2b6351a68af24eb",
+          "blurb": "Built around Baker Mayfield, just handed a big extension, throwing to Chris Godwin and second-year Emeka Egbuka behind Tristan Wirfs. They pass a little less than most teams, and neither the run game nor the yards-per-throw travel far.",
+          "blurbHash": "ee7add7cc4c0d213",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5822,12 +5822,12 @@
         "defence": {
           "players": [
             {
-              "id": "4690795",
-              "name": "Elijah Roberts",
-              "label": "DE",
+              "id": "4427673",
+              "name": "Calijah Kancey",
+              "label": "DT",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 5, Pk 157 (TB)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 19 (TB)"
             },
             {
               "id": "3054857",
@@ -5865,8 +5865,8 @@
           "rank": 20,
           "score": 2,
           "note": "Below average for points allowed last season, 20th of 32.",
-          "blurb": "A defence that takes the ball away as often as almost anyone, with Zyon McCollum and second-year corner Benjamin Morrison at the back and Yaya Diaby leading the rush.",
-          "blurbHash": "56dc1cc6d272d8c8",
+          "blurb": "A group that takes the ball away more often than most, led by pass-rushing tackle Calijah Kancey and Yaya Diaby, with Zyon McCollum and second-year corner Benjamin Morrison behind them. Sacks come at an average rate.",
+          "blurbHash": "c0465af280d0c1e4",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -5890,19 +5890,19 @@
               "draftedBy": null
             },
             {
-              "id": "4371733",
-              "name": "Kenny Gainwell",
+              "id": "5097554",
+              "name": "Kameron Johnson",
               "label": "KR",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 5, Pk 150 (PHI)"
+              "experience": 3,
+              "draftedBy": null
             }
           ],
           "rank": 21,
           "score": 2,
           "note": "Below average at kicking field goals last season, 21st of 32.",
-          "blurb": "Chase McLaughlin is a reliable field-goal kicker, and Kenny Gainwell handles kick returns.",
-          "blurbHash": "580f087471e9bfff",
+          "blurb": "Kicker Chase McLaughlin is the strength here, making field goals at one of the better rates in the league, with Kameron Johnson handling kick returns.",
+          "blurbHash": "1b35075077a24797",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-09-08T14:52:15.272Z"
+  "unitNotesWrittenAt": "2026-09-09T02:13:42.914Z"
 }

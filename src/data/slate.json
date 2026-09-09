@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-08T14:51:33.538Z",
+  "fetchedAt": "2026-09-09T02:12:29.768Z",
   "games": [
     {
       "id": "401872656",
@@ -80,7 +80,7 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "PIT",
       "away": "ATL",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "FOX",
@@ -94,7 +94,7 @@
       "away": "CHI",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 47.5,
+      "overUnder": 46.5,
       "broadcast": "FOX",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -130,7 +130,7 @@
       "away": "MIA",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 40.5,
       "broadcast": "FOX",
       "venue": "Allegiant Stadium",
       "neutralSite": false
@@ -164,7 +164,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "LAC",
       "away": "ARI",
-      "spread": 10,
+      "spread": 9.5,
       "favourite": "home",
       "overUnder": 47.5,
       "broadcast": "CBS",
@@ -188,7 +188,7 @@
       "kickoff": "2026-09-15T00:15Z",
       "home": "KC",
       "away": "DEN",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "ESPN, ABC",
@@ -217,21 +217,31 @@
         "player": "Tyrell Shavers",
         "position": "WR",
         "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Noah Sewell",
-        "position": "LB",
-        "status": "Out"
       },
       {
-        "player": "Kyler Gordon",
+        "player": "Dorian Strong",
         "position": "CB",
         "status": "Out"
       }
     ],
+    "CHI": [
+      {
+        "player": "Kyler Gordon",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Noah Sewell",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CLE": [
+      {
+        "player": "Jeremiah Owusu-Koramoah",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Joe Royer",
         "position": "TE",
@@ -283,6 +293,11 @@
     ],
     "NE": [
       {
+        "player": "TreVeyon Henderson",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Harold Landry III",
         "position": "LB",
         "status": "Out"
@@ -313,11 +328,6 @@
       {
         "player": "Mykel Williams",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Isaac Guerendo",
-        "position": "RB",
         "status": "Out"
       }
     ],
