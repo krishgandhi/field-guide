@@ -124,7 +124,7 @@ Hard rules:
 - Never state a number that is not in the supplied evidence.
 - Use AT MOST two figures, and spell them out: "more than four thousand career rushing yards". A line that ends in a list of totals reads like a stat sheet, which is the thing this site replaces. One vivid number beats four.
 - Do not repeat his name — the card shows it directly above your sentences.
-- Plain spoken English, roughly 45 to 65 words total, ending in a full stop.
+- Plain spoken English, 45 to 65 words total, never more than 75, ending in a full stop. Anything longer is thrown away and the player gets no line at all — Aaron Donald's first attempt ran to 88 and was lost.
 - Explain a position the first time it would puzzle someone: "a centre, the lineman who snaps the ball".
 - No jargon a newcomer wouldn't know, and no fantasy-football framing.`;
 
