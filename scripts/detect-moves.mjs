@@ -175,10 +175,22 @@ for (const c of candidates) {
   );
 }
 
-// Mark everything examined as seen, not just the survivors — otherwise the
-// same rejected articles get re-examined every day forever.
+// Everything examined is marked seen EXCEPT the candidates, so rejected
+// articles don't get re-examined daily while live ones survive to be drafted.
+//
+// Marking candidates here too is what lost Aaron Donald. He came out of
+// retirement and re-signed with the Rams on 30 August, the biggest story of
+// the offseason; the detector read those articles, filed them as seen, and the
+// drafting step then failed on an empty API balance. The worklist is replaced
+// every run and this feed only reaches back about two days, so by the time
+// anyone looked the story was unreachable. Nothing anywhere reported a
+// problem. A candidate now stays unseen until draft-moves.mjs records an
+// outcome for it.
+const candidateIds = new Set(candidates.map((c) => c.id));
 const nextSeen = [
-  ...articles.map((a) => String(a.id ?? "")).filter(Boolean),
+  ...articles
+    .map((a) => String(a.id ?? ""))
+    .filter((id) => id && !candidateIds.has(id)),
   ...seen,
 ];
 const trimmed = [...new Set(nextSeen)].slice(0, SEEN_LIMIT);
@@ -186,13 +198,27 @@ const trimmed = [...new Set(nextSeen)].slice(0, SEEN_LIMIT);
 mkdirSync("src/data", { recursive: true });
 writeFileSync(SEEN, `${JSON.stringify(trimmed, null, 2)}\n`);
 
-// Candidates are a worklist, not an archive: each run replaces the file with
-// what is currently outstanding. Anything already drafted or dismissed is in
-// the seen list and won't come back.
+// Candidates are a worklist, and it now persists across runs. Replacing the
+// file wholesale meant a candidate had exactly one night to be drafted: if the
+// drafting step failed, the next morning's run overwrote it and the story was
+// gone, because this feed only reaches back about two days. Carrying the
+// undecided ones forward gives the pipeline as many attempts as it needs.
+// Anything drafted, held or dismissed is in the seen list by then and drops
+// out here.
+const carried = (readJson(OUT, {}).candidates ?? []).filter(
+  (c) => c?.id && !seen.has(c.id) && !candidateIds.has(c.id),
+);
+const worklist = [...candidates, ...carried]
+  .sort((a, b) => String(b.published ?? "").localeCompare(String(a.published ?? "")))
+  .slice(0, 40);
+if (carried.length > 0) {
+  console.log(`Carried ${carried.length} undecided candidate(s) forward.`);
+}
+
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { generatedAt: new Date().toISOString(), candidates },
+    { generatedAt: new Date().toISOString(), candidates: worklist },
     null,
     2,
   )}\n`,

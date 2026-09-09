@@ -1,4 +1,70 @@
 {
-  "generatedAt": "2026-09-08T15:54:36.270Z",
-  "candidates": []
+  "generatedAt": "2026-09-09T01:39:47.861Z",
+  "candidates": [
+    {
+      "id": "49775423",
+      "headline": "With deal done, Donald '100% committed' to Rams' title chase",
+      "description": "Aaron Donald, 35, a three-time Defensive Player of the Year and an eight-time first-team All-Pro, formally returned from retirement on Sunday, signing a one-year, $20 million contract with the Los Angeles Rams.",
+      "published": "2026-08-31",
+      "likelyKind": "signing",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "16716",
+          "name": "Aaron Donald",
+          "position": "Defensive Tackle"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49775423/sources-aaron-donald-unretires-reaches-20m-deal-rams"
+    },
+    {
+      "id": "49872406",
+      "headline": "Buccaneers extend Baker Mayfield: Key intel and a grade",
+      "description": "Why did Mayfield change his mind about a negotiating deadline, and what does it mean for other QBs?",
+      "published": "2026-09-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Tampa Bay Buccaneers"
+      ],
+      "teamIds": [
+        "TB"
+      ],
+      "players": [
+        {
+          "id": "3052587",
+          "name": "Baker Mayfield",
+          "position": "Quarterback",
+          "currentTeam": "TB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49872406/key-intel-grade"
+    },
+    {
+      "id": "49872379",
+      "headline": "Bucs, Baker Mayfield agree to 3-year extension, sources say",
+      "description": "The Buccaneers and quarterback Baker Mayfield have agreed to a three-year, $165 million extension, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
+      "published": "2026-09-08",
+      "likelyKind": "transaction",
+      "teams": [
+        "Tampa Bay Buccaneers"
+      ],
+      "teamIds": [
+        "TB"
+      ],
+      "players": [
+        {
+          "id": "3052587",
+          "name": "Baker Mayfield",
+          "position": "Quarterback",
+          "currentTeam": "TB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49872379/bucs-baker-mayfield-agree-3-year-extension-sources-say"
+    }
+  ]
 }

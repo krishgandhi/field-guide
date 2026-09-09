@@ -32,6 +32,16 @@ import Anthropic from "@anthropic-ai/sdk";
 import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
 
 const CANDIDATES = "src/data/move-candidates.json";
+/**
+ * Detection deliberately leaves candidates unseen (see detect-moves.mjs), so
+ * this script owns retiring them. A candidate is seen once it has an outcome —
+ * published, held, or judged not a move. If this script never runs, nothing is
+ * retired and the candidate comes back tomorrow, which is the behaviour that
+ * was missing when the API balance ran out and Aaron Donald's signing was
+ * quietly dropped.
+ */
+const SEEN = "src/data/seen-news.json";
+const SEEN_LIMIT = 500;
 const PUBLISHED = "content/moves";
 /** Where a draft goes when it fails validation — never rendered by the site. */
 const HELD = "content/moves/_drafts";
@@ -233,6 +243,8 @@ if (!SELF_TEST) mkdirSync(HELD, { recursive: true });
 let written = 0;
 let skipped = 0;
 let rejected = 0;
+/** Candidate ids that reached an outcome and should not come back. */
+const decided = [];
 
 for (const entry of entries) {
   const candidate = candidates.find((c) => c.id === entry.id);
@@ -240,6 +252,7 @@ for (const entry of entries) {
 
   if (entry.skip) {
     skipped++;
+    decided.push(candidate.id);
     console.log(`  skip   ${candidate.headline}`);
     console.log(`         ${entry.skipReason ?? "no reason given"}`);
     continue;
@@ -311,6 +324,7 @@ ${entry.body.trim()}
   if (held) {
     writeFileSync(`${HELD}/${slug}.mdx`, mdx);
     rejected++;
+    decided.push(candidate.id);
     console.log(`  HELD    ${slug}.mdx`);
     for (const p of problems) console.log(`          ${p}`);
     continue;
@@ -318,7 +332,14 @@ ${entry.body.trim()}
 
   writeFileSync(`${PUBLISHED}/${slug}.mdx`, mdx);
   written++;
+  decided.push(candidate.id);
   console.log(`  publish ${slug}.mdx${sensitive ? "  (sensitive)" : ""}`);
+}
+
+if (!SELF_TEST && decided.length > 0) {
+  const seen = existsSync(SEEN) ? JSON.parse(readFileSync(SEEN, "utf8")) : [];
+  const next = [...new Set([...decided, ...seen])].slice(0, SEEN_LIMIT);
+  writeFileSync(SEEN, `${JSON.stringify(next, null, 2)}\n`);
 }
 
 console.log(
