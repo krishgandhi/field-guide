@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T02:12:36.425Z",
+  "fetchedAt": "2026-09-09T02:16:47.306Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -6307,6 +6307,5 @@
         }
       }
     }
-  },
-  "unitNotesWrittenAt": "2026-09-09T02:13:42.914Z"
+  }
 }
