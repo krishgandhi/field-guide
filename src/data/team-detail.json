@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T15:00:00.903Z",
+  "fetchedAt": "2026-09-10T14:46:15.366Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -262,8 +262,8 @@
           "rank": 24,
           "score": 2,
           "note": "Below average for points scored last season, 24th of 32.",
-          "blurb": "They run more than most teams do, built around Bijan Robinson, with Tua Tagovailoa throwing to Drake London and Kyle Pitts and Jake Matthews still at left tackle. Passing touchdowns have been scarce.",
-          "blurbHash": "fd18b38d3ddc0d18",
+          "blurb": "A run-leaning group by league standards, built around Bijan Robinson on the ground and Drake London outside, with Tua Tagovailoa throwing. Touchdowns through the air were hard to come by.",
+          "blurbHash": "0a17eceb313b69c8",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -300,11 +300,19 @@
             }
           },
           "passPlayShare": 54.5,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": null
         },
         "defence": {
           "players": [
+            {
+              "id": "4376288",
+              "name": "LaCale London",
+              "label": "DE",
+              "debutYear": 2020,
+              "experience": 3,
+              "draftedBy": null
+            },
             {
               "id": "4427090",
               "name": "Brandon Dorlus",
@@ -312,14 +320,6 @@
               "debutYear": null,
               "experience": 3,
               "draftedBy": "2024: Rd 4, Pk 109 (ATL)"
-            },
-            {
-              "id": "4429014",
-              "name": "Gervon Dexter Sr.",
-              "label": "DT",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 2, Pk 53 (CHI)"
             },
             {
               "id": "3045527",
@@ -349,8 +349,8 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league for points allowed last season, 19th of 32.",
-          "blurb": "A pass rush that piles up sacks as well as almost anyone, backed by cornerbacks A.J. Terrell and Mike Hughes, and they take the ball away regularly too.",
-          "blurbHash": "a4c64e01e32c49b6",
+          "blurb": "A unit that gets after the quarterback about as well as anyone and takes the ball away often, with Samson Ebukam and Brandon Dorlus up front and A.J. Terrell Jr. at corner.",
+          "blurbHash": "de8771dbcb690aae",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -459,8 +459,8 @@
           "rank": 11,
           "score": 4,
           "note": "Better than most for points scored last season, 11th of 32.",
-          "blurb": "Last year they ran far more than the league norm and gained more per carry than anyone, with Lamar Jackson's own carries a real part of it and Derrick Henry beside him. Jesse Minter now takes over as head coach.",
-          "blurbHash": "90af3da28253c01e",
+          "blurb": "Last year it ran far more than most teams and gained more per carry than anyone, through Derrick Henry and Lamar Jackson's own legs. Jesse Minter now takes over, so that balance may shift.",
+          "blurbHash": "29401aa495e20f9d",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -497,7 +497,7 @@
             }
           },
           "passPlayShare": 51.5,
-          "passPlayShareRank": 29,
+          "passPlayShareRank": 28,
           "quarterbackCarries": 67
         },
         "defence": {
@@ -853,8 +853,8 @@
           "rank": 27,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 27th of 32.",
-          "blurb": "Built around Bryce Young, the first pick of the 2023 draft, with Chuba Hubbard running and second-year receiver Tetairoa McMillan the main target. Yards per pass have been hard to come by.",
-          "blurbHash": "101aceb292d027d4",
+          "blurb": "Leans on the run more than most, though it rarely gets carries into the end zone. Bryce Young throws to Tetairoa McMillan, in his second season, with Chuba Hubbard carrying.",
+          "blurbHash": "b07c8c549754ead4",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -891,7 +891,7 @@
             }
           },
           "passPlayShare": 54.4,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1050,8 +1050,8 @@
           "rank": 9,
           "score": 4,
           "note": "Better than most for points scored last season, 9th of 32.",
-          "blurb": "Ran the ball more than most teams last season and averaged big gains doing it, while barely giving the ball away. Caleb Williams, the first pick of the 2024 draft, is in his third year.",
-          "blurbHash": "4dcbee83ad1f1f52",
+          "blurb": "Runs the ball more than most teams and gains good yards doing it, while rarely giving the ball away. Caleb Williams throws to a very young group in Rome Odunze, Luther Burden III and Colston Loveland.",
+          "blurbHash": "ad9bf1e0d3e2e8dc",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -1088,7 +1088,7 @@
             }
           },
           "passPlayShare": 54.2,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": null
         },
         "defence": {
@@ -1838,8 +1838,8 @@
           "rank": 14,
           "score": 3,
           "note": "Middle of the league for points scored last season, 14th of 32.",
-          "blurb": "Scores on the ground reasonably often but does not gain much per throw, with third-year quarterback Bo Nix working behind Sean Payton's play-calling.",
-          "blurbHash": "f2212eb2a801132a",
+          "blurb": "Built around Bo Nix, Courtland Sutton and Jaylen Waddle, though the passing game gained little per throw. J.K. Dobbins and the run got them into the end zone more often.",
+          "blurbHash": "f1ac63e36c86f8bc",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -1876,19 +1876,11 @@
             }
           },
           "passPlayShare": 58.2,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": null
         },
         "defence": {
           "players": [
-            {
-              "id": "4039064",
-              "name": "Malcolm Roach",
-              "label": "DT",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": null
-            },
             {
               "id": "3915282",
               "name": "Zach Allen",
@@ -1896,6 +1888,14 @@
               "debutYear": 2019,
               "experience": 8,
               "draftedBy": "2019: Rd 3, Pk 65 (ARI)"
+            },
+            {
+              "id": "4039064",
+              "name": "Malcolm Roach",
+              "label": "DT",
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": null
             },
             {
               "id": "4360259",
@@ -1925,8 +1925,8 @@
           "rank": 3,
           "score": 5,
           "note": "Among the best in the league for points allowed last season — 3rd of 32.",
-          "blurb": "A pass-rushing unit above all — nobody in the league sacked the quarterback more, with Nik Bonitto and Zach Allen up front and Pat Surtain II covering — though they seldom force turnovers.",
-          "blurbHash": "ec426613c08b1f79",
+          "blurb": "Sacked the quarterback more than any other team, with Zach Allen and Nik Bonitto rushing and Pat Surtain II covering, but takeaways were scarce.",
+          "blurbHash": "86b4faa2be457aef",
           "promptVersion": 6,
           "stats": {
             "sacks": {
@@ -2232,8 +2232,8 @@
           "rank": 16,
           "score": 3,
           "note": "Middle of the league for points scored last season, 16th of 32.",
-          "blurb": "One of the most run-leaning teams in the league last season, though the running itself gained little; Jordan Love's throws travel far and the ball is almost never given away.",
-          "blurbHash": "78e011b5efcf8010",
+          "blurb": "Throws less often than almost anyone, yet gains plenty when Jordan Love does throw to Jayden Reed and Tucker Kraft. Yards per carry were thin, and they hardly ever lose the ball.",
+          "blurbHash": "ad02f1ad1c2e3e2c",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -2270,7 +2270,7 @@
             }
           },
           "passPlayShare": 51.3,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 29,
           "quarterbackCarries": null
         },
         "defence": {
@@ -2429,8 +2429,8 @@
           "rank": 13,
           "score": 4,
           "note": "Better than most for points scored last season, 13th of 32.",
-          "blurb": "Built around C.J. Stroud throwing to Nico Collins, and they slightly favour the pass. The running game gains little per carry and rarely reaches the end zone, but they hand the ball over less than almost anyone.",
-          "blurbHash": "884b25243e1a6a15",
+          "blurb": "Runs through C.J. Stroud and Nico Collins and takes very good care of the ball, but the ground game with David Montgomery gained little and scored rarely.",
+          "blurbHash": "b38954a0b8f18465",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -2467,7 +2467,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3217,8 +3217,8 @@
           "rank": 20,
           "score": 2,
           "note": "Below average for points scored last season, 20th of 32.",
-          "blurb": "Justin Herbert throwing to Ladd McConkey is the centre of this, with Omarion Hampton running behind Rashawn Slater; they moved the ball on the ground but rarely scored that way.",
-          "blurbHash": "eef2da195bc77675",
+          "blurb": "Justin Herbert throwing to Ladd McConkey is the centre of this offence, with Omarion Hampton, in his second season, carrying. Rushing touchdowns were rare.",
+          "blurbHash": "24ea686630d2a9ce",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -3255,7 +3255,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3723,19 +3723,19 @@
               "draftedBy": "2019: Rd 5, Pk 145 (TB)"
             },
             {
-              "id": "4428718",
-              "name": "Tre Tucker",
+              "id": "4366963",
+              "name": "Dylan Laube",
               "label": "KR",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 100 (LV)"
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 208 (LV)"
             }
           ],
           "rank": 25,
           "score": 2,
           "note": "Below average at kicking field goals last season, 25th of 32.",
-          "blurb": "Matt Gay was reliable on field goals and Tre Tucker doubles up as the kick returner, all now under new head coach Klint Kubiak.",
-          "blurbHash": "5bbcaad5e2a2a87f",
+          "blurb": "Matt Gay is a reliable field-goal kicker and Dylan Laube handles kick returns. Klint Kubiak is now the head coach, his first season in the job.",
+          "blurbHash": "f8dd71c6ca3423cd",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
@@ -3808,8 +3808,8 @@
           "rank": 25,
           "score": 2,
           "note": "Below average for points scored last season, 25th of 32.",
-          "blurb": "Jeff Hafley takes over, so last year's run-leaning shape isn't necessarily his. De'Von Achane gains ground quickly on the carry, and Malik Willis was signed to start after Tua Tagovailoa's release.",
-          "blurbHash": "2a1dc4d62ac5cd41",
+          "blurb": "Miami have released Tua Tagovailoa and handed the job to Malik Willis, with Jeff Hafley taking over as head coach. De'Von Achane leads a run game that gained good yards per carry but the ball got given away too often.",
+          "blurbHash": "4a14c788d80e19fb",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -3846,7 +3846,7 @@
             }
           },
           "passPlayShare": 54.5,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4005,8 +4005,8 @@
           "rank": 26,
           "score": 2,
           "note": "Below average for points scored last season, 26th of 32.",
-          "blurb": "An offence built around Justin Jefferson and Jordan Addison outside, but it gave the ball away more than any other team and got little out of the passing game. Kyler Murray now starts ahead of J.J. McCarthy.",
-          "blurbHash": "a9d50d104481bfc2",
+          "blurb": "Built around Justin Jefferson and Jordan Addison outside, though the passing game produced few big gains or touchdowns last year. Kyler Murray has been named the starter ahead of J.J. McCarthy, who Minnesota drafted tenth overall.",
+          "blurbHash": "747f47be3913ef36",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4043,7 +4043,7 @@
             }
           },
           "passPlayShare": 57,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4202,8 +4202,8 @@
           "rank": 2,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 2nd of 32.",
-          "blurb": "Drake Maye gains more per throw than any other passer and is a big part of the running game himself, carrying it often. A.J. Brown was traded in from Philadelphia to be the main target.",
-          "blurbHash": "9987aa489810d69f",
+          "blurb": "They throw less than most teams but get more per pass than anyone, with Drake Maye at the controls and Rhamondre Stevenson's ground game chipping in plenty of scores. A.J. Brown arrives by trade from Philadelphia.",
+          "blurbHash": "d2f79ef761862883",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4239,9 +4239,9 @@
               "rank": 23
             }
           },
-          "passPlayShare": 58.4,
-          "passPlayShareRank": 15,
-          "quarterbackCarries": 103
+          "passPlayShare": 53,
+          "passPlayShareRank": 26,
+          "quarterbackCarries": 7
         },
         "defence": {
           "players": [
@@ -4793,8 +4793,8 @@
           "rank": 29,
           "score": 1,
           "note": "Among the worst in the league for points scored last season — 29th of 32.",
-          "blurb": "The ball moves on the ground with Breece Hall, but they gained less per pass than nearly everyone and threw for few touchdowns, with Geno Smith and Garrett Wilson.",
-          "blurbHash": "14797e2ee956a68e",
+          "blurb": "They run the ball well enough per carry with Breece Hall, but almost nothing comes through the air — the fewest yards per throw of nearly any team, despite Garrett Wilson.",
+          "blurbHash": "cbc11989ca9563cd",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -4831,7 +4831,7 @@
             }
           },
           "passPlayShare": 54.9,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5384,8 +5384,8 @@
           "rank": 3,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 3rd of 32.",
-          "blurb": "They throw less often than almost every team, but Sam Darnold gets big yardage when they do, with Jaxon Smith-Njigba the main target and rookie Jadarian Price in the backfield.",
-          "blurbHash": "94047f4740af866e",
+          "blurb": "One of the league's most run-leaning teams by play-calling, yet when Sam Darnold does throw, mostly to Jaxon Smith-Njigba, the gains are among the biggest anywhere. Rookie back Jadarian Price was their first-round pick.",
+          "blurbHash": "c70fbea26c51eb9b",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5421,9 +5421,9 @@
               "rank": 2
             }
           },
-          "passPlayShare": 51.8,
-          "passPlayShareRank": 28,
-          "quarterbackCarries": 35
+          "passPlayShare": 50,
+          "passPlayShareRank": 31,
+          "quarterbackCarries": 0
         },
         "defence": {
           "players": [
@@ -5581,8 +5581,8 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most for points scored last season, 10th of 32.",
-          "blurb": "Brock Purdy's passing produced plenty of touchdowns to a veteran cast in Kittle, Evans and Deebo Samuel, while runs went nowhere — among the lowest yards per carry in the league.",
-          "blurbHash": "4ae86cf17716afa9",
+          "blurb": "The running game gains little per carry, so the scoring comes through the air — Brock Purdy throwing to George Kittle, Deebo Samuel and Mike Evans, with Christian McCaffrey doing plenty of the work.",
+          "blurbHash": "1aa12131b0f8972b",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5619,7 +5619,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": null
         },
         "defence": {
@@ -5778,8 +5778,8 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league for points scored last season, 18th of 32.",
-          "blurb": "Built around Baker Mayfield, just handed a big extension, throwing to Chris Godwin and second-year Emeka Egbuka behind Tristan Wirfs. They pass a little less than most teams, and neither the run game nor the yards-per-throw travel far.",
-          "blurbHash": "ee7add7cc4c0d213",
+          "blurb": "Baker Mayfield, just handed a three-year extension, is the centre of it, throwing to Chris Godwin and Emeka Egbuka, with Bucky Irving's runs not gaining much per carry.",
+          "blurbHash": "9e3286ffcb9bf0cc",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5816,7 +5816,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6172,8 +6172,8 @@
           "rank": 22,
           "score": 2,
           "note": "Below average for points scored last season, 22nd of 32.",
-          "blurb": "Runs the ball about as often as any team and does it well, with Jayden Daniels steering things and scoring on the ground far more often than through the air.",
-          "blurbHash": "c3e04a5c9e125553",
+          "blurb": "One of the most run-leaning teams in the league, and they move the ball well on the ground, but their passing game with Jayden Daniels produced few touchdowns despite Terry McLaurin and Stefon Diggs.",
+          "blurbHash": "7e1ffaff70621485",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -6210,7 +6210,7 @@
             }
           },
           "passPlayShare": 51.1,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 30,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-09-09T15:00:31.631Z"
+  "unitNotesWrittenAt": "2026-09-10T14:47:37.357Z"
 }

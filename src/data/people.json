@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T15:00:04.749Z",
+  "fetchedAt": "2026-09-10T14:46:18.075Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -464,13 +464,13 @@
         "Fumbles Lost": "5"
       },
       "season": {
-        "Receptions": "78",
-        "Receiving Targets": "121",
-        "Receiving Yards": "1,003",
-        "Yards Per Reception": "12.9",
-        "Receiving Touchdowns": "7",
-        "Long Reception": "45",
-        "Receiving First Downs": "47",
+        "Receptions": "3",
+        "Receiving Targets": "4",
+        "Receiving Yards": "26",
+        "Yards Per Reception": "8.7",
+        "Receiving Touchdowns": "0",
+        "Long Reception": "14",
+        "Receiving First Downs": "2",
         "Rushing Attempts": "0",
         "Rushing Yards": "0",
         "Yards Per Rush Attempt": "0.0",
@@ -480,8 +480,8 @@
         "Fumbles Lost": "0"
       },
       "headshot": "/players/4047646.png",
-      "evidenceHash": "e6475e83ae9e0033",
-      "blurb": "A wide receiver taken in the second round in 2019, now in his eighth season and on his third team after a June trade to New England. He is a genuine number one receiver, the kind a defence has to plan its whole week around, with more than eight thousand career yards and a thousand-yard season behind him.",
+      "evidenceHash": "5bc4c20ad83e72a4",
+      "blurb": "A wide receiver, taken in the second round of the 2019 draft and now in his eighth season, recently traded to New England. He is a genuine number one target — the kind of player a defence has to plan its whole week around — with more than eight thousand career receiving yards and a habit of scoring, though even a great receiver can only lift an offence so far by himself.",
       "promptVersion": 2
     },
     "4241479": {
@@ -752,26 +752,26 @@
         "Kicks Blocked": "0"
       },
       "season": {
-        "Total Tackles": "72",
-        "Solo Tackles": "48",
-        "Assist Tackles": "24",
-        "Sacks": "0.5",
+        "Total Tackles": "5",
+        "Solo Tackles": "0",
+        "Assist Tackles": "5",
+        "Sacks": "0",
         "Forced Fumbles": "0",
-        "Fumbles Recovered": "1",
+        "Fumbles Recovered": "0",
         "Fumbles Recovered Yards": "0",
-        "Interceptions": "1",
-        "Interception Yards": "3",
-        "Average Interception Yards": "3.0",
+        "Interceptions": "0",
+        "Interception Yards": "0",
+        "Average Interception Yards": "0.0",
         "Interception Touchdowns": "0",
-        "Long Interception": "3",
-        "Passes Defended": "7",
-        "Stuffs": "2.5",
-        "Stuff Yards": "2",
+        "Long Interception": "0",
+        "Passes Defended": "0",
+        "Stuffs": "0",
+        "Stuff Yards": "0",
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4575431.png",
-      "evidenceHash": "b148f3eb172e1286",
-      "blurb": "A cornerback, the position that covers receivers, drafted fifth overall in 2023 and now in his fourth season, all of them in Seattle. He has already been to three Pro Bowls, tackles plenty and once returned an interception nearly the length of the field — one of the best young cover men in football, and Seattle just paid him accordingly.",
+      "evidenceHash": "7af89b53f7c2752d",
+      "blurb": "A cornerback, one of the defenders whose job is covering receivers, picked fifth overall in 2023 and now in his fourth season. Three Pro Bowl selections already put him among the recognised best at the position, and Seattle have just committed well over a hundred million dollars to keep him, which is not something teams do for players they doubt.",
       "promptVersion": 2
     },
     "4578085": {
@@ -925,9 +925,9 @@
         "Kicks Blocked": "0"
       },
       "season": {
-        "Total Tackles": "69",
-        "Solo Tackles": "54",
-        "Assist Tackles": "15",
+        "Total Tackles": "2",
+        "Solo Tackles": "2",
+        "Assist Tackles": "0",
         "Sacks": "0",
         "Forced Fumbles": "0",
         "Fumbles Recovered": "0",
@@ -937,15 +937,16 @@
         "Average Interception Yards": "0.0",
         "Interception Touchdowns": "0",
         "Long Interception": "0",
-        "Passes Defended": "10",
-        "Stuffs": "1",
-        "Stuff Yards": "1",
+        "Passes Defended": "2",
+        "Stuffs": "0",
+        "Stuff Yards": "0",
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4686772.png",
-      "evidenceHash": "6d79d0133aec128d",
-      "blurb": "A cornerback — one of the defenders who covers receivers — picked seventeenth overall by New England in 2023 and now in his fourth season. He is the team's clear number one at the position and has been busy in coverage, with well over a hundred tackles already and plenty of passes knocked away, and New England has just made him the highest-paid cornerback in the league's history.",
+      "evidenceHash": "beb876e6aa9e1645",
+      "blurb": "A cornerback, the defender assigned to cover receivers, taken seventeenth overall in 2023 and now in his fourth season. He has no major awards yet, but New England rate him highly enough to hand him the largest contract ever given to a player at his position, which is about as strong a statement of belief as a club can make.",
       "promptVersion": 2
     }
-  }
+  },
+  "profilesWrittenAt": "2026-09-10T14:46:47.752Z"
 }

@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-09T14:59:54.505Z",
+  "fetchedAt": "2026-09-10T14:46:08.547Z",
   "games": [
-    {
-      "id": "401872656",
-      "kickoff": "2026-09-10T00:20Z",
-      "home": "SEA",
-      "away": "NE",
-      "spread": 3,
-      "favourite": "home",
-      "overUnder": 44.5,
-      "broadcast": "NBC",
-      "venue": "Lumen Field",
-      "neutralSite": false
-    },
     {
       "id": "401872657",
       "kickoff": "2026-09-11T00:35Z",
@@ -26,6 +14,18 @@
       "broadcast": "Netflix",
       "venue": "Melbourne Cricket Ground",
       "neutralSite": true
+    },
+    {
+      "id": "401872656",
+      "kickoff": "2026-09-10T00:20Z",
+      "home": "SEA",
+      "away": "NE",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "NBC",
+      "venue": "Lumen Field",
+      "neutralSite": false
     },
     {
       "id": "401872925",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 49.5,
+      "overUnder": 50.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -58,7 +58,7 @@
       "away": "NYJ",
       "spread": 1.5,
       "favourite": "home",
-      "overUnder": 39.5,
+      "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
       "neutralSite": false
@@ -128,7 +128,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "LV",
       "away": "MIA",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 40.5,
       "broadcast": "FOX",
@@ -229,11 +229,6 @@
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
-      },
-      {
-        "player": "Noah Sewell",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "CLE": [
@@ -279,6 +274,13 @@
         "status": "Out"
       }
     ],
+    "LV": [
+      {
+        "player": "Brock Bowers",
+        "position": "TE",
+        "status": "Doubtful"
+      }
+    ],
     "MIA": [
       {
         "player": "Storm Duck",
@@ -293,17 +295,32 @@
     ],
     "NE": [
       {
-        "player": "TreVeyon Henderson",
-        "position": "RB",
+        "player": "Behren Morton",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Harold Landry III",
-        "position": "LB",
+        "player": "Efton Chism III",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Karon Prunty",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "TreVeyon Henderson",
+        "position": "RB",
         "status": "Out"
       }
     ],
     "NO": [
+      {
+        "player": "Cameron Jordan",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Mason Tipton",
         "position": "WR",
@@ -333,13 +350,23 @@
     ],
     "SEA": [
       {
-        "player": "Zach Charbonnet",
-        "position": "RB",
+        "player": "Jalen Milroe",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Terrion Arnold",
-        "position": "CB",
+        "player": "Tory Horton",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Mike Morris",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Nick Kallerup",
+        "position": "TE",
         "status": "Out"
       }
     ],
