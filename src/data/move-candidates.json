@@ -1,29 +1,27 @@
 {
-  "generatedAt": "2026-09-10T15:45:32.765Z",
+  "generatedAt": "2026-09-11T15:47:19.649Z",
   "candidates": [
     {
-      "id": "49892248",
-      "headline": "Aaron Rodgers unsure if Packers would ever invite him to return",
-      "description": "Aaron Rodgers said an invite from the Packers for him to return to Lambeau in a nonplaying capacity -- or his acceptance if one were extended -- might not be a sure thing.",
-      "published": "2026-09-10",
+      "id": "49904397",
+      "headline": "Sources: Patriots to add DaQuan Jones on 1-year deal",
+      "description": "The Patriots are expected to sign free agent defensive tackle DaQuan Jones to a one-year deal worth up to $6 million, sources told NFL Network.",
+      "published": "2026-09-11",
       "likelyKind": "transaction",
       "teams": [
-        "Green Bay Packers",
-        "Pittsburgh Steelers"
+        "New England Patriots"
       ],
       "teamIds": [
-        "GB",
-        "PIT"
+        "NE"
       ],
       "players": [
         {
-          "id": "8439",
-          "name": "Aaron Rodgers",
-          "position": "Quarterback",
-          "currentTeam": "PIT"
+          "id": "16910",
+          "name": "DaQuan Jones",
+          "position": "Defensive Tackle",
+          "currentTeam": "BUF"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49892248/aaron-rodgers-unsure-packers-ever-invite-return"
+      "url": "https://www.espn.com/nfl/story/_/id/49904397/sources-patriots-add-daquan-jones-1-year-6m-deal"
     }
   ]
 }
