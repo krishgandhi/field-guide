@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-10T14:46:18.075Z",
+  "fetchedAt": "2026-09-11T14:49:36.640Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -238,26 +238,26 @@
         "Kicks Blocked": "3"
       },
       "season": {
-        "Total Tackles": "60",
-        "Solo Tackles": "43",
-        "Assist Tackles": "17",
-        "Sacks": "23",
-        "Forced Fumbles": "3",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "1",
-        "Stuffs": "15",
-        "Stuff Yards": "23",
-        "Kicks Blocked": "0"
+        "Total Tackles": "-",
+        "Solo Tackles": "-",
+        "Assist Tackles": "-",
+        "Sacks": "-",
+        "Forced Fumbles": "-",
+        "Fumbles Recovered": "-",
+        "Fumbles Recovered Yards": "-",
+        "Interceptions": "-",
+        "Interception Yards": "-",
+        "Average Interception Yards": "-",
+        "Interception Touchdowns": "-",
+        "Long Interception": "-",
+        "Passes Defended": "-",
+        "Stuffs": "-",
+        "Stuff Yards": "-",
+        "Kicks Blocked": "-"
       },
       "headshot": "/players/3122132.png",
-      "evidenceHash": "aba138afc7e912cd",
-      "blurb": "A defensive end — one of the linemen whose main job is chasing the quarterback — taken first overall in 2017 and now a decade into his career, currently with the Rams after a blockbuster trade out of Cleveland. He has won Defensive Player of the Year twice and has more than a hundred and twenty career sacks, including a single-season record on his way out of Cleveland; simply put, the best defensive player in football.",
+      "evidenceHash": "f3533aa849955bab",
+      "blurb": "A defensive end — one of the linemen whose job is to chase down the quarterback — taken first overall in 2017 and now in his tenth season, recently traded from Cleveland to the Rams. He is the best defensive player in football, a two-time Defensive Player of the Year with more than a hundred and twenty-five career sacks, and he set the single-season record on his way out of Cleveland.",
       "promptVersion": 2
     },
     "3916945": {
@@ -448,13 +448,13 @@
       "college": "Ole Miss",
       "awards": [],
       "career": {
-        "Receptions": "524",
-        "Receiving Targets": "816",
-        "Receiving Yards": "8,029",
+        "Receptions": "527",
+        "Receiving Targets": "820",
+        "Receiving Yards": "8,055",
         "Yards Per Reception": "15.3",
         "Receiving Touchdowns": "56",
         "Long Reception": "91",
-        "Receiving First Downs": "366",
+        "Receiving First Downs": "368",
         "Rushing Attempts": "5",
         "Rushing Yards": "70",
         "Yards Per Rush Attempt": "14.0",
@@ -480,8 +480,8 @@
         "Fumbles Lost": "0"
       },
       "headshot": "/players/4047646.png",
-      "evidenceHash": "5bc4c20ad83e72a4",
-      "blurb": "A wide receiver, taken in the second round of the 2019 draft and now in his eighth season, recently traded to New England. He is a genuine number one target — the kind of player a defence has to plan its whole week around — with more than eight thousand career receiving yards and a habit of scoring, though even a great receiver can only lift an offence so far by himself.",
+      "evidenceHash": "e1ada099a0647674",
+      "blurb": "A wide receiver picked in the second round in 2019, now eight seasons in and on his way to New England after a spell in Philadelphia. He is a genuine number one target, the kind a defence has to plan its whole week around, with more than eight thousand career receiving yards and a knack for the big play.",
       "promptVersion": 2
     },
     "4241479": {
@@ -626,8 +626,8 @@
       "college": "Washington",
       "awards": [],
       "career": {
-        "Total Tackles": "246",
-        "Solo Tackles": "178",
+        "Total Tackles": "250",
+        "Solo Tackles": "182",
         "Assist Tackles": "68",
         "Sacks": "5.5",
         "Forced Fumbles": "8",
@@ -638,32 +638,32 @@
         "Average Interception Yards": "0.7",
         "Interception Touchdowns": "0",
         "Long Interception": "2",
-        "Passes Defended": "34",
+        "Passes Defended": "36",
         "Stuffs": "9",
-        "Stuff Yards": "26",
+        "Stuff Yards": "27",
         "Kicks Blocked": "0"
       },
       "season": {
-        "Total Tackles": "63",
-        "Solo Tackles": "45",
-        "Assist Tackles": "18",
-        "Sacks": "1",
-        "Forced Fumbles": "1",
+        "Total Tackles": "4",
+        "Solo Tackles": "4",
+        "Assist Tackles": "0",
+        "Sacks": "0",
+        "Forced Fumbles": "0",
         "Fumbles Recovered": "0",
         "Fumbles Recovered Yards": "0",
-        "Interceptions": "1",
-        "Interception Yards": "2",
-        "Average Interception Yards": "2.0",
+        "Interceptions": "0",
+        "Interception Yards": "0",
+        "Average Interception Yards": "0.0",
         "Interception Touchdowns": "0",
-        "Long Interception": "2",
-        "Passes Defended": "7",
-        "Stuffs": "1",
-        "Stuff Yards": "5",
+        "Long Interception": "0",
+        "Passes Defended": "2",
+        "Stuffs": "0",
+        "Stuff Yards": "1",
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4426405.png",
-      "evidenceHash": "4bcf3cfb2e8d880e",
-      "blurb": "A cornerback — one of the defenders who covers receivers — picked twenty-first overall in 2022 and now in his fifth season, traded from Kansas City to the Rams. He is an All-Pro still only twenty-five, the sort of player teams simply do not sell, and the Rams paid him like the best in the league; the one worry is the knee injury that ended his last season.",
+      "evidenceHash": "daa0f973abda2fd4",
+      "blurb": "A cornerback, one of the players tasked with covering receivers, drafted in the first round in 2022 by Kansas City and now in his fifth season after a trade to the Rams. He is an All-Pro still only twenty-five, good enough that Los Angeles paid him like the best in the league, though a knee injury cut his last season short.",
       "promptVersion": 2
     },
     "4433970": {
@@ -734,9 +734,9 @@
       "college": "Illinois",
       "awards": [],
       "career": {
-        "Total Tackles": "249",
+        "Total Tackles": "254",
         "Solo Tackles": "170",
-        "Assist Tackles": "79",
+        "Assist Tackles": "84",
         "Sacks": "4.5",
         "Forced Fumbles": "2",
         "Fumbles Recovered": "1",
@@ -770,8 +770,8 @@
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4575431.png",
-      "evidenceHash": "7af89b53f7c2752d",
-      "blurb": "A cornerback, one of the defenders whose job is covering receivers, picked fifth overall in 2023 and now in his fourth season. Three Pro Bowl selections already put him among the recognised best at the position, and Seattle have just committed well over a hundred million dollars to keep him, which is not something teams do for players they doubt.",
+      "evidenceHash": "f94832b67985ddea",
+      "blurb": "A cornerback taken fifth overall in 2023 and now in his fourth season with Seattle, the team that drafted him. He is among the best young cover men in the game, a three-time Pro Bowler who just signed a four-year deal worth more than a hundred and thirty million dollars to stay put.",
       "promptVersion": 2
     },
     "4578085": {
@@ -907,8 +907,8 @@
       "college": "Oregon",
       "awards": [],
       "career": {
-        "Total Tackles": "145",
-        "Solo Tackles": "118",
+        "Total Tackles": "147",
+        "Solo Tackles": "120",
         "Assist Tackles": "27",
         "Sacks": "1",
         "Forced Fumbles": "0",
@@ -919,7 +919,7 @@
         "Average Interception Yards": "0.7",
         "Interception Touchdowns": "0",
         "Long Interception": "2",
-        "Passes Defended": "24",
+        "Passes Defended": "26",
         "Stuffs": "2",
         "Stuff Yards": "2",
         "Kicks Blocked": "0"
@@ -943,10 +943,10 @@
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4686772.png",
-      "evidenceHash": "beb876e6aa9e1645",
-      "blurb": "A cornerback, the defender assigned to cover receivers, taken seventeenth overall in 2023 and now in his fourth season. He has no major awards yet, but New England rate him highly enough to hand him the largest contract ever given to a player at his position, which is about as strong a statement of belief as a club can make.",
+      "evidenceHash": "50ad003d232e17dd",
+      "blurb": "A cornerback drafted seventeenth overall in 2023, now four seasons into his career with New England. He is the team's top cover man and they have just handed him the largest contract ever given to a cornerback, which tells you more than his numbers do — the raw totals are modest, but the money is the club's clearest statement of belief.",
       "promptVersion": 2
     }
   },
-  "profilesWrittenAt": "2026-09-10T14:46:47.752Z"
+  "profilesWrittenAt": "2026-09-11T14:50:06.681Z"
 }

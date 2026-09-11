@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-10T14:46:15.366Z",
+  "fetchedAt": "2026-09-11T14:49:33.013Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -1838,8 +1838,8 @@
           "rank": 14,
           "score": 3,
           "note": "Middle of the league for points scored last season, 14th of 32.",
-          "blurb": "Built around Bo Nix, Courtland Sutton and Jaylen Waddle, though the passing game gained little per throw. J.K. Dobbins and the run got them into the end zone more often.",
-          "blurbHash": "f1ac63e36c86f8bc",
+          "blurb": "Bo Nix, in his third season, runs an offence that gains little per throw — only a handful of teams averaged fewer yards per pass — with Courtland Sutton, Jaylen Waddle and Evan Engram as his targets and a steady ground game under Sean Payton.",
+          "blurbHash": "af7f800e6634c3bc",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -1876,7 +1876,7 @@
             }
           },
           "passPlayShare": 58.2,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3217,8 +3217,8 @@
           "rank": 20,
           "score": 2,
           "note": "Below average for points scored last season, 20th of 32.",
-          "blurb": "Justin Herbert throwing to Ladd McConkey is the centre of this offence, with Omarion Hampton, in his second season, carrying. Rushing touchdowns were rare.",
-          "blurbHash": "24ea686630d2a9ce",
+          "blurb": "Built around Justin Herbert throwing to Ladd McConkey, with Omarion Hampton running behind Rashawn Slater. They move the ball on the ground fine but rarely finish those drives with a rushing touchdown.",
+          "blurbHash": "0ee06dfa108f3dec",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -3255,7 +3255,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": null
         },
         "defence": {
@@ -3414,8 +3414,8 @@
           "rank": 1,
           "score": 5,
           "note": "Among the best in the league for points scored last season — 1st of 32.",
-          "blurb": "Matthew Stafford threw more touchdown passes than any quarterback in the league, with Puka Nacua and Davante Adams catching them and Kyren Williams running efficiently behind them.",
-          "blurbHash": "fbfd33dd25732c47",
+          "blurb": "A passing offence first: Matthew Stafford threw for more touchdowns than any other quarterback, with Puka Nacua and Davante Adams outside and Kyren Williams carrying the run game.",
+          "blurbHash": "2dc790b702a443cf",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -3451,9 +3451,9 @@
               "rank": 25
             }
           },
-          "passPlayShare": 58.8,
-          "passPlayShareRank": 13,
-          "quarterbackCarries": 29
+          "passPlayShare": 57.3,
+          "passPlayShareRank": 16,
+          "quarterbackCarries": 2
         },
         "defence": {
           "players": [
@@ -4990,8 +4990,8 @@
           "rank": 19,
           "score": 3,
           "note": "Middle of the league for points scored last season, 19th of 32.",
-          "blurb": "Jalen Hurts runs it himself as much as almost any quarterback, alongside Saquon Barkley. They have traded A.J. Brown to New England, leaving DeVonta Smith and Dallas Goedert as the main targets.",
-          "blurbHash": "0abcc6930da68397",
+          "blurb": "Jalen Hurts is a big part of the running game himself, carrying the ball over a hundred times alongside Saquon Barkley. With A.J. Brown traded to New England, DeVonta Smith and Dallas Goedert are the men left to throw to.",
+          "blurbHash": "ffc457b7f41794e3",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5028,7 +5028,7 @@
             }
           },
           "passPlayShare": 58.8,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 105
         },
         "defence": {
@@ -5581,8 +5581,8 @@
           "rank": 10,
           "score": 4,
           "note": "Better than most for points scored last season, 10th of 32.",
-          "blurb": "The running game gains little per carry, so the scoring comes through the air — Brock Purdy throwing to George Kittle, Deebo Samuel and Mike Evans, with Christian McCaffrey doing plenty of the work.",
-          "blurbHash": "1aa12131b0f8972b",
+          "blurb": "They throw a little less than most teams and get very little per carry, but score through the air often, with Brock Purdy finding George Kittle, Mike Evans and Deebo Samuel, and Christian McCaffrey doing plenty of the work.",
+          "blurbHash": "feb6c6fc5a0c5d25",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5618,9 +5618,9 @@
               "rank": 13
             }
           },
-          "passPlayShare": 55.5,
-          "passPlayShareRank": 20,
-          "quarterbackCarries": null
+          "passPlayShare": 55.8,
+          "passPlayShareRank": 19,
+          "quarterbackCarries": 5
         },
         "defence": {
           "players": [
@@ -5778,8 +5778,8 @@
           "rank": 18,
           "score": 3,
           "note": "Middle of the league for points scored last season, 18th of 32.",
-          "blurb": "Baker Mayfield, just handed a three-year extension, is the centre of it, throwing to Chris Godwin and Emeka Egbuka, with Bucky Irving's runs not gaining much per carry.",
-          "blurbHash": "9e3286ffcb9bf0cc",
+          "blurb": "Baker Mayfield, just handed a big extension, leads a group that throws slightly less than most and doesn't get much per carry, with Bucky Irving running behind Tristan Wirfs and Chris Godwin and Emeka Egbuka catching.",
+          "blurbHash": "ee7add7cc4c0d213",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
@@ -5816,7 +5816,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 20,
           "quarterbackCarries": null
         },
         "defence": {
@@ -6308,5 +6308,5 @@
       }
     }
   },
-  "unitNotesWrittenAt": "2026-09-10T14:47:37.357Z"
+  "unitNotesWrittenAt": "2026-09-11T14:50:22.327Z"
 }

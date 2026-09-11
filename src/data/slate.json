@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-10T14:46:08.547Z",
+  "fetchedAt": "2026-09-11T14:49:23.784Z",
   "games": [
-    {
-      "id": "401872657",
-      "kickoff": "2026-09-11T00:35Z",
-      "home": "LAR",
-      "away": "SF",
-      "spread": 3.5,
-      "favourite": "home",
-      "overUnder": 48.5,
-      "broadcast": "Netflix",
-      "venue": "Melbourne Cricket Ground",
-      "neutralSite": true
-    },
     {
       "id": "401872656",
       "kickoff": "2026-09-10T00:20Z",
@@ -26,6 +14,18 @@
       "broadcast": "NBC",
       "venue": "Lumen Field",
       "neutralSite": false
+    },
+    {
+      "id": "401872657",
+      "kickoff": "2026-09-11T00:35Z",
+      "home": "LAR",
+      "away": "SF",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Netflix",
+      "venue": "Melbourne Cricket Ground",
+      "neutralSite": true
     },
     {
       "id": "401872925",
@@ -46,7 +46,7 @@
       "away": "NO",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 50.5,
+      "overUnder": 49.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -80,9 +80,9 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "PIT",
       "away": "ATL",
-      "spread": 3.5,
+      "spread": 5.5,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -94,7 +94,7 @@
       "away": "CHI",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 46.5,
+      "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -106,7 +106,7 @@
       "away": "CLE",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 40.5,
+      "overUnder": 39.5,
       "broadcast": "CBS",
       "venue": "EverBank Stadium",
       "neutralSite": false
@@ -152,7 +152,7 @@
       "kickoff": "2026-09-13T20:25Z",
       "home": "PHI",
       "away": "WSH",
-      "spread": 5.5,
+      "spread": 6,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "FOX",
@@ -278,7 +278,29 @@
       {
         "player": "Brock Bowers",
         "position": "TE",
-        "status": "Doubtful"
+        "status": "Out"
+      }
+    ],
+    "LAR": [
+      {
+        "player": "Ty Simpson",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Max Klare",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "CJ Daniels",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Tutu Atwell",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "MIA": [
@@ -343,12 +365,32 @@
     ],
     "SF": [
       {
-        "player": "Mykel Williams",
-        "position": "DE",
+        "player": "Kurtis Rourke",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Ephesians Prysock",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Tatum Bethune",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Jordan Watkins",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "SEA": [
+      {
+        "player": "Sam Darnold",
+        "position": "QB",
+        "status": "Doubtful"
+      },
       {
         "player": "Jalen Milroe",
         "position": "QB",
@@ -362,11 +404,6 @@
       {
         "player": "Mike Morris",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Nick Kallerup",
-        "position": "TE",
         "status": "Out"
       }
     ],
