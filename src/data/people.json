@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-11T14:49:36.640Z",
+  "fetchedAt": "2026-09-12T13:50:39.395Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -142,6 +142,61 @@
       "evidenceHash": "5b8a547a12dbb702",
       "blurb": "A defensive tackle — an interior lineman whose job is to blow up plays from the middle of the defence — taken in the first round in 2014 and now in his tenth season with the Rams, having un-retired at thirty-five. Three Defensive Player of the Year awards and more than a hundred career sacks make him one of the best defenders anyone has watched, though the question now is how much is left.",
       "promptVersion": 2
+    },
+    "16910": {
+      "id": "16910",
+      "name": "DaQuan Jones",
+      "position": "Defensive Tackle",
+      "positionShort": "DT",
+      "team": "New England Patriots",
+      "teamId": "NE",
+      "age": 34,
+      "height": "6' 4\"",
+      "weight": "320 lbs",
+      "experience": "12th Season",
+      "draft": "2014: Rd 4, Pk 112 (TEN)",
+      "college": "Penn State",
+      "awards": [],
+      "career": {
+        "Total Tackles": "372",
+        "Solo Tackles": "207",
+        "Assist Tackles": "165",
+        "Sacks": "20",
+        "Forced Fumbles": "4",
+        "Fumbles Recovered": "3",
+        "Fumbles Recovered Yards": "0",
+        "Interceptions": "1",
+        "Interception Yards": "1",
+        "Average Interception Yards": "1.0",
+        "Interception Touchdowns": "0",
+        "Long Interception": "1",
+        "Passes Defended": "7",
+        "Stuffs": "40",
+        "Stuff Yards": "66",
+        "Kicks Blocked": "2"
+      },
+      "season": {
+        "Total Tackles": "22",
+        "Solo Tackles": "11",
+        "Assist Tackles": "11",
+        "Sacks": "3",
+        "Forced Fumbles": "1",
+        "Fumbles Recovered": "0",
+        "Fumbles Recovered Yards": "0",
+        "Interceptions": "1",
+        "Interception Yards": "1",
+        "Average Interception Yards": "1.0",
+        "Interception Touchdowns": "0",
+        "Long Interception": "1",
+        "Passes Defended": "2",
+        "Stuffs": "3",
+        "Stuff Yards": "3",
+        "Kicks Blocked": "0"
+      },
+      "headshot": "/players/16910.png",
+      "evidenceHash": "5590a351da6710f0",
+      "blurb": null,
+      "promptVersion": null
     },
     "3052587": {
       "id": "3052587",
@@ -947,6 +1002,5 @@
       "blurb": "A cornerback drafted seventeenth overall in 2023, now four seasons into his career with New England. He is the team's top cover man and they have just handed him the largest contract ever given to a cornerback, which tells you more than his numbers do — the raw totals are modest, but the money is the club's clearest statement of belief.",
       "promptVersion": 2
     }
-  },
-  "profilesWrittenAt": "2026-09-11T14:50:06.681Z"
+  }
 }

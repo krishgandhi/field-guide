@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-11T14:49:23.784Z",
+  "fetchedAt": "2026-09-12T13:50:25.840Z",
   "games": [
     {
       "id": "401872656",
@@ -80,7 +80,7 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "PIT",
       "away": "ATL",
-      "spread": 5.5,
+      "spread": 6,
       "favourite": "home",
       "overUnder": 41.5,
       "broadcast": "FOX",
@@ -200,6 +200,11 @@
   "injuries": {
     "ARI": [
       {
+        "player": "Garrett Williams",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Tip Reiman",
         "position": "TE",
         "status": "Out"
@@ -209,6 +214,23 @@
       {
         "player": "Michael Penix Jr.",
         "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Tua Tagovailoa",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Billy Bowman Jr.",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "BAL": [
+      {
+        "player": "Teddye Buchanan",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -224,11 +246,25 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Patrick Jones II",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CHI": [
       {
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
+      }
+    ],
+    "CIN": [
+      {
+        "player": "Shemar Stewart",
+        "position": "DE",
+        "status": "Doubtful"
       }
     ],
     "CLE": [
@@ -240,6 +276,13 @@
       {
         "player": "Joe Royer",
         "position": "TE",
+        "status": "Out"
+      }
+    ],
+    "DAL": [
+      {
+        "player": "Malik Davis",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -281,25 +324,10 @@
         "status": "Out"
       }
     ],
-    "LAR": [
+    "LAC": [
       {
-        "player": "Ty Simpson",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Max Klare",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "CJ Daniels",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Tutu Atwell",
-        "position": "WR",
+        "player": "Deane Leonard",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -339,6 +367,16 @@
     ],
     "NO": [
       {
+        "player": "Audric Estime",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Oscar Delp",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Cameron Jordan",
         "position": "DE",
         "status": "Out"
@@ -351,8 +389,30 @@
     ],
     "NYJ": [
       {
-        "player": "Tyler Baron",
+        "player": "D'Angelo Ponds",
+        "position": "CB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Tim Patrick",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Joseph Ossai",
         "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Jonathan Greenard",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -404,6 +464,25 @@
       {
         "player": "Mike Morris",
         "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Jalen McMillan",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Sean Tucker",
+        "position": "RB",
+        "status": "Doubtful"
+      }
+    ],
+    "TEN": [
+      {
+        "player": "Cedric Gray",
+        "position": "LB",
         "status": "Out"
       }
     ],
