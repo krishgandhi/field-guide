@@ -1,27 +1,71 @@
 {
-  "generatedAt": "2026-09-11T15:47:19.649Z",
+  "generatedAt": "2026-09-12T14:54:58.014Z",
   "candidates": [
     {
-      "id": "49904397",
-      "headline": "Sources: Patriots to add DaQuan Jones on 1-year deal",
-      "description": "The Patriots are expected to sign free agent defensive tackle DaQuan Jones to a one-year deal worth up to $6 million, sources told NFL Network.",
-      "published": "2026-09-11",
-      "likelyKind": "transaction",
+      "id": "49906649",
+      "headline": "Cowboys RB Malik Davis set for hip surgery, headed to IR",
+      "description": "Dallas Cowboys running back Malik Davis is scheduled to have surgery Saturday and be placed on injured reserve after suffering a hip injury in Friday's practice, a source told ESPN Friday.",
+      "published": "2026-09-12",
+      "likelyKind": "injury",
       "teams": [
-        "New England Patriots"
+        "Dallas Cowboys"
       ],
       "teamIds": [
-        "NE"
+        "DAL"
       ],
       "players": [
         {
-          "id": "16910",
-          "name": "DaQuan Jones",
-          "position": "Defensive Tackle",
-          "currentTeam": "BUF"
+          "id": "4240603",
+          "name": "Malik Davis",
+          "position": "Running Back",
+          "currentTeam": "DAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49904397/sources-patriots-add-daquan-jones-1-year-6m-deal"
+      "url": "https://www.espn.com/nfl/story/_/id/49906649/cowboys-malik-davis-hip-injured-practice-opener"
+    },
+    {
+      "id": "49906474",
+      "headline": "Sources: Bears, RB Swift agree to 3-year, $33.75M extension",
+      "description": "The Bears and running back D'Andre Swift have reached an agreement on a three-year, $33.75 million extension that includes $27.5 million guaranteed, sources told ESPN's Adam Schefter.",
+      "published": "2026-09-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "4259545",
+          "name": "D'Andre Swift",
+          "position": "Running Back",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49906474/bears-rb-swift-agree-3-year-3375m-extension"
+    },
+    {
+      "id": "49906512",
+      "headline": "Texans rookie Kayden McDonald placed on IR with ankle injury",
+      "description": "Texans rookie defensive tackle Kayden McDonald (ankle) was placed on injured reserve, meaning he'll have to wait four weeks to make his debut.",
+      "published": "2026-09-11",
+      "likelyKind": "injury",
+      "teams": [
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4870893",
+          "name": "Kayden McDonald",
+          "position": "Defensive Tackle",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49906512/texans-rookie-kayden-mcdonald-placed-ir-ankle-injury"
     }
   ]
 }
