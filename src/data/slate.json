@@ -1,32 +1,8 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-12T13:50:25.840Z",
+  "fetchedAt": "2026-09-13T14:47:10.127Z",
   "games": [
-    {
-      "id": "401872656",
-      "kickoff": "2026-09-10T00:20Z",
-      "home": "SEA",
-      "away": "NE",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "NBC",
-      "venue": "Lumen Field",
-      "neutralSite": false
-    },
-    {
-      "id": "401872657",
-      "kickoff": "2026-09-11T00:35Z",
-      "home": "LAR",
-      "away": "SF",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Netflix",
-      "venue": "Melbourne Cricket Ground",
-      "neutralSite": true
-    },
     {
       "id": "401872925",
       "kickoff": "2026-09-13T17:00Z",
@@ -70,7 +46,7 @@
       "away": "BAL",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "CBS",
       "venue": "Lucas Oil Stadium",
       "neutralSite": false
@@ -80,9 +56,9 @@
       "kickoff": "2026-09-13T17:00Z",
       "home": "PIT",
       "away": "ATL",
-      "spread": 6,
+      "spread": 6.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 40.5,
       "broadcast": "FOX",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -106,7 +82,7 @@
       "away": "CLE",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 39.5,
+      "overUnder": 40.5,
       "broadcast": "CBS",
       "venue": "EverBank Stadium",
       "neutralSite": false
@@ -178,10 +154,34 @@
       "away": "DAL",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "NBC",
       "venue": "MetLife Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401872656",
+      "kickoff": "2026-09-10T00:20Z",
+      "home": "SEA",
+      "away": "NE",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "NBC",
+      "venue": "Lumen Field",
+      "neutralSite": false
+    },
+    {
+      "id": "401872657",
+      "kickoff": "2026-09-11T00:35Z",
+      "home": "LAR",
+      "away": "SF",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Netflix",
+      "venue": "Melbourne Cricket Ground",
+      "neutralSite": true
     },
     {
       "id": "401872931",
@@ -279,13 +279,6 @@
         "status": "Out"
       }
     ],
-    "DAL": [
-      {
-        "player": "Malik Davis",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
     "DEN": [
       {
         "player": "Jonathon Cooper",
@@ -303,16 +296,18 @@
         "player": "Luke Musgrave",
         "position": "TE",
         "status": "Out"
-      },
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
-        "status": "Out"
       }
     ],
     "HOU": [
       {
         "player": "E.J. Speed",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "IND": [
+      {
+        "player": "Austin Ajiake",
         "position": "LB",
         "status": "Out"
       }
@@ -367,11 +362,6 @@
     ],
     "NO": [
       {
-        "player": "Audric Estime",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
         "player": "Oscar Delp",
         "position": "TE",
         "status": "Out"
@@ -389,22 +379,22 @@
     ],
     "NYJ": [
       {
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "D'Angelo Ponds",
         "position": "CB",
         "status": "Doubtful"
       },
       {
-        "player": "Kene Nwangwu",
-        "position": "RB",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Tim Patrick",
-        "position": "WR",
+        "player": "Joseph Ossai",
+        "position": "DE",
         "status": "Out"
       },
       {
-        "player": "Joseph Ossai",
+        "player": "Tyler Baron",
         "position": "DE",
         "status": "Out"
       }
@@ -430,6 +420,11 @@
         "status": "Out"
       },
       {
+        "player": "De'Zhaun Stribling",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
         "player": "Ephesians Prysock",
         "position": "CB",
         "status": "Out"
@@ -437,11 +432,6 @@
       {
         "player": "Tatum Bethune",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Jordan Watkins",
-        "position": "WR",
         "status": "Out"
       }
     ],

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-12T13:50:35.249Z",
+  "fetchedAt": "2026-09-13T14:47:19.052Z",
   "statsSeason": 2025,
   "previousSeason": true,
   "teams": {
@@ -211,12 +211,12 @@
         "offence": {
           "players": [
             {
-              "id": "4241479",
-              "name": "Tua Tagovailoa",
+              "id": "4360423",
+              "name": "Michael Penix Jr.",
               "label": "QB",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 1, Pk 5 (MIA)"
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 1, Pk 8 (ATL)"
             },
             {
               "id": "4430807",
@@ -299,9 +299,9 @@
               "rank": 19
             }
           },
-          "passPlayShare": 54.5,
-          "passPlayShareRank": 22,
-          "quarterbackCarries": null
+          "passPlayShare": 55.6,
+          "passPlayShareRank": 21,
+          "quarterbackCarries": 21
         },
         "defence": {
           "players": [
@@ -1890,12 +1890,12 @@
               "draftedBy": "2019: Rd 3, Pk 65 (ARI)"
             },
             {
-              "id": "4039064",
-              "name": "Malcolm Roach",
-              "label": "DT",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": null
+              "id": "4066109",
+              "name": "Eyioma Uwazurike",
+              "label": "DE",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2022: Rd 4, Pk 116 (DEN)"
             },
             {
               "id": "4360259",
@@ -3009,12 +3009,12 @@
               "draftedBy": "2013: Rd 3, Pk 63 (KC)"
             },
             {
-              "id": "4569659",
-              "name": "Josh Simmons",
+              "id": "4566190",
+              "name": "Kahlil Benson",
               "label": "OT",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 1, Pk 32 (KC)"
+              "experience": 0,
+              "draftedBy": null
             }
           ],
           "rank": 21,
@@ -4167,20 +4167,20 @@
               "draftedBy": "2021: Rd 4, Pk 120 (NE)"
             },
             {
-              "id": "4047646",
-              "name": "A.J. Brown",
-              "label": "WR",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 2, Pk 51 (TEN)"
-            },
-            {
               "id": "4361432",
               "name": "Romeo Doubs",
               "label": "WR",
               "debutYear": null,
               "experience": 5,
               "draftedBy": "2022: Rd 4, Pk 132 (GB)"
+            },
+            {
+              "id": "4427095",
+              "name": "DeMario Douglas",
+              "label": "WR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 6, Pk 210 (NE)"
             },
             {
               "id": "3046439",
@@ -4831,7 +4831,7 @@
             }
           },
           "passPlayShare": 54.9,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 22,
           "quarterbackCarries": null
         },
         "defence": {
@@ -4897,12 +4897,12 @@
         "specialTeams": {
           "players": [
             {
-              "id": "4259619",
-              "name": "Blake Grupe",
+              "id": "3124679",
+              "name": "Jason Sanders",
               "label": "K",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": null
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 7, Pk 229 (MIA)"
             },
             {
               "id": "4035537",
