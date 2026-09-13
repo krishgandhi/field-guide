@@ -1,27 +1,167 @@
 {
-  "generatedAt": "2026-09-12T14:54:58.014Z",
+  "generatedAt": "2026-09-13T15:32:16.864Z",
   "candidates": [
     {
-      "id": "49906649",
-      "headline": "Cowboys RB Malik Davis set for hip surgery, headed to IR",
-      "description": "Dallas Cowboys running back Malik Davis is scheduled to have surgery Saturday and be placed on injured reserve after suffering a hip injury in Friday's practice, a source told ESPN Friday.",
-      "published": "2026-09-12",
-      "likelyKind": "injury",
+      "id": "49920002",
+      "headline": "Sources: Joey Porter Jr. unlikely to play amid uncertain Steelers future",
+      "description": "Steelers cornerback Joey Porter Jr., who has been embroiled in a contract dispute all summer, is unlikely to play against the Falcons because of a back injury, sources told NFL Network and ESPN, and the possibility of a trade remains in play.",
+      "published": "2026-09-13",
+      "likelyKind": "transaction",
       "teams": [
-        "Dallas Cowboys"
+        "Pittsburgh Steelers"
       ],
       "teamIds": [
-        "DAL"
+        "PIT"
       ],
       "players": [
         {
-          "id": "4240603",
-          "name": "Malik Davis",
-          "position": "Running Back",
-          "currentTeam": "DAL"
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "PIT"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/49906649/cowboys-malik-davis-hip-injured-practice-opener"
+      "url": "https://www.espn.com/nfl/story/_/id/49920002/sources-joey-porter-jr-unlikely-play-amid-uncertain-steelers-future"
+    },
+    {
+      "id": "49921824",
+      "headline": "Sources: Maxx Crosby shut down Rams trade talks after failed Ravens deal",
+      "description": "The Rams pursued Maxx Crosby shortly after his trade from the Raiders to the Ravens fell through, sources told NFL Network.",
+      "published": "2026-09-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders",
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LV",
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "3916655",
+          "name": "Maxx Crosby",
+          "position": "Defensive End",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49921824/sources-maxx-crosby-shut-rams-trade-talks-failed-ravens-deal"
+    },
+    {
+      "id": "49920927",
+      "headline": "Source: Jaguars, Parker Washington unlikely to agree to deal",
+      "description": "The Jaguars and Parker Washington are unlikely to agree to a contract extension before the start of the season, a source told NFL Network.",
+      "published": "2026-09-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4432620",
+          "name": "Parker Washington",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49920927/source-jaguars-parker-washington-unlikely-agree-deal"
+    },
+    {
+      "id": "49915181",
+      "headline": "Sources: Lamar Jackson won't have deal before start of season",
+      "description": "Lamar Jackson has been reluctant to discuss a long-term extension with the Ravens and has been more focused on the upcoming 2026 season, league sources told ESPN.",
+      "published": "2026-09-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49915181/sources-lamar-jackson-reluctant-talk-deal-ravens"
+    },
+    {
+      "id": "49917836",
+      "headline": "Sources: C.J. Stroud, Texans to table extension talks",
+      "description": "The Texans and C.J. Stroud made a run at completing a contract extension before the regular season begins, but both sides agreed they now prefer to wait until after this season to work out a long-term deal, sources told ESPN and NFL Network.",
+      "published": "2026-09-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4432577",
+          "name": "C.J. Stroud",
+          "position": "Quarterback",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49917836/sources-cj-stroud-texans-table-extension-talks"
+    },
+    {
+      "id": "49914437",
+      "headline": "Raiders TE Michael Mayer gets 3-year, $45M extension, sources say",
+      "description": "Tight end Michael Mayer, who is stepping in for an injured Brock Bowers to start the regular season, has received a multiyear extension from the Raiders.",
+      "published": "2026-09-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4429086",
+          "name": "Michael Mayer",
+          "position": "Tight End",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "4432665",
+          "name": "Brock Bowers",
+          "position": "Tight End",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49914437/raiders-te-michael-mayer-gets-3-year-45m-extension-sources-say"
+    },
+    {
+      "id": "49914334",
+      "headline": "Sources: Packers, TE Tucker Kraft agree to 4-year extension",
+      "description": "The Packers and tight end Tucker Kraft have reached agreement on a four-year extension worth up to $92 million, sources told ESPN.",
+      "published": "2026-09-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4572680",
+          "name": "Tucker Kraft",
+          "position": "Tight End",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49914334/sources-packers-tucker-kraft-agree-4-year-extension"
     },
     {
       "id": "49906474",
@@ -44,6 +184,28 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49906474/bears-rb-swift-agree-3-year-3375m-extension"
+    },
+    {
+      "id": "49906649",
+      "headline": "Cowboys RB Malik Davis set for hip surgery, headed to IR",
+      "description": "Dallas Cowboys running back Malik Davis is scheduled to have surgery Saturday and be placed on injured reserve after suffering a hip injury in Friday's practice, a source told ESPN Friday.",
+      "published": "2026-09-12",
+      "likelyKind": "injury",
+      "teams": [
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "DAL"
+      ],
+      "players": [
+        {
+          "id": "4240603",
+          "name": "Malik Davis",
+          "position": "Running Back",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49906649/cowboys-malik-davis-hip-injured-practice-opener"
     },
     {
       "id": "49906512",
