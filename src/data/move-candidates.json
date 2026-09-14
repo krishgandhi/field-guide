@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T15:32:16.864Z",
+  "generatedAt": "2026-09-14T17:34:26.250Z",
   "candidates": [
     {
       "id": "49920002",
@@ -184,28 +184,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49906474/bears-rb-swift-agree-3-year-3375m-extension"
-    },
-    {
-      "id": "49906649",
-      "headline": "Cowboys RB Malik Davis set for hip surgery, headed to IR",
-      "description": "Dallas Cowboys running back Malik Davis is scheduled to have surgery Saturday and be placed on injured reserve after suffering a hip injury in Friday's practice, a source told ESPN Friday.",
-      "published": "2026-09-12",
-      "likelyKind": "injury",
-      "teams": [
-        "Dallas Cowboys"
-      ],
-      "teamIds": [
-        "DAL"
-      ],
-      "players": [
-        {
-          "id": "4240603",
-          "name": "Malik Davis",
-          "position": "Running Back",
-          "currentTeam": "DAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49906649/cowboys-malik-davis-hip-injured-practice-opener"
     },
     {
       "id": "49906512",
