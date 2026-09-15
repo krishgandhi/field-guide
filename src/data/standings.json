@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-09-14T16:45:20.215Z",
+  "fetchedAt": "2026-09-15T15:25:39.078Z",
   "teams": {
     "BAL": {
       "wins": 1,
@@ -30,6 +30,15 @@
       "pointsAgainst": 10,
       "conferenceRank": 3
     },
+    "KC": {
+      "wins": 1,
+      "losses": 0,
+      "ties": 0,
+      "pointDifferential": 21,
+      "pointsFor": 31,
+      "pointsAgainst": 10,
+      "conferenceRank": 4
+    },
     "LV": {
       "wins": 1,
       "losses": 0,
@@ -37,7 +46,7 @@
       "pointDifferential": 14,
       "pointsFor": 27,
       "pointsAgainst": 13,
-      "conferenceRank": 4
+      "conferenceRank": 5
     },
     "NYJ": {
       "wins": 1,
@@ -46,7 +55,7 @@
       "pointDifferential": 13,
       "pointsFor": 23,
       "pointsAgainst": 10,
-      "conferenceRank": 5
+      "conferenceRank": 6
     },
     "CIN": {
       "wins": 1,
@@ -55,7 +64,7 @@
       "pointDifferential": 6,
       "pointsFor": 33,
       "pointsAgainst": 27,
-      "conferenceRank": 6
+      "conferenceRank": 7
     },
     "PIT": {
       "wins": 1,
@@ -64,25 +73,7 @@
       "pointDifferential": 7,
       "pointsFor": 20,
       "pointsAgainst": 13,
-      "conferenceRank": 7
-    },
-    "DEN": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "pointsFor": 0,
-      "pointsAgainst": 0,
-      "conferenceRank": 0
-    },
-    "KC": {
-      "wins": 0,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 0,
-      "pointsFor": 0,
-      "pointsAgainst": 0,
-      "conferenceRank": 0
+      "conferenceRank": 8
     },
     "HOU": {
       "wins": 0,
@@ -91,7 +82,7 @@
       "pointDifferential": -5,
       "pointsFor": 31,
       "pointsAgainst": 36,
-      "conferenceRank": 10
+      "conferenceRank": 9
     },
     "IND": {
       "wins": 0,
@@ -100,7 +91,7 @@
       "pointDifferential": -18,
       "pointsFor": 23,
       "pointsAgainst": 41,
-      "conferenceRank": 11
+      "conferenceRank": 10
     },
     "MIA": {
       "wins": 0,
@@ -109,7 +100,7 @@
       "pointDifferential": -14,
       "pointsFor": 13,
       "pointsAgainst": 27,
-      "conferenceRank": 12
+      "conferenceRank": 11
     },
     "TEN": {
       "wins": 0,
@@ -118,6 +109,15 @@
       "pointDifferential": -13,
       "pointsFor": 10,
       "pointsAgainst": 23,
+      "conferenceRank": 12
+    },
+    "DEN": {
+      "wins": 0,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -21,
+      "pointsFor": 10,
+      "pointsAgainst": 31,
       "conferenceRank": 13
     },
     "CLE": {

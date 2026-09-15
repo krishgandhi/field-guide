@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 1,
-  "fetchedAt": "2026-09-14T16:45:19.185Z",
+  "fetchedAt": "2026-09-15T15:25:38.075Z",
   "games": [
-    {
-      "id": "401872931",
-      "kickoff": "2026-09-15T00:15Z",
-      "home": "KC",
-      "away": "DEN",
-      "spread": 2.5,
-      "favourite": "home",
-      "overUnder": 43.5,
-      "broadcast": "ESPN, ABC",
-      "venue": "Arrowhead Stadium",
-      "neutralSite": false
-    },
     {
       "id": "401872656",
       "kickoff": "2026-09-10T00:20Z",
@@ -194,18 +182,62 @@
       "broadcast": "NBC",
       "venue": "MetLife Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401872931",
+      "kickoff": "2026-09-15T00:15Z",
+      "home": "KC",
+      "away": "DEN",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN, ABC",
+      "venue": "Arrowhead Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [],
   "injuries": {
     "ARI": [
       {
+        "player": "Garrett Williams",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Tip Reiman",
         "position": "TE",
         "status": "Out"
       }
     ],
+    "ATL": [
+      {
+        "player": "Tua Tagovailoa",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Michael Penix Jr.",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Billy Bowman Jr.",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "BAL": [
+      {
+        "player": "Devontez Walker",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Teddye Buchanan",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Ja'Kobi Lane",
         "position": "WR",
@@ -213,6 +245,11 @@
       }
     ],
     "BUF": [
+      {
+        "player": "Ty Johnson",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Tyrell Shavers",
         "position": "WR",
@@ -224,26 +261,60 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Patrick Jones II",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CHI": [
+      {
+        "player": "Tyson Bagent",
+        "position": "QB",
+        "status": "Out"
+      },
       {
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
       }
     ],
+    "CIN": [
+      {
+        "player": "Shemar Stewart",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
     "CLE": [
+      {
+        "player": "Dylan Sampson",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Jeremiah Owusu-Koramoah",
         "position": "LB",
         "status": "Out"
-      },
-      {
-        "player": "Joe Royer",
-        "position": "TE",
-        "status": "Out"
       }
     ],
     "DEN": [
+      {
+        "player": "Sam Ehlinger",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Tyler Badie",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Dallen Bentley",
+        "position": "TE",
+        "status": "Out"
+      },
       {
         "player": "Jonathon Cooper",
         "position": "LB",
@@ -252,8 +323,68 @@
     ],
     "GB": [
       {
+        "player": "Ty'Ron Hopper",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
         "player": "Josh Jacobs",
         "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "Jake Hummel",
+        "position": "LB",
+        "status": "Doubtful"
+      }
+    ],
+    "IND": [
+      {
+        "player": "Austin Ajiake",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "KC": [
+      {
+        "player": "Garrett Nussmeier",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Mansoor Delane",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jared Wiley",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Jack Pyburn",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "LV": [
+      {
+        "player": "Brock Bowers",
+        "position": "TE",
+        "status": "Out"
+      }
+    ],
+    "LAC": [
+      {
+        "player": "KeAndre Lambert-Smith",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Deane Leonard",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -266,24 +397,65 @@
     ],
     "MIA": [
       {
-        "player": "Storm Duck",
-        "position": "CB",
+        "player": "Kyle Louis",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "NE": [
+      {
+        "player": "TreVeyon Henderson",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "Cameron Jordan",
+        "position": "DE",
         "status": "Out"
       },
       {
-        "player": "Darrell Baker Jr.",
-        "position": "CB",
+        "player": "Alvin Kamara",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Oscar Delp",
+        "position": "TE",
         "status": "Out"
       }
     ],
     "NYJ": [
       {
-        "player": "Tyler Baron",
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Joseph Ossai",
         "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "D'Angelo Ponds",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Jonathan Greenard",
+        "position": "LB",
         "status": "Out"
       }
     ],
     "PIT": [
+      {
+        "player": "Joey Porter Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Donte Kent",
         "position": "CB",
@@ -302,6 +474,30 @@
         "player": "Sam Darnold",
         "position": "QB",
         "status": "Doubtful"
+      },
+      {
+        "player": "Tory Horton",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Sean Tucker",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Jalen McMillan",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "TEN": [
+      {
+        "player": "Cedric Gray",
+        "position": "LB",
+        "status": "Out"
       }
     ]
   }
