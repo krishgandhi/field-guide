@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-15T15:25:47.981Z",
+  "fetchedAt": "2026-09-16T15:18:55.772Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -965,12 +965,12 @@
               "draftedBy": null
             },
             {
-              "id": "4708486",
-              "name": "Jimmy Horn Jr.",
+              "id": "4567096",
+              "name": "John Metchie III",
               "label": "KR",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 6, Pk 208 (CAR)"
+              "experience": 4,
+              "draftedBy": "2022: Rd 2, Pk 44 (HOU)"
             }
           ],
           "rank": 3,
@@ -2111,12 +2111,12 @@
               "draftedBy": "2018: Rd 5, Pk 142 (SF)"
             },
             {
-              "id": "5093004",
-              "name": "Keith Abney II",
+              "id": "3910229",
+              "name": "Rock Ya-Sin",
               "label": "CB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 5, Pk 157 (DET)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 2, Pk 34 (IND)"
             }
           ],
           "rank": 22,
@@ -3007,14 +3007,6 @@
               "debutYear": 2013,
               "experience": 14,
               "draftedBy": "2013: Rd 3, Pk 63 (KC)"
-            },
-            {
-              "id": "4569659",
-              "name": "Josh Simmons",
-              "label": "OT",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 1, Pk 32 (KC)"
             }
           ],
           "rank": 8,
@@ -3088,12 +3080,12 @@
               "draftedBy": "2025: Rd 5, Pk 156 (KC)"
             },
             {
-              "id": "4040432",
-              "name": "L'Jarius Sneed",
+              "id": "4610705",
+              "name": "Nohl Williams",
               "label": "CB",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 4, Pk 138 (KC)"
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 85 (KC)"
             },
             {
               "id": "4880124",
