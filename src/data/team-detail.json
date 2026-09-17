@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-16T15:18:55.772Z",
+  "fetchedAt": "2026-09-17T15:25:04.696Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -71,31 +71,31 @@
           "stats": {
             "_runAttempts": {
               "value": "34",
-              "rank": 5
+              "rank": 7
             },
             "_passAttempts": {
               "value": "37",
-              "rank": 5
+              "rank": 7
             },
             "_sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "yards per carry": {
               "value": "3.4",
-              "rank": 5
+              "rank": 29
             },
             "yards per pass": {
               "value": "7.5",
-              "rank": 5
+              "rank": 15
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "0",
@@ -103,7 +103,7 @@
             }
           },
           "passPlayShare": 57.6,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 6
         },
         "defence": {
@@ -158,7 +158,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "takeaways": {
               "value": "2",
@@ -194,7 +194,7 @@
           "stats": {
             "field goal percentage": {
               "value": "80.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -268,31 +268,31 @@
           "stats": {
             "_runAttempts": {
               "value": "31",
-              "rank": 5
+              "rank": 13
             },
             "_passAttempts": {
               "value": "22",
-              "rank": 5
+              "rank": 31
             },
             "_sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "6.5",
-              "rank": 5
+              "rank": 20
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "2",
@@ -355,7 +355,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "1",
@@ -391,7 +391,7 @@
           "stats": {
             "field goal percentage": {
               "value": "50.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -465,15 +465,15 @@
           "stats": {
             "_runAttempts": {
               "value": "37",
-              "rank": 5
+              "rank": 4
             },
             "_passAttempts": {
               "value": "25",
-              "rank": 5
+              "rank": 25
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "5.5",
@@ -481,7 +481,7 @@
             },
             "yards per pass": {
               "value": "13.0",
-              "rank": 5
+              "rank": 1
             },
             "rushing touchdowns": {
               "value": "4",
@@ -489,7 +489,7 @@
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "1",
@@ -552,7 +552,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "2",
@@ -588,7 +588,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -662,31 +662,31 @@
           "stats": {
             "_runAttempts": {
               "value": "21",
-              "rank": 5
+              "rank": 23
             },
             "_passAttempts": {
               "value": "29",
-              "rank": 5
+              "rank": 16
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "4.1",
-              "rank": 5
+              "rank": 14
             },
             "yards per pass": {
               "value": "11.5",
-              "rank": 5
+              "rank": 2
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "0",
@@ -694,7 +694,7 @@
             }
           },
           "passPlayShare": 67.4,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 6
         },
         "defence": {
@@ -749,7 +749,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "takeaways": {
               "value": "2",
@@ -785,7 +785,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -859,7 +859,7 @@
           "stats": {
             "_runAttempts": {
               "value": "22",
-              "rank": 5
+              "rank": 20
             },
             "_passAttempts": {
               "value": "38",
@@ -867,23 +867,23 @@
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "5.7",
-              "rank": 5
+              "rank": 4
             },
             "yards per pass": {
               "value": "9.5",
-              "rank": 5
+              "rank": 4
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "3",
@@ -891,7 +891,7 @@
             }
           },
           "passPlayShare": 66.7,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 2
         },
         "defence": {
@@ -946,7 +946,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "1",
@@ -982,7 +982,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -1056,19 +1056,19 @@
           "stats": {
             "_runAttempts": {
               "value": "39",
-              "rank": 5
+              "rank": 1
             },
             "_passAttempts": {
               "value": "29",
-              "rank": 5
+              "rank": 16
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "7.5",
-              "rank": 5
+              "rank": 1
             },
             "yards per pass": {
               "value": "9.3",
@@ -1076,11 +1076,11 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 2
+              "rank": 1
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "1",
@@ -1088,7 +1088,7 @@
             }
           },
           "passPlayShare": 51.7,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 10
         },
         "defence": {
@@ -1143,7 +1143,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "3",
@@ -1179,7 +1179,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -1253,31 +1253,31 @@
           "stats": {
             "_runAttempts": {
               "value": "27",
-              "rank": 5
+              "rank": 17
             },
             "_passAttempts": {
               "value": "35",
-              "rank": 5
+              "rank": 8
             },
             "_sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "7.3",
-              "rank": 5
+              "rank": 16
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "1",
@@ -1285,7 +1285,7 @@
             }
           },
           "passPlayShare": 62.1,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -1340,7 +1340,7 @@
           "stats": {
             "sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "takeaways": {
               "value": "4",
@@ -1376,7 +1376,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -1450,19 +1450,19 @@
           "stats": {
             "_runAttempts": {
               "value": "22",
-              "rank": 5
+              "rank": 20
             },
             "_passAttempts": {
               "value": "22",
-              "rank": 5
+              "rank": 31
             },
             "_sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "yards per carry": {
               "value": "4.0",
-              "rank": 5
+              "rank": 18
             },
             "yards per pass": {
               "value": "9.3",
@@ -1470,11 +1470,11 @@
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "2",
@@ -1482,7 +1482,7 @@
             }
           },
           "passPlayShare": 62.8,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 6
         },
         "defence": {
@@ -1537,7 +1537,7 @@
           "stats": {
             "sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "takeaways": {
               "value": "0",
@@ -1573,7 +1573,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -1647,31 +1647,31 @@
           "stats": {
             "_runAttempts": {
               "value": "18",
-              "rank": 5
+              "rank": 29
             },
             "_passAttempts": {
               "value": "34",
-              "rank": 5
+              "rank": 9
             },
             "_sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "yards per carry": {
               "value": "3.8",
-              "rank": 5
+              "rank": 25
             },
             "yards per pass": {
               "value": "5.1",
-              "rank": 5
+              "rank": 29
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "1",
@@ -1679,7 +1679,7 @@
             }
           },
           "passPlayShare": 68,
-          "passPlayShareRank": 10,
+          "passPlayShareRank": 9,
           "quarterbackCarries": 2
         },
         "defence": {
@@ -1734,7 +1734,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "1",
@@ -1844,40 +1844,40 @@
           "stats": {
             "_runAttempts": {
               "value": "15",
-              "rank": 5
+              "rank": 31
             },
             "_passAttempts": {
               "value": "28",
-              "rank": 5
+              "rank": 19
             },
             "_sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "yards per carry": {
               "value": "4.1",
-              "rank": 5
+              "rank": 14
             },
             "yards per pass": {
               "value": "4.7",
-              "rank": 5
+              "rank": 31
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "2",
               "rank": 5
             }
           },
-          "passPlayShare": 68.1,
-          "passPlayShareRank": 8,
-          "quarterbackCarries": null
+          "passPlayShare": 72.7,
+          "passPlayShareRank": 3,
+          "quarterbackCarries": 3
         },
         "defence": {
           "players": [
@@ -1931,7 +1931,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "1",
@@ -2041,31 +2041,31 @@
           "stats": {
             "_runAttempts": {
               "value": "33",
-              "rank": 5
+              "rank": 9
             },
             "_passAttempts": {
               "value": "39",
-              "rank": 5
+              "rank": 4
             },
             "_sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "yards per carry": {
               "value": "5.0",
-              "rank": 5
+              "rank": 8
             },
             "yards per pass": {
               "value": "5.3",
-              "rank": 5
+              "rank": 27
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "1",
@@ -2073,7 +2073,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": 2
         },
         "defence": {
@@ -2128,7 +2128,7 @@
           "stats": {
             "sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "takeaways": {
               "value": "3",
@@ -2164,7 +2164,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -2238,31 +2238,31 @@
           "stats": {
             "_runAttempts": {
               "value": "21",
-              "rank": 5
+              "rank": 23
             },
             "_passAttempts": {
               "value": "42",
-              "rank": 5
+              "rank": 2
             },
             "_sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "yards per carry": {
               "value": "3.1",
-              "rank": 5
+              "rank": 30
             },
             "yards per pass": {
               "value": "9.2",
-              "rank": 5
+              "rank": 7
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "2",
@@ -2325,7 +2325,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "takeaways": {
               "value": "1",
@@ -2361,7 +2361,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -2435,7 +2435,7 @@
           "stats": {
             "_runAttempts": {
               "value": "32",
-              "rank": 5
+              "rank": 10
             },
             "_passAttempts": {
               "value": "38",
@@ -2443,23 +2443,23 @@
             },
             "_sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "7.2",
-              "rank": 5
+              "rank": 18
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "2",
@@ -2467,7 +2467,7 @@
             }
           },
           "passPlayShare": 57.7,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 2
         },
         "defence": {
@@ -2522,7 +2522,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "0",
@@ -2558,7 +2558,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -2632,31 +2632,31 @@
           "stats": {
             "_runAttempts": {
               "value": "20",
-              "rank": 5
+              "rank": 27
             },
             "_passAttempts": {
               "value": "31",
-              "rank": 5
+              "rank": 14
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "5.1",
-              "rank": 5
+              "rank": 7
             },
             "yards per pass": {
               "value": "5.4",
-              "rank": 5
+              "rank": 24
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "2",
@@ -2664,7 +2664,7 @@
             }
           },
           "passPlayShare": 63.5,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 1
         },
         "defence": {
@@ -2719,7 +2719,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "takeaways": {
               "value": "1",
@@ -2755,7 +2755,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -2829,31 +2829,31 @@
           "stats": {
             "_runAttempts": {
               "value": "32",
-              "rank": 5
+              "rank": 10
             },
             "_passAttempts": {
               "value": "23",
-              "rank": 5
+              "rank": 30
             },
             "_sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "10.7",
-              "rank": 5
+              "rank": 3
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "4",
-              "rank": 4
+              "rank": 1
             },
             "turnovers given away": {
               "value": "0",
@@ -2916,7 +2916,7 @@
           "stats": {
             "sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "takeaways": {
               "value": "2",
@@ -2952,7 +2952,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -3018,40 +3018,40 @@
           "stats": {
             "_runAttempts": {
               "value": "38",
-              "rank": 5
+              "rank": 3
             },
             "_passAttempts": {
               "value": "27",
-              "rank": 5
+              "rank": 22
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "5.8",
-              "rank": 5
+              "rank": 2
             },
             "yards per pass": {
-              "value": "6.4",
-              "rank": 5
+              "value": "6.8",
+              "rank": 19
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "1",
               "rank": 15
             }
           },
-          "passPlayShare": 100,
-          "passPlayShareRank": 1,
-          "quarterbackCarries": 64
+          "passPlayShare": 48.3,
+          "passPlayShareRank": 28,
+          "quarterbackCarries": 7
         },
         "defence": {
           "players": [
@@ -3105,7 +3105,7 @@
           "stats": {
             "sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "takeaways": {
               "value": "2",
@@ -3215,31 +3215,31 @@
           "stats": {
             "_runAttempts": {
               "value": "21",
-              "rank": 5
+              "rank": 23
             },
             "_passAttempts": {
               "value": "27",
-              "rank": 5
+              "rank": 22
             },
             "_sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "7.7",
-              "rank": 5
+              "rank": 13
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "2",
@@ -3247,7 +3247,7 @@
             }
           },
           "passPlayShare": 65.2,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -3302,7 +3302,7 @@
           "stats": {
             "sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "takeaways": {
               "value": "0",
@@ -3412,31 +3412,31 @@
           "stats": {
             "_runAttempts": {
               "value": "29",
-              "rank": 3
+              "rank": 16
             },
             "_passAttempts": {
               "value": "28",
-              "rank": 3
+              "rank": 19
             },
             "_sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "yards per carry": {
               "value": "4.2",
-              "rank": 3
+              "rank": 13
             },
             "yards per pass": {
               "value": "6.0",
-              "rank": 3
+              "rank": 22
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 1
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "0",
-              "rank": 4
+              "rank": 29
             },
             "turnovers given away": {
               "value": "2",
@@ -3444,7 +3444,7 @@
             }
           },
           "passPlayShare": 50.9,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 2
         },
         "defence": {
@@ -3499,7 +3499,7 @@
           "stats": {
             "sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "takeaways": {
               "value": "1",
@@ -3535,7 +3535,7 @@
           "stats": {
             "field goal percentage": {
               "value": "0.0",
-              "rank": 3
+              "rank": 1
             }
           }
         }
@@ -3609,31 +3609,31 @@
           "stats": {
             "_runAttempts": {
               "value": "37",
-              "rank": 5
+              "rank": 4
             },
             "_passAttempts": {
               "value": "30",
-              "rank": 5
+              "rank": 15
             },
             "_sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "yards per carry": {
               "value": "3.5",
-              "rank": 5
+              "rank": 27
             },
             "yards per pass": {
               "value": "5.3",
-              "rank": 5
+              "rank": 27
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "2",
@@ -3641,7 +3641,7 @@
             }
           },
           "passPlayShare": 48.4,
-          "passPlayShareRank": 28,
+          "passPlayShareRank": 27,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -3696,7 +3696,7 @@
           "stats": {
             "sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "takeaways": {
               "value": "2",
@@ -3806,31 +3806,31 @@
           "stats": {
             "_runAttempts": {
               "value": "18",
-              "rank": 5
+              "rank": 29
             },
             "_passAttempts": {
               "value": "27",
-              "rank": 5
+              "rank": 22
             },
             "_sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "yards per carry": {
               "value": "4.1",
-              "rank": 5
+              "rank": 14
             },
             "yards per pass": {
-              "value": "6.9",
-              "rank": 5
+              "value": "8.1",
+              "rank": 10
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "0",
-              "rank": 4
+              "rank": 29
             },
             "turnovers given away": {
               "value": "2",
@@ -3893,7 +3893,7 @@
           "stats": {
             "sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "takeaways": {
               "value": "2",
@@ -3929,7 +3929,7 @@
           "stats": {
             "field goal percentage": {
               "value": "66.7",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -4003,31 +4003,31 @@
           "stats": {
             "_runAttempts": {
               "value": "34",
-              "rank": 5
+              "rank": 7
             },
             "_passAttempts": {
               "value": "24",
-              "rank": 5
+              "rank": 27
             },
             "_sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "yards per carry": {
               "value": "3.1",
-              "rank": 5
+              "rank": 30
             },
             "yards per pass": {
               "value": "6.3",
-              "rank": 5
+              "rank": 21
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "1",
@@ -4090,7 +4090,7 @@
           "stats": {
             "sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "takeaways": {
               "value": "2",
@@ -4126,7 +4126,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -4200,31 +4200,31 @@
           "stats": {
             "_runAttempts": {
               "value": "31",
-              "rank": 1
+              "rank": 13
             },
             "_passAttempts": {
               "value": "33",
-              "rank": 2
+              "rank": 12
             },
             "_sacks": {
               "value": "3",
-              "rank": 1
+              "rank": 8
             },
             "yards per carry": {
               "value": "3.5",
-              "rank": 4
+              "rank": 27
             },
             "yards per pass": {
               "value": "5.4",
-              "rank": 4
+              "rank": 24
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 17
             },
             "turnovers given away": {
               "value": "3",
@@ -4232,7 +4232,7 @@
             }
           },
           "passPlayShare": 60,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 7
         },
         "defence": {
@@ -4287,7 +4287,7 @@
           "stats": {
             "sacks": {
               "value": "2",
-              "rank": 2
+              "rank": 14
             },
             "takeaways": {
               "value": "0",
@@ -4397,31 +4397,31 @@
           "stats": {
             "_runAttempts": {
               "value": "25",
-              "rank": 5
+              "rank": 18
             },
             "_passAttempts": {
               "value": "56",
-              "rank": 5
+              "rank": 1
             },
             "_sacks": {
               "value": "5",
-              "rank": 3
+              "rank": 1
             },
             "yards per carry": {
               "value": "3.6",
-              "rank": 5
+              "rank": 26
             },
             "yards per pass": {
               "value": "7.3",
-              "rank": 5
+              "rank": 16
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "3",
@@ -4429,7 +4429,7 @@
             }
           },
           "passPlayShare": 74.4,
-          "passPlayShareRank": 3,
+          "passPlayShareRank": 2,
           "quarterbackCarries": 4
         },
         "defence": {
@@ -4484,7 +4484,7 @@
           "stats": {
             "sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "takeaways": {
               "value": "1",
@@ -4520,7 +4520,7 @@
           "stats": {
             "field goal percentage": {
               "value": "50.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -4594,31 +4594,31 @@
           "stats": {
             "_runAttempts": {
               "value": "37",
-              "rank": 5
+              "rank": 4
             },
             "_passAttempts": {
               "value": "29",
-              "rank": 5
+              "rank": 16
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "4.5",
-              "rank": 5
+              "rank": 10
             },
             "yards per pass": {
               "value": "7.9",
-              "rank": 5
+              "rank": 12
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "1",
@@ -4626,7 +4626,7 @@
             }
           },
           "passPlayShare": 54.4,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -4681,7 +4681,7 @@
           "stats": {
             "sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "takeaways": {
               "value": "1",
@@ -4791,31 +4791,31 @@
           "stats": {
             "_runAttempts": {
               "value": "39",
-              "rank": 5
+              "rank": 1
             },
             "_passAttempts": {
               "value": "24",
-              "rank": 5
+              "rank": 27
             },
             "_sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "yards per carry": {
               "value": "3.9",
-              "rank": 5
+              "rank": 19
             },
             "yards per pass": {
               "value": "9.0",
-              "rank": 5
+              "rank": 8
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "0",
-              "rank": 4
+              "rank": 29
             },
             "turnovers given away": {
               "value": "0",
@@ -4878,7 +4878,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "takeaways": {
               "value": "1",
@@ -4914,7 +4914,7 @@
           "stats": {
             "field goal percentage": {
               "value": "75.0",
-              "rank": 2
+              "rank": 3
             }
           }
         }
@@ -4988,31 +4988,31 @@
           "stats": {
             "_runAttempts": {
               "value": "25",
-              "rank": 5
+              "rank": 18
             },
             "_passAttempts": {
               "value": "25",
-              "rank": 5
+              "rank": 25
             },
             "_sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "yards per carry": {
               "value": "5.4",
-              "rank": 5
+              "rank": 6
             },
             "yards per pass": {
               "value": "8.1",
-              "rank": 5
+              "rank": 10
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 4
+              "rank": 2
             },
             "turnovers given away": {
               "value": "0",
@@ -5020,7 +5020,7 @@
             }
           },
           "passPlayShare": 60.9,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 7
         },
         "defence": {
@@ -5075,7 +5075,7 @@
           "stats": {
             "sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "takeaways": {
               "value": "0",
@@ -5185,31 +5185,31 @@
           "stats": {
             "_runAttempts": {
               "value": "21",
-              "rank": 5
+              "rank": 23
             },
             "_passAttempts": {
               "value": "41",
-              "rank": 5
+              "rank": 3
             },
             "_sacks": {
               "value": "2",
-              "rank": 3
+              "rank": 14
             },
             "yards per carry": {
               "value": "2.8",
-              "rank": 5
+              "rank": 32
             },
             "yards per pass": {
               "value": "5.4",
-              "rank": 5
+              "rank": 24
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "1",
@@ -5272,7 +5272,7 @@
           "stats": {
             "sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "takeaways": {
               "value": "2",
@@ -5308,7 +5308,7 @@
           "stats": {
             "field goal percentage": {
               "value": "66.7",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -5382,31 +5382,31 @@
           "stats": {
             "_runAttempts": {
               "value": "22",
-              "rank": 4
+              "rank": 20
             },
             "_passAttempts": {
               "value": "24",
-              "rank": 4
+              "rank": 27
             },
             "_sacks": {
               "value": "2",
-              "rank": 2
+              "rank": 14
             },
             "yards per carry": {
               "value": "4.4",
-              "rank": 2
+              "rank": 12
             },
             "yards per pass": {
               "value": "8.3",
-              "rank": 1
+              "rank": 9
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 17
             },
             "turnovers given away": {
               "value": "0",
@@ -5414,7 +5414,7 @@
             }
           },
           "passPlayShare": 54.2,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 0
         },
         "defence": {
@@ -5469,7 +5469,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 1
+              "rank": 8
             },
             "takeaways": {
               "value": "3",
@@ -5579,31 +5579,31 @@
           "stats": {
             "_runAttempts": {
               "value": "30",
-              "rank": 2
+              "rank": 15
             },
             "_passAttempts": {
               "value": "34",
-              "rank": 1
+              "rank": 9
             },
             "_sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "yards per carry": {
               "value": "5.8",
-              "rank": 1
+              "rank": 2
             },
             "yards per pass": {
               "value": "6.0",
-              "rank": 2
+              "rank": 22
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "3",
-              "rank": 1
+              "rank": 2
             },
             "turnovers given away": {
               "value": "1",
@@ -5611,7 +5611,7 @@
             }
           },
           "passPlayShare": 57.6,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -5666,7 +5666,7 @@
           "stats": {
             "sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "takeaways": {
               "value": "2",
@@ -5702,7 +5702,7 @@
           "stats": {
             "field goal percentage": {
               "value": "66.7",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -5776,31 +5776,31 @@
           "stats": {
             "_runAttempts": {
               "value": "20",
-              "rank": 5
+              "rank": 27
             },
             "_passAttempts": {
               "value": "28",
-              "rank": 5
+              "rank": 19
             },
             "_sacks": {
               "value": "4",
-              "rank": 3
+              "rank": 4
             },
             "yards per carry": {
               "value": "4.5",
-              "rank": 5
+              "rank": 10
             },
             "yards per pass": {
               "value": "7.7",
-              "rank": 5
+              "rank": 13
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 2
+              "rank": 3
             },
             "passing touchdowns": {
               "value": "0",
-              "rank": 4
+              "rank": 29
             },
             "turnovers given away": {
               "value": "4",
@@ -5808,7 +5808,7 @@
             }
           },
           "passPlayShare": 68.1,
-          "passPlayShareRank": 9,
+          "passPlayShareRank": 8,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -5863,7 +5863,7 @@
           "stats": {
             "sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "takeaways": {
               "value": "1",
@@ -5899,7 +5899,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 4
+              "rank": 1
             }
           }
         }
@@ -5973,31 +5973,31 @@
           "stats": {
             "_runAttempts": {
               "value": "14",
-              "rank": 5
+              "rank": 32
             },
             "_passAttempts": {
               "value": "32",
-              "rank": 5
+              "rank": 13
             },
             "_sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "yards per carry": {
               "value": "4.9",
-              "rank": 5
+              "rank": 9
             },
             "yards per pass": {
               "value": "4.4",
-              "rank": 5
+              "rank": 32
             },
             "rushing touchdowns": {
               "value": "0",
-              "rank": 2
+              "rank": 21
             },
             "passing touchdowns": {
               "value": "1",
-              "rank": 4
+              "rank": 17
             },
             "turnovers given away": {
               "value": "1",
@@ -6005,7 +6005,7 @@
             }
           },
           "passPlayShare": 77.8,
-          "passPlayShareRank": 2,
+          "passPlayShareRank": 1,
           "quarterbackCarries": 4
         },
         "defence": {
@@ -6060,7 +6060,7 @@
           "stats": {
             "sacks": {
               "value": "0",
-              "rank": 3
+              "rank": 28
             },
             "takeaways": {
               "value": "0",
@@ -6096,7 +6096,7 @@
           "stats": {
             "field goal percentage": {
               "value": "100.0",
-              "rank": 2
+              "rank": 1
             }
           }
         }
@@ -6170,31 +6170,31 @@
           "stats": {
             "_runAttempts": {
               "value": "32",
-              "rank": 5
+              "rank": 10
             },
             "_passAttempts": {
               "value": "34",
-              "rank": 5
+              "rank": 9
             },
             "_sacks": {
               "value": "1",
-              "rank": 3
+              "rank": 23
             },
             "yards per carry": {
               "value": "4.1",
-              "rank": 5
+              "rank": 14
             },
             "yards per pass": {
               "value": "4.8",
-              "rank": 5
+              "rank": 30
             },
             "rushing touchdowns": {
               "value": "1",
-              "rank": 2
+              "rank": 12
             },
             "passing touchdowns": {
               "value": "2",
-              "rank": 4
+              "rank": 9
             },
             "turnovers given away": {
               "value": "0",
@@ -6202,7 +6202,7 @@
             }
           },
           "passPlayShare": 56.5,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 5
         },
         "defence": {
@@ -6257,7 +6257,7 @@
           "stats": {
             "sacks": {
               "value": "3",
-              "rank": 3
+              "rank": 8
             },
             "takeaways": {
               "value": "0",

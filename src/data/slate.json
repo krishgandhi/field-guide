@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-16T15:18:48.985Z",
+  "fetchedAt": "2026-09-17T15:24:57.165Z",
   "games": [
     {
       "id": "401872932",
@@ -32,7 +32,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "CHI",
       "away": "MIN",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "home",
       "overUnder": 47.5,
       "broadcast": "FOX",
@@ -68,7 +68,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "NYJ",
       "away": "GB",
-      "spread": 4.5,
+      "spread": 3.5,
       "favourite": "away",
       "overUnder": 44.5,
       "broadcast": "FOX",
@@ -92,9 +92,9 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "BAL",
       "away": "NO",
-      "spread": 7.5,
+      "spread": 8.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 46.5,
       "broadcast": "CBS",
       "venue": "M&T Bank Stadium",
       "neutralSite": false
@@ -104,7 +104,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "HOU",
       "away": "CIN",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -154,7 +154,7 @@
       "away": "SEA",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 40.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "State Farm Stadium",
       "neutralSite": false
@@ -166,7 +166,7 @@
       "away": "MIA",
       "spread": 13.5,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 44.5,
       "broadcast": "FOX",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -190,7 +190,7 @@
       "away": "NYG",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "ESPN, ABC",
       "venue": "SoFi Stadium",
       "neutralSite": false
@@ -198,31 +198,10 @@
   ],
   "byes": [],
   "injuries": {
-    "ARI": [
-      {
-        "player": "Tip Reiman",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "BAL": [
-      {
-        "player": "Ja'Kobi Lane",
-        "position": "WR",
-        "status": "Doubtful"
-      }
-    ],
     "BUF": [
       {
         "player": "Tyrell Shavers",
         "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Kyler Gordon",
-        "position": "CB",
         "status": "Out"
       }
     ],
@@ -240,13 +219,6 @@
         "status": "Out"
       }
     ],
-    "GB": [
-      {
-        "player": "Josh Jacobs",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
     "HOU": [
       {
         "player": "Jake Hummel",
@@ -261,25 +233,18 @@
         "status": "Out"
       }
     ],
-    "MIA": [
-      {
-        "player": "Kyle Louis",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
     "SF": [
       {
         "player": "De'Zhaun Stribling",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "SEA": [
       {
         "player": "Sam Darnold",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ]
   }
