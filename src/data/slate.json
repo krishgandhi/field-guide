@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-17T15:24:57.165Z",
+  "fetchedAt": "2026-09-18T14:45:30.298Z",
   "games": [
     {
       "id": "401872932",
       "kickoff": "2026-09-18T00:15Z",
       "home": "BUF",
       "away": "DET",
-      "spread": 5.5,
-      "favourite": "home",
-      "overUnder": 54.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Highmark Stadium",
       "neutralSite": false
@@ -34,7 +34,7 @@
       "away": "MIN",
       "spread": 4.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Soldier Field",
       "neutralSite": false
@@ -92,7 +92,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "BAL",
       "away": "NO",
-      "spread": 8.5,
+      "spread": 7.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -140,7 +140,7 @@
       "kickoff": "2026-09-20T20:25Z",
       "home": "DAL",
       "away": "WSH",
-      "spread": 4.5,
+      "spread": 3.5,
       "favourite": "home",
       "overUnder": 50.5,
       "broadcast": "FOX",
@@ -154,7 +154,7 @@
       "away": "SEA",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 41.5,
+      "overUnder": 40.5,
       "broadcast": "FOX",
       "venue": "State Farm Stadium",
       "neutralSite": false
@@ -164,7 +164,7 @@
       "kickoff": "2026-09-20T20:25Z",
       "home": "SF",
       "away": "MIA",
-      "spread": 13.5,
+      "spread": 12.5,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "FOX",
@@ -200,8 +200,13 @@
   "injuries": {
     "BUF": [
       {
-        "player": "Tyrell Shavers",
+        "player": "Skyler Bell",
         "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Ty Johnson",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -219,18 +224,33 @@
         "status": "Out"
       }
     ],
+    "DET": [
+      {
+        "player": "Ennis Rakestraw Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jimmy Rolder",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Ahmed Hassanein",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Keith Abney II",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "HOU": [
       {
         "player": "Jake Hummel",
         "position": "LB",
         "status": "Doubtful"
-      }
-    ],
-    "LAR": [
-      {
-        "player": "Myles Garrett",
-        "position": "DE",
-        "status": "Out"
       }
     ],
     "SF": [
