@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-18T14:45:30.298Z",
+  "fetchedAt": "2026-09-19T14:08:52.354Z",
   "games": [
     {
       "id": "401872932",
@@ -92,7 +92,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "BAL",
       "away": "NO",
-      "spread": 7.5,
+      "spread": 8.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -106,7 +106,7 @@
       "away": "CIN",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 46.5,
+      "overUnder": 45.5,
       "broadcast": "CBS",
       "venue": "Reliant Stadium",
       "neutralSite": false
@@ -164,7 +164,7 @@
       "kickoff": "2026-09-20T20:25Z",
       "home": "SF",
       "away": "MIA",
-      "spread": 12.5,
+      "spread": 13.5,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "FOX",
@@ -198,6 +198,47 @@
   ],
   "byes": [],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Garrett Williams",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "ATL": [
+      {
+        "player": "Tua Tagovailoa",
+        "position": "QB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Michael Penix Jr.",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Billy Bowman Jr.",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "BAL": [
+      {
+        "player": "T.J. Tampa",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Teddye Buchanan",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Zay Flowers",
+        "position": "WR",
+        "status": "Doubtful"
+      }
+    ],
     "BUF": [
       {
         "player": "Skyler Bell",
@@ -217,7 +258,19 @@
         "status": "Out"
       }
     ],
+    "DAL": [
+      {
+        "player": "DeMarvion Overshown",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "DEN": [
+      {
+        "player": "Marvin Mims Jr.",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Jonathon Cooper",
         "position": "LB",
@@ -248,9 +301,107 @@
     ],
     "HOU": [
       {
+        "player": "Jadeveon Clowney",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
         "player": "Jake Hummel",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Nico Collins",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "IND": [
+      {
+        "player": "Ashton Dulin",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "LV": [
+      {
+        "player": "Darien Porter",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Brock Bowers",
+        "position": "TE",
         "status": "Doubtful"
+      }
+    ],
+    "LAC": [
+      {
+        "player": "Elijah Molden",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Ronnie Harrison Jr.",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Chop Robinson",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "MIN": [
+      {
+        "player": "Kyler Murray",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Jauan Jennings",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "Isaiah Stalbird",
+        "position": "LB",
+        "status": "Doubtful"
+      }
+    ],
+    "NYJ": [
+      {
+        "player": "Joseph Ossai",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Omar Cooper Jr.",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Jonathan Greenard",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "PIT": [
+      {
+        "player": "Joey Porter Jr.",
+        "position": "CB",
+        "status": "Out"
       }
     ],
     "SF": [
@@ -264,6 +415,23 @@
       {
         "player": "Sam Darnold",
         "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Zach Charbonnet",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "WSH": [
+      {
+        "player": "Frankie Luvu",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Chig Okonkwo",
+        "position": "TE",
         "status": "Out"
       }
     ]
