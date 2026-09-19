@@ -1,6 +1,58 @@
 {
-  "generatedAt": "2026-09-18T15:44:36.856Z",
+  "generatedAt": "2026-09-19T15:16:23.816Z",
   "candidates": [
+    {
+      "id": "49974401",
+      "headline": "Vikings to start QB Wentz vs. Bears with Murray still on the mend",
+      "description": "Carson Wentz will be the Vikings' starting quarterback Sunday against the Bears while Kyler Murray continues to work his way back after suffering a concussion in the season opener.",
+      "published": "2026-09-18",
+      "likelyKind": "role",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "2573079",
+          "name": "Carson Wentz",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "3917315",
+          "name": "Kyler Murray",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49974401/vikings-start-qb-wentz-vs-bears-murray-mend"
+    },
+    {
+      "id": "49973986",
+      "headline": "Stephon Gilmore, '19 NFL DPOY, retires as member of the Patriots",
+      "description": "Stephon Gilmore, a two-time All-Pro cornerback and the NFL's 2019 Defensive Player of the Year, signed a one-day contract in New England on Friday to retire as a member of the Patriots,",
+      "published": "2026-09-18",
+      "likelyKind": "transaction",
+      "teams": [
+        "New England Patriots",
+        "Buffalo Bills"
+      ],
+      "teamIds": [
+        "NE",
+        "BUF"
+      ],
+      "players": [
+        {
+          "id": "14942",
+          "name": "Stephon Gilmore",
+          "position": "Cornerback",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49973986/stephon-gilmore-19-nfl-dpoy-retiring-member-patriots"
+    },
     {
       "id": "49964734",
       "headline": "Career-defining season for Vikings coach Kevin O'Connell?",
