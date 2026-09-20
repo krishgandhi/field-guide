@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-19T14:08:52.354Z",
+  "fetchedAt": "2026-09-20T14:27:28.960Z",
   "games": [
-    {
-      "id": "401872932",
-      "kickoff": "2026-09-18T00:15Z",
-      "home": "BUF",
-      "away": "DET",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Prime Video",
-      "venue": "Highmark Stadium",
-      "neutralSite": false
-    },
     {
       "id": "401872933",
       "kickoff": "2026-09-20T17:00Z",
@@ -34,7 +22,7 @@
       "away": "MIN",
       "spread": 4.5,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Soldier Field",
       "neutralSite": false
@@ -94,7 +82,7 @@
       "away": "NO",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 46.5,
+      "overUnder": 45.5,
       "broadcast": "CBS",
       "venue": "M&T Bank Stadium",
       "neutralSite": false
@@ -104,7 +92,7 @@
       "kickoff": "2026-09-20T17:00Z",
       "home": "HOU",
       "away": "CIN",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 45.5,
       "broadcast": "CBS",
@@ -176,11 +164,23 @@
       "kickoff": "2026-09-21T00:20Z",
       "home": "KC",
       "away": "IND",
-      "spread": 6.5,
+      "spread": 6,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "NBC",
       "venue": "Arrowhead Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872932",
+      "kickoff": "2026-09-18T00:15Z",
+      "home": "BUF",
+      "away": "DET",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Prime Video",
+      "venue": "Highmark Stadium",
       "neutralSite": false
     },
     {
@@ -190,7 +190,7 @@
       "away": "NYG",
       "spread": 7,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "ESPN, ABC",
       "venue": "SoFi Stadium",
       "neutralSite": false
@@ -207,14 +207,14 @@
     ],
     "ATL": [
       {
-        "player": "Tua Tagovailoa",
-        "position": "QB",
-        "status": "Doubtful"
-      },
-      {
         "player": "Michael Penix Jr.",
         "position": "QB",
         "status": "Out"
+      },
+      {
+        "player": "Tua Tagovailoa",
+        "position": "QB",
+        "status": "Doubtful"
       },
       {
         "player": "Billy Bowman Jr.",
@@ -224,19 +224,14 @@
     ],
     "BAL": [
       {
-        "player": "T.J. Tampa",
-        "position": "CB",
+        "player": "Zay Flowers",
+        "position": "WR",
         "status": "Out"
       },
       {
         "player": "Teddye Buchanan",
         "position": "LB",
         "status": "Out"
-      },
-      {
-        "player": "Zay Flowers",
-        "position": "WR",
-        "status": "Doubtful"
       }
     ],
     "BUF": [
@@ -301,6 +296,11 @@
     ],
     "HOU": [
       {
+        "player": "Nico Collins",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Jadeveon Clowney",
         "position": "DE",
         "status": "Out"
@@ -308,11 +308,6 @@
       {
         "player": "Jake Hummel",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Nico Collins",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -325,14 +320,19 @@
     ],
     "LV": [
       {
-        "player": "Darien Porter",
-        "position": "CB",
+        "player": "Aidan O'Connell",
+        "position": "QB",
         "status": "Out"
       },
       {
         "player": "Brock Bowers",
         "position": "TE",
         "status": "Doubtful"
+      },
+      {
+        "player": "Darien Porter",
+        "position": "CB",
+        "status": "Out"
       }
     ],
     "LAC": [
@@ -342,12 +342,14 @@
         "status": "Out"
       }
     ],
-    "MIA": [
+    "LAR": [
       {
-        "player": "Ronnie Harrison Jr.",
-        "position": "LB",
-        "status": "Out"
-      },
+        "player": "Jordan Whittington",
+        "position": "WR",
+        "status": "Doubtful"
+      }
+    ],
+    "MIA": [
       {
         "player": "Chop Robinson",
         "position": "LB",
@@ -363,6 +365,13 @@
       {
         "player": "Jauan Jennings",
         "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "NE": [
+      {
+        "player": "Carlton Davis III",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -383,11 +392,6 @@
         "player": "Kene Nwangwu",
         "position": "RB",
         "status": "Out"
-      },
-      {
-        "player": "Omar Cooper Jr.",
-        "position": "WR",
-        "status": "Out"
       }
     ],
     "PHI": [
@@ -402,11 +406,9 @@
         "player": "Joey Porter Jr.",
         "position": "CB",
         "status": "Out"
-      }
-    ],
-    "SF": [
+      },
       {
-        "player": "De'Zhaun Stribling",
+        "player": "Michael Pittman Jr.",
         "position": "WR",
         "status": "Out"
       }

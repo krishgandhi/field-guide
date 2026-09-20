@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-19T14:09:03.219Z",
+  "fetchedAt": "2026-09-20T14:27:36.436Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -2738,12 +2738,12 @@
               "draftedBy": null
             },
             {
-              "id": "4061956",
-              "name": "Ashton Dulin",
+              "id": "4429684",
+              "name": "Anthony Gould",
               "label": "KR",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": null
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 142 (IND)"
             }
           ],
           "rank": 11,
