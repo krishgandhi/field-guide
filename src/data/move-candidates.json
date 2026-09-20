@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-09-19T15:16:23.816Z",
+  "generatedAt": "2026-09-20T15:21:00.500Z",
   "candidates": [
+    {
+      "id": "49980661",
+      "headline": "Jets rookie WR Omar Cooper Jr. put on IR with sprained ankle",
+      "description": "Jets rookie wide receiver Omar Cooper Jr., one of the team's three first-round picks, has been placed on injured reserve with a sprained ankle.",
+      "published": "2026-09-19",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4723820",
+          "name": "Omar Cooper Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49980661/source-jets-rookie-wr-cooper-jr-put-ir-sprained-ankle"
+    },
     {
       "id": "49974401",
       "headline": "Vikings to start QB Wentz vs. Bears with Murray still on the mend",
