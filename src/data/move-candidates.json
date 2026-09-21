@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-09-20T15:21:00.500Z",
+  "generatedAt": "2026-09-21T17:47:51.688Z",
   "candidates": [
+    {
+      "id": "49993378",
+      "headline": "Van Ness' breakout game saves Packers in OT win vs. Jets",
+      "description": "Packers hope it's a sign of things to come as Micah Parsons nears his return from a torn ACL.",
+      "published": "2026-09-21",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4686906",
+          "name": "Lukas Van Ness",
+          "position": "Defensive End",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/49993378/nfl-green-bay-packers-lukas-van-ness-micah-parsons-jets"
+    },
     {
       "id": "49980661",
       "headline": "Jets rookie WR Omar Cooper Jr. put on IR with sprained ankle",
