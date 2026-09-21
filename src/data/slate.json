@@ -1,174 +1,18 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-20T14:27:28.960Z",
+  "fetchedAt": "2026-09-21T16:45:41.646Z",
   "games": [
     {
-      "id": "401872933",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "ATL",
-      "away": "CAR",
-      "spread": 2.5,
-      "favourite": "away",
-      "overUnder": 43.5,
-      "broadcast": "FOX",
-      "venue": "Mercedes-Benz Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872937",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "CHI",
-      "away": "MIN",
-      "spread": 4.5,
-      "favourite": "home",
-      "overUnder": 47.5,
-      "broadcast": "FOX",
-      "venue": "Soldier Field",
-      "neutralSite": false
-    },
-    {
-      "id": "401872939",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "TEN",
-      "away": "PHI",
-      "spread": 7,
-      "favourite": "away",
-      "overUnder": 39.5,
-      "broadcast": "FOX",
-      "venue": "Nissan Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872946",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "NE",
-      "away": "PIT",
-      "spread": 5.5,
-      "favourite": "home",
-      "overUnder": 41.5,
-      "broadcast": "CBS",
-      "venue": "Gillette Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872936",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "NYJ",
-      "away": "GB",
-      "spread": 3.5,
-      "favourite": "away",
-      "overUnder": 44.5,
-      "broadcast": "FOX",
-      "venue": "MetLife Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872935",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "TB",
-      "away": "CLE",
-      "spread": 8.5,
-      "favourite": "home",
-      "overUnder": 41.5,
-      "broadcast": "CBS",
-      "venue": "Raymond James Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872938",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "BAL",
-      "away": "NO",
-      "spread": 8.5,
-      "favourite": "home",
-      "overUnder": 45.5,
-      "broadcast": "CBS",
-      "venue": "M&T Bank Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872934",
-      "kickoff": "2026-09-20T17:00Z",
-      "home": "HOU",
-      "away": "CIN",
-      "spread": 3,
-      "favourite": "home",
-      "overUnder": 45.5,
-      "broadcast": "CBS",
-      "venue": "Reliant Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872940",
-      "kickoff": "2026-09-20T20:05Z",
-      "home": "DEN",
-      "away": "JAX",
-      "spread": 2.5,
-      "favourite": "home",
-      "overUnder": 45.5,
-      "broadcast": "CBS",
-      "venue": "Empower Field at Mile High",
-      "neutralSite": false
-    },
-    {
-      "id": "401872941",
-      "kickoff": "2026-09-20T20:05Z",
-      "home": "LAC",
-      "away": "LV",
+      "id": "401872947",
+      "kickoff": "2026-09-22T00:15Z",
+      "home": "LAR",
+      "away": "NYG",
       "spread": 6.5,
       "favourite": "home",
-      "overUnder": 43.5,
-      "broadcast": "CBS",
+      "overUnder": 47.5,
+      "broadcast": "ESPN, ABC",
       "venue": "SoFi Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872944",
-      "kickoff": "2026-09-20T20:25Z",
-      "home": "DAL",
-      "away": "WSH",
-      "spread": 3.5,
-      "favourite": "home",
-      "overUnder": 50.5,
-      "broadcast": "FOX",
-      "venue": "AT&T Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872943",
-      "kickoff": "2026-09-20T20:25Z",
-      "home": "ARI",
-      "away": "SEA",
-      "spread": 3.5,
-      "favourite": "away",
-      "overUnder": 40.5,
-      "broadcast": "FOX",
-      "venue": "State Farm Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872942",
-      "kickoff": "2026-09-20T20:25Z",
-      "home": "SF",
-      "away": "MIA",
-      "spread": 13.5,
-      "favourite": "home",
-      "overUnder": 44.5,
-      "broadcast": "FOX",
-      "venue": "Levi's Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401872945",
-      "kickoff": "2026-09-21T00:20Z",
-      "home": "KC",
-      "away": "IND",
-      "spread": 6,
-      "favourite": "home",
-      "overUnder": 46.5,
-      "broadcast": "NBC",
-      "venue": "Arrowhead Stadium",
       "neutralSite": false
     },
     {
@@ -184,21 +28,187 @@
       "neutralSite": false
     },
     {
-      "id": "401872947",
-      "kickoff": "2026-09-22T00:15Z",
-      "home": "LAR",
-      "away": "NYG",
-      "spread": 7,
-      "favourite": "home",
-      "overUnder": 47.5,
-      "broadcast": "ESPN, ABC",
+      "id": "401872933",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "ATL",
+      "away": "CAR",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "Mercedes-Benz Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872937",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "CHI",
+      "away": "MIN",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "Soldier Field",
+      "neutralSite": false
+    },
+    {
+      "id": "401872939",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "TEN",
+      "away": "PHI",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "Nissan Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872946",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "NE",
+      "away": "PIT",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
+      "venue": "Gillette Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872936",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "NYJ",
+      "away": "GB",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "MetLife Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872935",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "TB",
+      "away": "CLE",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
+      "venue": "Raymond James Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872938",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "BAL",
+      "away": "NO",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
+      "venue": "M&T Bank Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872934",
+      "kickoff": "2026-09-20T17:00Z",
+      "home": "HOU",
+      "away": "CIN",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
+      "venue": "Reliant Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872940",
+      "kickoff": "2026-09-20T20:05Z",
+      "home": "DEN",
+      "away": "JAX",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
+      "venue": "Empower Field at Mile High",
+      "neutralSite": false
+    },
+    {
+      "id": "401872941",
+      "kickoff": "2026-09-20T20:05Z",
+      "home": "LAC",
+      "away": "LV",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "CBS",
       "venue": "SoFi Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872944",
+      "kickoff": "2026-09-20T20:25Z",
+      "home": "DAL",
+      "away": "WSH",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "AT&T Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872943",
+      "kickoff": "2026-09-20T20:25Z",
+      "home": "ARI",
+      "away": "SEA",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "State Farm Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872942",
+      "kickoff": "2026-09-20T20:25Z",
+      "home": "SF",
+      "away": "MIA",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "FOX",
+      "venue": "Levi's Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872945",
+      "kickoff": "2026-09-21T00:20Z",
+      "home": "KC",
+      "away": "IND",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "NBC",
+      "venue": "Arrowhead Stadium",
       "neutralSite": false
     }
   ],
   "byes": [],
   "injuries": {
     "ARI": [
+      {
+        "player": "Carson Beck",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Reggie Virgil",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Garrett Williams",
         "position": "CB",
@@ -207,22 +217,32 @@
     ],
     "ATL": [
       {
+        "player": "Tua Tagovailoa",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
         "player": "Michael Penix Jr.",
         "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Tua Tagovailoa",
-        "position": "QB",
-        "status": "Doubtful"
+        "player": "Billy Bowman Jr.",
+        "position": "CB",
+        "status": "Out"
       },
       {
-        "player": "Billy Bowman Jr.",
+        "player": "Malcolm DeWalt IV",
         "position": "CB",
         "status": "Out"
       }
     ],
     "BAL": [
+      {
+        "player": "Joe Fagnano",
+        "position": "QB",
+        "status": "Out"
+      },
       {
         "player": "Zay Flowers",
         "position": "WR",
@@ -246,7 +266,78 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Haynes King",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Patrick Jones II",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Tyrel Dodson",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Ja'Tavion Sanders",
+        "position": "TE",
+        "status": "Out"
+      }
+    ],
+    "CHI": [
+      {
+        "player": "Caleb Williams",
+        "position": "QB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Case Keenum",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Jamree Kromah",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "CIN": [
+      {
+        "player": "Josh Johnson",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Ke'Shawn Williams",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Josh Newton",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "CLE": [
+      {
+        "player": "Taylen Green",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Toriano Pride Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Justin Jefferson",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Jeremiah Owusu-Koramoah",
         "position": "LB",
@@ -255,8 +346,23 @@
     ],
     "DAL": [
       {
+        "player": "Tyler Goodson",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "DeMarvion Overshown",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "James Houston",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Camden Brown",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -267,12 +373,22 @@
         "status": "Out"
       },
       {
+        "player": "RJ Harvey",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Jonathon Cooper",
         "position": "LB",
         "status": "Out"
       }
     ],
     "DET": [
+      {
+        "player": "Avonte Maddox",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Ennis Rakestraw Jr.",
         "position": "CB",
@@ -287,34 +403,78 @@
         "player": "Ahmed Hassanein",
         "position": "DE",
         "status": "Out"
-      },
+      }
+    ],
+    "GB": [
       {
-        "player": "Keith Abney II",
+        "player": "Benjamin St-Juste",
         "position": "CB",
         "status": "Out"
       }
     ],
     "HOU": [
       {
-        "player": "Nico Collins",
-        "position": "WR",
+        "player": "Collin Wright",
+        "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Jadeveon Clowney",
-        "position": "DE",
+        "player": "Brevin Jordan",
+        "position": "TE",
         "status": "Out"
       },
       {
         "player": "Jake Hummel",
         "position": "LB",
         "status": "Out"
+      },
+      {
+        "player": "Jadeveon Clowney",
+        "position": "DE",
+        "status": "Out"
       }
     ],
     "IND": [
       {
+        "player": "Riley Leonard",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "DJ Giddens",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Ashton Dulin",
         "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "George Gumbs Jr.",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "JAX": [
+      {
+        "player": "Quinn Ewers",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "CJ Williams",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Tanner Koziol",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Wesley Williams",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -325,17 +485,27 @@
         "status": "Out"
       },
       {
-        "player": "Brock Bowers",
-        "position": "TE",
-        "status": "Doubtful"
-      },
-      {
         "player": "Darien Porter",
         "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Brock Bowers",
+        "position": "TE",
         "status": "Out"
       }
     ],
     "LAC": [
+      {
+        "player": "Deane Leonard",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Isas Waxter",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Elijah Molden",
         "position": "CB",
@@ -351,8 +521,23 @@
     ],
     "MIA": [
       {
+        "player": "Brady Cook",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Jalen Tolbert",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Chop Robinson",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Justin Joly",
+        "position": "TE",
         "status": "Out"
       }
     ],
@@ -363,12 +548,32 @@
         "status": "Out"
       },
       {
+        "player": "Elijah Williams",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Zemaiah Vaughn",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Jauan Jennings",
         "position": "WR",
         "status": "Out"
       }
     ],
     "NE": [
+      {
+        "player": "Behren Morton",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Tanner Arkin",
+        "position": "TE",
+        "status": "Out"
+      },
       {
         "player": "Carlton Davis III",
         "position": "CB",
@@ -377,24 +582,64 @@
     ],
     "NO": [
       {
+        "player": "Zach Wilson",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
         "player": "Isaiah Stalbird",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Kendre Miller",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Decamerion Richardson",
+        "position": "CB",
+        "status": "Out"
       }
     ],
     "NYJ": [
       {
-        "player": "Joseph Ossai",
-        "position": "DE",
+        "player": "D'Angelo Ponds",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Trevin Wallace",
+        "position": "LB",
         "status": "Out"
       },
       {
         "player": "Kene Nwangwu",
         "position": "RB",
         "status": "Out"
+      },
+      {
+        "player": "Joseph Ossai",
+        "position": "DE",
+        "status": "Out"
       }
     ],
     "PHI": [
+      {
+        "player": "Cole Payton",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Tanner McKee",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Elijah Moore",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Jonathan Greenard",
         "position": "LB",
@@ -403,12 +648,44 @@
     ],
     "PIT": [
       {
-        "player": "Joey Porter Jr.",
-        "position": "CB",
+        "player": "Drew Allar",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Michael Pittman Jr.",
+        "player": "Will Howard",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Gabriel Rubio",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Joey Porter Jr.",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "SF": [
+      {
+        "player": "Kurtis Rourke",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Brandon Aiyuk",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Demarcus Robinson",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Jordan Watkins",
         "position": "WR",
         "status": "Out"
       }
@@ -420,20 +697,69 @@
         "status": "Out"
       },
       {
-        "player": "Zach Charbonnet",
-        "position": "RB",
+        "player": "Mike Morris",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Connor O'Toole",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Montorie Foster Jr.",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Jacob Parrish",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Ayden Garnes",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "TEN": [
+      {
+        "player": "Kylen Granson",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "James Williams Sr.",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Cor'Dale Flott",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "WSH": [
       {
-        "player": "Frankie Luvu",
-        "position": "LB",
+        "player": "Jayden Daniels",
+        "position": "QB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Athan Kaliakmanis",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Chig Okonkwo",
-        "position": "TE",
+        "player": "Luke McCaffrey",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Isaac Yiadom",
+        "position": "CB",
         "status": "Out"
       }
     ]
