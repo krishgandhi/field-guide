@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 2,
-  "fetchedAt": "2026-09-21T16:45:41.646Z",
+  "fetchedAt": "2026-09-22T15:23:22.768Z",
   "games": [
-    {
-      "id": "401872947",
-      "kickoff": "2026-09-22T00:15Z",
-      "home": "LAR",
-      "away": "NYG",
-      "spread": 6.5,
-      "favourite": "home",
-      "overUnder": 47.5,
-      "broadcast": "ESPN, ABC",
-      "venue": "SoFi Stadium",
-      "neutralSite": false
-    },
     {
       "id": "401872932",
       "kickoff": "2026-09-18T00:15Z",
@@ -194,19 +182,26 @@
       "broadcast": "NBC",
       "venue": "Arrowhead Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401872947",
+      "kickoff": "2026-09-22T00:15Z",
+      "home": "LAR",
+      "away": "NYG",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN, ABC",
+      "venue": "SoFi Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [],
   "injuries": {
     "ARI": [
       {
-        "player": "Carson Beck",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Reggie Virgil",
-        "position": "WR",
+        "player": "Will Johnson",
+        "position": "CB",
         "status": "Out"
       },
       {
@@ -222,27 +217,12 @@
         "status": "Out"
       },
       {
-        "player": "Michael Penix Jr.",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
         "player": "Billy Bowman Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Malcolm DeWalt IV",
         "position": "CB",
         "status": "Out"
       }
     ],
     "BAL": [
-      {
-        "player": "Joe Fagnano",
-        "position": "QB",
-        "status": "Out"
-      },
       {
         "player": "Zay Flowers",
         "position": "WR",
@@ -256,11 +236,6 @@
     ],
     "BUF": [
       {
-        "player": "Skyler Bell",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
         "player": "Ty Johnson",
         "position": "RB",
         "status": "Out"
@@ -268,23 +243,13 @@
     ],
     "CAR": [
       {
-        "player": "Haynes King",
-        "position": "QB",
-        "status": "Out"
+        "player": "Jonathon Brooks",
+        "position": "RB",
+        "status": "Doubtful"
       },
       {
         "player": "Patrick Jones II",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Tyrel Dodson",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Ja'Tavion Sanders",
-        "position": "TE",
         "status": "Out"
       }
     ],
@@ -293,51 +258,9 @@
         "player": "Caleb Williams",
         "position": "QB",
         "status": "Doubtful"
-      },
-      {
-        "player": "Case Keenum",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Jamree Kromah",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "CIN": [
-      {
-        "player": "Josh Johnson",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Ke'Shawn Williams",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Josh Newton",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "CLE": [
-      {
-        "player": "Taylen Green",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Toriano Pride Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Justin Jefferson",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Jeremiah Owusu-Koramoah",
         "position": "LB",
@@ -346,23 +269,13 @@
     ],
     "DAL": [
       {
-        "player": "Tyler Goodson",
-        "position": "RB",
+        "player": "Cobie Durant",
+        "position": "CB",
         "status": "Out"
       },
       {
         "player": "DeMarvion Overshown",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "James Houston",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Camden Brown",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -388,41 +301,9 @@
         "player": "Avonte Maddox",
         "position": "CB",
         "status": "Out"
-      },
-      {
-        "player": "Ennis Rakestraw Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Jimmy Rolder",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Ahmed Hassanein",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "GB": [
-      {
-        "player": "Benjamin St-Juste",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "HOU": [
-      {
-        "player": "Collin Wright",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Brevin Jordan",
-        "position": "TE",
-        "status": "Out"
-      },
       {
         "player": "Jake Hummel",
         "position": "LB",
@@ -432,13 +313,18 @@
         "player": "Jadeveon Clowney",
         "position": "DE",
         "status": "Out"
+      },
+      {
+        "player": "Nico Collins",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "IND": [
       {
-        "player": "Riley Leonard",
-        "position": "QB",
-        "status": "Out"
+        "player": "Alec Pierce",
+        "position": "WR",
+        "status": "Doubtful"
       },
       {
         "player": "DJ Giddens",
@@ -449,33 +335,6 @@
         "player": "Ashton Dulin",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "George Gumbs Jr.",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "JAX": [
-      {
-        "player": "Quinn Ewers",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "CJ Williams",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Tanner Koziol",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Wesley Williams",
-        "position": "DE",
-        "status": "Out"
       }
     ],
     "LV": [
@@ -485,24 +344,29 @@
         "status": "Out"
       },
       {
-        "player": "Darien Porter",
-        "position": "CB",
+        "player": "Brock Bowers",
+        "position": "TE",
         "status": "Out"
       },
       {
-        "player": "Brock Bowers",
-        "position": "TE",
+        "player": "Darien Porter",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "LAC": [
       {
-        "player": "Deane Leonard",
-        "position": "CB",
+        "player": "Charlie Kolar",
+        "position": "TE",
         "status": "Out"
       },
       {
-        "player": "Isas Waxter",
+        "player": "David Njoku",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Deane Leonard",
         "position": "CB",
         "status": "Out"
       },
@@ -514,49 +378,34 @@
     ],
     "LAR": [
       {
+        "player": "Ty Simpson",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
         "player": "Jordan Whittington",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "CJ Daniels",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Puka Nacua",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "MIA": [
       {
-        "player": "Brady Cook",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Jalen Tolbert",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
         "player": "Chop Robinson",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Justin Joly",
-        "position": "TE",
         "status": "Out"
       }
     ],
     "MIN": [
-      {
-        "player": "Kyler Murray",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Elijah Williams",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Zemaiah Vaughn",
-        "position": "CB",
-        "status": "Out"
-      },
       {
         "player": "Jauan Jennings",
         "position": "WR",
@@ -565,16 +414,6 @@
     ],
     "NE": [
       {
-        "player": "Behren Morton",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Tanner Arkin",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
         "player": "Carlton Davis III",
         "position": "CB",
         "status": "Out"
@@ -582,37 +421,34 @@
     ],
     "NO": [
       {
-        "player": "Zach Wilson",
-        "position": "QB",
+        "player": "Isaiah Stalbird",
+        "position": "LB",
         "status": "Out"
+      }
+    ],
+    "NYG": [
+      {
+        "player": "Jaxson Dart",
+        "position": "QB",
+        "status": "Doubtful"
       },
       {
-        "player": "Isaiah Stalbird",
+        "player": "Micah McFadden",
         "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Kendre Miller",
-        "position": "RB",
+        "player": "Deonte Banks",
+        "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Decamerion Richardson",
-        "position": "CB",
+        "player": "Thomas Fidone II",
+        "position": "TE",
         "status": "Out"
       }
     ],
     "NYJ": [
-      {
-        "player": "D'Angelo Ponds",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Trevin Wallace",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Kene Nwangwu",
         "position": "RB",
@@ -626,19 +462,9 @@
     ],
     "PHI": [
       {
-        "player": "Cole Payton",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Tanner McKee",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Elijah Moore",
-        "position": "WR",
-        "status": "Out"
+        "player": "Dallas Goedert",
+        "position": "TE",
+        "status": "Doubtful"
       },
       {
         "player": "Jonathan Greenard",
@@ -648,44 +474,24 @@
     ],
     "PIT": [
       {
-        "player": "Drew Allar",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Will Howard",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Gabriel Rubio",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
         "player": "Joey Porter Jr.",
         "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Michael Pittman Jr.",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "SF": [
       {
-        "player": "Kurtis Rourke",
-        "position": "QB",
+        "player": "Demarcus Robinson",
+        "position": "WR",
         "status": "Out"
       },
       {
         "player": "Brandon Aiyuk",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Demarcus Robinson",
-        "position": "WR",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Jordan Watkins",
         "position": "WR",
         "status": "Out"
       }
@@ -697,18 +503,8 @@
         "status": "Out"
       },
       {
-        "player": "Mike Morris",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Connor O'Toole",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Montorie Foster Jr.",
-        "position": "WR",
+        "player": "Zach Charbonnet",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -717,19 +513,9 @@
         "player": "Jacob Parrish",
         "position": "CB",
         "status": "Out"
-      },
-      {
-        "player": "Ayden Garnes",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "TEN": [
-      {
-        "player": "Kylen Granson",
-        "position": "TE",
-        "status": "Out"
-      },
       {
         "player": "James Williams Sr.",
         "position": "LB",
@@ -748,18 +534,13 @@
         "status": "Doubtful"
       },
       {
-        "player": "Athan Kaliakmanis",
-        "position": "QB",
+        "player": "Frankie Luvu",
+        "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Luke McCaffrey",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Isaac Yiadom",
-        "position": "CB",
+        "player": "Chig Okonkwo",
+        "position": "TE",
         "status": "Out"
       }
     ]

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-09-21T16:45:42.081Z",
+  "fetchedAt": "2026-09-22T15:23:23.124Z",
   "teams": {
     "KC": {
       "wins": 2,
@@ -183,15 +183,6 @@
       "pointsAgainst": 20,
       "conferenceRank": 5
     },
-    "NYG": {
-      "wins": 1,
-      "losses": 0,
-      "ties": 0,
-      "pointDifferential": 8,
-      "pointsFor": 28,
-      "pointsAgainst": 20,
-      "conferenceRank": 6
-    },
     "CAR": {
       "wins": 1,
       "losses": 1,
@@ -208,7 +199,7 @@
       "pointDifferential": -9,
       "pointsFor": 62,
       "pointsAgainst": 71,
-      "conferenceRank": 7
+      "conferenceRank": 6
     },
     "CHI": {
       "wins": 1,
@@ -217,7 +208,25 @@
       "pointDifferential": 16,
       "pointsFor": 62,
       "pointsAgainst": 46,
+      "conferenceRank": 7
+    },
+    "LAR": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": 2,
+      "pointsFor": 35,
+      "pointsAgainst": 33,
       "conferenceRank": 8
+    },
+    "NYG": {
+      "wins": 1,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": -14,
+      "pointsFor": 34,
+      "pointsAgainst": 48,
+      "conferenceRank": 9
     },
     "DAL": {
       "wins": 1,
@@ -226,7 +235,7 @@
       "pointDifferential": 9,
       "pointsFor": 57,
       "pointsAgainst": 48,
-      "conferenceRank": 9
+      "conferenceRank": 10
     },
     "GB": {
       "wins": 1,
@@ -235,7 +244,7 @@
       "pointDifferential": -14,
       "pointsFor": 42,
       "pointsAgainst": 56,
-      "conferenceRank": 10
+      "conferenceRank": 11
     },
     "NO": {
       "wins": 1,
@@ -244,7 +253,7 @@
       "pointDifferential": 6,
       "pointsFor": 54,
       "pointsAgainst": 48,
-      "conferenceRank": 11
+      "conferenceRank": 12
     },
     "ARI": {
       "wins": 1,
@@ -253,15 +262,6 @@
       "pointDifferential": -12,
       "pointsFor": 33,
       "pointsAgainst": 45,
-      "conferenceRank": 12
-    },
-    "LAR": {
-      "wins": 0,
-      "losses": 1,
-      "ties": 0,
-      "pointDifferential": -20,
-      "pointsFor": 7,
-      "pointsAgainst": 27,
       "conferenceRank": 13
     },
     "WSH": {
