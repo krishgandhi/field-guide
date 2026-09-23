@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-22T15:23:32.175Z",
+  "fetchedAt": "2026-09-23T15:16:06.738Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -320,8 +320,8 @@
       "name": "Darius Slayton",
       "position": "Wide Receiver",
       "positionShort": "WR",
-      "team": "New York Giants",
-      "teamId": "NYG",
+      "team": "Indianapolis Colts",
+      "teamId": "IND",
       "age": 29,
       "height": "6' 1\"",
       "weight": "198 lbs",
@@ -362,9 +362,9 @@
         "Fumbles Lost": "-"
       },
       "headshot": "/players/3916945.png",
-      "evidenceHash": "538dfc5cd34e84a9",
-      "blurb": "A wide receiver taken in the fifth round by the Giants in 2019, now eight seasons into his career with the same club. He has been a steady, useful contributor rather than a star — more than four thousand receiving yards and a healthy fifteen yards per catch, but no Pro Bowls and no season where he was the man defences worried about, and New York has now released him despite his being its longest-serving player.",
-      "promptVersion": 2
+      "evidenceHash": "393765f1801274f4",
+      "blurb": null,
+      "promptVersion": null
     },
     "3917315": {
       "id": "3917315",

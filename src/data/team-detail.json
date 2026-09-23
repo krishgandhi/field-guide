@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-22T15:23:30.219Z",
+  "fetchedAt": "2026-09-23T15:16:03.570Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -330,12 +330,12 @@
               "draftedBy": "2017: Rd 4, Pk 125 (LAR)"
             },
             {
-              "id": "4239995",
-              "name": "A.J. Terrell Jr.",
+              "id": "4240596",
+              "name": "C.J. Henderson",
               "label": "CB",
               "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 1, Pk 16 (ATL)"
+              "experience": 6,
+              "draftedBy": "2020: Rd 1, Pk 9 (JAX)"
             },
             {
               "id": "3895841",
@@ -364,7 +364,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "10621",
+              "name": "Nick Folk",
+              "label": "K",
+              "debutYear": 2007,
+              "experience": 19,
+              "draftedBy": "2007: Rd 6, Pk 178 (DAL)"
+            },
+            {
+              "id": "4241474",
+              "name": "Brian Robinson Jr.",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 98 (WSH)"
+            }
+          ],
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals so far this season — 30th of 32.",
@@ -480,7 +497,7 @@
             }
           },
           "passPlayShare": 56,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -544,7 +561,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "4697745",
+              "name": "Tyler Loop",
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 6, Pk 186 (BAL)"
+            },
+            {
+              "id": "4690013",
+              "name": "Rasheen Ali",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 165 (BAL)"
+            }
+          ],
           "rank": 22,
           "score": 2,
           "note": "Below average at kicking field goals so far this season, 22nd of 32.",
@@ -1054,7 +1088,7 @@
             }
           },
           "passPlayShare": 56,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 15
         },
         "defence": {
@@ -1512,7 +1546,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "4258620",
+              "name": "Andre Szmyt",
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
+            },
+            {
+              "id": "4613104",
+              "name": "Malachi Corley",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 65 (NYJ)"
+            }
+          ],
           "rank": 4,
           "score": 5,
           "note": "Among the best in the league at kicking field goals so far this season — 4th of 32.",
@@ -2613,7 +2664,7 @@
             }
           },
           "passPlayShare": 57.1,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 4
         },
         "defence": {
@@ -2874,7 +2925,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "4686361",
+              "name": "Cam Little",
+              "label": "K",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 212 (JAX)"
+            },
+            {
+              "id": "2576336",
+              "name": "Ameer Abdullah",
+              "label": "KR",
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": "2015: Rd 2, Pk 54 (DET)"
+            }
+          ],
           "rank": 19,
           "score": 3,
           "note": "Middle of the league at kicking field goals so far this season, 19th of 32.",
@@ -2982,7 +3050,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 9
         },
         "defence": {
@@ -3179,7 +3247,7 @@
             }
           },
           "passPlayShare": 57.1,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 8
         },
         "defence": {
@@ -3376,7 +3444,7 @@
             }
           },
           "passPlayShare": 54.1,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 6
         },
         "defence": {
@@ -3440,7 +3508,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "4574716",
+              "name": "Harrison Mevis",
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
+            },
+            {
+              "id": "4569382",
+              "name": "Jordan Whittington",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 213 (LAR)"
+            }
+          ],
           "rank": 32,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals so far this season — 32nd of 32.",
@@ -4147,7 +4232,7 @@
             }
           },
           "passPlayShare": 56,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -4452,12 +4537,12 @@
         "offence": {
           "players": [
             {
-              "id": "4689114",
-              "name": "Jaxson Dart",
+              "id": "2969939",
+              "name": "Jameis Winston",
               "label": "QB",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 1, Pk 25 (NYG)"
+              "debutYear": 2015,
+              "experience": 12,
+              "draftedBy": "2015: Rd 1, Pk 1 (TB)"
             },
             {
               "id": "4696981",
@@ -4540,9 +4625,9 @@
               "rank": 14
             }
           },
-          "passPlayShare": 58,
-          "passPlayShareRank": 18,
-          "quarterbackCarries": 11
+          "passPlayShare": 53.7,
+          "passPlayShareRank": 27,
+          "quarterbackCarries": 2
         },
         "defence": {
           "players": [
@@ -4605,7 +4690,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "5082424",
+              "name": "Dominic Zvada",
+              "label": "K",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": null
+            },
+            {
+              "id": "4428328",
+              "name": "Deonte Banks",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 4,
+              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
+            }
+          ],
           "rank": 12,
           "score": 4,
           "note": "Better than most at kicking field goals so far this season, 12th of 32.",
@@ -4664,12 +4766,12 @@
               "draftedBy": "2024: Rd 2, Pk 52 (IND)"
             },
             {
-              "id": "4808766",
-              "name": "Mason Taylor",
+              "id": "5083315",
+              "name": "Kenyon Sadiq",
               "label": "TE",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 2, Pk 42 (NYJ)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 16 (NYJ)"
             },
             {
               "id": "4431809",
@@ -4721,7 +4823,7 @@
             }
           },
           "passPlayShare": 55.6,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -4785,7 +4887,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "3124679",
+              "name": "Jason Sanders",
+              "label": "K",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 7, Pk 229 (MIA)"
+            },
+            {
+              "id": "4035537",
+              "name": "Kene Nwangwu",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 119 (MIN)"
+            }
+          ],
           "rank": 21,
           "score": 2,
           "note": "Below average at kicking field goals so far this season, 21st of 32.",
@@ -6083,7 +6202,7 @@
             }
           },
           "passPlayShare": 57.4,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 12
         },
         "defence": {
