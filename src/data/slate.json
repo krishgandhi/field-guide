@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 3,
-  "fetchedAt": "2026-09-23T15:15:58.184Z",
+  "fetchedAt": "2026-09-24T15:41:07.263Z",
   "games": [
     {
       "id": "401872948",
       "kickoff": "2026-09-25T00:15Z",
       "home": "GB",
       "away": "ATL",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "home",
-      "overUnder": 43.5,
+      "overUnder": 42.5,
       "broadcast": "Prime Video",
       "venue": "Lambeau Field",
       "neutralSite": false
@@ -32,7 +32,7 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "CLE",
       "away": "CAR",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 42.5,
       "broadcast": "FOX",
@@ -56,7 +56,7 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "IND",
       "away": "HOU",
-      "spread": 3,
+      "spread": 1.5,
       "favourite": "away",
       "overUnder": 42.5,
       "broadcast": "CBS",
@@ -68,7 +68,7 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "MIA",
       "away": "KC",
-      "spread": 11.5,
+      "spread": 10.5,
       "favourite": "away",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -80,9 +80,9 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "NYG",
       "away": "TEN",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
-      "overUnder": 39.5,
+      "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "MetLife Stadium",
       "neutralSite": false
@@ -166,7 +166,7 @@
       "away": "LV",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "CBS",
       "venue": "Caesars Superdome",
       "neutralSite": false
@@ -178,7 +178,7 @@
       "away": "LAR",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 45.5,
+      "overUnder": 44.5,
       "broadcast": "NBC",
       "venue": "Empower Field at Mile High",
       "neutralSite": false
@@ -198,10 +198,10 @@
   ],
   "byes": [],
   "injuries": {
-    "ARI": [
+    "ATL": [
       {
-        "player": "Will Johnson",
-        "position": "CB",
+        "player": "Samson Ebukam",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -210,12 +210,17 @@
         "player": "Caleb Williams",
         "position": "QB",
         "status": "Doubtful"
+      },
+      {
+        "player": "Noah Sewell",
+        "position": "LB",
+        "status": "Out"
       }
     ],
-    "CLE": [
+    "CIN": [
       {
-        "player": "Jeremiah Owusu-Koramoah",
-        "position": "LB",
+        "player": "Andrei Iosivas",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -237,24 +242,19 @@
       {
         "player": "Jayden Reed",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "IND": [
       {
         "player": "Alec Pierce",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "LAC": [
       {
         "player": "Charlie Kolar",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "David Njoku",
         "position": "TE",
         "status": "Out"
       }
@@ -263,7 +263,7 @@
       {
         "player": "Jaxson Dart",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "NYJ": [
@@ -303,7 +303,7 @@
       {
         "player": "Jayden Daniels",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ]
   }

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-23T15:16:03.570Z",
+  "fetchedAt": "2026-09-24T15:41:15.386Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -2591,20 +2591,20 @@
               "draftedBy": "2020: Rd 2, Pk 41 (IND)"
             },
             {
-              "id": "4360078",
-              "name": "Alec Pierce",
-              "label": "WR",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 2, Pk 53 (IND)"
-            },
-            {
               "id": "4688813",
               "name": "Josh Downs",
               "label": "WR",
               "debutYear": null,
               "experience": 4,
               "draftedBy": "2023: Rd 3, Pk 79 (IND)"
+            },
+            {
+              "id": "15818",
+              "name": "Keenan Allen",
+              "label": "WR",
+              "debutYear": 2013,
+              "experience": 13,
+              "draftedBy": "2013: Rd 3, Pk 76 (SD)"
             },
             {
               "id": "4431459",
@@ -3190,12 +3190,12 @@
               "draftedBy": "2023: Rd 1, Pk 21 (LAC)"
             },
             {
-              "id": "4595342",
-              "name": "Oronde Gadsden",
+              "id": "4241263",
+              "name": "Charlie Kolar",
               "label": "TE",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 5, Pk 165 (LAC)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 128 (BAL)"
             },
             {
               "id": "4242283",
