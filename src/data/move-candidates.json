@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-09-23T16:00:13.413Z",
+  "generatedAt": "2026-09-24T16:25:08.337Z",
   "candidates": [
+    {
+      "id": "50015866",
+      "headline": "49ers place starting DT C.J. West on IR due to knee injury",
+      "description": "49ers defensive tackle C.J. West, who is going to miss at least a chunk of the season with a bone chip in his knee that will require surgery, was placed on injured reserve Wednesday.",
+      "published": "2026-09-23",
+      "likelyKind": "injury",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "4686308",
+          "name": "C.J. West",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50015866/49ers-place-starting-dt-cj-west-ir-due-knee-injury"
+    },
     {
       "id": "50007211",
       "headline": "Sources: Giants QB Jaxson Dart out for extended period",
