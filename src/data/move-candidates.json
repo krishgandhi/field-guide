@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-09-24T16:25:08.337Z",
+  "generatedAt": "2026-09-25T16:25:06.664Z",
   "candidates": [
+    {
+      "id": "50027179",
+      "headline": "Commanders GM: Elbow surgery 'not on table' for QB Daniels",
+      "description": "Commanders quarterback Jayden Daniels won't undergo surgery on his dislocated left elbow and, as of now, he won't be placed on injured reserve according to general manager Adam Peters.",
+      "published": "2026-09-25",
+      "likelyKind": "injury",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "4426348",
+          "name": "Jayden Daniels",
+          "position": "Quarterback",
+          "currentTeam": "WSH"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50027179/commanders-gm-elbow-surgery-ir-not-table-right-now-qb-daniels"
+    },
     {
       "id": "50015866",
       "headline": "49ers place starting DT C.J. West on IR due to knee injury",
