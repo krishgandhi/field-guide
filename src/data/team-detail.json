@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-25T15:42:59.950Z",
+  "fetchedAt": "2026-09-26T14:51:39.005Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -768,12 +768,12 @@
               "draftedBy": "2020: Rd 6, Pk 188 (BUF)"
             },
             {
-              "id": "4429501",
-              "name": "Ray Davis",
+              "id": "4037235",
+              "name": "Greg Dortch",
               "label": "KR",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 4, Pk 128 (BUF)"
+              "debutYear": 2019,
+              "experience": 6,
+              "draftedBy": null
             }
           ],
           "rank": 1,
@@ -4065,12 +4065,12 @@
               "draftedBy": "2024: Rd 1, Pk 17 (MIN)"
             },
             {
-              "id": "5091793",
-              "name": "Charles Demmings",
+              "id": "4044540",
+              "name": "Isaiah Rodgers",
               "label": "CB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 5, Pk 163 (MIN)"
+              "debutYear": 2020,
+              "experience": 6,
+              "draftedBy": "2020: Rd 6, Pk 211 (IND)"
             },
             {
               "id": "4259252",

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 3,
-  "fetchedAt": "2026-09-25T15:42:51.018Z",
+  "fetchedAt": "2026-09-26T14:51:32.201Z",
   "games": [
     {
       "id": "401872948",
@@ -46,7 +46,7 @@
       "away": "NYJ",
       "spread": 6.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Ford Field",
       "neutralSite": false
@@ -68,7 +68,7 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "MIA",
       "away": "KC",
-      "spread": 10.5,
+      "spread": 10,
       "favourite": "away",
       "overUnder": 45.5,
       "broadcast": "CBS",
@@ -82,7 +82,7 @@
       "away": "TEN",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 38.5,
+      "overUnder": 37.5,
       "broadcast": "CBS",
       "venue": "MetLife Stadium",
       "neutralSite": false
@@ -118,7 +118,7 @@
       "away": "NE",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 46.5,
       "broadcast": "CBS",
       "venue": "EverBank Stadium",
       "neutralSite": false
@@ -130,7 +130,7 @@
       "away": "ARI",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "FOX",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -178,7 +178,7 @@
       "away": "LAR",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 43.5,
+      "overUnder": 44.5,
       "broadcast": "NBC",
       "venue": "Empower Field at Mile High",
       "neutralSite": false
@@ -220,6 +220,18 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Claudin Cherelus",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Devin Lloyd",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CHI": [
       {
         "player": "Caleb Williams",
@@ -253,6 +265,11 @@
     ],
     "DEN": [
       {
+        "player": "Jonah Coleman",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Jonathon Cooper",
         "position": "LB",
         "status": "Out"
@@ -265,7 +282,29 @@
         "status": "Out"
       }
     ],
+    "HOU": [
+      {
+        "player": "Jake Hummel",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Jadeveon Clowney",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Nico Collins",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
     "IND": [
+      {
+        "player": "Ashton Dulin",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Alec Pierce",
         "position": "WR",
@@ -274,32 +313,73 @@
     ],
     "LAC": [
       {
+        "player": "Elijah Molden",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Brenen Thompson",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Charlie Kolar",
         "position": "TE",
         "status": "Out"
       }
     ],
+    "LAR": [
+      {
+        "player": "Puka Nacua",
+        "position": "WR",
+        "status": "Doubtful"
+      }
+    ],
     "MIA": [
       {
-        "player": "Caleb Douglas",
-        "position": "WR",
+        "player": "Robert Beal Jr.",
+        "position": "DE",
         "status": "Out"
       },
       {
         "player": "Jaylen Wright",
         "position": "RB",
         "status": "Doubtful"
+      },
+      {
+        "player": "Caleb Douglas",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "NE": [
+      {
+        "player": "Dre'Mont Jones",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "Barion Brown",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "NYJ": [
       {
-        "player": "Mason Taylor",
-        "position": "TE",
+        "player": "Kiko Mauigoa",
+        "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Kiko Mauigoa",
-        "position": "LB",
+        "player": "Kene Nwangwu",
+        "position": "RB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Mason Taylor",
+        "position": "TE",
         "status": "Out"
       }
     ],
@@ -310,11 +390,23 @@
         "status": "Doubtful"
       }
     ],
+    "PIT": [
+      {
+        "player": "Rico Dowdle",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "SF": [
+      {
+        "player": "Romello Height",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Nick Bosa",
         "position": "DE",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Demarcus Robinson",
@@ -334,6 +426,18 @@
         "status": "Out"
       }
     ],
+    "TB": [
+      {
+        "player": "Josiah Trotter",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Rueben Bain Jr.",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "WSH": [
       {
         "player": "Jayden Daniels",
@@ -341,9 +445,14 @@
         "status": "Out"
       },
       {
+        "player": "Frankie Luvu",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
         "player": "Chig Okonkwo",
         "position": "TE",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ]
   }
