@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 3,
-  "fetchedAt": "2026-09-26T14:51:32.201Z",
+  "fetchedAt": "2026-09-27T15:29:59.801Z",
   "games": [
-    {
-      "id": "401872948",
-      "kickoff": "2026-09-25T00:15Z",
-      "home": "GB",
-      "away": "ATL",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Prime Video",
-      "venue": "Lambeau Field",
-      "neutralSite": false
-    },
     {
       "id": "401872953",
       "kickoff": "2026-09-27T17:00Z",
@@ -34,7 +22,7 @@
       "away": "CAR",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "FOX",
       "venue": "Huntington Bank Field",
       "neutralSite": false
@@ -104,7 +92,7 @@
       "kickoff": "2026-09-27T17:00Z",
       "home": "WSH",
       "away": "SEA",
-      "spread": 7.5,
+      "spread": 8.5,
       "favourite": "away",
       "overUnder": 40.5,
       "broadcast": "FOX",
@@ -128,9 +116,9 @@
       "kickoff": "2026-09-27T20:05Z",
       "home": "SF",
       "away": "ARI",
-      "spread": 8.5,
+      "spread": 7.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "FOX",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -152,7 +140,7 @@
       "kickoff": "2026-09-27T20:25Z",
       "home": "DAL",
       "away": "BAL",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 53.5,
       "broadcast": "CBS",
@@ -164,7 +152,7 @@
       "kickoff": "2026-09-27T20:25Z",
       "home": "NO",
       "away": "LV",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "CBS",
@@ -176,11 +164,23 @@
       "kickoff": "2026-09-28T00:20Z",
       "home": "DEN",
       "away": "LAR",
-      "spread": 2.5,
+      "spread": 1.5,
       "favourite": "away",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "NBC",
       "venue": "Empower Field at Mile High",
+      "neutralSite": false
+    },
+    {
+      "id": "401872948",
+      "kickoff": "2026-09-25T00:15Z",
+      "home": "GB",
+      "away": "ATL",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Prime Video",
+      "venue": "Lambeau Field",
       "neutralSite": false
     },
     {
@@ -188,9 +188,9 @@
       "kickoff": "2026-09-29T00:15Z",
       "home": "CHI",
       "away": "PHI",
-      "spread": 4.5,
+      "spread": 3.5,
       "favourite": "away",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "ESPN, ABC",
       "venue": "Soldier Field",
       "neutralSite": false
@@ -222,11 +222,6 @@
     ],
     "CAR": [
       {
-        "player": "Claudin Cherelus",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
         "player": "Devin Lloyd",
         "position": "LB",
         "status": "Out"
@@ -236,18 +231,11 @@
       {
         "player": "Caleb Williams",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Noah Sewell",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "CIN": [
-      {
-        "player": "Andrei Iosivas",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -265,11 +253,6 @@
     ],
     "DEN": [
       {
-        "player": "Jonah Coleman",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
         "player": "Jonathon Cooper",
         "position": "LB",
         "status": "Out"
@@ -283,11 +266,6 @@
       }
     ],
     "HOU": [
-      {
-        "player": "Jake Hummel",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Jadeveon Clowney",
         "position": "DE",
@@ -304,10 +282,12 @@
         "player": "Ashton Dulin",
         "position": "WR",
         "status": "Out"
-      },
+      }
+    ],
+    "LV": [
       {
-        "player": "Alec Pierce",
-        "position": "WR",
+        "player": "Aidan O'Connell",
+        "position": "QB",
         "status": "Out"
       }
     ],
@@ -368,14 +348,14 @@
     ],
     "NYJ": [
       {
-        "player": "Kiko Mauigoa",
-        "position": "LB",
+        "player": "Kene Nwangwu",
+        "position": "RB",
         "status": "Out"
       },
       {
-        "player": "Kene Nwangwu",
-        "position": "RB",
-        "status": "Doubtful"
+        "player": "Kiko Mauigoa",
+        "position": "LB",
+        "status": "Out"
       },
       {
         "player": "Mason Taylor",
@@ -385,9 +365,14 @@
     ],
     "PHI": [
       {
+        "player": "Hollywood Brown",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Dallas Goedert",
         "position": "TE",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "PIT": [
@@ -406,11 +391,6 @@
       {
         "player": "Nick Bosa",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Demarcus Robinson",
-        "position": "WR",
         "status": "Out"
       },
       {

@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-26T14:51:39.005Z",
+  "fetchedAt": "2026-09-27T15:30:15.836Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -2489,8 +2489,8 @@
               "draftedBy": "2015: Rd 3, Pk 88 (MIN)"
             },
             {
-              "id": "4241250",
-              "name": "Jake Hummel",
+              "id": "4033812",
+              "name": "Jake Hansen",
               "label": "LB",
               "debutYear": null,
               "experience": 5,
@@ -3261,12 +3261,12 @@
               "draftedBy": null
             },
             {
-              "id": "5089178",
-              "name": "Jamaree Caldwell",
+              "id": "4567138",
+              "name": "Justin Eboigbe",
               "label": "DT",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 3, Pk 86 (LAC)"
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 105 (LAC)"
             },
             {
               "id": "16710",
@@ -4700,12 +4700,12 @@
               "draftedBy": null
             },
             {
-              "id": "4428328",
-              "name": "Deonte Banks",
+              "id": "3123075",
+              "name": "Braxton Berrios",
               "label": "KR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 6, Pk 210 (NE)"
             }
           ],
           "rank": 11,
