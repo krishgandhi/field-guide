@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-09-28T19:10:40.613Z",
+  "generatedAt": "2026-09-29T17:32:20.098Z",
   "candidates": [
+    {
+      "id": "50059809",
+      "headline": "Source - Bengals cut Ke'Shawn Williams after costly muffed punt",
+      "description": "The Cincinnati Bengals cut WR Ke'Shawn Williams after he muffed a punt that eventually led to the Pittsburgh Steelers' 30-27 win, a source told ESPN's Jeremy Fowler. Earlier Tuesday, Cincinnati signed WR Mitch Tinsley, per ESPN's Adam Schefter.",
+      "published": "2026-09-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cincinnati Bengals"
+      ],
+      "teamIds": [
+        "CIN"
+      ],
+      "players": [
+        {
+          "id": "4570738",
+          "name": "Ke'Shawn Williams",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        },
+        {
+          "id": "4368003",
+          "name": "Andrei Iosivas",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        },
+        {
+          "id": "5092508",
+          "name": "Colbie Young",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059809/source-bengals-cut-keshawn-williams-costly-muffed-punt"
+    },
+    {
+      "id": "50059755",
+      "headline": "Sources: Giants to release fan favorite Odell Beckham Jr.",
+      "description": "The Giants are releasing veteran wide receiver Odell Beckham Jr., sources told NFL Network.",
+      "published": "2026-09-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "16733",
+          "name": "Odell Beckham Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr"
+    },
+    {
+      "id": "50053035",
+      "headline": "J.J. McCarthy traded to Giants: Will he succeed in New York?",
+      "description": "With Jaxson Dart out for the season, the Giants dealt a fifth-round pick to Minnesota for McCarthy. But does this move the needle for New York? Can it work?",
+      "published": "2026-09-28",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Giants",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "NYG",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell"
+    },
     {
       "id": "50052555",
       "headline": "Matthew Stafford makes cameo in Taylor Swift's 'Patient Zero' music video",
