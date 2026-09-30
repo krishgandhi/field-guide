@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-29T16:46:25.202Z",
+  "fetchedAt": "2026-09-30T16:38:22.409Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -921,12 +921,12 @@
               "draftedBy": "2021: Rd 1, Pk 18 (MIA)"
             },
             {
-              "id": "3917853",
-              "name": "Mike Jackson",
+              "id": "4244607",
+              "name": "Akayleb Evans",
               "label": "CB",
-              "debutYear": 2019,
-              "experience": 6,
-              "draftedBy": "2019: Rd 5, Pk 158 (DAL)"
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 4, Pk 118 (MIN)"
             },
             {
               "id": "5151083",
@@ -965,12 +965,12 @@
               "draftedBy": null
             },
             {
-              "id": "4567096",
-              "name": "John Metchie III",
+              "id": "4212909",
+              "name": "David Moore",
               "label": "KR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2022: Rd 2, Pk 44 (HOU)"
+              "debutYear": 2017,
+              "experience": 8,
+              "draftedBy": "2017: Rd 7, Pk 226 (SEA)"
             }
           ],
           "rank": 2,
@@ -1315,12 +1315,12 @@
               "draftedBy": "2018: Rd 3, Pk 88 (GB)"
             },
             {
-              "id": "4426422",
-              "name": "Dax Hill",
+              "id": "4726127",
+              "name": "Tacario Davis",
               "label": "CB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 1, Pk 31 (CIN)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 72 (CIN)"
             },
             {
               "id": "4572036",
@@ -2738,12 +2738,12 @@
               "draftedBy": null
             },
             {
-              "id": "4061956",
-              "name": "Ashton Dulin",
+              "id": "4429684",
+              "name": "Anthony Gould",
               "label": "KR",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": null
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 5, Pk 142 (IND)"
             }
           ],
           "rank": 6,
@@ -4708,12 +4708,12 @@
               "draftedBy": null
             },
             {
-              "id": "4428328",
-              "name": "Deonte Banks",
+              "id": "3123075",
+              "name": "Braxton Berrios",
               "label": "KR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 6, Pk 210 (NE)"
             }
           ],
           "rank": 9,
@@ -5168,12 +5168,12 @@
               "draftedBy": "2020: Rd 2, Pk 34 (IND)"
             },
             {
-              "id": "4361411",
-              "name": "Pat Freiermuth",
+              "id": "4430802",
+              "name": "Darnell Washington",
               "label": "TE",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 2, Pk 55 (PIT)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 93 (PIT)"
             },
             {
               "id": "4427170",
