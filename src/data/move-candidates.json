@@ -1,6 +1,72 @@
 {
-  "generatedAt": "2026-09-29T17:32:20.098Z",
+  "generatedAt": "2026-09-30T17:31:52.213Z",
   "candidates": [
+    {
+      "id": "50068583",
+      "headline": "Packers WR Jayden Reed to undergo season-ending neck surgery",
+      "description": "Packers wide receiver Jayden Reed will undergo season-ending neck surgery and be placed on injured reserve, coach Matt LaFleur said Wednesday.",
+      "published": "2026-09-30",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4362249",
+          "name": "Jayden Reed",
+          "position": "Wide Receiver",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury"
+    },
+    {
+      "id": "50067128",
+      "headline": "Packers, guard Kevin Zeitler agree to one-year deal",
+      "description": "Veteran guard Kevin Zeitler signed a one-year deal with the Packers.",
+      "published": "2026-09-30",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "14931",
+          "name": "Kevin Zeitler",
+          "position": "Guard",
+          "currentTeam": "TEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal"
+    },
+    {
+      "id": "50059771",
+      "headline": "Inside George Kittle's 243-day recovery from torn Achilles",
+      "description": "Despite tearing his Achilles in the playoffs, Kittle appears to be back to his normal self. Here's how he won the recovery process.",
+      "published": "2026-09-29",
+      "likelyKind": "injury",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "3040151",
+          "name": "George Kittle",
+          "position": "Tight End",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059771/san-francisco-49ers-george-kittle-torn-achilles-recovery"
+    },
     {
       "id": "50059809",
       "headline": "Source - Bengals cut Ke'Shawn Williams after costly muffed punt",
@@ -909,28 +975,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49906474/bears-rb-swift-agree-3-year-3375m-extension"
-    },
-    {
-      "id": "49906512",
-      "headline": "Texans rookie Kayden McDonald placed on IR with ankle injury",
-      "description": "Texans rookie defensive tackle Kayden McDonald (ankle) was placed on injured reserve, meaning he'll have to wait four weeks to make his debut.",
-      "published": "2026-09-11",
-      "likelyKind": "injury",
-      "teams": [
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "4870893",
-          "name": "Kayden McDonald",
-          "position": "Defensive Tackle",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49906512/texans-rookie-kayden-mcdonald-placed-ir-ankle-injury"
     }
   ]
 }
