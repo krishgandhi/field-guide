@@ -1,11 +1,146 @@
 {
-  "generatedAt": "2026-09-30T17:31:52.213Z",
+  "generatedAt": "2026-10-01T17:56:19.880Z",
   "candidates": [
+    {
+      "id": "50052555",
+      "headline": "Why Matthew Stafford made a cameo in Taylor Swift's 'Patient Zero' music video",
+      "description": "Why, yes, that was Matthew Stafford. Here's why all signs pointed to the reigning NFL MVP's music video cameo.",
+      "published": "2026-10-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Los Angeles Rams",
+        "Los Angeles Kings",
+        "Kansas City Chiefs"
+      ],
+      "teamIds": [
+        "LAR",
+        "KC"
+      ],
+      "players": [
+        {
+          "id": "12483",
+          "name": "Matthew Stafford",
+          "position": "Quarterback",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "15847",
+          "name": "Travis Kelce",
+          "position": "Tight End",
+          "currentTeam": "KC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo"
+    },
+    {
+      "id": "50076570",
+      "headline": "Why Steelers traded Joey Porter Jr. to Cowboys, what's next?",
+      "description": "Our insiders dive into Porter's fit in Dallas, his potential for a contract extension and what's next for the Steelers.",
+      "published": "2026-10-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys",
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "DAL",
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys"
+    },
+    {
+      "id": "50043542",
+      "headline": "NFL trade deadline grades: Joey Porter Jr. to Cowboys, J.J. McCarthy to Giants",
+      "description": "Can Joey Porter Jr. clean up the Cowboys' defense? Will J.J. McCarthy improve the Giants' QB situation? We're grading NFL trades ahead of November's deadline.",
+      "published": "2026-10-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants",
+        "Dallas Cowboys",
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG",
+        "DAL",
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals"
+    },
+    {
+      "id": "50074351",
+      "headline": "Steelers end standoff, trade Joey Porter Jr. to Cowboys",
+      "description": "The Steelers traded cornerback Joey Porter Jr. to the Cowboys for a 2027 sixth-round pick and a 2028 second-rounder.",
+      "published": "2026-10-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys",
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "DAL",
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50074351/sources-steelers-trade-joey-porter-jr-cowboys"
+    },
+    {
+      "id": "50071951",
+      "headline": "Falcons sign DT Gervon Dexter Sr. to four-year extension",
+      "description": "The Falcons signed Gervon Dexter Sr. to a four-year, $78 million contract extension, sources told ESPN.",
+      "published": "2026-10-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4429014",
+          "name": "Gervon Dexter Sr.",
+          "position": "Defensive Tackle",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50071951/falcons-sign-dt-gervon-dexter-sr-four-year-extension"
+    },
     {
       "id": "50068583",
       "headline": "Packers WR Jayden Reed to undergo season-ending neck surgery",
       "description": "Packers wide receiver Jayden Reed will undergo season-ending neck surgery and be placed on injured reserve, coach Matt LaFleur said Wednesday.",
-      "published": "2026-09-30",
+      "published": "2026-10-01",
       "likelyKind": "injury",
       "teams": [
         "Green Bay Packers"
@@ -22,6 +157,28 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury"
+    },
+    {
+      "id": "50071302",
+      "headline": "Giants' Harbaugh explains reasoning for releasing Beckham",
+      "description": "Giants coach John Harbaugh on Wednesday explained the team's decision for releasing wide receiver Odell Beckham Jr.",
+      "published": "2026-09-30",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "16733",
+          "name": "Odell Beckham Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50071302/giants-harbaugh-explains-reasoning-releasing-beckham"
     },
     {
       "id": "50067128",
@@ -148,37 +305,6 @@
       "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell"
     },
     {
-      "id": "50052555",
-      "headline": "Matthew Stafford makes cameo in Taylor Swift's 'Patient Zero' music video",
-      "description": "Why, yes, that was Matthew Stafford. Here's why all signs pointed to the reigning NFL MVP's music video cameo.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Los Angeles Rams",
-        "Los Angeles Kings",
-        "Kansas City Chiefs"
-      ],
-      "teamIds": [
-        "LAR",
-        "KC"
-      ],
-      "players": [
-        {
-          "id": "12483",
-          "name": "Matthew Stafford",
-          "position": "Quarterback",
-          "currentTeam": "LAR"
-        },
-        {
-          "id": "15847",
-          "name": "Travis Kelce",
-          "position": "Tight End",
-          "currentTeam": "KC"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo"
-    },
-    {
       "id": "50052903",
       "headline": "McCarthy exits Vikings as one of franchise's biggest draft busts",
       "description": "J.J. McCarthy was the No. 10 pick in 2024 but played only 10 games before being traded to the Giants on Monday.",
@@ -201,30 +327,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50052903/nfl-minnesota-vikings-jj-mccarthy-trade-new-york-giants-kevin-occonnell"
-    },
-    {
-      "id": "50043542",
-      "headline": "NFL trade deadline grades: J.J. McCarthy to the Giants",
-      "description": "Can J.J. McCarthy improve the Giants' QB situation? Did the Vikings get enough back? We're grading NFL trades ahead of November's deadline.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals"
     },
     {
       "id": "50052864",
@@ -881,100 +983,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49915181/sources-lamar-jackson-reluctant-talk-deal-ravens"
-    },
-    {
-      "id": "49917836",
-      "headline": "Sources: C.J. Stroud, Texans to table extension talks",
-      "description": "The Texans and C.J. Stroud made a run at completing a contract extension before the regular season begins, but both sides agreed they now prefer to wait until after this season to work out a long-term deal, sources told ESPN and NFL Network.",
-      "published": "2026-09-12",
-      "likelyKind": "transaction",
-      "teams": [
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "4432577",
-          "name": "C.J. Stroud",
-          "position": "Quarterback",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49917836/sources-cj-stroud-texans-table-extension-talks"
-    },
-    {
-      "id": "49914437",
-      "headline": "Raiders TE Michael Mayer gets 3-year, $45M extension, sources say",
-      "description": "Tight end Michael Mayer, who is stepping in for an injured Brock Bowers to start the regular season, has received a multiyear extension from the Raiders.",
-      "published": "2026-09-12",
-      "likelyKind": "transaction",
-      "teams": [
-        "Las Vegas Raiders"
-      ],
-      "teamIds": [
-        "LV"
-      ],
-      "players": [
-        {
-          "id": "4429086",
-          "name": "Michael Mayer",
-          "position": "Tight End",
-          "currentTeam": "LV"
-        },
-        {
-          "id": "4432665",
-          "name": "Brock Bowers",
-          "position": "Tight End",
-          "currentTeam": "LV"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49914437/raiders-te-michael-mayer-gets-3-year-45m-extension-sources-say"
-    },
-    {
-      "id": "49914334",
-      "headline": "Sources: Packers, TE Tucker Kraft agree to 4-year extension",
-      "description": "The Packers and tight end Tucker Kraft have reached agreement on a four-year extension worth up to $92 million, sources told ESPN.",
-      "published": "2026-09-12",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4572680",
-          "name": "Tucker Kraft",
-          "position": "Tight End",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49914334/sources-packers-tucker-kraft-agree-4-year-extension"
-    },
-    {
-      "id": "49906474",
-      "headline": "Sources: Bears, RB Swift agree to 3-year, $33.75M extension",
-      "description": "The Bears and running back D'Andre Swift have reached an agreement on a three-year, $33.75 million extension that includes $27.5 million guaranteed, sources told ESPN's Adam Schefter.",
-      "published": "2026-09-12",
-      "likelyKind": "transaction",
-      "teams": [
-        "Chicago Bears"
-      ],
-      "teamIds": [
-        "CHI"
-      ],
-      "players": [
-        {
-          "id": "4259545",
-          "name": "D'Andre Swift",
-          "position": "Running Back",
-          "currentTeam": "CHI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49906474/bears-rb-swift-agree-3-year-3375m-extension"
     }
   ]
 }
