@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-30T16:38:22.409Z",
+  "fetchedAt": "2026-10-01T17:14:26.412Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -1707,14 +1707,6 @@
               "debutYear": null,
               "experience": 2,
               "draftedBy": "2025: Rd 2, Pk 44 (DAL)"
-            },
-            {
-              "id": "4384549",
-              "name": "Cobie Durant",
-              "label": "CB",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 4, Pk 142 (LAR)"
             },
             {
               "id": "4248911",
@@ -5255,12 +5247,12 @@
               "draftedBy": "2020: Rd 3, Pk 102 (PIT)"
             },
             {
-              "id": "4426506",
-              "name": "Joey Porter Jr.",
+              "id": "4363034",
+              "name": "Asante Samuel Jr.",
               "label": "CB",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 2, Pk 32 (PIT)"
+              "experience": 6,
+              "draftedBy": "2021: Rd 2, Pk 47 (LAC)"
             },
             {
               "id": "3873935",
