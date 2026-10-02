@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 4,
-  "fetchedAt": "2026-10-01T17:14:20.261Z",
+  "fetchedAt": "2026-10-02T16:28:01.289Z",
   "games": [
     {
       "id": "401872964",
       "kickoff": "2026-10-02T00:15Z",
       "home": "CLE",
       "away": "PIT",
-      "spread": 2.5,
-      "favourite": "away",
-      "overUnder": 38.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Huntington Bank Field",
       "neutralSite": false
@@ -22,7 +22,7 @@
       "away": "IND",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "NFL Net",
       "venue": "Tottenham Hotspur Stadium",
       "neutralSite": true
@@ -32,7 +32,7 @@
       "kickoff": "2026-10-04T17:00Z",
       "home": "BUF",
       "away": "NE",
-      "spread": 6.5,
+      "spread": 7,
       "favourite": "home",
       "overUnder": 48.5,
       "broadcast": "CBS",
@@ -80,9 +80,9 @@
       "kickoff": "2026-10-04T17:00Z",
       "home": "PHI",
       "away": "LAR",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "away",
-      "overUnder": 43.5,
+      "overUnder": 42.5,
       "broadcast": "FOX",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -178,7 +178,7 @@
       "away": "DET",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 51.5,
+      "overUnder": 50.5,
       "broadcast": "NBC",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -231,6 +231,16 @@
     ],
     "CLE": [
       {
+        "player": "Taylen Green",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Justin Jefferson",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
         "player": "Tylan Wallace",
         "position": "WR",
         "status": "Out"
@@ -251,6 +261,11 @@
       }
     ],
     "HOU": [
+      {
+        "player": "British Brooks",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Azeez Al-Shaair",
         "position": "LB",
@@ -278,6 +293,16 @@
     ],
     "MIA": [
       {
+        "player": "Caleb Douglas",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Robert Beal Jr.",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
         "player": "Storm Duck",
         "position": "CB",
         "status": "Out"
@@ -290,36 +315,29 @@
         "status": "Out"
       }
     ],
-    "NO": [
-      {
-        "player": "Travis Etienne Jr.",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
     "NYJ": [
       {
         "player": "Adonai Mitchell",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Kiko Mauigoa",
+        "position": "LB",
+        "status": "Out"
       },
       {
         "player": "Breece Hall",
         "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Mason Taylor",
         "position": "TE",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "PHI": [
-      {
-        "player": "Chance Campbell",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Dallas Goedert",
         "position": "TE",
@@ -327,6 +345,21 @@
       }
     ],
     "PIT": [
+      {
+        "player": "Drew Allar",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Will Howard",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Gabriel Rubio",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Rico Dowdle",
         "position": "RB",
@@ -355,6 +388,13 @@
     "TB": [
       {
         "player": "Baker Mayfield",
+        "position": "QB",
+        "status": "Out"
+      }
+    ],
+    "WSH": [
+      {
+        "player": "Jayden Daniels",
         "position": "QB",
         "status": "Out"
       }
