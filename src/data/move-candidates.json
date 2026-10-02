@@ -1,6 +1,70 @@
 {
-  "generatedAt": "2026-10-01T17:56:19.880Z",
+  "generatedAt": "2026-10-02T17:22:05.631Z",
   "candidates": [
+    {
+      "id": "50085487",
+      "headline": "Bears coach Ben Johnson not ready to name QB starter",
+      "description": "Bears coach Ben Johnson will not say whether Case Keenum or Tyson Bagent will start Sunday against the Jets.",
+      "published": "2026-10-02",
+      "likelyKind": "role",
+      "teams": [
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "15168",
+          "name": "Case Keenum",
+          "position": "Quarterback",
+          "currentTeam": "CHI"
+        },
+        {
+          "id": "4434153",
+          "name": "Tyson Bagent",
+          "position": "Quarterback",
+          "currentTeam": "CHI"
+        },
+        {
+          "id": "4431611",
+          "name": "Caleb Williams",
+          "position": "Quarterback",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter"
+    },
+    {
+      "id": "50069588",
+      "headline": "Don't be surprised if ... these three hot starters continue to shine all season",
+      "description": "Don't be surprised if a few early stars stay hot, and if a slow-starting QB enjoys a big Week 4.",
+      "published": "2026-10-02",
+      "likelyKind": "role",
+      "teams": [],
+      "teamIds": [],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4360689",
+          "name": "Tyler Shough",
+          "position": "Quarterback",
+          "currentTeam": "NO"
+        },
+        {
+          "id": "4248528",
+          "name": "Christian Watson",
+          "position": "Wide Receiver",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/fantasy/football/story/_/id/50069588/fantasy-football-start-sit-sleepers-breakouts-week-4"
+    },
     {
       "id": "50052555",
       "headline": "Why Matthew Stafford made a cameo in Taylor Swift's 'Patient Zero' music video",
@@ -939,50 +1003,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49921824/sources-maxx-crosby-shut-rams-trade-talks-failed-ravens-deal"
-    },
-    {
-      "id": "49920927",
-      "headline": "Source: Jaguars, Parker Washington unlikely to agree to deal",
-      "description": "The Jaguars and Parker Washington are unlikely to agree to a contract extension before the start of the season, a source told NFL Network.",
-      "published": "2026-09-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "Jacksonville Jaguars"
-      ],
-      "teamIds": [
-        "JAX"
-      ],
-      "players": [
-        {
-          "id": "4432620",
-          "name": "Parker Washington",
-          "position": "Wide Receiver",
-          "currentTeam": "JAX"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49920927/source-jaguars-parker-washington-unlikely-agree-deal"
-    },
-    {
-      "id": "49915181",
-      "headline": "Sources: Lamar Jackson won't have deal before start of season",
-      "description": "Lamar Jackson has been reluctant to discuss a long-term extension with the Ravens and has been more focused on the upcoming 2026 season, league sources told ESPN.",
-      "published": "2026-09-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "Baltimore Ravens"
-      ],
-      "teamIds": [
-        "BAL"
-      ],
-      "players": [
-        {
-          "id": "3916387",
-          "name": "Lamar Jackson",
-          "position": "Quarterback",
-          "currentTeam": "BAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49915181/sources-lamar-jackson-reluctant-talk-deal-ravens"
     }
   ]
 }
