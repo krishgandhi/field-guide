@@ -1,6 +1,74 @@
 {
-  "generatedAt": "2026-10-02T17:22:05.631Z",
+  "generatedAt": "2026-10-03T15:38:29.618Z",
   "candidates": [
+    {
+      "id": "50086094",
+      "headline": "Seahawks WR Jaxon Smith-Njigba off to a historic start, but is it sustainable?",
+      "description": "Seattle's star receiver is leading the NFL in receiving yards and TDs after signing a big contract extension this summer. But will the Seahawks look to spread the ball more?",
+      "published": "2026-10-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "4430878",
+          "name": "Jaxon Smith-Njigba",
+          "position": "Wide Receiver",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50086094/seahawks-jaxon-smith-njigba-historic-start"
+    },
+    {
+      "id": "50086232",
+      "headline": "Joey Porter Jr. without designation, could debut for Cowboys",
+      "description": "Newly acquired Cowboys cornerback Joey Porter Jr. does not carry an injury designation after practicing the past two days following his trade from the Steelers.",
+      "published": "2026-10-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "DAL"
+      ],
+      "players": [
+        {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys"
+    },
+    {
+      "id": "50085908",
+      "headline": "McCarthy: Trade to Giants a 'shock,' turns page on Vikings",
+      "description": "Quarterback J.J. McCarthy said it was a \"shock\" to be traded from the Vikings to the Giants this week but is looking at it as an opportunity to show what he can do.",
+      "published": "2026-10-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "NYG",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings"
+    },
     {
       "id": "50085487",
       "headline": "Bears coach Ben Johnson not ready to name QB starter",
@@ -929,80 +997,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49959077/vikings-rb-jordan-mason-put-ir-having-surgery-thumb"
-    },
-    {
-      "id": "49947028",
-      "headline": "Kenneth Walker III, Patrick Mahomes lead Chiefs' win vs. Broncos",
-      "description": "Quarterback Patrick Mahomes, making his return from a torn ACL, and running back Kenneth Walker III, making his Chiefs debut, powered Kansas City to a season-opening blowout win over Denver.",
-      "published": "2026-09-15",
-      "likelyKind": "injury",
-      "teams": [
-        "Kansas City Chiefs"
-      ],
-      "teamIds": [
-        "KC"
-      ],
-      "players": [
-        {
-          "id": "4567048",
-          "name": "Kenneth Walker III",
-          "position": "Running Back",
-          "currentTeam": "KC"
-        },
-        {
-          "id": "3139477",
-          "name": "Patrick Mahomes",
-          "position": "Quarterback",
-          "currentTeam": "KC"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49947028/kenneth-walker-iii-patrick-mahomes-power-chiefs-win-vs-broncos"
-    },
-    {
-      "id": "49920002",
-      "headline": "Sources: Joey Porter Jr. unlikely to play amid uncertain Steelers future",
-      "description": "Steelers cornerback Joey Porter Jr., who has been embroiled in a contract dispute all summer, is unlikely to play against the Falcons because of a back injury, sources told NFL Network and ESPN, and the possibility of a trade remains in play.",
-      "published": "2026-09-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49920002/sources-joey-porter-jr-unlikely-play-amid-uncertain-steelers-future"
-    },
-    {
-      "id": "49921824",
-      "headline": "Sources: Maxx Crosby shut down Rams trade talks after failed Ravens deal",
-      "description": "The Rams pursued Maxx Crosby shortly after his trade from the Raiders to the Ravens fell through, sources told NFL Network.",
-      "published": "2026-09-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "Las Vegas Raiders",
-        "Los Angeles Rams"
-      ],
-      "teamIds": [
-        "LV",
-        "LAR"
-      ],
-      "players": [
-        {
-          "id": "3916655",
-          "name": "Maxx Crosby",
-          "position": "Defensive End",
-          "currentTeam": "LV"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49921824/sources-maxx-crosby-shut-rams-trade-talks-failed-ravens-deal"
     }
   ]
 }
