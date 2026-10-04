@@ -1,6 +1,86 @@
 {
-  "generatedAt": "2026-10-03T15:38:29.618Z",
+  "generatedAt": "2026-10-04T16:22:19.454Z",
   "candidates": [
+    {
+      "id": "50095248",
+      "headline": "Sources: Steelers' contract philosophy led to Joey Porter Jr. trade",
+      "description": "The Steelers' philosophy of avoiding second-year contract guarantees was a factor in their inability to reach a deal with Joey Porter Jr., sources told NFL Network.",
+      "published": "2026-10-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys",
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "DAL",
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "4426506",
+          "name": "Joey Porter Jr.",
+          "position": "Cornerback",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade"
+    },
+    {
+      "id": "50087681",
+      "headline": "Patriots preach patience when it comes to receiver WR Romeo Doubs' modest start",
+      "description": "After the Patriots signed him to a four-year deal in March, Doubs is searching for his footing in the offense entering Week 4.",
+      "published": "2026-10-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "New England Patriots"
+      ],
+      "teamIds": [
+        "NE"
+      ],
+      "players": [
+        {
+          "id": "4361432",
+          "name": "Romeo Doubs",
+          "position": "Wide Receiver",
+          "currentTeam": "NE"
+        },
+        {
+          "id": "4039505",
+          "name": "Reggie Gilliam",
+          "position": "Fullback",
+          "currentTeam": "NE"
+        },
+        {
+          "id": "4565293",
+          "name": "Marcus Bryant",
+          "position": "Offensive Tackle",
+          "currentTeam": "NE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50087681/patriots-romeo-doubs-bills-game"
+    },
+    {
+      "id": "50092744",
+      "headline": "Bears LT Braxton Jones on IR; Theo Benedet to start vs. Jets",
+      "description": "Bears left tackle Braxton Jones has been placed on injured reserve after sustaining an injury to his right knee against the Eagles in Week 3.",
+      "published": "2026-10-03",
+      "likelyKind": "injury",
+      "teams": [
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "4251007",
+          "name": "Braxton Jones",
+          "position": "Offensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50092744/bears-lt-braxton-jones-ir-theo-benedet-start-vs-jets"
+    },
     {
       "id": "50086094",
       "headline": "Seahawks WR Jaxon Smith-Njigba off to a historic start, but is it sustainable?",
@@ -917,86 +997,6 @@
         }
       ],
       "url": "https://www.espn.com/fantasy/football/story/_/id/49957386/fantasy-football-rankings-value-bad-game-bad-sign"
-    },
-    {
-      "id": "49960637",
-      "headline": "Buccaneers' Zampese says Browns messed up by trading Mayfield",
-      "description": "Buccaneers assistant coach Ken Zampease, who was Baker Mayfield's QB coach with the Browns in 2018, says Cleveland messed up by trading the QB.",
-      "published": "2026-09-17",
-      "likelyKind": "transaction",
-      "teams": [
-        "Tampa Bay Buccaneers",
-        "Cleveland Browns"
-      ],
-      "teamIds": [
-        "TB",
-        "CLE"
-      ],
-      "players": [
-        {
-          "id": "3052587",
-          "name": "Baker Mayfield",
-          "position": "Quarterback",
-          "currentTeam": "TB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49960637/buccaneers-zampese-says-browns-messed-trading-mayfield"
-    },
-    {
-      "id": "49960208",
-      "headline": "49ers' De'Zhaun Stribling has surgery, to miss about 10 weeks",
-      "description": "49ers receiver De'Zhaun Stribling had surgery on his ankle and is expected to miss about 10 weeks, while tight end Jake Tonges has been ruled out for the season.",
-      "published": "2026-09-16",
-      "likelyKind": "injury",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
-        {
-          "id": "4710714",
-          "name": "De'Zhaun Stribling",
-          "position": "Wide Receiver",
-          "currentTeam": "SF"
-        },
-        {
-          "id": "4259147",
-          "name": "Jake Tonges",
-          "position": "Tight End",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49960208/49ers-dezhaun-stribling-surgery-miss-10-weeks"
-    },
-    {
-      "id": "49959077",
-      "headline": "Vikings RB Jordan Mason put on IR after having surgery on thumb",
-      "description": "Vikings running back Jordan Mason was placed on injured reserve Wednesday after undergoing surgery to repair a fractured thumb.",
-      "published": "2026-09-16",
-      "likelyKind": "injury",
-      "teams": [
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4360569",
-          "name": "Jordan Mason",
-          "position": "Running Back",
-          "currentTeam": "MIN"
-        },
-        {
-          "id": "3917315",
-          "name": "Kyler Murray",
-          "position": "Quarterback",
-          "currentTeam": "MIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49959077/vikings-rb-jordan-mason-put-ir-having-surgery-thumb"
     }
   ]
 }
