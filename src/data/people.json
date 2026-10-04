@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-03T15:02:25.592Z",
+  "fetchedAt": "2026-10-04T15:38:48.617Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -906,46 +906,12 @@
       "draft": "2024: Rd 1, Pk 24 (DET)",
       "college": "Alabama",
       "awards": [],
-      "career": {
-        "Total Tackles": "91",
-        "Solo Tackles": "70",
-        "Assist Tackles": "21",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "1",
-        "Fumbles Recovered Yards": "-1",
-        "Interceptions": "1",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "18",
-        "Stuffs": "0.5",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "season": {
-        "Total Tackles": "31",
-        "Solo Tackles": "23",
-        "Assist Tackles": "8",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "1",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "8",
-        "Stuffs": "0.5",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
+      "career": {},
+      "season": {},
       "headshot": "/players/4592837.png",
-      "evidenceHash": "c836f1db9bdae604",
-      "blurb": "A cornerback, the defender who covers receivers, taken twenty-fourth overall in 2024 and now in his fourth season, signed by Seattle for close to the league minimum after Detroit released him. There is real draft pedigree here but almost no production to match it yet — one career interception and a modest tackle count — so he arrives as depth rather than a proven starter.",
-      "promptVersion": 2
+      "evidenceHash": "98fb17dff319aae5",
+      "blurb": null,
+      "promptVersion": null
     },
     "4686772": {
       "id": "4686772",

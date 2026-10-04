@@ -1,28 +1,16 @@
 {
   "season": 2026,
   "week": 4,
-  "fetchedAt": "2026-10-03T15:02:06.986Z",
+  "fetchedAt": "2026-10-04T15:38:17.150Z",
   "games": [
-    {
-      "id": "401872964",
-      "kickoff": "2026-10-02T00:15Z",
-      "home": "CLE",
-      "away": "PIT",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Prime Video",
-      "venue": "Huntington Bank Field",
-      "neutralSite": false
-    },
     {
       "id": "401872965",
       "kickoff": "2026-10-04T13:30Z",
       "home": "WSH",
       "away": "IND",
-      "spread": 4.5,
-      "favourite": "away",
-      "overUnder": 46.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "NFL Net",
       "venue": "Tottenham Hotspur Stadium",
       "neutralSite": true
@@ -94,7 +82,7 @@
       "away": "GB",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 39.5,
+      "overUnder": 38.5,
       "broadcast": "FOX",
       "venue": "Raymond James Stadium",
       "neutralSite": false
@@ -154,7 +142,7 @@
       "away": "DEN",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "CBS",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -178,9 +166,21 @@
       "away": "DET",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 50.5,
+      "overUnder": 51.5,
       "broadcast": "NBC",
       "venue": "Bank of America Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401872964",
+      "kickoff": "2026-10-02T00:15Z",
+      "home": "CLE",
+      "away": "PIT",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Prime Video",
+      "venue": "Huntington Bank Field",
       "neutralSite": false
     },
     {
@@ -188,7 +188,7 @@
       "kickoff": "2026-10-06T00:15Z",
       "home": "NO",
       "away": "ATL",
-      "spread": 2.5,
+      "spread": 1.5,
       "favourite": "home",
       "overUnder": 47.5,
       "broadcast": "ESPN",
@@ -198,17 +198,42 @@
   ],
   "byes": [],
   "injuries": {
-    "BAL": [
+    "ARI": [
       {
-        "player": "Trey Hendrickson",
+        "player": "Carson Beck",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Cameron Robertson",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Starling Thomas V",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Reggie Virgil",
+        "position": "WR",
         "status": "Out"
       }
     ],
-    "CAR": [
+    "BAL": [
       {
-        "player": "Xavier Legette",
+        "player": "Joe Fagnano",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Chris Moore",
         "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Trey Hendrickson",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -293,8 +318,23 @@
     ],
     "IND": [
       {
-        "player": "Keenan Allen",
+        "player": "Riley Leonard",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Darius Slayton",
         "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "DJ Giddens",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "George Gumbs Jr.",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -348,8 +388,30 @@
     ],
     "NE": [
       {
+        "player": "Channing Canada",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Christian Gonzalez",
         "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "Anfernee Jennings",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Carl Granderson",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Kaden Elliss",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -377,6 +439,11 @@
     ],
     "PHI": [
       {
+        "player": "DeVonta Smith",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Zack Baun",
         "position": "LB",
         "status": "Out"
@@ -389,11 +456,6 @@
       {
         "player": "Dallas Goedert",
         "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "DeVonta Smith",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -409,13 +471,13 @@
         "status": "Out"
       },
       {
-        "player": "Gabriel Rubio",
-        "position": "DE",
-        "status": "Out"
+        "player": "Jamel Dean",
+        "position": "CB",
+        "status": "Doubtful"
       },
       {
-        "player": "Rico Dowdle",
-        "position": "RB",
+        "player": "Gabriel Rubio",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -434,11 +496,6 @@
     "SEA": [
       {
         "player": "Zach Charbonnet",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Jadarian Price",
         "position": "RB",
         "status": "Out"
       }
@@ -465,16 +522,38 @@
         "status": "Out"
       }
     ],
+    "TEN": [
+      {
+        "player": "Jaylon Jones",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Kylen Granson",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Michael Carter",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "WSH": [
+      {
+        "player": "Marcus Mariota",
+        "position": "QB",
+        "status": "Out"
+      },
       {
         "player": "Jayden Daniels",
         "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Terry McLaurin",
+        "player": "Luke McCaffrey",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Rachaad White",

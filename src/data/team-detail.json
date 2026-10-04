@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-03T15:02:19.431Z",
+  "fetchedAt": "2026-10-04T15:38:24.785Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -5341,12 +5341,12 @@
               "draftedBy": "2018: Rd 1, Pk 3 (NYJ)"
             },
             {
-              "id": "4685512",
-              "name": "Jadarian Price",
+              "id": "4887558",
+              "name": "Emanuel Wilson",
               "label": "RB",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 1, Pk 32 (SEA)"
+              "experience": 4,
+              "draftedBy": null
             },
             {
               "id": "4430878",
