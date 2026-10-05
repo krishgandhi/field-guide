@@ -1,6 +1,102 @@
 {
-  "generatedAt": "2026-10-04T16:22:19.454Z",
+  "generatedAt": "2026-10-05T20:15:06.018Z",
   "candidates": [
+    {
+      "id": "50111468",
+      "headline": "Vikings LG Jackson likely out for season, LT Darrisaw has concussion",
+      "description": "Vikings left guard Donovan Jackson is headed for what is likely season-ending surgery to repair a meniscus tear in his knee, and left tackle Christian Darrisaw is in the concussion protocol.",
+      "published": "2026-10-05",
+      "likelyKind": "injury",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "4361985",
+          "name": "Christian Darrisaw",
+          "position": "Offensive Tackle",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "4431553",
+          "name": "Donovan Jackson",
+          "position": "Guard",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion"
+    },
+    {
+      "id": "50110763",
+      "headline": "Sources: Packers LB Edgerrin Cooper has torn Achilles",
+      "description": "Packers linebacker Edgerrin Cooper suffered a season-ending Achilles tear during Sunday's 17-14 victory over the Buccaneers, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
+      "published": "2026-10-05",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4430438",
+          "name": "Edgerrin Cooper",
+          "position": "Linebacker",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles"
+    },
+    {
+      "id": "50110486",
+      "headline": "Ben Johnson: Tyson Bagent will start at QB for Bears vs. Packers",
+      "description": "Tyson Bagent will be the Bears' starting quarterback for Sunday's game at the Packers, coach Ben Johnson announced Monday.",
+      "published": "2026-10-05",
+      "likelyKind": "role",
+      "teams": [
+        "Chicago Bears",
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "CHI",
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4434153",
+          "name": "Tyson Bagent",
+          "position": "Quarterback",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50110486/ben-johnson-tyson-bagent-start-qb-bears-vs-packers"
+    },
+    {
+      "id": "50109680",
+      "headline": "Tyreek Hill could sign with new team soon, agent says",
+      "description": "Free agent wide receiver Tyreek Hill could sign with a new team \"over the next few days,\" his agent, Drew Rosenhaus, told ESPN's Adam Schefter. Hill's former team, the Chiefs, are believed to be one of those interested.",
+      "published": "2026-10-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "Kansas City Chiefs"
+      ],
+      "teamIds": [
+        "KC"
+      ],
+      "players": [
+        {
+          "id": "3116406",
+          "name": "Tyreek Hill",
+          "position": "Wide Receiver",
+          "currentTeam": "MIA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says"
+    },
     {
       "id": "50095248",
       "headline": "Sources: Steelers' contract philosophy led to Joey Porter Jr. trade",
@@ -893,110 +989,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/49974401/vikings-start-qb-wentz-vs-bears-murray-mend"
-    },
-    {
-      "id": "49973986",
-      "headline": "Stephon Gilmore, '19 NFL DPOY, retires as member of the Patriots",
-      "description": "Stephon Gilmore, a two-time All-Pro cornerback and the NFL's 2019 Defensive Player of the Year, signed a one-day contract in New England on Friday to retire as a member of the Patriots,",
-      "published": "2026-09-18",
-      "likelyKind": "transaction",
-      "teams": [
-        "New England Patriots",
-        "Buffalo Bills"
-      ],
-      "teamIds": [
-        "NE",
-        "BUF"
-      ],
-      "players": [
-        {
-          "id": "14942",
-          "name": "Stephon Gilmore",
-          "position": "Cornerback",
-          "currentTeam": "ARI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49973986/stephon-gilmore-19-nfl-dpoy-retiring-member-patriots"
-    },
-    {
-      "id": "49964734",
-      "headline": "Career-defining season for Vikings coach Kevin O'Connell?",
-      "description": "O'Connell has had tremendous regular-season success, but is this the season it extends into the playoffs?",
-      "published": "2026-09-18",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "3917315",
-          "name": "Kyler Murray",
-          "position": "Quarterback",
-          "currentTeam": "MIN"
-        },
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "MIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49964734/nfl-minnesota-vikings-kevin-oconnell-kyler-murray-jj-mccarthy"
-    },
-    {
-      "id": "49969688",
-      "headline": "Drew Lock: Taking care of football key in Seahawks start",
-      "description": "As Drew Lock steps into a starting role for the Seattle Seahawks, the veteran quarterback knows he doesn't have to force the issue while he fills in for the injured Sam Darnold.",
-      "published": "2026-09-18",
-      "likelyKind": "role",
-      "teams": [
-        "Seattle Seahawks"
-      ],
-      "teamIds": [
-        "SEA"
-      ],
-      "players": [
-        {
-          "id": "3924327",
-          "name": "Drew Lock",
-          "position": "Quarterback",
-          "currentTeam": "SEA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49969688/drew-lock-taking-care-football-key-seahawks-start"
-    },
-    {
-      "id": "49957386",
-      "headline": "Bad game or bad sign: Which players should you be concerned about entering Week 2?",
-      "description": "It's easy to overreact to Week 1. Matt Bowen discusses whether concern is warranted for 13 players.",
-      "published": "2026-09-17",
-      "likelyKind": "transaction",
-      "teams": [],
-      "teamIds": [],
-      "players": [
-        {
-          "id": "4723086",
-          "name": "Colston Loveland",
-          "position": "Tight End",
-          "currentTeam": "CHI"
-        },
-        {
-          "id": "4431452",
-          "name": "Drake Maye",
-          "position": "Quarterback",
-          "currentTeam": "NE"
-        },
-        {
-          "id": "2577417",
-          "name": "Dak Prescott",
-          "position": "Quarterback",
-          "currentTeam": "DAL"
-        }
-      ],
-      "url": "https://www.espn.com/fantasy/football/story/_/id/49957386/fantasy-football-rankings-value-bad-game-bad-sign"
     }
   ]
 }
