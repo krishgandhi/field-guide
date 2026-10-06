@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-05T19:29:27.358Z",
+  "fetchedAt": "2026-10-06T17:01:35.533Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -54,32 +54,32 @@
               "draftedBy": "2022: Rd 2, Pk 55 (ARI)"
             },
             {
-              "id": "4428991",
-              "name": "Paris Johnson Jr.",
+              "id": "4709718",
+              "name": "Jayden Williams",
               "label": "OT",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 1, Pk 6 (ARI)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 7, Pk 217 (ARI)"
             }
           ],
-          "rank": 15,
+          "rank": 17,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 15th of 32.",
+          "note": "Middle of the league for points scored so far this season, 17th of 32.",
           "blurb": "They threw the ball more often than anyone else last year, though that was under the previous staff — Mike LaFleur is now in charge, with Jacoby Brissett throwing to Marvin Harrison Jr. and Trey McBride, and rookie back Jeremiyah Love added third overall.",
           "blurbHash": "6f108adb1400f139",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "104",
-              "rank": 16
+              "rank": 17
             },
             "_passAttempts": {
               "value": "152",
-              "rank": 7
+              "rank": 8
             },
             "_sacks": {
               "value": "7",
-              "rank": 20
+              "rank": 21
             },
             "yards per carry": {
               "value": "3.9",
@@ -91,7 +91,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "6",
@@ -149,9 +149,9 @@
               "draftedBy": "2025: Rd 5, Pk 174 (ARI)"
             }
           ],
-          "rank": 30,
+          "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 30th of 32.",
+          "note": "Among the worst in the league for points allowed so far this season — 29th of 32.",
           "blurb": "Mike LaFleur takes over, so last year's numbers — very little pressure on the quarterback — belong to the old staff. Josh Sweat and Zaven Collins lead a back end leaning on second-year corners Will Johnson and Denzel Burke.",
           "blurbHash": "5a2e6a786e589973",
           "promptVersion": 6,
@@ -259,49 +259,49 @@
               "draftedBy": "2014: Rd 1, Pk 6 (ATL)"
             }
           ],
-          "rank": 31,
-          "score": 1,
-          "note": "Among the worst in the league for points scored so far this season — 31st of 32.",
+          "rank": 15,
+          "score": 3,
+          "note": "Middle of the league for points scored so far this season, 15th of 32.",
           "blurb": "A run-leaning group by league standards, built around Bijan Robinson on the ground and Drake London outside, with Tua Tagovailoa throwing. Touchdowns through the air were hard to come by.",
           "blurbHash": "0a17eceb313b69c8",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
-              "value": "104",
-              "rank": 16
+              "value": "139",
+              "rank": 2
             },
             "_passAttempts": {
-              "value": "79",
+              "value": "99",
               "rank": 32
             },
             "_sacks": {
-              "value": "7",
-              "rank": 20
+              "value": "8",
+              "rank": 16
             },
             "yards per carry": {
-              "value": "5.0",
-              "rank": 3
+              "value": "5.2",
+              "rank": 2
             },
             "yards per pass": {
-              "value": "6.9",
-              "rank": 18
+              "value": "7.7",
+              "rank": 8
             },
             "rushing touchdowns": {
-              "value": "3",
-              "rank": 13
+              "value": "8",
+              "rank": 3
             },
             "passing touchdowns": {
-              "value": "2",
-              "rank": 31
+              "value": "3",
+              "rank": 28
             },
             "turnovers given away": {
               "value": "8",
               "rank": 4
             }
           },
-          "passPlayShare": 45.7,
+          "passPlayShare": 44.2,
           "passPlayShareRank": 32,
-          "quarterbackCarries": 2
+          "quarterbackCarries": 4
         },
         "defence": {
           "players": [
@@ -346,20 +346,20 @@
               "draftedBy": "2018: Rd 1, Pk 30 (MIN)"
             }
           ],
-          "rank": 5,
-          "score": 5,
-          "note": "Among the best in the league for points allowed so far this season — 5th of 32.",
+          "rank": 15,
+          "score": 3,
+          "note": "Middle of the league for points allowed so far this season, 15th of 32.",
           "blurb": "A unit that gets after the quarterback about as well as anyone and takes the ball away often, with Samson Ebukam and Brandon Dorlus up front and A.J. Terrell Jr. at corner.",
           "blurbHash": "de8771dbcb690aae",
           "promptVersion": 6,
           "stats": {
             "sacks": {
-              "value": "5",
-              "rank": 27
+              "value": "7",
+              "rank": 22
             },
             "takeaways": {
-              "value": "2",
-              "rank": 28
+              "value": "3",
+              "rank": 23
             }
           }
         },
@@ -382,16 +382,16 @@
               "draftedBy": "2022: Rd 3, Pk 98 (WSH)"
             }
           ],
-          "rank": 32,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 32nd of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 31st of 32.",
           "blurb": "Nick Folk, now in his nineteenth season, is a reliable kicker on field goals, while running back Brian Robinson Jr. doubles up on kick returns.",
           "blurbHash": "0bd89b1dcd03ba01",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
-              "value": "62.5",
-              "rank": 16
+              "value": "66.7",
+              "rank": 15
             }
           }
         }
@@ -465,7 +465,7 @@
           "stats": {
             "_runAttempts": {
               "value": "127",
-              "rank": 2
+              "rank": 3
             },
             "_passAttempts": {
               "value": "105",
@@ -473,7 +473,7 @@
             },
             "_sacks": {
               "value": "7",
-              "rank": 20
+              "rank": 21
             },
             "yards per carry": {
               "value": "4.8",
@@ -543,16 +543,16 @@
               "draftedBy": "2017: Rd 1, Pk 16 (BAL)"
             }
           ],
-          "rank": 20,
-          "score": 2,
-          "note": "Below average for points allowed so far this season, 20th of 32.",
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league for points allowed so far this season, 19th of 32.",
           "blurb": "Experienced through the middle and back, with Nnamdi Madubuike, Calais Campbell, Marlon Humphrey and Nate Wiggins, but sacks were hard to come by. Jesse Minter has just taken over as head coach.",
           "blurbHash": "1c771f7131391f67",
           "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "7",
-              "rank": 21
+              "rank": 22
             },
             "takeaways": {
               "value": "5",
@@ -579,9 +579,9 @@
               "draftedBy": "2024: Rd 5, Pk 165 (BAL)"
             }
           ],
-          "rank": 23,
+          "rank": 22,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 23rd of 32.",
+          "note": "Below average at kicking field goals so far this season, 22nd of 32.",
           "blurb": "Second-year kicker Tyler Loop was accurate on field goals, with Rasheen Ali returning kicks, under new head coach Jesse Minter.",
           "blurbHash": "19a61203624fbb9c",
           "promptVersion": 6,
@@ -662,7 +662,7 @@
           "stats": {
             "_runAttempts": {
               "value": "110",
-              "rank": 14
+              "rank": 15
             },
             "_passAttempts": {
               "value": "119",
@@ -674,7 +674,7 @@
             },
             "yards per carry": {
               "value": "5.1",
-              "rank": 2
+              "rank": 3
             },
             "yards per pass": {
               "value": "8.7",
@@ -690,7 +690,7 @@
             },
             "turnovers given away": {
               "value": "7",
-              "rank": 7
+              "rank": 8
             }
           },
           "passPlayShare": 62.4,
@@ -740,9 +740,9 @@
               "draftedBy": "2025: Rd 1, Pk 30 (BUF)"
             }
           ],
-          "rank": 26,
+          "rank": 25,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 26th of 32.",
+          "note": "Below average for points allowed so far this season, 25th of 32.",
           "blurb": "Sacks and takeaways both come at a modest rate; the group leans on Ed Oliver and Bradley Chubb up front and young corners Christian Benford and Maxwell Hairston, now under new head coach Joe Brady.",
           "blurbHash": "7b6b784a1b3abed1",
           "promptVersion": 6,
@@ -859,15 +859,15 @@
           "stats": {
             "_runAttempts": {
               "value": "95",
-              "rank": 24
+              "rank": 25
             },
             "_passAttempts": {
               "value": "163",
-              "rank": 2
+              "rank": 3
             },
             "_sacks": {
               "value": "10",
-              "rank": 11
+              "rank": 12
             },
             "yards per carry": {
               "value": "4.4",
@@ -879,7 +879,7 @@
             },
             "rushing touchdowns": {
               "value": "4",
-              "rank": 9
+              "rank": 10
             },
             "passing touchdowns": {
               "value": "9",
@@ -937,9 +937,9 @@
               "draftedBy": "2026: Rd 4, Pk 129 (CAR)"
             }
           ],
-          "rank": 28,
+          "rank": 27,
           "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 28th of 32.",
+          "note": "Among the worst in the league for points allowed so far this season — 27th of 32.",
           "blurb": "They seldom get to the quarterback, but they take the ball away often, with Derrick Brown anchoring the line and Jaycee Horn leading the secondary.",
           "blurbHash": "7e45728e02259c8a",
           "promptVersion": 6,
@@ -1060,11 +1060,11 @@
             },
             "_passAttempts": {
               "value": "132",
-              "rank": 13
+              "rank": 14
             },
             "_sacks": {
               "value": "7",
-              "rank": 20
+              "rank": 21
             },
             "yards per carry": {
               "value": "4.9",
@@ -1072,7 +1072,7 @@
             },
             "yards per pass": {
               "value": "7.4",
-              "rank": 12
+              "rank": 13
             },
             "rushing touchdowns": {
               "value": "9",
@@ -1244,20 +1244,20 @@
               "draftedBy": "2018: Rd 3, Pk 83 (BAL)"
             }
           ],
-          "rank": 13,
-          "score": 4,
-          "note": "Better than most for points scored so far this season, 13th of 32.",
+          "rank": 14,
+          "score": 3,
+          "note": "Middle of the league for points scored so far this season, 14th of 32.",
           "blurb": "Throws almost more than anyone in the league, with Joe Burrow feeding Ja'Marr Chase and Tee Higgins for touchdowns. The running game gains little, and the ball gets given away often.",
           "blurbHash": "072e322cfe1efc43",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "83",
-              "rank": 30
+              "rank": 31
             },
             "_passAttempts": {
               "value": "157",
-              "rank": 4
+              "rank": 5
             },
             "_sacks": {
               "value": "9",
@@ -1265,15 +1265,15 @@
             },
             "yards per carry": {
               "value": "3.6",
-              "rank": 27
+              "rank": 26
             },
             "yards per pass": {
               "value": "7.5",
-              "rank": 9
+              "rank": 10
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "7",
@@ -1285,7 +1285,7 @@
             }
           },
           "passPlayShare": 69.7,
-          "passPlayShareRank": 2,
+          "passPlayShareRank": 3,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -1331,9 +1331,9 @@
               "draftedBy": "2023: Rd 2, Pk 60 (CIN)"
             }
           ],
-          "rank": 15,
-          "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 15th of 32.",
+          "rank": 13,
+          "score": 4,
+          "note": "Better than most for points allowed so far this season, 13th of 32.",
           "blurb": "A young secondary of Dax Hill and DJ Turner II behind a front, led by Boye Mafe and Myles Murphy, that struggles to sack the quarterback.",
           "blurbHash": "7c16e25838312029",
           "promptVersion": 6,
@@ -1441,9 +1441,9 @@
               "draftedBy": "2026: Rd 1, Pk 9 (CLE)"
             }
           ],
-          "rank": 20,
+          "rank": 22,
           "score": 2,
-          "note": "Below average for points scored so far this season, 20th of 32.",
+          "note": "Below average for points scored so far this season, 22nd of 32.",
           "blurb": "Gained less per pass than any other offence last season under a different staff; Todd Monken now takes over, with rookies KC Concepcion and tackle Spencer Fano among the pieces.",
           "blurbHash": "cf4b6d1979e7442e",
           "promptVersion": 6,
@@ -1458,19 +1458,19 @@
             },
             "_sacks": {
               "value": "11",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "3.7",
-              "rank": 24
+              "rank": 23
             },
             "yards per pass": {
               "value": "7.4",
-              "rank": 12
+              "rank": 13
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "6",
@@ -1528,9 +1528,9 @@
               "draftedBy": "2021: Rd 2, Pk 33 (JAX)"
             }
           ],
-          "rank": 19,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 19th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 18th of 32.",
           "blurb": "Got to the quarterback as well as almost anyone last season, but rarely forced turnovers — and Myles Garrett has since been traded to the Rams, with Todd Monken now in charge.",
           "blurbHash": "6881c699c209eecc",
           "promptVersion": 6,
@@ -1647,11 +1647,11 @@
           "stats": {
             "_runAttempts": {
               "value": "94",
-              "rank": 25
+              "rank": 26
             },
             "_passAttempts": {
               "value": "150",
-              "rank": 9
+              "rank": 10
             },
             "_sacks": {
               "value": "6",
@@ -1663,15 +1663,15 @@
             },
             "yards per pass": {
               "value": "7.1",
-              "rank": 16
+              "rank": 17
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 5
+              "rank": 6
             },
             "passing touchdowns": {
               "value": "8",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "2",
@@ -1725,9 +1725,9 @@
               "draftedBy": "2022: Rd 5, Pk 167 (DAL)"
             }
           ],
-          "rank": 29,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 29th of 32.",
+          "note": "Among the worst in the league for points allowed so far this season — 28th of 32.",
           "blurb": "A unit that rarely takes the ball away and doesn't get to the quarterback often, leaning on interior linemen Quinnen Williams and Kenny Clark plus corner DaRon Bland; veteran pass rusher Von Miller has agreed to a one-year deal to help there.",
           "blurbHash": "b77b621007e9c8e1",
           "promptVersion": 6,
@@ -1738,7 +1738,7 @@
             },
             "takeaways": {
               "value": "2",
-              "rank": 28
+              "rank": 29
             }
           }
         },
@@ -1761,9 +1761,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 26,
+          "rank": 25,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 26th of 32.",
+          "note": "Below average at kicking field goals so far this season, 25th of 32.",
           "blurb": "Kicker Brandon Aubrey makes almost everything he tries, among the most accurate in the league, with KaVontae Turpin handling kick returns.",
           "blurbHash": "6d7dc8c4f018d617",
           "promptVersion": 6,
@@ -1835,20 +1835,20 @@
               "draftedBy": "2017: Rd 1, Pk 20 (DEN)"
             }
           ],
-          "rank": 26,
-          "score": 2,
-          "note": "Below average for points scored so far this season, 26th of 32.",
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league for points scored so far this season — 27th of 32.",
           "blurb": "Bo Nix, in his third season, runs an offence that gains little per throw — only a handful of teams averaged fewer yards per pass — with Courtland Sutton, Jaylen Waddle and Evan Engram as his targets and a steady ground game under Sean Payton.",
           "blurbHash": "af7f800e6634c3bc",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "90",
-              "rank": 26
+              "rank": 27
             },
             "_passAttempts": {
               "value": "135",
-              "rank": 12
+              "rank": 13
             },
             "_sacks": {
               "value": "5",
@@ -1856,7 +1856,7 @@
             },
             "yards per carry": {
               "value": "3.6",
-              "rank": 27
+              "rank": 26
             },
             "yards per pass": {
               "value": "6.1",
@@ -1864,7 +1864,7 @@
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "5",
@@ -1922,9 +1922,9 @@
               "draftedBy": "2023: Rd 3, Pk 83 (DEN)"
             }
           ],
-          "rank": 18,
+          "rank": 17,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 18th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 17th of 32.",
           "blurb": "Sacked the quarterback more than any other team, with Zach Allen and Nik Bonitto rushing and Pat Surtain II covering, but takeaways were scarce.",
           "blurbHash": "86b4faa2be457aef",
           "promptVersion": 6,
@@ -1958,9 +1958,9 @@
               "draftedBy": "2023: Rd 2, Pk 63 (DEN)"
             }
           ],
-          "rank": 27,
-          "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 27th of 32.",
+          "rank": 26,
+          "score": 2,
+          "note": "Below average at kicking field goals so far this season, 26th of 32.",
           "blurb": "Veteran Wil Lutz was one of the most accurate kickers in the league, and Marvin Mims Jr. takes the kick returns.",
           "blurbHash": "a9f6c807a735d2a1",
           "promptVersion": 6,
@@ -2041,11 +2041,11 @@
           "stats": {
             "_runAttempts": {
               "value": "98",
-              "rank": 21
+              "rank": 22
             },
             "_passAttempts": {
               "value": "161",
-              "rank": 3
+              "rank": 4
             },
             "_sacks": {
               "value": "8",
@@ -2057,11 +2057,11 @@
             },
             "yards per pass": {
               "value": "7.5",
-              "rank": 9
+              "rank": 10
             },
             "rushing touchdowns": {
               "value": "5",
-              "rank": 6
+              "rank": 7
             },
             "passing touchdowns": {
               "value": "9",
@@ -2119,9 +2119,9 @@
               "draftedBy": "2024: Rd 2, Pk 61 (DET)"
             }
           ],
-          "rank": 32,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 32nd of 32.",
+          "note": "Among the worst in the league for points allowed so far this season — 31st of 32.",
           "blurb": "A unit that gets after the quarterback as well as almost anyone, led by Aidan Hutchinson, with D.J. Reed at corner and rookie Keith Abney II behind him.",
           "blurbHash": "5e476416072fe6d1",
           "promptVersion": 6,
@@ -2189,12 +2189,12 @@
               "draftedBy": "2020: Rd 1, Pk 26 (GB)"
             },
             {
-              "id": "4819231",
-              "name": "Kaleb Johnson",
+              "id": "4429023",
+              "name": "MarShawn Lloyd",
               "label": "RB",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 3, Pk 83 (PIT)"
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 88 (GB)"
             },
             {
               "id": "4248528",
@@ -2229,9 +2229,9 @@
               "draftedBy": "2024: Rd 1, Pk 25 (GB)"
             }
           ],
-          "rank": 27,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league for points scored so far this season — 27th of 32.",
+          "note": "Among the worst in the league for points scored so far this season — 28th of 32.",
           "blurb": "Throws less often than almost anyone, yet gains plenty when Jordan Love does throw to Jayden Reed and Tucker Kraft. Yards per carry were thin, and they hardly ever lose the ball.",
           "blurbHash": "ad02f1ad1c2e3e2c",
           "promptVersion": 6,
@@ -2242,7 +2242,7 @@
             },
             "_passAttempts": {
               "value": "154",
-              "rank": 6
+              "rank": 7
             },
             "_sacks": {
               "value": "8",
@@ -2254,7 +2254,7 @@
             },
             "yards per pass": {
               "value": "6.8",
-              "rank": 21
+              "rank": 20
             },
             "rushing touchdowns": {
               "value": "0",
@@ -2262,7 +2262,7 @@
             },
             "passing touchdowns": {
               "value": "8",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "6",
@@ -2316,9 +2316,9 @@
               "draftedBy": "2026: Rd 2, Pk 52 (GB)"
             }
           ],
-          "rank": 24,
+          "rank": 23,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 24th of 32.",
+          "note": "Below average for points allowed so far this season, 23rd of 32.",
           "blurb": "Doesn't get to the quarterback much and forces few turnovers, leaning on interior linemen Devonte Wyatt and Karl Brooks, with rookie cornerback Brandon Cisse alongside Keisean Nixon.",
           "blurbHash": "b6dc6b8f94a5bc7c",
           "promptVersion": 6,
@@ -2426,20 +2426,20 @@
               "draftedBy": "2025: Rd 2, Pk 48 (HOU)"
             }
           ],
-          "rank": 18,
-          "score": 3,
-          "note": "Middle of the league for points scored so far this season, 18th of 32.",
+          "rank": 20,
+          "score": 2,
+          "note": "Below average for points scored so far this season, 20th of 32.",
           "blurb": "Runs through C.J. Stroud and Nico Collins and takes very good care of the ball, but the ground game with David Montgomery gained little and scored rarely.",
           "blurbHash": "b38954a0b8f18465",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "90",
-              "rank": 26
+              "rank": 27
             },
             "_passAttempts": {
               "value": "152",
-              "rank": 7
+              "rank": 8
             },
             "_sacks": {
               "value": "12",
@@ -2451,11 +2451,11 @@
             },
             "yards per pass": {
               "value": "7.5",
-              "rank": 9
+              "rank": 10
             },
             "rushing touchdowns": {
               "value": "4",
-              "rank": 9
+              "rank": 10
             },
             "passing touchdowns": {
               "value": "5",
@@ -2513,9 +2513,9 @@
               "draftedBy": "2024: Rd 2, Pk 42 (HOU)"
             }
           ],
-          "rank": 27,
-          "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 27th of 32.",
+          "rank": 26,
+          "score": 2,
+          "note": "Below average for points allowed so far this season, 26th of 32.",
           "blurb": "Gets after the quarterback through Will Anderson Jr. and Danielle Hunter, and takes the ball away as often as any defence, with Derek Stingley Jr. and Kamari Lassiter covering.",
           "blurbHash": "01db2182df027051",
           "promptVersion": 6,
@@ -2623,20 +2623,20 @@
               "draftedBy": "2022: Rd 3, Pk 77 (IND)"
             }
           ],
-          "rank": 12,
+          "rank": 13,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 12th of 32.",
+          "note": "Better than most for points scored so far this season, 13th of 32.",
           "blurb": "Built around Jonathan Taylor, who gets it into the end zone as well as almost any back in the league, with Daniel Jones throwing to Alec Pierce, Josh Downs and tight end Tyler Warren. No real tilt toward run or pass.",
           "blurbHash": "876d339613e35c1d",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "113",
-              "rank": 10
+              "rank": 11
             },
             "_passAttempts": {
               "value": "132",
-              "rank": 13
+              "rank": 14
             },
             "_sacks": {
               "value": "8",
@@ -2652,7 +2652,7 @@
             },
             "rushing touchdowns": {
               "value": "7",
-              "rank": 4
+              "rank": 5
             },
             "passing touchdowns": {
               "value": "3",
@@ -2710,9 +2710,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 23,
+          "rank": 22,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 23rd of 32.",
+          "note": "Below average for points allowed so far this season, 22nd of 32.",
           "blurb": "Fronted by Laiatu Latu and Arden Key with Sauce Gardner and Charvarius Ward at cornerback; they force a fair number of turnovers but don't get to the quarterback often.",
           "blurbHash": "89019a287badaa3c",
           "promptVersion": 6,
@@ -2723,7 +2723,7 @@
             },
             "takeaways": {
               "value": "2",
-              "rank": 28
+              "rank": 29
             }
           }
         },
@@ -2820,16 +2820,16 @@
               "draftedBy": "2023: Rd 1, Pk 27 (JAX)"
             }
           ],
-          "rank": 11,
+          "rank": 12,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 11th of 32.",
+          "note": "Better than most for points scored so far this season, 12th of 32.",
           "blurb": "Trevor Lawrence is a big part of the running game himself, carrying the ball often; the handoffs went nowhere much, yet both the run and pass games scored plenty of touchdowns.",
           "blurbHash": "8aa3755b5d8ee52a",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "113",
-              "rank": 10
+              "rank": 11
             },
             "_passAttempts": {
               "value": "104",
@@ -2849,11 +2849,11 @@
             },
             "rushing touchdowns": {
               "value": "4",
-              "rank": 9
+              "rank": 10
             },
             "passing touchdowns": {
               "value": "8",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "2",
@@ -2943,9 +2943,9 @@
               "draftedBy": "2015: Rd 2, Pk 54 (DET)"
             }
           ],
-          "rank": 20,
-          "score": 2,
-          "note": "Below average at kicking field goals so far this season, 20th of 32.",
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league at kicking field goals so far this season, 19th of 32.",
           "blurb": "Kicker Cam Little handles the field goals and Bhayshul Tuten doubles up as the kick returner.",
           "blurbHash": "ff9031c65e9e8d4b",
           "promptVersion": 6,
@@ -3026,7 +3026,7 @@
           "stats": {
             "_runAttempts": {
               "value": "118",
-              "rank": 6
+              "rank": 7
             },
             "_passAttempts": {
               "value": "128",
@@ -3046,7 +3046,7 @@
             },
             "rushing touchdowns": {
               "value": "5",
-              "rank": 6
+              "rank": 7
             },
             "passing touchdowns": {
               "value": "9",
@@ -3104,9 +3104,9 @@
               "draftedBy": "2026: Rd 1, Pk 6 (KC)"
             }
           ],
-          "rank": 7,
-          "score": 4,
-          "note": "Better than most for points allowed so far this season, 7th of 32.",
+          "rank": 6,
+          "score": 5,
+          "note": "Among the best in the league for points allowed so far this season — 6th of 32.",
           "blurb": "Sacks and takeaways were both hard to come by. Kansas City has since traded away cornerback Trent McDuffie, leaving Mansoor Delane, a first-year player picked sixth overall, in the secondary.",
           "blurbHash": "f99c99434656ad2c",
           "promptVersion": 6,
@@ -3140,9 +3140,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 21,
+          "rank": 20,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 21st of 32.",
+          "note": "Below average at kicking field goals so far this season, 20th of 32.",
           "blurb": "Centred on veteran kicker Harrison Butker, who converted a high share of his field goals, with Nikko Remigio returning kicks.",
           "blurbHash": "c75cbede6da48cf0",
           "promptVersion": 6,
@@ -3214,16 +3214,16 @@
               "draftedBy": "2021: Rd 1, Pk 13 (LAC)"
             }
           ],
-          "rank": 28,
+          "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league for points scored so far this season — 28th of 32.",
+          "note": "Among the worst in the league for points scored so far this season — 29th of 32.",
           "blurb": "Built around Justin Herbert throwing to Ladd McConkey, with Omarion Hampton running behind Rashawn Slater. They move the ball on the ground fine but rarely finish those drives with a rushing touchdown.",
           "blurbHash": "0ee06dfa108f3dec",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "113",
-              "rank": 10
+              "rank": 11
             },
             "_passAttempts": {
               "value": "120",
@@ -3239,11 +3239,11 @@
             },
             "yards per pass": {
               "value": "6.8",
-              "rank": 21
+              "rank": 20
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "4",
@@ -3301,9 +3301,9 @@
               "draftedBy": "2018: Rd 2, Pk 55 (CAR)"
             }
           ],
-          "rank": 25,
+          "rank": 24,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 25th of 32.",
+          "note": "Below average for points allowed so far this season, 24th of 32.",
           "blurb": "A defence that takes the ball away at a good rate and gets after the quarterback, with 13th-season veteran Khalil Mack, a fifth overall pick of Oakland's back in 2014, still the headline name.",
           "blurbHash": "3f774b24c7060bd6",
           "promptVersion": 6,
@@ -3337,9 +3337,9 @@
               "draftedBy": "2023: Rd 4, Pk 125 (LAC)"
             }
           ],
-          "rank": 24,
+          "rank": 23,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 24th of 32.",
+          "note": "Below average at kicking field goals so far this season, 23rd of 32.",
           "blurb": "Kicking is the strength here: Cameron Dicker made a higher share of his field goals than any other kicker, with Derius Davis handling kick returns.",
           "blurbHash": "ca5eeb791644bb71",
           "promptVersion": 6,
@@ -3411,20 +3411,20 @@
               "draftedBy": null
             }
           ],
-          "rank": 17,
+          "rank": 19,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 17th of 32.",
+          "note": "Middle of the league for points scored so far this season, 19th of 32.",
           "blurb": "A passing offence first: Matthew Stafford threw for more touchdowns than any other quarterback, with Puka Nacua and Davante Adams outside and Kyren Williams carrying the run game.",
           "blurbHash": "2dc790b702a443cf",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "105",
-              "rank": 15
+              "rank": 16
             },
             "_passAttempts": {
               "value": "165",
-              "rank": 1
+              "rank": 2
             },
             "_sacks": {
               "value": "6",
@@ -3436,11 +3436,11 @@
             },
             "yards per pass": {
               "value": "7.3",
-              "rank": 14
+              "rank": 15
             },
             "rushing touchdowns": {
               "value": "4",
-              "rank": 9
+              "rank": 10
             },
             "passing touchdowns": {
               "value": "6",
@@ -3498,16 +3498,16 @@
               "draftedBy": "2022: Rd 1, Pk 21 (KC)"
             }
           ],
-          "rank": 11,
+          "rank": 10,
           "score": 4,
-          "note": "Better than most for points allowed so far this season, 11th of 32.",
+          "note": "Better than most for points allowed so far this season, 10th of 32.",
           "blurb": "Reshaped for now: Myles Garrett arrived by trade, Trent McDuffie was bought from Kansas City, and Aaron Donald has un-retired, joining a group that already rushed and took the ball away well.",
           "blurbHash": "cda7fff9480edbbd",
           "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "7",
-              "rank": 21
+              "rank": 22
             },
             "takeaways": {
               "value": "3",
@@ -3534,9 +3534,9 @@
               "draftedBy": "2024: Rd 6, Pk 213 (LAR)"
             }
           ],
-          "rank": 28,
+          "rank": 27,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 28th of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 27th of 32.",
           "blurb": "A young kicker in Harrison Mevis handles the field goals, converting close to four in five, with Jordan Whittington returning kicks.",
           "blurbHash": "08192efee2052236",
           "promptVersion": 6,
@@ -3617,11 +3617,11 @@
           "stats": {
             "_runAttempts": {
               "value": "119",
-              "rank": 4
+              "rank": 5
             },
             "_passAttempts": {
               "value": "144",
-              "rank": 10
+              "rank": 11
             },
             "_sacks": {
               "value": "5",
@@ -3633,7 +3633,7 @@
             },
             "yards per pass": {
               "value": "7.1",
-              "rank": 16
+              "rank": 17
             },
             "rushing touchdowns": {
               "value": "1",
@@ -3695,9 +3695,9 @@
               "draftedBy": "2026: Rd 5, Pk 175 (LV)"
             }
           ],
-          "rank": 13,
+          "rank": 11,
           "score": 4,
-          "note": "Better than most for points allowed so far this season, 13th of 32.",
+          "note": "Better than most for points allowed so far this season, 11th of 32.",
           "blurb": "Last year's front rarely forced turnovers and got only moderate pressure, but that was under the previous staff — Klint Kubiak takes over this year. The line leans on Kwity Paye, a first-round pick of Indianapolis's, with corners Eric Stokes and Darien Porter behind.",
           "blurbHash": "501980e1bb8d7b49",
           "promptVersion": 6,
@@ -3814,7 +3814,7 @@
           "stats": {
             "_runAttempts": {
               "value": "96",
-              "rank": 23
+              "rank": 24
             },
             "_passAttempts": {
               "value": "103",
@@ -3822,7 +3822,7 @@
             },
             "_sacks": {
               "value": "11",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "4.3",
@@ -3830,11 +3830,11 @@
             },
             "yards per pass": {
               "value": "6.9",
-              "rank": 18
+              "rank": 19
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "1",
@@ -3892,9 +3892,9 @@
               "draftedBy": "2023: Rd 2, Pk 44 (IND)"
             }
           ],
-          "rank": 22,
+          "rank": 21,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 22nd of 32.",
+          "note": "Below average for points allowed so far this season, 21st of 32.",
           "blurb": "A linebacker-heavy group led by Chop Robinson, middling for both sacks and takeaways last season under the previous staff; Jeff Hafley has since taken over as head coach.",
           "blurbHash": "38bb7cb2412102d9",
           "promptVersion": 6,
@@ -3928,9 +3928,9 @@
               "draftedBy": "2024: Rd 6, Pk 184 (MIA)"
             }
           ],
-          "rank": 25,
+          "rank": 24,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 25th of 32.",
+          "note": "Below average at kicking field goals so far this season, 24th of 32.",
           "blurb": "Riley Patterson was among the most accurate kickers in the league, and Malik Washington doubles as the kick returner, with Jeff Hafley now overseeing the whole operation.",
           "blurbHash": "ea9234b55caf8598",
           "promptVersion": 6,
@@ -4002,16 +4002,16 @@
               "draftedBy": "2021: Rd 1, Pk 23 (MIN)"
             }
           ],
-          "rank": 16,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 16th of 32.",
+          "note": "Middle of the league for points scored so far this season, 18th of 32.",
           "blurb": "Built around Justin Jefferson and Jordan Addison outside, though the passing game produced few big gains or touchdowns last year. Kyler Murray has been named the starter ahead of J.J. McCarthy, who Minnesota drafted tenth overall.",
           "blurbHash": "747f47be3913ef36",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "116",
-              "rank": 8
+              "rank": 9
             },
             "_passAttempts": {
               "value": "110",
@@ -4023,7 +4023,7 @@
             },
             "yards per carry": {
               "value": "3.7",
-              "rank": 24
+              "rank": 23
             },
             "yards per pass": {
               "value": "6.4",
@@ -4031,7 +4031,7 @@
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "4",
@@ -4199,16 +4199,16 @@
               "draftedBy": "2025: Rd 1, Pk 4 (NE)"
             }
           ],
-          "rank": 29,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league for points scored so far this season — 29th of 32.",
+          "note": "Among the worst in the league for points scored so far this season — 30th of 32.",
           "blurb": "They throw less than most teams but get more per pass than anyone, with Drake Maye at the controls and Rhamondre Stevenson's ground game chipping in plenty of scores. A.J. Brown arrives by trade from Philadelphia.",
           "blurbHash": "d2f79ef761862883",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "120",
-              "rank": 3
+              "rank": 4
             },
             "_passAttempts": {
               "value": "123",
@@ -4216,7 +4216,7 @@
             },
             "_sacks": {
               "value": "10",
-              "rank": 11
+              "rank": 12
             },
             "yards per carry": {
               "value": "3.9",
@@ -4224,11 +4224,11 @@
             },
             "yards per pass": {
               "value": "7.3",
-              "rank": 14
+              "rank": 15
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "4",
@@ -4286,9 +4286,9 @@
               "draftedBy": "2023: Rd 1, Pk 17 (NE)"
             }
           ],
-          "rank": 8,
+          "rank": 7,
           "score": 4,
-          "note": "Better than most for points allowed so far this season, 8th of 32.",
+          "note": "Better than most for points allowed so far this season, 7th of 32.",
           "blurb": "A unit fronted by interior men Christian Barmore and Milton Williams and by Christian Gonzalez, just made the league's best-paid cornerback. It rarely sacks the quarterback or forces turnovers.",
           "blurbHash": "1b9cc7330cd79fde",
           "promptVersion": 6,
@@ -4322,9 +4322,9 @@
               "draftedBy": "2025: Rd 3, Pk 69 (NE)"
             }
           ],
-          "rank": 29,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 29th of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 28th of 32.",
           "blurb": "Andy Borregales makes his field goals at close to the best rate in the league; Kyle Williams handles kick returns.",
           "blurbHash": "cf84b47dbd3cd0b8",
           "promptVersion": 6,
@@ -4396,49 +4396,49 @@
               "draftedBy": "2023: Rd 5, Pk 169 (DAL)"
             }
           ],
-          "rank": 21,
-          "score": 2,
-          "note": "Below average for points scored so far this season, 21st of 32.",
+          "rank": 11,
+          "score": 4,
+          "note": "Better than most for points scored so far this season, 11th of 32.",
           "blurb": "Throws more than most teams, partly because the running game gains less per carry than almost anyone. Young quarterback Tyler Shough, with Chris Olave the main receiver behind a line featuring Kelvin Banks Jr.",
           "blurbHash": "1edb6b1991b61058",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
-              "value": "80",
-              "rank": 31
+              "value": "99",
+              "rank": 20
             },
             "_passAttempts": {
-              "value": "132",
-              "rank": 13
+              "value": "180",
+              "rank": 1
             },
             "_sacks": {
-              "value": "10",
-              "rank": 11
+              "value": "12",
+              "rank": 4
             },
             "yards per carry": {
-              "value": "3.8",
-              "rank": 22
+              "value": "3.6",
+              "rank": 26
             },
             "yards per pass": {
-              "value": "6.9",
-              "rank": 18
+              "value": "6.7",
+              "rank": 22
             },
             "rushing touchdowns": {
-              "value": "2",
-              "rank": 21
+              "value": "4",
+              "rank": 10
             },
             "passing touchdowns": {
-              "value": "8",
-              "rank": 7
+              "value": "9",
+              "rank": 4
             },
             "turnovers given away": {
-              "value": "7",
-              "rank": 7
+              "value": "8",
+              "rank": 4
             }
           },
-          "passPlayShare": 68.3,
-          "passPlayShareRank": 3,
-          "quarterbackCarries": 14
+          "passPlayShare": 69.8,
+          "passPlayShareRank": 2,
+          "quarterbackCarries": 16
         },
         "defence": {
           "players": [
@@ -4483,16 +4483,16 @@
               "draftedBy": "2025: Rd 4, Pk 131 (NO)"
             }
           ],
-          "rank": 12,
-          "score": 4,
-          "note": "Better than most for points allowed so far this season, 12th of 32.",
+          "rank": 32,
+          "score": 1,
+          "note": "Among the worst in the league for points allowed so far this season — 32nd of 32.",
           "blurb": "A front-led unit: veteran Cameron Jordan and Chase Young get after the quarterback at a decent clip, with young corners Kool-Aid McKinstry and Quincy Riley behind them.",
           "blurbHash": "888bd23adcdda21f",
           "promptVersion": 6,
           "stats": {
             "sacks": {
-              "value": "7",
-              "rank": 21
+              "value": "8",
+              "rank": 16
             },
             "takeaways": {
               "value": "3",
@@ -4519,16 +4519,16 @@
               "draftedBy": "2026: Rd 6, Pk 190 (NO)"
             }
           ],
-          "rank": 18,
-          "score": 3,
-          "note": "Middle of the league at kicking field goals so far this season, 18th of 32.",
+          "rank": 29,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals so far this season — 29th of 32.",
           "blurb": "Daniel Carlson's field-goal kicking is around the middle of the league, so the problems lie in the coverage and return phases, where rookie Barion Brown handles kickoffs.",
           "blurbHash": "3e06692e1ac63e30",
           "promptVersion": 6,
           "stats": {
             "field goal percentage": {
-              "value": "80.0",
-              "rank": 11
+              "value": "71.4",
+              "rank": 13
             }
           }
         }
@@ -4593,16 +4593,16 @@
               "draftedBy": "2020: Rd 1, Pk 4 (NYG)"
             }
           ],
-          "rank": 19,
-          "score": 3,
-          "note": "Middle of the league for points scored so far this season, 19th of 32.",
+          "rank": 21,
+          "score": 2,
+          "note": "Below average for points scored so far this season, 21st of 32.",
           "blurb": "A run-leaning group under John Harbaugh — they threw less than most teams and scored on the ground far more readily than through the air. Second-year quarterback Jaxson Dart, running back Cam Skattebo and receiver Malik Nabers are the core, with Darius Slayton released.",
           "blurbHash": "b75cf9dffb003037",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "119",
-              "rank": 4
+              "rank": 5
             },
             "_passAttempts": {
               "value": "112",
@@ -4610,11 +4610,11 @@
             },
             "_sacks": {
               "value": "11",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "3.7",
-              "rank": 24
+              "rank": 23
             },
             "yards per pass": {
               "value": "6.5",
@@ -4680,9 +4680,9 @@
               "draftedBy": "2021: Rd 1, Pk 26 (CLE)"
             }
           ],
-          "rank": 9,
+          "rank": 8,
           "score": 4,
-          "note": "Better than most for points allowed so far this season, 9th of 32.",
+          "note": "Better than most for points allowed so far this season, 8th of 32.",
           "blurb": "Gets a fair amount of pressure but rarely forces fumbles or interceptions. Abdul Carter, the third pick overall, is in his second season alongside corners Deonte Banks and Greg Newsome II.",
           "blurbHash": "cb71b771fb4138d9",
           "promptVersion": 6,
@@ -4708,12 +4708,12 @@
               "draftedBy": null
             },
             {
-              "id": "4257188",
-              "name": "Charlie Jones",
+              "id": "3123075",
+              "name": "Braxton Berrios",
               "label": "KR",
-              "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2023: Rd 4, Pk 131 (CIN)"
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 6, Pk 210 (NE)"
             }
           ],
           "rank": 9,
@@ -4790,9 +4790,9 @@
               "draftedBy": "2024: Rd 1, Pk 11 (NYJ)"
             }
           ],
-          "rank": 23,
+          "rank": 24,
           "score": 2,
-          "note": "Below average for points scored so far this season, 23rd of 32.",
+          "note": "Below average for points scored so far this season, 24th of 32.",
           "blurb": "They run the ball well enough per carry with Breece Hall, but almost nothing comes through the air — the fewest yards per throw of nearly any team, despite Garrett Wilson.",
           "blurbHash": "cbc11989ca9563cd",
           "promptVersion": 6,
@@ -4819,7 +4819,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "5",
@@ -4877,9 +4877,9 @@
               "draftedBy": "2021: Rd 3, Pk 104 (BAL)"
             }
           ],
-          "rank": 14,
-          "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 14th of 32.",
+          "rank": 12,
+          "score": 4,
+          "note": "Better than most for points allowed so far this season, 12th of 32.",
           "blurb": "A unit that rarely gets to the quarterback and forced fewer turnovers than any other team, leaning on Will McDonald IV up front and cornerbacks Brandon Stephens and Nahshon Wright.",
           "blurbHash": "c811c4bcaf858273",
           "promptVersion": 6,
@@ -4987,9 +4987,9 @@
               "draftedBy": "2018: Rd 7, Pk 233 (PHI)"
             }
           ],
-          "rank": 25,
+          "rank": 26,
           "score": 2,
-          "note": "Below average for points scored so far this season, 25th of 32.",
+          "note": "Below average for points scored so far this season, 26th of 32.",
           "blurb": "Jalen Hurts is a big part of the running game himself, carrying the ball over a hundred times alongside Saquon Barkley. With A.J. Brown traded to New England, DeVonta Smith and Dallas Goedert are the men left to throw to.",
           "blurbHash": "ffc457b7f41794e3",
           "promptVersion": 6,
@@ -5016,7 +5016,7 @@
             },
             "rushing touchdowns": {
               "value": "2",
-              "rank": 21
+              "rank": 22
             },
             "passing touchdowns": {
               "value": "7",
@@ -5074,9 +5074,9 @@
               "draftedBy": "2024: Rd 1, Pk 22 (PHI)"
             }
           ],
-          "rank": 17,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 17th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 16th of 32.",
           "blurb": "Built around Jalen Carter inside and Jonathan Greenard rushing off the edge, with young cornerback Quinyon Mitchell and Riq Woolen outside.",
           "blurbHash": "1411e1ff39d2df0e",
           "promptVersion": 6,
@@ -5087,7 +5087,7 @@
             },
             "takeaways": {
               "value": "2",
-              "rank": 28
+              "rank": 29
             }
           }
         },
@@ -5184,20 +5184,20 @@
               "draftedBy": "2024: Rd 1, Pk 20 (PIT)"
             }
           ],
-          "rank": 22,
+          "rank": 23,
           "score": 2,
-          "note": "Below average for points scored so far this season, 22nd of 32.",
+          "note": "Below average for points scored so far this season, 23rd of 32.",
           "blurb": "Aaron Rodgers throws a little more often than most teams, to big targets in DK Metcalf, Michael Pittman Jr. and Pat Freiermuth, though the yards per throw are modest.",
           "blurbHash": "4ae2696811c9459c",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "86",
-              "rank": 29
+              "rank": 30
             },
             "_passAttempts": {
               "value": "155",
-              "rank": 5
+              "rank": 6
             },
             "_sacks": {
               "value": "13",
@@ -5231,12 +5231,12 @@
         "defence": {
           "players": [
             {
-              "id": "4682980",
-              "name": "Derrick Harmon",
-              "label": "DT",
+              "id": "4430947",
+              "name": "Yahya Black",
+              "label": "DE",
               "debutYear": null,
               "experience": 2,
-              "draftedBy": "2025: Rd 1, Pk 21 (PIT)"
+              "draftedBy": "2025: Rd 5, Pk 164 (PIT)"
             },
             {
               "id": "13977",
@@ -5271,9 +5271,9 @@
               "draftedBy": "2019: Rd 3, Pk 94 (TB)"
             }
           ],
-          "rank": 16,
+          "rank": 14,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 16th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 14th of 32.",
           "blurb": "A pressure-and-takeaway defence, among the leaders in both sacks and balls won back, driven by Cameron Heyward and Alex Highsmith with Joey Porter Jr. at cornerback.",
           "blurbHash": "6733e50c4b43e022",
           "promptVersion": 6,
@@ -5390,7 +5390,7 @@
           "stats": {
             "_runAttempts": {
               "value": "113",
-              "rank": 10
+              "rank": 11
             },
             "_passAttempts": {
               "value": "118",
@@ -5410,7 +5410,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "10",
@@ -5468,9 +5468,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 6,
+          "rank": 5,
           "score": 5,
-          "note": "Among the best in the league for points allowed so far this season — 6th of 32.",
+          "note": "Among the best in the league for points allowed so far this season — 5th of 32.",
           "blurb": "Gets after the quarterback and takes the ball away regularly, with Leonard Williams and Jarran Reed inside and a secondary Seattle have just committed $132m to keep Devon Witherspoon in, adding Terrion Arnold on a one-year deal.",
           "blurbHash": "9a0cc83ca9dfc5f2",
           "promptVersion": 6,
@@ -5587,7 +5587,7 @@
           "stats": {
             "_runAttempts": {
               "value": "115",
-              "rank": 9
+              "rank": 10
             },
             "_passAttempts": {
               "value": "113",
@@ -5607,7 +5607,7 @@
             },
             "rushing touchdowns": {
               "value": "5",
-              "rank": 6
+              "rank": 7
             },
             "passing touchdowns": {
               "value": "11",
@@ -5674,7 +5674,7 @@
           "stats": {
             "sacks": {
               "value": "6",
-              "rank": 25
+              "rank": 26
             },
             "takeaways": {
               "value": "3",
@@ -5701,9 +5701,9 @@
               "draftedBy": "2019: Rd 2, Pk 36 (SF)"
             }
           ],
-          "rank": 31,
+          "rank": 32,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 31st of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 32nd of 32.",
           "blurb": "Eddy Pineiro made a higher share of his field goals than any kicker in the league, and Deebo Samuel doubles as the kick returner.",
           "blurbHash": "67f008b774452bd9",
           "promptVersion": 6,
@@ -5775,16 +5775,16 @@
               "draftedBy": "2020: Rd 1, Pk 13 (TB)"
             }
           ],
-          "rank": 24,
+          "rank": 25,
           "score": 2,
-          "note": "Below average for points scored so far this season, 24th of 32.",
+          "note": "Below average for points scored so far this season, 25th of 32.",
           "blurb": "Baker Mayfield, just handed a big extension, leads a group that throws slightly less than most and doesn't get much per carry, with Bucky Irving running behind Tristan Wirfs and Chris Godwin and Emeka Egbuka catching.",
           "blurbHash": "ee7add7cc4c0d213",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "97",
-              "rank": 22
+              "rank": 23
             },
             "_passAttempts": {
               "value": "126",
@@ -5804,7 +5804,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "3",
@@ -5862,16 +5862,16 @@
               "draftedBy": "2025: Rd 2, Pk 53 (TB)"
             }
           ],
-          "rank": 21,
+          "rank": 20,
           "score": 2,
-          "note": "Below average for points allowed so far this season, 21st of 32.",
+          "note": "Below average for points allowed so far this season, 20th of 32.",
           "blurb": "A group that takes the ball away more often than most, led by pass-rushing tackle Calijah Kancey and Yaya Diaby, with Zyon McCollum and second-year corner Benjamin Morrison behind them. Sacks come at an average rate.",
           "blurbHash": "c0465af280d0c1e4",
           "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "6",
-              "rank": 25
+              "rank": 26
             },
             "takeaways": {
               "value": "4",
@@ -5972,16 +5972,16 @@
               "draftedBy": "2021: Rd 4, Pk 128 (PIT)"
             }
           ],
-          "rank": 30,
+          "rank": 31,
           "score": 1,
-          "note": "Among the worst in the league for points scored so far this season — 30th of 32.",
+          "note": "Among the worst in the league for points scored so far this season — 31st of 32.",
           "blurb": "One of the pass-heaviest teams in the league, built around second-year quarterback Cam Ward, though the throws gained little; rookie Carnell Tate arrives as a top-five pick.",
           "blurbHash": "94abbb5ef6daa67d",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "90",
-              "rank": 26
+              "rank": 27
             },
             "_passAttempts": {
               "value": "119",
@@ -6001,7 +6001,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 13
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "3",
@@ -6059,9 +6059,9 @@
               "draftedBy": "2022: Rd 2, Pk 49 (NO)"
             }
           ],
-          "rank": 10,
+          "rank": 9,
           "score": 4,
-          "note": "Better than most for points allowed so far this season, 10th of 32.",
+          "note": "Better than most for points allowed so far this season, 9th of 32.",
           "blurb": "They get after the quarterback well enough through John Franklin-Myers and Jermaine Johnson, but rarely take the ball away from opponents.",
           "blurbHash": "8f9161f53898569f",
           "promptVersion": 6,
@@ -6072,7 +6072,7 @@
             },
             "takeaways": {
               "value": "2",
-              "rank": 28
+              "rank": 29
             }
           }
         },
@@ -6095,9 +6095,9 @@
               "draftedBy": "2025: Rd 4, Pk 103 (TEN)"
             }
           ],
-          "rank": 19,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league at kicking field goals so far this season, 19th of 32.",
+          "note": "Middle of the league at kicking field goals so far this season, 18th of 32.",
           "blurb": "Joey Slye handles the kicking, with Chimere Dike returning kicks.",
           "blurbHash": "179be1ed950b206a",
           "promptVersion": 6,
@@ -6169,20 +6169,20 @@
               "draftedBy": "2024: Rd 3, Pk 67 (WSH)"
             }
           ],
-          "rank": 14,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 14th of 32.",
+          "note": "Middle of the league for points scored so far this season, 16th of 32.",
           "blurb": "One of the most run-leaning teams in the league, and they move the ball well on the ground, but their passing game with Jayden Daniels produced few touchdowns despite Terry McLaurin and Stefon Diggs.",
           "blurbHash": "7e1ffaff70621485",
           "promptVersion": 6,
           "stats": {
             "_runAttempts": {
               "value": "118",
-              "rank": 6
+              "rank": 7
             },
             "_passAttempts": {
               "value": "137",
-              "rank": 11
+              "rank": 12
             },
             "_sacks": {
               "value": "5",
@@ -6202,7 +6202,7 @@
             },
             "passing touchdowns": {
               "value": "8",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "2",
@@ -6256,16 +6256,16 @@
               "draftedBy": "2017: Rd 3, Pk 81 (WSH)"
             }
           ],
-          "rank": 31,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league for points allowed so far this season — 31st of 32.",
+          "note": "Among the worst in the league for points allowed so far this season — 30th of 32.",
           "blurb": "Gets after the quarterback often enough, but almost never takes the ball away — only one team forced fewer turnovers.",
           "blurbHash": "f1420f2213b65d7f",
           "promptVersion": 6,
           "stats": {
             "sacks": {
               "value": "7",
-              "rank": 21
+              "rank": 22
             },
             "takeaways": {
               "value": "5",
@@ -6284,17 +6284,17 @@
               "draftedBy": null
             },
             {
-              "id": "4602667",
-              "name": "Jaylin Lane",
+              "id": "4361577",
+              "name": "Dyami Brown",
               "label": "KR",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 4, Pk 128 (WSH)"
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 82 (WSH)"
             }
           ],
-          "rank": 22,
+          "rank": 21,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 22nd of 32.",
+          "note": "Below average at kicking field goals so far this season, 21st of 32.",
           "blurb": "Kicking duties sit with Drew Stevens, a rookie, while Luke McCaffrey returns kicks.",
           "blurbHash": "c9f289dd2e978e70",
           "promptVersion": 6,

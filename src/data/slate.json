@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 4,
-  "fetchedAt": "2026-10-05T19:29:17.484Z",
+  "fetchedAt": "2026-10-06T17:01:28.758Z",
   "games": [
-    {
-      "id": "401872979",
-      "kickoff": "2026-10-06T00:15Z",
-      "home": "NO",
-      "away": "ATL",
-      "spread": 1.5,
-      "favourite": "home",
-      "overUnder": 47.5,
-      "broadcast": "ESPN",
-      "venue": "Caesars Superdome",
-      "neutralSite": false
-    },
     {
       "id": "401872964",
       "kickoff": "2026-10-02T00:15Z",
@@ -194,10 +182,44 @@
       "broadcast": "NBC",
       "venue": "Bank of America Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401872979",
+      "kickoff": "2026-10-06T00:15Z",
+      "home": "NO",
+      "away": "ATL",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN",
+      "venue": "Caesars Superdome",
+      "neutralSite": false
     }
   ],
   "byes": [],
   "injuries": {
+    "ATL": [
+      {
+        "player": "Cooper Rush",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Jack Strand",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Jared Ivey",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Robert Longerbeam",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "BAL": [
       {
         "player": "Chris Moore",
@@ -279,6 +301,11 @@
     ],
     "DEN": [
       {
+        "player": "Pat Bryant",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
         "player": "Dondrea Tillman",
         "position": "LB",
         "status": "Out"
@@ -287,22 +314,24 @@
         "player": "Pat Surtain II",
         "position": "CB",
         "status": "Doubtful"
-      },
+      }
+    ],
+    "DET": [
       {
-        "player": "Pat Bryant",
-        "position": "WR",
+        "player": "Rock Ya-Sin",
+        "position": "CB",
         "status": "Doubtful"
       }
     ],
     "GB": [
       {
-        "player": "Edgerrin Cooper",
-        "position": "LB",
+        "player": "Micah Parsons",
+        "position": "DE",
         "status": "Out"
       },
       {
-        "player": "Micah Parsons",
-        "position": "DE",
+        "player": "Edgerrin Cooper",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -314,6 +343,11 @@
       }
     ],
     "IND": [
+      {
+        "player": "Arden Key",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Keenan Allen",
         "position": "WR",
@@ -365,6 +399,11 @@
     ],
     "MIA": [
       {
+        "player": "Reese Taylor",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Caleb Douglas",
         "position": "WR",
         "status": "Out"
@@ -406,13 +445,18 @@
     ],
     "NO": [
       {
-        "player": "Anfernee Jennings",
-        "position": "LB",
+        "player": "Zach Wilson",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Carl Granderson",
-        "position": "DE",
+        "player": "Noah Fant",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Decamerion Richardson",
+        "position": "CB",
         "status": "Out"
       },
       {
@@ -425,10 +469,15 @@
       {
         "player": "Braxton Berrios",
         "position": "WR",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "NYJ": [
+      {
+        "player": "Braiden McGregor",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Mason Taylor",
         "position": "TE",
@@ -443,14 +492,14 @@
         "player": "Adonai Mitchell",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "Kingsley Enagbare",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "PHI": [
+      {
+        "player": "Tank Bigsby",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "DeVonta Smith",
         "position": "WR",
@@ -464,11 +513,6 @@
       {
         "player": "Zack Baun",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Hollywood Brown",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -518,11 +562,6 @@
         "player": "Ko Kieft",
         "position": "TE",
         "status": "Out"
-      },
-      {
-        "player": "Rueben Bain Jr.",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "WSH": [
@@ -537,13 +576,13 @@
         "status": "Doubtful"
       },
       {
-        "player": "Rachaad White",
-        "position": "RB",
+        "player": "Jaylin Lane",
+        "position": "WR",
         "status": "Out"
       },
       {
-        "player": "Terry McLaurin",
-        "position": "WR",
+        "player": "Rachaad White",
+        "position": "RB",
         "status": "Out"
       }
     ]
