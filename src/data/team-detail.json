@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-06T17:01:35.533Z",
+  "fetchedAt": "2026-10-07T17:39:25.102Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -4708,12 +4708,12 @@
               "draftedBy": null
             },
             {
-              "id": "3123075",
-              "name": "Braxton Berrios",
+              "id": "4257188",
+              "name": "Charlie Jones",
               "label": "KR",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 6, Pk 210 (NE)"
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2023: Rd 4, Pk 131 (CIN)"
             }
           ],
           "rank": 9,
