@@ -1,6 +1,76 @@
 {
-  "generatedAt": "2026-10-06T17:50:59.610Z",
+  "generatedAt": "2026-10-07T18:22:14.343Z",
   "candidates": [
+    {
+      "id": "50126306",
+      "headline": "Ravens acquire center Cam Jurgens in trade with Eagles",
+      "description": "The Ravens have acquired two-time Pro Bowl center Cam Jurgens in a trade with the Eagles.",
+      "published": "2026-10-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens",
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "BAL",
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4361178",
+          "name": "Cam Jurgens",
+          "position": "Center",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles"
+    },
+    {
+      "id": "50121315",
+      "headline": "Tyreek Hill's wife recounts assault, verbal abuse at trial",
+      "description": "Tyreek Hill's wife recounted details of assault and verbal abuse during testimony Tuesday on the first day of a civil assault and battery trial in Florida, proceedings that began a day after ESPN reported Hill would potentially sign an NFL contract soon.",
+      "published": "2026-10-07",
+      "likelyKind": "transaction",
+      "teams": [],
+      "teamIds": [],
+      "players": [
+        {
+          "id": "3116406",
+          "name": "Tyreek Hill",
+          "position": "Wide Receiver",
+          "currentTeam": "MIA"
+        },
+        {
+          "id": "15813",
+          "name": "Kenny Vaccaro",
+          "position": "Safety",
+          "currentTeam": "TEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial"
+    },
+    {
+      "id": "50121196",
+      "headline": "Giants' Berrios says he'll undergo season-ending foot surgery",
+      "description": "Giants receiver Braxton Berrios will undergo season-ending surgery on his foot, he announced Tuesday on Instagram.",
+      "published": "2026-10-07",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "3123075",
+          "name": "Braxton Berrios",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50121196/giants-berrios-says-undergo-season-ending-foot-surgery"
+    },
     {
       "id": "50111468",
       "headline": "Vikings LG Jackson likely out for season, LT Darrisaw has concussion",
@@ -917,78 +987,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50007652/packers-lose-rt-zach-bako-bewele-season-ending-surgery"
-    },
-    {
-      "id": "49993378",
-      "headline": "Van Ness' breakout game saves Packers in OT win vs. Jets",
-      "description": "Packers hope it's a sign of things to come as Micah Parsons nears his return from a torn ACL.",
-      "published": "2026-09-21",
-      "likelyKind": "injury",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4686906",
-          "name": "Lukas Van Ness",
-          "position": "Defensive End",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49993378/nfl-green-bay-packers-lukas-van-ness-micah-parsons-jets"
-    },
-    {
-      "id": "49980661",
-      "headline": "Jets rookie WR Omar Cooper Jr. put on IR with sprained ankle",
-      "description": "Jets rookie wide receiver Omar Cooper Jr., one of the team's three first-round picks, has been placed on injured reserve with a sprained ankle.",
-      "published": "2026-09-19",
-      "likelyKind": "injury",
-      "teams": [
-        "New York Jets"
-      ],
-      "teamIds": [
-        "NYJ"
-      ],
-      "players": [
-        {
-          "id": "4723820",
-          "name": "Omar Cooper Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "NYJ"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49980661/source-jets-rookie-wr-cooper-jr-put-ir-sprained-ankle"
-    },
-    {
-      "id": "49974401",
-      "headline": "Vikings to start QB Wentz vs. Bears with Murray still on the mend",
-      "description": "Carson Wentz will be the Vikings' starting quarterback Sunday against the Bears while Kyler Murray continues to work his way back after suffering a concussion in the season opener.",
-      "published": "2026-09-18",
-      "likelyKind": "role",
-      "teams": [
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "2573079",
-          "name": "Carson Wentz",
-          "position": "Quarterback",
-          "currentTeam": "MIN"
-        },
-        {
-          "id": "3917315",
-          "name": "Kyler Murray",
-          "position": "Quarterback",
-          "currentTeam": "MIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/49974401/vikings-start-qb-wentz-vs-bears-murray-mend"
     }
   ]
 }
