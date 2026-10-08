@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 5,
-  "fetchedAt": "2026-10-07T17:39:16.541Z",
+  "fetchedAt": "2026-10-08T17:41:39.840Z",
   "games": [
     {
       "id": "401872980",
       "kickoff": "2026-10-09T00:15Z",
       "home": "DAL",
       "away": "TB",
-      "spread": 8.5,
+      "spread": 9.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "Prime Video",
       "venue": "AT&T Stadium",
       "neutralSite": false
@@ -20,9 +20,9 @@
       "kickoff": "2026-10-11T13:30Z",
       "home": "JAX",
       "away": "PHI",
-      "spread": 7,
+      "spread": 7.5,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "NFL Net",
       "venue": "Tottenham Hotspur Stadium",
       "neutralSite": true
@@ -32,7 +32,7 @@
       "kickoff": "2026-10-11T17:00Z",
       "home": "GB",
       "away": "CHI",
-      "spread": 2.5,
+      "spread": 1.5,
       "favourite": "away",
       "overUnder": 45.5,
       "broadcast": "Fox",
@@ -46,7 +46,7 @@
       "away": "HOU",
       "spread": 7.5,
       "favourite": "away",
-      "overUnder": 37.5,
+      "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
       "neutralSite": false
@@ -80,9 +80,9 @@
       "kickoff": "2026-10-11T17:00Z",
       "home": "NO",
       "away": "MIN",
-      "spread": 1.5,
+      "spread": 2.5,
       "favourite": "away",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "Fox",
       "venue": "Caesars Superdome",
       "neutralSite": false
@@ -118,7 +118,7 @@
       "away": "NYG",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 43.5,
+      "overUnder": 41.5,
       "broadcast": "Fox",
       "venue": "Northwest Stadium",
       "neutralSite": false
@@ -130,7 +130,7 @@
       "away": "DEN",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "CBS",
       "venue": "SoFi Stadium",
       "neutralSite": false
@@ -152,7 +152,7 @@
       "kickoff": "2026-10-11T20:25Z",
       "home": "SEA",
       "away": "SF",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 45.5,
       "broadcast": "Fox",
@@ -164,7 +164,7 @@
       "kickoff": "2026-10-12T00:20Z",
       "home": "ATL",
       "away": "BAL",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "NBC",
@@ -189,13 +189,6 @@
     "KC"
   ],
   "injuries": {
-    "BAL": [
-      {
-        "player": "Durham Smythe",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
     "CHI": [
       {
         "player": "Caleb Williams",
@@ -206,34 +199,29 @@
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
-      },
-      {
-        "player": "Noah Sewell",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "DAL": [
       {
-        "player": "DeMarvion Overshown",
-        "position": "LB",
-        "status": "Doubtful"
-      },
-      {
         "player": "Cobie Durant",
         "position": "CB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "DeMarvion Overshown",
+        "position": "LB",
+        "status": "Out"
       }
     ],
     "DEN": [
       {
-        "player": "Pat Bryant",
-        "position": "WR",
+        "player": "Pat Surtain II",
+        "position": "CB",
         "status": "Doubtful"
       },
       {
-        "player": "Pat Surtain II",
-        "position": "CB",
+        "player": "Pat Bryant",
+        "position": "WR",
         "status": "Doubtful"
       }
     ],
@@ -279,8 +267,8 @@
     ],
     "NYG": [
       {
-        "player": "Braxton Berrios",
-        "position": "WR",
+        "player": "Chauncey Golston",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -294,16 +282,19 @@
         "player": "Breece Hall",
         "position": "RB",
         "status": "Doubtful"
-      }
-    ],
-    "PHI": [
+      },
       {
-        "player": "Dallas Goedert",
-        "position": "TE",
+        "player": "Kiko Mauigoa",
+        "position": "LB",
         "status": "Doubtful"
       }
     ],
     "PIT": [
+      {
+        "player": "Michael Pittman Jr.",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Jamel Dean",
         "position": "CB",
@@ -346,6 +337,11 @@
         "player": "Marcus Mariota",
         "position": "QB",
         "status": "Doubtful"
+      },
+      {
+        "player": "Deatrich Wise Jr.",
+        "position": "DE",
+        "status": "Out"
       }
     ]
   }
