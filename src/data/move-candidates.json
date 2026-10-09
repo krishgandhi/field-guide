@@ -1,6 +1,58 @@
 {
-  "generatedAt": "2026-10-08T18:21:41.783Z",
+  "generatedAt": "2026-10-09T17:54:47.555Z",
   "candidates": [
+    {
+      "id": "50134415",
+      "headline": "Don't be surprised if: Unsung heroes rack up the stats, and one QB to trade away",
+      "description": "Don't be surprised if the trade market for a QB1 drops off after Week 5, and unsung heroes start to shine.",
+      "published": "2026-10-09",
+      "likelyKind": "transaction",
+      "teams": [],
+      "teamIds": [],
+      "players": [
+        {
+          "id": "4431452",
+          "name": "Drake Maye",
+          "position": "Quarterback",
+          "currentTeam": "NE"
+        },
+        {
+          "id": "4430737",
+          "name": "Kyren Williams",
+          "position": "Running Back",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "4426388",
+          "name": "Jameson Williams",
+          "position": "Wide Receiver",
+          "currentTeam": "DET"
+        }
+      ],
+      "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5"
+    },
+    {
+      "id": "50138218",
+      "headline": "Undrafted rookie QB Daniels savors Thursday night win vs. Cowboys",
+      "description": "Jalon Daniels became the first undrafted rookie starting QB in the common draft era to win a game for a team that entered winless, leading the Bucs to a 24-16 win over the Cowboys.",
+      "published": "2026-10-09",
+      "likelyKind": "role",
+      "teams": [
+        "Tampa Bay Buccaneers"
+      ],
+      "teamIds": [
+        "TB"
+      ],
+      "players": [
+        {
+          "id": "4596472",
+          "name": "Jalon Daniels",
+          "position": "Quarterback",
+          "currentTeam": "TB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50138218/undrafted-rookie-qb-daniels-savors-thursday-night-win-vs-cowboys"
+    },
     {
       "id": "50127865",
       "headline": "TE Sam LaPorta says extension talks with Lions at 'stalemate'",
@@ -955,50 +1007,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50036843/broncos-place-rb-jonah-coleman-ankle-ir"
-    },
-    {
-      "id": "50027179",
-      "headline": "Commanders GM: Elbow surgery 'not on table' for QB Daniels",
-      "description": "Commanders quarterback Jayden Daniels won't undergo surgery on his dislocated left elbow and, as of now, he won't be placed on injured reserve according to general manager Adam Peters.",
-      "published": "2026-09-25",
-      "likelyKind": "injury",
-      "teams": [
-        "Washington Commanders"
-      ],
-      "teamIds": [
-        "WSH"
-      ],
-      "players": [
-        {
-          "id": "4426348",
-          "name": "Jayden Daniels",
-          "position": "Quarterback",
-          "currentTeam": "WSH"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50027179/commanders-gm-elbow-surgery-ir-not-table-right-now-qb-daniels"
-    },
-    {
-      "id": "50015866",
-      "headline": "49ers place starting DT C.J. West on IR due to knee injury",
-      "description": "49ers defensive tackle C.J. West, who is going to miss at least a chunk of the season with a bone chip in his knee that will require surgery, was placed on injured reserve Wednesday.",
-      "published": "2026-09-23",
-      "likelyKind": "injury",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
-        {
-          "id": "4686308",
-          "name": "C.J. West",
-          "position": "Defensive Tackle",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50015866/49ers-place-starting-dt-cj-west-ir-due-knee-injury"
     }
   ]
 }
