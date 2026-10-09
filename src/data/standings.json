@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-10-08T17:41:40.255Z",
+  "fetchedAt": "2026-10-09T17:16:46.168Z",
   "teams": {
     "KC": {
       "wins": 4,
@@ -129,15 +129,6 @@
       "pointsAgainst": 106,
       "conferenceRank": 14
     },
-    "HOU": {
-      "wins": 0,
-      "losses": 4,
-      "ties": 0,
-      "pointDifferential": -25,
-      "pointsFor": 84,
-      "pointsAgainst": 109,
-      "conferenceRank": 15
-    },
     "TEN": {
       "wins": 0,
       "losses": 4,
@@ -145,6 +136,15 @@
       "pointDifferential": -28,
       "pointsFor": 55,
       "pointsAgainst": 83,
+      "conferenceRank": 15
+    },
+    "HOU": {
+      "wins": 0,
+      "losses": 4,
+      "ties": 0,
+      "pointDifferential": -25,
+      "pointsFor": 84,
+      "pointsAgainst": 109,
       "conferenceRank": 16
     },
     "MIN": {
@@ -248,11 +248,11 @@
     },
     "DAL": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": 10,
-      "pointsFor": 122,
-      "pointsAgainst": 112,
+      "pointDifferential": 2,
+      "pointsFor": 138,
+      "pointsAgainst": 136,
       "conferenceRank": 12
     },
     "WSH": {
@@ -283,12 +283,12 @@
       "conferenceRank": 15
     },
     "TB": {
-      "wins": 0,
+      "wins": 1,
       "losses": 4,
       "ties": 0,
-      "pointDifferential": -20,
-      "pointsFor": 76,
-      "pointsAgainst": 96,
+      "pointDifferential": -12,
+      "pointsFor": 100,
+      "pointsAgainst": 112,
       "conferenceRank": 16
     }
   }

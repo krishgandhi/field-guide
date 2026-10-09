@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 5,
-  "fetchedAt": "2026-10-08T17:41:39.840Z",
+  "fetchedAt": "2026-10-09T17:16:45.474Z",
   "games": [
     {
       "id": "401872980",
       "kickoff": "2026-10-09T00:15Z",
       "home": "DAL",
       "away": "TB",
-      "spread": 9.5,
-      "favourite": "home",
-      "overUnder": 48.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "AT&T Stadium",
       "neutralSite": false
@@ -46,7 +46,7 @@
       "away": "HOU",
       "spread": 7.5,
       "favourite": "away",
-      "overUnder": 38.5,
+      "overUnder": 37.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
       "neutralSite": false
@@ -58,7 +58,7 @@
       "away": "CIN",
       "spread": 6.5,
       "favourite": "away",
-      "overUnder": 42.5,
+      "overUnder": 43.5,
       "broadcast": "Fox",
       "venue": "Hard Rock Stadium",
       "neutralSite": false
@@ -106,7 +106,7 @@
       "away": "IND",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "CBS",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -116,7 +116,7 @@
       "kickoff": "2026-10-11T17:00Z",
       "home": "WSH",
       "away": "NYG",
-      "spread": 3.5,
+      "spread": 4.5,
       "favourite": "home",
       "overUnder": 41.5,
       "broadcast": "Fox",
@@ -196,6 +196,11 @@
         "status": "Out"
       },
       {
+        "player": "Kyle Monangai",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
@@ -203,25 +208,35 @@
     ],
     "DAL": [
       {
+        "player": "DeMarvion Overshown",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
         "player": "Cobie Durant",
         "position": "CB",
         "status": "Out"
       },
       {
-        "player": "DeMarvion Overshown",
+        "player": "James Houston",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Camden Brown",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "DEN": [
       {
-        "player": "Pat Surtain II",
-        "position": "CB",
+        "player": "Pat Bryant",
+        "position": "WR",
         "status": "Doubtful"
       },
       {
-        "player": "Pat Bryant",
-        "position": "WR",
+        "player": "Pat Surtain II",
+        "position": "CB",
         "status": "Doubtful"
       }
     ],
@@ -255,13 +270,20 @@
     ],
     "MIA": [
       {
-        "player": "Reese Taylor",
+        "player": "Storm Duck",
         "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Storm Duck",
+        "player": "Reese Taylor",
         "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "NE": [
+      {
+        "player": "Mack Hollins",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -276,17 +298,17 @@
       {
         "player": "Adonai Mitchell",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Breece Hall",
         "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Kiko Mauigoa",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "PIT": [
@@ -322,13 +344,13 @@
         "status": "Out"
       },
       {
-        "player": "SirVocea Dennis",
-        "position": "LB",
+        "player": "Benjamin Morrison",
+        "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Benjamin Morrison",
-        "position": "CB",
+        "player": "SirVocea Dennis",
+        "position": "LB",
         "status": "Out"
       }
     ],
