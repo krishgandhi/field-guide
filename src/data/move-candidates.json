@@ -1,6 +1,74 @@
 {
-  "generatedAt": "2026-10-09T17:54:47.555Z",
+  "generatedAt": "2026-10-10T16:53:06.882Z",
   "candidates": [
+    {
+      "id": "50148005",
+      "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",
+      "description": "The Cardinals are finalizing a deal to trade Marvin Harrison Jr., sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
+      "published": "2026-10-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr"
+    },
+    {
+      "id": "50147669",
+      "headline": "Sources: Ravens held Cam Jurgens physical before trade with Eagles",
+      "description": "As the Ravens and Eagles were preparing to agree to a trade that would send Cam Jurgens to Baltimore, the two sides made immediate plans for the center to undergo a physical in Philadelphia before any deal was finalized, league sources told ESPN.",
+      "published": "2026-10-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens",
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "BAL",
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4361178",
+          "name": "Cam Jurgens",
+          "position": "Center",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50147669/sources-ravens-held-cam-jurgens-physical-trade-eagles"
+    },
+    {
+      "id": "50142134",
+      "headline": "Eagles release QB Andy Dalton after costly pick, demotion",
+      "description": "Andy Dalton, who lost his spot as the Eagles' backup quarterback following a costly interception against the Bears, has been released.",
+      "published": "2026-10-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "14012",
+          "name": "Andy Dalton",
+          "position": "Quarterback",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion"
+    },
     {
       "id": "50134415",
       "headline": "Don't be surprised if: Unsung heroes rack up the stats, and one QB to trade away",
@@ -937,76 +1005,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50051321/sources-giants-brian-burns-believed-torn-acl"
-    },
-    {
-      "id": "50051074",
-      "headline": "Commanders set to re-add Austin Ekeler to RB room, sources say",
-      "description": "The Commanders are expected to sign free agent running back Austin Ekeler to their 53-man roster, pending a physical, sources told NFL Network's Ian Rapoport and Mike Garafolo.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Washington Commanders"
-      ],
-      "teamIds": [
-        "WSH"
-      ],
-      "players": [
-        {
-          "id": "3068267",
-          "name": "Austin Ekeler",
-          "position": "Running Back",
-          "currentTeam": "WSH"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50051074/commanders-set-re-add-austin-ekeler-rb-room-sources-say"
-    },
-    {
-      "id": "50038725",
-      "headline": "Sources: Cowboys, Lions make trade inquiries on Joey Porter Jr.",
-      "description": "A handful of teams, including the Cowboys and Lions, have begun making inquiries about the availability of Steelers cornerback Joey Porter Jr., sources told ESPN.",
-      "published": "2026-09-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys",
-        "Detroit Lions",
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "DAL",
-        "DET",
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50038725/sources-steelers-field-joey-porter-jr-trade-calls-cowboys-lions"
-    },
-    {
-      "id": "50036843",
-      "headline": "Broncos place RB Jonah Coleman (ankle) on IR",
-      "description": "Denver Broncos rookie running back Jonah Coleman was placed on injured reserve Saturday with an ankle injury he suffered in the team's Week 2 win over the Jacksonville Jaguars.",
-      "published": "2026-09-26",
-      "likelyKind": "injury",
-      "teams": [
-        "Denver Broncos"
-      ],
-      "teamIds": [
-        "DEN"
-      ],
-      "players": [
-        {
-          "id": "4702555",
-          "name": "Jonah Coleman",
-          "position": "Running Back",
-          "currentTeam": "DEN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50036843/broncos-place-rb-jonah-coleman-ankle-ir"
     }
   ]
 }
