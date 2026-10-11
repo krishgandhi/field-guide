@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-10T16:05:29.324Z",
+  "fetchedAt": "2026-10-11T16:30:34.269Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -38,12 +38,12 @@
               "draftedBy": "2023: Rd 3, Pk 94 (ARI)"
             },
             {
-              "id": "4432708",
-              "name": "Marvin Harrison Jr.",
+              "id": "3045523",
+              "name": "Kendrick Bourne",
               "label": "WR",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 4 (ARI)"
+              "debutYear": 2017,
+              "experience": 10,
+              "draftedBy": null
             },
             {
               "id": "4361307",
@@ -2670,12 +2670,12 @@
         "defence": {
           "players": [
             {
-              "id": "3843843",
-              "name": "Arden Key",
+              "id": "4566154",
+              "name": "Jaylahn Tuimoloau",
               "label": "DE",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 3, Pk 87 (OAK)"
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 2, Pk 45 (IND)"
             },
             {
               "id": "4426473",
@@ -4648,12 +4648,12 @@
               "draftedBy": "2014: Rd 7, Pk 235 (OAK)"
             },
             {
-              "id": "4036132",
-              "name": "Chauncey Golston",
-              "label": "DE",
+              "id": "4426542",
+              "name": "Darius Alexander",
+              "label": "DT",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 3, Pk 84 (DAL)"
+              "experience": 2,
+              "draftedBy": "2025: Rd 3, Pk 65 (NYG)"
             },
             {
               "id": "4725996",
@@ -5160,12 +5160,12 @@
               "draftedBy": "2019: Rd 2, Pk 64 (SEA)"
             },
             {
-              "id": "4035687",
-              "name": "Michael Pittman Jr.",
+              "id": "4431492",
+              "name": "Roman Wilson",
               "label": "WR",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 2, Pk 34 (IND)"
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 84 (PIT)"
             },
             {
               "id": "4430802",
