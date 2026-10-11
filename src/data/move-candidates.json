@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-10T16:53:06.882Z",
+  "generatedAt": "2026-10-11T17:15:57.484Z",
   "candidates": [
     {
       "id": "50148005",
       "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",
       "description": "The Cardinals are finalizing a deal to trade Marvin Harrison Jr., sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
-      "published": "2026-10-10",
+      "published": "2026-10-11",
       "likelyKind": "transaction",
       "teams": [
         "Arizona Cardinals"
@@ -22,6 +22,28 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr"
+    },
+    {
+      "id": "50148833",
+      "headline": "Colts place DE Arden Key on IR with hamstring injury",
+      "description": "Colts defensive end Arden Key has been placed on injured reserve with a hamstring injury, meaning he will miss at least four games before returning to the active roster.",
+      "published": "2026-10-10",
+      "likelyKind": "injury",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3843843",
+          "name": "Arden Key",
+          "position": "Defensive End",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury"
     },
     {
       "id": "50147669",
@@ -983,28 +1005,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50051498/sources-leo-chenal-season-ending-neck-surgery"
-    },
-    {
-      "id": "50051321",
-      "headline": "Sources: Giants' Brian Burns believed to have torn ACL",
-      "description": "New York Giants standout pass rusher Brian Burns is believed to have sustained a torn ACL during Sunday's 12-7 win over the Tennessee Titans, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
-      "published": "2026-09-28",
-      "likelyKind": "injury",
-      "teams": [
-        "New York Giants"
-      ],
-      "teamIds": [
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "4035631",
-          "name": "Brian Burns",
-          "position": "Linebacker",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50051321/sources-giants-brian-burns-believed-torn-acl"
     }
   ]
 }
