@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-10-11T16:30:27.256Z",
+  "fetchedAt": "2026-10-12T20:05:36.463Z",
   "teams": {
     "KC": {
       "wins": 4,
@@ -12,14 +12,23 @@
       "pointsAgainst": 77,
       "conferenceRank": 1
     },
-    "JAX": {
-      "wins": 3,
+    "BAL": {
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "pointDifferential": 51,
-      "pointsFor": 104,
-      "pointsAgainst": 53,
+      "pointDifferential": 27,
+      "pointsFor": 146,
+      "pointsAgainst": 119,
       "conferenceRank": 2
+    },
+    "JAX": {
+      "wins": 4,
+      "losses": 1,
+      "ties": 0,
+      "pointDifferential": 53,
+      "pointsFor": 123,
+      "pointsAgainst": 70,
+      "conferenceRank": 3
     },
     "BUF": {
       "wins": 3,
@@ -28,169 +37,178 @@
       "pointDifferential": 20,
       "pointsFor": 127,
       "pointsAgainst": 107,
-      "conferenceRank": 3
-    },
-    "CLE": {
-      "wins": 3,
-      "losses": 1,
-      "ties": 0,
-      "pointDifferential": -14,
-      "pointsFor": 81,
-      "pointsAgainst": 95,
       "conferenceRank": 4
     },
-    "BAL": {
+    "NE": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "pointDifferential": 20,
-      "pointsFor": 116,
-      "pointsAgainst": 96,
+      "pointDifferential": 16,
+      "pointsFor": 110,
+      "pointsAgainst": 94,
       "conferenceRank": 5
+    },
+    "DEN": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": -14,
+      "pointsFor": 97,
+      "pointsAgainst": 111,
+      "conferenceRank": 6
     },
     "LV": {
       "wins": 3,
-      "losses": 1,
-      "ties": 0,
-      "pointDifferential": 31,
-      "pointsFor": 115,
-      "pointsAgainst": 84,
-      "conferenceRank": 6
-    },
-    "NE": {
-      "wins": 2,
       "losses": 2,
       "ties": 0,
-      "pointDifferential": -12,
-      "pointsFor": 65,
-      "pointsAgainst": 77,
+      "pointDifferential": 3,
+      "pointsFor": 132,
+      "pointsAgainst": 129,
       "conferenceRank": 7
     },
-    "DEN": {
-      "wins": 2,
+    "CLE": {
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "pointDifferential": -20,
-      "pointsFor": 74,
-      "pointsAgainst": 94,
+      "pointDifferential": -19,
+      "pointsFor": 93,
+      "pointsAgainst": 112,
       "conferenceRank": 8
     },
     "PIT": {
-      "wins": 2,
+      "wins": 3,
       "losses": 2,
       "ties": 0,
-      "pointDifferential": -10,
-      "pointsFor": 77,
-      "pointsAgainst": 87,
+      "pointDifferential": 2,
+      "pointsFor": 111,
+      "pointsAgainst": 109,
       "conferenceRank": 9
+    },
+    "CIN": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 19,
+      "pointsFor": 128,
+      "pointsAgainst": 109,
+      "conferenceRank": 10
+    },
+    "NYJ": {
+      "wins": 2,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": -3,
+      "pointsFor": 93,
+      "pointsAgainst": 96,
+      "conferenceRank": 11
     },
     "IND": {
       "wins": 2,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": -2,
-      "pointsFor": 102,
-      "pointsAgainst": 104,
-      "conferenceRank": 10
-    },
-    "CIN": {
-      "wins": 2,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 12,
-      "pointsFor": 97,
-      "pointsAgainst": 85,
-      "conferenceRank": 11
-    },
-    "NYJ": {
-      "wins": 1,
       "losses": 3,
       "ties": 0,
-      "pointDifferential": -8,
-      "pointsFor": 76,
-      "pointsAgainst": 84,
+      "pointDifferential": -14,
+      "pointsFor": 124,
+      "pointsAgainst": 138,
       "conferenceRank": 12
+    },
+    "HOU": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "pointDifferential": -2,
+      "pointsFor": 110,
+      "pointsAgainst": 112,
+      "conferenceRank": 13
     },
     "MIA": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "pointDifferential": -55,
-      "pointsFor": 46,
-      "pointsAgainst": 101,
-      "conferenceRank": 13
+      "pointDifferential": -62,
+      "pointsFor": 70,
+      "pointsAgainst": 132,
+      "conferenceRank": 14
     },
     "LAC": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "pointDifferential": -39,
-      "pointsFor": 67,
-      "pointsAgainst": 106,
-      "conferenceRank": 14
+      "pointDifferential": -45,
+      "pointsFor": 84,
+      "pointsAgainst": 129,
+      "conferenceRank": 15
     },
     "TEN": {
       "wins": 0,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "pointDifferential": -28,
-      "pointsFor": 55,
-      "pointsAgainst": 83,
-      "conferenceRank": 15
-    },
-    "HOU": {
-      "wins": 0,
-      "losses": 4,
-      "ties": 0,
-      "pointDifferential": -25,
-      "pointsFor": 84,
+      "pointDifferential": -51,
+      "pointsFor": 58,
       "pointsAgainst": 109,
       "conferenceRank": 16
     },
-    "MIN": {
-      "wins": 4,
+    "SF": {
+      "wins": 5,
       "losses": 0,
       "ties": 0,
-      "pointDifferential": 35,
-      "pointsFor": 86,
-      "pointsAgainst": 51,
+      "pointDifferential": 61,
+      "pointsFor": 154,
+      "pointsAgainst": 93,
       "conferenceRank": 1
     },
-    "SF": {
-      "wins": 4,
+    "MIN": {
+      "wins": 5,
       "losses": 0,
       "ties": 0,
-      "pointDifferential": 58,
-      "pointsFor": 122,
+      "pointDifferential": 45,
+      "pointsFor": 109,
       "pointsAgainst": 64,
       "conferenceRank": 2
     },
     "NYG": {
       "wins": 3,
       "losses": 1,
-      "ties": 0,
+      "ties": 1,
       "pointDifferential": 3,
-      "pointsFor": 82,
-      "pointsAgainst": 79,
+      "pointsFor": 109,
+      "pointsAgainst": 106,
       "conferenceRank": 3
+    },
+    "GB": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": -8,
+      "pointsFor": 104,
+      "pointsAgainst": 112,
+      "conferenceRank": 5
     },
     "CHI": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "pointDifferential": 47,
-      "pointsFor": 112,
-      "pointsAgainst": 65,
-      "conferenceRank": 5
+      "pointDifferential": 23,
+      "pointsFor": 119,
+      "pointsAgainst": 96,
+      "conferenceRank": 6
+    },
+    "DET": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 16,
+      "pointsFor": 164,
+      "pointsAgainst": 148,
+      "conferenceRank": 7
     },
     "SEA": {
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0,
-      "pointDifferential": 32,
-      "pointsFor": 105,
-      "pointsAgainst": 73,
-      "conferenceRank": 6
+      "pointDifferential": 29,
+      "pointsFor": 134,
+      "pointsAgainst": 105,
+      "conferenceRank": 8
     },
     "CAR": {
       "wins": 2,
@@ -208,42 +226,24 @@
       "pointDifferential": 2,
       "pointsFor": 85,
       "pointsAgainst": 83,
-      "conferenceRank": 7
+      "conferenceRank": 9
     },
     "ATL": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": 4,
-      "pointsFor": 96,
-      "pointsAgainst": 92,
-      "conferenceRank": 8
-    },
-    "DET": {
-      "wins": 2,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": -8,
+      "pointDifferential": -3,
       "pointsFor": 119,
-      "pointsAgainst": 127,
-      "conferenceRank": 9
-    },
-    "GB": {
-      "wins": 2,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": -32,
-      "pointsFor": 73,
-      "pointsAgainst": 105,
+      "pointsAgainst": 122,
       "conferenceRank": 10
     },
     "PHI": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": -18,
-      "pointsFor": 75,
-      "pointsAgainst": 93,
+      "pointDifferential": -20,
+      "pointsFor": 92,
+      "pointsAgainst": 112,
       "conferenceRank": 11
     },
     "DAL": {
@@ -258,29 +258,11 @@
     "WSH": {
       "wins": 1,
       "losses": 3,
-      "ties": 0,
+      "ties": 1,
       "pointDifferential": -34,
-      "pointsFor": 88,
-      "pointsAgainst": 122,
+      "pointsFor": 115,
+      "pointsAgainst": 149,
       "conferenceRank": 13
-    },
-    "NO": {
-      "wins": 1,
-      "losses": 3,
-      "ties": 0,
-      "pointDifferential": -23,
-      "pointsFor": 105,
-      "pointsAgainst": 128,
-      "conferenceRank": 14
-    },
-    "ARI": {
-      "wins": 1,
-      "losses": 3,
-      "ties": 0,
-      "pointDifferential": -30,
-      "pointsFor": 87,
-      "pointsAgainst": 117,
-      "conferenceRank": 15
     },
     "TB": {
       "wins": 1,
@@ -289,6 +271,24 @@
       "pointDifferential": -12,
       "pointsFor": 100,
       "pointsAgainst": 112,
+      "conferenceRank": 14
+    },
+    "NO": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "pointDifferential": -33,
+      "pointsFor": 118,
+      "pointsAgainst": 151,
+      "conferenceRank": 15
+    },
+    "ARI": {
+      "wins": 1,
+      "losses": 4,
+      "ties": 0,
+      "pointDifferential": -54,
+      "pointsFor": 108,
+      "pointsAgainst": 162,
       "conferenceRank": 16
     }
   }
