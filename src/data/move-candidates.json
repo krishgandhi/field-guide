@@ -1,6 +1,62 @@
 {
-  "generatedAt": "2026-10-11T17:15:57.484Z",
+  "generatedAt": "2026-10-12T20:50:35.300Z",
   "candidates": [
+    {
+      "id": "50167021",
+      "headline": "Source: Packers lose DT Javon Hargrave for season to torn Achilles",
+      "description": "Tests confirmed Monday that Packers defensive tackle Javon Hargrave suffered a season-ending torn Achilles in Sunday's victory over the Bears, a source told ESPN's Adam Schefter.",
+      "published": "2026-10-12",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "2983055",
+          "name": "Javon Hargrave",
+          "position": "Defensive Tackle",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50167021/source-packers-lose-hargrave-season-ending-torn-achilles"
+    },
+    {
+      "id": "50158326",
+      "headline": "Making sense of the Giants-Commanders tie, the Texans' Marvin Harrison Jr. trade",
+      "description": "What were the Commanders doing in the final minute of OT? Why did the 1-4 Texans make an aggressive trade for Marvin Harrison Jr.? Let's try to find the logic.",
+      "published": "2026-10-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Washington Commanders",
+        "New York Giants",
+        "Houston Texans",
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "WSH",
+        "NYG",
+        "HOU",
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "4426348",
+          "name": "Jayden Daniels",
+          "position": "Quarterback",
+          "currentTeam": "WSH"
+        },
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade"
+    },
     {
       "id": "50148005",
       "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",
@@ -961,50 +1017,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50052520/source-packers-signing-veteran-o-lineman-mekhi-becton"
-    },
-    {
-      "id": "50052064",
-      "headline": "Sources: Dolphins RB De'Von Achane suffered torn ACL vs. Chiefs",
-      "description": "Dolphins running back De'Von Achane suffered a torn ACL during Sunday's loss to the Chiefs and will be out for the rest of the 2026 season, sources told ESPN and NFL Network.",
-      "published": "2026-09-28",
-      "likelyKind": "injury",
-      "teams": [
-        "Miami Dolphins"
-      ],
-      "teamIds": [
-        "MIA"
-      ],
-      "players": [
-        {
-          "id": "4429160",
-          "name": "De'Von Achane",
-          "position": "Running Back",
-          "currentTeam": "MIA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052064/sources-dolphins-rb-devon-achane-suffered-torn-acl-vs-chiefs"
-    },
-    {
-      "id": "50051498",
-      "headline": "Sources: Leo Chenal to have season-ending neck surgery",
-      "description": "Commanders linebacker Leo Chenal, who was carted off the field during the team's win over the Seahawks on Sunday, will undergo season-ending neck surgery, sources confirmed to NFL Network.",
-      "published": "2026-09-28",
-      "likelyKind": "injury",
-      "teams": [
-        "Washington Commanders"
-      ],
-      "teamIds": [
-        "WSH"
-      ],
-      "players": [
-        {
-          "id": "4426901",
-          "name": "Leo Chenal",
-          "position": "Linebacker",
-          "currentTeam": "WSH"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50051498/sources-leo-chenal-season-ending-neck-surgery"
     }
   ]
 }
