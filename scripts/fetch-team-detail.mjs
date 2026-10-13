@@ -31,13 +31,13 @@ import {
   followRef,
   getJson,
 } from "./lib/espn.mts";
+import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
 
 const OUT = "src/data/team-detail.json";
 const DRAFTS = "src/data/draft-origins.json";
 /** Rosters, depth charts and coaches for the season ESPN says we're in. */
 const { season: SEASON } = await currentPhase();
 
-const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
 const STANDINGS = JSON.parse(readFileSync("src/data/standings.json", "utf8"));
 
 /**

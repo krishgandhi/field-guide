@@ -17,7 +17,7 @@
  *   SLATE_BASE=http://bad node scripts/...  # failure drill
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import {
   REGULAR_SEASON_WEEKS,
   SITE,
@@ -26,6 +26,7 @@ import {
   regularSeasonWeek,
   scoreboardUrl,
 } from "./lib/espn.mts";
+import { TEAM_IDS } from "./lib/teams.mts";
 
 const BASE = process.env.SLATE_BASE ?? SITE;
 const OUT = "src/data/slate.json";
@@ -141,10 +142,7 @@ async function main() {
 
   // Byes are absent from the response rather than flagged, so derive them.
   const playing = new Set(games.flatMap((g) => [g.home, g.away]));
-  const allTeams = JSON.parse(
-    await readFile("src/lib/teams/nfl-teams.json", "utf8"),
-  ).map((t) => t.id);
-  const byes = allTeams.filter((id) => !playing.has(id)).sort();
+  const byes = TEAM_IDS.filter((id) => !playing.has(id)).sort();
 
   // Sanity gate before anything is written. 32 teams are either playing or on
   // a bye; if that doesn't hold, the response is malformed and last week's

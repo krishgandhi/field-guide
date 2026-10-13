@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHeader, PageShell } from "@/components/ui/page-header";
-import { TEAMS } from "@/lib/mock/teams";
 import { getSlugs } from "@/lib/content";
-import { teamLogo } from "@/lib/teams";
+import {
+  NFL_TEAMS,
+  teamLogo,
+  teamsInDivision,
+  type Conference,
+  type DivisionName,
+} from "@/lib/teams";
 import { recordFor, recordLabel } from "@/lib/standings";
-import type { Team } from "@/lib/mock/types";
 
 export const metadata: Metadata = {
   title: "Teams — Field guide",
   description: "All 32 teams, by division.",
 };
 
-const ORDER: [Team["conference"], Team["division"]][] = [
+const ORDER: [Conference, DivisionName][] = [
   ["AFC", "East"], ["AFC", "North"], ["AFC", "South"], ["AFC", "West"],
   ["NFC", "East"], ["NFC", "North"], ["NFC", "South"], ["NFC", "West"],
 ];
@@ -34,7 +38,7 @@ export default function TeamsPage() {
       <PageHeader kicker="All 32" title="Teams" />
 
       <p className="mt-2 text-sm text-fg-dim">
-        {written} of {TEAMS.length} written up so far.
+        {written} of {NFL_TEAMS.length} written up so far.
       </p>
 
       {ORDER.map(([conference, division]) => (
@@ -43,9 +47,7 @@ export default function TeamsPage() {
             {conference} {division}
           </h2>
           <div className="grid grid-cols-2 gap-2">
-            {TEAMS.filter(
-              (t) => t.conference === conference && t.division === division,
-            ).map((team) => {
+            {teamsInDivision(conference, division).map((team) => {
               const logo = teamLogo(team.id);
               const record = recordFor(team.id);
               return (

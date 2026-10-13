@@ -17,8 +17,9 @@
  *   STANDINGS_BASE=http://bad node scripts/fetch-standings.mjs   # failure drill
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
 import { SITE_V2, currentPhase, getJson, standingsUrl } from "./lib/espn.mts";
+import { TEAM_IDS } from "./lib/teams.mts";
 
 const BASE = process.env.STANDINGS_BASE ?? SITE_V2;
 const OUT = "src/data/standings.json";
@@ -110,11 +111,7 @@ async function main() {
     );
   }
 
-  const known = new Set(
-    JSON.parse(await readFile("src/lib/teams/nfl-teams.json", "utf8")).map(
-      (t) => t.id,
-    ),
-  );
+  const known = new Set(TEAM_IDS);
   const unknown = rows.filter((r) => !known.has(r.id)).map((r) => r.id);
   if (unknown.length) {
     throw new Error(`Unrecognised team ids: ${unknown.join(", ")}`);

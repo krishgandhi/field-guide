@@ -1,14 +1,22 @@
 import data from "./nfl-teams.json";
 
 /**
- * The 32 teams, with logos and colours, read from a JSON file committed to the
- * repo by `npm run fetch:teams`.
+ * The 32 teams — the one team registry (§13: normalise once, in one place).
+ *
+ * Identity, logos and colours come from a JSON file committed to the repo by
+ * `npm run fetch:teams`; conference and division are added here because
+ * ESPN's teams endpoint doesn't carry them. Ids are ESPN's abbreviations
+ * (WSH, not WAS), since every live data source in this project is ESPN.
  *
  * Never fetched at request time — CLAUDE.md §4. If ESPN changes or breaks,
  * this file keeps working and we re-run the script when convenient.
  */
 
-export type NflTeam = {
+export type Conference = "AFC" | "NFC";
+export type DivisionName = "East" | "North" | "South" | "West";
+
+/** One team as `npm run fetch:teams` writes it. */
+type FetchedTeam = {
   id: string;
   /**
    * ESPN's numeric id, for `news?team=<id>` — the only feed that returns
@@ -28,21 +36,73 @@ export type NflTeam = {
   logo: string;
 };
 
-export const NFL_TEAMS = data as NflTeam[];
-
-const BY_ID = new Map(NFL_TEAMS.map((t) => [t.id, t]));
+export type NflTeam = FetchedTeam & {
+  conference: Conference;
+  division: DivisionName;
+};
 
 /**
- * ESPN uses WSH and LAR where our mock data uses WAS and LA-style codes.
- * §13 warns that abbreviations differ between sources and says to normalise
- * once, in one place. This is that place.
+ * Division membership. Hard-coded because it is a stable fact — the alignment
+ * hasn't changed since 2002 — and because ESPN's teams endpoint doesn't carry
+ * it. Listed in the order the teams page shows them.
+ */
+const ALIGNMENT: Record<Conference, Record<DivisionName, string[]>> = {
+  AFC: {
+    East: ["BUF", "MIA", "NE", "NYJ"],
+    North: ["BAL", "CIN", "CLE", "PIT"],
+    South: ["HOU", "IND", "JAX", "TEN"],
+    West: ["DEN", "KC", "LV", "LAC"],
+  },
+  NFC: {
+    East: ["DAL", "NYG", "PHI", "WSH"],
+    North: ["CHI", "DET", "GB", "MIN"],
+    South: ["ATL", "CAR", "NO", "TB"],
+    West: ["ARI", "LAR", "SF", "SEA"],
+  },
+};
+
+const PLACE = new Map<string, { conference: Conference; division: DivisionName }>();
+for (const [conference, divisions] of Object.entries(ALIGNMENT) as [Conference, Record<DivisionName, string[]>][]) {
+  for (const [division, ids] of Object.entries(divisions) as [DivisionName, string[]][]) {
+    for (const id of ids) PLACE.set(id, { conference, division });
+  }
+}
+
+export const NFL_TEAMS: NflTeam[] = (data as FetchedTeam[]).map((t) => {
+  const place = PLACE.get(t.id);
+  if (!place) throw new Error(`nfl-teams.json has ${t.id}, which is in no division`);
+  return { ...t, ...place };
+});
+
+const BY_ID = new Map(NFL_TEAMS.map((t) => [t.id, t]));
+const BY_SLUG = new Map(NFL_TEAMS.map((t) => [t.slug, t]));
+
+/**
+ * Other spellings of a team id, mapped to ESPN's. Hand-typed ids (notes,
+ * move frontmatter) are where these come from: written as `WAS`, ESPN says
+ * `WSH`, and the lookup silently missed — three separate times.
  */
 const ALIASES: Record<string, string> = {
   WAS: "WSH",
 };
 
+/** The canonical id for any spelling we know; unknown ids pass through unchanged. */
+export function teamId(id: string): string {
+  const upper = id.toUpperCase();
+  return ALIASES[upper] ?? upper;
+}
+
 export function team(id: string): NflTeam | undefined {
-  return BY_ID.get(ALIASES[id] ?? id);
+  return BY_ID.get(teamId(id));
+}
+
+export function teamBySlug(slug: string): NflTeam | undefined {
+  return BY_SLUG.get(slug);
+}
+
+/** The four teams in a division, in display order. */
+export function teamsInDivision(conference: Conference, division: DivisionName): NflTeam[] {
+  return ALIGNMENT[conference][division].map((id) => BY_ID.get(id)).filter((t) => t !== undefined);
 }
 
 /** Falls back to the id so a missing team degrades to "BUF", never to a crash. */
@@ -58,25 +118,10 @@ export function teamColor(id: string): string {
   return team(id)?.displayColor ?? "#98A29E";
 }
 
-/**
- * Division membership. Hard-coded because it is a stable fact — the alignment
- * hasn't changed since 2002 — and because ESPN's teams endpoint doesn't carry
- * it. Lives here rather than in a screen so there is one answer to "who is in
- * whose division", per §13.
- */
-const DIVISIONS: Record<string, string> = {
-  BUF: "AFC East", MIA: "AFC East", NE: "AFC East", NYJ: "AFC East",
-  BAL: "AFC North", CIN: "AFC North", CLE: "AFC North", PIT: "AFC North",
-  HOU: "AFC South", IND: "AFC South", JAX: "AFC South", TEN: "AFC South",
-  DEN: "AFC West", KC: "AFC West", LV: "AFC West", LAC: "AFC West",
-  DAL: "NFC East", NYG: "NFC East", PHI: "NFC East", WSH: "NFC East",
-  CHI: "NFC North", DET: "NFC North", GB: "NFC North", MIN: "NFC North",
-  ATL: "NFC South", CAR: "NFC South", NO: "NFC South", TB: "NFC South",
-  ARI: "NFC West", LAR: "NFC West", SF: "NFC West", SEA: "NFC West",
-};
-
+/** "AFC East", or null for an unknown id. */
 export function division(id: string): string | null {
-  return DIVISIONS[ALIASES[id] ?? id] ?? null;
+  const t = team(id);
+  return t ? `${t.conference} ${t.division}` : null;
 }
 
 /** True when both teams share a division — they meet twice a year and it decides seeding. */

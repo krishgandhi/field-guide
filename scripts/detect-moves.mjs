@@ -24,6 +24,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { classify } from "./lib/detect-patterns.mjs";
 import { ATHLETES as ATHLETE, SITE, getJson } from "./lib/espn.mts";
+import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
 
 const FEED = `${SITE}/news?limit=50`;
 const SEEN = "src/data/seen-news.json";
@@ -56,7 +57,6 @@ function readJson(path, fallback) {
  * inventing team codes, and a draft with no teams fails the schema on
  * promotion because it requires at least one.
  */
-const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
 const BY_NAME = new Map(TEAMS.map((t) => [t.displayName.toLowerCase(), t.id]));
 
 function abbreviate(names) {
