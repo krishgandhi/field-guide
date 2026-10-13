@@ -11,7 +11,27 @@
  *   npm run drafts
  */
 
+import { existsSync, readFileSync } from "node:fs";
 import { DRAFTS_DIR as DIR, readMoves } from "./lib/moves.mts";
+
+/**
+ * Candidates the pipeline gave up on: the model never returned a usable
+ * answer in three tries, or the backlog overflowed before they were reached.
+ * They never became an entry at all, so they are listed here too.
+ */
+const CANDIDATES = "src/data/move-candidates.json";
+const givenUp = existsSync(CANDIDATES)
+  ? (JSON.parse(readFileSync(CANDIDATES, "utf8")).givenUp ?? [])
+  : [];
+if (givenUp.length > 0) {
+  console.log(`${givenUp.length} candidate(s) GIVEN UP — never drafted:\n`);
+  for (const c of givenUp) {
+    console.log(`  ${c.published ?? "?"}  ${c.headline}`);
+    console.log(`    ${c.reason ?? "given up"}${c.givenUpOn ? ` (${c.givenUpOn})` : ""}`);
+    if (c.url) console.log(`    ${c.url}`);
+  }
+  console.log("\nWrite one up by hand if it matters; otherwise ignore.\n");
+}
 
 const drafts = readMoves(DIR);
 if (drafts.length === 0) {

@@ -25,6 +25,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { classify } from "./lib/detect-patterns.mjs";
 import { ATHLETES as ATHLETE, SITE, getJson } from "./lib/espn.mts";
 import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
+import { addGivenUp, mergeWorklist } from "./lib/move-worklist.mjs";
 
 const FEED = `${SITE}/news?limit=50`;
 const SEEN = "src/data/seen-news.json";
@@ -195,20 +196,32 @@ writeFileSync(SEEN, `${JSON.stringify(trimmed, null, 2)}\n`);
 // undecided ones forward gives the pipeline as many attempts as it needs.
 // Anything drafted, held or dismissed is in the seen list by then and drops
 // out here.
-const carried = (readJson(OUT, {}).candidates ?? []).filter(
-  (c) => c?.id && !seen.has(c.id) && !candidateIds.has(c.id),
+// Fresh copies keep the carried attempt count (see move-worklist.mjs), and
+// what overflows the limit is recorded as given up — listed by
+// `npm run drafts` and marked seen — rather than trimmed off in silence.
+const previous = readJson(OUT, {});
+const carried = previous.candidates ?? [];
+const { worklist, dropped } = mergeWorklist(candidates, carried, seen);
+const carriedCount = worklist.filter((c) => !candidateIds.has(c.id)).length;
+if (carriedCount > 0) {
+  console.log(`Carried ${carriedCount} undecided candidate(s) forward.`);
+}
+const givenUp = addGivenUp(
+  previous.givenUp ?? [],
+  dropped.map((c) => ({ ...c, reason: "backlog over the worklist limit, never drafted" })),
+  new Date().toISOString().slice(0, 10),
 );
-const worklist = [...candidates, ...carried]
-  .sort((a, b) => String(b.published ?? "").localeCompare(String(a.published ?? "")))
-  .slice(0, 40);
-if (carried.length > 0) {
-  console.log(`Carried ${carried.length} undecided candidate(s) forward.`);
+if (dropped.length > 0) {
+  console.log(`\nBacklog over the limit — ${dropped.length} oldest candidate(s) given up:`);
+  for (const c of dropped) console.log(`  ${c.published}  ${c.headline}`);
+  const withDropped = [...new Set([...dropped.map((c) => c.id), ...trimmed])].slice(0, SEEN_LIMIT);
+  writeFileSync(SEEN, `${JSON.stringify(withDropped, null, 2)}\n`);
 }
 
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { generatedAt: new Date().toISOString(), candidates: worklist },
+    { generatedAt: new Date().toISOString(), candidates: worklist, givenUp },
     null,
     2,
   )}\n`,

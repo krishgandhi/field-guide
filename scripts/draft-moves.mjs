@@ -28,8 +28,25 @@
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import { MODELS, generateJson, hasKey } from "./lib/claude.mts";
 import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
+import { chunk } from "./lib/prose-cache.mts";
+import { MAX_ATTEMPTS, addGivenUp, recordAttempts } from "./lib/move-worklist.mjs";
+
+/**
+ * Candidates per request.
+ *
+ * All of them used to go in one request with a 16k-token budget: forty
+ * candidates, each answer carrying six rubric notes and a body, could not fit,
+ * and nothing checked whether the answer had been cut off. Six fits with
+ * room to spare, and one bad batch costs six candidates an attempt, not all.
+ */
+const BATCH_SIZE = 6;
+/**
+ * Batches per run, to bound a day's spend after a long outage. What doesn't
+ * fit waits for tomorrow — it stays on the worklist, it isn't dropped.
+ */
+const MAX_BATCHES = 4;
 
 const CANDIDATES = "src/data/move-candidates.json";
 /**
@@ -86,6 +103,7 @@ if (!hasKey()) {
 }
 
 let candidates;
+let worklistFile = { candidates: [], givenUp: [] };
 if (SELF_TEST) {
   console.log("Self-test: calling the API with a fixture. Nothing will be written.\n");
   candidates = FIXTURE;
@@ -94,7 +112,8 @@ if (SELF_TEST) {
     console.log("No candidates file. Run detect-moves.mjs first.");
     process.exit(0);
   }
-  ({ candidates = [] } = JSON.parse(readFileSync(CANDIDATES, "utf8")));
+  worklistFile = { candidates: [], givenUp: [], ...JSON.parse(readFileSync(CANDIDATES, "utf8")) };
+  candidates = worklistFile.candidates;
   if (candidates.length === 0) {
     console.log("No candidates to draft.");
     process.exit(0);
@@ -201,24 +220,53 @@ const schema = {
   additionalProperties: false,
 };
 
-let entries, usage;
-try {
-  ({ data: { entries }, usage } = await generateJson({
-    label: "draft-moves",
-    model: MODELS.moveDrafts,
-    system: SYSTEM,
-    user: `Assess each candidate.\n\n${JSON.stringify(candidates, null, 2)}`,
-    schema,
-    maxTokens: 16000,
-    // Higher effort than write-reasons: this is a judgement task (is it a move
-    // at all, and how big), not a short writing task.
-    effort: "high",
-    thinking: true,
-  }));
-} catch (err) {
-  if (!isNoResult(err)) throw err;
-  console.error(`${err.message}. No drafts written.`);
-  process.exit(0);
+const batches = chunk(candidates, BATCH_SIZE);
+const thisRun = batches.slice(0, MAX_BATCHES);
+if (batches.length > thisRun.length) {
+  const waiting = batches.slice(MAX_BATCHES).flat();
+  console.log(`${waiting.length} candidate(s) wait for the next run (cap of ${MAX_BATCHES} batches per run).`);
+}
+
+/** Every entry the model returned, across batches. */
+const entries = [];
+/** Candidates sent to the model this run, answered or not. */
+const attempted = new Set();
+const usage = { input: 0, output: 0 };
+
+for (const [i, batch] of thisRun.entries()) {
+  for (const c of batch) attempted.add(c.id);
+  try {
+    const { data, usage: u } = await generateJson({
+      label: `draft-moves ${i + 1}/${thisRun.length}`,
+      model: MODELS.moveDrafts,
+      system: SYSTEM,
+      user: `Assess each candidate.\n\n${JSON.stringify(batch, null, 2)}`,
+      schema,
+      maxTokens: 16000,
+      // Higher effort than write-reasons: this is a judgement task (is it a
+      // move at all, and how big), not a short writing task.
+      effort: "high",
+      thinking: true,
+    });
+    usage.input += u.input;
+    usage.output += u.output;
+    const ids = new Set(batch.map((c) => c.id));
+    const answered = (data.entries ?? []).filter((e) => ids.has(e.id));
+    entries.push(...answered);
+    const missing = batch.filter((c) => !answered.some((e) => e.id === c.id));
+    for (const c of missing) console.log(`  no answer for ${c.id} — ${c.headline}`);
+  } catch (err) {
+    // Truncated, refused, empty, or a network failure: this batch gets an
+    // attempt counted and the run moves on. A rejected key never reaches
+    // here — generateJson exits the process, so it fails the job loudly.
+    console.error(`  batch ${i + 1} failed: ${err.message}`);
+  }
+}
+
+// The self-test exists to prove the call works; a failed call must not pass.
+if (SELF_TEST && entries.length === 0) {
+  console.error("Self-test: the API call produced no entries.");
+  process.exit(1);
 }
 
 if (!SELF_TEST) mkdirSync(HELD, { recursive: true });
@@ -319,15 +367,39 @@ ${entry.body.trim()}
   console.log(`  publish ${slug}.mdx${sensitive ? "  (sensitive)" : ""}`);
 }
 
-if (!SELF_TEST && decided.length > 0) {
-  const seen = existsSync(SEEN) ? JSON.parse(readFileSync(SEEN, "utf8")) : [];
-  const next = [...new Set([...decided, ...seen])].slice(0, SEEN_LIMIT);
-  writeFileSync(SEEN, `${JSON.stringify(next, null, 2)}\n`);
+let gaveUp = [];
+if (!SELF_TEST) {
+  // Retire what got an outcome; count an attempt for what was sent and came
+  // back with nothing; give up at the cap rather than retrying for ever.
+  const { remaining, givenUp } = recordAttempts(candidates, {
+    decided: new Set(decided),
+    attempted,
+  });
+  gaveUp = givenUp;
+  const today = new Date().toISOString().slice(0, 10);
+  writeFileSync(
+    CANDIDATES,
+    `${JSON.stringify(
+      { ...worklistFile, candidates: remaining, givenUp: addGivenUp(worklistFile.givenUp ?? [], givenUp, today) },
+      null,
+      2,
+    )}\n`,
+  );
+  // Given-up candidates are seen too, so detection doesn't re-propose them.
+  const retired = [...decided, ...givenUp.map((c) => c.id)];
+  if (retired.length > 0) {
+    const seen = existsSync(SEEN) ? JSON.parse(readFileSync(SEEN, "utf8")) : [];
+    const next = [...new Set([...retired, ...seen])].slice(0, SEEN_LIMIT);
+    writeFileSync(SEEN, `${JSON.stringify(next, null, 2)}\n`);
+  }
 }
 
 console.log(
   `\n${written} published, ${skipped} skipped by the model, ${rejected} held for review.`,
 );
+for (const c of gaveUp) {
+  console.log(`  GAVE UP after ${MAX_ATTEMPTS} attempts: ${c.headline}`);
+}
 // Logged because write-reasons.mjs logs it and this one didn't, which made the
 // spend impossible to attribute between them. This is the pricier of the two:
 // high effort plus adaptive thinking, and thinking bills as output.
