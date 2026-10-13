@@ -169,3 +169,68 @@ describe("hand-written notes against the committed slate", () => {
     expect(contradictions).toEqual([]);
   });
 });
+
+describe("statements are true", () => {
+  const rec = (wins: number, losses: number, conferenceRank: number) => ({
+    wins,
+    losses,
+    ties: 0,
+    pointDifferential: 0,
+    conferenceRank,
+  });
+  const standings = (teams: Record<string, ReturnType<typeof rec>>, isPreviousSeason = false) => ({
+    season: 2026,
+    isPreviousSeason,
+    teams,
+  });
+  // AFC East: BUF and MIA level at the top, NE and NYJ behind.
+  const eastRace = standings({
+    BUF: rec(6, 3, 2),
+    MIA: rec(6, 3, 5),
+    NE: rec(4, 5, 9),
+    NYJ: rec(2, 7, 14),
+    KC: rec(7, 2, 1),
+  });
+  const reasonsFor = (g: Game, week: number, s: ReturnType<typeof standings>) =>
+    factorsFor(g, week, { standings: s, games: [] }).map((f) => f.reason).join(" | ");
+
+  it("never says a division game counts double", () => {
+    for (let i = 0; i < 40; i++) {
+      for (const wk of [2, 12]) {
+        const r = reasonsFor(game({ id: `d${i}`, home: "BUF", away: "NYJ" }), wk, eastRace);
+        expect(r).not.toMatch(/double|nearly decided/i);
+      }
+    }
+  });
+
+  it("claims a race only when the standings show one", () => {
+    const top = factorsFor(game({ home: "BUF", away: "MIA" }), 12, { standings: eastRace, games: [] });
+    expect(top.find((f) => f.kind === "race")?.reason).toMatch(/top two in the division/);
+
+    const mismatch = factorsFor(game({ home: "BUF", away: "NYJ" }), 12, { standings: eastRace, games: [] });
+    expect(mismatch.some((f) => f.kind === "race")).toBe(false);
+  });
+
+  it("says both are in playoff places only when both are, in the same conference", () => {
+    const f = factorsFor(game({ home: "KC", away: "BUF" }), 12, { standings: eastRace, games: [] });
+    expect(f.find((x) => x.kind === "race")?.reason).toMatch(/playoff places/);
+    const g = factorsFor(game({ home: "KC", away: "NE" }), 12, { standings: eastRace, games: [] });
+    expect(g.some((x) => x.kind === "race")).toBe(false);
+  });
+
+  it("makes no race claims from last season's standings", () => {
+    const old = standings(eastRace.teams, true);
+    const f = factorsFor(game({ home: "BUF", away: "MIA" }), 12, { standings: old, games: [] });
+    expect(f.some((x) => x.kind === "race")).toBe(false);
+  });
+
+  it("says 'nothing else on' only when no other game overlaps", () => {
+    const mnf = game({ id: "a", kickoff: "2026-09-15T00:15:00Z" });
+    const alsoMnf = game({ id: "b", kickoff: "2026-09-15T01:00:00Z" });
+    const alone = factorsFor(mnf, 1, { games: [mnf] }).find((f) => f.kind === "standalone");
+    const shared = factorsFor(mnf, 1, { games: [mnf, alsoMnf] }).find((f) => f.kind === "standalone");
+    expect(alone?.reason).toMatch(/nothing else|to itself|only game/i);
+    expect(shared?.reason).not.toMatch(/nothing else|to itself|only game/i);
+    expect(shared?.points).toBe(alone?.points);
+  });
+});

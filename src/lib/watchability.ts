@@ -1,5 +1,6 @@
-import type { Game } from "@/lib/slate";
+import { SLATE, type Game } from "@/lib/slate";
 import { hasStarQb, isRivalry } from "@/lib/slate/context";
+import { STANDINGS, raceBetween } from "@/lib/standings";
 import { isDivisional } from "@/lib/teams";
 import { noteFor } from "@/lib/slate/notes";
 
@@ -29,7 +30,13 @@ import { noteFor } from "@/lib/slate/notes";
  * the sentences are picked from several phrasings per factor, and matching on
  * text ("starts with Primetime") silently missed two of the three.
  */
-export type FactorKind = "close" | "division" | "quarterbacks" | "standalone" | "rivalry";
+export type FactorKind =
+  | "close"
+  | "division"
+  | "race"
+  | "quarterbacks"
+  | "standalone"
+  | "rivalry";
 
 export type Factor = {
   kind: FactorKind;
@@ -62,8 +69,14 @@ function hash(seed: string): number {
 const pick = (options: string[], seed: string, salt: number) =>
   options[(hash(seed) + salt) % options.length];
 
-/** A standalone window is one where this is the only game on. */
-function isStandalone(game: Game): boolean {
+/** Kickoffs closer than this overlap: a game runs about three hours. */
+const OVERLAP_MS = 3 * 60 * 60 * 1000;
+
+/**
+ * Primetime or another window the league gives a single game: Thursday and
+ * Monday nights, anything from 7pm Eastern, the Netflix holiday games.
+ */
+function isPrimetime(game: Game): boolean {
   const tv = game.broadcast?.toLowerCase() ?? "";
   const day = new Date(game.kickoff).getUTCDay();
   const hourEt = Number(
@@ -73,14 +86,35 @@ function isStandalone(game: Game): boolean {
       timeZone: "America/New_York",
     }).format(new Date(game.kickoff)),
   );
-  // Thursday, Monday, or anything kicking off after 7pm Eastern: the league
-  // puts its best guesses in the windows where nothing competes with them.
-  const primetime = hourEt >= 19;
   const standaloneDay = day === 5 /* Fri UTC = Thu night ET */ || day === 2 /* Mon night */;
-  return primetime || standaloneDay || tv.includes("netflix");
+  return hourEt >= 19 || standaloneDay || tv.includes("netflix");
 }
 
-export function factorsFor(game: Game, week: number): Factor[] {
+/**
+ * Is another game on the slate being played at the same time?
+ *
+ * "Nothing else on" used to be said of every primetime game, which is false
+ * on the Monday nights with two games and on late-season Saturdays.
+ */
+function overlapsAnother(game: Game, games: Game[]): boolean {
+  const at = Date.parse(game.kickoff);
+  return games.some(
+    (other) => other.id !== game.id && Math.abs(Date.parse(other.kickoff) - at) < OVERLAP_MS,
+  );
+}
+
+/**
+ * What the scoring reads besides the game itself. Defaults to the committed
+ * data; tests pass fixed inputs.
+ */
+export type ScoringContext = {
+  standings?: typeof STANDINGS;
+  /** The rest of the week's games, to tell a standalone window from a shared one. */
+  games?: Game[];
+};
+
+export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): Factor[] {
+  const { standings = STANDINGS, games = SLATE.games } = ctx;
   const found: Factor[] = [];
 
   const seed = game.id;
@@ -94,9 +128,9 @@ export function factorsFor(game: Game, week: number): Factor[] {
         priority: 1,
         reason: pick(
           [
-            "Nobody can separate these two",
+            "The bookmakers expect this one to be close",
             "This one should go to the wire",
-            "As even a game as the week offers",
+            "Hard to call before kickoff",
             "Expect it to be tight the whole way",
           ],
           seed,
@@ -112,7 +146,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
           [
             "One side is favoured, but not by much",
             "Competitive without being a coin flip",
-            "Closer than it looks on paper",
+            "Should be competitive, with one side a little stronger",
           ],
           seed,
           1,
@@ -125,9 +159,9 @@ export function factorsFor(game: Game, week: number): Factor[] {
         priority: 9,
         reason: pick(
           [
-            "One side is a heavy favourite",
+            "One side is a clear favourite",
             "This could get away from someone early",
-            "Not much doubt about who wins",
+            "One side is expected to win comfortably",
           ],
           seed,
           2,
@@ -136,32 +170,45 @@ export function factorsFor(game: Game, week: number): Factor[] {
     }
   }
 
-  // 2. Division games decide who makes the playoffs, and matter more late on.
+  // 2a. Division games. They count once in the standings like any other
+  // game, but they are what decides the division: the winner gains a game on
+  // a direct rival, and head-to-head results break ties for the title.
+  // Weighted more from week 10, when there are fewer games left to recover.
   if (isDivisional(game.home, game.away)) {
     const late = week >= 10;
     found.push({
       kind: "division",
       points: late ? 2 : 1,
       priority: 2,
-      reason: late
-        ? pick(
-            [
-              "Same division, and this late that goes a long way to settling it",
-              "A division game with the standings nearly decided",
-              "These two are fighting for the same playoff spot",
+      reason: pick(
+        late
+          ? [
+              "Same division, and this late a loss is hard to make up",
+              "A division game, with fewer weeks left to make up a loss",
+              "Same division, so the winner gains ground on a direct rival",
+            ]
+          : [
+              "They play twice a year, and the results break ties for the division title",
+              "Same division, so the winner gains ground on a direct rival",
+              "A division game, and those decide who wins the division when records end level",
             ],
-            seed,
-            3,
-          )
-        : pick(
-            [
-              "Same division, so it counts double in the standings",
-              "They play twice a year and both games matter",
-              "A division game, which is worth more than the record suggests",
-            ],
-            seed,
-            4,
-          ),
+        seed,
+        late ? 3 : 4,
+      ),
+    });
+  }
+
+  // 2b. The race, from this season's standings — said only when it is true.
+  const race = raceBetween(game.home, game.away, standings);
+  if (race.divisionTopTwo || race.bothInPlayoffSpots) {
+    found.push({
+      kind: "race",
+      points: week >= 10 ? 2 : 1,
+      // Specific beats generic, so this leads ahead of the plain division line.
+      priority: 1.5,
+      reason: race.divisionTopTwo
+        ? "The top two in the division, a game or less apart"
+        : "Both are in playoff places right now, chasing the same spots",
     });
   }
 
@@ -199,21 +246,24 @@ export function factorsFor(game: Game, week: number): Factor[] {
     });
   }
 
-  // 5. Nothing else is on.
-  if (isStandalone(game)) {
+  // 5. Primetime. "Nothing else on" only when that is true of this slate.
+  if (isPrimetime(game)) {
+    const shared = overlapsAnother(game, games);
     found.push({
       kind: "standalone",
       points: 1,
       priority: 7,
-      reason: pick(
-        [
-          "Primetime, with nothing else on",
-          "It has the night to itself",
-          "The only game in this window",
-        ],
-        seed,
-        7,
-      ),
+      reason: shared
+        ? pick(["A primetime slot", "One of the night games"], seed, 7)
+        : pick(
+            [
+              "Primetime, with nothing else on",
+              "It has the night to itself",
+              "The only game in this window",
+            ],
+            seed,
+            7,
+          ),
     });
   }
 
@@ -227,7 +277,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
         [
           "These two genuinely don't like each other",
           "There's real history here",
-          "An old grudge, and both sides remember it",
+          "A rivalry both fan bases care about",
         ],
         seed,
         8,
@@ -252,8 +302,12 @@ export type Watchability = {
   reason: string;
 };
 
-export function watchability(game: Game, week: number): Watchability {
-  const factors = factorsFor(game, week);
+export function watchability(
+  game: Game,
+  week: number,
+  ctx: ScoringContext = {},
+): Watchability {
+  const factors = factorsFor(game, week, ctx);
   const points = factors.reduce((sum, f) => sum + f.points, 0);
 
   // Precedence, most deliberate first: a hand-written note, then a validated

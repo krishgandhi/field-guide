@@ -101,6 +101,54 @@ export function finishLabel(
     : `Outside the playoff spots for now, ${place}`;
 }
 
+/**
+ * How many games separate two records: half the swing in wins plus losses.
+ * Positive when `a` is ahead. Ties count as half a win each way.
+ */
+export function gamesApart(a: TeamRecord, b: TeamRecord): number {
+  return (a.wins - b.wins + (b.losses - a.losses)) / 2;
+}
+
+/**
+ * What the standings can truthfully say about a game between two teams,
+ * this season. Empty when the standings are last season's or the regular
+ * season is over — there is no race left to describe then.
+ *
+ * - `divisionTopTwo`: same division, the top two in it (both strictly ahead
+ *   of the other two teams), at most a game apart.
+ * - `bothInPlayoffSpots`: same conference, both in the top seven right now,
+ *   i.e. competing for the same seven places.
+ */
+export function raceBetween(
+  a: string,
+  b: string,
+  standings: Standings = STANDINGS,
+): { divisionTopTwo: boolean; bothInPlayoffSpots: boolean } {
+  const none = { divisionTopTwo: false, bothInPlayoffSpots: false };
+  if (regularSeasonOver(standings)) return none;
+  const idA = team(a)?.id ?? a;
+  const idB = team(b)?.id ?? b;
+  const ra = standings.teams[idA];
+  const rb = standings.teams[idB];
+  if (!ra || !rb) return none;
+
+  const confA = division(idA)?.split(" ")[0];
+  const sameConference = confA !== undefined && confA === division(idB)?.split(" ")[0];
+  const bothInPlayoffSpots = sameConference && inTopSeven(ra) && inTopSeven(rb);
+
+  const div = division(idA);
+  let divisionTopTwo = false;
+  if (div !== null && div === division(idB) && Math.abs(gamesApart(ra, rb)) <= 1) {
+    const worse = gamesApart(ra, rb) >= 0 ? rb : ra;
+    const others = Object.entries(standings.teams).filter(
+      ([id]) => id !== idA && id !== idB && division(id) === div,
+    );
+    divisionTopTwo = others.every(([, r]) => gamesApart(r, worse) < 0);
+  }
+
+  return { divisionTopTwo, bothInPlayoffSpots };
+}
+
 function ordinal(n: number): string {
   const suffix =
     n % 100 >= 11 && n % 100 <= 13
