@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { AlertTriangle } from "lucide-react";
 import { GameCard } from "@/components/game-card";
-import { SLATE, daysStale } from "@/lib/slate";
+import { SLATE } from "@/lib/slate";
+import { StaleBanner } from "@/components/stale-banner";
 import { sortForViewing } from "@/lib/watchability";
 import { teamName } from "@/lib/teams";
 
@@ -33,7 +33,6 @@ const day = new Intl.DateTimeFormat("en-US", {
  */
 export default function GamesPage() {
   const slate = sortForViewing(SLATE.games, SLATE.week);
-  const stale = daysStale();
 
   return (
     <div className="mx-auto w-full max-w-2xl flex-1 px-4 pb-10 pt-8 sm:px-6">
@@ -49,19 +48,7 @@ export default function GamesPage() {
         </p>
       </header>
 
-      {/* Stale is acceptable — §4 prefers it to an error — but silently stale
-          is not, so past three days it says so. */}
-      {stale > 3 ? (
-        <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-pencil/30 bg-pencil/[0.08] px-3 py-2.5">
-          <AlertTriangle size={15} className="mt-0.5 shrink-0 text-pencil" aria-hidden />
-          <p className="text-[0.8rem] leading-snug text-fg-dim">
-            <span className="font-semibold text-pencil">
-              This is {stale} days old.
-            </span>{" "}
-            The daily update hasn&rsquo;t run. Spreads and injuries may have moved.
-          </p>
-        </div>
-      ) : null}
+      <StaleBanner fetchedAt={SLATE.fetchedAt} />
 
       <div className="mt-5 space-y-3">
         {slate.map((game) => (

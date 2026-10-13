@@ -78,8 +78,3 @@ export const SLATE: Slate = {
 export function injuriesFor(teamId: string): Injury[] {
   return SLATE.injuries[teamId] ?? [];
 }
-
-/** Days since the data was pulled — drives the staleness warning. */
-export function daysStale(now: number = Date.now()): number {
-  return Math.floor((now - Date.parse(SLATE.fetchedAt)) / 86_400_000);
-}
