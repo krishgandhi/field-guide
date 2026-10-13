@@ -26,7 +26,6 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { createHash } from "node:crypto";
 import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
 import { readMoves } from "./lib/moves.mts";
 
@@ -102,30 +101,12 @@ async function fetchEvidence(id) {
       );
     };
 
-    return { awards, career: split("Career"), season: split("Regular Season") };
+    // Career only. This season's split moved every game day and nothing reads
+    // it any more — profile lines are written from awards and career totals.
+    return { awards, career: split("Career") };
   } catch {
-    return { awards: [], career: {}, season: {} };
+    return { awards: [], career: {} };
   }
-}
-
-/**
- * Fingerprint of everything a profile line is written from.
- *
- * write-profiles rewrites a line only when this moves. Without it the line is
- * either frozen forever — Allen wins a second MVP and the card never says so —
- * or rewritten daily for no reason, which §13 rules out.
- */
-function evidenceHash(person, evidence) {
-  const material = JSON.stringify([
-    person.position,
-    person.team,
-    person.experience,
-    person.draft,
-    evidence.awards,
-    evidence.career,
-    evidence.season,
-  ]);
-  return createHash("sha256").update(material).digest("hex").slice(0, 16);
 }
 
 async function saveHeadshot(id) {
@@ -146,8 +127,11 @@ console.log(`${ids.length} people referenced by move entries.`);
 mkdirSync(SHOTS, { recursive: true });
 mkdirSync("src/data", { recursive: true });
 
-// Keep any existing prose written by write-profiles.mjs — this script owns the
-// facts, that one owns the sentence, and neither should clobber the other.
+// Facts only. The profile line lives in src/data/prose-cache.json and belongs
+// to write-profiles.mjs. This script used to carry it here, and deleted it the
+// moment the evidence moved — before any replacement existed — which took the
+// site from 17 lines to 3. `existing` is read only so a failed fetch keeps
+// yesterday's facts.
 const existing = existsSync(OUT)
   ? JSON.parse(readFileSync(OUT, "utf8")).people ?? {}
   : {};
@@ -160,21 +144,10 @@ for (const id of ids) {
     const person = await fetchPerson(id);
     const evidence = await fetchEvidence(id);
     const shot = await saveHeadshot(id);
-    const hash = evidenceHash(person, evidence);
     people[id] = {
       ...person,
       ...evidence,
       headshot: shot === "missing" ? null : `/players/${id}.png`,
-      evidenceHash: hash,
-      // Kept unless the evidence itself changed — see evidenceHash above.
-      //
-      // promptVersion travels WITH the blurb. Carrying one without the other
-      // made write-profiles see a version mismatch every single day and
-      // rewrite all twelve lines, which is the daily token burn the hash
-      // exists to prevent (§13).
-      blurb: existing[id]?.evidenceHash === hash ? existing[id].blurb : null,
-      promptVersion:
-        existing[id]?.evidenceHash === hash ? existing[id].promptVersion : null,
     };
     console.log(
       `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"}` +

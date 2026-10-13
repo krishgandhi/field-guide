@@ -1,4 +1,5 @@
 import data from "@/data/people.json";
+import { prose } from "@/lib/prose";
 
 /**
  * The people named in move entries, read from the cache the cron job writes.
@@ -27,17 +28,18 @@ export type Person = {
   draft: string | null;
   college: string | null;
   headshot: string | null;
-  /** One plain-English line, written by write-profiles.mjs. */
+  /** One plain-English line, written by write-profiles.mjs into the prose cache. */
   blurb: string | null;
 };
 
-const PEOPLE = (data as { people?: Record<string, Person> }).people ?? {};
+const PEOPLE = (data as unknown as { people?: Record<string, Omit<Person, "blurb">> }).people ?? {};
 
 /** Only people we actually have a name for — a nameless card says nothing. */
 export function peopleByIds(ids: string[]): Person[] {
   return ids
     .map((id) => PEOPLE[id])
-    .filter((p): p is Person => Boolean(p?.name));
+    .filter((p) => Boolean(p?.name))
+    .map((p) => ({ ...p, blurb: prose("profiles", p.id) }));
 }
 
 /**
