@@ -66,6 +66,20 @@ describe("§8 scoring", () => {
   });
 });
 
+describe("hand-written note keys", () => {
+  // Written by hand as WAS; ESPN says WSH. Before keys were normalised the
+  // note silently never fired. Checked directly, because the committed-slate
+  // check below only runs while the slate is on a week that has notes.
+  it("normalise team aliases", () => {
+    expect(noteFor(1, "WSH", "PHI")).toBeTruthy();
+    expect(noteFor(1, "WAS", "PHI")).toBe(noteFor(1, "WSH", "PHI"));
+  });
+
+  it("return nothing for a game without a note", () => {
+    expect(noteFor(17, "BUF", "MIA")).toBeUndefined();
+  });
+});
+
 describe("factor kinds", () => {
   // write-reasons used to detect primetime with reason.startsWith("Primetime"),
   // which only one of the three standalone phrasings does. The phrasing is
