@@ -5,7 +5,7 @@ import { QueueLink } from "@/components/flag/queue-link";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card, PageShell, SectionHeader } from "@/components/ui/page-header";
 import { getAllEntries } from "@/lib/content";
-import { CALENDAR } from "@/lib/mock/games";
+import { comingUp } from "@/lib/calendar";
 import { SLATE } from "@/lib/slate";
 import { sortForViewing } from "@/lib/watchability";
 import { headlineMove } from "@/lib/moves";
@@ -36,7 +36,7 @@ export default function ThisWeekPage() {
   const billsGame = slate.find((g) => g.home === "BUF" || g.away === "BUF");
   const alsoWatch = slate.filter((g) => g !== billsGame).slice(0, 2);
   const headline = headlineMove();
-  const nextDate = CALENDAR[0];
+  const nextDate = comingUp({ byes: SLATE.byes, week: SLATE.week });
   const glossaryCount = getAllEntries("glossary").length;
 
   return (
@@ -103,16 +103,20 @@ export default function ThisWeekPage() {
         </>
       ) : null}
 
-      <SectionHeader title="Coming up" />
-      <Card>
-        <div className="flex items-baseline justify-between gap-3">
-          <h3 className="text-base font-semibold text-fg">{nextDate.label}</h3>
-          <span className="tnum shrink-0 text-sm font-medium text-amber">
-            {nextDate.date}
-          </span>
-        </div>
-        <p className="mt-1.5 text-sm leading-snug text-fg-dim">{nextDate.why}</p>
-      </Card>
+      {nextDate ? (
+        <>
+          <SectionHeader title="Coming up" />
+          <Card>
+            <div className="flex items-baseline justify-between gap-3">
+              <h3 className="text-base font-semibold text-fg">{nextDate.label}</h3>
+              <span className="tnum shrink-0 text-sm font-medium text-amber">
+                {nextDate.dateLabel}
+              </span>
+            </div>
+            <p className="mt-1.5 text-sm leading-snug text-fg-dim">{nextDate.why}</p>
+          </Card>
+        </>
+      ) : null}
 
       <SectionHeader title="Look something up" />
       <Link

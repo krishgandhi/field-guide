@@ -180,6 +180,17 @@ const move = z.strictObject({
     ),
 });
 
+/**
+ * The one extra field a calendar entry needs: when it is.
+ *
+ * A block rather than a bare `date:` so it reads like `move:` and can be held
+ * to the same rule — allowed on its own type and nowhere else.
+ */
+const calendar = z.strictObject({
+  /** The day, YYYY-MM-DD. Checked against the league's published dates. */
+  date: isoDate,
+});
+
 export type RubricAxis = (typeof RUBRIC_AXES)[number];
 export type RubricScore = z.infer<typeof rubricScore>;
 export type MoveSource = z.infer<typeof source>;
@@ -207,9 +218,16 @@ export const frontmatterSchema = z.strictObject({
   lastUpdated: isoDate,
   /** Only on `type: moves`. Enforced below. */
   move: move.optional(),
-}).refine((fm) => (fm.type === "moves") === (fm.move !== undefined), {
-  path: ["move"],
-  error: "a `move:` block is required on type: moves and allowed nowhere else",
-});
+  /** Only on `type: calendar`. Enforced below. */
+  calendar: calendar.optional(),
+})
+  .refine((fm) => (fm.type === "moves") === (fm.move !== undefined), {
+    path: ["move"],
+    error: "a `move:` block is required on type: moves and allowed nowhere else",
+  })
+  .refine((fm) => (fm.type === "calendar") === (fm.calendar !== undefined), {
+    path: ["calendar"],
+    error: "a `calendar:` block is required on type: calendar and allowed nowhere else",
+  });
 
 export type Frontmatter = z.infer<typeof frontmatterSchema>;
