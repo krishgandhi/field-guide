@@ -5,7 +5,7 @@
  * reading the built HTML — the server renders one order and the browser may
  * show another. This is the only honest check.
  *
- * Usage: npm run build && npm start, then npm run test:filters
+ * Usage: npm run build && npm start, then npm run e2e:filters
  */
 
 import { chromium, devices } from "playwright";

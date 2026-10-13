@@ -5,7 +5,7 @@
  * localStorage + text selection + clipboard can't be verified by reading HTML,
  * so this is the only honest check.
  *
- * Usage: npm run build && npm start, then node scripts/test-flag-queue.mjs
+ * Usage: npm run build && npm start, then npm run e2e:flags
  */
 
 import { chromium, devices } from "playwright";

@@ -140,7 +140,7 @@ const move = z.strictObject({
   sensitive: z.boolean().default(false),
   /**
    * Reporting to link out to. Optional in the schema because a draft won't
-   * always have one; test:moves reports any `verified: true` entry missing it.
+   * always have one; tests/moves.test.ts reports any `verified: true` entry missing it.
    */
   sources: z.array(source).default([]),
   /**

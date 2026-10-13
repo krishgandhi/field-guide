@@ -88,7 +88,7 @@ async function playerDetail(athleteId, name) {
     const a = body.athlete ?? body;
     // The id must survive: draft-moves writes it into `people:`, which is what
     // puts a profile card on the entry. Dropping it here published a signing
-    // with people: [] and no card, and test:moves caught it.
+    // with people: [] and no card, and the moves test caught it.
     return {
       id: String(athleteId),
       name: a.displayName ?? name,

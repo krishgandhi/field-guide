@@ -5,7 +5,7 @@
  * was split out of draft-moves.mjs: the script calls the API at import time,
  * so nothing inside it could be tested without a key, and these guards are the
  * only thing standing between a generated line and a confident falsehood about
- * a real team. See scripts/test-unit-notes.mjs.
+ * a real team. See tests/unit-note-validation.test.ts.
  */
 
 import { numbersIn, sentenceCount } from "./draft-validation.mjs";
