@@ -1,6 +1,7 @@
 import { z } from "zod";
 import raw from "@/data/slate.json";
 import { prose } from "@/lib/prose";
+import { lastRun } from "@/lib/meta";
 
 /**
  * The week's real games, read from the JSON that GitHub Actions commits.
@@ -43,7 +44,6 @@ const injurySchema = z.object({
 const slateSchema = z.strictObject({
   season: z.number(),
   week: z.number().min(1).max(18),
-  fetchedAt: z.string(),
   games: z.array(gameSchema),
   byes: z.array(z.string()),
   injuries: z.record(z.string(), z.array(injurySchema)),
@@ -51,7 +51,11 @@ const slateSchema = z.strictObject({
 
 export type Game = z.infer<typeof gameSchema>;
 export type Injury = z.infer<typeof injurySchema>;
-export type Slate = z.infer<typeof slateSchema>;
+/**
+ * fetchedAt comes from src/data/meta.json, not slate.json: a timestamp inside
+ * the data made every daily run a commit and a production build.
+ */
+export type Slate = z.infer<typeof slateSchema> & { fetchedAt: string };
 
 const parsed = slateSchema.safeParse(raw);
 if (!parsed.success) {
@@ -63,6 +67,8 @@ if (!parsed.success) {
 
 export const SLATE: Slate = {
   ...parsed.data,
+  // Epoch when there is no stamp, so the stale warning shows rather than hides.
+  fetchedAt: lastRun("slate") ?? new Date(0).toISOString(),
   games: parsed.data.games.map((game) => {
     const reason = prose("reasons", game.id);
     return reason ? { ...game, reason } : game;

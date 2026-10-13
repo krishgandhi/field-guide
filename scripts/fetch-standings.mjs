@@ -20,6 +20,7 @@
 import { writeFile, mkdir } from "node:fs/promises";
 import { SITE_V2, currentPhase, getJson, standingsUrl } from "./lib/espn.mts";
 import { TEAM_IDS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
 const BASE = process.env.STANDINGS_BASE ?? SITE_V2;
 const OUT = "src/data/standings.json";
@@ -120,12 +121,12 @@ async function main() {
   const standings = {
     season,
     isPreviousSeason,
-    fetchedAt: new Date().toISOString(),
     teams: Object.fromEntries(rows.map(({ id, ...rest }) => [id, rest])),
   };
 
   await mkdir("src/data", { recursive: true });
   await writeFile(OUT, `${JSON.stringify(standings, null, 2)}\n`);
+  stamp("standings");
 
   // Seven per conference qualify.
   const playoff = rows.filter((r) => r.conferenceRank >= 1 && r.conferenceRank <= 7).length;

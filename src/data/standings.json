@@ -1,7 +1,6 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-10-12T20:05:36.463Z",
   "teams": {
     "KC": {
       "wins": 4,

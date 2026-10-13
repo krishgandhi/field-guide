@@ -28,6 +28,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
 import { readMoves } from "./lib/moves.mts";
+import { stamp } from "./lib/meta.mts";
 
 const OUT = "src/data/people.json";
 const SHOTS = "public/players";
@@ -164,8 +165,9 @@ for (const id of ids) {
 
 writeFileSync(
   OUT,
-  `${JSON.stringify({ fetchedAt: new Date().toISOString(), people }, null, 2)}\n`,
+  `${JSON.stringify({ people }, null, 2)}\n`,
 );
+stamp("people");
 console.log(
   `\nWrote ${Object.keys(people).length} to ${OUT}${failed ? `, ${failed} failed` : ""}.`,
 );

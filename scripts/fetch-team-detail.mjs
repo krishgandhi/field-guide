@@ -32,6 +32,7 @@ import {
   getJson,
 } from "./lib/espn.mts";
 import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
 const OUT = "src/data/team-detail.json";
 const DRAFTS = "src/data/draft-origins.json";
@@ -534,7 +535,7 @@ if (draftFetches) console.log(`\nLooked up ${draftFetches} new draft origins.`);
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { fetchedAt: new Date().toISOString(), statsSeason, previousSeason, teams },
+    { statsSeason, previousSeason, teams },
     null,
     2,
   )}\n`,
@@ -547,6 +548,7 @@ console.log(
 // Exit non-zero when the file is short of the league. The run that lost Arizona
 // printed "31 teams, 1 failed" and exited 0, so the workflow went green and
 // nothing surfaced it for a week.
+if (Object.keys(teams).length === TEAMS.length) stamp("teamDetail");
 if (Object.keys(teams).length < TEAMS.length) {
   console.error(
     `\nOnly ${Object.keys(teams).length} of ${TEAMS.length} teams in ${OUT}.`,

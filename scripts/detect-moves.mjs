@@ -26,6 +26,7 @@ import { classify } from "./lib/detect-patterns.mjs";
 import { ATHLETES as ATHLETE, SITE, getJson } from "./lib/espn.mts";
 import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
 import { addGivenUp, mergeWorklist } from "./lib/move-worklist.mjs";
+import { stamp } from "./lib/meta.mts";
 
 const FEED = `${SITE}/news?limit=50`;
 const SEEN = "src/data/seen-news.json";
@@ -221,11 +222,12 @@ if (dropped.length > 0) {
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { generatedAt: new Date().toISOString(), candidates: worklist, givenUp },
+    { candidates: worklist, givenUp },
     null,
     2,
   )}\n`,
 );
+stamp("moveCandidates");
 
 if (candidates.length === 0) {
   console.log("No new candidates. This is the normal result out of season.");

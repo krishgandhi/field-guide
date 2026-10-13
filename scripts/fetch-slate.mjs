@@ -27,6 +27,7 @@ import {
   scoreboardUrl,
 } from "./lib/espn.mts";
 import { TEAM_IDS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
 const BASE = process.env.SLATE_BASE ?? SITE;
 const OUT = "src/data/slate.json";
@@ -158,7 +159,6 @@ async function main() {
   const slate = {
     season,
     week,
-    fetchedAt: new Date().toISOString(),
     games,
     byes,
     injuries: await fetchInjuries(),
@@ -166,6 +166,7 @@ async function main() {
 
   await mkdir("src/data", { recursive: true });
   await writeFile(OUT, `${JSON.stringify(slate, null, 2)}\n`);
+  stamp("slate");
 
   console.log(
     `week ${week}: ${games.length} games, ${byes.length} on bye, ` +
