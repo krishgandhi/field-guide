@@ -3,7 +3,9 @@ import { defineConfig } from "vitest/config";
 
 /**
  * Offline checks only. Everything here runs without a network, a dev server
- * or an API key, so it can gate every PR and every bot commit in CI.
+ * or an API key, so it can gate every PR (ci.yml) and every data commit
+ * (refresh-data.yml runs it before committing — the bot's pushes use
+ * GITHUB_TOKEN, which doesn't trigger ci.yml).
  *
  * The browser checks (flag queue, moves filters) need a running app and live
  * in scripts/e2e-*.mjs instead — `npm run e2e:flags`, `npm run e2e:filters`.

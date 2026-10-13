@@ -1,11 +1,13 @@
 name: CI
 
-# The gate in front of main. Every check the site depends on, in the order a
-# failure is cheapest to read: style, types, behaviour, then the real build.
+# The gate in front of main for human changes: every PR and every hand push.
+# Every check the site depends on, in the order a failure is cheapest to read:
+# style, types, behaviour, then the real build.
 #
-# Until this existed nothing ran before a push — the data bots and hand pushes
-# alike could land a broken build, and the first sign was a failed Vercel
-# deploy. Offline only: no API key, no network beyond npm, so a third-party
+# It does NOT see the daily data commits. Those are pushed with GITHUB_TOKEN,
+# and GitHub doesn't start workflows from GITHUB_TOKEN pushes — so
+# refresh-data.yml runs the same typecheck, tests and build itself, before it
+# commits. Offline only: no API key, no network beyond npm, so a third-party
 # outage can never turn this red.
 
 on:
@@ -23,6 +25,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
