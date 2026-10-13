@@ -32,13 +32,12 @@ import {
 } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
+import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
 
 const MOVES = "content/moves";
 const OUT = "src/data/people.json";
 const SHOTS = "public/players";
 
-const ATHLETE =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 /** The combiner resize; the raw file is ten times the size for no benefit. */
 const HEADSHOT = (id) =>
   `https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/${id}.png&w=160&h=160`;
@@ -59,12 +58,7 @@ function referencedIds() {
 }
 
 async function fetchPerson(id) {
-  const res = await fetch(`${ATHLETE}/${id}`, {
-    headers: { "user-agent": "field-guide (personal, non-commercial)" },
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`athlete ${id} returned ${res.status}`);
-  const body = await res.json();
+  const body = await getJson(`${ATHLETE}/${id}`);
   const a = body.athlete ?? body;
   return {
     id: String(a.id ?? id),
@@ -98,12 +92,7 @@ async function fetchPerson(id) {
  */
 async function fetchEvidence(id) {
   try {
-    const res = await fetch(`${ATHLETE}/${id}/overview`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return { awards: [], career: {}, season: {} };
-    const body = await res.json();
+    const body = await getJson(`${ATHLETE}/${id}/overview`);
 
     const awards = (body.awards ?? []).map((a) => ({
       name: a.name ?? null,
@@ -154,9 +143,8 @@ async function saveHeadshot(id) {
   const file = path.join(SHOTS, `${id}.png`);
   // Headshots don't change; re-downloading a dozen of them daily is waste.
   if (existsSync(file)) return "cached";
-  const res = await fetch(HEADSHOT(id), { signal: AbortSignal.timeout(20000) });
-  if (!res.ok) return "missing";
-  const buf = Buffer.from(await res.arrayBuffer());
+  const buf = await getBytes(HEADSHOT(id)).catch(() => null);
+  if (!buf) return "missing";
   // Guard against ESPN handing back an error page with a 200.
   if (buf.length < 1000 || buf.subarray(1, 4).toString() !== "PNG") return "missing";
   writeFileSync(file, buf);

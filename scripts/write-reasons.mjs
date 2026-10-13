@@ -24,6 +24,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import Anthropic from "@anthropic-ai/sdk";
 import { problemWith } from "./lib/reason-validation.mjs";
+import { SITE, getJson } from "./lib/espn.mts";
 
 const SLATE = "src/data/slate.json";
 
@@ -98,19 +99,14 @@ if (needsReason.length === 0) {
  * §9: headlines and descriptions are used here and never written to disk. Only
  * the generated sentence and the source link are stored.
  */
-const NEWS = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news";
+const NEWS = `${SITE}/news`;
 const PREVIEW_WINDOW_DAYS = 10;
 
 async function teamArticles(teamId) {
   const espnId = team(teamId)?.espnId;
   if (!espnId) return [];
   try {
-    const res = await fetch(`${NEWS}?team=${espnId}&limit=30`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return [];
-    const { articles = [] } = await res.json();
+    const { articles = [] } = await getJson(`${NEWS}?team=${espnId}&limit=30`);
     return articles;
   } catch {
     // Losing preview colour is cosmetic; the sentence still gets written from

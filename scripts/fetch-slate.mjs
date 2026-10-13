@@ -12,44 +12,43 @@
  * mixture of source data and our judgement.
  *
  * Usage:
- *   node scripts/fetch-slate.mjs            # current week, derived from today
- *   WEEK=11 node scripts/fetch-slate.mjs    # a specific week
+ *   node scripts/fetch-slate.mjs            # current week, read from ESPN's calendar
+ *   WEEK=11 node scripts/fetch-slate.mjs    # a specific week of the current season
  *   SLATE_BASE=http://bad node scripts/...  # failure drill
  */
 
 import { writeFile, mkdir, readFile } from "node:fs/promises";
+import {
+  REGULAR_SEASON_WEEKS,
+  SITE,
+  currentPhase,
+  getJson,
+  regularSeasonWeek,
+  scoreboardUrl,
+} from "./lib/espn.mts";
 
-const BASE = process.env.SLATE_BASE ?? "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
+const BASE = process.env.SLATE_BASE ?? SITE;
 const OUT = "src/data/slate.json";
 
-/** Regular season opens Wed 9 Sep 2026; weeks run Wednesday to Tuesday. */
-const SEASON = 2026;
-const WEEK_ONE_START = Date.UTC(2026, 8, 9); // month is 0-indexed
-const WEEKS = 18;
-
 /**
- * Derive the regular-season week from today's date.
+ * The season and regular-season week to show.
  *
- * Deliberately NOT read from ESPN's default scoreboard: right now that returns
- * `season.type: 1` — preseason — and would silently hand back preseason games
- * as if they were the real slate.
+ * Read from ESPN's calendar rather than counted from a hardcoded opening day,
+ * which had to be edited every August. Preseason maps to Week 1 and the
+ * playoffs hold at Week 18 — see regularSeasonWeek() for why. The scoreboard
+ * request itself always carries seasontype=2, so the preseason games ESPN
+ * serves by default can never pose as the real slate.
  */
-function currentWeek() {
+async function currentWeek() {
+  const phase = await currentPhase(BASE);
   if (process.env.WEEK) {
     const w = Number(process.env.WEEK);
-    if (!Number.isInteger(w) || w < 1 || w > WEEKS) {
-      throw new Error(`WEEK must be 1–${WEEKS}, got "${process.env.WEEK}"`);
+    if (!Number.isInteger(w) || w < 1 || w > REGULAR_SEASON_WEEKS) {
+      throw new Error(`WEEK must be 1–${REGULAR_SEASON_WEEKS}, got "${process.env.WEEK}"`);
     }
-    return w;
+    return { season: phase.season, week: w };
   }
-  const days = (Date.now() - WEEK_ONE_START) / 86_400_000;
-  return Math.min(WEEKS, Math.max(1, Math.floor(days / 7) + 1));
-}
-
-async function getJson(url) {
-  const res = await fetch(url, { headers: { "user-agent": "field-guide" } });
-  if (!res.ok) throw new Error(`${url} returned ${res.status}`);
-  return res.json();
+  return { season: phase.season, week: regularSeasonWeek(phase) };
 }
 
 /** "SEA -3.5" → the margin as a positive number, plus who's favoured. */
@@ -110,10 +109,8 @@ async function fetchInjuries() {
 }
 
 async function main() {
-  const week = currentWeek();
-  const board = await getJson(
-    `${BASE}/scoreboard?dates=${SEASON}&seasontype=2&week=${week}`,
-  );
+  const { season, week } = await currentWeek();
+  const board = await getJson(scoreboardUrl(season, week, BASE));
 
   const events = board.events ?? [];
   if (events.length === 0) {
@@ -161,7 +158,7 @@ async function main() {
   const missingSpread = games.filter((g) => g.spread === null).length;
 
   const slate = {
-    season: SEASON,
+    season,
     week,
     fetchedAt: new Date().toISOString(),
     games,

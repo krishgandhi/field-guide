@@ -23,9 +23,9 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { classify } from "./lib/detect-patterns.mjs";
+import { ATHLETES as ATHLETE, SITE, getJson } from "./lib/espn.mts";
 
-const FEED =
-  "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50";
+const FEED = `${SITE}/news?limit=50`;
 const SEEN = "src/data/seen-news.json";
 const OUT = "src/data/move-candidates.json";
 
@@ -74,17 +74,9 @@ function abbreviate(names) {
  * neutral 3 with "the report does not spell out where he lines up". A
  * cornerback is a 4. One lookup removes that whole class of mistake.
  */
-const ATHLETE =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
-
 async function playerDetail(athleteId, name) {
   try {
-    const res = await fetch(`${ATHLETE}/${athleteId}`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(15000),
-    });
-    if (!res.ok) return { id: athleteId, name };
-    const body = await res.json();
+    const body = await getJson(`${ATHLETE}/${athleteId}`, { timeoutMs: 15_000 });
     const a = body.athlete ?? body;
     // The id must survive: draft-moves writes it into `people:`, which is what
     // puts a profile card on the entry. Dropping it here published a signing
@@ -118,15 +110,13 @@ function categoryValues(article, type) {
     .filter(Boolean);
 }
 
-const res = await fetch(FEED, {
-  headers: { "user-agent": "field-guide (personal, non-commercial)" },
-  signal: AbortSignal.timeout(20000),
-});
-if (!res.ok) {
-  console.error(`ESPN news returned ${res.status}`);
+let articles;
+try {
+  ({ articles = [] } = await getJson(FEED));
+} catch (err) {
+  console.error(`ESPN news failed: ${err.message}`);
   process.exit(1);
 }
-const { articles = [] } = await res.json();
 console.log(`Fetched ${articles.length} articles.`);
 
 const seen = new Set(readJson(SEEN, []));

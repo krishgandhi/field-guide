@@ -23,14 +23,19 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import {
+  ATHLETES as ATHLETE_OVERVIEW,
+  CORE,
+  SITE,
+  currentPhase,
+  followRef,
+  getJson,
+} from "./lib/espn.mts";
 
-const CORE = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl";
-const SITE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
-const ATHLETE_OVERVIEW =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 const OUT = "src/data/team-detail.json";
 const DRAFTS = "src/data/draft-origins.json";
-const SEASON = 2026;
+/** Rosters, depth charts and coaches for the season ESPN says we're in. */
+const { season: SEASON } = await currentPhase();
 
 const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
 const STANDINGS = JSON.parse(readFileSync("src/data/standings.json", "utf8"));
@@ -65,15 +70,6 @@ const KEY_SLOTS = {
   ],
 };
 
-async function getJson(url) {
-  const res = await fetch(url, {
-    headers: { "user-agent": "field-guide (personal, non-commercial)" },
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.json();
-}
-
 /** id → { name, position } for everyone on a roster, in one request. */
 /**
  * The same index from the core api, one request per player.
@@ -92,7 +88,7 @@ async function rosterFromCore(espnId) {
   for (const item of list.items ?? []) {
     if (!item?.$ref) continue;
     try {
-      const a = await getJson(item.$ref.replace(/^http:/, "https:"));
+      const a = await getJson(followRef(item.$ref));
       if (!a?.id) continue;
       out.set(String(a.id), {
         name: a.fullName ?? a.displayName ?? null,
@@ -186,7 +182,7 @@ async function headCoach(espnId) {
   const list = await getJson(`${CORE}/seasons/${SEASON}/teams/${espnId}/coaches`);
   const ref = (list.items ?? [])[0]?.$ref;
   if (!ref) return null;
-  const c = await getJson(ref.replace(/^http:/, "https:"));
+  const c = await getJson(followRef(ref));
   const name = [c.firstName, c.lastName].filter(Boolean).join(" ");
   return name
     ? { name, experience: typeof c.experience === "number" ? c.experience : null }
