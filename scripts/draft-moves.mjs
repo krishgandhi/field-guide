@@ -29,7 +29,8 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { MODELS, generateJson, hasKey } from "./lib/claude.mts";
-import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
+import { isSensitive, problemsWith } from "./lib/draft-validation.mjs";
+import { buildMoveFile, moveFileProblems } from "./lib/move-file.mjs";
 import { chunk } from "./lib/prose-cache.mts";
 import { MAX_ATTEMPTS, addGivenUp, recordAttempts } from "./lib/move-worklist.mjs";
 
@@ -289,11 +290,9 @@ for (const entry of entries) {
     continue;
   }
 
-  const problems = problemsWith(entry, candidate);
-
   // Held, not discarded: a rejected draft is still a signal that something
   // happened, and it may only need one line fixing by hand.
-  const held = problems.length > 0;
+  const problems = problemsWith(entry, candidate);
 
   const date = candidate.published || new Date().toISOString().slice(0, 10);
   const slug = `${date.slice(0, 7)}-${entry.slug}`;
@@ -306,41 +305,19 @@ for (const entry of entries) {
     isSensitive(`${entry.summary} ${entry.body}`) ||
     isSensitive(`${candidate.headline} ${candidate.description}`);
 
-  const mdx = `---
-title: ${entry.title}
-slug: ${slug}
-type: moves
-summary: ${entry.summary}
-reviewed: false
-lastUpdated: ${new Date().toISOString().slice(0, 10)}
-move:
-  date: "${date}"
-  kind: ${entry.kind}
-  teams: [${teams.join(", ")}]
-  bigness: ${entry.bigness}
-  # Machine-written from a single headline. verified stays false until a human
-  # has read it against the reporting linked below.
-  verified: false
-  sensitive: ${sensitive}
-  sources:
-    - label: ESPN
-      url: ${candidate.url}
-  people: [${(candidate.players ?? [])
-    .map((pl) => pl.id)
-    .filter(Boolean)
-    .map((id) => `"${id}"`)
-    .join(", ")}]
-  rubric:
-${(entry.rubric ?? [])
-  .map(
-    (r) =>
-      `    - axis: ${r.axis}\n      score: ${r.score}\n      note: >-\n${yamlFold(r.note)}`,
-  )
-  .join("\n")}
----
-
-${entry.body.trim()}
-`;
+  const mdx = buildMoveFile({
+    entry,
+    candidate,
+    slug,
+    date,
+    teams,
+    sensitive,
+    today: new Date().toISOString().slice(0, 10),
+  });
+  // Read the file back exactly as the build will. Anything the build would
+  // reject is held, never published — one bad file used to fail every page.
+  problems.push(...moveFileProblems(mdx, slug));
+  const held = problems.length > 0;
 
   if (SELF_TEST) {
     written++;

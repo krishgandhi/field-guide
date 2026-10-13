@@ -15,7 +15,6 @@ import {
   isSensitive,
   problemsWith,
   sentenceCount,
-  yamlFold,
 } from "../scripts/lib/draft-validation.mjs";
 
 const candidate = {
@@ -235,9 +234,5 @@ describe("fairness: an accusation must not travel without the answer", () => {
 describe("helpers", () => {
   it("sentenceCount ignores decimals", () => {
     expect(sentenceCount("Worth $67.5 million now.")).toBe(1);
-  });
-  it("yamlFold wraps and indents", () => {
-    const lines: string[] = yamlFold("word ".repeat(40).trim()).split("\n");
-    expect(lines.every((l) => l.startsWith("        ") && l.length <= 78)).toBe(true);
   });
 });
