@@ -20,17 +20,27 @@
  * of 58.8%. Mildly run-leaning, not a philosophy. Volume ranks cannot tell
  * intent from circumstance, so they don't get shown.
  *
- * Cached in src/data/team-detail.json and regenerated only when the evidence
- * or the brief changes (§13).
+ * Stored in src/data/prose-cache.json under "units", keyed on the evidence
+ * and the prompt version, and regenerated only when either changes (§13).
+ * Without an API key this still runs: it prunes, and drops any out-of-date
+ * note that no longer validates against the current evidence.
  *
  *   ANTHROPIC_API_KEY=... npm run write:units
  */
 
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { createHash } from "node:crypto";
+import { readFileSync, existsSync } from "node:fs";
 import { problemWithNote } from "./lib/unit-note-validation.mjs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { readMoves } from "./lib/moves.mts";
+import {
+  chunk,
+  needsWriting,
+  printLog,
+  proseKey,
+  readCache,
+  settle,
+  writeCache,
+} from "./lib/prose-cache.mts";
 
 const DETAIL = "src/data/team-detail.json";
 
@@ -39,16 +49,17 @@ const PROMPT_VERSION = 6;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
-if (!hasKey()) {
-  console.log("No ANTHROPIC_API_KEY — no unit notes written.");
-  process.exit(0);
+if (SELF_TEST && !hasKey()) {
+  console.log("Self-test needs ANTHROPIC_API_KEY.");
+  process.exit(1);
 }
 if (!existsSync(DETAIL)) {
   console.log("No team detail cache. Run fetch-team-detail.mjs first.");
   process.exit(0);
 }
 
-const cache = JSON.parse(readFileSync(DETAIL, "utf8"));
+const detail = JSON.parse(readFileSync(DETAIL, "utf8"));
+const prose = readCache();
 const UNITS = ["offence", "defence", "specialTeams"];
 
 /** What this site already says about the team — sourced prose, safe to reuse. */
@@ -104,33 +115,31 @@ function evidenceFor(teamId, team, unit) {
   };
 }
 
-const hashOf = (evidence) =>
-  createHash("sha256").update(JSON.stringify(evidence)).digest("hex").slice(0, 16);
-
 // --- what needs writing ----------------------------------------------------
 
-const todo = [];
-for (const [teamId, team] of Object.entries(cache.teams ?? {})) {
+/** Every unit in the league, with its evidence and the key of that evidence. */
+const wanted = [];
+for (const [teamId, team] of Object.entries(detail.teams ?? {})) {
   for (const unit of UNITS) {
-    const u = team.units[unit];
     const evidence = evidenceFor(teamId, team, unit);
-    const hash = hashOf(evidence);
-    if (u.blurb && u.blurbHash === hash && u.promptVersion === PROMPT_VERSION) {
-      continue;
-    }
-    todo.push({ key: `${teamId}:${unit}`, teamId, unit, evidence, hash });
+    wanted.push({
+      subject: `${teamId}:${unit}`,
+      key: proseKey(PROMPT_VERSION, evidence),
+      evidence,
+    });
   }
 }
+const evidenceOf = new Map(wanted.map((w) => [w.subject, w.evidence]));
 
-if (todo.length === 0) {
-  console.log("Every unit already has a line. Nothing to generate.");
-  process.exit(0);
+const todo = needsWriting(prose.units, wanted);
+const batch = !hasKey() ? [] : SELF_TEST ? todo.slice(0, 3) : todo;
+if (!hasKey()) {
+  console.log(`No ANTHROPIC_API_KEY — ${todo.length} unit note(s) would be written; checking existing ones only.`);
+} else {
+  console.log(
+    `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
+  );
 }
-
-const batch = SELF_TEST ? todo.slice(0, 3) : todo;
-console.log(
-  `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
-);
 
 const SYSTEM = `You describe one unit of an NFL team — its offence, its defence or its special teams — to someone who has watched a bit of football but does not follow it closely.
 
@@ -198,8 +207,7 @@ const results = new Map();
 let tokensIn = 0;
 let tokensOut = 0;
 
-for (let i = 0; i < batch.length; i += CHUNK) {
-  const slice = batch.slice(i, i + CHUNK);
+for (const slice of chunk(batch, CHUNK)) {
   let data, usage;
   try {
     ({ data, usage } = await generateJson({
@@ -207,7 +215,7 @@ for (let i = 0; i < batch.length; i += CHUNK) {
       model: MODELS.prose,
       system: SYSTEM,
       user: `Write one entry per unit.\n\n${JSON.stringify(
-        slice.map((t) => ({ key: t.key, ...t.evidence })),
+        slice.map((t) => ({ key: t.subject, ...t.evidence })),
         null,
         2,
       )}`,
@@ -220,70 +228,32 @@ for (let i = 0; i < batch.length; i += CHUNK) {
     console.error(`${err.message}. Skipping this batch.`);
     continue;
   }
-  for (const n of data.notes ?? []) results.set(n.key, n.blurb);
+  const asked = new Set(slice.map((t) => t.subject));
+  for (const n of data.notes ?? []) if (asked.has(n.key)) results.set(n.key, n.blurb);
   tokensIn += usage.input;
   tokensOut += usage.output;
 }
 
-// --- validation ------------------------------------------------------------
+// --- validation and storage ------------------------------------------------
 
 // The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
-// without an API key — importing this file starts calling the model.
+// without an API key. The same guard decides whether an out-of-date note may
+// stay up until its replacement validates: New Orleans once kept describing a
+// receiver who had left the depth chart, and §9's bargain is a missing entry,
+// never a wrong one.
+const validate = (text, subject) => problemWithNote(text, evidenceOf.get(subject));
 
-let accepted = 0;
-const rejected = [];
-/** Superseded notes dropped because their replacement failed validation. */
-const cleared = [];
-
-for (const item of batch) {
-  const blurb = results.get(item.key);
-  if (!blurb) {
-    rejected.push(`${item.key}: no response`);
-    continue;
+if (SELF_TEST) {
+  for (const item of batch) {
+    const blurb = results.get(item.subject);
+    const problem = blurb ? validate(blurb, item.subject) : "no response";
+    console.log(`  ${item.subject}\n    ${problem ? `REJECTED (${problem})` : "ok"}: "${blurb ?? ""}"`);
   }
-  const problem = problemWithNote(blurb, item.evidence);
-  if (problem) {
-    rejected.push(`${item.key}: ${problem} — "${blurb}"`);
-    // A rejection used to leave the previous note standing, which looks safe
-    // and isn't. Anything reaching this loop is here because its note is
-    // missing, or the brief has moved on, or the evidence has — so the stored
-    // note is stale by definition, and the rule the replacement broke is
-    // usually the rule the old note breaks too. Checking the prompt version
-    // alone missed the second case: New Orleans kept describing a receiver who
-    // had left the depth chart, because the note and the brief were the same
-    // vintage and only the roster had changed. §9's bargain is a missing entry,
-    // never a wrong one, so the stale note goes and the next run tries again.
-    if (!SELF_TEST) {
-      const unit = cache.teams[item.teamId].units[item.unit];
-      if (unit.blurb) {
-        unit.blurb = null;
-        unit.blurbHash = null;
-        unit.promptVersion = null;
-        cleared.push(item.key);
-      }
-    }
-    continue;
-  }
-  if (!SELF_TEST) {
-    const unit = cache.teams[item.teamId].units[item.unit];
-    unit.blurb = blurb.trim();
-    unit.blurbHash = item.hash;
-    unit.promptVersion = PROMPT_VERSION;
-  }
-  accepted++;
-  if (SELF_TEST) console.log(`  ${item.key}\n    "${blurb.trim()}"`);
-}
-
-if (!SELF_TEST) {
-  cache.unitNotesWrittenAt = new Date().toISOString();
-  writeFileSync(DETAIL, `${JSON.stringify(cache, null, 2)}\n`);
-} else {
   console.log("\n(self-test: nothing written)");
+} else {
+  const { section, log } = settle(prose.units, wanted, results, validate);
+  prose.units = section;
+  writeCache(prose);
+  printLog("unit notes", log);
 }
-
-console.log(`\n${accepted}/${batch.length} accepted`);
-for (const r of rejected.slice(0, 10)) console.log(`  rejected — ${r}`);
-if (cleared.length > 0) {
-  console.log(`dropped ${cleared.length} superseded note(s): ${cleared.join(", ")}`);
-}
-console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);
+if (tokensIn) console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);
