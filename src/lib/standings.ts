@@ -48,25 +48,57 @@ export function recordLabel(r: TeamRecord): string {
 }
 
 /** Seven per conference qualify. */
-export function madePlayoffs(r: TeamRecord): boolean {
+export function inTopSeven(r: TeamRecord): boolean {
   return r.conferenceRank >= 1 && r.conferenceRank <= 7;
 }
 
+/** Every team plays 17 regular-season games. */
+export const REGULAR_SEASON_GAMES = 17;
+
+type Standings = typeof STANDINGS;
+
 /**
- * How they finished, in words a newcomer can use.
+ * Is the regular season over, so the top seven really are the playoff field?
  *
- * "6th in the AFC" means nothing on its own; whether that got them into the
- * playoffs is the part worth saying out loud.
+ * Read from the records, not the calendar: last season's finals
+ * (isPreviousSeason) are over by definition, and this season is over once
+ * every team has played all 17. A date check would be wrong in both
+ * directions — Week 18 can move, and a fetch that hasn't run since January
+ * still describes January.
  */
-export function finishLabel(teamId: string): string | null {
-  const r = recordFor(teamId);
+export function regularSeasonOver(standings: Standings = STANDINGS): boolean {
+  if (standings.isPreviousSeason) return true;
+  const records = Object.values(standings.teams);
+  return (
+    records.length > 0 &&
+    records.every((r) => r.wins + r.losses + r.ties >= REGULAR_SEASON_GAMES)
+  );
+}
+
+/**
+ * Where they stand, in words a newcomer can use.
+ *
+ * "6th in the AFC" means nothing on its own; whether that gets them into the
+ * playoffs is the part worth saying out loud. Mid-season it is a position,
+ * not a result — "Made the playoffs" in October was simply false.
+ */
+export function finishLabel(
+  teamId: string,
+  standings: Standings = STANDINGS,
+): string | null {
+  const r = standings.teams[team(teamId)?.id ?? teamId];
   if (!r) return null;
   // division() returns "AFC East"; the conference is the first word.
   const conference = division(teamId)?.split(" ")[0];
-  const where = conference ? ` in the ${conference}` : "";
-  return madePlayoffs(r)
-    ? `Made the playoffs, ${ordinal(r.conferenceRank)}${where}`
-    : `Missed the playoffs, ${ordinal(r.conferenceRank)}${where}`;
+  const place = `${ordinal(r.conferenceRank)}${conference ? ` in the ${conference}` : ""}`;
+  if (regularSeasonOver(standings)) {
+    return inTopSeven(r)
+      ? `Made the playoffs, ${place}`
+      : `Missed the playoffs, ${place}`;
+  }
+  return inTopSeven(r)
+    ? `In a playoff spot for now, ${place}`
+    : `Outside the playoff spots for now, ${place}`;
 }
 
 function ordinal(n: number): string {
