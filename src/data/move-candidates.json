@@ -1,6 +1,69 @@
 {
-  "generatedAt": "2026-10-12T20:50:35.300Z",
+  "generatedAt": "2026-10-13T18:48:46.181Z",
   "candidates": [
+    {
+      "id": "50174944",
+      "headline": "Zxavian Harris eligible to sign with NFL teams despite bid to play for LSU",
+      "description": "The NFL has reversed course and now says that former Ole Miss DL Zxavian Harris is free to sign with teams this season after a failed attempt to return to college football at LSU.",
+      "published": "2026-10-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "LSU Tigers",
+        "Louisiana State University",
+        "Ole Miss Rebels",
+        "University of Mississippi"
+      ],
+      "teamIds": [],
+      "players": [
+        {
+          "id": "4685365",
+          "name": "Zxavian Harris",
+          "position": "Defensive Tackle",
+          "currentTeam": "NO"
+        },
+        {
+          "id": "4838696",
+          "name": "Dae'Quan Wright",
+          "position": "Tight End",
+          "currentTeam": "CLE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50174944/zxavian-harris-eligible-sign-nfl-teams-lsu-bid"
+    },
+    {
+      "id": "50167782",
+      "headline": "Marvin Harrison Jr. latest in Texans' quest to solve their WR2 conundrum",
+      "description": "Houston has traded and drafted receivers, hoping to complement No. 1 wideout Nico Collins and QB C.J. Stroud.",
+      "published": "2026-10-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        },
+        {
+          "id": "4366031",
+          "name": "Tank Dell",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        },
+        {
+          "id": "4258173",
+          "name": "Nico Collins",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50167782/texans-wr2-issues-marvin-harrison-jr"
+    },
     {
       "id": "50167021",
       "headline": "Source: Packers lose DT Javon Hargrave for season to torn Achilles",
@@ -959,64 +1022,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50052903/nfl-minnesota-vikings-jj-mccarthy-trade-new-york-giants-kevin-occonnell"
-    },
-    {
-      "id": "50052864",
-      "headline": "Giants acquire QB J.J. McCarthy in trade with Vikings",
-      "description": "The Giants are trading for Vikings quarterback J.J. McCarthy, sending a 2027 fifth-round draft pick to Minnesota for the 2024 first-round pick.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants",
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "NYG",
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        },
-        {
-          "id": "2969939",
-          "name": "Jameis Winston",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        },
-        {
-          "id": "4243322",
-          "name": "Jake Haener",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052864/sources-giants-acquire-qb-jj-mccarthy-trade-vikings"
-    },
-    {
-      "id": "50052520",
-      "headline": "Source: Packers signing veteran O-lineman Mekhi Becton",
-      "description": "Veteran offensive lineman Mekhi Becton is signing with the Packers, a source told ESPN's Jeremy Fowler on Monday.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4240090",
-          "name": "Mekhi Becton",
-          "position": "Offensive Lineman",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052520/source-packers-signing-veteran-o-lineman-mekhi-becton"
     }
   ]
 }
