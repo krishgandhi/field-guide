@@ -81,6 +81,68 @@ describe("problemWithBlurb", () => {
   });
 });
 
+describe("problemWithBlurb — figures spelled out", () => {
+  // The cached lines this was written against, October 2026.
+  const allen86 = {
+    ...allen,
+    career: { "Rushing Yards": "4,839", "Rushing Touchdowns": "86" },
+  };
+  const opener = "A quarterback taken seventh overall in 2018 and now in his ninth season, all of them with Buffalo. ";
+  const october = new Date("2026-10-13T12:00:00Z");
+
+  it("rejects 'nearly eighty' when the record says 86, though 80 is its floor", () => {
+    const line =
+      opener + "He is one of the best players in football and as dangerous running as throwing, with nearly eighty career rushing touchdowns.";
+    expect(problemWithBlurb(line, allen86, [], october)).toMatch(/approximates.*80/);
+  });
+
+  it("accepts 'more than eighty' — the floor is what that phrasing is for", () => {
+    const line =
+      opener + "He is one of the best players in football and as dangerous running as throwing, with more than eighty career rushing touchdowns.";
+    expect(problemWithBlurb(line, allen86, [], october)).toBeNull();
+  });
+
+  it("rejects 'the reigning MVP' when his MVP is not last season's", () => {
+    const line = opener + "He is one of the best players in football, the reigning MVP, and as dangerous running as throwing.";
+    expect(problemWithBlurb(line, allen86, [], october)).toMatch(/reigning.*2025/);
+    // In 2025 the 2024 award was the reigning one.
+    expect(problemWithBlurb(line, allen86, [], new Date("2025-10-01T12:00:00Z"))).toBeNull();
+  });
+
+  it("rejects an age that is not his", () => {
+    const mcduffie = {
+      name: "Trent McDuffie",
+      team: "Los Angeles Rams",
+      teamId: "LAR",
+      age: 26,
+      draft: "2022: Rd 1, Pk 21 (KC)",
+      experience: "5th Season",
+      career: { "Total Tackles": "259" },
+    };
+    const line =
+      "A cornerback drafted in the first round in 2022 and now in his fifth season after a trade to the Rams. " +
+      "He is an All-Pro still only twenty-five, good enough that Los Angeles paid him like the best in the league.";
+    expect(problemWithBlurb(line, mcduffie, [], october)).toMatch(/invented figures: 25|age as 25/);
+    expect(problemWithBlurb(line.replace("twenty-five", "twenty-six"), mcduffie, [], october)).toBeNull();
+  });
+
+  it("rejects an approximation of a figure that is nowhere in the record", () => {
+    const murray = {
+      name: "Kyler Murray",
+      team: "Minnesota Vikings",
+      teamId: "MIN",
+      age: 29,
+      draft: "2019: Rd 1, Pk 1 (ARI)",
+      experience: "8th Season",
+      career: { "Rushing Yards": "3,286", "Longest Pass": "88" },
+    };
+    const line =
+      "A quarterback picked first overall in 2019, now in his eighth season and starting for Minnesota. " +
+      "He has nearly ninety starts behind him, a proven if not elite starter who runs a great deal.";
+    expect(problemWithBlurb(line, murray, [], october)).toMatch(/90/);
+  });
+});
+
 describe("problemWithStaleBlurb — a line written before a trade", () => {
   const garrett = {
     id: "3122132",

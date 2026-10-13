@@ -16,6 +16,7 @@
  */
 
 import { numbersIn, sentenceCount } from "./draft-validation.mjs";
+import { approximations, spelledToDigits } from "./number-words.mjs";
 import { NFL_TEAMS } from "./teams.mts";
 
 /** 4721 → 4000, 138.5 → 100, 27 → 20, 0.8 → 0. A floor, so "more than" stays true. */
@@ -61,7 +62,7 @@ export function profileEvidence(person, context = []) {
  * career total; that stays fine for as long as it is still true), or from the
  * site's own already-sourced prose.
  */
-export function problemWithBlurb(text, person, context = []) {
+export function problemWithBlurb(text, person, context = [], now = new Date()) {
   const trimmed = String(text ?? "").trim();
   const words = trimmed.split(/\s+/).length;
   // Two sentences: one placing him, one saying what kind of player he is.
@@ -70,32 +71,75 @@ export function problemWithBlurb(text, person, context = []) {
   const sentences = sentenceCount(trimmed);
   if (sentences > 3) return `${sentences} sentences, expected two`;
 
-  const allowed = new Set(
+  // "4,721" in ESPN's strings reads as 4 and 721 otherwise; and the brief asks
+  // for figures spelled out, which numbersIn cannot see without conversion.
+  const digits = (s) => spelledToDigits(s).replace(/(\d),(\d{3})/g, "$1$2");
+
+  // Exact figures: his record and the site's own prose. A floor is added only
+  // to `allowed` — "more than 80" of a floored 80 is true, "nearly 80" is not.
+  const exact = new Set(
     numbersIn(
-      [
-        person.draft,
-        person.age,
-        person.experience,
-        person.height,
-        person.weight,
-        JSON.stringify(person.awards ?? []),
-        JSON.stringify(person.career ?? {}),
-        JSON.stringify(careerAtLeast(person.career)),
-        ...context,
-      ]
-        .filter(Boolean)
-        .join(" ")
-        // "4,721" in ESPN's strings reads as 4 and 721 otherwise.
-        .replace(/(\d),(\d{3})/g, "$1$2"),
+      digits(
+        [
+          person.draft,
+          person.age,
+          person.experience,
+          person.height,
+          person.weight,
+          JSON.stringify(person.awards ?? []),
+          JSON.stringify(person.career ?? {}),
+          ...context,
+        ]
+          .filter(Boolean)
+          .join(" "),
+      ),
     ),
   );
-  const invented = numbersIn(trimmed.replace(/(\d),(\d{3})/g, "$1$2")).filter((n) => !allowed.has(n));
+  // A half-sack total floors to a whole one: "more than 125" of 125.5 is true.
+  const allowed = new Set([
+    ...exact,
+    ...[...exact].map(Math.floor),
+    ...numbersIn(JSON.stringify(careerAtLeast(person.career))),
+  ]);
+
+  const line = digits(trimmed);
+  const invented = numbersIn(line).filter((n) => !allowed.has(n));
   if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
+
+  const vague = approximations(line).filter(({ value }) => !exact.has(value));
+  if (vague.length > 0) {
+    return `approximates a figure the record does not have: ${vague.map((v) => `${v.hedge} ${v.value}`).join(", ")}`;
+  }
+
+  // "Still only 25" must be his age, not a figure that happens to be nearby.
+  const age = line.match(/\b(?:still only|aged|age of)\s+(\d+)\b|\b(\d+)[\s-]years?[\s-]old\b/i);
+  if (age && Number(age[1] ?? age[2]) !== Number(person.age)) {
+    return `gives his age as ${age[1] ?? age[2]}; the record says ${person.age ?? "nothing"}`;
+  }
+
+  // "Reigning MVP" is a claim about last season. ESPN's awards carry seasons,
+  // and Josh Allen's MVP is 2024's — the reigning one is 2025's.
+  const reigning = trimmed.match(/\b(reigning|defending)\b/i);
+  if (reigning) {
+    const last = String(lastCompletedSeason(now));
+    const current = (person.awards ?? []).some((a) => (a.seasons ?? []).map(String).includes(last));
+    if (!current) return `calls him "${reigning[0]}" with no award from the ${last} season`;
+  }
 
   if (person.name && trimmed.includes(person.name.split(" ").at(-1))) {
     return "repeats his name, which the card already shows";
   }
   return null;
+}
+
+/**
+ * The most recent season whose awards have been handed out. Awards are
+ * announced the week of the Super Bowl in February, so until March the one
+ * before last still holds the titles.
+ */
+export function lastCompletedSeason(now = new Date()) {
+  const year = now.getUTCFullYear();
+  return now.getUTCMonth() >= 2 ? year - 1 : year - 2;
 }
 
 const wordIn = (text, word) =>

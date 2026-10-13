@@ -168,6 +168,12 @@ describe("the older rules still hold", () => {
       seattle,
     );
   });
+  it("rejects a spelled-out figure that is not in the evidence", () => {
+    rejects(
+      "Built around a kicker who made better than nine in ten field goals, with a steady returner behind him.",
+      seattle,
+    );
+  });
   it("rejects too short", () => {
     rejects("A good defence.", seattle);
   });

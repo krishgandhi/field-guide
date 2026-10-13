@@ -9,6 +9,7 @@
  */
 
 import { numbersIn, sentenceCount } from "./draft-validation.mjs";
+import { spelledToDigits } from "./number-words.mjs";
 import { NFL_TEAMS } from "./teams.mts";
 
 /**
@@ -66,9 +67,12 @@ export function problemWithNote(text, evidence) {
   if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
   if (sentenceCount(trimmed) > 2) return "more than two sentences";
 
-  // Same guard as everywhere else: a figure must trace to what we supplied.
-  const allowed = new Set(numbersIn(JSON.stringify(evidence)));
-  const invented = numbersIn(trimmed).filter((n) => !allowed.has(n));
+  // Same guard as everywhere else: a figure must trace to what we supplied —
+  // spelled out or not ("close to nine in ten field goals" is two figures).
+  // The evidence holds no floors, so an approximation is held to the same
+  // test as any other figure.
+  const allowed = new Set(numbersIn(spelledToDigits(JSON.stringify(evidence))));
+  const invented = numbersIn(spelledToDigits(trimmed)).filter((n) => !allowed.has(n));
   if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
 
   const moves = (evidence.recentMovesInvolvingThisTeam ?? []).join(" ");
