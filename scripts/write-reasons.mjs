@@ -328,6 +328,7 @@ if (SELF_TEST) {
     console.log(`  ${teamName(game.away)} at ${teamName(game.home)}`);
     console.log(`  ${problem ? `REJECTED (${problem})` : "ok"}: "${reason ?? ""}"\n`);
   }
+  if (results.size === 0) process.exit(1);
 } else {
   const { section, log } = settle(prose.reasons, wanted, results, validate);
   prose.reasons = section;

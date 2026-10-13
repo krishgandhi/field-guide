@@ -100,7 +100,8 @@ for (const [teamId, team] of Object.entries(detail.teams ?? {})) {
 const evidenceOf = new Map(wanted.map((w) => [w.subject, w.evidence]));
 
 const todo = needsWriting(prose.units, wanted);
-const batch = !hasKey() ? [] : SELF_TEST ? todo.slice(0, 3) : todo;
+// The self-test takes any three units, cached or not: it exists to prove the call works.
+const batch = !hasKey() ? [] : SELF_TEST ? wanted.slice(0, 3) : todo;
 if (!hasKey()) {
   console.log(`No ANTHROPIC_API_KEY — ${todo.length} unit note(s) would be written; checking existing ones only.`);
 } else {
@@ -222,6 +223,7 @@ if (SELF_TEST) {
     console.log(`  ${item.subject}\n    ${problem ? `REJECTED (${problem})` : "ok"}: "${blurb ?? ""}"`);
   }
   console.log("\n(self-test: nothing written)");
+  if (results.size === 0) process.exit(1);
 } else {
   const { section, log } = settle(prose.units, wanted, results, validate);
   prose.units = section;

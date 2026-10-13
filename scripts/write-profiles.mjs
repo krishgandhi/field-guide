@@ -206,6 +206,7 @@ if (SELF_TEST) {
     console.log(`  ${t.person.name}\n    ${problem ? `REJECTED (${problem})` : "ok"}: "${blurb ?? ""}"`);
   }
   console.log("\n(self-test: nothing written)");
+  if (results.size === 0) process.exit(1);
 } else {
   const { section, log } = settle(prose.profiles, wanted, results, validate);
   prose.profiles = section;
