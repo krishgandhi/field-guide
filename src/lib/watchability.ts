@@ -165,8 +165,9 @@ export function factorsFor(game: Game, week: number): Factor[] {
     });
   }
 
-  // 4. Star quarterbacks. Never named: see the note in context.ts.
-  const stars = [game.home, game.away].filter(hasStarQb).length;
+  // 4. Star quarterbacks: a former MVP starting, per context.ts. The wording
+  // says exactly what the list guarantees and no more.
+  const stars = [game.home, game.away].filter((t) => hasStarQb(t)).length;
   if (stars === 2) {
     found.push({
       kind: "quarterbacks",
@@ -174,9 +175,9 @@ export function factorsFor(game: Game, week: number): Factor[] {
       priority: 3,
       reason: pick(
         [
-          "Two of the best quarterbacks alive, head to head",
-          "Both quarterbacks are worth watching on their own",
-          "A quarterback matchup people will talk about all week",
+          "Two former MVPs at quarterback, head to head",
+          "Both quarterbacks have won the league's MVP award",
+          "A quarterback duel between two former MVPs",
         ],
         seed,
         5,
@@ -189,8 +190,8 @@ export function factorsFor(game: Game, week: number): Factor[] {
       priority: 6,
       reason: pick(
         [
-          "One of the league's best quarterbacks is playing",
-          "Worth it for one quarterback alone",
+          "A former league MVP is playing quarterback",
+          "Worth it to watch a former MVP at quarterback",
         ],
         seed,
         6,

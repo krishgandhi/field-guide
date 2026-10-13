@@ -1,0 +1,45 @@
+{
+  "_about": "Quarterbacks who make a game worth watching on their own (CLAUDE.md \u00a78, factor 4). The criterion is checkable rather than a matter of taste: an active quarterback who has won the AP NFL MVP award. Keyed by ESPN athlete id, so the bonus follows the player, not the team he used to play for. Add a player the season he wins it.",
+  "players": [
+    {
+      "id": "8439",
+      "name": "Aaron Rodgers",
+      "mvp": [
+        2011,
+        2014,
+        2020,
+        2021
+      ]
+    },
+    {
+      "id": "3139477",
+      "name": "Patrick Mahomes",
+      "mvp": [
+        2018,
+        2022
+      ]
+    },
+    {
+      "id": "3916387",
+      "name": "Lamar Jackson",
+      "mvp": [
+        2019,
+        2023
+      ]
+    },
+    {
+      "id": "3918298",
+      "name": "Josh Allen",
+      "mvp": [
+        2024
+      ]
+    },
+    {
+      "id": "12483",
+      "name": "Matthew Stafford",
+      "mvp": [
+        2025
+      ]
+    }
+  ]
+}

@@ -212,7 +212,8 @@ const games = needsReason.map((game) => {
     closeness,
     sameDivision: isDivisional(game.home, game.away),
     longstandingRivalry: isRivalry(game.home, game.away),
-    eliteQuarterbacks: [game.home, game.away].filter(hasStarQb).length,
+    // How many of the two starting quarterbacks have won the MVP award.
+    formerMvpQuarterbacks: [game.home, game.away].filter((t) => hasStarQb(t)).length,
     primetime: factors.some((f) => f.kind === "standalone"),
     involvesBills: game.home === "BUF" || game.away === "BUF",
     // Headlines only, never article bodies (§9).

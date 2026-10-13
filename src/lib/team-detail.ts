@@ -77,3 +77,14 @@ export function coachTenure(experience: number | null): string | null {
   if (experience === 1) return "Second season as a head coach";
   return `${experience} seasons as a head coach`;
 }
+
+/**
+ * The quarterback at the top of ESPN's depth chart, or null.
+ *
+ * Read from the facts as stored, not the joined detail, because nothing here
+ * needs prose. The depth chart can lag an injury by a day or two; callers that
+ * care check the week's injury report as well (see hasStarQb).
+ */
+export function startingQb(teamId: string): UnitPlayer | null {
+  return TEAMS[teamId]?.units.offence.players.find((p) => p.label === "QB") ?? null;
+}
