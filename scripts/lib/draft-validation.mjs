@@ -192,20 +192,3 @@ export function problemsWith(entry, candidate) {
 
   return problems;
 }
-
-/** Wrap prose under a `>-` folded scalar at a readable width. */
-export function yamlFold(text, indent = "        ") {
-  const words = String(text).split(/\s+/);
-  const lines = [];
-  let line = "";
-  for (const word of words) {
-    if (`${line} ${word}`.trim().length > 68) {
-      lines.push(line.trim());
-      line = word;
-    } else {
-      line += ` ${word}`;
-    }
-  }
-  if (line.trim()) lines.push(line.trim());
-  return lines.map((l) => `${indent}${l}`).join("\n");
-}

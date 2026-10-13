@@ -1,12 +1,15 @@
 name: Check Claude key
 
 # On-demand: does ANTHROPIC_API_KEY work, and does the API still accept the
-# request shape draft-moves.mjs sends?
+# request shape each writer sends (model ids, structured output, the
+# server-side-fallback beta)?
 #
-# Worth having because the drafting step is idle for months at a time. Out of
-# season the detector correctly finds nothing, so the API call never runs — and
-# a step that never runs is a step whose output has never been validated. That
-# is exactly how a bad key in slate.json reached production.
+# Worth having because the daily job rarely calls Claude now: every writer
+# reads its cache first (src/data/prose-cache.json), and out of season the
+# moves detector finds nothing. A call that never runs is a call nobody has
+# checked lately. Each self-test makes one real request from a fixture and
+# fails if nothing usable comes back; a rejected key or request exits 3 with
+# the reason (scripts/lib/claude.mts).
 #
 # Writes nothing. Run it from the Actions tab after rotating the key, or before
 # a trade deadline when the pipeline is about to matter.
@@ -20,12 +23,14 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
+          cache: npm
 
       - name: Install
         run: npm ci
@@ -45,5 +50,11 @@ jobs:
       - name: Write a profile line from a fixture
         if: always()
         run: npm run write:profiles -- --self-test
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Write three unit notes from the committed data
+        if: always()
+        run: npm run write:units -- --self-test
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

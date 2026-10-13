@@ -1,5 +1,4 @@
 {
-  "fetchedAt": "2026-10-12T20:05:44.709Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -48,28 +47,7 @@
         "Stuff Yards": "169",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "2",
-        "Solo Tackles": "1",
-        "Assist Tackles": "1",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "0",
-        "Stuffs": "0",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/13976.png",
-      "evidenceHash": "e951044793192ec7",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/13976.png"
     },
     "16716": {
       "id": "16716",
@@ -120,28 +98,7 @@
         "Stuff Yards": "256",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "4",
-        "Solo Tackles": "1",
-        "Assist Tackles": "3",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "0",
-        "Stuffs": "1",
-        "Stuff Yards": "3",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/16716.png",
-      "evidenceHash": "a7e2550df4afb52b",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/16716.png"
     },
     "16910": {
       "id": "16910",
@@ -175,28 +132,7 @@
         "Stuff Yards": "66",
         "Kicks Blocked": "2"
       },
-      "season": {
-        "Total Tackles": "3",
-        "Solo Tackles": "2",
-        "Assist Tackles": "1",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "0",
-        "Stuffs": "0",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/16910.png",
-      "evidenceHash": "bca8c86b8a2fde44",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/16910.png"
     },
     "3052587": {
       "id": "3052587",
@@ -229,27 +165,7 @@
         "Rushing Touchdowns": "12",
         "Long Rushing": "35"
       },
-      "season": {
-        "Completions": "61",
-        "Passing Attempts": "96",
-        "Completion Percentage": "63.5",
-        "Passing Yards": "615",
-        "Yards Per Pass Attempt": "6.4",
-        "Passing Touchdowns": "2",
-        "Interceptions": "2",
-        "Longest Pass": "49",
-        "Total Sacks": "13",
-        "Passer Rating": "80.0",
-        "Rushing Attempts": "11",
-        "Rushing Yards": "65",
-        "Yards Per Rush Attempt": "5.9",
-        "Rushing Touchdowns": "1",
-        "Long Rushing": "14"
-      },
-      "headshot": "/players/3052587.png",
-      "evidenceHash": "f8f94cbefaea6195",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/3052587.png"
     },
     "3122132": {
       "id": "3122132",
@@ -292,28 +208,7 @@
         "Stuff Yards": "103",
         "Kicks Blocked": "3"
       },
-      "season": {
-        "Total Tackles": "-",
-        "Solo Tackles": "-",
-        "Assist Tackles": "-",
-        "Sacks": "-",
-        "Forced Fumbles": "-",
-        "Fumbles Recovered": "-",
-        "Fumbles Recovered Yards": "-",
-        "Interceptions": "-",
-        "Interception Yards": "-",
-        "Average Interception Yards": "-",
-        "Interception Touchdowns": "-",
-        "Long Interception": "-",
-        "Passes Defended": "-",
-        "Stuffs": "-",
-        "Stuff Yards": "-",
-        "Kicks Blocked": "-"
-      },
-      "headshot": "/players/3122132.png",
-      "evidenceHash": "f3533aa849955bab",
-      "blurb": "A defensive end — one of the linemen whose job is to chase down the quarterback — taken first overall in 2017 and now in his tenth season, recently traded from Cleveland to the Rams. He is the best defensive player in football, a two-time Defensive Player of the Year with more than a hundred and twenty-five career sacks, and he set the single-season record on his way out of Cleveland.",
-      "promptVersion": 2
+      "headshot": "/players/3122132.png"
     },
     "3916945": {
       "id": "3916945",
@@ -345,26 +240,7 @@
         "Fumbles": "6",
         "Fumbles Lost": "4"
       },
-      "season": {
-        "Receptions": "-",
-        "Receiving Targets": "-",
-        "Receiving Yards": "-",
-        "Yards Per Reception": "-",
-        "Receiving Touchdowns": "-",
-        "Long Reception": "-",
-        "Receiving First Downs": "-",
-        "Rushing Attempts": "-",
-        "Rushing Yards": "-",
-        "Yards Per Rush Attempt": "-",
-        "Rushing Touchdowns": "-",
-        "Long Rushing": "-",
-        "Fumbles": "-",
-        "Fumbles Lost": "-"
-      },
-      "headshot": "/players/3916945.png",
-      "evidenceHash": "393765f1801274f4",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/3916945.png"
     },
     "3917315": {
       "id": "3917315",
@@ -405,27 +281,7 @@
         "Rushing Touchdowns": "32",
         "Long Rushing": "57"
       },
-      "season": {
-        "Completions": "69",
-        "Passing Attempts": "101",
-        "Completion Percentage": "68.3",
-        "Passing Yards": "662",
-        "Yards Per Pass Attempt": "6.6",
-        "Passing Touchdowns": "2",
-        "Interceptions": "2",
-        "Longest Pass": "41",
-        "Total Sacks": "9",
-        "Passer Rating": "84.7",
-        "Rushing Attempts": "20",
-        "Rushing Yards": "93",
-        "Yards Per Rush Attempt": "4.7",
-        "Rushing Touchdowns": "0",
-        "Long Rushing": "18"
-      },
-      "headshot": "/players/3917315.png",
-      "evidenceHash": "59fde902acbbeb63",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/3917315.png"
     },
     "3918298": {
       "id": "3918298",
@@ -466,27 +322,7 @@
         "Rushing Touchdowns": "86",
         "Long Rushing": "45"
       },
-      "season": {
-        "Completions": "79",
-        "Passing Attempts": "119",
-        "Completion Percentage": "66.4",
-        "Passing Yards": "1,039",
-        "Yards Per Pass Attempt": "8.7",
-        "Passing Touchdowns": "6",
-        "Interceptions": "3",
-        "Longest Pass": "51",
-        "Total Sacks": "9",
-        "Passer Rating": "100.1",
-        "Rushing Attempts": "33",
-        "Rushing Yards": "118",
-        "Yards Per Rush Attempt": "3.6",
-        "Rushing Touchdowns": "7",
-        "Long Rushing": "21"
-      },
-      "headshot": "/players/3918298.png",
-      "evidenceHash": "714947c6ee8a002c",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/3918298.png"
     },
     "4047646": {
       "id": "4047646",
@@ -518,26 +354,7 @@
         "Fumbles": "7",
         "Fumbles Lost": "5"
       },
-      "season": {
-        "Receptions": "3",
-        "Receiving Targets": "4",
-        "Receiving Yards": "26",
-        "Yards Per Reception": "8.7",
-        "Receiving Touchdowns": "0",
-        "Long Reception": "14",
-        "Receiving First Downs": "2",
-        "Rushing Attempts": "0",
-        "Rushing Yards": "0",
-        "Yards Per Rush Attempt": "0.0",
-        "Rushing Touchdowns": "0",
-        "Long Rushing": "0",
-        "Fumbles": "0",
-        "Fumbles Lost": "0"
-      },
-      "headshot": "/players/4047646.png",
-      "evidenceHash": "e1ada099a0647674",
-      "blurb": "A wide receiver picked in the second round in 2019, now eight seasons in and on his way to New England after a spell in Philadelphia. He is a genuine number one target, the kind a defence has to plan its whole week around, with more than eight thousand career receiving yards and a knack for the big play.",
-      "promptVersion": 2
+      "headshot": "/players/4047646.png"
     },
     "4241479": {
       "id": "4241479",
@@ -570,27 +387,7 @@
         "Rushing Touchdowns": "6",
         "Long Rushing": "23"
       },
-      "season": {
-        "Completions": "2",
-        "Passing Attempts": "3",
-        "Completion Percentage": "66.7",
-        "Passing Yards": "34",
-        "Yards Per Pass Attempt": "11.3",
-        "Passing Touchdowns": "0",
-        "Interceptions": "1",
-        "Longest Pass": "20",
-        "Total Sacks": "0",
-        "Passer Rating": "65.3",
-        "Rushing Attempts": "0",
-        "Rushing Yards": "0",
-        "Yards Per Rush Attempt": "0.0",
-        "Rushing Touchdowns": "0",
-        "Long Rushing": "0"
-      },
-      "headshot": "/players/4241479.png",
-      "evidenceHash": "415e9301acd29fb9",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4241479.png"
     },
     "4242512": {
       "id": "4242512",
@@ -623,27 +420,7 @@
         "Rushing Touchdowns": "6",
         "Long Rushing": "39"
       },
-      "season": {
-        "Completions": "73",
-        "Passing Attempts": "130",
-        "Completion Percentage": "56.2",
-        "Passing Yards": "849",
-        "Yards Per Pass Attempt": "6.5",
-        "Passing Touchdowns": "2",
-        "Interceptions": "4",
-        "Longest Pass": "77",
-        "Total Sacks": "14",
-        "Passer Rating": "68.4",
-        "Rushing Attempts": "27",
-        "Rushing Yards": "186",
-        "Yards Per Rush Attempt": "6.9",
-        "Rushing Touchdowns": "2",
-        "Long Rushing": "39"
-      },
-      "headshot": "/players/4242512.png",
-      "evidenceHash": "4305f285c77ab8a5",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4242512.png"
     },
     "4360499": {
       "id": "4360499",
@@ -660,11 +437,7 @@
       "college": "Iowa",
       "awards": [],
       "career": {},
-      "season": {},
-      "headshot": "/players/4360499.png",
-      "evidenceHash": "e2e359683af96de1",
-      "blurb": "A centre — the lineman who snaps the ball to the quarterback — drafted twenty-fifth overall in 2022 and now in his fifth season, having left Baltimore for Las Vegas in free agency. He has made the Pro Bowl three years running and started every game he has played, and Baltimore's running game was the league's most efficient in front of him; the Raiders gave him the biggest contract an interior lineman has ever had.",
-      "promptVersion": 2
+      "headshot": "/players/4360499.png"
     },
     "4426405": {
       "id": "4426405",
@@ -698,28 +471,7 @@
         "Stuff Yards": "26",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "13",
-        "Solo Tackles": "11",
-        "Assist Tackles": "2",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "1",
-        "Interception Yards": "22",
-        "Average Interception Yards": "22.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "22",
-        "Passes Defended": "7",
-        "Stuffs": "1",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/4426405.png",
-      "evidenceHash": "35cfa9314a2eba7c",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4426405.png"
     },
     "4433970": {
       "id": "4433970",
@@ -752,27 +504,7 @@
         "Rushing Touchdowns": "4",
         "Long Rushing": "26"
       },
-      "season": {
-        "Completions": "0",
-        "Passing Attempts": "0",
-        "Completion Percentage": "0.0",
-        "Passing Yards": "0",
-        "Yards Per Pass Attempt": "0.0",
-        "Passing Touchdowns": "0",
-        "Interceptions": "0",
-        "Longest Pass": "0",
-        "Total Sacks": "0",
-        "Passer Rating": "0.0",
-        "Rushing Attempts": "2",
-        "Rushing Yards": "2",
-        "Yards Per Rush Attempt": "1.0",
-        "Rushing Touchdowns": "0",
-        "Long Rushing": "2"
-      },
-      "headshot": "/players/4433970.png",
-      "evidenceHash": "de8af7eb2699ed05",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4433970.png"
     },
     "4575431": {
       "id": "4575431",
@@ -806,28 +538,7 @@
         "Stuff Yards": "40",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "32",
-        "Solo Tackles": "20",
-        "Assist Tackles": "12",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "1",
-        "Stuffs": "3.5",
-        "Stuff Yards": "5",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/4575431.png",
-      "evidenceHash": "e9bc330200db8c2c",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4575431.png"
     },
     "4578085": {
       "id": "4578085",
@@ -869,28 +580,7 @@
         "Stuff Yards": "22",
         "Kicks Blocked": "2"
       },
-      "season": {
-        "Total Tackles": "13",
-        "Solo Tackles": "8",
-        "Assist Tackles": "5",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "0",
-        "Stuffs": "2.5",
-        "Stuff Yards": "2",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/4578085.png",
-      "evidenceHash": "94fc4dde3d264af3",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4578085.png"
     },
     "4592837": {
       "id": "4592837",
@@ -924,28 +614,7 @@
         "Stuff Yards": "0",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "31",
-        "Solo Tackles": "23",
-        "Assist Tackles": "8",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "1",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "8",
-        "Stuffs": "0.5",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/4592837.png",
-      "evidenceHash": "c836f1db9bdae604",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4592837.png"
     },
     "4686772": {
       "id": "4686772",
@@ -979,28 +648,7 @@
         "Stuff Yards": "2",
         "Kicks Blocked": "0"
       },
-      "season": {
-        "Total Tackles": "8",
-        "Solo Tackles": "7",
-        "Assist Tackles": "1",
-        "Sacks": "0",
-        "Forced Fumbles": "0",
-        "Fumbles Recovered": "0",
-        "Fumbles Recovered Yards": "0",
-        "Interceptions": "0",
-        "Interception Yards": "0",
-        "Average Interception Yards": "0.0",
-        "Interception Touchdowns": "0",
-        "Long Interception": "0",
-        "Passes Defended": "5",
-        "Stuffs": "0",
-        "Stuff Yards": "0",
-        "Kicks Blocked": "0"
-      },
-      "headshot": "/players/4686772.png",
-      "evidenceHash": "ea65a2145c2fde09",
-      "blurb": null,
-      "promptVersion": null
+      "headshot": "/players/4686772.png"
     }
   }
 }

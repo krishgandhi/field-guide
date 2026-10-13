@@ -113,7 +113,7 @@ season-altering only: routine weekly knocks are live data, already shown on
 game cards and team pages, and an MDX file for a "questionable" ankle is stale
 in three days.
 
-The filename's date prefix must be a prefix of `move.date`. `npm run test:moves`
+The filename's date prefix must be a prefix of `move.date`. `npm test` (tests/moves.test.ts)
 enforces that, plus §5's two-sentences-per-axis budget.
 
 `reviewed: false` renders a small marker in development only — never in production. It's a to-do list, not a disclaimer to the reader.

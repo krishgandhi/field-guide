@@ -23,9 +23,12 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { classify } from "./lib/detect-patterns.mjs";
+import { ATHLETES as ATHLETE, SITE, getJson } from "./lib/espn.mts";
+import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
+import { addGivenUp, mergeWorklist } from "./lib/move-worklist.mjs";
+import { stamp } from "./lib/meta.mts";
 
-const FEED =
-  "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50";
+const FEED = `${SITE}/news?limit=50`;
 const SEEN = "src/data/seen-news.json";
 const OUT = "src/data/move-candidates.json";
 
@@ -56,7 +59,6 @@ function readJson(path, fallback) {
  * inventing team codes, and a draft with no teams fails the schema on
  * promotion because it requires at least one.
  */
-const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
 const BY_NAME = new Map(TEAMS.map((t) => [t.displayName.toLowerCase(), t.id]));
 
 function abbreviate(names) {
@@ -74,21 +76,13 @@ function abbreviate(names) {
  * neutral 3 with "the report does not spell out where he lines up". A
  * cornerback is a 4. One lookup removes that whole class of mistake.
  */
-const ATHLETE =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
-
 async function playerDetail(athleteId, name) {
   try {
-    const res = await fetch(`${ATHLETE}/${athleteId}`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(15000),
-    });
-    if (!res.ok) return { id: athleteId, name };
-    const body = await res.json();
+    const body = await getJson(`${ATHLETE}/${athleteId}`, { timeoutMs: 15_000 });
     const a = body.athlete ?? body;
     // The id must survive: draft-moves writes it into `people:`, which is what
     // puts a profile card on the entry. Dropping it here published a signing
-    // with people: [] and no card, and test:moves caught it.
+    // with people: [] and no card, and the moves test caught it.
     return {
       id: String(athleteId),
       name: a.displayName ?? name,
@@ -118,15 +112,13 @@ function categoryValues(article, type) {
     .filter(Boolean);
 }
 
-const res = await fetch(FEED, {
-  headers: { "user-agent": "field-guide (personal, non-commercial)" },
-  signal: AbortSignal.timeout(20000),
-});
-if (!res.ok) {
-  console.error(`ESPN news returned ${res.status}`);
+let articles;
+try {
+  ({ articles = [] } = await getJson(FEED));
+} catch (err) {
+  console.error(`ESPN news failed: ${err.message}`);
   process.exit(1);
 }
-const { articles = [] } = await res.json();
 console.log(`Fetched ${articles.length} articles.`);
 
 const seen = new Set(readJson(SEEN, []));
@@ -205,24 +197,37 @@ writeFileSync(SEEN, `${JSON.stringify(trimmed, null, 2)}\n`);
 // undecided ones forward gives the pipeline as many attempts as it needs.
 // Anything drafted, held or dismissed is in the seen list by then and drops
 // out here.
-const carried = (readJson(OUT, {}).candidates ?? []).filter(
-  (c) => c?.id && !seen.has(c.id) && !candidateIds.has(c.id),
+// Fresh copies keep the carried attempt count (see move-worklist.mjs), and
+// what overflows the limit is recorded as given up — listed by
+// `npm run drafts` and marked seen — rather than trimmed off in silence.
+const previous = readJson(OUT, {});
+const carried = previous.candidates ?? [];
+const { worklist, dropped } = mergeWorklist(candidates, carried, seen);
+const carriedCount = worklist.filter((c) => !candidateIds.has(c.id)).length;
+if (carriedCount > 0) {
+  console.log(`Carried ${carriedCount} undecided candidate(s) forward.`);
+}
+const givenUp = addGivenUp(
+  previous.givenUp ?? [],
+  dropped.map((c) => ({ ...c, reason: "backlog over the worklist limit, never drafted" })),
+  new Date().toISOString().slice(0, 10),
 );
-const worklist = [...candidates, ...carried]
-  .sort((a, b) => String(b.published ?? "").localeCompare(String(a.published ?? "")))
-  .slice(0, 40);
-if (carried.length > 0) {
-  console.log(`Carried ${carried.length} undecided candidate(s) forward.`);
+if (dropped.length > 0) {
+  console.log(`\nBacklog over the limit — ${dropped.length} oldest candidate(s) given up:`);
+  for (const c of dropped) console.log(`  ${c.published}  ${c.headline}`);
+  const withDropped = [...new Set([...dropped.map((c) => c.id), ...trimmed])].slice(0, SEEN_LIMIT);
+  writeFileSync(SEEN, `${JSON.stringify(withDropped, null, 2)}\n`);
 }
 
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { generatedAt: new Date().toISOString(), candidates: worklist },
+    { candidates: worklist, givenUp },
     null,
     2,
   )}\n`,
 );
+stamp("moveCandidates");
 
 if (candidates.length === 0) {
   console.log("No new candidates. This is the normal result out of season.");

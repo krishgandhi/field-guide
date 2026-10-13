@@ -6,7 +6,7 @@ import type {
   MoveSource,
   RubricScore,
 } from "@/lib/content/schema";
-import { team } from "@/lib/teams";
+import { team, teamId } from "@/lib/teams";
 
 /**
  * Moves, read from content/moves/*.mdx.
@@ -98,7 +98,8 @@ function toMove(frontmatter: Frontmatter): Move {
     date: m.date,
     dateLabel: formatMoveDate(m.date),
     kind: m.kind,
-    teams: m.teams,
+    // Stored canonical, so a hand-typed WAS still matches WSH everywhere.
+    teams: m.teams.map(teamId),
     bigness: m.bigness,
     soWhat: frontmatter.summary,
     rubric: m.rubric,
@@ -121,7 +122,8 @@ export function getMoves(): Move[] {
 }
 
 export function getMovesForTeam(id: string): Move[] {
-  return getMoves().filter((m) => m.teams.includes(id));
+  const wanted = teamId(id);
+  return getMoves().filter((m) => m.teams.includes(wanted));
 }
 
 /** One move plus its MDX body, or null for a 404. */

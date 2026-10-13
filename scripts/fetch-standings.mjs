@@ -17,18 +17,13 @@
  *   STANDINGS_BASE=http://bad node scripts/fetch-standings.mjs   # failure drill
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
+import { SITE_V2, currentPhase, getJson, standingsUrl } from "./lib/espn.mts";
+import { TEAM_IDS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
-const BASE =
-  process.env.STANDINGS_BASE ?? "https://site.api.espn.com/apis/v2/sports/football/nfl";
+const BASE = process.env.STANDINGS_BASE ?? SITE_V2;
 const OUT = "src/data/standings.json";
-const SEASON = 2026;
-
-async function getJson(url) {
-  const res = await fetch(url, { headers: { "user-agent": "field-guide" } });
-  if (!res.ok) throw new Error(`${url} returned ${res.status}`);
-  return res.json();
-}
 
 /** ESPN nests conference → division → entries; flatten to one row per team. */
 function readStandings(payload) {
@@ -90,20 +85,18 @@ function seasonHasStarted(rows) {
 const teamGames = (rows) => rows.reduce((n, r) => n + r.wins + r.losses + r.ties, 0);
 
 async function main() {
-  let season = SEASON;
-  // seasontype=2 is load-bearing: without it ESPN serves preseason through
-  // August and the whole league renders 1-0.
-  let rows = readStandings(
-    await getJson(`${BASE}/standings?season=${season}&seasontype=2`),
-  );
+  // The season ESPN's calendar says we're in. standingsUrl always adds
+  // seasontype=2, which is load-bearing: without it ESPN serves preseason
+  // through August and the whole league renders 1-0.
+  const { season: current } = await currentPhase();
+  let season = current;
+  let rows = readStandings(await getJson(standingsUrl(season, BASE)));
 
   // Nothing meaningful played yet — last season's finals are what's useful.
   let isPreviousSeason = false;
   if (!seasonHasStarted(rows)) {
-    season = SEASON - 1;
-    rows = readStandings(
-      await getJson(`${BASE}/standings?season=${season}&seasontype=2`),
-    );
+    season = current - 1;
+    rows = readStandings(await getJson(standingsUrl(season, BASE)));
     isPreviousSeason = true;
   }
 
@@ -119,11 +112,7 @@ async function main() {
     );
   }
 
-  const known = new Set(
-    JSON.parse(await readFile("src/lib/teams/nfl-teams.json", "utf8")).map(
-      (t) => t.id,
-    ),
-  );
+  const known = new Set(TEAM_IDS);
   const unknown = rows.filter((r) => !known.has(r.id)).map((r) => r.id);
   if (unknown.length) {
     throw new Error(`Unrecognised team ids: ${unknown.join(", ")}`);
@@ -132,12 +121,12 @@ async function main() {
   const standings = {
     season,
     isPreviousSeason,
-    fetchedAt: new Date().toISOString(),
     teams: Object.fromEntries(rows.map(({ id, ...rest }) => [id, rest])),
   };
 
   await mkdir("src/data", { recursive: true });
   await writeFile(OUT, `${JSON.stringify(standings, null, 2)}\n`);
+  stamp("standings");
 
   // Seven per conference qualify.
   const playoff = rows.filter((r) => r.conferenceRank >= 1 && r.conferenceRank <= 7).length;

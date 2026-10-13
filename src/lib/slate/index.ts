@@ -1,5 +1,7 @@
 import { z } from "zod";
 import raw from "@/data/slate.json";
+import { prose } from "@/lib/prose";
+import { lastRun } from "@/lib/meta";
 
 /**
  * The week's real games, read from the JSON that GitHub Actions commits.
@@ -25,9 +27,10 @@ const gameSchema = z.object({
   venue: z.string().nullable(),
   neutralSite: z.boolean(),
   /**
-   * Claude-written "why watch this", generated once by the daily job and
-   * cached here (§13). Absent when the model wasn't run or its sentence failed
-   * validation — the deterministic template covers that game instead.
+   * Claude-written "why watch this". Never in slate.json: it is joined in
+   * below from the prose cache (src/lib/prose.ts), because fetch-slate
+   * rebuilds this file from scratch daily. Absent when the model wasn't run or
+   * its sentence failed validation — the template covers that game instead.
    */
   reason: z.string().optional(),
 });
@@ -41,18 +44,6 @@ const injurySchema = z.object({
 const slateSchema = z.strictObject({
   season: z.number(),
   week: z.number().min(1).max(18),
-  fetchedAt: z.string(),
-  /**
-   * When write-reasons.mjs last wrote the per-game prose. Optional because the
-   * slate is fetched first and the reasons step is allowed to fail.
-   *
-   * This key broke the build the first time that step ever succeeded: with no
-   * API key it had always exited early, so the strict schema had never seen
-   * the field it writes. Strictness caught it, which is the point — but the
-   * lesson is that a `continue-on-error` step which never runs is a step whose
-   * output is never validated.
-   */
-  reasonsWrittenAt: z.string().optional(),
   games: z.array(gameSchema),
   byes: z.array(z.string()),
   injuries: z.record(z.string(), z.array(injurySchema)),
@@ -60,7 +51,11 @@ const slateSchema = z.strictObject({
 
 export type Game = z.infer<typeof gameSchema>;
 export type Injury = z.infer<typeof injurySchema>;
-export type Slate = z.infer<typeof slateSchema>;
+/**
+ * fetchedAt comes from src/data/meta.json, not slate.json: a timestamp inside
+ * the data made every daily run a commit and a production build.
+ */
+export type Slate = z.infer<typeof slateSchema> & { fetchedAt: string };
 
 const parsed = slateSchema.safeParse(raw);
 if (!parsed.success) {
@@ -70,7 +65,15 @@ if (!parsed.success) {
   throw new Error(`Invalid src/data/slate.json\n${detail}`);
 }
 
-export const SLATE: Slate = parsed.data;
+export const SLATE: Slate = {
+  ...parsed.data,
+  // Epoch when there is no stamp, so the stale warning shows rather than hides.
+  fetchedAt: lastRun("slate") ?? new Date(0).toISOString(),
+  games: parsed.data.games.map((game) => {
+    const reason = prose("reasons", game.id);
+    return reason ? { ...game, reason } : game;
+  }),
+};
 
 export function injuriesFor(teamId: string): Injury[] {
   return SLATE.injuries[teamId] ?? [];

@@ -29,11 +29,11 @@
 import { mkdir, writeFile, stat, rm } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
+import { SITE, getBytes, getJson } from "./lib/espn.mts";
 
 const run = promisify(execFile);
 
-const TEAMS_URL =
-  "https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams";
+const TEAMS_URL = `${SITE}/teams`;
 const LOGO = (abbr) =>
   `https://a.espncdn.com/i/teamlogos/nfl/500-dark/${abbr.toLowerCase()}.png`;
 
@@ -124,9 +124,7 @@ function toDisplayColor(brand, alternate) {
 
 // ---------- fetch ----------
 
-const res = await fetch(TEAMS_URL);
-if (!res.ok) throw new Error(`ESPN teams endpoint returned ${res.status}`);
-const raw = await res.json();
+const raw = await getJson(TEAMS_URL);
 const list = raw.sports[0].leagues[0].teams.map((t) => t.team);
 
 if (list.length !== 32) {
@@ -143,14 +141,13 @@ for (const t of list) {
   const abbr = t.abbreviation.toUpperCase();
   const file = `${LOGO_DIR}/${abbr.toLowerCase()}.png`;
 
-  const img = await fetch(LOGO(abbr));
-  const buf = Buffer.from(await img.arrayBuffer());
+  const buf = await getBytes(LOGO(abbr));
 
   // The CDN returns 200 with a zero-length body intermittently — status alone
-  // is not proof of success, so check the bytes.
-  if (!img.ok || buf.length < 1000) {
+  // is not proof of success, so check the bytes. (A non-200 already threw.)
+  if (buf.length < 1000) {
     throw new Error(
-      `Logo for ${abbr} came back ${img.status} with ${buf.length} bytes. Aborting rather than shipping a broken image.`,
+      `Logo for ${abbr} came back with ${buf.length} bytes. Aborting rather than shipping a broken image.`,
     );
   }
 

@@ -1,9 +1,13 @@
 /**
  * Write the "why watch this" sentences for the week's games, using Claude.
  *
- * Runs after fetch-slate.mjs in the daily workflow and writes the results back
- * into src/data/slate.json, so the prose is generated once and cached rather
- * than regenerated per page load (CLAUDE.md §13). Pages stay static.
+ * Runs after fetch-slate.mjs in the daily workflow and stores the sentences in
+ * src/data/prose-cache.json under "reasons", keyed by game id. Each is keyed
+ * on what the model saw — the closeness bucket, division, rivalry, star
+ * quarterbacks, primetime, and the ids of the preview articles — so a game is
+ * written once and again only when one of those changes (§13). They used to
+ * live in slate.json, which fetch-slate rebuilds from scratch, so every
+ * reason was wiped and regenerated daily.
  *
  * Deliberately a separate script from the fetch:
  *   - fetch-slate.mjs stays dependency-free (Node builtins only), so a broken
@@ -12,8 +16,8 @@
  *     and the app falls back to the deterministic template. Losing nice prose
  *     is a cosmetic downgrade; losing the schedule is not.
  *
- * Every sentence is validated before it is accepted. Anything that fails is
- * dropped and that game keeps its template. The model is given ONLY the facts
+ * Every sentence is validated before it is accepted. Anything that fails
+ * leaves the previous sentence (if it still validates) or the template. The model is given ONLY the facts
  * we already verified — it is writing prose about supplied inputs, not
  * recalling anything about football.
  *
@@ -21,9 +25,21 @@
  *   ANTHROPIC_API_KEY=... npm run write:reasons
  */
 
-import { readFile, writeFile } from "node:fs/promises";
-import Anthropic from "@anthropic-ai/sdk";
+import { readFile } from "node:fs/promises";
 import { problemWith } from "./lib/reason-validation.mjs";
+import { SITE, getJson } from "./lib/espn.mts";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import {
+  needsWriting,
+  printLog,
+  proseKey,
+  readCache,
+  settle,
+  writeCache,
+} from "./lib/prose-cache.mts";
+
+/** Bump when the brief below changes materially, to rewrite existing sentences. */
+const PROMPT_VERSION = 1;
 
 const SLATE = "src/data/slate.json";
 
@@ -41,11 +57,11 @@ const { noteFor } = await import("../src/lib/slate/notes.ts");
 const { teamName, isDivisional, team } = await import("../src/lib/teams/index.ts");
 const { isRivalry, hasStarQb } = await import("../src/lib/slate/context.ts");
 
-// No key: leave the templates in place and exit clean. This is the normal
-// state on a fork or a local run, not an error.
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.log("No ANTHROPIC_API_KEY — keeping template reasons.");
-  process.exit(0);
+// No key is the normal state on a fork or a local run, not an error: the
+// script still prunes last week's sentences and re-checks the rest.
+if (SELF_TEST && !hasKey()) {
+  console.log("Self-test needs ANTHROPIC_API_KEY.");
+  process.exit(1);
 }
 
 const slate = JSON.parse(await readFile(SLATE, "utf8"));
@@ -83,7 +99,6 @@ if (needsReason.length === 0) {
   console.log(
     `All ${slate.games.length} games in week ${slate.week} have hand-written notes. Nothing to generate.`,
   );
-  process.exit(0);
 }
 
 /**
@@ -98,19 +113,14 @@ if (needsReason.length === 0) {
  * §9: headlines and descriptions are used here and never written to disk. Only
  * the generated sentence and the source link are stored.
  */
-const NEWS = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news";
+const NEWS = `${SITE}/news`;
 const PREVIEW_WINDOW_DAYS = 10;
 
 async function teamArticles(teamId) {
   const espnId = team(teamId)?.espnId;
   if (!espnId) return [];
   try {
-    const res = await fetch(`${NEWS}?team=${espnId}&limit=30`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return [];
-    const { articles = [] } = await res.json();
+    const { articles = [] } = await getJson(`${NEWS}?team=${espnId}&limit=30`);
     return articles;
   } catch {
     // Losing preview colour is cosmetic; the sentence still gets written from
@@ -150,7 +160,7 @@ const articlesByTeam = SELF_TEST
 const previews = new Map();
 for (const game of needsReason) {
   if (SELF_TEST) {
-    previews.set(game.id, FIXTURE_REPORTING.map((r) => ({ ...r, link: "" })));
+    previews.set(game.id, FIXTURE_REPORTING.map((r, i) => ({ ...r, id: `fixture-${i}`, link: "" })));
     continue;
   }
   const found = [
@@ -164,6 +174,7 @@ for (const game of needsReason) {
       .filter((a) => !seen.has(a.id) && seen.add(a.id))
       .slice(0, 3)
       .map((a) => ({
+        id: String(a.id ?? ""),
         headline: a.headline ?? "",
         description: a.description ?? "",
         link: a.links?.web?.href ?? "",
@@ -202,7 +213,7 @@ const games = needsReason.map((game) => {
     sameDivision: isDivisional(game.home, game.away),
     longstandingRivalry: isRivalry(game.home, game.away),
     eliteQuarterbacks: [game.home, game.away].filter(hasStarQb).length,
-    primetime: factors.some((f) => f.reason.startsWith("Primetime")),
+    primetime: factors.some((f) => f.kind === "standalone"),
     involvesBills: game.home === "BUF" || game.away === "BUF",
     // Headlines only, never article bodies (§9).
     reporting: (previews.get(game.id) ?? []).map((p) => ({
@@ -211,8 +222,6 @@ const games = needsReason.map((game) => {
     })),
   };
 });
-
-const client = new Anthropic();
 
 const SYSTEM = `You write one-sentence explanations of why an NFL game is or isn't worth watching, for someone who has watched a bit of football but has no feel for what makes a game matter.
 
@@ -248,84 +257,82 @@ const schema = {
   additionalProperties: false,
 };
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 8000,
-  system: SYSTEM,
-  // Short, scoped writing task — not intelligence-sensitive. This is the lever
-  // to turn up if the sentences come out flat.
-  output_config: { effort: "medium", format: { type: "json_schema", schema } },
-  // Recommended default on Opus 5: if a safety classifier declines, the API
-  // re-runs on a fallback model rather than handing back a refusal.
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Week ${slate.week}. Write one sentence per game.\n\n${JSON.stringify(games, null, 2)}`,
-    },
-  ],
-});
+/** The cache key hashes what the model saw, with articles reduced to their ids. */
+const articleIds = new Map();
+for (const game of needsReason) {
+  articleIds.set(game.id, (previews.get(game.id) ?? []).map((p) => p.id).sort());
+}
+const wanted = games.map((game) => ({
+  subject: game.id,
+  key: proseKey(PROMPT_VERSION, {
+    ...game,
+    reporting: undefined,
+    week: slate.week,
+    articles: articleIds.get(game.id),
+  }),
+}));
+const prose = readCache();
+const todo = SELF_TEST ? wanted : needsWriting(prose.reasons, wanted);
+const asking = new Set(todo.map((t) => t.subject));
 
-// Check before reading content: a refusal returns HTTP 200 with empty or
-// partial content, and indexing into it blind would throw.
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). Keeping templates.`,
-  );
-  process.exit(0);
+const results = new Map();
+let usage = null;
+if (!hasKey()) {
+  console.log(`No ANTHROPIC_API_KEY — ${todo.length} reason(s) would be written; checking existing ones only.`);
+} else if (todo.length > 0) {
+  try {
+    let reasons;
+    ({ data: { reasons }, usage } = await generateJson({
+      label: "write-reasons",
+      model: MODELS.prose,
+      system: SYSTEM,
+      user: `Week ${slate.week}. Write one sentence per game.\n\n${JSON.stringify(
+        games.filter((g) => asking.has(g.id)),
+        null,
+        2,
+      )}`,
+      schema,
+      maxTokens: 8000,
+      // Short, scoped writing task — not intelligence-sensitive. This is the
+      // lever to turn up if the sentences come out flat.
+      effort: "medium",
+    }));
+    for (const { id, reason } of reasons ?? []) if (asking.has(id)) results.set(id, reason);
+  } catch (err) {
+    if (!isNoResult(err)) throw err;
+    console.error(`${err.message}. Keeping what is there.`);
+  }
+} else {
+  console.log("Every reason is current. Nothing to generate.");
 }
 
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. Keeping templates.");
-  process.exit(0);
-}
-
-const { reasons } = JSON.parse(payload);
-
-// --- validation ------------------------------------------------------------
+// --- validation and storage ------------------------------------------------
 
 /** Every team nickname, so a sentence can't name a side that isn't playing. */
 const allTeamNames = slate.games.flatMap((g) => [teamName(g.home), teamName(g.away)]);
-
 const byId = new Map(slate.games.map((g) => [g.id, g]));
-let accepted = 0;
-const rejected = [];
 
-for (const { id, reason } of reasons ?? []) {
+const validate = (text, id) => {
   const game = byId.get(id);
-  if (!game) {
-    rejected.push(`unknown game id ${id}`);
-    continue;
-  }
-  const sourceText = (previews.get(game.id) ?? [])
+  const sourceText = (previews.get(id) ?? [])
     .map((p) => `${p.headline} ${p.description}`)
     .join(" ");
-  const problem = problemWith(reason, game, { teamName, allTeamNames, sourceText });
-  if (problem) {
-    rejected.push(`${id}: ${problem} — "${reason}"`);
-    continue;
-  }
-  game.reason = reason.trim();
-  accepted++;
-}
+  return problemWith(text, game, { teamName, allTeamNames, sourceText });
+};
 
 if (SELF_TEST) {
   console.log("Self-test — the sentence it produced, not written to disk:\n");
   for (const game of needsReason) {
+    const reason = results.get(game.id);
+    const problem = reason ? validate(reason, game.id) : "no response";
     console.log(`  ${teamName(game.away)} at ${teamName(game.home)}`);
-    console.log(`  "${game.reason ?? "(rejected)"}"\n`);
+    console.log(`  ${problem ? `REJECTED (${problem})` : "ok"}: "${reason ?? ""}"\n`);
   }
+  if (results.size === 0) process.exit(1);
 } else {
-  slate.reasonsWrittenAt = new Date().toISOString();
-  await writeFile(SLATE, `${JSON.stringify(slate, null, 2)}\n`);
+  const { section, log } = settle(prose.reasons, wanted, results, validate);
+  prose.reasons = section;
+  writeCache(prose);
+  printLog("game reasons", log);
 }
-
-console.log(
-  `${accepted}/${SELF_TEST ? needsReason.length : slate.games.length} reasons accepted`,
-);
-for (const r of rejected) console.log(`  rejected — ${r}`);
-console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
-);
+if (usage) console.log(`tokens: ${usage.input} in, ${usage.output} out`);

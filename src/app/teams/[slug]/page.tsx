@@ -23,13 +23,12 @@ import {
   UNIT_LABEL,
   UNIT_ORDER,
 } from "@/lib/team-detail";
-import { TEAMS, getTeam } from "@/lib/mock/teams";
-import { teamColor, teamLogo } from "@/lib/teams";
+import { NFL_TEAMS, teamBySlug, teamColor, teamLogo } from "@/lib/teams";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return TEAMS.map((t) => ({ slug: t.slug }));
+  return NFL_TEAMS.map((t) => ({ slug: t.slug }));
 }
 
 type PageProps = { params: Promise<{ slug: string }> };
@@ -43,18 +42,18 @@ const fmt = new Intl.DateTimeFormat("en-US", {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const team = getTeam(slug);
+  const team = teamBySlug(slug);
   if (!team) return {};
   const entry = getEntry("teams", slug);
   return {
-    title: `${team.city} ${team.name} — Field guide`,
-    description: entry?.frontmatter.summary ?? `${team.city} ${team.name}.`,
+    title: `${team.displayName} — Field guide`,
+    description: entry?.frontmatter.summary ?? `${team.displayName}.`,
   };
 }
 
 export default async function TeamDetailPage({ params }: PageProps) {
   const { slug } = await params;
-  const team = getTeam(slug);
+  const team = teamBySlug(slug);
   if (!team) notFound();
 
   const logo = teamLogo(team.id);
@@ -100,7 +99,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
               {team.conference} {team.division}
             </p>
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-fg">
-              {team.city} {team.name}
+              {team.displayName}
             </h1>
           </div>
         </div>

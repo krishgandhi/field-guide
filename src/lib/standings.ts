@@ -23,7 +23,6 @@ const standingsSchema = z.strictObject({
   season: z.number(),
   /** True when the current season hasn't started and these are last year's finals. */
   isPreviousSeason: z.boolean(),
-  fetchedAt: z.string(),
   teams: z.record(z.string(), recordSchema),
 });
 

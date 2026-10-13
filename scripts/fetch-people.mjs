@@ -18,53 +18,36 @@
  * nothing in the team payload — so a coaching entry carries no ids and simply
  * renders no card.
  *
- * Node builtins only, like the other fetchers.
+ * Needs `npm ci` (gray-matter, to read move frontmatter) — unlike the other
+ * fetchers, which are builtins only.
  *
  *   node scripts/fetch-people.mjs
  */
 
-import {
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  readdirSync,
-  writeFileSync,
-} from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { createHash } from "node:crypto";
+import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
+import { readMoves } from "./lib/moves.mts";
+import { stamp } from "./lib/meta.mts";
 
-const MOVES = "content/moves";
 const OUT = "src/data/people.json";
 const SHOTS = "public/players";
 
-const ATHLETE =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 /** The combiner resize; the raw file is ten times the size for no benefit. */
 const HEADSHOT = (id) =>
   `https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/${id}.png&w=160&h=160`;
 
-/** Every id referenced by an entry. Deliberately parses only that one line. */
+/** Every ESPN athlete id referenced by an entry's `move.people`. */
 function referencedIds() {
   const ids = new Set();
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    const line = raw.match(/^ {2}people: \[([^\]]*)\]/m);
-    if (!line) continue;
-    for (const part of line[1].split(",")) {
-      const id = part.trim().replace(/^["']|["']$/g, "");
-      if (/^\d+$/.test(id)) ids.add(id);
-    }
+  for (const { move } of readMoves()) {
+    for (const id of move.people) if (/^\d+$/.test(id)) ids.add(id);
   }
   return [...ids];
 }
 
 async function fetchPerson(id) {
-  const res = await fetch(`${ATHLETE}/${id}`, {
-    headers: { "user-agent": "field-guide (personal, non-commercial)" },
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`athlete ${id} returned ${res.status}`);
-  const body = await res.json();
+  const body = await getJson(`${ATHLETE}/${id}`);
   const a = body.athlete ?? body;
   return {
     id: String(a.id ?? id),
@@ -98,12 +81,7 @@ async function fetchPerson(id) {
  */
 async function fetchEvidence(id) {
   try {
-    const res = await fetch(`${ATHLETE}/${id}/overview`, {
-      headers: { "user-agent": "field-guide (personal, non-commercial)" },
-      signal: AbortSignal.timeout(20000),
-    });
-    if (!res.ok) return { awards: [], career: {}, season: {} };
-    const body = await res.json();
+    const body = await getJson(`${ATHLETE}/${id}/overview`);
 
     const awards = (body.awards ?? []).map((a) => ({
       name: a.name ?? null,
@@ -124,39 +102,20 @@ async function fetchEvidence(id) {
       );
     };
 
-    return { awards, career: split("Career"), season: split("Regular Season") };
+    // Career only. This season's split moved every game day and nothing reads
+    // it any more — profile lines are written from awards and career totals.
+    return { awards, career: split("Career") };
   } catch {
-    return { awards: [], career: {}, season: {} };
+    return { awards: [], career: {} };
   }
-}
-
-/**
- * Fingerprint of everything a profile line is written from.
- *
- * write-profiles rewrites a line only when this moves. Without it the line is
- * either frozen forever — Allen wins a second MVP and the card never says so —
- * or rewritten daily for no reason, which §13 rules out.
- */
-function evidenceHash(person, evidence) {
-  const material = JSON.stringify([
-    person.position,
-    person.team,
-    person.experience,
-    person.draft,
-    evidence.awards,
-    evidence.career,
-    evidence.season,
-  ]);
-  return createHash("sha256").update(material).digest("hex").slice(0, 16);
 }
 
 async function saveHeadshot(id) {
   const file = path.join(SHOTS, `${id}.png`);
   // Headshots don't change; re-downloading a dozen of them daily is waste.
   if (existsSync(file)) return "cached";
-  const res = await fetch(HEADSHOT(id), { signal: AbortSignal.timeout(20000) });
-  if (!res.ok) return "missing";
-  const buf = Buffer.from(await res.arrayBuffer());
+  const buf = await getBytes(HEADSHOT(id)).catch(() => null);
+  if (!buf) return "missing";
   // Guard against ESPN handing back an error page with a 200.
   if (buf.length < 1000 || buf.subarray(1, 4).toString() !== "PNG") return "missing";
   writeFileSync(file, buf);
@@ -169,8 +128,11 @@ console.log(`${ids.length} people referenced by move entries.`);
 mkdirSync(SHOTS, { recursive: true });
 mkdirSync("src/data", { recursive: true });
 
-// Keep any existing prose written by write-profiles.mjs — this script owns the
-// facts, that one owns the sentence, and neither should clobber the other.
+// Facts only. The profile line lives in src/data/prose-cache.json and belongs
+// to write-profiles.mjs. This script used to carry it here, and deleted it the
+// moment the evidence moved — before any replacement existed — which took the
+// site from 17 lines to 3. `existing` is read only so a failed fetch keeps
+// yesterday's facts.
 const existing = existsSync(OUT)
   ? JSON.parse(readFileSync(OUT, "utf8")).people ?? {}
   : {};
@@ -183,21 +145,10 @@ for (const id of ids) {
     const person = await fetchPerson(id);
     const evidence = await fetchEvidence(id);
     const shot = await saveHeadshot(id);
-    const hash = evidenceHash(person, evidence);
     people[id] = {
       ...person,
       ...evidence,
       headshot: shot === "missing" ? null : `/players/${id}.png`,
-      evidenceHash: hash,
-      // Kept unless the evidence itself changed — see evidenceHash above.
-      //
-      // promptVersion travels WITH the blurb. Carrying one without the other
-      // made write-profiles see a version mismatch every single day and
-      // rewrite all twelve lines, which is the daily token burn the hash
-      // exists to prevent (§13).
-      blurb: existing[id]?.evidenceHash === hash ? existing[id].blurb : null,
-      promptVersion:
-        existing[id]?.evidenceHash === hash ? existing[id].promptVersion : null,
     };
     console.log(
       `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"}` +
@@ -214,8 +165,9 @@ for (const id of ids) {
 
 writeFileSync(
   OUT,
-  `${JSON.stringify({ fetchedAt: new Date().toISOString(), people }, null, 2)}\n`,
+  `${JSON.stringify({ people }, null, 2)}\n`,
 );
+stamp("people");
 console.log(
   `\nWrote ${Object.keys(people).length} to ${OUT}${failed ? `, ${failed} failed` : ""}.`,
 );

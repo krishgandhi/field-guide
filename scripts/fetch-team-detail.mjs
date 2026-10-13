@@ -23,16 +23,22 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import {
+  ATHLETES as ATHLETE_OVERVIEW,
+  CORE,
+  SITE,
+  currentPhase,
+  followRef,
+  getJson,
+} from "./lib/espn.mts";
+import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
-const CORE = "https://sports.core.api.espn.com/v2/sports/football/leagues/nfl";
-const SITE = "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
-const ATHLETE_OVERVIEW =
-  "https://site.api.espn.com/apis/common/v3/sports/football/nfl/athletes";
 const OUT = "src/data/team-detail.json";
 const DRAFTS = "src/data/draft-origins.json";
-const SEASON = 2026;
+/** Rosters, depth charts and coaches for the season ESPN says we're in. */
+const { season: SEASON } = await currentPhase();
 
-const TEAMS = JSON.parse(readFileSync("src/lib/teams/nfl-teams.json", "utf8"));
 const STANDINGS = JSON.parse(readFileSync("src/data/standings.json", "utf8"));
 
 /**
@@ -65,15 +71,6 @@ const KEY_SLOTS = {
   ],
 };
 
-async function getJson(url) {
-  const res = await fetch(url, {
-    headers: { "user-agent": "field-guide (personal, non-commercial)" },
-    signal: AbortSignal.timeout(20000),
-  });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return res.json();
-}
-
 /** id → { name, position } for everyone on a roster, in one request. */
 /**
  * The same index from the core api, one request per player.
@@ -92,7 +89,7 @@ async function rosterFromCore(espnId) {
   for (const item of list.items ?? []) {
     if (!item?.$ref) continue;
     try {
-      const a = await getJson(item.$ref.replace(/^http:/, "https:"));
+      const a = await getJson(followRef(item.$ref));
       if (!a?.id) continue;
       out.set(String(a.id), {
         name: a.fullName ?? a.displayName ?? null,
@@ -186,7 +183,7 @@ async function headCoach(espnId) {
   const list = await getJson(`${CORE}/seasons/${SEASON}/teams/${espnId}/coaches`);
   const ref = (list.items ?? [])[0]?.$ref;
   if (!ref) return null;
-  const c = await getJson(ref.replace(/^http:/, "https:"));
+  const c = await getJson(followRef(ref));
   const name = [c.firstName, c.lastName].filter(Boolean).join(" ");
   return name
     ? { name, experience: typeof c.experience === "number" ? c.experience : null }
@@ -460,9 +457,10 @@ for (const team of TEAMS) {
 }
 
 // Pass two: rank and write.
-// Blurbs are owned by write-unit-notes.mjs and must survive a refresh. This
-// script rebuilt each unit from scratch, wiping them, so all 96 were rewritten
-// every single day — the same waste the people cache already had to fix (§13).
+// Facts only. The "what kind of unit" lines live in src/data/prose-cache.json,
+// owned by write-unit-notes.mjs — this script used to carry them forward by
+// hand, and rebuilding a unit without them wiped all 96 daily.
+// `previous` is still read so a team whose fetch failed keeps yesterday's facts.
 const previous = existsSync(OUT)
   ? JSON.parse(readFileSync(OUT, "utf8")).teams ?? {}
   : {};
@@ -475,8 +473,7 @@ for (const team of TEAMS) {
     // Yesterday's facts beat no facts. Dropping the team wrote a 31-team file
     // and deleted Arizona's entire squad section from the site for a week — one
     // failed ESPN call on 1 September, and every run after that just copied the
-    // gap forward. The blurbs below already work this way; the rest of the
-    // entry should too.
+    // gap forward.
     if (previous[team.id]) {
       teams[team.id] = previous[team.id];
       carried.push(team.id);
@@ -503,16 +500,6 @@ for (const team of TEAMS) {
             rank: ranks[u],
             score: scoreFromRank(ranks[u]),
             note: noteFor(u, ranks[u], previousSeason),
-            ...(() => {
-              const was = previous[team.id]?.units?.[u];
-              return was?.blurb
-                ? {
-                    blurb: was.blurb,
-                    blurbHash: was.blurbHash,
-                    promptVersion: was.promptVersion,
-                  }
-                : {};
-            })(),
             /** Evidence for write-unit-notes.mjs; never rendered directly. */
             stats: stats?.[u] ?? {},
             ...(u === "offence"
@@ -548,7 +535,7 @@ if (draftFetches) console.log(`\nLooked up ${draftFetches} new draft origins.`);
 writeFileSync(
   OUT,
   `${JSON.stringify(
-    { fetchedAt: new Date().toISOString(), statsSeason, previousSeason, teams },
+    { statsSeason, previousSeason, teams },
     null,
     2,
   )}\n`,
@@ -561,6 +548,7 @@ console.log(
 // Exit non-zero when the file is short of the league. The run that lost Arizona
 // printed "31 teams, 1 failed" and exited 0, so the workflow went green and
 // nothing surfaced it for a week.
+if (Object.keys(teams).length === TEAMS.length) stamp("teamDetail");
 if (Object.keys(teams).length < TEAMS.length) {
   console.error(
     `\nOnly ${Object.keys(teams).length} of ${TEAMS.length} teams in ${OUT}.`,
