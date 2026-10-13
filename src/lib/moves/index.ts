@@ -128,6 +128,31 @@ export function getMovesByDate(): Move[] {
     .sort((a, b) => b.date.localeCompare(a.date) || b.bigness - a.bigness);
 }
 
+/**
+ * What the badge on a checked move says.
+ *
+ * Verified entries used to fall through to the badge's default lead, "Sample
+ * data.", which contradicted the note right next to it ("Real event."). These
+ * are real events checked against the linked reporting; the only caveat left
+ * is that the scores are judgement — and only when there are scores.
+ */
+export function verifiedBadgeCopy(move: Pick<Move, "rubric" | "sources">): {
+  lead: string;
+  note: string;
+} {
+  const checked =
+    move.sources.length > 0
+      ? "The facts were checked against the reporting linked below."
+      : "The facts were checked against reporting.";
+  return {
+    lead: "Checked.",
+    note:
+      move.rubric.length > 0
+        ? `${checked} The 1–5 scores are judgement calls.`
+        : checked,
+  };
+}
+
 /** How far back "recent" reaches for the home screen's headline move. */
 export const RECENT_MOVE_DAYS = 30;
 

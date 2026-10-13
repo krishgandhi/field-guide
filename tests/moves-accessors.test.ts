@@ -5,7 +5,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { getMoves, getMovesByDate, headlineMove, type Move } from "@/lib/moves";
+import { getMoves, getMovesByDate, headlineMove, verifiedBadgeCopy, type Move } from "@/lib/moves";
 
 const move = (slug: string, date: string, bigness: number) =>
   ({ slug, date, bigness }) as Move;
@@ -45,5 +45,20 @@ describe("getMovesByDate", () => {
     const byDate = getMovesByDate();
     expect(byDate.map((m) => m.date)).toEqual([...byDate.map((m) => m.date)].sort().reverse());
     expect(byDate.length).toBe(getMoves().length);
+  });
+});
+
+describe("verifiedBadgeCopy", () => {
+  const source = [{ label: "ESPN", url: "https://espn.com/x" }];
+  it("never calls a checked move sample data", () => {
+    for (const m of getMoves().filter((m) => m.verified)) {
+      const { lead, note } = verifiedBadgeCopy(m);
+      expect(`${lead} ${note}`).not.toMatch(/sample|placeholder/i);
+    }
+  });
+  it("mentions scores only when there are scores", () => {
+    expect(verifiedBadgeCopy({ rubric: [], sources: source }).note).not.toMatch(/score/);
+    const scored = getMoves().find((m) => m.rubric.length > 0)!;
+    expect(verifiedBadgeCopy(scored).note).toMatch(/judgement calls/);
   });
 });

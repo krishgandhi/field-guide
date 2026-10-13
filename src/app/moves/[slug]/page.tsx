@@ -13,7 +13,7 @@ import {
   PageShell,
   SectionHeader,
 } from "@/components/ui/page-header";
-import { getMove, getMoveSlugs } from "@/lib/moves";
+import { getMove, getMoveSlugs, verifiedBadgeCopy } from "@/lib/moves";
 import { createExplainer } from "@/lib/glossary/explain";
 import { peopleByIds } from "@/lib/people";
 import { teamLogo, teamName } from "@/lib/teams";
@@ -85,7 +85,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
       </p>
 
       {move.verified ? (
-        <SampleDataBadge note="Real event. The scores below are judgement calls." />
+        <SampleDataBadge {...verifiedBadgeCopy(move)} />
       ) : (
         <UncheckedBadge sensitive={move.sensitive} full />
       )}
