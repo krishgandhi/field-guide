@@ -66,6 +66,27 @@ describe("§8 scoring", () => {
   });
 });
 
+describe("factor kinds", () => {
+  // write-reasons used to detect primetime with reason.startsWith("Primetime"),
+  // which only one of the three standalone phrasings does. The phrasing is
+  // chosen by a hash of the game id, so try enough ids to hit all three.
+  it("every standalone phrasing is tagged as standalone", () => {
+    const phrasings = new Set<string>();
+    for (let i = 0; i < 60; i++) {
+      const f = factorsFor(game({ id: `g${i}`, kickoff: "2026-09-15T00:20:00Z" }), 1).find(
+        (x) => x.kind === "standalone",
+      );
+      expect(f, `game g${i} kicks off Monday night`).toBeDefined();
+      phrasings.add(f!.reason);
+    }
+    expect(phrasings.size).toBe(3);
+  });
+
+  it("a Sunday 1pm game has no standalone factor", () => {
+    expect(factorsFor(blowout, 1).some((f) => f.kind === "standalone")).toBe(false);
+  });
+});
+
 describe("reasons", () => {
   it("every reason is a plain sentence with no jargon", () => {
     const jargon = ["leverage", "seeding", "implications", "efficiency", "variance", "spread"];

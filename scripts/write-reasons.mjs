@@ -198,7 +198,7 @@ const games = needsReason.map((game) => {
     sameDivision: isDivisional(game.home, game.away),
     longstandingRivalry: isRivalry(game.home, game.away),
     eliteQuarterbacks: [game.home, game.away].filter(hasStarQb).length,
-    primetime: factors.some((f) => f.reason.startsWith("Primetime")),
+    primetime: factors.some((f) => f.kind === "standalone"),
     involvesBills: game.home === "BUF" || game.away === "BUF",
     // Headlines only, never article bodies (§9).
     reporting: (previews.get(game.id) ?? []).map((p) => ({

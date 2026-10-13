@@ -23,7 +23,16 @@ import { noteFor } from "@/lib/slate/notes";
  * "leverage", no "seeding implications".
  */
 
+/**
+ * Which §8 factor fired. Code that needs to know WHY a game scored — the
+ * prose writer asking "is this primetime?" — reads this, never the wording:
+ * the sentences are picked from several phrasings per factor, and matching on
+ * text ("starts with Primetime") silently missed two of the three.
+ */
+export type FactorKind = "close" | "division" | "quarterbacks" | "standalone" | "rivalry";
+
 export type Factor = {
+  kind: FactorKind;
   points: number;
   /** Ordered by how much it should lead the sentence. */
   priority: number;
@@ -80,6 +89,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
   if (game.spread !== null) {
     if (game.spread < 4) {
       found.push({
+        kind: "close",
         points: 3,
         priority: 1,
         reason: pick(
@@ -95,6 +105,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
       });
     } else if (game.spread < 7) {
       found.push({
+        kind: "close",
         points: 1,
         priority: 5,
         reason: pick(
@@ -109,6 +120,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
       });
     } else {
       found.push({
+        kind: "close",
         points: 0,
         priority: 9,
         reason: pick(
@@ -128,6 +140,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
   if (isDivisional(game.home, game.away)) {
     const late = week >= 10;
     found.push({
+      kind: "division",
       points: late ? 2 : 1,
       priority: 2,
       reason: late
@@ -156,6 +169,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
   const stars = [game.home, game.away].filter(hasStarQb).length;
   if (stars === 2) {
     found.push({
+      kind: "quarterbacks",
       points: 2,
       priority: 3,
       reason: pick(
@@ -170,6 +184,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
     });
   } else if (stars === 1) {
     found.push({
+      kind: "quarterbacks",
       points: 1,
       priority: 6,
       reason: pick(
@@ -186,6 +201,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
   // 5. Nothing else is on.
   if (isStandalone(game)) {
     found.push({
+      kind: "standalone",
       points: 1,
       priority: 7,
       reason: pick(
@@ -203,6 +219,7 @@ export function factorsFor(game: Game, week: number): Factor[] {
   // 6. They don't like each other.
   if (isRivalry(game.home, game.away)) {
     found.push({
+      kind: "rivalry",
       points: 1,
       priority: 4,
       reason: pick(
