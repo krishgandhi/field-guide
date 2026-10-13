@@ -1,0 +1,47 @@
+name: CI
+
+# The gate in front of main. Every check the site depends on, in the order a
+# failure is cheapest to read: style, types, behaviour, then the real build.
+#
+# Until this existed nothing ran before a push — the data bots and hand pushes
+# alike could land a broken build, and the first sign was a failed Vercel
+# deploy. Offline only: no API key, no network beyond npm, so a third-party
+# outage can never turn this red.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
