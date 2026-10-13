@@ -69,6 +69,42 @@ export class ClaudeEmpty extends Error {
   }
 }
 
+/**
+ * Exit code for "the API refused our setup": a bad key (401/403), or a
+ * request it will never accept (400 — a bad parameter; 404 — a bad model id).
+ * Retrying tomorrow cannot fix any of them, so they stop the process.
+ *
+ * Distinct from 1 on purpose: the data workflow (scripts/ci/step.sh) lets an
+ * ordinary failure — ESPN down, a truncated reply — pass with a warning so the
+ * rest of the refresh still lands, but fails the job on this code. A key that
+ * silently 401s for a month is exactly what happened from 12 September.
+ */
+export const CONFIG_EXIT = 3;
+
+/** Why this error means the setup is wrong, or null for an ordinary failure. */
+export function configProblem(err: unknown): string | null {
+  if (err instanceof Anthropic.AuthenticationError || err instanceof Anthropic.PermissionDeniedError) {
+    return (
+      `the Anthropic API rejected the key (${err.status}). ` +
+      "Rotate ANTHROPIC_API_KEY — locally in .env.local, in CI under the repo's Actions secrets."
+    );
+  }
+  if (err instanceof Anthropic.NotFoundError) {
+    return `the API returned 404 — usually a model id it doesn't recognise (${err.message}).`;
+  }
+  if (err instanceof Anthropic.BadRequestError) {
+    // `fallbacks` (server-side refusal fallback) is a beta parameter this
+    // project has not seen documented outside the SDK's types. If the API
+    // ever rejects it, say so plainly rather than leaving a generic 400.
+    const hint = /fallback/i.test(err.message)
+      ? " The request's `fallbacks` parameter (beta server-side-fallback-2026-07-01) was rejected —" +
+        " remove it and FALLBACK_BETA from scripts/lib/claude.mts."
+      : "";
+    return `the API rejected the request as invalid (400): ${err.message}.${hint}`;
+  }
+  return null;
+}
+
 /** Nothing usable came back, but nothing is broken either: keep what's there. */
 export const isNoResult = (err: unknown) =>
   err instanceof ClaudeRefusal || err instanceof ClaudeEmpty;
@@ -94,8 +130,9 @@ export type JsonRequest = {
  *   ClaudeRefusal   — declined; callers decide whether that is fatal.
  *   ClaudeEmpty     — no text came back; same treatment as a refusal.
  *   ClaudeTruncated — hit max_tokens; never parse a half-written payload.
- * A rejected key (401/403) exits the process non-zero rather than throwing,
- * so no caller's catch block can turn it into a quiet "nothing to do".
+ * A rejected key or an invalid request (401/403/400/404) exits the process
+ * with CONFIG_EXIT rather than throwing, so no caller's catch block can turn
+ * it into a quiet "nothing to do".
  */
 export async function generateJson<T>(req: JsonRequest): Promise<{ data: T; usage: Usage }> {
   let response: Beta.BetaMessage;
@@ -114,12 +151,14 @@ export async function generateJson<T>(req: JsonRequest): Promise<{ data: T; usag
       messages: [{ role: "user", content: req.user }],
     });
   } catch (err) {
-    if (err instanceof Anthropic.AuthenticationError || err instanceof Anthropic.PermissionDeniedError) {
-      console.error(
-        `\n${req.label}: the Anthropic API rejected the key (${err.status}). ` +
-          "Rotate ANTHROPIC_API_KEY — locally in .env.local, in CI under the repo's Actions secrets.\n",
-      );
-      process.exit(1);
+    const fatal = configProblem(err);
+    if (fatal) {
+      const message = `${req.label}: ${fatal}`;
+      console.error(`\n${message}\n`);
+      // A workflow annotation, so it shows on the run's summary page and not
+      // only in a log nobody opens.
+      if (process.env.GITHUB_ACTIONS) console.log(`::error title=Claude API::${message}`);
+      process.exit(CONFIG_EXIT);
     }
     throw err;
   }

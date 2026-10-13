@@ -114,8 +114,35 @@ describe("generateJson", () => {
     }) as never);
     const log = vi.spyOn(console, "error").mockImplementation(() => {});
     await expect(generateJson(request)).rejects.toThrow("exited");
-    expect(exit).toHaveBeenCalledWith(1);
+    expect(exit).toHaveBeenCalledWith(3);
     exit.mockRestore();
     log.mockRestore();
   });
+
+  it.each([
+    [400, "invalid_request_error", "max_tokens: must be positive", /invalid \(400\)/],
+    [400, "invalid_request_error", "fallbacks: Extra inputs are not permitted", /fallbacks.*rejected/],
+    [404, "not_found_error", "model: claude-nope", /404.*model id/],
+  ])("exits loudly on %i (%s)", async (status, type, message, expected) => {
+    const { generateJson, CONFIG_EXIT } = await load();
+    next = { status, body: { type: "error", error: { type, message } } };
+    const exit = vi.spyOn(process, "exit").mockImplementation((() => {
+      throw new Error("exited");
+    }) as never);
+    const log = vi.spyOn(console, "error").mockImplementation(() => {});
+    await expect(generateJson(request)).rejects.toThrow("exited");
+    expect(exit).toHaveBeenCalledWith(CONFIG_EXIT);
+    expect(String(log.mock.calls[0]?.[0])).toMatch(expected);
+    exit.mockRestore();
+    log.mockRestore();
+  });
+
+  it("a 500 is an ordinary, catchable failure", async () => {
+    const { generateJson } = await load();
+    next = { status: 500, body: { type: "error", error: { type: "api_error", message: "boom" } } };
+    const exit = vi.spyOn(process, "exit");
+    await expect(generateJson({ ...request, label: "t" })).rejects.toThrow();
+    expect(exit).not.toHaveBeenCalled();
+    exit.mockRestore();
+  }, 30_000);
 });
