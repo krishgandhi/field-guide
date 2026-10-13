@@ -8,7 +8,7 @@ import { getAllEntries } from "@/lib/content";
 import { CALENDAR } from "@/lib/mock/games";
 import { SLATE } from "@/lib/slate";
 import { sortForViewing } from "@/lib/watchability";
-import { getMoves } from "@/lib/moves";
+import { headlineMove } from "@/lib/moves";
 
 const fmt = new Intl.DateTimeFormat("en-US", {
   weekday: "short",
@@ -16,6 +16,13 @@ const fmt = new Intl.DateTimeFormat("en-US", {
   minute: "2-digit",
   timeZone: "America/New_York",
 });
+
+/**
+ * "Recent move" and "coming up" depend on today's date, so the page is
+ * re-rendered hourly from the committed files rather than frozen at build
+ * time. It still reads only repo data (§4) — nothing is fetched.
+ */
+export const revalidate = 3600;
 
 /**
  * "This week" — the companion home screen.
@@ -28,7 +35,7 @@ export default function ThisWeekPage() {
   const slate = sortForViewing(SLATE.games, SLATE.week);
   const billsGame = slate.find((g) => g.home === "BUF" || g.away === "BUF");
   const alsoWatch = slate.filter((g) => g !== billsGame).slice(0, 2);
-  const topMove = getMoves()[0];
+  const headline = headlineMove();
   const nextDate = CALENDAR[0];
   const glossaryCount = getAllEntries("glossary").length;
 
@@ -77,20 +84,24 @@ export default function ThisWeekPage() {
         <ChevronRight size={16} aria-hidden />
       </Link>
 
-      <SectionHeader title="Biggest recent move" />
-      <Link href={`/moves/${topMove.slug}`} className="block">
-        <Card className="transition-colors hover:border-fg/20">
-          <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-semibold leading-snug text-fg">
-              {topMove.headline}
-            </h3>
-            <BignessPill value={topMove.bigness} />
-          </div>
-          <p className="mt-2 text-sm leading-snug text-fg-dim">
-            {topMove.soWhat}
-          </p>
-        </Card>
-      </Link>
+      {headline ? (
+        <>
+          <SectionHeader title={headline.title} />
+          <Link href={`/moves/${headline.move.slug}`} className="block">
+            <Card className="transition-colors hover:border-fg/20">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="text-base font-semibold leading-snug text-fg">
+                  {headline.move.headline}
+                </h3>
+                <BignessPill value={headline.move.bigness} />
+              </div>
+              <p className="mt-2 text-sm leading-snug text-fg-dim">
+                {headline.move.soWhat}
+              </p>
+            </Card>
+          </Link>
+        </>
+      ) : null}
 
       <SectionHeader title="Coming up" />
       <Card>

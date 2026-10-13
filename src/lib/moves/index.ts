@@ -121,6 +121,43 @@ export function getMoves(): Move[] {
     .sort((a, b) => b.bigness - a.bigness || b.date.localeCompare(a.date));
 }
 
+/** Every move, newest first. Ties break biggest-first. */
+export function getMovesByDate(): Move[] {
+  return getAllEntries("moves")
+    .map(toMove)
+    .sort((a, b) => b.date.localeCompare(a.date) || b.bigness - a.bigness);
+}
+
+/** How far back "recent" reaches for the home screen's headline move. */
+export const RECENT_MOVE_DAYS = 30;
+
+/**
+ * The one move the home screen leads with, and what to call it.
+ *
+ * getMoves() is biggest-first, so taking its head meant June's Garrett trade
+ * stayed "the biggest recent move" forever. This takes the biggest move of the
+ * last month; when nothing happened that recently it shows the newest one and
+ * says "latest" rather than claiming it is recent.
+ *
+ * `moves` and `now` are parameters so the choice can be tested on fixed
+ * inputs; the page passes nothing.
+ */
+export function headlineMove(
+  now: number = Date.now(),
+  moves: Move[] = getMovesByDate(),
+): { move: Move; title: string } | null {
+  const cutoff = now - RECENT_MOVE_DAYS * 86_400_000;
+  const recent = moves
+    .filter((m) => {
+      const at = Date.parse(`${m.date}T00:00:00Z`);
+      return at >= cutoff && at <= now;
+    })
+    .sort((a, b) => b.bigness - a.bigness || b.date.localeCompare(a.date));
+  if (recent.length > 0) return { move: recent[0], title: "Biggest recent move" };
+  const newest = [...moves].sort((a, b) => b.date.localeCompare(a.date))[0];
+  return newest ? { move: newest, title: "Latest move" } : null;
+}
+
 export function getMovesForTeam(id: string): Move[] {
   const wanted = teamId(id);
   return getMoves().filter((m) => m.teams.includes(wanted));
