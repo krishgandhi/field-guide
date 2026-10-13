@@ -9,7 +9,9 @@ import {
   careerAtLeast,
   floorToLeadingDigit,
   problemWithBlurb,
+  problemWithStaleBlurb,
   profileEvidence,
+  teamsNamed,
 } from "../scripts/lib/profile-evidence.mjs";
 
 const allen = {
@@ -76,5 +78,47 @@ describe("problemWithBlurb", () => {
 
   it("rejects a line that repeats his name", () => {
     expect(problemWithBlurb(good.replace("A quarterback", "Allen, a quarterback"), allen)).toMatch(/name/);
+  });
+});
+
+describe("problemWithStaleBlurb — a line written before a trade", () => {
+  const garrett = {
+    id: "3122132",
+    name: "Myles Garrett",
+    position: "Defensive End",
+    team: "Los Angeles Rams",
+    teamId: "LAR",
+    age: 30,
+    experience: "10th Season",
+    draft: "2017: Rd 1, Pk 1 (CLE)",
+    awards: [{ name: "Defensive Player of the Year", count: "2x", seasons: ["2023", "2024"] }],
+    career: { Sacks: "125" },
+  };
+  const tail =
+    " He is the best defensive player in football, a two-time Defensive Player of the Year with more than a hundred career sacks.";
+  const preTrade = "A defensive end taken first overall in 2017 and now in his tenth season, the centrepiece of the Browns." + tail;
+  const postTrade =
+    "A defensive end taken first overall in 2017 and now in his tenth season, recently traded from Cleveland to the Rams." + tail;
+  const noTeam = "A defensive end taken first overall in 2017 and now in his tenth season, chasing quarterbacks for a living." + tail;
+
+  it("the ordinary check passes the pre-trade line — which is the bug", () => {
+    expect(problemWithBlurb(preTrade, garrett)).toBeNull();
+  });
+
+  it("refuses a line naming only his former club", () => {
+    expect(problemWithStaleBlurb(preTrade, garrett)).toMatch(/Cleveland Browns.*Los Angeles Rams/);
+  });
+
+  it("accepts a former club named alongside the current one", () => {
+    expect(problemWithStaleBlurb(postTrade, garrett)).toBeNull();
+  });
+
+  it("accepts a line naming no club", () => {
+    expect(problemWithStaleBlurb(noTeam, garrett)).toBeNull();
+  });
+
+  it("does not read a shared city as the other club", () => {
+    expect(teamsNamed("He now plays in Los Angeles.", garrett)).toEqual({ namesCurrent: true, others: [] });
+    expect(teamsNamed("He left the Chargers.", garrett).others).toEqual(["Los Angeles Chargers"]);
   });
 });

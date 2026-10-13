@@ -33,7 +33,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { readMoves } from "./lib/moves.mts";
-import { problemWithBlurb, profileEvidence } from "./lib/profile-evidence.mjs";
+import { problemWithBlurb, problemWithStaleBlurb, profileEvidence } from "./lib/profile-evidence.mjs";
 import {
   needsWriting,
   printLog,
@@ -190,13 +190,19 @@ if (hasKey() && todo.length > 0) {
 
 // --- validation and storage ------------------------------------------------
 
-// The guard lives in scripts/lib/profile-evidence.mjs so it can be tested
-// without a key. It also decides whether an out-of-date line may stay up
-// until a replacement validates — which is what fetch-people got wrong by
-// deleting lines before anything replaced them.
+// The guards live in scripts/lib/profile-evidence.mjs so they can be tested
+// without a key. An out-of-date line may stay up until a replacement
+// validates — fetch-people used to delete lines before anything replaced
+// them — but only by the stricter problemWithStaleBlurb, which also refuses a
+// line naming a former club without his current one. A trade moves the key,
+// and the old line is exactly the one that may still call him a Brown.
 const validate = (text, id) => {
   const w = byId.get(id);
   return problemWithBlurb(text, w.person, w.evidence.mentionedOnSiteAs);
+};
+const validateStale = (text, id) => {
+  const w = byId.get(id);
+  return problemWithStaleBlurb(text, w.person, w.evidence.mentionedOnSiteAs);
 };
 
 if (SELF_TEST) {
@@ -208,7 +214,7 @@ if (SELF_TEST) {
   console.log("\n(self-test: nothing written)");
   if (results.size === 0) process.exit(1);
 } else {
-  const { section, log } = settle(prose.profiles, wanted, results, validate);
+  const { section, log } = settle(prose.profiles, wanted, results, validate, validateStale);
   prose.profiles = section;
   writeCache(prose);
   printLog("profile lines", log);

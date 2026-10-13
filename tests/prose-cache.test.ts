@@ -6,6 +6,7 @@
 import { describe, expect, it } from "vitest";
 import {
   chunk,
+  MAX_ATTEMPTS,
   needsWriting,
   proseKey,
   settle,
@@ -40,7 +41,7 @@ describe("needsWriting", () => {
   const section: ProseSection = {
     hit: { text: "Same inputs.", key: "k1" },
     stale: { text: "Old inputs.", key: "old" },
-    tried: { text: "", key: null, rejectedKey: "k3" },
+    tried: { text: "", key: null, rejectedKey: "k3", attempts: MAX_ATTEMPTS },
   };
 
   it("asks only for missing, stale and not-yet-rejected subjects", () => {
@@ -110,10 +111,65 @@ describe("settle", () => {
     expect(log.dropped).toHaveLength(1);
   });
 
-  it("remembers a rejected key even when there was no old line", () => {
+  it("remembers a rejected key even when there was no old line, and counts the tries", () => {
     const { section } = settle({}, [{ subject: "a", key: "k" }], new Map([["a", "Bad 1."]]), noDigits);
-    expect(section.a).toEqual({ text: "", key: null, rejectedKey: "k" });
-    expect(needsWriting(section, [{ subject: "a", key: "k" }])).toEqual([]);
+    expect(section.a).toEqual({ text: "", key: null, rejectedKey: "k", attempts: 1 });
+  });
+
+  it("retries a blank subject up to MAX_ATTEMPTS times per key, then stops", () => {
+    let section: ProseSection = {};
+    const wanted = [{ subject: "a", key: "k" }];
+    for (let i = 0; i < MAX_ATTEMPTS; i++) {
+      expect(needsWriting(section, wanted)).toHaveLength(1);
+      ({ section } = settle(section, wanted, new Map([["a", "Bad 1."]]), noDigits));
+    }
+    expect(section.a.attempts).toBe(MAX_ATTEMPTS);
+    expect(needsWriting(section, wanted)).toEqual([]);
+  });
+
+  it("does not retry a rejected key while an older line is still showing", () => {
+    const { section } = settle(
+      { a: { text: "Old and fine.", key: "old" } },
+      [{ subject: "a", key: "new" }],
+      new Map([["a", "Has 12 numbers."]]),
+      noDigits,
+    );
+    expect(needsWriting(section, [{ subject: "a", key: "new" }])).toEqual([]);
+  });
+
+  it("uses the stricter stale check on an out-of-date line, and removes it when that fails", () => {
+    const mentionsOldStarter = (t: string) => (t.includes("McCarthy") ? "names McCarthy" : null);
+    const { section, log } = settle(
+      { "MIN:offence": { text: "Runs through J.J. McCarthy.", key: "old" } },
+      [{ subject: "MIN:offence", key: "new" }],
+      new Map(),
+      ok,
+      mentionsOldStarter,
+    );
+    expect(section["MIN:offence"]).toBeUndefined();
+    expect(log.dropped).toEqual(["MIN:offence: names McCarthy"]);
+  });
+
+  it("does not hold back a retry after the stale line was dropped and the new one rejected", () => {
+    const { section } = settle(
+      { a: { text: "Old 7.", key: "old" } },
+      [{ subject: "a", key: "new" }],
+      new Map([["a", "New 9."]]),
+      noDigits,
+    );
+    expect(section.a.text).toBe("");
+    expect(needsWriting(section, [{ subject: "a", key: "new" }])).toHaveLength(1);
+  });
+
+  it("never applies the stale check to new text", () => {
+    const { section } = settle(
+      {},
+      [{ subject: "a", key: "k" }],
+      new Map([["a", "Fine."]]),
+      ok,
+      () => "would fail",
+    );
+    expect(section.a).toEqual({ text: "Fine.", key: "k" });
   });
 
   it("prunes subjects nobody wants any more", () => {

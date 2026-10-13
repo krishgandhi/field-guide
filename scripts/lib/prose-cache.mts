@@ -23,9 +23,10 @@
  * day rewriting all 96 unit notes because a rank moved from 11th to 12th.
  *
  * Replacement. Old text is replaced only once new text validates. Until then
- * the old line stays — but only while it still passes the same validator
- * against the CURRENT evidence, so a note naming a player who has left the
- * depth chart goes (§9: a missing entry, never a wrong one).
+ * the old line stays — but only while it passes a stricter check against the
+ * CURRENT evidence (every person it names still there, no former club named
+ * without the current one), so a note naming a player who has left the depth
+ * chart goes (§9: a missing entry, never a wrong one).
  *
  * Node builtins only.
  */
@@ -49,7 +50,16 @@ export type ProseEntry = {
    * call, not one a day.
    */
   rejectedKey?: string;
+  /**
+   * How many times `rejectedKey` has been tried. Only matters when nothing is
+   * showing: a subject with no line is retried up to MAX_ATTEMPTS times per
+   * key, so one bad reply can't leave a blank for as long as the inputs hold.
+   */
+  attempts?: number;
 };
+
+/** Tries per key for a subject that has no line to show. */
+export const MAX_ATTEMPTS = 3;
 
 export type ProseSection = Record<string, ProseEntry>;
 export type ProseCache = Record<ProseKind, ProseSection>;
@@ -103,12 +113,19 @@ export type Wanted = { subject: string; key: string };
 /**
  * Which subjects need the model: no entry, or an entry written for different
  * inputs — unless this exact key has already been tried and rejected.
+ *
+ * A rejection is final for the key only while an older line is still up. A
+ * subject showing nothing gets MAX_ATTEMPTS tries, so a dropped line isn't
+ * left blank until the inputs happen to move.
  */
 export function needsWriting<T extends Wanted>(section: ProseSection, wanted: T[]): T[] {
   return wanted.filter(({ subject, key }) => {
     const entry = section[subject];
     if (entry?.key === key) return false;
-    if (entry?.rejectedKey === key) return false;
+    if (entry?.rejectedKey === key) {
+      if (entry.text) return false;
+      return (entry.attempts ?? 1) < MAX_ATTEMPTS;
+    }
     return true;
   });
 }
@@ -128,15 +145,19 @@ export type SettleLog = {
  * Apply one run's results to a section, returning the new section.
  *
  * `results` holds what the model returned this run (absent subjects simply
- * weren't asked, or got no answer). `validate` returns a problem or null, and
- * is applied both to new text and to any out-of-date line that would
- * otherwise be left standing.
+ * weren't asked, or got no answer). `validate` returns a problem or null for
+ * new text. `validateStale` decides whether an out-of-date line may stay up
+ * until it is replaced; it defaults to `validate`, but a writer should pass
+ * something stricter. The ordinary validators check figures and wording, not
+ * who or which club a line names — so a note naming last year's starter
+ * passes them against this year's depth chart.
  */
 export function settle(
   section: ProseSection,
   wanted: Wanted[],
   results: Map<string, string>,
   validate: (text: string, subject: string) => string | null,
+  validateStale: (text: string, subject: string) => string | null = validate,
 ): { section: ProseSection; log: SettleLog } {
   const next: ProseSection = {};
   const log: SettleLog = { written: [], rejected: [], keptStale: [], dropped: [], pruned: [] };
@@ -154,6 +175,7 @@ export function settle(
     }
 
     let rejectedKey = old?.rejectedKey;
+    let attempts = old?.rejectedKey === key ? (old.attempts ?? 1) : 0;
     const fresh = results.get(subject);
     if (fresh !== undefined) {
       const problem = validate(fresh.trim(), subject);
@@ -164,21 +186,25 @@ export function settle(
       }
       log.rejected.push(`${subject}: ${problem} — "${fresh.trim()}"`);
       rejectedKey = key;
+      attempts += 1;
     }
+    const rejection = rejectedKey === key ? { rejectedKey, attempts } : {};
 
     // No valid replacement this run. Keep the old line only if it is still
-    // true of the current evidence.
+    // true of the current evidence — by the stricter test.
     if (old?.text) {
-      const problem = validate(old.text, subject);
+      const problem = validateStale(old.text, subject);
       if (!problem) {
-        next[subject] = { ...old, ...(rejectedKey ? { rejectedKey } : {}) };
+        const { rejectedKey: _r, attempts: _a, ...line } = old;
+        next[subject] = { ...line, ...rejection };
         log.keptStale.push(subject);
         continue;
       }
+      // Removed, not kept: a missing line, never a wrong one (§9).
       log.dropped.push(`${subject}: ${problem}`);
     }
-    // Remember a rejected key even with no text, so it isn't retried daily.
-    if (rejectedKey === key) next[subject] = { text: "", key: null, rejectedKey };
+    // Remember a rejected key with no text, so needsWriting can count tries.
+    if (rejectedKey === key) next[subject] = { text: "", key: null, ...rejection };
   }
 
   return { section: next, log };

@@ -16,6 +16,7 @@
  */
 
 import { numbersIn, sentenceCount } from "./draft-validation.mjs";
+import { NFL_TEAMS } from "./teams.mts";
 
 /** 4721 → 4000, 138.5 → 100, 27 → 20, 0.8 → 0. A floor, so "more than" stays true. */
 export function floorToLeadingDigit(value) {
@@ -93,6 +94,49 @@ export function problemWithBlurb(text, person, context = []) {
 
   if (person.name && trimmed.includes(person.name.split(" ").at(-1))) {
     return "repeats his name, which the card already shows";
+  }
+  return null;
+}
+
+const wordIn = (text, word) =>
+  new RegExp(`\\b${word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(text);
+
+/**
+ * Which clubs a line names, and whether his current club is among them.
+ *
+ * A place two clubs share ("Los Angeles", "New York") counts for the current
+ * one only, so a Rams line saying "Los Angeles" is not read as naming the
+ * Chargers.
+ */
+export function teamsNamed(text, person) {
+  const t = String(text ?? "");
+  const current = NFL_TEAMS.find((x) => x.id === person?.teamId || x.displayName === person?.team);
+  const namesCurrent = Boolean(current && (wordIn(t, current.location) || wordIn(t, current.name)));
+  const others = NFL_TEAMS.filter(
+    (x) =>
+      x !== current &&
+      (wordIn(t, x.name) || (wordIn(t, x.location) && x.location !== current?.location)),
+  ).map((x) => x.displayName);
+  return { namesCurrent, others };
+}
+
+/**
+ * The stricter check for a line written for an older record.
+ *
+ * A trade changes his team, which moves the key — and until a replacement
+ * validates, the old line stays up if it passes. problemWithBlurb only looks
+ * at figures and his name, so "Cleveland's best defender" sailed through for
+ * a man the record now has in Los Angeles. A line may still name a former
+ * club — "traded from Cleveland to the Rams" is the useful version — but only
+ * alongside his current one, which is what shows it was written knowing where
+ * he is now.
+ */
+export function problemWithStaleBlurb(text, person, context = []) {
+  const problem = problemWithBlurb(text, person, context);
+  if (problem) return problem;
+  const { namesCurrent, others } = teamsNamed(text, person);
+  if (others.length > 0 && !namesCurrent) {
+    return `names ${others.join(", ")} but not his current team (${person.team ?? "unknown"})`;
   }
   return null;
 }

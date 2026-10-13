@@ -34,7 +34,7 @@
  */
 
 import { readFileSync, existsSync } from "node:fs";
-import { problemWithNote, repeatsCoaching } from "./lib/unit-note-validation.mjs";
+import { problemWithNote, problemWithStaleNote, repeatsCoaching } from "./lib/unit-note-validation.mjs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { readMoves } from "./lib/moves.mts";
 import { leagueContext, unitEvidence } from "./lib/unit-evidence.mjs";
@@ -216,16 +216,21 @@ for (const slice of chunk(batch, CHUNK)) {
 // --- validation and storage ------------------------------------------------
 
 // The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
-// without an API key. The same guard decides whether an out-of-date note may
-// stay up until its replacement validates: New Orleans once kept describing a
-// receiver who had left the depth chart, and §9's bargain is a missing entry,
-// never a wrong one.
-// repeatsCoaching is a style rule, applied to fresh lines only: an existing
-// note that names the coach is repetitive, not wrong, so it stays up until a
+// without an API key. New text gets problemWithNote plus the repeatsCoaching
+// style rule. An out-of-date note — one
+// written for evidence that has since moved — may stay up until its
+// replacement validates only if it passes the stricter problemWithStaleNote,
+// which also requires every person it names to be in the unit or coaching the
+// team today. problemWithNote alone doesn't check names (only an arrival
+// claim's), so it let a note naming last year's starter stand: New Orleans once
+// kept describing a receiver who had left the depth chart. §9's bargain is a
+// missing entry, never a wrong one, so a note that fails is removed.
+// repeatsCoaching is a style rule and stays out of the stale check: an existing
+// note that names the coach is repetitive, not wrong, so it may stay up until a
 // replacement validates rather than leaving a gap.
 const validate = (text, subject) =>
-  problemWithNote(text, evidenceOf.get(subject)) ??
-  (results.get(subject)?.trim() === text ? repeatsCoaching(text, evidenceOf.get(subject)) : null);
+  problemWithNote(text, evidenceOf.get(subject)) ?? repeatsCoaching(text, evidenceOf.get(subject));
+const validateStale = (text, subject) => problemWithStaleNote(text, evidenceOf.get(subject));
 
 if (SELF_TEST) {
   for (const item of batch) {
@@ -236,7 +241,7 @@ if (SELF_TEST) {
   console.log("\n(self-test: nothing written)");
   if (results.size === 0) process.exit(1);
 } else {
-  const { section, log } = settle(prose.units, wanted, results, validate);
+  const { section, log } = settle(prose.units, wanted, results, validate, validateStale);
   prose.units = section;
   writeCache(prose);
   printLog("unit notes", log);

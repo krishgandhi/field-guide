@@ -9,6 +9,7 @@
  */
 
 import { numbersIn, sentenceCount } from "./draft-validation.mjs";
+import { NFL_TEAMS } from "./teams.mts";
 
 /**
  * Phrases that assert a transfer. The draft field cannot support any of them:
@@ -126,5 +127,90 @@ export function repeatsCoaching(text, evidence) {
   if (/\bhead coach\b/i.test(trimmed) || (coach && trimmed.includes(coach)) || COACH_CHANGE.test(trimmed)) {
     return "mentions the head coach outside the offence note";
   }
+  return null;
+}
+
+/**
+ * Capitalised words that are not people. Checked case-sensitively against
+ * single tokens, after possessives are stripped.
+ */
+const NOT_PEOPLE = new Set(
+  (
+    "NFL AFC NFC MVP Super Bowl Pro All Bowler Defensive Offensive Player Year Rookie " +
+    "Comeback Hall Fame East West North South Conference League Football National American " +
+    // Where clubs used to be, which draft-position phrasing still names.
+    "Oakland San Diego St Louis " +
+    "Jr Sr II III IV I Week Sunday Monday Thursday Saturday Friday " +
+    "January February March April May June July August September October November December"
+  ).split(" "),
+);
+
+/** Words the team registry uses, so "the Rams" or "Kansas City" is never read as a person. */
+const TEAM_WORDS = new Set(NFL_TEAMS.flatMap((t) => `${t.location} ${t.name}`.split(/\s+/)));
+
+/** Strip a possessive and trailing punctuation: "O'Connell's," → "O'Connell". */
+const bare = (token) =>
+  token
+    .replace(/^[("“‘']+/, "")
+    .replace(/[.,;:!?)"”’]+$/, "")
+    .replace(/(?:'s|’s|')$/, "");
+
+/**
+ * People a note names who are not in the evidence it is checked against —
+ * the unit's key players and the head coach as they stand today.
+ *
+ * Used on lines written for older evidence. New text is held to the brief's
+ * own "never mention a player who is not in the evidence"; an old line was
+ * true of a depth chart and a staff that may have changed since. A Vikings
+ * note about J.J. McCarthy, kept after Kyler Murray took the job, passes every
+ * other check — no figure is invented, nothing claims an arrival — and is
+ * simply wrong.
+ *
+ * Vouched names are blanked out first. Then any capitalised word left that is
+ * not a team word or a known non-name ("Super Bowl") is someone we cannot
+ * vouch for — except a sentence's first word, which is capitalised whatever it
+ * is ("Leans", "Under"), unless the next word is an unknown name too ("Sean
+ * McDermott's offence…"). Fails closed: an unrecognised proper noun costs a
+ * stale line until the next rewrite, never puts a wrong one up.
+ */
+export function peopleNotInEvidence(text, evidence) {
+  const names = [...(evidence?.keyPlayers ?? []).map((p) => p?.name), evidence?.headCoach]
+    .filter((n) => typeof n === "string" && n.trim())
+    // Longest first, so "Marvin Harrison Jr." goes before "Marvin Harrison".
+    .sort((a, b) => b.length - a.length);
+  const vouched = new Set(names.flatMap((n) => n.split(/[\s-]+/).map(bare)));
+
+  let rest = String(text ?? "");
+  for (const n of names) rest = rest.split(n).join("someone");
+
+  const unknownToken = (token) => {
+    const b = bare(token ?? "");
+    return /^[A-Z]/.test(b) && !NOT_PEOPLE.has(b) && !TEAM_WORDS.has(b) && !vouched.has(b);
+  };
+
+  const unknown = new Set();
+  // Split sentences only after a real word, so "A.J." is not a full stop.
+  for (const sentence of rest.split(/(?<=[a-z0-9)]{2}[.!?])\s+/)) {
+    // Hyphens split too: "Super Bowl-winning" is two known words and a lowercase one.
+    const tokens = sentence.split(/[\s—–-]+/).filter(Boolean);
+    tokens.forEach((token, i) => {
+      if (!unknownToken(token)) return;
+      if (i === 0 && !unknownToken(tokens[1])) return;
+      unknown.add(bare(token));
+    });
+  }
+  return [...unknown];
+}
+
+/**
+ * The stricter check for a line written for evidence that has since changed:
+ * everything problemWithNote asks, plus every person it names must still be
+ * in the unit or running the team.
+ */
+export function problemWithStaleNote(text, evidence) {
+  const problem = problemWithNote(text, evidence);
+  if (problem) return problem;
+  const unknown = peopleNotInEvidence(text, evidence);
+  if (unknown.length > 0) return `names people the current evidence does not: ${unknown.join(", ")}`;
   return null;
 }

@@ -9,7 +9,12 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { problemWithNote, repeatsCoaching } from "../scripts/lib/unit-note-validation.mjs";
+import {
+  peopleNotInEvidence,
+  problemWithNote,
+  problemWithStaleNote,
+  repeatsCoaching,
+} from "../scripts/lib/unit-note-validation.mjs";
 
 type Evidence = Parameters<typeof problemWithNote>[1];
 
@@ -196,5 +201,63 @@ describe("coaching is said once per team", () => {
       "Leans on Ed Oliver up front and young corners in the back, now under new head coach Joe Brady.",
       bills("defence"),
     );
+  });
+});
+
+describe("a stale note must name only people in today's evidence", () => {
+  // The review's case: written when McCarthy was the starter, checked after
+  // Murray took the job. Every figure traces and nothing claims an arrival,
+  // so problemWithNote alone passes it.
+  const vikingsNow = {
+    headCoach: "Kevin O'Connell",
+    headCoachSeasonsAsHeadCoach: 5,
+    recentMovesInvolvingThisTeam: [
+      "Vikings name Kyler Murray the starter — J.J. McCarthy goes to the bench.",
+    ],
+    keyPlayers: [
+      { name: "Kyler Murray", position: "QB", seasonInTheLeague: 8 },
+      { name: "Justin Jefferson", position: "WR", seasonInTheLeague: 7 },
+      { name: "Marvin Harrison Jr.", position: "WR", seasonInTheLeague: 3 },
+    ],
+  };
+  const stale =
+    "The offence runs through J.J. McCarthy throwing to Justin Jefferson, in a scheme Sean McDermott would recognise.";
+
+  it("the ordinary check passes it — which is the bug", () => {
+    expect(problemWithNote(stale, vikingsNow)).toBeNull();
+  });
+
+  it("the stale check names who is missing", () => {
+    expect(peopleNotInEvidence(stale, vikingsNow)).toEqual(
+      expect.arrayContaining(["J.J", "McCarthy", "Sean", "McDermott"]),
+    );
+    expect(problemWithStaleNote(stale, vikingsNow)).toMatch(/McCarthy/);
+  });
+
+  it("catches a lone surname mid-sentence", () => {
+    expect(
+      problemWithStaleNote("Justin Jefferson is the target, with McCarthy throwing to him on most downs.", vikingsNow),
+    ).toMatch(/McCarthy/);
+  });
+
+  it("catches a full name opening a sentence", () => {
+    expect(
+      problemWithStaleNote("Sean McDermott's old scheme still shapes it. Justin Jefferson is the main target.", vikingsNow),
+    ).toMatch(/McDermott/);
+  });
+
+  it("accepts a note naming only current players, the coach, teams and awards", () => {
+    expect(
+      problemWithStaleNote(
+        "Under Kevin O'Connell, Kyler Murray throws to Justin Jefferson and Marvin Harrison Jr., a Super Bowl-hungry group in Minnesota.",
+        vikingsNow,
+      ),
+    ).toBeNull();
+  });
+
+  it("does not read an ordinary sentence-opening word as a name", () => {
+    expect(
+      peopleNotInEvidence("Leans on the pass, with Kyler Murray throwing to the Vikings receivers.", vikingsNow),
+    ).toEqual([]);
   });
 });
