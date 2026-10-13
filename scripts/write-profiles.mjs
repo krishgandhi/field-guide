@@ -26,10 +26,10 @@
  *   ANTHROPIC_API_KEY=... npm run write:profiles
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
-import path from "node:path";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import { readMoves } from "./lib/moves.mts";
 
 const PEOPLE = "src/data/people.json";
 
@@ -39,7 +39,6 @@ const PEOPLE = "src/data/people.json";
  * prompt would never reach the players already done.
  */
 const PROMPT_VERSION = 2;
-const MOVES = "content/moves";
 
 /** --self-test: one fixture person through the real API, writing nothing. */
 const SELF_TEST = process.argv.includes("--self-test");
@@ -81,13 +80,11 @@ const cache = SELF_TEST
  */
 function contextFor(id) {
   const lines = [];
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    if (!raw.includes(`"${id}"`)) continue;
-    const summary = raw.match(/^summary: (.+)$/m)?.[1];
+  for (const { summary, move } of readMoves()) {
+    if (!move.people.includes(id)) continue;
     if (summary) lines.push(summary);
-    for (const note of raw.matchAll(/^ {6}note: >-\n((?: {8}.*\n)+)/gm)) {
-      lines.push(note[1].split(/\s+/).filter(Boolean).join(" "));
+    for (const { note } of move.rubric) {
+      if (note) lines.push(String(note).split(/\s+/).filter(Boolean).join(" "));
     }
   }
   return lines;

@@ -18,23 +18,18 @@
  * nothing in the team payload — so a coaching entry carries no ids and simply
  * renders no card.
  *
- * Node builtins only, like the other fetchers.
+ * Needs `npm ci` (gray-matter, to read move frontmatter) — unlike the other
+ * fetchers, which are builtins only.
  *
  *   node scripts/fetch-people.mjs
  */
 
-import {
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  readdirSync,
-  writeFileSync,
-} from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
+import { readMoves } from "./lib/moves.mts";
 
-const MOVES = "content/moves";
 const OUT = "src/data/people.json";
 const SHOTS = "public/players";
 
@@ -42,17 +37,11 @@ const SHOTS = "public/players";
 const HEADSHOT = (id) =>
   `https://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/${id}.png&w=160&h=160`;
 
-/** Every id referenced by an entry. Deliberately parses only that one line. */
+/** Every ESPN athlete id referenced by an entry's `move.people`. */
 function referencedIds() {
   const ids = new Set();
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    const line = raw.match(/^ {2}people: \[([^\]]*)\]/m);
-    if (!line) continue;
-    for (const part of line[1].split(",")) {
-      const id = part.trim().replace(/^["']|["']$/g, "");
-      if (/^\d+$/.test(id)) ids.add(id);
-    }
+  for (const { move } of readMoves()) {
+    for (const id of move.people) if (/^\d+$/.test(id)) ids.add(id);
   }
   return [...ids];
 }

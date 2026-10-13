@@ -26,14 +26,13 @@
  *   ANTHROPIC_API_KEY=... npm run write:units
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
-import path from "node:path";
+import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { createHash } from "node:crypto";
 import { problemWithNote } from "./lib/unit-note-validation.mjs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import { readMoves } from "./lib/moves.mts";
 
 const DETAIL = "src/data/team-detail.json";
-const MOVES = "content/moves";
 
 /** Bump when the brief changes materially, to rewrite existing lines. */
 const PROMPT_VERSION = 6;
@@ -55,12 +54,8 @@ const UNITS = ["offence", "defence", "specialTeams"];
 /** What this site already says about the team — sourced prose, safe to reuse. */
 function movesFor(teamId) {
   const out = [];
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    const teams = raw.match(/^ {2}teams: \[([^\]]*)\]/m)?.[1] ?? "";
-    if (!teams.split(",").some((t) => t.trim() === teamId)) continue;
-    const title = raw.match(/^title: (.+)$/m)?.[1];
-    const summary = raw.match(/^summary: (.+)$/m)?.[1];
+  for (const { title, summary, move } of readMoves()) {
+    if (!move.teams.includes(teamId)) continue;
     if (title) out.push(summary ? `${title} — ${summary}` : title);
   }
   return out;

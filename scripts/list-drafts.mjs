@@ -11,29 +11,19 @@
  *   npm run drafts
  */
 
-import { readdirSync, readFileSync, existsSync } from "node:fs";
-import path from "node:path";
+import { DRAFTS_DIR as DIR, readMoves } from "./lib/moves.mts";
 
-const DIR = "content/moves/_drafts";
-
-if (!existsSync(DIR)) {
+const drafts = readMoves(DIR);
+if (drafts.length === 0) {
   console.log("Nothing held back. Everything the pipeline wrote is on the site.");
   process.exit(0);
 }
 
-const files = readdirSync(DIR).filter((f) => f.endsWith(".mdx"));
-if (files.length === 0) {
-  console.log("Nothing held back. Everything the pipeline wrote is on the site.");
-  process.exit(0);
-}
+console.log(`${drafts.length} entr(y/ies) HELD BACK — not on the site:\n`);
 
-console.log(`${files.length} entr(y/ies) HELD BACK — not on the site:\n`);
-
-for (const file of files) {
-  const raw = readFileSync(path.join(DIR, file), "utf8");
-  const title = raw.match(/^title:\s*(.+)$/m)?.[1] ?? "(no title)";
-  const summary = raw.match(/^summary:\s*(.+)$/m)?.[1] ?? "";
-  const bigness = raw.match(/^\s*bigness:\s*(\d)/m)?.[1] ?? "?";
+for (const { file, title: rawTitle, summary, move } of drafts) {
+  const title = rawTitle || "(no title)";
+  const bigness = move.bigness ?? "?";
   console.log(`  ${file}`);
   console.log(`    ${title}  [bigness ${bigness}]`);
   if (summary) console.log(`    ${summary}`);

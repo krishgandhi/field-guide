@@ -55,16 +55,17 @@ jobs:
         run: node scripts/fetch-team-detail.mjs
         continue-on-error: true
 
+      # The prose steps and fetch-people need dependencies.
+      - name: Install
+        run: npm ci
+
       # Profiles for the people named in move entries, plus their headshots.
-      # Builtins-only and continue-on-error: a missing profile card is
-      # cosmetic, and must never cost the slate.
+      # After Install because it reads move frontmatter with gray-matter.
+      # continue-on-error: a missing profile card is cosmetic, and must never
+      # cost the slate.
       - name: Fetch people
         run: node scripts/fetch-people.mjs
         continue-on-error: true
-
-      # Only the prose steps need dependencies.
-      - name: Install
-        run: npm ci
 
       # continue-on-error on purpose: if Claude is unreachable, the key is
       # missing, or a sentence fails validation, the slate is already correct
