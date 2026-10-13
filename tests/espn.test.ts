@@ -18,6 +18,8 @@ import {
   getJson,
   phaseFromScoreboard,
   regularSeasonWeek,
+  resetBreaker,
+  BREAKER_LIMIT,
   slateCandidates,
   scoreboardUrl,
   standingsUrl,
@@ -119,6 +121,7 @@ describe("retries", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
     vi.useRealTimers();
+    resetBreaker();
   });
 
   const respond = (status: number, body: unknown = {}) =>
@@ -160,5 +163,33 @@ describe("retries", () => {
     expect(err.status).toBeNull();
     expect(err.message).toMatch(/^network/);
     expect(fetch).toHaveBeenCalledTimes(3);
+  });
+
+  it("opens the circuit after repeated outages, and a success closes it", async () => {
+    const fetch = vi.fn().mockResolvedValue(respond(503));
+    vi.stubGlobal("fetch", fetch);
+
+    for (let i = 0; i < BREAKER_LIMIT; i++) {
+      await getJson("https://example.test/down", { retries: 0 }).catch(() => {});
+    }
+    expect(fetch).toHaveBeenCalledTimes(BREAKER_LIMIT);
+
+    const err = await getJson("https://example.test/down", { retries: 0 }).catch((e) => e);
+    expect(err).toBeInstanceOf(EspnError);
+    expect(err.message).toMatch(/circuit open/);
+    expect(fetch).toHaveBeenCalledTimes(BREAKER_LIMIT); // no network call
+
+    resetBreaker();
+    fetch.mockResolvedValue(respond(200, { ok: true }));
+    await expect(getJson("https://example.test/up")).resolves.toEqual({ ok: true });
+  });
+
+  it("does not count a 404 towards the breaker", async () => {
+    const fetch = vi.fn().mockResolvedValue(respond(404));
+    vi.stubGlobal("fetch", fetch);
+    for (let i = 0; i < BREAKER_LIMIT + 2; i++) {
+      await getJson("https://example.test/missing").catch(() => {});
+    }
+    expect(fetch).toHaveBeenCalledTimes(BREAKER_LIMIT + 2);
   });
 });

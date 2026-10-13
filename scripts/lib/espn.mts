@@ -65,11 +65,31 @@ const retryable = (status: number | null) => status === null || status === 429 |
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 /**
+ * Circuit breaker. fetch-team-detail makes on the order of 1,700 requests;
+ * with ESPN down, each one waits out a 20-second timeout three times plus
+ * backoff, and the job would run for hours before giving up. After this many
+ * requests IN A ROW have failed on network errors, 429 or 5xx (retries
+ * already exhausted), every later request fails at once without touching the
+ * network, and the scripts fall back to yesterday's data as they already do
+ * for a single failure. A 404 is an answer, not an outage, and doesn't count.
+ */
+export const BREAKER_LIMIT = 5;
+let consecutiveOutages = 0;
+
+/** For tests. */
+export function resetBreaker(): void {
+  consecutiveOutages = 0;
+}
+
+/**
  * GET with a timeout, a fixed user agent, and retry with backoff (1s, 3s, 9s…).
  * Resolves only with an OK response; anything else throws EspnError.
  */
 export async function espnFetch(url: string, options: FetchOptions = {}): Promise<Response> {
   const { timeoutMs = 20_000, retries = 2 } = options;
+  if (consecutiveOutages >= BREAKER_LIMIT) {
+    throw new EspnError(null, url, new Error(`circuit open after ${BREAKER_LIMIT} failed requests in a row`));
+  }
 
   for (let attempt = 0; ; attempt++) {
     let status: number | null = null;
@@ -79,7 +99,10 @@ export async function espnFetch(url: string, options: FetchOptions = {}): Promis
         headers: { "user-agent": USER_AGENT },
         signal: AbortSignal.timeout(timeoutMs),
       });
-      if (res.ok) return res;
+      if (res.ok) {
+        consecutiveOutages = 0;
+        return res;
+      }
       status = res.status;
       // Drain the body so the connection can be reused.
       await res.body?.cancel();
@@ -87,7 +110,11 @@ export async function espnFetch(url: string, options: FetchOptions = {}): Promis
       cause = err;
     }
 
-    if (attempt >= retries || !retryable(status)) throw new EspnError(status, url, cause);
+    if (attempt >= retries || !retryable(status)) {
+      if (retryable(status)) consecutiveOutages++;
+      else consecutiveOutages = 0;
+      throw new EspnError(status, url, cause);
+    }
     await sleep(1000 * 3 ** attempt);
   }
 }
