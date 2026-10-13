@@ -18,6 +18,7 @@ import {
   getJson,
   phaseFromScoreboard,
   regularSeasonWeek,
+  slateCandidates,
   scoreboardUrl,
   standingsUrl,
 } from "../scripts/lib/espn.mjs";
@@ -84,6 +85,24 @@ describe("regularSeasonWeek", () => {
   it("holds at week 18 through the playoffs and the off season", () => {
     expect(regularSeasonWeek(phase(POSTSEASON, 2))).toBe(18);
     expect(regularSeasonWeek(phase(OFFSEASON, null))).toBe(18);
+  });
+});
+
+describe("slateCandidates", () => {
+  const phase = (season: number, seasonType: number, week: number | null) =>
+    ({ season, seasonType, week, label: null });
+
+  it("tries exactly one week in season", () => {
+    expect(slateCandidates(phase(2026, REGULAR_SEASON, 5))).toEqual([{ season: 2026, week: 5 }]);
+    expect(slateCandidates(phase(2026, PRESEASON, 2))).toEqual([{ season: 2026, week: 1 }]);
+  });
+
+  it("falls back to last season's week 18 once ESPN rolls the year over", () => {
+    expect(slateCandidates(phase(2027, OFFSEASON, null))).toEqual([
+      { season: 2027, week: 18 },
+      { season: 2026, week: 18 },
+    ]);
+    expect(slateCandidates(phase(2026, POSTSEASON, 1))[1]).toEqual({ season: 2025, week: 18 });
   });
 });
 

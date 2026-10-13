@@ -210,3 +210,23 @@ export function regularSeasonWeek(phase: SeasonPhase): number {
   }
   return REGULAR_SEASON_WEEKS;
 }
+
+/**
+ * Which (season, week) scoreboards to try for the slate, in order.
+ *
+ * In the postseason and the off season the slate holds at Week 18 (see
+ * regularSeasonWeek). But ESPN can roll its season year over before the new
+ * season has a schedule — `dates=2027&week=18` in March is empty — and an
+ * empty scoreboard used to throw, turning the daily job red every day until
+ * September. So those phases also try the previous season's Week 18. In the
+ * preseason and the regular season there is exactly one right answer, and an
+ * empty response there is a real problem worth failing on.
+ */
+export function slateCandidates(phase: SeasonPhase): { season: number; week: number }[] {
+  const week = regularSeasonWeek(phase);
+  const first = { season: phase.season, week };
+  if (phase.seasonType === POSTSEASON || phase.seasonType === OFFSEASON) {
+    return [first, { season: phase.season - 1, week: REGULAR_SEASON_WEEKS }];
+  }
+  return [first];
+}

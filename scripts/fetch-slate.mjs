@@ -23,8 +23,8 @@ import {
   SITE,
   currentPhase,
   getJson,
-  regularSeasonWeek,
   scoreboardUrl,
+  slateCandidates,
 } from "./lib/espn.mts";
 import { TEAM_IDS } from "./lib/teams.mts";
 import { stamp } from "./lib/meta.mts";
@@ -33,24 +33,25 @@ const BASE = process.env.SLATE_BASE ?? SITE;
 const OUT = "src/data/slate.json";
 
 /**
- * The season and regular-season week to show.
+ * The season and regular-season weeks to try, in order.
  *
  * Read from ESPN's calendar rather than counted from a hardcoded opening day,
  * which had to be edited every August. Preseason maps to Week 1 and the
- * playoffs hold at Week 18 — see regularSeasonWeek() for why. The scoreboard
- * request itself always carries seasontype=2, so the preseason games ESPN
- * serves by default can never pose as the real slate.
+ * playoffs hold at Week 18 — see regularSeasonWeek() and slateCandidates()
+ * for why, including the off-season fallback to last season's Week 18. The
+ * scoreboard request itself always carries seasontype=2, so the preseason
+ * games ESPN serves by default can never pose as the real slate.
  */
-async function currentWeek() {
+async function weeksToTry() {
   const phase = await currentPhase(BASE);
   if (process.env.WEEK) {
     const w = Number(process.env.WEEK);
     if (!Number.isInteger(w) || w < 1 || w > REGULAR_SEASON_WEEKS) {
       throw new Error(`WEEK must be 1–${REGULAR_SEASON_WEEKS}, got "${process.env.WEEK}"`);
     }
-    return { season: phase.season, week: w };
+    return { phase, tries: [{ season: phase.season, week: w }] };
   }
-  return { season: phase.season, week: regularSeasonWeek(phase) };
+  return { phase, tries: slateCandidates(phase) };
 }
 
 /** "SEA -3.5" → the margin as a positive number, plus who's favoured. */
@@ -111,12 +112,26 @@ async function fetchInjuries() {
 }
 
 async function main() {
-  const { season, week } = await currentWeek();
-  const board = await getJson(scoreboardUrl(season, week, BASE));
+  const { phase, tries } = await weeksToTry();
+  let season, week, events = [];
+  for (const t of tries) {
+    const board = await getJson(scoreboardUrl(t.season, t.week, BASE));
+    events = board.events ?? [];
+    ({ season, week } = t);
+    if (events.length > 0) break;
+    console.log(`${t.season} week ${t.week}: no games on ESPN.`);
+  }
 
-  const events = board.events ?? [];
   if (events.length === 0) {
-    throw new Error(`Week ${week} returned no games. Refusing to overwrite good data.`);
+    if (tries.length > 1) {
+      // Off season, schedule not out yet: nothing new is correct, not an error.
+      console.log("Nothing to show yet — keeping the committed slate.");
+      return;
+    }
+    throw new Error(
+      `${season} week ${week} returned no games (phase type ${phase.seasonType}). ` +
+        "Refusing to overwrite good data.",
+    );
   }
 
   const games = events.map((event) => {
