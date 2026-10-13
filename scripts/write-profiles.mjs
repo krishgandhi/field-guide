@@ -28,8 +28,8 @@
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
-import Anthropic from "@anthropic-ai/sdk";
 import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 
 const PEOPLE = "src/data/people.json";
 
@@ -58,7 +58,7 @@ const FIXTURE = {
   college: "Illinois",
 };
 
-if (!process.env.ANTHROPIC_API_KEY) {
+if (!hasKey()) {
   console.log("No ANTHROPIC_API_KEY — no profile lines written.");
   process.exit(0);
 }
@@ -101,8 +101,6 @@ if (todo.length === 0) {
   process.exit(0);
 }
 console.log(`${todo.length} profile line(s) to write.\n`);
-
-const client = new Anthropic();
 
 const SYSTEM = `You introduce an NFL player to someone who has watched a bit of football, does not follow it closely, and has never heard of this person.
 
@@ -161,33 +159,22 @@ const input = todo.map((p) => ({
   mentionedOnSiteAs: contextFor(p.id),
 }));
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 8000,
-  system: SYSTEM,
-  output_config: { effort: "medium", format: { type: "json_schema", schema } },
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Write one sentence for each.\n\n${JSON.stringify(input, null, 2)}`,
-    },
-  ],
-});
-
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). No lines written.`,
-  );
+let profiles, usage;
+try {
+  ({ data: { profiles }, usage } = await generateJson({
+    label: "write-profiles",
+    model: MODELS.prose,
+    system: SYSTEM,
+    user: `Write one sentence for each.\n\n${JSON.stringify(input, null, 2)}`,
+    schema,
+    maxTokens: 8000,
+    effort: "medium",
+  }));
+} catch (err) {
+  if (!isNoResult(err)) throw err;
+  console.error(`${err.message}. No lines written.`);
   process.exit(0);
 }
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. No lines written.");
-  process.exit(0);
-}
-const { profiles } = JSON.parse(payload);
 
 // --- validation ------------------------------------------------------------
 
@@ -270,5 +257,5 @@ if (!SELF_TEST) {
 console.log(`\n${accepted}/${todo.length} accepted`);
 for (const r of rejected) console.log(`  rejected — ${r}`);
 console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
+  `tokens: ${usage.input} in, ${usage.output} out`,
 );

@@ -28,7 +28,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import Anthropic from "@anthropic-ai/sdk";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
 
 const CANDIDATES = "src/data/move-candidates.json";
@@ -80,7 +80,7 @@ const FIXTURE = [
 
 // No key: exit clean. Same posture as write-reasons.mjs — this is the normal
 // state locally and on a fork, not an error.
-if (!process.env.ANTHROPIC_API_KEY) {
+if (!hasKey()) {
   console.log("No ANTHROPIC_API_KEY — no drafts written.");
   process.exit(0);
 }
@@ -100,8 +100,6 @@ if (SELF_TEST) {
     process.exit(0);
   }
 }
-
-const client = new Anthropic();
 
 const SYSTEM = `You apply a fixed rubric to NFL transactions for a site that explains the sport to a newcomer.
 
@@ -203,40 +201,25 @@ const schema = {
   additionalProperties: false,
 };
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 16000,
-  system: SYSTEM,
-  // Higher effort than write-reasons: this is a judgement task (is it a move
-  // at all, and how big), not a short writing task.
-  output_config: { effort: "high", format: { type: "json_schema", schema } },
-  thinking: { type: "adaptive" },
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Assess each candidate.\n\n${JSON.stringify(candidates, null, 2)}`,
-    },
-  ],
-});
-
-// Check before reading content: a refusal returns HTTP 200 with empty or
-// partial content, and indexing into it blind would throw.
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). No drafts written.`,
-  );
+let entries, usage;
+try {
+  ({ data: { entries }, usage } = await generateJson({
+    label: "draft-moves",
+    model: MODELS.moveDrafts,
+    system: SYSTEM,
+    user: `Assess each candidate.\n\n${JSON.stringify(candidates, null, 2)}`,
+    schema,
+    maxTokens: 16000,
+    // Higher effort than write-reasons: this is a judgement task (is it a move
+    // at all, and how big), not a short writing task.
+    effort: "high",
+    thinking: true,
+  }));
+} catch (err) {
+  if (!isNoResult(err)) throw err;
+  console.error(`${err.message}. No drafts written.`);
   process.exit(0);
 }
-
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. No drafts written.");
-  process.exit(0);
-}
-
-const { entries } = JSON.parse(payload);
 
 if (!SELF_TEST) mkdirSync(HELD, { recursive: true });
 
@@ -348,9 +331,7 @@ console.log(
 // Logged because write-reasons.mjs logs it and this one didn't, which made the
 // spend impossible to attribute between them. This is the pricier of the two:
 // high effort plus adaptive thinking, and thinking bills as output.
-console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
-);
+console.log(`tokens: ${usage.input} in, ${usage.output} out`);
 if (rejected > 0) {
   console.log(`Held entries are in ${HELD}/ and are NOT on the site. npm run drafts lists them.`);
 }

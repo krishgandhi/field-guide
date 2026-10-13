@@ -22,9 +22,9 @@
  */
 
 import { readFile, writeFile } from "node:fs/promises";
-import Anthropic from "@anthropic-ai/sdk";
 import { problemWith } from "./lib/reason-validation.mjs";
 import { SITE, getJson } from "./lib/espn.mts";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 
 const SLATE = "src/data/slate.json";
 
@@ -44,7 +44,7 @@ const { isRivalry, hasStarQb } = await import("../src/lib/slate/context.ts");
 
 // No key: leave the templates in place and exit clean. This is the normal
 // state on a fork or a local run, not an error.
-if (!process.env.ANTHROPIC_API_KEY) {
+if (!hasKey()) {
   console.log("No ANTHROPIC_API_KEY — keeping template reasons.");
   process.exit(0);
 }
@@ -208,8 +208,6 @@ const games = needsReason.map((game) => {
   };
 });
 
-const client = new Anthropic();
-
 const SYSTEM = `You write one-sentence explanations of why an NFL game is or isn't worth watching, for someone who has watched a bit of football but has no feel for what makes a game matter.
 
 Rules, all of them hard:
@@ -244,41 +242,24 @@ const schema = {
   additionalProperties: false,
 };
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 8000,
-  system: SYSTEM,
-  // Short, scoped writing task — not intelligence-sensitive. This is the lever
-  // to turn up if the sentences come out flat.
-  output_config: { effort: "medium", format: { type: "json_schema", schema } },
-  // Recommended default on Opus 5: if a safety classifier declines, the API
-  // re-runs on a fallback model rather than handing back a refusal.
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Week ${slate.week}. Write one sentence per game.\n\n${JSON.stringify(games, null, 2)}`,
-    },
-  ],
-});
-
-// Check before reading content: a refusal returns HTTP 200 with empty or
-// partial content, and indexing into it blind would throw.
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). Keeping templates.`,
-  );
+let reasons, usage;
+try {
+  ({ data: { reasons }, usage } = await generateJson({
+    label: "write-reasons",
+    model: MODELS.prose,
+    system: SYSTEM,
+    user: `Week ${slate.week}. Write one sentence per game.\n\n${JSON.stringify(games, null, 2)}`,
+    schema,
+    maxTokens: 8000,
+    // Short, scoped writing task — not intelligence-sensitive. This is the
+    // lever to turn up if the sentences come out flat.
+    effort: "medium",
+  }));
+} catch (err) {
+  if (!isNoResult(err)) throw err;
+  console.error(`${err.message}. Keeping templates.`);
   process.exit(0);
 }
-
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. Keeping templates.");
-  process.exit(0);
-}
-
-const { reasons } = JSON.parse(payload);
 
 // --- validation ------------------------------------------------------------
 
@@ -322,6 +303,4 @@ console.log(
   `${accepted}/${SELF_TEST ? needsReason.length : slate.games.length} reasons accepted`,
 );
 for (const r of rejected) console.log(`  rejected — ${r}`);
-console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
-);
+console.log(`tokens: ${usage.input} in, ${usage.output} out`);

@@ -29,8 +29,8 @@
 import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
-import Anthropic from "@anthropic-ai/sdk";
 import { problemWithNote } from "./lib/unit-note-validation.mjs";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 
 const DETAIL = "src/data/team-detail.json";
 const MOVES = "content/moves";
@@ -40,7 +40,7 @@ const PROMPT_VERSION = 6;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
-if (!process.env.ANTHROPIC_API_KEY) {
+if (!hasKey()) {
   console.log("No ANTHROPIC_API_KEY — no unit notes written.");
   process.exit(0);
 }
@@ -137,8 +137,6 @@ console.log(
   `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
 );
 
-const client = new Anthropic();
-
 const SYSTEM = `You describe one unit of an NFL team — its offence, its defence or its special teams — to someone who has watched a bit of football but does not follow it closely.
 
 You get that unit's league ranks out of 32, its key players with where each was drafted, the head coach, and summaries of recent moves involving the team from this site.
@@ -207,34 +205,29 @@ let tokensOut = 0;
 
 for (let i = 0; i < batch.length; i += CHUNK) {
   const slice = batch.slice(i, i + CHUNK);
-  const response = await client.beta.messages.create({
-    model: "claude-opus-5",
-    max_tokens: 8000,
-    system: SYSTEM,
-    output_config: { effort: "medium", format: { type: "json_schema", schema } },
-    betas: ["server-side-fallback-2026-07-01"],
-    fallbacks: "default",
-    messages: [
-      {
-        role: "user",
-        content: `Write one entry per unit.\n\n${JSON.stringify(
-          slice.map((t) => ({ key: t.key, ...t.evidence })),
-          null,
-          2,
-        )}`,
-      },
-    ],
-  });
-
-  if (response.stop_reason === "refusal") {
-    console.error("Model declined a batch. Skipping it.");
+  let data, usage;
+  try {
+    ({ data, usage } = await generateJson({
+      label: "write-unit-notes",
+      model: MODELS.prose,
+      system: SYSTEM,
+      user: `Write one entry per unit.\n\n${JSON.stringify(
+        slice.map((t) => ({ key: t.key, ...t.evidence })),
+        null,
+        2,
+      )}`,
+      schema,
+      maxTokens: 8000,
+      effort: "medium",
+    }));
+  } catch (err) {
+    if (!isNoResult(err)) throw err;
+    console.error(`${err.message}. Skipping this batch.`);
     continue;
   }
-  const payload = response.content.find((b) => b.type === "text")?.text;
-  if (!payload) continue;
-  for (const n of JSON.parse(payload).notes ?? []) results.set(n.key, n.blurb);
-  tokensIn += response.usage.input_tokens;
-  tokensOut += response.usage.output_tokens;
+  for (const n of data.notes ?? []) results.set(n.key, n.blurb);
+  tokensIn += usage.input;
+  tokensOut += usage.output;
 }
 
 // --- validation ------------------------------------------------------------
