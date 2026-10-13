@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-10-12T20:05:36.463Z",
+  "fetchedAt": "2026-10-13T17:55:09.640Z",
   "teams": {
     "KC": {
       "wins": 4,
@@ -31,12 +31,12 @@
       "conferenceRank": 3
     },
     "BUF": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "pointDifferential": 20,
-      "pointsFor": 127,
-      "pointsAgainst": 107,
+      "pointDifferential": 23,
+      "pointsFor": 164,
+      "pointsAgainst": 141,
       "conferenceRank": 4
     },
     "NE": {
@@ -183,15 +183,6 @@
       "pointsAgainst": 112,
       "conferenceRank": 5
     },
-    "CHI": {
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 23,
-      "pointsFor": 119,
-      "pointsAgainst": 96,
-      "conferenceRank": 6
-    },
     "DET": {
       "wins": 3,
       "losses": 2,
@@ -199,6 +190,15 @@
       "pointDifferential": 16,
       "pointsFor": 164,
       "pointsAgainst": 148,
+      "conferenceRank": 6
+    },
+    "CHI": {
+      "wins": 3,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 23,
+      "pointsFor": 119,
+      "pointsAgainst": 96,
       "conferenceRank": 7
     },
     "SEA": {
@@ -221,11 +221,11 @@
     },
     "LAR": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": 2,
-      "pointsFor": 85,
-      "pointsAgainst": 83,
+      "pointDifferential": -1,
+      "pointsFor": 119,
+      "pointsAgainst": 120,
       "conferenceRank": 9
     },
     "ATL": {

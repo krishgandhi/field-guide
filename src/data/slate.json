@@ -1,20 +1,8 @@
 {
   "season": 2026,
   "week": 5,
-  "fetchedAt": "2026-10-12T20:05:35.883Z",
+  "fetchedAt": "2026-10-13T17:55:09.143Z",
   "games": [
-    {
-      "id": "401872994",
-      "kickoff": "2026-10-13T00:15Z",
-      "home": "LAR",
-      "away": "BUF",
-      "spread": 3.5,
-      "favourite": "home",
-      "overUnder": 54.5,
-      "broadcast": "ESPN, ABC",
-      "venue": "SoFi Stadium",
-      "neutralSite": false
-    },
     {
       "id": "401872980",
       "kickoff": "2026-10-09T00:15Z",
@@ -182,6 +170,18 @@
       "broadcast": "NBC",
       "venue": "Mercedes-Benz Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401872994",
+      "kickoff": "2026-10-13T00:15Z",
+      "home": "LAR",
+      "away": "BUF",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN, ABC",
+      "venue": "SoFi Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [
@@ -189,48 +189,7 @@
     "KC"
   ],
   "injuries": {
-    "ATL": [
-      {
-        "player": "Za'Darius Smith",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "BAL": [
-      {
-        "player": "Lamar Jackson",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Trey Hendrickson",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "BUF": [
-      {
-        "player": "Joshua Palmer",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "CHI": [
-      {
-        "player": "Caleb Williams",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Kyle Monangai",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Keyshaun Elliott",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Kyler Gordon",
         "position": "CB",
@@ -239,42 +198,8 @@
     ],
     "CIN": [
       {
-        "player": "Colbie Young",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Swayze Bozeman",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "CLE": [
-      {
-        "player": "Tylan Wallace",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Carsen Ryan",
+        "player": "Tanner Hudson",
         "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "DAL": [
-      {
-        "player": "DeMarvion Overshown",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Joey Porter Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Cobie Durant",
-        "position": "CB",
         "status": "Out"
       }
     ],
@@ -282,19 +207,14 @@
       {
         "player": "Pat Surtain II",
         "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Riley Moss",
-        "position": "CB",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "DET": [
       {
-        "player": "Rock Ya-Sin",
-        "position": "CB",
-        "status": "Out"
+        "player": "Devin White",
+        "position": "LB",
+        "status": "Doubtful"
       },
       {
         "player": "Tom Kennedy",
@@ -316,170 +236,40 @@
         "status": "Doubtful"
       }
     ],
-    "IND": [
-      {
-        "player": "Darius Slayton",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Ashton Dulin",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Jaylon Carlies",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "LV": [
-      {
-        "player": "Jalen Nailor",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "LAC": [
       {
-        "player": "Brenen Thompson",
+        "player": "Tre' Harris",
         "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Quentin Johnston",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Donte Jackson",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Rodney Shelley",
-        "position": "CB",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "MIA": [
       {
-        "player": "Reese Taylor",
+        "player": "Storm Duck",
         "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Justin Joly",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Caleb Douglas",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Robert Beal Jr.",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "MIN": [
-      {
-        "player": "Charles Demmings",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Jordan Addison",
-        "position": "WR",
         "status": "Out"
       }
     ],
     "NE": [
       {
-        "player": "Karon Prunty",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Carlton Davis III",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Christian Gonzalez",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Channing Canada",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "NO": [
-      {
-        "player": "Kaden Elliss",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Anfernee Jennings",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "NYJ": [
-      {
-        "player": "Kiko Mauigoa",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Adonai Mitchell",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Breece Hall",
+        "player": "TreVeyon Henderson",
         "position": "RB",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "PHI": [
       {
-        "player": "Saquon Barkley",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "DeVonta Smith",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Jonathan Greenard",
+        "player": "Jalyx Hunt",
         "position": "LB",
-        "status": "Out"
+        "status": "Doubtful"
       },
       {
-        "player": "Hollywood Brown",
-        "position": "WR",
-        "status": "Out"
+        "player": "Will Shipley",
+        "position": "RB",
+        "status": "Doubtful"
       }
     ],
     "PIT": [
-      {
-        "player": "Jamel Dean",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Rico Dowdle",
-        "position": "RB",
-        "status": "Out"
-      },
       {
         "player": "Ben Skowronek",
         "position": "WR",
@@ -493,27 +283,17 @@
     ],
     "SF": [
       {
-        "player": "Deebo Samuel Sr.",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Nick Bosa",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
         "player": "Garret Wallow",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Deebo Samuel Sr.",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "SEA": [
-      {
-        "player": "Chazz Surratt",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Zach Charbonnet",
         "position": "RB",
@@ -525,40 +305,13 @@
         "player": "Baker Mayfield",
         "position": "QB",
         "status": "Out"
-      },
-      {
-        "player": "Benjamin Morrison",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "SirVocea Dennis",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "TEN": [
-      {
-        "player": "David Martin-Robinson",
-        "position": "TE",
-        "status": "Out"
       }
     ],
     "WSH": [
       {
         "player": "Marcus Mariota",
         "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Charles Omenihu",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Stefon Diggs",
-        "position": "WR",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ]
   }
