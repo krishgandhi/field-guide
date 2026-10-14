@@ -96,7 +96,7 @@ function isPrimetime(game: Game): boolean {
  * "Nothing else on" used to be said of every primetime game, which is false
  * on the Monday nights with two games and on late-season Saturdays.
  */
-function overlapsAnother(game: Game, games: Game[]): boolean {
+export function overlapsAnother(game: Game, games: Game[]): boolean {
   const at = Date.parse(game.kickoff);
   return games.some(
     (other) => other.id !== game.id && Math.abs(Date.parse(other.kickoff) - at) < OVERLAP_MS,

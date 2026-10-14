@@ -39,7 +39,10 @@ import {
 } from "./lib/prose-cache.mts";
 
 /** Bump when the brief below changes materially, to rewrite existing sentences. */
-const PROMPT_VERSION = 1;
+// 2: inputs renamed and added (formerMvpQuarterbacks, divisionTopTwo,
+// bothInPlayoffPlaces, primetimeSharedWithAnotherGame) and the brief now
+// forbids standings claims the inputs don't support.
+const PROMPT_VERSION = 2;
 
 const SLATE = "src/data/slate.json";
 
@@ -52,10 +55,11 @@ const SLATE = "src/data/slate.json";
  */
 const SELF_TEST = process.argv.includes("--self-test");
 
-const { factorsFor } = await import("../src/lib/watchability.ts");
+const { factorsFor, overlapsAnother } = await import("../src/lib/watchability.ts");
 const { noteFor } = await import("../src/lib/slate/notes.ts");
 const { teamName, isDivisional, team } = await import("../src/lib/teams/index.ts");
 const { isRivalry, hasStarQb } = await import("../src/lib/slate/context.ts");
+const { raceBetween } = await import("../src/lib/standings.ts");
 
 // No key is the normal state on a fork or a local run, not an error: the
 // script still prunes last week's sentences and re-checks the rest.
@@ -196,6 +200,7 @@ console.log(
  */
 const games = needsReason.map((game) => {
   const factors = factorsFor(game, slate.week);
+  const race = raceBetween(game.home, game.away);
   const closeness =
     game.spread === null
       ? "no betting line posted yet"
@@ -211,10 +216,15 @@ const games = needsReason.map((game) => {
     home: teamName(game.home),
     closeness,
     sameDivision: isDivisional(game.home, game.away),
+    // From this season's standings; both false before the season and after it.
+    divisionTopTwo: race.divisionTopTwo,
+    bothInPlayoffPlaces: race.bothInPlayoffSpots,
     longstandingRivalry: isRivalry(game.home, game.away),
     // How many of the two starting quarterbacks have won the MVP award.
     formerMvpQuarterbacks: [game.home, game.away].filter((t) => hasStarQb(t)).length,
     primetime: factors.some((f) => f.kind === "standalone"),
+    primetimeSharedWithAnotherGame:
+      factors.some((f) => f.kind === "standalone") && overlapsAnother(game, slate.games),
     involvesBills: game.home === "BUF" || game.away === "BUF",
     // Headlines only, never article bodies (§9).
     reporting: (previews.get(game.id) ?? []).map((p) => ({
@@ -228,6 +238,9 @@ const SYSTEM = `You write one-sentence explanations of why an NFL game is or isn
 
 Rules, all of them hard:
 - Use ONLY the facts given for that game, including anything in its "reporting" list. You know nothing else about these teams.
+- Standings claims need a flag. Say the two are chasing the same playoff places only if bothInPlayoffPlaces is true, and that they lead the division only if divisionTopTwo is true. A division game counts once in the standings like any other; never say it counts double.
+- formerMvpQuarterbacks counts starting quarterbacks who have won the MVP award. Do not call anyone the best in the league on the strength of it.
+- Say a game has the night to itself only if primetime is true and primetimeSharedWithAnotherGame is false.
 - "reporting" is recent coverage of this game. Use it to say what is actually going on — a quarterback's first start, a coach facing his old team, a rematch of something. That specificity is the whole point; without it you will write something bland and useless.
 - Summarise reporting in your own words. Never copy a phrase from a headline.
 - You MAY name a player, but ONLY if that exact name appears in "reporting". If it isn't there, describe the situation instead ("their new quarterback").
