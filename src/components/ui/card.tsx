@@ -14,10 +14,13 @@ export function Card({
   children,
   tone = "default",
   as: Tag = "div",
+  pad = "md",
   className = "",
 }: {
   children: React.ReactNode;
   tone?: "default" | "yours" | "quiet";
+  /** `sm` for a card framing a picture (the field); `none` for lists that pad their own rows. */
+  pad?: "md" | "sm" | "none";
   as?: "div" | "article" | "section" | "li";
   className?: string;
 }) {
@@ -27,8 +30,9 @@ export function Card({
     // History and done states: an outline instead of a fill, so it recedes.
     quiet: "bg-transparent ring-1 ring-inset ring-line",
   };
+  const pads = { md: "p-4", sm: "p-3", none: "" };
   return (
-    <Tag className={`rounded-[var(--radius-card)] p-4 ${tones[tone]} ${className}`}>
+    <Tag className={`rounded-[var(--radius-card)] ${pads[pad]} ${tones[tone]} ${className}`}>
       {children}
     </Tag>
   );

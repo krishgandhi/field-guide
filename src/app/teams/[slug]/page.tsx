@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
-import { GameCard } from "@/components/game-card";
+import { GameCard } from "@/components/games/game-card";
 import { MdxContent } from "@/components/mdx-content";
 import { RecordStrip } from "@/components/record-strip";
 import { BignessPill } from "@/components/ui/score-meter";

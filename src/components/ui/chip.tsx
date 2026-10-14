@@ -9,6 +9,7 @@
  * - `unchecked` dim outline. Written automatically, nobody has checked it.
  * - `yours`     royal. The Bills.
  * - `flag`      challenge red. Something Krish contested.
+ * - `pressed`   a quiet chip that is currently open (an expanded injury list).
  *
  * Yellow is the first-down line and means "explained / watch this". Spending
  * it anywhere else dilutes the one signal the design is built on.
@@ -20,7 +21,8 @@ export type ChipVariant =
   | "checked"
   | "unchecked"
   | "yours"
-  | "flag";
+  | "flag"
+  | "pressed";
 
 const VARIANTS: Record<ChipVariant, string> = {
   watch: "bg-yellow text-night",
@@ -30,6 +32,7 @@ const VARIANTS: Record<ChipVariant, string> = {
   unchecked: "ring-[1.5px] ring-inset ring-chalk-dim text-chalk-dim",
   yours: "bg-royal/14 text-royal",
   flag: "bg-challenge/14 text-challenge",
+  pressed: "bg-line text-chalk",
 };
 
 export function Chip({
