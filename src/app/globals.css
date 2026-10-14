@@ -7,11 +7,10 @@
 /* Colours get a plain @theme block so Tailwind also emits the --color-*
    custom properties on :root, usable in handwritten CSS and inline styles.
 
-   --color-night MUST stay in sync with INK in scripts/fetch-teams.mjs, which
-   contrast-corrects all 32 team colours against it. Change one, re-run the
-   other. (At the time of the Yellow Line switch the script still used the old
-   #0A0C0B; the difference is small but the weakest displayColor drops from
-   4.5:1 to 4.4:1, so re-run fetch:teams once the script is updated.) */
+   --color-night and --color-surface MUST stay in sync with BACKGROUNDS in
+   scripts/lib/display-color.mjs, which contrast-corrects all 32 team colours
+   against both (tests/display-color.test.ts checks they match). Change one,
+   then run `npm run fetch:teams -- --colors-only`. */
 @theme {
   /* ground */
   --color-night: #0b100e; /* page ground, near-black with a green cast */
