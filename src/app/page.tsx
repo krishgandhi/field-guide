@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { GameCard } from "@/components/game-card";
-import { QueueLink } from "@/components/flag/queue-link";
+import { FlagCountButton } from "@/components/flag/flag-count-button";
+import { PageTitle } from "@/components/ui/page-title";
 import { BignessPill } from "@/components/ui/score-meter";
 import { Card, PageShell, SectionHeader } from "@/components/ui/page-header";
 import { getAllEntries } from "@/lib/content";
@@ -41,17 +42,10 @@ export default function ThisWeekPage() {
 
   return (
     <PageShell>
-      <header>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
-          Week {SLATE.week}
-        </p>
-        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-chalk">
-          This week
-        </h1>
-      </header>
-
-      {/* Renders only when there's something waiting (§6b). */}
-      <QueueLink />
+      <PageTitle
+        title={`Week ${SLATE.week}`}
+        action={<FlagCountButton className="lg:hidden" />}
+      />
 
       {billsGame ? (
         <>

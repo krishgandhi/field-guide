@@ -147,7 +147,7 @@ export function FlagSelection() {
           onMouseDown={(e) => e.preventDefault()}
           onClick={flag}
           style={{ left: visible.x, top: visible.y }}
-          className="fixed z-[70] flex min-h-11 -translate-x-1/2 items-center gap-1.5 rounded-full bg-yellow px-4 text-sm font-semibold text-night shadow-2xl"
+          className="fixed z-[70] flex min-h-11 -translate-x-1/2 items-center gap-1.5 rounded-full bg-challenge px-4 text-[15px] font-bold text-night shadow-[0_10px_24px_-8px_rgb(0_0_0/0.7)]"
         >
           <Flag size={14} aria-hidden />
           Flag this
@@ -160,12 +160,12 @@ export function FlagSelection() {
           className="fixed inset-x-4 bottom-20 z-[70] mx-auto flex max-w-sm items-center justify-between gap-3 rounded-xl border border-line bg-surface-2 px-4 py-3 shadow-2xl"
         >
           <span className="flex items-center gap-2 text-sm text-chalk">
-            <Check size={15} className="text-yellow" aria-hidden />
+            <Check size={15} className="text-challenge" aria-hidden />
             Flagged
           </span>
           <Link
             href="/queue"
-            className="text-sm font-semibold text-yellow hover:underline"
+            className="text-sm font-semibold text-chalk underline decoration-chalk-dim/60 underline-offset-[3px] hover:decoration-chalk"
           >
             See queue
           </Link>

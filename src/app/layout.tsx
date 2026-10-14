@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Big_Shoulders } from "next/font/google";
 import { BottomNav } from "@/components/nav/bottom-nav";
+import { DesktopRail } from "@/components/nav/desktop-rail";
 import { FlagSelection } from "@/components/flag/flag-selection";
 import "./globals.css";
 
@@ -38,6 +39,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: "#0B100E",
   colorScheme: "dark",
+  // Lets the page draw under the iPhone home indicator; the tab bar pads
+  // itself back out with env(safe-area-inset-bottom).
+  viewportFit: "cover",
 };
 
 export default function RootLayout({
@@ -47,10 +51,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${bigShoulders.variable} ${archivo.variable} h-full`}>
-      <body className="flex min-h-full flex-col">
+      {/* The bottom padding keeps content clear of the fixed phone tab bar
+          (64px plus its home-indicator inset); from lg the rail sits on the
+          left instead. */}
+      <body className="flex min-h-full flex-col pb-[calc(72px+env(safe-area-inset-bottom))] lg:pb-0 lg:pl-60">
         {children}
         <FlagSelection />
         <BottomNav />
+        <DesktopRail />
       </body>
     </html>
   );

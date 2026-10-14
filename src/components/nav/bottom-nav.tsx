@@ -2,54 +2,56 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, CalendarDays, Repeat2, Shield, Tv } from "lucide-react";
+import { TABS, isActive } from "@/components/nav/tabs";
 
 /**
- * Bottom tab bar.
+ * The phone tab bar (§10).
  *
- * Bottom rather than top because §10 makes the phone the primary device — he
- * reads this on transit and in bars, one-handed, so navigation sits at thumb
- * height. Client component solely for usePathname.
+ * Bottom because the phone is the primary device — he reads this on transit
+ * and in bars, one-handed, so navigation sits at thumb height. The active tab
+ * gets a pill behind its icon and a short yellow line along the bar's top
+ * edge, the first-down line marking where you are.
  *
- * Icons because "more intuitive" was an explicit ask: at a glance a shield and
- * a TV separate faster than two words in the same weight and size.
+ * Fixed rather than sticky so it never strands mid-page; the layout pads the
+ * page by the bar's height. Every cell is the full bar height (well over the
+ * 44px floor), and the bar pads for the iPhone home indicator.
  *
- * Tap targets are 56px tall against §10's 44px floor, and the bar pads for the
- * iPhone home indicator with safe-area insets.
+ * Hidden from `lg` up, where DesktopRail takes over.
  */
-
-const TABS = [
-  { href: "/", label: "This week", Icon: CalendarDays },
-  { href: "/games", label: "Games", Icon: Tv },
-  { href: "/moves", label: "Moves", Icon: Repeat2 },
-  { href: "/teams", label: "Teams", Icon: Shield },
-  { href: "/glossary", label: "Glossary", Icon: BookOpen },
-];
-
 export function BottomNav() {
   const pathname = usePathname();
 
   return (
     <nav
       aria-label="Main"
-      className="sticky bottom-0 z-40 border-t border-line bg-night/95 backdrop-blur"
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-night lg:hidden"
+      style={{ paddingBottom: "max(env(safe-area-inset-bottom), 8px)" }}
     >
-      <ul className="mx-auto flex w-full max-w-2xl">
+      <ul className="mx-auto grid h-16 w-full max-w-2xl grid-cols-5 px-1.5">
         {TABS.map(({ href, label, Icon }) => {
-          const active =
-            href === "/" ? pathname === "/" : pathname.startsWith(href);
-
+          const active = isActive(href, pathname);
           return (
-            <li key={href} className="flex-1">
+            <li key={href} className="relative">
+              {active ? (
+                <span
+                  aria-hidden
+                  className="absolute inset-x-[22%] -top-px h-[3px] rounded-b-[3px] bg-yellow"
+                />
+              ) : null}
               <Link
                 href={href}
                 aria-current={active ? "page" : undefined}
-                className={`flex min-h-14 flex-col items-center justify-center gap-1 px-1 text-center text-[0.65rem] font-medium leading-none transition-colors ${
-                  active ? "text-yellow" : "text-chalk-dim hover:text-chalk"
+                className={`flex h-full flex-col items-center justify-center gap-1 text-[11.5px] font-semibold leading-none transition-colors duration-[120ms] ${
+                  active ? "text-chalk" : "text-chalk-dim hover:text-chalk"
                 }`}
               >
-                <Icon size={20} strokeWidth={active ? 2.4 : 1.8} aria-hidden />
+                <span
+                  className={`grid h-[30px] w-[52px] place-items-center rounded-full transition-colors duration-[120ms] ${
+                    active ? "bg-surface-2" : ""
+                  }`}
+                >
+                  <Icon size={21} strokeWidth={2} aria-hidden />
+                </span>
                 {label}
               </Link>
             </li>
