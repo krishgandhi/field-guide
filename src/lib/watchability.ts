@@ -43,7 +43,14 @@ export type Factor = {
   points: number;
   /** Ordered by how much it should lead the sentence. */
   priority: number;
+  /**
+   * One independent clause — a subject and a verb, capitalised, no full stop —
+   * so any two can be joined with ", and" or set as two sentences and still
+   * read as English. See composeReason.
+   */
   reason: string;
+  /** For `race` only: which race the standings showed. */
+  race?: "division" | "playoffs";
 };
 
 /**
@@ -130,8 +137,8 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
           [
             "The bookmakers expect this one to be close",
             "This one should go to the wire",
-            "Hard to call before kickoff",
-            "Expect it to be tight the whole way",
+            "It's hard to call before kickoff",
+            "It should be tight the whole way",
           ],
           seed,
           0,
@@ -145,8 +152,8 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
         reason: pick(
           [
             "One side is favoured, but not by much",
-            "Competitive without being a coin flip",
-            "Should be competitive, with one side a little stronger",
+            "It should be competitive without being a coin flip",
+            "It should be competitive, with one side a little stronger",
           ],
           seed,
           1,
@@ -183,14 +190,14 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
       reason: pick(
         late
           ? [
-              "Same division, and this late a loss is hard to make up",
-              "A division game, with fewer weeks left to make up a loss",
-              "Same division, so the winner gains ground on a direct rival",
+              "They share a division, and this late a loss is hard to make up",
+              "It's a division game, with fewer weeks left to make up a loss",
+              "They share a division, so the winner gains ground on a direct rival",
             ]
           : [
-              "They play twice a year, and the results break ties for the division title",
-              "Same division, so the winner gains ground on a direct rival",
-              "A division game, and those decide who wins the division when records end level",
+              "They meet twice a year, and those results break ties for the division title",
+              "They share a division, so the winner gains ground on a direct rival",
+              "It's a division game, the kind that decides the title when records end level",
             ],
         seed,
         late ? 3 : 4,
@@ -207,8 +214,9 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
       // Specific beats generic, so this leads ahead of the plain division line.
       priority: 1.5,
       reason: race.divisionTopTwo
-        ? "The top two in the division, a game or less apart"
-        : "Both are in playoff places right now, chasing the same spots",
+        ? "They're the top two in the division, a game or less apart"
+        : "Both are in playoff places right now and chasing the same spots",
+      race: race.divisionTopTwo ? "division" : "playoffs",
     });
   }
 
@@ -222,9 +230,9 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
       priority: 3,
       reason: pick(
         [
-          "Two former MVPs at quarterback, head to head",
+          "Two former MVPs meet at quarterback",
           "Both quarterbacks have won the league's MVP award",
-          "A quarterback duel between two former MVPs",
+          "It's a quarterback duel between two former MVPs",
         ],
         seed,
         5,
@@ -238,7 +246,7 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
       reason: pick(
         [
           "A former league MVP is playing quarterback",
-          "Worth it to watch a former MVP at quarterback",
+          "There's a former MVP at quarterback",
         ],
         seed,
         6,
@@ -254,12 +262,12 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
       points: 1,
       priority: 7,
       reason: shared
-        ? pick(["A primetime slot", "One of the night games"], seed, 7)
+        ? pick(["It's in a primetime slot", "It's one of the night games"], seed, 7)
         : pick(
             [
-              "Primetime, with nothing else on",
+              "It's in primetime with nothing else on",
               "It has the night to itself",
-              "The only game in this window",
+              "It's the only game in this window",
             ],
             seed,
             7,
@@ -277,7 +285,7 @@ export function factorsFor(game: Game, week: number, ctx: ScoringContext = {}): 
         [
           "These two genuinely don't like each other",
           "There's real history here",
-          "A rivalry both fan bases care about",
+          "It's a rivalry both fan bases care about",
         ],
         seed,
         8,
@@ -317,19 +325,66 @@ export function watchability(
   if (note) return { score: toScore(points), reason: note };
   if (game.reason) return { score: toScore(points), reason: game.reason };
 
-  const spoken = [...factors]
-    .sort((a, b) => a.priority - b.priority)
-    .slice(0, 2)
-    .map((f) => f.reason);
+  return { score: toScore(points), reason: composeReason(factors) };
+}
 
-  const reason =
-    spoken.length === 0
-      ? "Nothing much riding on this one."
-      : spoken.length === 1
-        ? `${spoken[0]}.`
-        : `${spoken[0]}, and ${spoken[1].charAt(0).toLowerCase()}${spoken[1].slice(1)}.`;
+/** Joined with ", and" only when both clauses are this short and comma-free. */
+const ONE_SENTENCE_MAX = 100;
 
-  return { score: toScore(points), reason };
+/**
+ * The template sentence: the strongest one or two factors, as English.
+ *
+ * Gluing two fragments with ", and" produced "Both are in playoff places right
+ * now, chasing the same spots, and a division game, and those decide who
+ * wins…". Three fixes:
+ *
+ * - every factor's wording is a full clause, so a join has a subject and verb
+ *   on both sides;
+ * - facts that overlap are merged first — "top two in the division" already
+ *   says it is a division game, and a division game between two teams in
+ *   playoff places is one fact, not two;
+ * - two short comma-free clauses share a sentence; anything longer becomes two
+ *   sentences, so a comma never gets a second ", and" stacked on it.
+ */
+export function composeReason(factors: Factor[]): string {
+  let ranked = [...factors].sort((a, b) => a.priority - b.priority);
+
+  const race = ranked.find((f) => f.kind === "race");
+  const division = ranked.find((f) => f.kind === "division");
+  if (race && division) {
+    ranked = ranked.filter((f) => f !== division);
+    if (race.race === "playoffs") {
+      ranked = ranked.map((f) =>
+        f === race
+          ? {
+              ...f,
+              reason:
+                "They share a division and both sit in playoff places right now, so the winner gains real ground",
+            }
+          : f,
+      );
+    }
+  }
+
+  const [first, second] = ranked.slice(0, 2).map((f) => f.reason);
+  if (!first) return "Nothing much riding on this one.";
+  if (!second) return `${first}.`;
+
+  const joinable =
+    !first.includes(",") &&
+    !second.includes(",") &&
+    first.length + second.length + 6 <= ONE_SENTENCE_MAX;
+  return joinable
+    ? `${first}, and ${lowerFirst(second)}.`
+    : `${first}. ${second}.`;
+}
+
+/** "It's" → "it's", but "MVP…" and "I…" keep their capitals. */
+function lowerFirst(clause: string): string {
+  const word = clause.split(" ")[0];
+  if (word.length > 1 && word === word.toUpperCase()) return clause;
+  if (word === "I") return clause;
+  return clause.charAt(0).toLowerCase() + clause.slice(1);
 }
 
 /**
