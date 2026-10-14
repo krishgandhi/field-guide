@@ -41,7 +41,7 @@ check(
 );
 // Assert the ORDER rather than which entry happens to be newest today.
 const dateText = () =>
-  page.locator('a[href^="/moves/"] span.tnum').allTextContents();
+  page.locator("a[href^='/moves/'] [data-move-date]").allTextContents();
 const asDate = (t) => new Date(t.trim()).getTime();
 const initialDates = (await dateText()).map(asDate);
 check(
@@ -101,7 +101,8 @@ const minor = await headlines();
 check("Minor narrows the list", minor.length > 0 && minor.length < TOTAL, `got ${minor.length}`);
 check(
   "and every card shown reads Minor",
-  (await page.locator('a[href^="/moves/"]').getByText("Minor", { exact: true }).count()) ===
+  // The chip reads "Minor · 2" (src/lib/moves/bigness.ts).
+  (await page.locator('a[href^="/moves/"]').getByText(/^Minor · \d$/).count()) ===
     minor.length,
   minor.join(" / "),
 );
@@ -152,7 +153,7 @@ await page.waitForTimeout(200);
 
 // --- dates render at one precision -----------------------------------------
 const dates = await page
-  .locator('a[href^="/moves/"] span.tnum')
+  .locator("a[href^='/moves/'] [data-move-date]")
   .allTextContents();
 check("every card shows a full day-month-year", dates.length === TOTAL, `got ${dates.length}`);
 const badDate = dates.find((d) => !/^\d{1,2}\s+\w+\s+\d{4}$/.test(d.trim()));

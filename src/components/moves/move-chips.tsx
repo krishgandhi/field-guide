@@ -25,13 +25,15 @@ export function BignessChip({ value, size }: { value: number; size?: "sm" | "md"
 export function CheckedChip({
   verified,
   sensitive = false,
+  size,
 }: {
   verified: boolean;
   sensitive?: boolean;
+  size?: "sm" | "md";
 }) {
   if (verified) {
     return (
-      <Chip variant="checked">
+      <Chip variant="checked" size={size}>
         <Check strokeWidth={2.4} aria-hidden />
         Checked
       </Chip>
@@ -39,14 +41,14 @@ export function CheckedChip({
   }
   if (sensitive) {
     return (
-      <Chip variant="flag">
+      <Chip variant="flag" size={size}>
         <AlertTriangle strokeWidth={2.4} aria-hidden />
         Unverified
       </Chip>
     );
   }
   return (
-    <Chip variant="unchecked">
+    <Chip variant="unchecked" size={size}>
       <CircleDashed strokeWidth={2.4} aria-hidden />
       Not checked yet
     </Chip>

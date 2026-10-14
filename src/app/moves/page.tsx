@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { SampleDataBadge } from "@/components/ui/sample-data-badge";
-import { PageHeader, PageShell } from "@/components/ui/page-header";
+import { FlagCountButton } from "@/components/flag/flag-count-button";
+import { PageShell } from "@/components/ui/page-header";
+import { PageTitle } from "@/components/ui/page-title";
 import { MovesList, type MoveListItem } from "@/components/moves/moves-list";
 import { getMoves } from "@/lib/moves";
 import { teamLogo, teamName } from "@/lib/teams";
@@ -38,11 +39,12 @@ export default function MovesPage() {
 
   return (
     <PageShell>
-      <PageHeader kicker="2026 season" title="Moves" />
-
-      <SampleDataBadge
-        lead="Real events."
-        note="Every entry links its source. The 1–5 scores are judgement calls, not sourced facts."
+      {/* The old "Real events." badge said this in a yellow box; it's a fact
+          about the whole list, so it's the subtitle now. */}
+      <PageTitle
+        title="Moves"
+        subtitle="Every entry links its reporting. How big each one is, 1 to 5, is a judgement call."
+        action={<FlagCountButton className="lg:hidden" />}
       />
 
       <MovesList moves={moves} />
