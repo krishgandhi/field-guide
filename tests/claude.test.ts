@@ -13,15 +13,22 @@ import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 let server: Server;
 let next: { status: number; body: unknown };
 let lastRequest: { headers: Record<string, unknown>; body: Record<string, unknown> } | null;
+/** Milliseconds the stand-in waits before answering. */
+let delay = 0;
+let requests = 0;
 
 beforeAll(async () => {
   server = createServer((req, res) => {
     let raw = "";
     req.on("data", (c) => (raw += c));
     req.on("end", () => {
+      requests++;
       lastRequest = { headers: req.headers, body: JSON.parse(raw || "{}") };
-      res.writeHead(next.status, { "content-type": "application/json" });
-      res.end(JSON.stringify(next.body));
+      setTimeout(() => {
+        if (res.destroyed) return;
+        res.writeHead(next.status, { "content-type": "application/json" });
+        res.end(JSON.stringify(next.body));
+      }, delay);
     });
   });
   await new Promise<void>((resolve) => server.listen(0, "127.0.0.1", resolve));
@@ -145,6 +152,25 @@ describe("generateJson", () => {
     expect(exit).not.toHaveBeenCalled();
     exit.mockRestore();
   }, 30_000);
+});
+
+describe("time limits", () => {
+  it("gives up on a hung request after the timeout and one retry, as an ordinary error", async () => {
+    const { generateJson, MAX_RETRIES } = await load();
+    next = { status: 200, body: message({}) };
+    delay = 1_000;
+    requests = 0;
+    const exit = vi.spyOn(process, "exit");
+    const started = Date.now();
+    await expect(generateJson({ ...request, timeoutMs: 100 })).rejects.toThrow(/timed out/i);
+    // Two attempts of 100ms plus the SDK's short backoff — nowhere near the
+    // half hour its own defaults would allow.
+    expect(Date.now() - started).toBeLessThan(5_000);
+    expect(requests).toBe(MAX_RETRIES + 1);
+    expect(exit).not.toHaveBeenCalled();
+    exit.mockRestore();
+    delay = 0;
+  }, 15_000);
 });
 
 describe("probeKey", () => {

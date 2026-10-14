@@ -44,7 +44,13 @@ jobs:
     # A normal run takes a few minutes. ESPN's client stops calling after five
     # outages in a row, so a down ESPN can't run this for hours; this is the
     # backstop if something else hangs.
-    timeout-minutes: 45
+    #
+    # The job limit must stay ABOVE the sum of the writers' own limits below
+    # (26 + 8 + 10 + 8 = 52 minutes) plus fetch, check and build: a job that
+    # hits its limit is killed before "Commit if changed", and everything it
+    # fetched is lost. Each writer is cut off by `timeout` instead, which
+    # step.sh records as an ordinary failure, and the job carries on.
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v4
 
@@ -105,8 +111,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # draft-moves stops starting batches after 12 minutes (worst case ~24);
+      # the `timeout` is the backstop. A run cut off writes nothing and counts
+      # no attempts, so its candidates simply come back tomorrow.
       - name: Draft moves
-        run: scripts/ci/step.sh "Draft moves" node scripts/draft-moves.mjs
+        run: scripts/ci/step.sh "Draft moves" timeout --kill-after=30s 26m node scripts/draft-moves.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
@@ -115,17 +124,17 @@ jobs:
         run: scripts/ci/step.sh "Fetch people" node scripts/fetch-people.mjs
 
       - name: Write game reasons
-        run: scripts/ci/step.sh "Write game reasons" npm run --silent write:reasons
+        run: scripts/ci/step.sh "Write game reasons" timeout --kill-after=30s 8m npm run --silent write:reasons
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Write unit notes
-        run: scripts/ci/step.sh "Write unit notes" npm run --silent write:units
+        run: scripts/ci/step.sh "Write unit notes" timeout --kill-after=30s 10m npm run --silent write:units
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
       - name: Write profile lines
-        run: scripts/ci/step.sh "Write profile lines" npm run --silent write:profiles
+        run: scripts/ci/step.sh "Write profile lines" timeout --kill-after=30s 8m npm run --silent write:profiles
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 

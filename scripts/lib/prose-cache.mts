@@ -32,7 +32,7 @@
  */
 
 import { createHash } from "node:crypto";
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 
 export const PROSE_PATH = "src/data/prose-cache.json";
 
@@ -104,7 +104,10 @@ export function writeCache(cache: ProseCache, file: string = PROSE_PATH): void {
       Object.fromEntries(Object.entries(cache[kind]).sort(([a], [b]) => a.localeCompare(b))),
     ]),
   );
-  writeFileSync(file, `${JSON.stringify(sorted, null, 2)}\n`);
+  // Written aside and renamed into place: the refresh job can cut a writer
+  // off with `timeout`, and a half-written file would fail the build.
+  writeFileSync(`${file}.tmp`, `${JSON.stringify(sorted, null, 2)}\n`);
+  renameSync(`${file}.tmp`, file);
 }
 
 /** One subject a writer wants a line for, with the key of its current inputs. */

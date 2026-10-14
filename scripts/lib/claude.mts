@@ -146,7 +146,22 @@ export type JsonRequest = {
   effort: "low" | "medium" | "high" | "xhigh" | "max";
   /** Adaptive thinking. Off unless asked for; it bills as output. */
   thinking?: boolean;
+  /** Per-attempt timeout. Defaults to DEFAULT_TIMEOUT_MS. */
+  timeoutMs?: number;
 };
+
+/**
+ * Per-attempt timeout, and one retry at most.
+ *
+ * The SDK's own defaults scale the timeout with max_tokens (up to 30
+ * minutes here) and retry twice, so four draft batches could in theory run
+ * for hours — well past the refresh job's limit, which would kill the job
+ * before its commit step and lose everything else it fetched. A request
+ * that hasn't answered in a few minutes isn't going to; the batch fails as
+ * an ordinary error and waits for tomorrow.
+ */
+export const DEFAULT_TIMEOUT_MS = 4 * 60_000;
+export const MAX_RETRIES = 1;
 
 /**
  * One structured-output call. Resolves with the parsed JSON, or throws:
@@ -172,7 +187,7 @@ export async function generateJson<T>(req: JsonRequest): Promise<{ data: T; usag
       betas: [FALLBACK_BETA],
       fallbacks: "default",
       messages: [{ role: "user", content: req.user }],
-    });
+    }, { timeout: req.timeoutMs ?? DEFAULT_TIMEOUT_MS, maxRetries: MAX_RETRIES });
   } catch (err) {
     const fatal = configProblem(err);
     if (fatal) {

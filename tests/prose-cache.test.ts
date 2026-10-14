@@ -3,14 +3,20 @@
  * that validates.
  */
 
+import { mkdtempSync, readdirSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   chunk,
+  emptyCache,
   MAX_ATTEMPTS,
   needsWriting,
   proseKey,
+  readCache,
   settle,
   stableStringify,
+  writeCache,
   type ProseSection,
 } from "../scripts/lib/prose-cache.mjs";
 
@@ -186,4 +192,15 @@ describe("settle", () => {
 
 it("chunk splits into fixed-size batches", () => {
   expect(chunk([1, 2, 3, 4, 5, 6, 7], 3)).toEqual([[1, 2, 3], [4, 5, 6], [7]]);
+});
+
+it("writeCache replaces the file whole and leaves no temporary behind", () => {
+  const dir = mkdtempSync(path.join(tmpdir(), "prose-"));
+  const file = path.join(dir, "prose-cache.json");
+  const cache = emptyCache();
+  cache.units["BUF:offence"] = { text: "Line.", key: "k" };
+  writeCache(cache, file);
+  expect(readCache(file).units["BUF:offence"].text).toBe("Line.");
+  expect(readdirSync(dir)).toEqual(["prose-cache.json"]);
+  rmSync(dir, { recursive: true });
 });

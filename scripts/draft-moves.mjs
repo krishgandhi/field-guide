@@ -49,6 +49,16 @@ const BATCH_SIZE = 6;
  * fit waits for tomorrow — it stays on the worklist, it isn't dropped.
  */
 const MAX_BATCHES = 4;
+/**
+ * Time limits, so the refresh job always reaches its commit step. Each call
+ * gets BATCH_TIMEOUT_MS per attempt (one retry, see claude.mts), and no new
+ * batch starts once RUN_BUDGET_MS has gone: worst case is the budget plus
+ * one batch's two attempts, about 24 minutes. What doesn't start waits for
+ * tomorrow, with no attempt counted.
+ */
+const BATCH_TIMEOUT_MS = 6 * 60_000;
+const RUN_BUDGET_MS = 12 * 60_000;
+const startedAt = Date.now();
 
 const CANDIDATES = "src/data/move-candidates.json";
 /**
@@ -239,6 +249,10 @@ const attempted = new Set();
 const usage = { input: 0, output: 0 };
 
 for (const [i, batch] of thisRun.entries()) {
+  if (Date.now() - startedAt > RUN_BUDGET_MS) {
+    console.log(`  out of time — batches ${i + 1}–${thisRun.length} wait for the next run.`);
+    break;
+  }
   try {
     const { data, usage: u } = await generateJson({
       label: `draft-moves ${i + 1}/${thisRun.length}`,
@@ -251,6 +265,7 @@ for (const [i, batch] of thisRun.entries()) {
       // move at all, and how big), not a short writing task.
       effort: "high",
       thinking: true,
+      timeoutMs: BATCH_TIMEOUT_MS,
     });
     usage.input += u.input;
     usage.output += u.output;
