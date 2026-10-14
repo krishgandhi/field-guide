@@ -62,9 +62,11 @@ const components = {
         </GlossaryTerm>
       );
     }
+    // A plain link is underlined in chalk, never yellow: yellow under text
+    // means "this term is explained" and nothing else (§10).
     return (
       <a
-        className="text-yellow underline decoration-yellow/40 underline-offset-2 hover:decoration-yellow"
+        className="text-chalk underline decoration-chalk-dim/60 decoration-1 underline-offset-[3px] hover:decoration-chalk"
         {...props}
       >
         {children}
@@ -76,7 +78,7 @@ const components = {
   ),
   blockquote: (props: React.ComponentProps<"blockquote">) => (
     <blockquote
-      className="my-5 border-l-2 border-yellow/60 pl-4 italic text-chalk-dim"
+      className="my-5 border-l-2 border-line pl-4 italic text-chalk-dim"
       {...props}
     />
   ),

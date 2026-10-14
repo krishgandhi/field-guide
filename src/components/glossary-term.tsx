@@ -71,7 +71,10 @@ export function GlossaryTerm({
         onMouseLeave={() => !coarse && setOpen(false)}
         onFocus={() => !coarse && setOpen(true)}
         onBlur={() => !coarse && setOpen(false)}
-        className="text-chalk underline decoration-yellow/70 decoration-dotted decoration-2 underline-offset-4 transition-colors hover:decoration-yellow"
+        // The first-down line under the word (§10). It floods to fill the
+        // word while the explanation is open.
+        data-open={open ? "" : undefined}
+        className="explained"
       >
         {children}
       </Link>

@@ -73,6 +73,17 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* The same label at 11px, for the two-line caption under a rating tile. */
+@utility label-sm {
+  font-family: var(--font-sans);
+  font-stretch: 75%;
+  font-weight: 700;
+  font-size: 0.6875rem; /* 11px */
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 /* Display type: Big Shoulders at its heavy weight, tight leading. */
 @utility heading {
   font-family: var(--font-display);
