@@ -37,13 +37,13 @@ export default function TeamsPage() {
     <PageShell>
       <PageHeader kicker="All 32" title="Teams" />
 
-      <p className="mt-2 text-sm text-fg-dim">
+      <p className="mt-2 text-sm text-chalk-dim">
         {written} of {NFL_TEAMS.length} written up so far.
       </p>
 
       {ORDER.map(([conference, division]) => (
         <section key={`${conference}-${division}`} className="mt-6">
-          <h2 className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+          <h2 className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
             {conference} {division}
           </h2>
           <div className="grid grid-cols-2 gap-2">
@@ -54,7 +54,7 @@ export default function TeamsPage() {
                 <Link
                   key={team.id}
                   href={`/teams/${team.slug}`}
-                  className="flex min-h-14 items-center gap-2.5 rounded-xl border border-line bg-surface px-3 py-2.5 transition-colors hover:border-fg/20"
+                  className="flex min-h-14 items-center gap-2.5 rounded-xl border border-line bg-surface px-3 py-2.5 transition-colors hover:border-chalk/20"
                 >
                   {logo ? (
                     <Image
@@ -66,13 +66,13 @@ export default function TeamsPage() {
                     />
                   ) : null}
                   <span className="min-w-0">
-                    <span className="block truncate text-sm font-semibold text-fg">
+                    <span className="block truncate text-sm font-semibold text-chalk">
                       {team.name}
                     </span>
                     {/* Record rather than a "not written" label: it's real for
                         all 32, so the grid is useful before the write-ups exist. */}
                     {record ? (
-                      <span className="tnum block text-[0.7rem] text-fg-dim">
+                      <span className="tnum block text-[0.7rem] text-chalk-dim">
                         {recordLabel(record)}
                       </span>
                     ) : null}

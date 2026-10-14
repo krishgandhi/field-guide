@@ -32,7 +32,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Main"
-      className="sticky bottom-0 z-40 border-t border-line bg-ink/95 backdrop-blur"
+      className="sticky bottom-0 z-40 border-t border-line bg-night/95 backdrop-blur"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <ul className="mx-auto flex w-full max-w-2xl">
@@ -46,7 +46,7 @@ export function BottomNav() {
                 href={href}
                 aria-current={active ? "page" : undefined}
                 className={`flex min-h-14 flex-col items-center justify-center gap-1 px-1 text-center text-[0.65rem] font-medium leading-none transition-colors ${
-                  active ? "text-amber" : "text-fg-dim hover:text-fg"
+                  active ? "text-yellow" : "text-chalk-dim hover:text-chalk"
                 }`}
               >
                 <Icon size={20} strokeWidth={active ? 2.4 : 1.8} aria-hidden />

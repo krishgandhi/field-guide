@@ -33,7 +33,7 @@ export function BackLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="-ml-1 mb-2 inline-flex min-h-11 items-center gap-0.5 text-sm font-medium text-fg-dim hover:text-fg"
+      className="-ml-1 mb-2 inline-flex min-h-11 items-center gap-0.5 text-sm font-medium text-chalk-dim hover:text-chalk"
     >
       <ChevronLeft size={16} aria-hidden />
       {label}
@@ -56,11 +56,11 @@ export function PageHeader({
     <header>
       {backHref ? <BackLink href={backHref} label={backLabel ?? "Back"} /> : null}
       {kicker ? (
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
           {kicker}
         </p>
       ) : null}
-      <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
+      <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-chalk">
         {title}
       </h1>
     </header>
@@ -80,11 +80,11 @@ export function SectionHeader({
 }) {
   return (
     <div className="mb-2 mt-7 flex items-baseline justify-between gap-3">
-      <h2 className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+      <h2 className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
         {title}
       </h2>
       {aside ? (
-        <span className="text-[0.7rem] font-medium text-fg-dim/70">{aside}</span>
+        <span className="text-[0.7rem] font-medium text-chalk-dim/70">{aside}</span>
       ) : null}
     </div>
   );
@@ -95,7 +95,7 @@ export function SectionHeader({
  *
  * `tone` rather than passing border/background classes in: Tailwind decides
  * which of two conflicting utilities wins by its own output order, not by the
- * order they appear in the class attribute, so `className="border-amber/25"`
+ * order they appear in the class attribute, so `className="border-yellow/25"`
  * silently loses to the built-in `border-line`. A variant avoids the conflict
  * instead of fighting it.
  */
@@ -105,12 +105,12 @@ export function Card({
   className = "",
 }: {
   children: React.ReactNode;
-  tone?: "default" | "amber";
+  tone?: "default" | "yellow";
   className?: string;
 }) {
   const tones = {
     default: "border-line bg-surface",
-    amber: "border-amber/30 bg-amber/[0.07]",
+    yellow: "border-yellow/30 bg-yellow/[0.07]",
   };
   return (
     <div className={`rounded-2xl border p-4 ${tones[tone]} ${className}`}>

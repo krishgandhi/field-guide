@@ -96,12 +96,12 @@ function Picker({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="min-h-11 w-full appearance-none rounded-xl border border-line bg-surface pl-3 pr-9 text-sm text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
+        className="min-h-11 w-full appearance-none rounded-xl border border-line bg-surface pl-3 pr-9 text-sm text-chalk focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow"
       >
         {children}
       </select>
       <ChevronDown
-        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-fg-dim"
+        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-chalk-dim"
         aria-hidden
       />
     </label>
@@ -166,10 +166,10 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
               type="button"
               onClick={() => setSort(value)}
               aria-pressed={sort === value}
-              className={`min-h-11 flex-1 rounded-lg text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber ${
+              className={`min-h-11 flex-1 rounded-lg text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow ${
                 sort === value
-                  ? "bg-surface-2 text-fg"
-                  : "text-fg-dim hover:text-fg"
+                  ? "bg-surface-2 text-chalk"
+                  : "text-chalk-dim hover:text-chalk"
               }`}
             >
               {label}
@@ -219,14 +219,14 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         </div>
       </div>
 
-      <p className="mt-3 text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+      <p className="mt-3 text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
         {shown.length} of {moves.length}
       </p>
 
       {shown.length === 0 ? (
         /* §10: empty states are invitations, not apologies. */
         <Card className="mt-3">
-          <p className="text-sm leading-relaxed text-fg-dim">
+          <p className="text-sm leading-relaxed text-chalk-dim">
             Nothing matches that combination yet. Widen the filters, or check
             back — the list grows through the season.
           </p>
@@ -235,7 +235,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         <div className="mt-3 space-y-3">
           {shown.map((move) => (
             <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
-              <Card className="transition-colors hover:border-fg/20">
+              <Card className="transition-colors hover:border-chalk/20">
                 {/* Wraps rather than compresses: with an Unverified badge alongside the
                     type and size, a fixed row squeezed "14 August 2026" onto three
                     lines and ran it into the crests. */}
@@ -255,7 +255,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
                         ) : null,
                       )}
                     </span>
-                    <span className="tnum whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+                    <span className="tnum whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
                       {move.dateLabel}
                     </span>
                   </span>
@@ -263,17 +263,17 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
                     {move.verified ? null : (
                       <UncheckedBadge sensitive={move.sensitive} />
                     )}
-                    <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-fg-dim">
+                    <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-chalk-dim">
                       {KIND_LABEL[move.kind] ?? move.kind}
                     </span>
                     <BignessPill value={move.bigness} />
                   </span>
                 </div>
 
-                <h2 className="text-[1.05rem] font-semibold leading-snug text-fg">
+                <h2 className="text-[1.05rem] font-semibold leading-snug text-chalk">
                   {move.headline}
                 </h2>
-                <p className="mt-1.5 text-sm leading-snug text-fg-dim">
+                <p className="mt-1.5 text-sm leading-snug text-chalk-dim">
                   {move.soWhat}
                 </p>
               </Card>

@@ -54,10 +54,10 @@ export default function QueuePage() {
       <BackLink href="/" label="This week" />
 
       <header>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
           {pending.length} waiting
         </p>
-        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
+        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-chalk">
           Flagged
         </h1>
       </header>
@@ -65,15 +65,15 @@ export default function QueuePage() {
       {flags.length === 0 ? (
         /* §10: empty states are invitations, not apologies. */
         <Card className="mt-5">
-          <p className="text-sm leading-relaxed text-fg-dim">
+          <p className="text-sm leading-relaxed text-chalk-dim">
             Nothing flagged yet. While you&rsquo;re reading, select any phrase
             that doesn&rsquo;t make sense and tap{" "}
-            <span className="font-semibold text-amber">Flag this</span>. It
+            <span className="font-semibold text-yellow">Flag this</span>. It
             lands here, and one button hands the whole list back to me.
           </p>
           <Link
             href="/glossary"
-            className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-amber hover:underline"
+            className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-yellow hover:underline"
           >
             Go read something
           </Link>
@@ -83,7 +83,7 @@ export default function QueuePage() {
           <button
             type="button"
             onClick={exportQueue}
-            className="mt-5 flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-amber text-sm font-semibold text-ink"
+            className="mt-5 flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-yellow text-sm font-semibold text-night"
           >
             {copied ? (
               <>
@@ -99,13 +99,13 @@ export default function QueuePage() {
           </button>
 
           {copyFailed ? (
-            <p className="mt-2 text-sm text-pencil">
+            <p className="mt-2 text-sm text-challenge">
               Couldn&rsquo;t reach the clipboard — that usually means the page
               isn&rsquo;t on HTTPS or the browser blocked it. Nothing was marked
               as exported.
             </p>
           ) : (
-            <p className="mt-2 text-center text-[0.8rem] text-fg-dim">
+            <p className="mt-2 text-center text-[0.8rem] text-chalk-dim">
               Copies as JSON. Paste it into Claude Code.
             </p>
           )}
@@ -114,29 +114,29 @@ export default function QueuePage() {
             {flags.map((flag) => (
               <Card key={flag.id}>
                 <div className="flex items-start justify-between gap-3">
-                  <p className="text-base font-semibold text-fg">
+                  <p className="text-base font-semibold text-chalk">
                     &ldquo;{flag.phrase}&rdquo;
                   </p>
                   <button
                     type="button"
                     onClick={() => removeFlag(flag.id)}
                     aria-label={`Remove flag for ${flag.phrase}`}
-                    className="-mr-2 -mt-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-fg-dim hover:text-pencil"
+                    className="-mr-2 -mt-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-chalk-dim hover:text-challenge"
                   >
                     <Trash2 size={15} aria-hidden />
                   </button>
                 </div>
 
-                <p className="mt-1.5 text-sm leading-snug text-fg-dim">
+                <p className="mt-1.5 text-sm leading-snug text-chalk-dim">
                   {flag.sentence}
                 </p>
 
-                <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-2.5 text-[0.7rem] text-fg-dim">
-                  <Link href={flag.path} className="font-medium hover:text-fg">
+                <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-line pt-2.5 text-[0.7rem] text-chalk-dim">
+                  <Link href={flag.path} className="font-medium hover:text-chalk">
                     {flag.pageTitle}
                   </Link>
                   {flag.sourceFile ? (
-                    <code className="text-fg-dim/70">{flag.sourceFile}</code>
+                    <code className="text-chalk-dim/70">{flag.sourceFile}</code>
                   ) : null}
                   {flag.exportedAt ? (
                     <span className="ml-auto rounded-full bg-surface-2 px-2 py-0.5 font-medium">

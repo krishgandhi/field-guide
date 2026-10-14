@@ -95,10 +95,10 @@ export default async function TeamDetailPage({ params }: PageProps) {
             />
           ) : null}
           <div className="min-w-0">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
               {team.conference} {team.division}
             </p>
-            <h1 className="text-2xl font-bold leading-tight tracking-tight text-fg">
+            <h1 className="text-2xl font-bold leading-tight tracking-tight text-chalk">
               {team.displayName}
             </h1>
           </div>
@@ -109,7 +109,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
 
       {entry ? (
         <>
-          <p className="mt-5 text-[1.05rem] leading-snug text-amber">
+          <p className="mt-5 text-[1.05rem] leading-snug text-yellow">
             {entry.frontmatter.summary}
           </p>
           {/* Jargon inside the write-up gets auto-linked (§6a) — the whole
@@ -121,13 +121,13 @@ export default async function TeamDetailPage({ params }: PageProps) {
       ) : (
         /* §10: empty states are invitations, not apologies. */
         <Card className="mt-5">
-          <p className="text-sm leading-relaxed text-fg-dim">
+          <p className="text-sm leading-relaxed text-chalk-dim">
             No write-up yet. The record and the squad below are real —
             what&rsquo;s missing is what this team is actually about.
           </p>
           <Link
             href="/teams/buffalo-bills"
-            className="mt-3 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-amber hover:underline"
+            className="mt-3 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-yellow hover:underline"
           >
             See a finished one
             <ChevronRight size={15} aria-hidden />
@@ -144,12 +144,12 @@ export default async function TeamDetailPage({ params }: PageProps) {
 
           {detail.coach ? (
             <Card className="mb-2.5">
-              <p className="text-sm text-fg">
-                <span className="text-fg-dim">Head coach</span>{" "}
+              <p className="text-sm text-chalk">
+                <span className="text-chalk-dim">Head coach</span>{" "}
                 <span className="font-semibold">{detail.coach.name}</span>
               </p>
               {coachTenure(detail.coach.experience) ? (
-                <p className="mt-0.5 text-[0.8rem] text-fg-dim">
+                <p className="mt-0.5 text-[0.8rem] text-chalk-dim">
                   {coachTenure(detail.coach.experience)}
                 </p>
               ) : null}
@@ -178,8 +178,8 @@ export default async function TeamDetailPage({ params }: PageProps) {
                   key={`${k.player}-${k.position}`}
                   className="flex items-baseline justify-between gap-3 text-sm"
                 >
-                  <span className="text-fg">{k.player}</span>
-                  <span className="shrink-0 text-[0.7rem] uppercase tracking-wider text-fg-dim">
+                  <span className="text-chalk">{k.player}</span>
+                  <span className="shrink-0 text-[0.7rem] uppercase tracking-wider text-chalk-dim">
                     {k.position} · {k.status}
                   </span>
                 </li>
@@ -206,9 +206,9 @@ export default async function TeamDetailPage({ params }: PageProps) {
           <div className="space-y-2.5">
             {teamMoves.map((move) => (
               <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
-                <Card className="transition-colors hover:border-fg/20">
+                <Card className="transition-colors hover:border-chalk/20">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="text-sm font-semibold leading-snug text-fg">
+                    <h3 className="text-sm font-semibold leading-snug text-chalk">
                       {move.headline}
                     </h3>
                     <BignessPill value={move.bigness} />

@@ -31,16 +31,16 @@ export function UncheckedBadge({
       <p
         className={`mt-4 flex items-start gap-2.5 rounded-xl border px-3.5 py-3 text-sm leading-snug ${
           sensitive
-            ? "border-pencil/40 bg-pencil/10 text-fg"
-            : "border-line bg-surface text-fg-dim"
+            ? "border-challenge/40 bg-challenge/10 text-chalk"
+            : "border-line bg-surface text-chalk-dim"
         }`}
       >
         <Icon
-          className={`mt-0.5 h-4 w-4 shrink-0 ${sensitive ? "text-pencil" : "text-fg-dim"}`}
+          className={`mt-0.5 h-4 w-4 shrink-0 ${sensitive ? "text-challenge" : "text-chalk-dim"}`}
           aria-hidden
         />
         <span>
-          <strong className="font-semibold text-fg">
+          <strong className="font-semibold text-chalk">
             {sensitive ? "Unverified, and sensitive." : "Not checked yet."}
           </strong>{" "}
           {sensitive
@@ -55,8 +55,8 @@ export function UncheckedBadge({
     <span
       className={`flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide ${
         sensitive
-          ? "border-pencil/50 text-pencil"
-          : "border-line text-fg-dim"
+          ? "border-challenge/50 text-challenge"
+          : "border-line text-chalk-dim"
       }`}
     >
       <Icon className="h-3 w-3" aria-hidden />

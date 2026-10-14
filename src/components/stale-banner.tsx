@@ -29,10 +29,10 @@ export function StaleBanner({ fetchedAt }: { fetchedAt: string }) {
   if (days === 0) return null;
 
   return (
-    <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-pencil/30 bg-pencil/[0.08] px-3 py-2.5">
-      <AlertTriangle size={15} className="mt-0.5 shrink-0 text-pencil" aria-hidden />
-      <p className="text-[0.8rem] leading-snug text-fg-dim">
-        <span className="font-semibold text-pencil">
+    <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-challenge/30 bg-challenge/[0.08] px-3 py-2.5">
+      <AlertTriangle size={15} className="mt-0.5 shrink-0 text-challenge" aria-hidden />
+      <p className="text-[0.8rem] leading-snug text-chalk-dim">
+        <span className="font-semibold text-challenge">
           {Number.isFinite(days) ? `This is ${days} days old.` : "This may be out of date."}
         </span>{" "}
         The daily update hasn&rsquo;t run. Spreads and injuries may have moved.

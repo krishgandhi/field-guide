@@ -1,15 +1,30 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Archivo, Big_Shoulders } from "next/font/google";
 import { BottomNav } from "@/components/nav/bottom-nav";
 import { FlagSelection } from "@/components/flag/flag-selection";
 import "./globals.css";
 
-// One family for everything — UI, data and long reads. A single modern sans is
-// most of what separates "app" from "document", which was the problem with the
-// previous three-face call-sheet treatment.
-const inter = Inter({
-  variable: "--font-inter",
+// Two families (§10). Big Shoulders is scoreboard lettering for titles and
+// numerals. next/font has no "Big Shoulders Display" any more — the family is
+// now one variable font whose optical-size axis (10–72) picks the display cut
+// automatically at large sizes, which is what the proposal's titles use.
+// Archivo carries UI and reading, and its width axis (62–125) is loaded too so
+// the condensed `label` utility uses the real narrow drawing rather than a
+// browser-squashed one. Both are self-hosted by next/font at build time.
+//
+// The build prints "Failed to find font override values for Big Shoulders".
+// Harmless: next/font has no metrics for this face, so it skips building a
+// size-matched fallback. Display text is short, so the swap shift is small.
+const bigShoulders = Big_Shoulders({
+  variable: "--font-big-shoulders",
   subsets: ["latin"],
+  axes: ["opsz"],
+});
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+  axes: ["wdth"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +36,7 @@ export const metadata: Metadata = {
 // Paints the browser chrome and the iOS status bar to match the app, so a
 // home-screen launch doesn't flash a white bar above a black page.
 export const viewport: Viewport = {
-  themeColor: "#0A0C0B",
+  themeColor: "#0B100E",
   colorScheme: "dark",
 };
 
@@ -31,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full`}>
+    <html lang="en" className={`${bigShoulders.variable} ${archivo.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         {children}
         <FlagSelection />

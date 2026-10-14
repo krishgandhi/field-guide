@@ -37,13 +37,13 @@ export default function GamesPage() {
   return (
     <div className="mx-auto w-full max-w-2xl flex-1 px-4 pb-10 pt-8 sm:px-6">
       <header>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
           Week {SLATE.week}
         </p>
-        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
+        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-chalk">
           What to watch
         </h1>
-        <p className="mt-1.5 text-sm text-fg-dim">
+        <p className="mt-1.5 text-sm text-chalk-dim">
           {SLATE.games.length} games · updated {day.format(new Date(SLATE.fetchedAt))}
         </p>
       </header>
@@ -64,10 +64,10 @@ export default function GamesPage() {
 
       {/* §13: a team not playing is not a bug, and the UI must say so. */}
       <section className="mt-6 rounded-2xl border border-line bg-surface/60 p-4">
-        <h2 className="text-sm font-semibold text-fg">
+        <h2 className="text-sm font-semibold text-chalk">
           {SLATE.byes.length === 0 ? "Nobody is off this week" : "Not playing this week"}
         </h2>
-        <p className="mt-1 text-sm leading-snug text-fg-dim">
+        <p className="mt-1 text-sm leading-snug text-chalk-dim">
           {SLATE.byes.length === 0
             ? `All 32 teams play in week ${SLATE.week}.`
             : `${SLATE.byes.map(teamName).join(", ")} are on a bye — a scheduled week off, not a mistake.`}

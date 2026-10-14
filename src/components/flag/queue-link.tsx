@@ -31,20 +31,20 @@ export function QueueLink() {
   return (
     <Link
       href="/queue"
-      className="mt-3 flex min-h-14 items-center justify-between gap-3 rounded-2xl border border-amber/30 bg-amber/[0.07] px-4 py-3"
+      className="mt-3 flex min-h-14 items-center justify-between gap-3 rounded-2xl border border-yellow/30 bg-yellow/[0.07] px-4 py-3"
     >
       <span className="flex items-center gap-2.5">
-        <Flag size={16} className="shrink-0 text-amber" aria-hidden />
+        <Flag size={16} className="shrink-0 text-yellow" aria-hidden />
         <span>
-          <span className="block text-sm font-semibold text-fg">
+          <span className="block text-sm font-semibold text-chalk">
             {count} thing{count === 1 ? "" : "s"} you flagged
           </span>
-          <span className="block text-[0.8rem] text-fg-dim">
+          <span className="block text-[0.8rem] text-chalk-dim">
             Export them and I&rsquo;ll explain them
           </span>
         </span>
       </span>
-      <ChevronRight size={18} className="shrink-0 text-fg-dim" aria-hidden />
+      <ChevronRight size={18} className="shrink-0 text-chalk-dim" aria-hidden />
     </Link>
   );
 }

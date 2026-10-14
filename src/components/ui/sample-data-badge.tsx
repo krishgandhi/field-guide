@@ -25,14 +25,14 @@ export function SampleDataBadge({
   lead?: string;
 }) {
   return (
-    <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-amber/25 bg-amber/[0.07] px-3 py-2.5">
+    <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-yellow/25 bg-yellow/[0.07] px-3 py-2.5">
       <FlaskConical
         size={15}
-        className="mt-0.5 shrink-0 text-amber"
+        className="mt-0.5 shrink-0 text-yellow"
         aria-hidden
       />
-      <p className="text-[0.8rem] leading-snug text-fg-dim">
-        <span className="font-semibold text-amber">{lead}</span>{" "}
+      <p className="text-[0.8rem] leading-snug text-chalk-dim">
+        <span className="font-semibold text-yellow">{lead}</span>{" "}
         {note ?? "Placeholder values, not real."}
       </p>
     </div>

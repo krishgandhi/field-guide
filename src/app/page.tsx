@@ -42,10 +42,10 @@ export default function ThisWeekPage() {
   return (
     <PageShell>
       <header>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
           Week {SLATE.week}
         </p>
-        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
+        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-chalk">
           This week
         </h1>
       </header>
@@ -78,7 +78,7 @@ export default function ThisWeekPage() {
       </div>
       <Link
         href="/games"
-        className="mt-3 flex min-h-11 items-center justify-between rounded-xl border border-line px-4 py-3 text-sm font-medium text-fg-dim hover:text-fg"
+        className="mt-3 flex min-h-11 items-center justify-between rounded-xl border border-line px-4 py-3 text-sm font-medium text-chalk-dim hover:text-chalk"
       >
         All {slate.length} games this week
         <ChevronRight size={16} aria-hidden />
@@ -88,14 +88,14 @@ export default function ThisWeekPage() {
         <>
           <SectionHeader title={headline.title} />
           <Link href={`/moves/${headline.move.slug}`} className="block">
-            <Card className="transition-colors hover:border-fg/20">
+            <Card className="transition-colors hover:border-chalk/20">
               <div className="flex items-start justify-between gap-3">
-                <h3 className="text-base font-semibold leading-snug text-fg">
+                <h3 className="text-base font-semibold leading-snug text-chalk">
                   {headline.move.headline}
                 </h3>
                 <BignessPill value={headline.move.bigness} />
               </div>
-              <p className="mt-2 text-sm leading-snug text-fg-dim">
+              <p className="mt-2 text-sm leading-snug text-chalk-dim">
                 {headline.move.soWhat}
               </p>
             </Card>
@@ -108,12 +108,12 @@ export default function ThisWeekPage() {
           <SectionHeader title="Coming up" />
           <Card>
             <div className="flex items-baseline justify-between gap-3">
-              <h3 className="text-base font-semibold text-fg">{nextDate.label}</h3>
-              <span className="tnum shrink-0 text-sm font-medium text-amber">
+              <h3 className="text-base font-semibold text-chalk">{nextDate.label}</h3>
+              <span className="tnum shrink-0 text-sm font-medium text-yellow">
                 {nextDate.dateLabel}
               </span>
             </div>
-            <p className="mt-1.5 text-sm leading-snug text-fg-dim">{nextDate.why}</p>
+            <p className="mt-1.5 text-sm leading-snug text-chalk-dim">{nextDate.why}</p>
           </Card>
         </>
       ) : null}
@@ -121,15 +121,15 @@ export default function ThisWeekPage() {
       <SectionHeader title="Look something up" />
       <Link
         href="/glossary"
-        className="flex min-h-14 items-center justify-between rounded-2xl border border-line bg-surface px-4 py-3.5 hover:border-fg/20"
+        className="flex min-h-14 items-center justify-between rounded-2xl border border-line bg-surface px-4 py-3.5 hover:border-chalk/20"
       >
         <span>
-          <span className="block text-base font-semibold text-fg">Glossary</span>
-          <span className="block text-sm text-fg-dim">
+          <span className="block text-base font-semibold text-chalk">Glossary</span>
+          <span className="block text-sm text-chalk-dim">
             {glossaryCount} terms, explained plainly
           </span>
         </span>
-        <ChevronRight size={18} className="shrink-0 text-fg-dim" aria-hidden />
+        <ChevronRight size={18} className="shrink-0 text-chalk-dim" aria-hidden />
       </Link>
     </PageShell>
   );

@@ -18,21 +18,21 @@ import { watchability } from "@/lib/watchability";
 function WatchPill({ score }: { score: number }) {
   if (score >= 5) {
     return (
-      <span className="shrink-0 rounded-full bg-amber px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-ink">
+      <span className="shrink-0 rounded-full bg-yellow px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-night">
         Must watch
       </span>
     );
   }
   if (score === 4) {
     return (
-      <span className="shrink-0 rounded-full border border-amber/50 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-amber">
+      <span className="shrink-0 rounded-full border border-yellow/50 px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-yellow">
         Worth it
       </span>
     );
   }
   if (score <= 1) {
     return (
-      <span className="shrink-0 text-[0.65rem] font-medium uppercase tracking-wide text-fg-dim/60">
+      <span className="shrink-0 text-[0.65rem] font-medium uppercase tracking-wide text-chalk-dim/60">
         Skippable
       </span>
     );
@@ -55,7 +55,7 @@ function TeamRow({
 
   return (
     <div className="flex items-center gap-2.5">
-      <span className="w-4 shrink-0 text-[0.7rem] font-medium text-fg-dim">
+      <span className="w-4 shrink-0 text-[0.7rem] font-medium text-chalk-dim">
         {prefix}
       </span>
       {logo ? (
@@ -69,19 +69,19 @@ function TeamRow({
       ) : (
         <span className="h-7 w-7 shrink-0 rounded-full bg-surface-2" />
       )}
-      <span className="min-w-0 flex-1 truncate text-[0.95rem] font-semibold text-fg">
+      <span className="min-w-0 flex-1 truncate text-[0.95rem] font-semibold text-chalk">
         {teamName(id)}
       </span>
       {knocks.length > 0 ? (
         <span
-          className="shrink-0 text-[0.7rem] text-fg-dim"
+          className="shrink-0 text-[0.7rem] text-chalk-dim"
           title={knocks.map((k) => `${k.player} (${k.position}) — ${k.status}`).join(", ")}
         >
           {knocks.length} out
         </span>
       ) : null}
       {favourite ? (
-        <span className="shrink-0 text-[0.7rem] font-medium text-fg-dim">fav</span>
+        <span className="shrink-0 text-[0.7rem] font-medium text-chalk-dim">fav</span>
       ) : null}
     </div>
   );
@@ -119,7 +119,7 @@ export function GameCard({
       ) : null}
 
       <div className="mb-3 flex items-center justify-between gap-3">
-        <p className="tnum truncate text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+        <p className="tnum truncate text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
           {timeLabel}
           {game.broadcast ? ` · ${game.broadcast}` : ""}
         </p>
@@ -133,7 +133,7 @@ export function GameCard({
         <TeamRow id={game.home} prefix="at" favourite={game.favourite === "home"} />
       </div>
 
-      <p className="mt-2.5 border-t border-line pt-2.5 text-sm leading-snug text-fg-dim">
+      <p className="mt-2.5 border-t border-line pt-2.5 text-sm leading-snug text-chalk-dim">
         {reason}
       </p>
     </article>
