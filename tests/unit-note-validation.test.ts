@@ -9,7 +9,7 @@
  */
 
 import { describe, expect, it } from "vitest";
-import { problemWithNote } from "../scripts/lib/unit-note-validation.mjs";
+import { problemWithNote, repeatsCoaching } from "../scripts/lib/unit-note-validation.mjs";
 
 type Evidence = Parameters<typeof problemWithNote>[1];
 
@@ -170,6 +170,31 @@ describe("the older rules still hold", () => {
     rejects(
       "They run a lot. They throw rarely. The line is the strength of the whole operation here.",
       seattle,
+    );
+  });
+});
+
+describe("coaching is said once per team", () => {
+  const bills = (unit: string) => ({ ...buffalo, unit });
+  const style = (text: string, unit: string) => repeatsCoaching(text, bills(unit));
+
+  it("allows the coach in the offence note", () => {
+    expect(style("Runs through Josh Allen, now under new head coach Joe Brady.", "offence")).toBeNull();
+  });
+
+  it("flags him in the defence and special-teams notes", () => {
+    expect(style("Leans on Ed Oliver up front, now under new head coach Joe Brady.", "defence")).toBeTruthy();
+    expect(style("Tyler Bass kicks, with the whole operation reporting to Joe Brady.", "specialTeams")).toBeTruthy();
+  });
+
+  it("passes a defence note that leaves him out", () => {
+    expect(style("Leans on Ed Oliver up front and a pair of young cornerbacks.", "defence")).toBeNull();
+  });
+
+  it("is not a truth rule: problemWithNote still accepts the repetitive note", () => {
+    accepts(
+      "Leans on Ed Oliver up front and young corners in the back, now under new head coach Joe Brady.",
+      bills("defence"),
     );
   });
 });

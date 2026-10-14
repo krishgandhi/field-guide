@@ -34,7 +34,7 @@
  */
 
 import { readFileSync, existsSync } from "node:fs";
-import { problemWithNote } from "./lib/unit-note-validation.mjs";
+import { problemWithNote, repeatsCoaching } from "./lib/unit-note-validation.mjs";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { readMoves } from "./lib/moves.mts";
 import { leagueContext, unitEvidence } from "./lib/unit-evidence.mjs";
@@ -50,8 +50,12 @@ import {
 
 const DETAIL = "src/data/team-detail.json";
 
-/** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 7;
+/**
+ * Bump when the brief changes materially, to rewrite existing lines.
+ * 8: the coaching situation belongs to the offence note only — all three
+ * Buffalo notes ended "now under new head coach Joe Brady".
+ */
+const PROMPT_VERSION = 8;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
@@ -130,6 +134,8 @@ Two things follow from that, and they matter:
 ${SEASON_RULE}
 
 Only two things in the evidence show a coaching change: headCoachSeasonsAsHeadCoach is 0, or a coaching move appears in recentMovesInvolvingThisTeam. If neither holds, the coach is NOT new — name him if he is worth naming, but do not say he took over, arrived, is new, or inherited anything from a previous staff. Any other number in that field proves nothing: it counts seasons as a head coach anywhere in the league, so a coach in his first year with this team can read 7.
+
+SAY THE COACHING SITUATION ONCE PER TEAM, IN THE OFFENCE NOTE. The three notes for a team sit one under another on the same page, beneath a line that already names the head coach and says whether it is his first season. Ending every note with "now under new head coach X" reads as filler. In a defence or special-teams note, do not name the head coach, say "head coach", or mention a coaching change at all. If the statistics come from a previous regime, you may say they are last season's — that is about the numbers, not the coach.
 
 2. NEVER SAY A PLAYER IS NEW, CAME FROM ANYWHERE, WAS SIGNED, OR WAS TRADED unless that exact move appears in recentMovesInvolvingThisTeam.
 
@@ -214,7 +220,12 @@ for (const slice of chunk(batch, CHUNK)) {
 // stay up until its replacement validates: New Orleans once kept describing a
 // receiver who had left the depth chart, and §9's bargain is a missing entry,
 // never a wrong one.
-const validate = (text, subject) => problemWithNote(text, evidenceOf.get(subject));
+// repeatsCoaching is a style rule, applied to fresh lines only: an existing
+// note that names the coach is repetitive, not wrong, so it stays up until a
+// replacement validates rather than leaving a gap.
+const validate = (text, subject) =>
+  problemWithNote(text, evidenceOf.get(subject)) ??
+  (results.get(subject)?.trim() === text ? repeatsCoaching(text, evidenceOf.get(subject)) : null);
 
 if (SELF_TEST) {
   for (const item of batch) {

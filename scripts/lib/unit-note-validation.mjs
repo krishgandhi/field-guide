@@ -108,3 +108,23 @@ export function problemWithNote(text, evidence) {
 
   return null;
 }
+
+/**
+ * A style rule, kept apart from problemWithNote's truth rules: the coaching
+ * situation is said once per team, in the offence note. The defence and
+ * special-teams notes sit directly beneath it on the team page, and all three
+ * Buffalo notes once ended "now under new head coach Joe Brady".
+ *
+ * Separate because it should block a NEW note but not take down an existing
+ * one that is merely repetitive — settle() keeps an old line only while it
+ * passes the truth rules, and a repeated coach's name is not untrue.
+ */
+export function repeatsCoaching(text, evidence) {
+  if (!evidence?.unit || evidence.unit === "offence") return null;
+  const trimmed = String(text ?? "").trim();
+  const coach = String(evidence.headCoach ?? "").trim();
+  if (/\bhead coach\b/i.test(trimmed) || (coach && trimmed.includes(coach)) || COACH_CHANGE.test(trimmed)) {
+    return "mentions the head coach outside the offence note";
+  }
+  return null;
+}
