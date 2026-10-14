@@ -225,6 +225,13 @@ jobs:
               echo "::error::Rebase failed outright; leaving main untouched."
               exit 1
             fi
+            # The rebase put this data on top of code the checks above never
+            # saw. Check again before pushing; if it fails, push nothing and
+            # let tomorrow's run start clean from the new main.
+            if ! { npx tsc --noEmit && npm test && npm run build; }; then
+              echo "::error::Checks failed after rebasing onto the new main; nothing pushed. The next run retries."
+              exit 1
+            fi
           done
           echo "::error::Still could not push after three attempts."
           exit 1
