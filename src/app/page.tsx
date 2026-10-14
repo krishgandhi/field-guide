@@ -4,6 +4,8 @@ import { FlagCountButton } from "@/components/flag/flag-count-button";
 import { ByeCard } from "@/components/games/bye-card";
 import { FieldCard } from "@/components/games/field-card";
 import { GameCard } from "@/components/games/game-card";
+import { StartedGameCard } from "@/components/games/started-game-card";
+import { PhaseSwitch, UpcomingOnly } from "@/components/games/timed";
 import {
   kickoffLabel,
   relativeKickoffLabel,
@@ -17,6 +19,7 @@ import { PageShell } from "@/components/ui/page-header";
 import { PageTitle } from "@/components/ui/page-title";
 import { SectionHeader } from "@/components/ui/section-header";
 import { comingUp } from "@/lib/calendar";
+import { gamePhase } from "@/lib/game-phase";
 import { createExplainer } from "@/lib/glossary/explain";
 import { getMovesByDate, headlineMove } from "@/lib/moves";
 import { SLATE } from "@/lib/slate";
@@ -46,10 +49,14 @@ export default function ThisWeekPage() {
   // which keeps render pure; the page re-renders hourly anyway.
   const explain = createExplainer();
   const slate = sortForViewing(SLATE.games, SLATE.week);
+  // The slate holds one week, so this is the Bills game of that week —
+  // which may already be over. PhaseSwitch decides at view time.
   const yourGame = slate.find((g) => g.home === YOURS || g.away === YOURS);
-  const alsoWatch = slate
-    .filter((g) => g !== yourGame && watchability(g, SLATE.week).score >= 3)
-    .slice(0, 2);
+  // Candidates, best first; UpcomingOnly drops any that have kicked off by
+  // the time the page is viewed, then takes two.
+  const alsoWatch = slate.filter(
+    (g) => g !== yourGame && watchability(g, SLATE.week).score >= 3,
+  );
 
   // The biggest move of the last month leads (headlineMove's rule), then the
   // newest others, so the feed is both "what mattered" and "what's new".
@@ -74,11 +81,26 @@ export default function ThisWeekPage() {
 
       <div className="mt-[18px] space-y-3">
         {yourGame ? (
-          <FieldCard
-            game={yourGame}
-            week={SLATE.week}
-            timeLabel={relativeKickoffLabel(yourGame)}
-            explain={explain}
+          <PhaseSwitch
+            kickoff={yourGame.kickoff}
+            serverPhase={gamePhase(yourGame.kickoff)}
+            upcoming={
+              <FieldCard
+                game={yourGame}
+                week={SLATE.week}
+                timeLabel={relativeKickoffLabel(yourGame)}
+                explain={explain}
+              />
+            }
+            live={<StartedGameCard game={yourGame} phase="live" yours />}
+            played={
+              <StartedGameCard
+                game={yourGame}
+                phase="played"
+                yours
+                note="That's this week done for Buffalo. Next week's games land here after the daily refresh."
+              />
+            }
           />
         ) : null}
 
@@ -95,20 +117,24 @@ export default function ThisWeekPage() {
         </section>
       ) : null}
 
-      {alsoWatch.length > 0 ? (
-        <section aria-labelledby="watch-heading">
-          <SectionHeader id="watch-heading" title="Also worth a look" />
-          <div className="space-y-2.5">
-            {alsoWatch.map((game) => (
-              <GameCard
-                key={game.id}
-                game={game}
-                week={SLATE.week}
-                timeLabel={kickoffLabel(game)}
-                explain={explain}
-              />
-            ))}
-          </div>
+      <UpcomingOnly
+        limit={2}
+        className="space-y-2.5"
+        header={<SectionHeader id="watch-heading" title="Also worth a look" />}
+        items={alsoWatch.map((game) => ({
+          id: game.id,
+          kickoff: game.kickoff,
+          serverPhase: gamePhase(game.kickoff),
+          card: (
+            <GameCard
+              game={game}
+              week={SLATE.week}
+              timeLabel={kickoffLabel(game)}
+              explain={explain}
+            />
+          ),
+        }))}
+        footer={
           <Link
             href="/games"
             className="mt-2.5 flex min-h-12 items-center justify-between rounded-[var(--radius-card)] px-4 text-[14.5px] font-semibold text-chalk-dim ring-1 ring-inset ring-line transition-colors duration-[120ms] hover:text-chalk"
@@ -116,8 +142,8 @@ export default function ThisWeekPage() {
             All {slate.length} games, ranked
             <ChevronRight size={18} aria-hidden />
           </Link>
-        </section>
-      ) : null}
+        }
+      />
 
       {nextDate ? (
         <section aria-labelledby="next-heading">

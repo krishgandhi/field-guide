@@ -51,6 +51,21 @@ export function relativeKickoffLabel(game: Game, now: number = Date.now()): stri
   return game.broadcast ? `${when} · ${game.broadcast}` : when;
 }
 
+/**
+ * The meta line for a game that has kicked off: "On now · ESPN, ABC" while it
+ * is being played, "Played Monday" after. No score — this site has none (§2),
+ * and the slate doesn't carry one.
+ */
+export function startedLabel(game: Game, phase: "live" | "played"): string {
+  if (phase === "played") return `Played ${playedDay(game)}`;
+  return game.broadcast ? `On now · ${game.broadcast}` : "On now";
+}
+
+/** "Monday" — the Eastern weekday a game kicked off. */
+export function playedDay(game: Game): string {
+  return weekdayLong.format(new Date(game.kickoff));
+}
+
 /** "Wednesday, Oct 14". */
 export function todayLabel(now: number = Date.now()): string {
   return longDate.format(new Date(now));
