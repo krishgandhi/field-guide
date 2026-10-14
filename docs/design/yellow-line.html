@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yellow Line</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Big+Shoulders+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ground */
+  --night:#0B100E; --surface:#141B18; --surface-2:#1D2622; --line:#2A3530;
+  /* field */
+  --turf:#123524; --turf-2:#164029; --chalk-line:rgba(242,245,240,.55);
+  /* text */
+  --chalk:#F2F5F0; --chalk-dim:#9DAAA3;
+  /* signals */
+  --yellow:#F5E12A;   /* the first-down line: "this is explained" + "watch this" */
+  --challenge:#FF5B4F;/* the challenge flag: Krish contests a phrase */
+  --mint:#3DE3A6;     /* checked / good */
+  --royal:#5B95FF;    /* Bills allegiance */
+  --r-card:22px; --r-inner:14px; --r-chip:999px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px;
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --t-tap:120ms; --t-sheet:320ms;
+  --display:"Big Shoulders Display", "Archivo", sans-serif;
+  --ui:"Archivo", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#070A09;color-scheme:dark}
+body{background:#070A09;color:var(--chalk);font-family:var(--ui);font-stretch:100%;-webkit-font-smoothing:antialiased}
+::selection{background:var(--yellow);color:var(--night)}
+img{display:block}
+svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- proposal page ---------- */
+.doc{max-width:1500px;margin:0 auto;padding:56px 32px 80px}
+.doc-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:end;padding-bottom:40px;border-bottom:1px solid var(--line)}
+.doc-head h1{font-family:var(--display);font-weight:900;font-size:120px;line-height:.82;letter-spacing:-.01em;text-transform:uppercase}
+.doc-head h1 span{display:block;height:10px;width:62%;background:var(--yellow);margin-top:18px;border-radius:2px}
+.doc-head p{font-size:17px;line-height:1.55;color:var(--chalk-dim);max-width:60ch}
+.doc-head p strong{color:var(--chalk);font-weight:600}
+.doc > h2{font-family:var(--display);font-weight:800;font-size:40px;line-height:1;margin:56px 0 20px;text-transform:uppercase;letter-spacing:.01em}
+.tokens{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.panel{background:var(--surface);border-radius:var(--r-card);padding:24px}
+.panel h3{font-family:var(--ui);font-stretch:75%;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--chalk-dim);margin-bottom:16px}
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sw{border-radius:var(--r-inner);overflow:hidden;background:var(--surface-2)}
+.sw .swc{height:64px;display:flex;align-items:flex-end;padding:8px 10px;font-family:var(--display);font-weight:800;font-size:22px}
+.sw .meta{padding:10px;font-size:12.5px;line-height:1.45;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+.sw .meta b{color:var(--chalk);font-weight:600;display:block;font-size:13.5px}
+.sw .pass{color:var(--mint)} .sw .fail{color:var(--challenge)}
+.scale-row{display:flex;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.scale-row:last-child{border:0}
+.scale-row code{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--chalk-dim);width:170px;flex:none}
+.kv{display:grid;grid-template-columns:120px 1fr;gap:8px 16px;font-size:14px;line-height:1.45}
+.kv dt{color:var(--chalk-dim)} .kv dd{color:var(--chalk)}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.notes .panel p,.notes .panel li{font-size:14.5px;line-height:1.55;color:var(--chalk-dim)}
+.notes .panel ul{padding-left:18px}
+.notes .panel li+li{margin-top:6px}
+.notes .panel strong{color:var(--chalk);font-weight:600}
+
+/* ---------- phones ---------- */
+.phones{display:grid;grid-template-columns:repeat(3,390px);gap:40px 48px;justify-content:center}
+.cap{font-size:13px;color:var(--chalk-dim);margin-bottom:10px;font-stretch:75%;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.phone{width:390px;height:844px;border-radius:46px;background:var(--night);position:relative;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 30px 60px -20px rgba(0,0,0,.7)}
+.status{height:50px;display:flex;align-items:center;justify-content:space-between;padding:6px 30px 0;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+.status .isl{width:120px;height:34px;border-radius:20px;background:#000}
+.scroll{position:absolute;inset:50px 0 0 0;padding:6px 16px 120px;overflow:hidden}
+
+/* type */
+.t-title{font-family:var(--display);font-weight:800;font-size:44px;line-height:.95;letter-spacing:-.005em}
+.t-h2{font-family:var(--display);font-weight:800;font-size:24px;line-height:1;margin:28px 0 12px;display:flex;align-items:baseline;justify-content:space-between}
+.t-h2 small{font-family:var(--ui);font-size:13px;font-weight:500;color:var(--chalk-dim)}
+.dd{font-stretch:75%;font-weight:700;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+.body{font-size:16.5px;line-height:1.55;color:var(--chalk)}
+.dim{color:var(--chalk-dim)}
+.num{font-family:var(--display);font-weight:800;font-variant-numeric:tabular-nums}
+
+/* the signature: explained term on the first-down line */
+.term{color:var(--chalk);text-decoration:none;background-image:linear-gradient(var(--yellow),var(--yellow));background-size:100% 3px;background-position:0 100%;background-repeat:no-repeat;padding-bottom:1px;border-radius:1px}
+.term.on{background-size:100% 100%;color:var(--night);padding:0 3px;margin:0 -3px}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:var(--r-chip);font-size:13px;font-weight:650;white-space:nowrap;font-variant-numeric:tabular-nums}
+.chip.solid-y{background:var(--yellow);color:var(--night)}
+.chip.line-y{box-shadow:inset 0 0 0 1.5px var(--yellow);color:var(--yellow)}
+.chip.quiet{background:var(--surface-2);color:var(--chalk-dim)}
+.chip.mint{background:rgba(61,227,166,.12);color:var(--mint)}
+.chip.unchecked{box-shadow:inset 0 0 0 1.5px var(--chalk-dim);color:var(--chalk-dim);background:transparent}
+.chip.royal{background:rgba(91,149,255,.14);color:var(--royal)}
+.chip svg.i{width:14px;height:14px;stroke-width:2.4}
+
+/* rating tile = jersey numeral */
+.rate{width:48px;flex:none;display:flex;flex-direction:column;align-items:center;gap:3px}
+.rate .n{width:48px;height:52px;border-radius:14px;display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:36px;line-height:1;padding-top:2px}
+.rate .l{font-stretch:75%;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase;text-align:center;line-height:1.1}
+.r5 .n{background:var(--yellow);color:var(--night)} .r5 .l{color:var(--yellow)}
+.r4 .n{box-shadow:inset 0 0 0 2px var(--yellow);color:var(--yellow)} .r4 .l{color:var(--yellow)}
+.r3 .n{box-shadow:inset 0 0 0 2px var(--chalk);color:var(--chalk)} .r3 .l{color:var(--chalk)}
+.r2 .n,.r1 .n{background:var(--surface-2);color:var(--chalk-dim)} .r2 .l,.r1 .l{color:var(--chalk-dim)}
+
+.card{background:var(--surface);border-radius:var(--r-card);padding:16px}
+.hair{height:1px;background:var(--line);margin:14px 0}
+
+/* top bar */
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:8px 0 4px}
+.iconbtn{min-width:44px;height:44px;border-radius:22px;background:var(--surface);display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 12px;color:var(--chalk);font-weight:700;font-size:15px}
+.iconbtn.flag{color:var(--challenge)}
+.iconbtn.flag b{font-variant-numeric:tabular-nums;color:var(--chalk)}
+.back{display:inline-flex;align-items:center;gap:2px;height:44px;color:var(--chalk-dim);font-size:15px;font-weight:600;margin-left:-6px}
+
+/* field hero */
+.field{position:relative;height:150px;border-radius:var(--r-inner);overflow:hidden;
+  background:repeating-linear-gradient(90deg,var(--turf) 0 10%,var(--turf-2) 10% 20%)}
+.field .yl{position:absolute;top:0;bottom:0;width:2px;background:var(--chalk-line)}
+.field .hash{position:absolute;width:1.5px;height:7px;background:var(--chalk-line)}
+.field .ez{position:absolute;top:0;bottom:0;width:17%;display:grid;place-items:center}
+.field .ez.l{left:0;background:rgba(0,0,0,.18)} .field .ez.r{right:0;background:rgba(0,0,0,.18)}
+.field .ez img{width:52px;height:52px;object-fit:contain;filter:drop-shadow(0 4px 8px rgba(0,0,0,.45))}
+.field .center{position:absolute;inset:0 17%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.field .vs{font-family:var(--display);font-weight:900;font-size:40px;line-height:1;letter-spacing:.01em;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.field .vs i{font-style:normal;font-size:22px;color:rgba(242,245,240,.8);margin:0 6px;font-weight:700}
+.field .rec{font-stretch:75%;font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--chalk);opacity:.92;font-variant-numeric:tabular-nums}
+.field .fdl{position:absolute;top:0;bottom:0;left:58%;width:3px;background:var(--yellow);opacity:.9;box-shadow:0 0 0 .5px rgba(0,0,0,.2)}
+.field .los{position:absolute;top:0;bottom:0;left:46%;width:3px;background:#4C8DFF;opacity:.85}
+
+/* game rows */
+.game{display:flex;gap:14px;align-items:flex-start}
+.teams{flex:1;min-width:0}
+.trow{display:flex;align-items:center;gap:10px;height:30px}
+.trow img{width:26px;height:26px;object-fit:contain}
+.trow .nm{font-weight:700;font-size:17px}
+.trow .rc{font-size:13px;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+.trow .at{width:18px;font-size:12px;color:var(--chalk-dim);text-align:center;margin-left:-28px;margin-right:2px}
+.why{font-size:15px;line-height:1.45;color:var(--chalk);margin-top:10px}
+.gmeta{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+
+/* feed */
+.feed-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.feed-item:last-child{border:0;padding-bottom:2px}
+.logopair{position:relative;width:44px;height:44px;flex:none}
+.logopair img{position:absolute;width:30px;height:30px;object-fit:contain;background:var(--surface-2);border-radius:50%;padding:4px}
+.logopair img:first-child{left:0;top:0} .logopair img:last-child{right:0;bottom:0;box-shadow:0 0 0 3px var(--surface)}
+.logo1{width:44px;height:44px;border-radius:50%;background:var(--surface-2);display:grid;place-items:center;flex:none}.logo1 img{width:28px;height:28px;object-fit:contain}
+.feed-item h4{font-size:15.5px;line-height:1.3;font-weight:700}
+.feed-item .row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+
+/* tab bar */
+.tabs{position:absolute;left:0;right:0;bottom:0;height:86px;background:var(--night);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:0 6px 22px}
+.tab{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--chalk-dim);font-size:11.5px;font-weight:600}
+.tab.on{color:var(--chalk)}
+.tab.on::before{content:"";position:absolute;top:-1px;left:22%;right:22%;height:3px;border-radius:0 0 3px 3px;background:var(--yellow)}
+.tab.on .pill{background:var(--surface-2)}
+.tab .pill{width:52px;height:30px;border-radius:15px;display:grid;place-items:center}
+.tab svg.i{width:21px;height:21px}
+
+/* team */
+.teamhero{border-radius:var(--r-card);overflow:hidden;background:var(--surface)}
+.teamhero .band{position:relative;height:118px;background:
+   linear-gradient(90deg,rgba(31,112,255,.30),rgba(31,112,255,.08) 70%),var(--surface);display:flex;align-items:center;gap:14px;padding:0 16px;overflow:hidden}
+.teamhero .band .big{position:absolute;right:-6px;bottom:-30px;font-family:var(--display);font-weight:900;font-size:150px;line-height:1;color:rgba(242,245,240,.06);letter-spacing:-.02em}
+.teamhero .band img{width:78px;height:78px;object-fit:contain}
+.teamhero .band h3{font-family:var(--display);font-weight:800;font-size:32px;line-height:.95}
+.teamhero .stats{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line)}
+.teamhero .stats div{padding:12px 14px}
+.teamhero .stats div+div{border-left:1px solid var(--line)}
+.teamhero .stats .num{font-size:30px;line-height:1;display:block}
+.teamhero .stats span.dd{font-size:11px}
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.unit{background:var(--surface);border-radius:16px;padding:12px 12px 14px}
+.unit .num{font-size:38px;line-height:.9;display:block;margin:4px 0 2px}
+.unit .num sup{font-size:16px;vertical-align:top;position:relative;top:4px;margin-left:1px}
+.unit p{font-size:12.5px;line-height:1.35;color:var(--chalk-dim)}
+.unit.top .num{color:var(--yellow)}
+.starters{display:flex;gap:8px;overflow:hidden}
+.starter{flex:none;width:112px;background:var(--surface);border-radius:16px;padding:10px;display:flex;flex-direction:column;gap:6px}
+.starter .hs{width:100%;height:76px;border-radius:10px;background:var(--surface-2);overflow:hidden;display:flex;align-items:flex-end;justify-content:center}
+.starter .hs img{height:76px;width:auto}
+.starter .hs.none{align-items:center;font-family:var(--display);font-weight:800;font-size:28px;color:var(--chalk-dim)}
+.starter b{font-size:14px;line-height:1.2}
+.starter .pos{font-family:var(--display);font-weight:800;font-size:15px;color:var(--royal);letter-spacing:.03em}
+
+/* move */
+.mtitle{font-family:var(--display);font-weight:800;font-size:36px;line-height:.98;margin:6px 0 12px}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border-radius:var(--r-card);overflow:hidden}
+.ledger > div{padding:14px}
+.ledger > div+div{border-left:1px solid var(--line)}
+.ledger .side{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.ledger .side img{width:24px;height:24px;object-fit:contain}
+.who{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.who .hs{width:40px;height:40px;border-radius:50%;background:var(--surface-2);overflow:hidden;flex:none}
+.who .hs img{width:52px;height:auto;margin:2px 0 0 -6px}
+.who b{font-size:14.5px;display:block;line-height:1.15}
+.who span{font-size:12px;color:var(--chalk-dim)}
+.picks{display:flex;flex-wrap:wrap;gap:6px}
+.pick{height:28px;padding:0 9px;border-radius:8px;background:var(--surface-2);display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:650;font-variant-numeric:tabular-nums}
+.pick b{font-family:var(--display);font-weight:800;font-size:16px;color:var(--yellow)}
+.axis{padding:14px 0;border-bottom:1px solid var(--line)}
+.axis:last-child{border:0}
+.axis .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.axis h4{font-size:16px;font-weight:700}
+.yard{display:flex;gap:3px;align-items:center}
+.yard i{width:18px;height:10px;border-radius:2px;background:var(--surface-2);position:relative}
+.yard i.f{background:var(--yellow)}
+.yard i::after{content:"";position:absolute;left:50%;top:-4px;width:1px;height:3px;background:var(--chalk-dim);opacity:.6}
+.yard .s{font-family:var(--display);font-weight:800;font-size:20px;margin-left:8px;width:12px;text-align:right}
+.axis p{font-size:15px;line-height:1.5;color:var(--chalk)}
+.sel{background:rgba(255,91,79,.28);box-shadow:0 0 0 2px rgba(255,91,79,.28);border-radius:2px}
+.flagpop{position:absolute;display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 16px;border-radius:22px;background:var(--challenge);color:var(--night);font-weight:750;font-size:15px;box-shadow:0 10px 24px -8px rgba(0,0,0,.7)}
+.flagpop::after{content:"";position:absolute;left:50%;bottom:-6px;width:12px;height:12px;background:var(--challenge);transform:translateX(-50%) rotate(45deg);border-radius:2px}
+.flagpop svg.i{width:17px;height:17px;stroke-width:2.4}
+
+/* sheet */
+.scrim{position:absolute;inset:0;background:rgba(4,7,6,.62)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:28px 28px 0 0;padding:10px 20px 34px;box-shadow:0 -20px 40px -10px rgba(0,0,0,.6)}
+.sheet .grab{width:40px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 14px}
+.sheet .yl{height:4px;width:56px;background:var(--yellow);border-radius:2px;margin-bottom:12px}
+.sheet h3{font-family:var(--display);font-weight:800;font-size:36px;line-height:.95}
+.sheet .aka{font-size:13.5px;color:var(--chalk-dim);margin-top:6px}
+.sheet .sum{font-size:18px;line-height:1.45;margin-top:14px;font-weight:550}
+.sheet .ex{margin-top:14px;padding:12px 14px;border-radius:var(--r-inner);background:var(--surface-2);font-size:15px;line-height:1.5;color:var(--chalk)}
+.sheet .ex .dd{display:flex;align-items:center;gap:6px;margin-bottom:4px;color:var(--royal)}
+.sheet .ex .dd img{width:18px;height:18px}
+.btn{height:52px;border-radius:26px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:750;font-size:16px}
+.btn.y{background:var(--yellow);color:var(--night)}
+.btn.ghost{box-shadow:inset 0 0 0 1.5px var(--line);color:var(--chalk)}
+.btn.ghost svg{color:var(--challenge)}
+.btns{display:grid;grid-template-columns:1fr;gap:10px;margin-top:18px}
+
+/* queue */
+.qcard{background:var(--surface);border-radius:var(--r-card);padding:14px 16px 12px}
+.qcard + .qcard{margin-top:10px}
+.qcard .ph{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.qcard .ph b{font-size:17.5px;font-weight:750;line-height:1.3}
+.qcard .ph b::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;background:var(--challenge);margin-right:8px;transform:translateY(-1px)}
+.qcard .sent{font-size:14.5px;line-height:1.45;color:var(--chalk-dim);margin-top:6px}
+.qcard .sent mark{background:none;color:var(--chalk);text-decoration:underline;text-decoration-color:var(--challenge);text-decoration-thickness:2px;text-underline-offset:3px}
+.qcard .foot{display:flex;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--chalk-dim)}
+.qcard .foot img{width:18px;height:18px;object-fit:contain}
+.qcard .foot code{font-family:ui-monospace,Menlo,monospace;font-size:11px;opacity:.85}
+.qcard .del{width:44px;height:44px;margin:-10px -12px 0 0;display:grid;place-items:center;color:var(--chalk-dim);flex:none}
+.qcard.done{background:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+.qcard.done .ph b::before{background:var(--chalk-dim)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+  <symbol id="i-moves" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M16 4h2a2 2 0 0 1 2 2v4M21 14H11"/><path d="m15 10-4 4 4 4"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-dasharray="3 3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+</svg>
+
+<main class="doc">
+  <header class="doc-head">
+    <h1>Yellow<br>Line<span></span></h1>
+    <p><strong>The yellow first-down line is the one piece of broadcast graphics built to explain football to people watching it.</strong> This direction makes that line the product's mark: every explained term sits on it, every "watch this" signal is its colour. Around it, a social-sports app on a night-turf ground: chunky 22px cards, jersey-numeral ratings, condensed down-and-distance labels, a bottom tab bar. The field shows up only where a game is the subject. Krish's own flags are the red challenge flag: he is contesting the call, and the queue is where the review happens.</p>
+  </header>
+
+  <h2>Tokens</h2>
+  <div class="tokens">
+    <section class="panel">
+      <h3>Colour, with measured contrast</h3>
+      <div class="swatches" id="swatches"></div>
+      <p style="font-size:12.5px;color:var(--chalk-dim);margin-top:12px;line-height:1.5">Ratios are computed live by this page (WCAG 2.x relative luminance) against <b style="color:var(--chalk)">night</b> and <b style="color:var(--chalk)">surface</b>. Text tokens must clear 4.5:1 on both. Team colours still render only via each team's lifted <code>displayColor</code>, as decoration, never as identity.</p>
+    </section>
+    <div style="display:grid;gap:24px">
+      <section class="panel">
+        <h3>Type: Big Shoulders Display + Archivo</h3>
+        <div class="scale-row"><code>display / 44 · 800</code><span class="t-title" style="font-size:44px">Week 5</span></div>
+        <div class="scale-row"><code>title / 36 · 800</code><span class="num" style="font-size:36px">Browns trade Garrett</span></div>
+        <div class="scale-row"><code>numeral / 36 · 900</code><span class="num" style="font-size:36px;font-weight:900">3–1 · 8th · 5</span></div>
+        <div class="scale-row"><code>section / 24 · 800</code><span class="num" style="font-size:24px">Why it's big</span></div>
+        <div class="scale-row"><code>body / 16.5 · 400 · 1.55</code><span class="body">Josh Allen is the whole offence.</span></div>
+        <div class="scale-row"><code>label / 12.5 · 700 · wdth 75</code><span class="dd">Mon 8:15 PM · ESPN, ABC</span></div>
+      </section>
+      <section class="panel">
+        <h3>Shape, space, motion</h3>
+        <dl class="kv">
+          <dt>Radius</dt><dd>card 22 · inner 14 · tile 14 · chip/button pill · sheet 28 top</dd>
+          <dt>Space</dt><dd>4 · 8 · 12 · 16 · 24 · 32 · 48. 16px page gutter.</dd>
+          <dt>Targets</dt><dd>44px minimum; buttons 52; tab items full cell height</dd>
+          <dt>Motion</dt><dd>Tap 120ms. Sheet rises 320ms on <code>cubic-bezier(.16,1,.3,1)</code>. The one authored moment: a tapped term's yellow line floods up to fill the word as the sheet rises. <code>prefers-reduced-motion</code>: the sheet cross-fades and the flood is instant.</dd>
+          <dt>Depth</dt><dd>Flat cards on night. Shadow only on things that float: sheet, flag popover.</dd>
+        </dl>
+      </section>
+    </div>
+  </div>
+
+  <h2>Screens at 390px</h2>
+  <div class="phones">
+
+    <!-- 1. HOME -->
+    <div>
+      <p class="cap">This week · Monday, game day</p>
+      <div class="phone">
+        <div class="status"><span>3:41</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <div class="topbar">
+            <div>
+              <h1 class="t-title">Week 5</h1>
+              <p class="dim" style="font-size:15px;margin-top:6px">Monday, Oct 12 · Bills play tonight</p>
+            </div>
+            <a class="iconbtn flag" aria-label="3 flagged phrases"><svg class="i"><use href="#i-flag"/></svg><b>3</b></a>
+          </div>
+
+          <div class="card" style="margin-top:18px;padding:12px;box-shadow:inset 0 0 0 1.5px rgba(91,149,255,.55)">
+            <div class="gmeta" style="padding:2px 4px 8px">
+              <span class="dd" style="color:var(--chalk)">Tonight 8:15 PM · ESPN, ABC</span>
+              <span class="chip royal" style="height:24px;font-size:12px">Your team</span>
+            </div>
+            <div class="field" id="field1">
+              <div class="ez l"><img src="../../public/logos/buf.png" alt="Bills"></div>
+              <div class="ez r"><img src="../../public/logos/lar.png" alt="Rams"></div>
+              <div class="center">
+                <div class="vs">BUF<i>at</i>LAR</div>
+                <div class="rec">3–1 &nbsp;·&nbsp; SoFi Stadium &nbsp;·&nbsp; 2–2</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:14px;padding:14px 4px 4px">
+              <div class="rate r5"><div class="n">5</div><div class="l">Must<br>watch</div></div>
+              <div>
+                <p class="why" style="margin-top:2px">This one should go to the wire, and both quarterbacks are worth watching on their own.</p>
+                <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap">
+                  <span class="chip quiet">Rams by 3.5</span>
+                  <span class="chip quiet">Bills: 1 out</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px;display:flex;align-items:center;gap:12px;padding:12px 14px">
+            <div class="logopair"><img src="../../public/logos/kc.png" alt=""><img src="../../public/logos/car.png" alt=""></div>
+            <p style="font-size:14.5px;line-height:1.4">Chiefs and Panthers aren't playing. It's their <a class="term">bye week</a>, not a gap in the schedule.</p>
+          </div>
+
+          <h2 class="t-h2">Latest moves <small>See all</small></h2>
+          <div class="card" style="padding:2px 16px">
+            <div class="feed-item">
+              <div class="logo1"><img src="../../public/logos/ne.png" alt=""></div>
+              <div><h4>Patriots make Christian Gonzalez the NFL's best-paid cornerback</h4>
+                <div class="row"><span class="chip line-y">Big · 4</span><span class="chip unchecked"><svg class="i"><use href="#i-dash"/></svg>Not checked yet</span></div></div>
+            </div>
+            <div class="feed-item">
+              <div class="logo1"><img src="../../public/logos/tb.png" alt=""></div>
+              <div><h4>Tampa Bay extend Baker Mayfield</h4>
+                <div class="row"><span class="chip line-y">Big · 4</span><span class="chip unchecked"><svg class="i"><use href="#i-dash"/></svg>Not checked yet</span></div></div>
+            </div>
+          </div>
+        </div>
+        <nav class="tabs" data-on="0"></nav>
+      </div>
+    </div>
+
+    <!-- 2. GAMES -->
+    <div>
+      <p class="cap">Games · Sunday morning, ranked to watch</p>
+      <div class="phone">
+        <div class="status"><span>9:12</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <div class="topbar">
+            <div><h1 class="t-title">What to watch</h1>
+              <p class="dim" style="font-size:15px;margin-top:6px">Week 5 · 15 games · Bills always first</p></div>
+          </div>
+
+          <div class="card" style="margin-top:16px;box-shadow:inset 0 0 0 1.5px rgba(91,149,255,.55)">
+            <div class="gmeta"><span class="dd">Mon 8:15 PM · ESPN, ABC</span><span class="chip royal" style="height:24px;font-size:12px">Your team</span></div>
+            <div class="game">
+              <div class="rate r5"><div class="n">5</div><div class="l">Must<br>watch</div></div>
+              <div class="teams">
+                <div class="trow"><img src="../../public/logos/buf.png" alt=""><span class="nm">Bills</span><span class="rc">3–1</span></div>
+                <div class="trow"><img src="../../public/logos/lar.png" alt=""><span class="nm">Rams</span><span class="rc">2–2 · by 3.5</span></div>
+              </div>
+            </div>
+            <p class="why">This one should go to the wire, and both quarterbacks are worth watching on their own.</p>
+          </div>
+
+          <div class="card" style="margin-top:10px">
+            <div class="gmeta"><span class="dd">Sun 1:00 PM · Fox</span><span class="dd">Bears: 4 out</span></div>
+            <div class="game">
+              <div class="rate r3"><div class="n">3</div><div class="l">Good<br>watch</div></div>
+              <div class="teams">
+                <div class="trow"><img src="../../public/logos/chi.png" alt=""><span class="nm">Bears</span><span class="rc">3–2</span></div>
+                <div class="trow"><img src="../../public/logos/gb.png" alt=""><span class="nm">Packers</span><span class="rc">3–2</span></div>
+              </div>
+            </div>
+            <p class="why">A division game, which is worth more than the record suggests, and these two genuinely don't like each other.</p>
+          </div>
+
+          <div class="card" style="margin-top:10px">
+            <div class="gmeta"><span class="dd">Sun 4:05 PM · CBS</span></div>
+            <div class="game">
+              <div class="rate r2"><div class="n">2</div><div class="l">If it's<br>on</div></div>
+              <div class="teams">
+                <div class="trow"><img src="../../public/logos/den.png" alt=""><span class="nm">Broncos</span><span class="rc">3–2</span></div>
+                <div class="trow"><img src="../../public/logos/lac.png" alt=""><span class="nm">Chargers</span><span class="rc">0–5</span></div>
+              </div>
+            </div>
+            <p class="why">Same division, so it counts double in the standings.</p>
+          </div>
+
+          <div class="card" style="margin-top:10px;display:flex;align-items:center;gap:12px;min-height:60px">
+            <div style="display:flex">
+              <img src="../../public/logos/cin.png" style="width:24px;height:24px;object-fit:contain" alt="">
+              <img src="../../public/logos/mia.png" style="width:24px;height:24px;object-fit:contain;margin-left:-4px" alt="">
+              <img src="../../public/logos/lv.png" style="width:24px;height:24px;object-fit:contain;margin-left:-4px" alt="">
+              <img src="../../public/logos/ne.png" style="width:24px;height:24px;object-fit:contain;margin-left:-4px" alt="">
+            </div>
+            <p style="flex:1;font-size:14.5px;line-height:1.35"><b>7 more</b> <span class="dim">with nothing much riding on them</span></p>
+            <svg class="i dim"><use href="#i-chev"/></svg>
+          </div>
+        </div>
+        <nav class="tabs" data-on="1"></nav>
+      </div>
+    </div>
+
+    <!-- 3. TEAM -->
+    <div>
+      <p class="cap">Team · Buffalo Bills</p>
+      <div class="phone">
+        <div class="status"><span>3:41</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <a class="back"><svg class="i"><use href="#i-back"/></svg>Teams</a>
+          <div class="teamhero" style="margin-top:4px">
+            <div class="band">
+              <img src="../../public/logos/buf.png" alt="">
+              <div><h3>Buffalo<br>Bills</h3><p class="dd" style="margin-top:6px">AFC East</p></div>
+              <span class="big">BUF</span>
+            </div>
+            <div class="stats">
+              <div><span class="num">3–1</span><span class="dd">Record</span></div>
+              <div><span class="num">4th</span><span class="dd">in the AFC</span></div>
+              <div><span class="num" style="font-size:22px;line-height:30px">Joe Brady</span><span class="dd">1st season</span></div>
+            </div>
+          </div>
+
+          <p style="font-family:var(--display);font-weight:700;font-size:23px;line-height:1.1;margin:18px 0 8px;color:var(--yellow)">Perennially good, perennially short of the ending they want.</p>
+          <p class="body">Josh Allen is the whole offence — he throws it and he runs it, and the team goes as far as he carries them. New voice in charge this year after Sean McDermott was let go, and the books are tight enough that roster moves are forced rather than chosen: Buffalo carry a lot of <a class="term">dead money</a> against the <a class="term">salary cap</a>.</p>
+
+          <h2 class="t-h2">This season <small>of 32 teams</small></h2>
+          <div class="units">
+            <div class="unit"><span class="dd">Offence</span><span class="num">8<sup>th</sup></span><p>Better than most for points scored</p></div>
+            <div class="unit"><span class="dd">Defence</span><span class="num">11<sup>th</sup></span><p>Better than most for points allowed</p></div>
+            <div class="unit top"><span class="dd">Kicking</span><span class="num">1<sup>st</sup></span><p>Best in the league at field goals</p></div>
+          </div>
+
+          <h2 class="t-h2">Who to know</h2>
+          <div class="starters">
+            <div class="starter"><div class="hs"><img src="../../public/players/3918298.png" alt=""></div><span class="pos">QB</span><b>Josh Allen</b></div>
+            <div class="starter"><div class="hs none">RB</div><span class="pos">RB</span><b>James Cook III</b></div>
+            <div class="starter"><div class="hs none">DT</div><span class="pos">DT</span><b>Ed Oliver</b></div>
+          </div>
+        </div>
+        <nav class="tabs" data-on="3"></nav>
+      </div>
+    </div>
+
+    <!-- 4. MOVE -->
+    <div>
+      <p class="cap">Move · selecting a phrase to flag</p>
+      <div class="phone">
+        <div class="status"><span>3:41</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <a class="back"><svg class="i"><use href="#i-back"/></svg>Moves</a>
+          <h1 class="mtitle">Browns trade Myles Garrett to the Rams</h1>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+            <span class="chip solid-y">Huge · 5</span>
+            <span class="chip mint"><svg class="i"><use href="#i-check"/></svg>Checked</span>
+            <span class="dd" style="margin-left:4px">Trade · Jun 2, 2026</span>
+          </div>
+
+          <div class="ledger" style="margin-top:16px">
+            <div>
+              <div class="side"><img src="../../public/logos/lar.png" alt=""><span class="dd" style="color:var(--chalk)">Rams get</span></div>
+              <div class="who"><div class="hs"><img src="../../public/players/3122132.png" alt=""></div><div><b>Myles Garrett</b><span>DE · 2× Defensive Player of the Year</span></div></div>
+              <p style="font-size:13px;line-height:1.4;color:var(--chalk-dim)">Spending the future to win now.</p>
+            </div>
+            <div>
+              <div class="side"><img src="../../public/logos/cle.png" alt=""><span class="dd" style="color:var(--chalk)">Browns get</span></div>
+              <div class="who"><div class="hs"><img src="../../public/players/4578085.png" alt=""></div><div><b>Jared Verse</b><span>DE · 2024 Rookie of the Year</span></div></div>
+              <div class="picks"><span class="pick"><b>1st</b>’27</span><span class="pick"><b>2nd</b>’28</span><span class="pick"><b>3rd</b>’29</span></div>
+            </div>
+          </div>
+
+          <h2 class="t-h2">Why it's big <small>six things that matter</small></h2>
+          <div class="card" style="padding:0 16px;position:relative">
+            <div class="axis">
+              <div class="top"><h4>Player quality</h4><div class="yard"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><span class="s">5</span></div></div>
+              <p>Garrett is the most feared <a class="term">pass rusher</a> of his generation and still in his prime.</p>
+            </div>
+            <div class="axis">
+              <div class="top"><h4>Cost paid</h4><div class="yard"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><span class="s">5</span></div></div>
+              <p style="position:relative">Jared Verse plus first, second and third round picks across three drafts. Giving up youth and picks together signals <span class="sel" id="selspan">conviction bordering on desperation</span>.</p>
+            </div>
+          </div>
+        </div>
+        <span class="flagpop" id="flagpop"><svg class="i"><use href="#i-flag"/></svg>Flag this</span>
+        <nav class="tabs" data-on="2"></nav>
+      </div>
+    </div>
+
+    <!-- 5. SHEET -->
+    <div>
+      <p class="cap">Glossary sheet · tapped "dead money"</p>
+      <div class="phone">
+        <div class="status"><span>3:42</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <div class="card" style="padding:0 16px;margin-top:6px">
+            <div class="axis">
+              <div class="top"><h4>Cap mechanics</h4><div class="yard"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i></i><span class="s">4</span></div></div>
+              <p>Moving a contract this size leaves Cleveland paying <a class="term on">dead money</a> for a player now in Los Angeles. That charge is the invisible reason the return had to be this large.</p>
+            </div>
+            <div class="axis">
+              <div class="top"><h4>Competitive windows</h4><div class="yard"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><span class="s">5</span></div></div>
+              <p>The same player means opposite things to each side: the Rams are spending the future to win immediately, the Browns just admitted the next two years are gone.</p>
+            </div>
+          </div>
+        </div>
+        <nav class="tabs" data-on="2"></nav>
+        <div class="scrim"></div>
+        <div class="sheet" role="dialog" aria-label="Dead money">
+          <div class="grab"></div>
+          <div class="yl"></div>
+          <h3>Dead money</h3>
+          <p class="aka">Also: dead cap, dead cap hit</p>
+          <p class="sum">Salary cap space a team is still spending on a player who no longer plays for them.</p>
+          <div class="ex"><p class="dd"><img src="../../public/logos/buf.png" alt="">Closer to home</p>The Bills carry about $45.8 million of it into 2026 — real money, already spent, buying nothing.</div>
+          <div class="btns">
+            <a class="btn y">Read the full entry<svg class="i"><use href="#i-arrow"/></svg></a>
+            <a class="btn ghost"><svg class="i"><use href="#i-flag"/></svg>Still lost? Flag it</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. QUEUE -->
+    <div>
+      <p class="cap">Flag queue · ready to hand back</p>
+      <div class="phone">
+        <div class="status"><span>9:30</span><span class="isl"></span><span>5G</span></div>
+        <div class="scroll">
+          <a class="back"><svg class="i"><use href="#i-back"/></svg>This week</a>
+          <div class="topbar" style="margin-top:0;align-items:flex-end">
+            <h1 class="t-title">Flagged</h1>
+            <span class="chip" style="background:rgba(255,91,79,.14);color:var(--challenge);height:30px">3 waiting</span>
+          </div>
+          <a class="btn y" style="margin-top:16px"><svg class="i"><use href="#i-copy"/></svg>Export queue</a>
+          <p class="dim" style="text-align:center;font-size:13px;margin:8px 0 16px">Copies as JSON. Paste it into Claude Code.</p>
+
+          <div class="qcard">
+            <div class="ph"><b>“counts double in the standings”</b><span class="del" aria-label="Remove flag"><svg class="i" style="width:17px"><use href="#i-trash"/></svg></span></div>
+            <p class="sent">Same division, so it <mark>counts double in the standings</mark>.</p>
+            <div class="foot"><img src="../../public/logos/den.png" alt="">Broncos at Chargers<span style="margin-left:auto">Games</span></div>
+          </div>
+          <div class="qcard">
+            <div class="ph"><b>“conviction bordering on desperation”</b><span class="del" aria-label="Remove flag"><svg class="i" style="width:17px"><use href="#i-trash"/></svg></span></div>
+            <p class="sent">Giving up youth and picks together signals <mark>conviction bordering on desperation</mark>.</p>
+            <div class="foot"><img src="../../public/logos/lar.png" alt="">Garrett to the Rams<code style="margin-left:auto">moves/2026-06-garrett…</code></div>
+          </div>
+          <div class="qcard">
+            <div class="ph"><b>“the books are tight”</b><span class="del" aria-label="Remove flag"><svg class="i" style="width:17px"><use href="#i-trash"/></svg></span></div>
+            <p class="sent"><mark>The books are tight</mark> enough that roster moves are forced rather than chosen.</p>
+            <div class="foot"><img src="../../public/logos/buf.png" alt="">Buffalo Bills<code style="margin-left:auto">teams/buffalo-bills.mdx</code></div>
+          </div>
+          <h2 class="t-h2" style="font-size:19px;margin-top:22px">Sent back <small>1</small></h2>
+          <div class="qcard done">
+            <div class="ph"><b>“pass rusher”</b><span class="chip quiet" style="height:24px;font-size:12px">Now in glossary</span></div>
+          </div>
+        </div>
+        <nav class="tabs" data-on="0"></nav>
+      </div>
+    </div>
+  </div>
+
+  <h2>Components and conflicts</h2>
+  <div class="notes">
+    <section class="panel"><h3>Components</h3><ul>
+      <li><strong>Explained term</strong>: 3px first-down-yellow rule under the word; on tap it floods to a full yellow block while the sheet rises. No other element on the site uses yellow under text.</li>
+      <li><strong>Jersey rating tile</strong>: 48×52 numeral, 5 filled yellow, 4 yellow outline, 3 chalk outline, 1–2 quiet. Always paired with a two-word label and a plain sentence.</li>
+      <li><strong>Field card</strong>: mown-stripe turf with yard lines, logos in the end zones. Reserved for the one game that matters to him this week.</li>
+      <li><strong>Yard bar</strong>: rubric axis score as five turf segments with hash ticks.</li>
+      <li><strong>Trade ledger</strong>: two-column "gets" card; picks as numeral chips.</li>
+      <li><strong>Tab bar</strong>: five tabs, active one gets a pill and a yellow line along the top edge.</li>
+    </ul></section>
+    <section class="panel"><h3>Where this conflicts with CLAUDE.md §10</h3><ul>
+      <li><strong>Concept</strong>: replaces "Apple Sports / Real" with a Sleeper-energy social sports app plus football material.</li>
+      <li><strong>Type</strong>: "one family, Inter" becomes two: Big Shoulders Display for headings and numerals, Archivo (incl. its condensed width) for UI and reading.</li>
+      <li><strong>Palette</strong>: amber #FFC53D becomes first-down yellow #F5E12A; pencil #FF6B5E becomes challenge red #FF5B4F; royal #4C8DFF becomes #5B95FF; a new mint #3DE3A6 means "checked". Ink, surfaces and line keep their roles at slightly greener values.</li>
+      <li><strong>Signature</strong>: the dotted amber underline becomes a solid 3px yellow rule. The reasoning in §10 still holds.</li>
+    </ul></section>
+    <section class="panel"><h3>Content notes</h3><ul>
+      <li>All teams, records, injuries, kickoffs, scores (1–5) and reasons come from <code>slate.json</code>, <code>standings.json</code> and <code>watchability.ts</code> run against them. Moves, glossary and team prose are quoted from <code>content/</code>.</li>
+      <li>Proposed copy that doesn't exist yet: the rating labels for 2–4 ("Good watch", "If it's on"), "Who to know", "Rams get / Browns get", "Still lost? Flag it".</li>
+      <li>The three queued flags are illustrative. The first is a real problem: division games don't count double, so the template sentence should be rewritten.</li>
+    </ul></section>
+  </div>
+</main>
+
+<script>
+// tab bar
+const TABS=[["This week","i-cal"],["Games","i-tv"],["Moves","i-moves"],["Teams","i-shield"],["Glossary","i-book"]];
+document.querySelectorAll("nav.tabs").forEach(n=>{
+  const on=+n.dataset.on;
+  n.innerHTML=TABS.map(([l,i],k)=>`<a class="tab${k===on?" on":""}"${k===on?' aria-current="page"':""}><span class="pill"><svg class="i"><use href="#${i}"/></svg></span>${l}</a>`).join("");
+});
+// yard lines + hashes on the field
+const f=document.getElementById("field1");
+for(let k=1;k<10;k++){const x=k*10;const yl=document.createElement("i");yl.className="yl";yl.style.left=`calc(${x}% - 1px)`;yl.style.opacity=(k===5?1:.5);f.prepend(yl);
+  for(let h=1;h<5;h++){const hx=x+h*2-5; if(hx<17||hx>83) continue; for(const t of [10,132]){const m=document.createElement("i");m.className="hash";m.style.left=hx+"%";m.style.top=t+"px";f.prepend(m);}}}
+// contrast swatches
+const lum=h=>{const c=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(v=>v<=.03928?v/12.92:((v+.055)/1.055)**2.4);return .2126*c[0]+.7152*c[1]+.0722*c[2]};
+const cr=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+const S=[
+ ["night","#0B100E","Page ground",false],["surface","#141B18","Cards",false],["surface-2","#1D2622","Raised, chips",false],
+ ["chalk","#F2F5F0","Primary text",true],["chalk-dim","#9DAAA3","Secondary text",true],["yellow","#F5E12A","Explained term, watch this",true],
+ ["challenge","#FF5B4F","Flags",true],["mint","#3DE3A6","Checked, good",true],["royal","#5B95FF","Bills, your team",true],
+ ["turf","#123524","Field cards only",false],["line","#2A3530","Hairlines",false],["on yellow","#0B100E","Text on yellow fill",true,"#F5E12A"]];
+document.getElementById("swatches").innerHTML=S.map(([n,h,u,txt,bg])=>{
+  const a=cr(h,"#0B100E"),b=cr(h,"#141B18");
+  const meta = bg ? `night on yellow <span class="${cr(h,bg)>=4.5?'pass':'fail'}">${cr(h,bg).toFixed(2)}:1</span>`
+    : txt ? `night <span class="${a>=4.5?'pass':'fail'}">${a.toFixed(2)}</span> · surface <span class="${b>=4.5?'pass':'fail'}">${b.toFixed(2)}</span>`
+    : `vs night ${a.toFixed(2)}:1 (not text)`;
+  const sw = bg ? `background:${bg};color:${h}` : txt ? `background:#0B100E;color:${h};box-shadow:inset 0 0 0 1px #2A3530` : `background:${h};color:#9DAAA3`;
+  return `<div class="sw"><div class="swc" style="${sw}">${txt?"Aa 4th":""}</div><div class="meta"><b>${n}</b>${h} · ${u}<br>${meta}</div></div>`}).join("");
+// place flag popover above the selection
+const sel=document.getElementById("selspan"),pop=document.getElementById("flagpop");
+const ph=pop.closest(".phone").getBoundingClientRect(),r=sel.getClientRects()[0];
+pop.style.left=(r.left-ph.left+r.width/2-pop.offsetWidth/2)+"px";pop.style.top=(r.top-ph.top-pop.offsetHeight-10)+"px";
+</script>
+</body>
+</html>
