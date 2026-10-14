@@ -28,6 +28,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
 import { readMoves } from "./lib/moves.mts";
+import { fetchEvidence as fetchEvidenceFrom, refreshPerson } from "./lib/people.mjs";
 import { stamp } from "./lib/meta.mts";
 
 const OUT = "src/data/people.json";
@@ -79,36 +80,9 @@ async function fetchPerson(id) {
  * despite three Pro Bowls. That gap is filled from this site's own sourced
  * prose, in write-profiles.mjs.
  */
-async function fetchEvidence(id) {
-  try {
-    const body = await getJson(`${ATHLETE}/${id}/overview`);
-
-    const awards = (body.awards ?? []).map((a) => ({
-      name: a.name ?? null,
-      count: a.displayCount ?? null,
-      seasons: a.seasons ?? [],
-    }));
-
-    // Columns are position-aware: passing and rushing for a quarterback,
-    // tackles and sacks for a cornerback. Zip labels to values so the model
-    // never has to guess what a bare number means.
-    const stats = body.statistics ?? {};
-    const labels = stats.displayNames ?? [];
-    const split = (name) => {
-      const row = (stats.splits ?? []).find((s) => s.displayName === name);
-      if (!row?.stats) return {};
-      return Object.fromEntries(
-        labels.map((l, i) => [l, row.stats[i]]).filter(([, v]) => v != null),
-      );
-    };
-
-    // Career only. This season's split moved every game day and nothing reads
-    // it any more — profile lines are written from awards and career totals.
-    return { awards, career: split("Career") };
-  } catch {
-    return { awards: [], career: {} };
-  }
-}
+// It throws on a failed fetch, and the loop then keeps yesterday's record
+// whole (scripts/lib/people.mjs says why).
+const fetchEvidence = (id) => fetchEvidenceFrom(id, getJson, ATHLETE);
 
 async function saveHeadshot(id) {
   const file = path.join(SHOTS, `${id}.png`);
@@ -141,26 +115,24 @@ const people = {};
 let failed = 0;
 
 for (const id of ids) {
-  try {
-    const person = await fetchPerson(id);
-    const evidence = await fetchEvidence(id);
-    const shot = await saveHeadshot(id);
-    people[id] = {
-      ...person,
-      ...evidence,
-      headshot: shot === "missing" ? null : `/players/${id}.png`,
-    };
-    console.log(
-      `  ${person.name ?? id} — ${person.positionShort ?? "?"}, ${person.team ?? "no team"}` +
-        ` (headshot ${shot}, ${evidence.awards.length} award(s),` +
-        ` ${Object.keys(evidence.career).length} career stats)`,
-    );
-  } catch (err) {
+  const { record, shot, error } = await refreshPerson(id, existing[id], {
+    fetchPerson,
+    fetchEvidence,
+    saveHeadshot,
+  });
+  // On any failure `record` is yesterday's, untouched — never today's profile
+  // with an empty award list, which would read as a thin résumé.
+  if (record) people[id] = record;
+  if (error) {
     failed++;
-    // Keep whatever we had rather than dropping the card entirely.
-    if (existing[id]) people[id] = existing[id];
-    console.error(`  ${id}: ${err.message}`);
+    console.error(`  ${id}: ${error.message}${existing[id] ? " — kept yesterday's record" : ""}`);
+    continue;
   }
+  console.log(
+    `  ${record.name ?? id} — ${record.positionShort ?? "?"}, ${record.team ?? "no team"}` +
+      ` (headshot ${shot}, ${record.awards.length} award(s),` +
+      ` ${Object.keys(record.career).length} career stats)`,
+  );
 }
 
 writeFileSync(
