@@ -32,7 +32,7 @@ import {
   getJson,
 } from "./lib/espn.mts";
 import { NFL_TEAMS as TEAMS } from "./lib/teams.mts";
-import { stamp } from "./lib/meta.mts";
+import { freshRun, stamp } from "./lib/meta.mts";
 
 const OUT = "src/data/team-detail.json";
 const DRAFTS = "src/data/draft-origins.json";
@@ -548,7 +548,11 @@ console.log(
 // Exit non-zero when the file is short of the league. The run that lost Arizona
 // printed "31 teams, 1 failed" and exited 0, so the workflow went green and
 // nothing surfaced it for a week.
-if (Object.keys(teams).length === TEAMS.length) stamp("teamDetail");
+// Stamp only a run that fetched every team itself; carried-over teams are
+// yesterday's data, and a stamp saying otherwise hides an outage.
+if (freshRun({ expected: TEAMS.length, written: Object.keys(teams).length, carriedOver: carried.length })) {
+  stamp("teamDetail");
+}
 if (Object.keys(teams).length < TEAMS.length) {
   console.error(
     `\nOnly ${Object.keys(teams).length} of ${TEAMS.length} teams in ${OUT}.`,

@@ -33,6 +33,20 @@ export function readMeta(file: string = META_PATH): Meta {
   }
 }
 
+/**
+ * Did this run actually refresh everything it should have — every item
+ * written, none of them yesterday's copy kept after a failed fetch?
+ *
+ * Only then may it stamp. fetch-team-detail used to stamp whenever all 32
+ * teams were in the file, including when all 32 had been carried over from
+ * yesterday because ESPN was down: the site then claimed fresh data that
+ * was a day old, and kept claiming it for as long as the outage lasted. A
+ * stamp that stops moving is how the job summary spots a dead fetcher.
+ */
+export function freshRun({ expected, written, carriedOver }: { expected: number; written: number; carriedOver: number }): boolean {
+  return written === expected && carriedOver === 0;
+}
+
 /** Record that `key` just ran successfully. Call only after its data is written. */
 export function stamp(key: MetaKey, at: Date = new Date(), file: string = META_PATH): void {
   const meta = { ...readMeta(file), [key]: at.toISOString() };

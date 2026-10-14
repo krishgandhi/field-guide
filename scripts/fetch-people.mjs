@@ -29,7 +29,7 @@ import path from "node:path";
 import { ATHLETES as ATHLETE, getBytes, getJson } from "./lib/espn.mts";
 import { readMoves } from "./lib/moves.mts";
 import { fetchEvidence as fetchEvidenceFrom, refreshPerson } from "./lib/people.mjs";
-import { stamp } from "./lib/meta.mts";
+import { freshRun, stamp } from "./lib/meta.mts";
 
 const OUT = "src/data/people.json";
 const SHOTS = "public/players";
@@ -139,7 +139,10 @@ writeFileSync(
   OUT,
   `${JSON.stringify({ people }, null, 2)}\n`,
 );
-stamp("people");
+// Only a run where every person was fetched fresh; a kept record is yesterday's.
+if (freshRun({ expected: ids.length, written: Object.keys(people).length, carriedOver: failed })) {
+  stamp("people");
+}
 console.log(
   `\nWrote ${Object.keys(people).length} to ${OUT}${failed ? `, ${failed} failed` : ""}.`,
 );
