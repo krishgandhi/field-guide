@@ -1,6 +1,28 @@
 {
-  "generatedAt": "2026-10-13T18:48:46.181Z",
+  "generatedAt": "2026-10-14T16:26:08.565Z",
   "candidates": [
+    {
+      "id": "50174583",
+      "headline": "Jaguars WR Parker Washington has the clutch gene: Will that earn him an extension?",
+      "description": "Did you see Washington's one-handed grab in London? How did he get so good at contested catches? And how did he quickly become a big part of the Jaguars' offense?",
+      "published": "2026-10-14",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4432620",
+          "name": "Parker Washington",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50174583/jacksonville-jaguars-parker-washington-2026-breakout"
+    },
     {
       "id": "50174944",
       "headline": "Zxavian Harris eligible to sign with NFL teams despite bid to play for LSU",
@@ -998,30 +1020,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell"
-    },
-    {
-      "id": "50052903",
-      "headline": "McCarthy exits Vikings as one of franchise's biggest draft busts",
-      "description": "J.J. McCarthy was the No. 10 pick in 2024 but played only 10 games before being traded to the Giants on Monday.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052903/nfl-minnesota-vikings-jj-mccarthy-trade-new-york-giants-kevin-occonnell"
     }
   ]
 }
