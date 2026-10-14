@@ -35,6 +35,7 @@ import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import { readMoves } from "./lib/moves.mts";
 import { problemWithBlurb, problemWithStaleBlurb, profileEvidence } from "./lib/profile-evidence.mjs";
 import {
+  chunk,
   needsWriting,
   printLog,
   proseKey,
@@ -162,32 +163,6 @@ const schema = {
   additionalProperties: false,
 };
 
-const results = new Map();
-let usage = null;
-if (hasKey() && todo.length > 0) {
-  try {
-    let profiles;
-    ({ data: { profiles }, usage } = await generateJson({
-      label: "write-profiles",
-      model: MODELS.prose,
-      system: SYSTEM,
-      user: `Write one sentence for each.\n\n${JSON.stringify(
-        todo.map((t) => t.evidence),
-        null,
-        2,
-      )}`,
-      schema,
-      maxTokens: 8000,
-      effort: "medium",
-    }));
-    const asked = new Set(todo.map((t) => t.subject));
-    for (const { id, blurb } of profiles ?? []) if (asked.has(id)) results.set(id, blurb);
-  } catch (err) {
-    if (!isNoResult(err)) throw err;
-    console.error(`${err.message}. No lines written.`);
-  }
-}
-
 // --- validation and storage ------------------------------------------------
 
 // The guards live in scripts/lib/profile-evidence.mjs so they can be tested
@@ -205,6 +180,59 @@ const validateStale = (text, id) => {
   return problemWithStaleBlurb(text, w.person, w.evidence.mentionedOnSiteAs);
 };
 
+const results = new Map();
+
+/**
+ * Settle what's come back so far against the section as this run found it,
+ * and save — after every batch, so a failure or the workflow's time limit
+ * part-way keeps what earlier batches paid for.
+ */
+const before = prose.profiles;
+function persist() {
+  const { section, log } = settle(before, wanted, results, validate, validateStale);
+  prose.profiles = section;
+  writeCache(prose);
+  return log;
+}
+
+/**
+ * People per request. Everyone used to go in one 8k-token call: after a
+ * prompt change that is every person in people.json at once, and one
+ * truncated reply lost all of them.
+ */
+const BATCH_SIZE = 6;
+const usage = { input: 0, output: 0 };
+if (hasKey()) {
+  for (const slice of chunk(todo, BATCH_SIZE)) {
+    try {
+      const { data, usage: u } = await generateJson({
+        label: "write-profiles",
+        model: MODELS.prose,
+        system: SYSTEM,
+        user: `Write one sentence for each.\n\n${JSON.stringify(
+          slice.map((t) => t.evidence),
+          null,
+          2,
+        )}`,
+        schema,
+        maxTokens: 4000,
+        effort: "medium",
+      });
+      usage.input += u.input;
+      usage.output += u.output;
+      const asked = new Set(slice.map((t) => t.subject));
+      for (const { id, blurb } of data.profiles ?? []) if (asked.has(id)) results.set(id, blurb);
+    } catch (err) {
+      // Refusal or empty: expected now and then. Anything else is a real
+      // failure, reported in the exit code, but the other batches still run.
+      if (!isNoResult(err)) process.exitCode = 1;
+      console.error(`${err.message}. Skipping this batch.`);
+      continue;
+    }
+    if (!SELF_TEST) persist();
+  }
+}
+
 if (SELF_TEST) {
   for (const t of todo) {
     const blurb = results.get(t.subject);
@@ -214,9 +242,6 @@ if (SELF_TEST) {
   console.log("\n(self-test: nothing written)");
   if (results.size === 0) process.exit(1);
 } else {
-  const { section, log } = settle(prose.profiles, wanted, results, validate, validateStale);
-  prose.profiles = section;
-  writeCache(prose);
-  printLog("profile lines", log);
+  printLog("profile lines", persist());
 }
-if (usage) console.log(`tokens: ${usage.input} in, ${usage.output} out`);
+if (usage.input) console.log(`tokens: ${usage.input} in, ${usage.output} out`);

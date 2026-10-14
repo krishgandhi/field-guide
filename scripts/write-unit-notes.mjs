@@ -180,6 +180,39 @@ const schema = {
   additionalProperties: false,
 };
 
+// --- validation and storage ------------------------------------------------
+
+// The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
+// without an API key. New text gets problemWithNote plus the repeatsCoaching
+// style rule. An out-of-date note — one written for evidence that has since
+// moved — may stay up until its replacement validates only if it passes the
+// stricter problemWithStaleNote, which also requires every person it names to
+// be in the unit or coaching the team today. problemWithNote alone doesn't
+// check names (only an arrival claim's), so it let a note naming last year's
+// starter stand: New Orleans once kept describing a receiver who had left the
+// depth chart. §9's bargain is a missing entry, never a wrong one, so a note
+// that fails is removed.
+// repeatsCoaching is a style rule and stays out of the stale check: an existing
+// note that names the coach is repetitive, not wrong, so it may stay up until a
+// replacement validates rather than leaving a gap.
+const validate = (text, subject) =>
+  problemWithNote(text, evidenceOf.get(subject)) ?? repeatsCoaching(text, evidenceOf.get(subject));
+const validateStale = (text, subject) => problemWithStaleNote(text, evidenceOf.get(subject));
+
+/**
+ * Settle everything returned so far against the section as this run found
+ * it, and save. Called after every batch, so a run cut off part-way (by an
+ * error or the workflow's time limit) keeps what it already paid for.
+ * Settling from the starting section each time makes repeated calls safe.
+ */
+const before = prose.units;
+function persist() {
+  const { section, log } = settle(before, wanted, results, validate, validateStale);
+  prose.units = section;
+  writeCache(prose);
+  return log;
+}
+
 /** Batched so one request covers many units; 96 separate calls would be silly. */
 const CHUNK = 12;
 const results = new Map();
@@ -203,7 +236,11 @@ for (const slice of chunk(batch, CHUNK)) {
       effort: "medium",
     }));
   } catch (err) {
-    if (!isNoResult(err)) throw err;
+    // A refusal or an empty reply is expected now and then; anything else
+    // (truncated, overloaded, timed out) is a real failure. Either way the
+    // other batches still run, and what earlier batches wrote is already
+    // saved — a failure part-way used to throw away every batch before it.
+    if (!isNoResult(err)) process.exitCode = 1;
     console.error(`${err.message}. Skipping this batch.`);
     continue;
   }
@@ -211,26 +248,8 @@ for (const slice of chunk(batch, CHUNK)) {
   for (const n of data.notes ?? []) if (asked.has(n.key)) results.set(n.key, n.blurb);
   tokensIn += usage.input;
   tokensOut += usage.output;
+  if (!SELF_TEST) persist();
 }
-
-// --- validation and storage ------------------------------------------------
-
-// The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
-// without an API key. New text gets problemWithNote plus the repeatsCoaching
-// style rule. An out-of-date note — one
-// written for evidence that has since moved — may stay up until its
-// replacement validates only if it passes the stricter problemWithStaleNote,
-// which also requires every person it names to be in the unit or coaching the
-// team today. problemWithNote alone doesn't check names (only an arrival
-// claim's), so it let a note naming last year's starter stand: New Orleans once
-// kept describing a receiver who had left the depth chart. §9's bargain is a
-// missing entry, never a wrong one, so a note that fails is removed.
-// repeatsCoaching is a style rule and stays out of the stale check: an existing
-// note that names the coach is repetitive, not wrong, so it may stay up until a
-// replacement validates rather than leaving a gap.
-const validate = (text, subject) =>
-  problemWithNote(text, evidenceOf.get(subject)) ?? repeatsCoaching(text, evidenceOf.get(subject));
-const validateStale = (text, subject) => problemWithStaleNote(text, evidenceOf.get(subject));
 
 if (SELF_TEST) {
   for (const item of batch) {
@@ -241,9 +260,6 @@ if (SELF_TEST) {
   console.log("\n(self-test: nothing written)");
   if (results.size === 0) process.exit(1);
 } else {
-  const { section, log } = settle(prose.units, wanted, results, validate, validateStale);
-  prose.units = section;
-  writeCache(prose);
-  printLog("unit notes", log);
+  printLog("unit notes", persist());
 }
 if (tokensIn) console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);
