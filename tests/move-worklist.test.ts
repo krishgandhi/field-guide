@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   MAX_ATTEMPTS,
   addGivenUp,
+  attemptedIn,
   mergeWorklist,
   recordAttempts,
 } from "../scripts/lib/move-worklist.mjs";
@@ -41,6 +42,35 @@ describe("recordAttempts", () => {
     ]);
     expect(givenUp.map((x) => [x.id, x.attempts])).toEqual([["last", MAX_ATTEMPTS]]);
     expect(givenUp[0].reason).toMatch(/attempts/);
+  });
+});
+
+describe("attemptedIn", () => {
+  const batch = [c("a", "x"), c("b", "x"), c("c", "x")];
+  const named = (name: string) => Object.assign(new Error(name), { name });
+
+  it("counts only what a parsed reply left out", () => {
+    expect(attemptedIn(batch, { answered: new Set(["a", "c"]) })).toEqual(["b"]);
+  });
+
+  it.each(["ClaudeTruncated", "ClaudeEmpty", "InternalServerError", "APIConnectionTimeoutError", "Error"])(
+    "counts nothing when the request failed (%s)",
+    (name) => {
+      expect(attemptedIn(batch, { error: named(name) })).toEqual([]);
+    },
+  );
+
+  it("counts a refusal, which is an answer", () => {
+    expect(attemptedIn(batch, { error: named("ClaudeRefusal") })).toEqual(["a", "b", "c"]);
+  });
+
+  it("three days of 529s give nothing up", () => {
+    let list = batch.map((x) => ({ ...x, attempts: 0 }));
+    for (let day = 0; day < MAX_ATTEMPTS; day++) {
+      const attempted = new Set(attemptedIn(list, { error: named("InternalServerError") }));
+      ({ remaining: list } = recordAttempts(list, { decided: new Set(), attempted }));
+    }
+    expect(list.map((x) => x.attempts)).toEqual([0, 0, 0]);
   });
 });
 

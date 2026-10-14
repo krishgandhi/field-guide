@@ -33,7 +33,7 @@ import { isSensitive, problemsWith } from "./lib/draft-validation.mjs";
 import { buildMoveFile, moveFileProblems } from "./lib/move-file.mjs";
 import { sanitiseSlug, targetFor } from "./lib/move-output.mjs";
 import { chunk } from "./lib/prose-cache.mts";
-import { MAX_ATTEMPTS, addGivenUp, recordAttempts } from "./lib/move-worklist.mjs";
+import { MAX_ATTEMPTS, addGivenUp, attemptedIn, recordAttempts } from "./lib/move-worklist.mjs";
 
 /**
  * Candidates per request.
@@ -231,12 +231,14 @@ if (batches.length > thisRun.length) {
 
 /** Every entry the model returned, across batches. */
 const entries = [];
-/** Candidates sent to the model this run, answered or not. */
+/**
+ * Candidates the model actually answered for and left without an outcome —
+ * see attemptedIn for why a failed request doesn't count.
+ */
 const attempted = new Set();
 const usage = { input: 0, output: 0 };
 
 for (const [i, batch] of thisRun.entries()) {
-  for (const c of batch) attempted.add(c.id);
   try {
     const { data, usage: u } = await generateJson({
       label: `draft-moves ${i + 1}/${thisRun.length}`,
@@ -255,12 +257,17 @@ for (const [i, batch] of thisRun.entries()) {
     const ids = new Set(batch.map((c) => c.id));
     const answered = (data.entries ?? []).filter((e) => ids.has(e.id));
     entries.push(...answered);
-    const missing = batch.filter((c) => !answered.some((e) => e.id === c.id));
-    for (const c of missing) console.log(`  no answer for ${c.id} — ${c.headline}`);
+    const missing = attemptedIn(batch, { answered: new Set(answered.map((e) => e.id)) });
+    for (const id of missing) attempted.add(id);
+    for (const c of batch.filter((c) => missing.includes(c.id))) {
+      console.log(`  no answer for ${c.id} — ${c.headline}`);
+    }
   } catch (err) {
-    // Truncated, refused, empty, or a network failure: this batch gets an
-    // attempt counted and the run moves on. A rejected key never reaches
-    // here — generateJson exits the process, so it fails the job loudly.
+    // Truncated, overloaded, timed out or a network failure: no attempt is
+    // counted, and the batch simply waits for tomorrow. Only a refusal
+    // counts, since that is an answer. A rejected key never reaches here —
+    // generateJson exits the process, so it fails the job loudly.
+    for (const id of attemptedIn(batch, { error: err })) attempted.add(id);
     console.error(`  batch ${i + 1} failed: ${err.message}`);
   }
 }

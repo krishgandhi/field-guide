@@ -62,6 +62,24 @@ export function recordAttempts(worklist, { decided, attempted }, cap = MAX_ATTEM
   return { remaining, givenUp };
 }
 
+/**
+ * Which of a batch's candidates count an attempt.
+ *
+ * Only a real answer counts: the model replied with parseable JSON and left
+ * the candidate out, or declined the batch outright. A 5xx, a 529, a timeout
+ * or a reply cut off at max_tokens says nothing about the candidates — it's
+ * the API or our request size — and used to count against all six, so three
+ * bad days gave them up for good.
+ *
+ * `outcome` is { answered: Set<id> } for a parsed reply, or { error }.
+ */
+export function attemptedIn(batch, outcome) {
+  if (outcome.error) {
+    return outcome.error?.name === "ClaudeRefusal" ? batch.map((c) => c.id) : [];
+  }
+  return batch.filter((c) => !outcome.answered.has(c.id)).map((c) => c.id);
+}
+
 /** Append to the given-up list, newest first, capped. */
 export function addGivenUp(existing, more, at) {
   const stamped = more.map((c) => ({ ...c, givenUpOn: c.givenUpOn ?? at }));
