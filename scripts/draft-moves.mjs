@@ -31,6 +31,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { MODELS, generateJson, hasKey } from "./lib/claude.mts";
 import { isSensitive, problemsWith } from "./lib/draft-validation.mjs";
 import { buildMoveFile, moveFileProblems } from "./lib/move-file.mjs";
+import { sanitiseSlug, targetFor } from "./lib/move-output.mjs";
 import { chunk } from "./lib/prose-cache.mts";
 import { MAX_ATTEMPTS, addGivenUp, recordAttempts } from "./lib/move-worklist.mjs";
 
@@ -295,7 +296,10 @@ for (const entry of entries) {
   const problems = problemsWith(entry, candidate);
 
   const date = candidate.published || new Date().toISOString().slice(0, 10);
-  const slug = `${date.slice(0, 7)}-${entry.slug}`;
+  // Sanitised before any path is built: the model's slug is checked by
+  // problemsWith (a bad one is held), but it must never reach the filesystem
+  // as given — a "/" in it used to crash the run before anything was saved.
+  const slug = `${date.slice(0, 7)}-${sanitiseSlug(entry.slug)}`;
   // The model picks which of ESPN's tagged clubs are actually party to the
   // move; problemsWith has already checked they're a subset, so there is
   // nothing invented here.
@@ -317,7 +321,11 @@ for (const entry of entries) {
   // Read the file back exactly as the build will. Anything the build would
   // reject is held, never published — one bad file used to fail every page.
   problems.push(...moveFileProblems(mdx, slug));
-  const held = problems.length > 0;
+  // Never overwrite: a slug already published (committed, or written earlier
+  // this run) is held under a free name instead of failing the job.
+  const target = targetFor({ slug, held: problems.length > 0, publishedDir: PUBLISHED, heldDir: HELD });
+  if (target.reason) problems.push(target.reason);
+  const held = target.held;
 
   if (SELF_TEST) {
     written++;
@@ -330,18 +338,18 @@ for (const entry of entries) {
   }
 
   if (held) {
-    writeFileSync(`${HELD}/${slug}.mdx`, mdx);
+    writeFileSync(target.file, mdx);
     rejected++;
     decided.push(candidate.id);
-    console.log(`  HELD    ${slug}.mdx`);
+    console.log(`  HELD    ${target.file}`);
     for (const p of problems) console.log(`          ${p}`);
     continue;
   }
 
-  writeFileSync(`${PUBLISHED}/${slug}.mdx`, mdx);
+  writeFileSync(target.file, mdx);
   written++;
   decided.push(candidate.id);
-  console.log(`  publish ${slug}.mdx${sensitive ? "  (sensitive)" : ""}`);
+  console.log(`  publish ${target.file}${sensitive ? "  (sensitive)" : ""}`);
 }
 
 let gaveUp = [];
