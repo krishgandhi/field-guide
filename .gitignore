@@ -42,3 +42,6 @@ next-env.d.ts
 
 # playwright screenshots — generated, not source
 /.screenshots/
+
+# Claude Code agent worktrees
+.claude/worktrees/
