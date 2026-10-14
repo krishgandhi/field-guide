@@ -15,6 +15,8 @@ import {
   isSensitive,
   problemsWith,
   sentenceCount,
+  titleCaseProblem,
+  titleCaseWords,
 } from "../scripts/lib/draft-validation.mjs";
 
 const candidate = {
@@ -234,5 +236,88 @@ describe("fairness: an accusation must not travel without the answer", () => {
 describe("helpers", () => {
   it("sentenceCount ignores decimals", () => {
     expect(sentenceCount("Worth $67.5 million now.")).toBe(1);
+  });
+});
+
+describe("sentence-case titles", () => {
+  const jones = {
+    id: "2",
+    headline: "Sources: Patriots add DaQuan Jones on 1-year, $6M deal",
+    description: "The New England Patriots are signing defensive tackle DaQuan Jones, who spent last season with Buffalo.",
+    teamIds: ["NE"],
+    teams: ["New England Patriots"],
+    players: [{ id: "16910", name: "DaQuan Jones" }],
+  };
+
+  it("rejects the Title Case headline that reached the site", () => {
+    const problems: string[] = problemsWith(
+      goodEntry({ title: "Patriots Sign DaQuan Jones on a One-Year Deal" }),
+      { ...candidate, ...jones },
+    );
+    // "Sign" passes as a would-be first name before "DaQuan"; the rest don't.
+    expect(problems.join("\n")).toMatch(/Title Case \(One, Year, Deal\)/);
+  });
+
+  it("accepts the same title in sentence case, names intact", () => {
+    expect(
+      titleCaseProblem("Patriots sign DaQuan Jones on a one-year deal", {
+        source: `${jones.headline}. ${jones.description}`,
+        names: [...jones.teams, "DaQuan Jones"],
+      }),
+    ).toBeNull();
+  });
+
+  it("allows acronyms, city names from the source, and figures", () => {
+    expect(
+      titleCaseWords("Seattle keep Witherspoon with a four-year, $132m NFL record", {
+        source: "Seattle Seahawks cornerback Devon Witherspoon signs a $132m extension.",
+        names: ["Seattle Seahawks", "Devon Witherspoon"],
+      }),
+    ).toEqual([]);
+  });
+
+  it("ignores words the source only capitalises to start a sentence", () => {
+    expect(
+      titleCaseWords("Bills Release a Veteran", {
+        source: "Release day. Buffalo moved on.",
+        names: ["Buffalo Bills"],
+      }),
+    ).toEqual(["Release", "Veteran"]);
+  });
+
+  it("treats a capitalised word before a surname as a first name", () => {
+    expect(
+      titleCaseWords("Bills fire Sean McDermott, promote Joe Brady", {
+        source: "Buffalo moved on from McDermott and promoted Brady.",
+        names: ["Buffalo Bills"],
+      }),
+    ).toEqual([]);
+  });
+
+  it("lets one unexplained capital through, so a real name can't hold a draft", () => {
+    expect(titleCaseProblem("Rams bring back Donald", { source: "", names: ["Los Angeles Rams"] })).toBeNull();
+  });
+
+  it("every published move title is sentence case", async () => {
+    const { getMoves } = await import("@/lib/moves");
+    const { team } = await import("@/lib/teams");
+    const { peopleByIds } = await import("@/lib/people");
+    const { readFileSync } = await import("node:fs");
+    // The candidate is long gone for a published entry, so the entry's own
+    // words stand in: the whole file (minus the title line) as source, its
+    // teams and people as names.
+    const bad = getMoves()
+      .map((m) => ({
+        title: m.headline,
+        problem: titleCaseProblem(m.headline, {
+          source: readFileSync(`content/moves/${m.slug}.mdx`, "utf8").replace(/^title: .*$/m, ""),
+          names: [
+            ...m.teams.map((id) => team(id)?.displayName ?? id),
+            ...peopleByIds(m.people).map((p) => p.name ?? ""),
+          ],
+        }),
+      }))
+      .filter((t) => t.problem);
+    expect(bad).toEqual([]);
   });
 });

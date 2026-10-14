@@ -117,6 +117,79 @@ export function sentenceCount(text) {
 }
 
 /**
+ * Words in a title that are capitalised for no reason a reader can see.
+ *
+ * Titles are sentence case (§10's copy voice): the first word and proper nouns
+ * only. The first generated title that reached the site was "Patriots Sign
+ * DaQuan Jones on a One-Year Deal". Telling a capitalised verb from a name is
+ * impossible in general, but here the model may only use facts from the
+ * source — so every legitimate proper noun is a word the source capitalises,
+ * a team or player name on the candidate, or an acronym.
+ */
+const LETTERS = /^[A-Za-z']+$/;
+
+/**
+ * @param {string} title
+ * @param {{ source?: string, names?: string[] }} [context]
+ * @returns {string[]} the capitalised words nothing explains
+ */
+export function titleCaseWords(title, { source = "", names = [] } = {}) {
+  const proper = new Set();
+  const addWords = (text) => {
+    for (const w of String(text).split(/[\s\-–—/]+/)) {
+      const bare = w.replace(/[^A-Za-z']/g, "").replace(/'s$/, "");
+      if (/^[A-Z]/.test(bare)) proper.add(bare);
+    }
+  };
+  // Sentence starts in the source are capitalised for grammar, not because
+  // they are names, so a word only counts when it isn't the first after a
+  // full stop. Names come in whole.
+  for (const sentence of String(source).split(/(?<=[.!?:])\s+/)) {
+    addWords(sentence.split(/\s+/).slice(1).join(" "));
+  }
+  for (const name of names) addWords(name);
+
+  const words = String(title).trim().split(/\s+/);
+  const bareOf = (part) =>
+    part.replace(/^[^A-Za-z']+|[^A-Za-z']+$/g, "").replace(/'s$/, "");
+  const isName = (bare) =>
+    proper.has(bare) || /[A-Z]/.test(bare.slice(1)); // Brady, McDermott, DaQuan
+  const odd = [];
+  words.forEach((word, i) => {
+    // After a colon a new clause starts, and may be capitalised.
+    if (i === 0 || /:$/.test(words[i - 1])) return;
+    for (const part of word.split(/[-–—/]/)) {
+      const bare = bareOf(part);
+      if (!bare || !LETTERS.test(bare)) continue; // numbers, "$132m"
+      if (!/^[A-Z]/.test(bare)) continue; // already lower case
+      if (bare === bare.toUpperCase()) continue; // NFL, MVP, I
+      if (isName(bare)) continue;
+      // A first name: "Sean" before "McDermott", "Joe" before "Brady". The
+      // source often gives only the surname.
+      const next = words[i + 1] ? bareOf(words[i + 1]) : "";
+      if (!/[,;:]$/.test(word) && next && isName(next)) continue;
+      odd.push(bare);
+    }
+  });
+  return odd;
+}
+
+/**
+ * Two stray capitals is Title Case. One is allowed, so a real name the source
+ * happened to write in lower case (or not at all) can't hold a good draft.
+ */
+/**
+ * @param {string} title
+ * @param {{ source?: string, names?: string[] }} [context]
+ */
+export function titleCaseProblem(title, context) {
+  const odd = titleCaseWords(title, context);
+  return odd.length >= 2
+    ? `title is in Title Case (${odd.join(", ")}); use sentence case`
+    : null;
+}
+
+/**
  * Everything wrong with a drafted entry, as a list of strings. Empty means it
  * can be written to _drafts/.
  *
@@ -146,6 +219,16 @@ export function problemsWith(entry, candidate) {
     problems.push(`bad slug: ${entry.slug}`);
   }
   if (!entry.title?.trim()) problems.push("no title");
+  else {
+    const titleCase = titleCaseProblem(entry.title, {
+      source: `${candidate.headline ?? ""}. ${candidate.description ?? ""}`,
+      names: [
+        ...(candidate.teams ?? []),
+        ...(candidate.players ?? []).map((p) => p.name ?? ""),
+      ],
+    });
+    if (titleCase) problems.push(titleCase);
+  }
   if (!KINDS.includes(entry.kind)) problems.push(`kind "${entry.kind}" is not valid`);
   if (!entry.summary || sentenceCount(entry.summary) !== 1) {
     problems.push("summary must be exactly one sentence");

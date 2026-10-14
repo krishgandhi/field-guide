@@ -160,6 +160,7 @@ ABSOLUTE RULES:
 - Every number you write must appear in the supplied text. Do not state a contract figure, a draft pick, a year or an age that is not there. If you don't have the number, write around it.
 - Never reproduce sentences from the source. Summarise in your own words.
 - Plain English. No jargon a newcomer wouldn't know, and no words like "leverage", "efficiency" or "seeding".
+- The title is sentence case: capitalise the first word and proper nouns only. "Patriots sign DaQuan Jones to a one-year deal", never "Patriots Sign DaQuan Jones to a One-Year Deal".
 - The summary is ONE sentence saying why a newcomer should care.
 - The body is two short paragraphs: what it means, and why it matters to a Buffalo Bills fan if it genuinely does.`;
 
