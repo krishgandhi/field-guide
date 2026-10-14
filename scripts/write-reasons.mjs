@@ -27,6 +27,7 @@
 
 import { readFile } from "node:fs/promises";
 import { problemWith } from "./lib/reason-validation.mjs";
+import { pickPreviews, reasonKey } from "./lib/reason-previews.mjs";
 import { SITE, getJson } from "./lib/espn.mts";
 import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
 import {
@@ -127,9 +128,9 @@ async function teamArticles(teamId) {
     const { articles = [] } = await getJson(`${NEWS}?team=${espnId}&limit=30`);
     return articles;
   } catch {
-    // Losing preview colour is cosmetic; the sentence still gets written from
-    // the structured facts.
-    return [];
+    // null, not []: "ESPN didn't answer" is not "there is no coverage". A
+    // game with a failed fetch keeps the sentence it has (reasonKey).
+    return null;
   }
 }
 
@@ -171,12 +172,11 @@ for (const game of needsReason) {
     ...previewsFor(articlesByTeam.get(game.home) ?? [], game.away, game.kickoff),
     ...previewsFor(articlesByTeam.get(game.away) ?? [], game.home, game.kickoff),
   ];
-  const seen = new Set();
   previews.set(
     game.id,
-    found
-      .filter((a) => !seen.has(a.id) && seen.add(a.id))
-      .slice(0, 3)
+    // Earliest first, so tomorrow's article doesn't change the key (see
+    // scripts/lib/reason-previews.mjs).
+    pickPreviews(found)
       .map((a) => ({
         id: String(a.id ?? ""),
         headline: a.headline ?? "",
@@ -276,16 +276,27 @@ const articleIds = new Map();
 for (const game of needsReason) {
   articleIds.set(game.id, (previews.get(game.id) ?? []).map((p) => p.id).sort());
 }
-const wanted = games.map((game) => ({
-  subject: game.id,
-  key: proseKey(PROMPT_VERSION, {
-    ...game,
-    reporting: undefined,
-    week: slate.week,
-    articles: articleIds.get(game.id),
-  }),
-}));
 const prose = readCache();
+const newsFailed = (game) =>
+  articlesByTeam.get(game.home) === null || articlesByTeam.get(game.away) === null;
+const wanted = needsReason.map((slateGame, i) => {
+  const game = games[i];
+  const failed = newsFailed(slateGame);
+  if (failed) console.log(`  news fetch failed for ${game.away} at ${game.home} — keeping its sentence.`);
+  return {
+    subject: game.id,
+    key: reasonKey({
+      computed: proseKey(PROMPT_VERSION, {
+        ...game,
+        reporting: undefined,
+        week: slate.week,
+        articles: articleIds.get(game.id),
+      }),
+      newsFailed: failed,
+      existing: prose.reasons[game.id],
+    }),
+  };
+});
 const todo = SELF_TEST ? wanted : needsWriting(prose.reasons, wanted);
 const asking = new Set(todo.map((t) => t.subject));
 
