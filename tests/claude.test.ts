@@ -146,3 +146,34 @@ describe("generateJson", () => {
     exit.mockRestore();
   }, 30_000);
 });
+
+describe("probeKey", () => {
+  it("asks the Models API for each model id — a GET, nothing generated", async () => {
+    const { probeKey, MODELS } = await load();
+    next = { status: 200, body: { type: "model", id: MODELS.prose, display_name: "x", created_at: "2026-01-01T00:00:00Z" } };
+    await expect(probeKey()).resolves.toBeNull();
+    // No body: a lookup, not a message.
+    expect(lastRequest?.body).toEqual({});
+  });
+
+  it("returns the problem for a rejected key", async () => {
+    const { probeKey } = await load();
+    next = {
+      status: 401,
+      body: { type: "error", error: { type: "authentication_error", message: "invalid x-api-key" } },
+    };
+    await expect(probeKey()).resolves.toMatch(/rejected the key \(401\)/);
+  });
+
+  it("returns the problem for an unknown model id", async () => {
+    const { probeKey } = await load();
+    next = { status: 404, body: { type: "error", error: { type: "not_found_error", message: "model: nope" } } };
+    await expect(probeKey()).resolves.toMatch(/404/);
+  });
+
+  it("throws on a 500, which says nothing about the key", async () => {
+    const { probeKey } = await load();
+    next = { status: 500, body: { type: "error", error: { type: "api_error", message: "boom" } } };
+    await expect(probeKey()).rejects.toThrow();
+  }, 30_000);
+});

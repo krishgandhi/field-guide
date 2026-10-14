@@ -96,6 +96,15 @@ jobs:
       # so most days these make no calls at all. With no key they still prune
       # and re-check what's stored.
 
+      # Every writer reads its cache first, so on a quiet day nothing calls
+      # Claude and a revoked key would go unnoticed until the day it matters.
+      # A Models API lookup: authenticated, bills no tokens. Exit 3 fails the
+      # job at the end, like any rejected key.
+      - name: Check Claude key
+        run: scripts/ci/step.sh "Check Claude key" node scripts/probe-key.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Draft moves
         run: scripts/ci/step.sh "Draft moves" node scripts/draft-moves.mjs
         env:

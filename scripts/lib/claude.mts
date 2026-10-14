@@ -105,6 +105,29 @@ export function configProblem(err: unknown): string | null {
   return null;
 }
 
+/**
+ * Does the API accept the key, and does it know our model ids?
+ *
+ * The writers only call Claude when their cache misses, so on a quiet day
+ * nothing calls it at all and a revoked key goes unnoticed until the day it
+ * matters. This is a Models API GET (`models.retrieve`) per model id:
+ * authenticated, so a bad key gets the same 401 a real request would, but no
+ * tokens are generated or billed.
+ *
+ * Returns the problem (as configProblem words it) or null. A network failure
+ * or a 5xx is thrown: that says nothing about the key.
+ */
+export async function probeKey(): Promise<string | null> {
+  try {
+    for (const id of new Set(Object.values(MODELS))) await getClient().models.retrieve(id);
+    return null;
+  } catch (err) {
+    const problem = configProblem(err);
+    if (problem) return problem;
+    throw err;
+  }
+}
+
 /** Nothing usable came back, but nothing is broken either: keep what's there. */
 export const isNoResult = (err: unknown) =>
   err instanceof ClaudeRefusal || err instanceof ClaudeEmpty;
