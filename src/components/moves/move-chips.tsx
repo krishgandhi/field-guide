@@ -1,16 +1,19 @@
 import { AlertTriangle, Check, CircleDashed } from "lucide-react";
-import { Chip } from "@/components/ui/chip";
+import { Chip, type ChipVariant } from "@/components/ui/chip";
+import { bignessLabel } from "@/lib/moves/bigness";
 
 /**
  * How big a move is, as a chip: the word first, the number second ("Big · 4").
  * Solid yellow is kept for the top of the scale so a 5 reads differently
  * from a 4 before the words are read.
  */
-export function BignessChip({ value }: { value: number }) {
-  if (value >= 5) return <Chip variant="watch">Huge · 5</Chip>;
-  if (value === 4) return <Chip variant="notable">Big · 4</Chip>;
-  if (value === 3) return <Chip>Notable · 3</Chip>;
-  return <Chip>Minor · {value}</Chip>;
+export function BignessChip({ value, size }: { value: number; size?: "sm" | "md" }) {
+  const variant: ChipVariant = value >= 5 ? "watch" : value === 4 ? "notable" : "quiet";
+  return (
+    <Chip variant={variant} size={size}>
+      {bignessLabel(value)}
+    </Chip>
+  );
 }
 
 /**

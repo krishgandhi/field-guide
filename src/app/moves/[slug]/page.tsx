@@ -6,7 +6,8 @@ import { MdxContent } from "@/components/mdx-content";
 import { PersonCard } from "@/components/moves/person-card";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { UncheckedBadge } from "@/components/ui/unchecked-badge";
-import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
+import { ScoreMeter } from "@/components/ui/score-meter";
+import { BignessChip } from "@/components/moves/move-chips";
 import {
   Card,
   PageHeader,
@@ -77,7 +78,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
         <span className="text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
           {move.dateLabel}
         </span>
-        <BignessPill value={move.bigness} />
+        <BignessChip value={move.bigness} size="sm" />
       </div>
 
       <p className="mt-4 text-[1.05rem] leading-relaxed text-chalk">

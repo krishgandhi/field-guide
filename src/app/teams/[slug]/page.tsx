@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 import { GameCard } from "@/components/games/game-card";
 import { MdxContent } from "@/components/mdx-content";
 import { RecordStrip } from "@/components/record-strip";
-import { BignessPill } from "@/components/ui/score-meter";
+import { BignessChip } from "@/components/moves/move-chips";
 import {
   BackLink,
   Card,
@@ -211,7 +211,7 @@ export default async function TeamDetailPage({ params }: PageProps) {
                     <h3 className="text-sm font-semibold leading-snug text-chalk">
                       {move.headline}
                     </h3>
-                    <BignessPill value={move.bigness} />
+                    <BignessChip value={move.bigness} size="sm" />
                   </div>
                 </Card>
               </Link>

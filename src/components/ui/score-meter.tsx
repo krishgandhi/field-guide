@@ -42,28 +42,3 @@ export function ScoreMeter({
     </span>
   );
 }
-
-/**
- * The headline "how big is this" number, for move cards. Bigger and louder
- * than the per-axis dots, because it's the thing you scan a list by.
- */
-export function BignessPill({ value }: { value: number }) {
-  const big = value >= 4;
-  return (
-    <span
-      className={`shrink-0 rounded-full px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide ${
-        big
-          ? "bg-yellow text-night"
-          : "border border-line text-chalk-dim"
-      }`}
-    >
-      {value >= 5
-        ? "Huge"
-        : value === 4
-          ? "Big"
-          : value === 3
-            ? "Notable"
-            : "Minor"}
-    </span>
-  );
-}

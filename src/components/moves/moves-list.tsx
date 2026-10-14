@@ -4,7 +4,8 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import { BignessPill } from "@/components/ui/score-meter";
+import { BignessChip } from "@/components/moves/move-chips";
+import { SIZE_FILTERS as SIZES, matchesSize } from "@/lib/moves/bigness";
 import { Card } from "@/components/ui/page-header";
 import { UncheckedBadge } from "@/components/ui/unchecked-badge";
 
@@ -40,18 +41,6 @@ export type MoveListItem = {
 type Sort = "newest" | "biggest";
 
 /**
- * The words the UI already uses for a bigness score, from BignessPill. Naming
- * the filter "severity" would introduce a second vocabulary for one idea —
- * §10 says name things by what he recognises.
- */
-const SIZES = [
-  { value: "5", label: "Huge" },
-  { value: "4", label: "Big" },
-  { value: "3", label: "Notable" },
-  { value: "1-2", label: "Minor" },
-];
-
-/**
  * What each kind is called on screen. Moves covers more than transactions now
  * — a starting job changing hands matters as much as a trade — and the chip is
  * what tells you which you're looking at without opening it.
@@ -65,12 +54,6 @@ const KIND_LABEL: Record<string, string> = {
   injury: "Injury",
   coaching: "Coaching",
 };
-
-function matchesSize(bigness: number, filter: string): boolean {
-  if (filter === "all") return true;
-  if (filter === "1-2") return bigness <= 2;
-  return bigness === Number(filter);
-}
 
 /**
  * A native select that looks like the rest of the UI.
@@ -266,7 +249,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
                     <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-chalk-dim">
                       {KIND_LABEL[move.kind] ?? move.kind}
                     </span>
-                    <BignessPill value={move.bigness} />
+                    <BignessChip value={move.bigness} size="sm" />
                   </span>
                 </div>
 
