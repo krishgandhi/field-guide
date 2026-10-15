@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-10-14T16:26:08.565Z",
+  "generatedAt": "2026-10-15T16:13:23.285Z",
   "candidates": [
+    {
+      "id": "50185418",
+      "headline": "Rams' Alaric Jackson has suspension cut to 1 game following appeal",
+      "description": "Alaric Jackson's suspension for punching Bradley Chubb after Monday night's game between the Bills and Rams has been reduced from two games to one.",
+      "published": "2026-10-15",
+      "likelyKind": "transaction",
+      "teams": [
+        "Buffalo Bills",
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "BUF",
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "4036135",
+          "name": "Alaric Jackson",
+          "position": "Offensive Tackle",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "3116733",
+          "name": "Bradley Chubb",
+          "position": "Linebacker",
+          "currentTeam": "BUF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50185418/rams-alaric-jackson-suspension-cut-1-game"
+    },
     {
       "id": "50174583",
       "headline": "Jaguars WR Parker Washington has the clutch gene: Will that earn him an extension?",
@@ -996,30 +1026,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr"
-    },
-    {
-      "id": "50053035",
-      "headline": "J.J. McCarthy traded to Giants: Will he succeed in New York?",
-      "description": "With Jaxson Dart out for the season, the Giants dealt a fifth-round pick to Minnesota for McCarthy. But does this move the needle for New York? Can it work?",
-      "published": "2026-09-28",
-      "likelyKind": "injury",
-      "teams": [
-        "New York Giants",
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "NYG",
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell"
     }
   ]
 }
