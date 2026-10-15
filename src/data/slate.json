@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 6,
-  "fetchedAt": "2026-10-14T15:40:46.016Z",
+  "fetchedAt": "2026-10-15T15:28:26.843Z",
   "games": [
     {
       "id": "401872995",
@@ -32,9 +32,9 @@
       "kickoff": "2026-10-18T17:00Z",
       "home": "ATL",
       "away": "CHI",
-      "spread": 2.5,
+      "spread": 1.5,
       "favourite": "away",
-      "overUnder": 49.5,
+      "overUnder": 51.5,
       "broadcast": "Fox",
       "venue": "Mercedes-Benz Stadium",
       "neutralSite": false
@@ -106,7 +106,7 @@
       "away": "PIT",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 40.5,
+      "overUnder": 39.5,
       "broadcast": "CBS",
       "venue": "Raymond James Stadium",
       "neutralSite": false
@@ -184,6 +184,16 @@
         "player": "Kyler Gordon",
         "position": "CB",
         "status": "Out"
+      },
+      {
+        "player": "T.J. Edwards",
+        "position": "LB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Dayo Odeyingbo",
+        "position": "DE",
+        "status": "Doubtful"
       }
     ],
     "CIN": [
@@ -197,7 +207,7 @@
       {
         "player": "Pat Surtain II",
         "position": "CB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "DET": [
@@ -240,22 +250,32 @@
         "status": "Out"
       }
     ],
-    "NE": [
+    "NYJ": [
       {
-        "player": "TreVeyon Henderson",
+        "player": "Joseph Ossai",
+        "position": "DE",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Breece Hall",
         "position": "RB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Adonai Mitchell",
+        "position": "WR",
         "status": "Doubtful"
       }
     ],
     "PHI": [
       {
-        "player": "Jalyx Hunt",
-        "position": "LB",
+        "player": "Will Shipley",
+        "position": "RB",
         "status": "Doubtful"
       },
       {
-        "player": "Will Shipley",
-        "position": "RB",
+        "player": "Jalyx Hunt",
+        "position": "LB",
         "status": "Doubtful"
       }
     ],
@@ -284,6 +304,16 @@
       }
     ],
     "SEA": [
+      {
+        "player": "Chazz Surratt",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Drake Thomas",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Zach Charbonnet",
         "position": "RB",

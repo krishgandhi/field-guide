@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-14T15:40:56.006Z",
+  "fetchedAt": "2026-10-15T15:28:32.338Z",
   "statsSeason": 2026,
   "previousSeason": false,
   "teams": {
@@ -3403,12 +3403,12 @@
               "draftedBy": "2020: Rd 4, Pk 133 (SEA)"
             },
             {
-              "id": "4036135",
-              "name": "Alaric Jackson",
+              "id": "15946",
+              "name": "David Quessenberry",
               "label": "OT",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": null
+              "debutYear": 2013,
+              "experience": 9,
+              "draftedBy": "2013: Rd 6, Pk 176 (HOU)"
             }
           ],
           "rank": 13,
@@ -4191,12 +4191,12 @@
               "draftedBy": "2016: Rd 2, Pk 35 (SD)"
             },
             {
-              "id": "4921438",
-              "name": "Caleb Lomu",
+              "id": "4685298",
+              "name": "Will Campbell",
               "label": "OT",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 1, Pk 28 (NE)"
+              "experience": 2,
+              "draftedBy": "2025: Rd 1, Pk 4 (NE)"
             }
           ],
           "rank": 19,
