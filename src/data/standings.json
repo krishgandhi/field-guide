@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "isPreviousSeason": false,
-  "fetchedAt": "2026-10-15T15:28:27.202Z",
+  "fetchedAt": "2026-10-16T15:09:06.938Z",
   "teams": {
     "KC": {
       "wins": 4,
@@ -39,6 +39,15 @@
       "pointsAgainst": 141,
       "conferenceRank": 4
     },
+    "DEN": {
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": -11,
+      "pointsFor": 114,
+      "pointsAgainst": 125,
+      "conferenceRank": 6
+    },
     "NE": {
       "wins": 3,
       "losses": 2,
@@ -47,15 +56,6 @@
       "pointsFor": 110,
       "pointsAgainst": 94,
       "conferenceRank": 5
-    },
-    "DEN": {
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": -14,
-      "pointsFor": 97,
-      "pointsAgainst": 111,
-      "conferenceRank": 6
     },
     "LV": {
       "wins": 3,
@@ -201,15 +201,6 @@
       "pointsAgainst": 96,
       "conferenceRank": 7
     },
-    "SEA": {
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 29,
-      "pointsFor": 134,
-      "pointsAgainst": 105,
-      "conferenceRank": 8
-    },
     "CAR": {
       "wins": 2,
       "losses": 2,
@@ -218,6 +209,15 @@
       "pointsFor": 121,
       "pointsAgainst": 109,
       "conferenceRank": 4
+    },
+    "SEA": {
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": 26,
+      "pointsFor": 148,
+      "pointsAgainst": 122,
+      "conferenceRank": 8
     },
     "LAR": {
       "wins": 2,

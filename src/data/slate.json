@@ -1,16 +1,16 @@
 {
   "season": 2026,
   "week": 6,
-  "fetchedAt": "2026-10-15T15:28:26.843Z",
+  "fetchedAt": "2026-10-16T15:09:06.625Z",
   "games": [
     {
       "id": "401872995",
       "kickoff": "2026-10-16T00:15Z",
       "home": "DEN",
       "away": "SEA",
-      "spread": 2.5,
-      "favourite": "away",
-      "overUnder": 40.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Empower Field at Mile High",
       "neutralSite": false
@@ -44,9 +44,9 @@
       "kickoff": "2026-10-18T17:00Z",
       "home": "CLE",
       "away": "BAL",
-      "spread": 5.5,
+      "spread": 3.5,
       "favourite": "away",
-      "overUnder": 42.5,
+      "overUnder": 40.5,
       "broadcast": "Fox",
       "venue": "Huntington Bank Field",
       "neutralSite": false
@@ -92,9 +92,9 @@
       "kickoff": "2026-10-18T17:00Z",
       "home": "PHI",
       "away": "CAR",
-      "spread": 1.5,
+      "spread": 3.5,
       "favourite": "away",
-      "overUnder": 40.5,
+      "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -128,9 +128,9 @@
       "kickoff": "2026-10-18T20:25Z",
       "home": "KC",
       "away": "LAC",
-      "spread": 8.5,
+      "spread": 7.5,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "CBS",
       "venue": "Arrowhead Stadium",
       "neutralSite": false
@@ -140,7 +140,7 @@
       "kickoff": "2026-10-18T20:25Z",
       "home": "LV",
       "away": "BUF",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "away",
       "overUnder": 53.5,
       "broadcast": "CBS",
@@ -166,7 +166,7 @@
       "away": "WSH",
       "spread": 7.5,
       "favourite": "home",
-      "overUnder": 50.5,
+      "overUnder": 51.5,
       "broadcast": "ESPN, ABC",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -205,6 +205,16 @@
     ],
     "DEN": [
       {
+        "player": "Sam Ehlinger",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Dallen Bentley",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Pat Surtain II",
         "position": "CB",
         "status": "Out"
@@ -224,6 +234,11 @@
     ],
     "GB": [
       {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Micah Parsons",
         "position": "DE",
         "status": "Out"
@@ -233,7 +248,7 @@
       {
         "player": "David Montgomery",
         "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "LAC": [
@@ -254,20 +269,25 @@
       {
         "player": "Joseph Ossai",
         "position": "DE",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Breece Hall",
-        "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       },
       {
         "player": "Adonai Mitchell",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Breece Hall",
+        "position": "RB",
+        "status": "Out"
       }
     ],
     "PHI": [
+      {
+        "player": "Jalen Hurts",
+        "position": "QB",
+        "status": "Out"
+      },
       {
         "player": "Will Shipley",
         "position": "RB",
@@ -293,29 +313,34 @@
     ],
     "SF": [
       {
-        "player": "Garret Wallow",
-        "position": "LB",
+        "player": "Deebo Samuel Sr.",
+        "position": "WR",
         "status": "Out"
       },
       {
-        "player": "Deebo Samuel Sr.",
-        "position": "WR",
+        "player": "Garret Wallow",
+        "position": "LB",
         "status": "Out"
       }
     ],
     "SEA": [
       {
-        "player": "Chazz Surratt",
-        "position": "LB",
+        "player": "Jalen Milroe",
+        "position": "QB",
         "status": "Out"
       },
       {
-        "player": "Drake Thomas",
-        "position": "LB",
+        "player": "Avery Smith",
+        "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Zach Charbonnet",
+        "player": "Montorie Foster Jr.",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Robert Henry Jr.",
         "position": "RB",
         "status": "Out"
       }

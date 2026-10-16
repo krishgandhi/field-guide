@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-10-15T15:28:34.751Z",
+  "fetchedAt": "2026-10-16T15:09:17.268Z",
   "people": {
     "13976": {
       "id": "13976",
@@ -789,9 +789,9 @@
       "college": "Illinois",
       "awards": [],
       "career": {
-        "Total Tackles": "281",
-        "Solo Tackles": "190",
-        "Assist Tackles": "91",
+        "Total Tackles": "286",
+        "Solo Tackles": "192",
+        "Assist Tackles": "94",
         "Sacks": "4.5",
         "Forced Fumbles": "2",
         "Fumbles Recovered": "1",
@@ -801,15 +801,15 @@
         "Average Interception Yards": "50.0",
         "Interception Touchdowns": "1",
         "Long Interception": "97",
-        "Passes Defended": "33",
+        "Passes Defended": "35",
         "Stuffs": "18.5",
         "Stuff Yards": "40",
         "Kicks Blocked": "0"
       },
       "season": {
-        "Total Tackles": "32",
-        "Solo Tackles": "20",
-        "Assist Tackles": "12",
+        "Total Tackles": "37",
+        "Solo Tackles": "22",
+        "Assist Tackles": "15",
         "Sacks": "0",
         "Forced Fumbles": "0",
         "Fumbles Recovered": "0",
@@ -819,13 +819,13 @@
         "Average Interception Yards": "0.0",
         "Interception Touchdowns": "0",
         "Long Interception": "0",
-        "Passes Defended": "1",
+        "Passes Defended": "3",
         "Stuffs": "3.5",
         "Stuff Yards": "5",
         "Kicks Blocked": "0"
       },
       "headshot": "/players/4575431.png",
-      "evidenceHash": "e9bc330200db8c2c",
+      "evidenceHash": "5a2504ddb6cbc26e",
       "blurb": null,
       "promptVersion": null
     },
