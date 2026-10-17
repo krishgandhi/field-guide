@@ -1,6 +1,80 @@
 {
-  "generatedAt": "2026-10-16T15:59:38.715Z",
+  "generatedAt": "2026-10-17T14:52:47.469Z",
   "candidates": [
+    {
+      "id": "50195809",
+      "headline": "What Cowboys-Packers' Micah Parsons trade means a year later",
+      "description": "We examine the fallout and lingering impact on both franchises more than a year after the blockbuster deal.",
+      "published": "2026-10-17",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers",
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "GB",
+        "DAL"
+      ],
+      "players": [
+        {
+          "id": "4361423",
+          "name": "Micah Parsons",
+          "position": "Defensive End",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner"
+    },
+    {
+      "id": "50197704",
+      "headline": "Seahawks sticking with Sam Darnold as starter despite INTs",
+      "description": "Seahawks coach Mike Macdonald is standing behind Sam Darnold as the team's starting quarterback despite his seven interceptions over the past four games.",
+      "published": "2026-10-16",
+      "likelyKind": "role",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "3912547",
+          "name": "Sam Darnold",
+          "position": "Quarterback",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50197704/seahawks-sticking-sam-darnold-starter-ints"
+    },
+    {
+      "id": "50197342",
+      "headline": "Ravens rule out QB Lamar Jackson; Tyler Huntley to start vs. Browns",
+      "description": "The Ravens have ruled quarterback Lamar Jackson out for a second straight week, elevating Tyler Huntley to the starting role for Sunday's game in Cleveland.",
+      "published": "2026-10-16",
+      "likelyKind": "role",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "4035671",
+          "name": "Tyler Huntley",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns"
+    },
     {
       "id": "50185418",
       "headline": "Rams' Alaric Jackson has suspension cut to 1 game following appeal",
@@ -948,84 +1022,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal"
-    },
-    {
-      "id": "50059771",
-      "headline": "Inside George Kittle's 243-day recovery from torn Achilles",
-      "description": "Despite tearing his Achilles in the playoffs, Kittle appears to be back to his normal self. Here's how he won the recovery process.",
-      "published": "2026-09-29",
-      "likelyKind": "injury",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
-        {
-          "id": "3040151",
-          "name": "George Kittle",
-          "position": "Tight End",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059771/san-francisco-49ers-george-kittle-torn-achilles-recovery"
-    },
-    {
-      "id": "50059809",
-      "headline": "Source - Bengals cut Ke'Shawn Williams after costly muffed punt",
-      "description": "The Cincinnati Bengals cut WR Ke'Shawn Williams after he muffed a punt that eventually led to the Pittsburgh Steelers' 30-27 win, a source told ESPN's Jeremy Fowler. Earlier Tuesday, Cincinnati signed WR Mitch Tinsley, per ESPN's Adam Schefter.",
-      "published": "2026-09-29",
-      "likelyKind": "transaction",
-      "teams": [
-        "Cincinnati Bengals"
-      ],
-      "teamIds": [
-        "CIN"
-      ],
-      "players": [
-        {
-          "id": "4570738",
-          "name": "Ke'Shawn Williams",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        },
-        {
-          "id": "4368003",
-          "name": "Andrei Iosivas",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        },
-        {
-          "id": "5092508",
-          "name": "Colbie Young",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059809/source-bengals-cut-keshawn-williams-costly-muffed-punt"
-    },
-    {
-      "id": "50059755",
-      "headline": "Sources: Giants to release fan favorite Odell Beckham Jr.",
-      "description": "The Giants are releasing veteran wide receiver Odell Beckham Jr., sources told NFL Network.",
-      "published": "2026-09-29",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants"
-      ],
-      "teamIds": [
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "16733",
-          "name": "Odell Beckham Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr"
     }
   ]
 }
