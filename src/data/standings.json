@@ -30,13 +30,22 @@
       "conferenceRank": 3
     },
     "BUF": {
-      "wins": 3,
+      "wins": 4,
       "losses": 1,
       "ties": 0,
-      "pointDifferential": 20,
-      "pointsFor": 127,
-      "pointsAgainst": 107,
+      "pointDifferential": 23,
+      "pointsFor": 164,
+      "pointsAgainst": 141,
       "conferenceRank": 4
+    },
+    "DEN": {
+      "wins": 4,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": -11,
+      "pointsFor": 114,
+      "pointsAgainst": 125,
+      "conferenceRank": 6
     },
     "NE": {
       "wins": 3,
@@ -46,15 +55,6 @@
       "pointsFor": 110,
       "pointsAgainst": 94,
       "conferenceRank": 5
-    },
-    "DEN": {
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": -14,
-      "pointsFor": 97,
-      "pointsAgainst": 111,
-      "conferenceRank": 6
     },
     "LV": {
       "wins": 3,
@@ -182,15 +182,6 @@
       "pointsAgainst": 112,
       "conferenceRank": 5
     },
-    "CHI": {
-      "wins": 3,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 23,
-      "pointsFor": 119,
-      "pointsAgainst": 96,
-      "conferenceRank": 6
-    },
     "DET": {
       "wins": 3,
       "losses": 2,
@@ -198,16 +189,16 @@
       "pointDifferential": 16,
       "pointsFor": 164,
       "pointsAgainst": 148,
-      "conferenceRank": 7
+      "conferenceRank": 6
     },
-    "SEA": {
+    "CHI": {
       "wins": 3,
       "losses": 2,
       "ties": 0,
-      "pointDifferential": 29,
-      "pointsFor": 134,
-      "pointsAgainst": 105,
-      "conferenceRank": 8
+      "pointDifferential": 23,
+      "pointsFor": 119,
+      "pointsAgainst": 96,
+      "conferenceRank": 7
     },
     "CAR": {
       "wins": 2,
@@ -218,13 +209,22 @@
       "pointsAgainst": 109,
       "conferenceRank": 4
     },
+    "SEA": {
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": 26,
+      "pointsFor": 148,
+      "pointsAgainst": 122,
+      "conferenceRank": 8
+    },
     "LAR": {
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": 2,
-      "pointsFor": 85,
-      "pointsAgainst": 83,
+      "pointDifferential": -1,
+      "pointsFor": 119,
+      "pointsAgainst": 120,
       "conferenceRank": 9
     },
     "ATL": {
