@@ -3,25 +3,13 @@
   "week": 6,
   "games": [
     {
-      "id": "401872995",
-      "kickoff": "2026-10-16T00:15Z",
-      "home": "DEN",
-      "away": "SEA",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Prime Video",
-      "venue": "Empower Field at Mile High",
-      "neutralSite": false
-    },
-    {
       "id": "401872996",
       "kickoff": "2026-10-18T13:30Z",
       "home": "JAX",
       "away": "HOU",
-      "spread": 2.5,
-      "favourite": "home",
-      "overUnder": 41.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "NFL Net",
       "venue": "Wembley Stadium",
       "neutralSite": true
@@ -55,7 +43,7 @@
       "kickoff": "2026-10-18T17:00Z",
       "home": "IND",
       "away": "TEN",
-      "spread": 7,
+      "spread": 6.5,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "Fox",
@@ -80,7 +68,7 @@
       "home": "NYG",
       "away": "NO",
       "spread": 1.5,
-      "favourite": "home",
+      "favourite": "away",
       "overUnder": 46.5,
       "broadcast": "Fox",
       "venue": "MetLife Stadium",
@@ -156,6 +144,18 @@
       "overUnder": 53.5,
       "broadcast": "NBC",
       "venue": "Lambeau Field",
+      "neutralSite": false
+    },
+    {
+      "id": "401872995",
+      "kickoff": "2026-10-16T00:15Z",
+      "home": "DEN",
+      "away": "SEA",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Prime Video",
+      "venue": "Empower Field at Mile High",
       "neutralSite": false
     },
     {
@@ -283,8 +283,18 @@
     ],
     "HOU": [
       {
+        "player": "Marlin Klein",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "David Montgomery",
         "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Sabastian Harsh",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -301,6 +311,16 @@
       }
     ],
     "JAX": [
+      {
+        "player": "CJ Williams",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Wesley Williams",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Montaric Brown",
         "position": "CB",
