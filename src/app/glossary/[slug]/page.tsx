@@ -43,10 +43,10 @@ export default async function GlossaryEntryPage({ params }: PageProps) {
 
       <article>
         <header>
-          <h1 className="text-[2rem] font-bold leading-tight tracking-tight text-fg">
+          <h1 className="text-[2rem] font-bold leading-tight tracking-tight text-chalk">
             {frontmatter.title}
           </h1>
-          <p className="mt-2 text-[1.05rem] leading-snug text-amber">
+          <p className="mt-2 text-[1.05rem] leading-snug text-yellow">
             {frontmatter.summary}
           </p>
         </header>
@@ -57,10 +57,10 @@ export default async function GlossaryEntryPage({ params }: PageProps) {
 
         {frontmatter.aliases.length > 0 ? (
           <footer className="mt-8 border-t border-line pt-4">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
               Also called
             </p>
-            <p className="mt-1.5 text-sm text-fg-dim">
+            <p className="mt-1.5 text-sm text-chalk-dim">
               {frontmatter.aliases.join(" · ")}
             </p>
           </footer>

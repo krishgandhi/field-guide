@@ -1,0 +1,50 @@
+name: CI
+
+# The gate in front of main for human changes: every PR and every hand push.
+# Every check the site depends on, in the order a failure is cheapest to read:
+# style, types, behaviour, then the real build.
+#
+# It does NOT see the daily data commits. Those are pushed with GITHUB_TOKEN,
+# and GitHub doesn't start workflows from GITHUB_TOKEN pushes — so
+# refresh-data.yml runs the same typecheck, tests and build itself, before it
+# commits. Offline only: no API key, no network beyond npm, so a third-party
+# outage can never turn this red.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build

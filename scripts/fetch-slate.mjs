@@ -12,44 +12,46 @@
  * mixture of source data and our judgement.
  *
  * Usage:
- *   node scripts/fetch-slate.mjs            # current week, derived from today
- *   WEEK=11 node scripts/fetch-slate.mjs    # a specific week
+ *   node scripts/fetch-slate.mjs            # current week, read from ESPN's calendar
+ *   WEEK=11 node scripts/fetch-slate.mjs    # a specific week of the current season
  *   SLATE_BASE=http://bad node scripts/...  # failure drill
  */
 
-import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { writeFile, mkdir } from "node:fs/promises";
+import {
+  REGULAR_SEASON_WEEKS,
+  SITE,
+  currentPhase,
+  getJson,
+  scoreboardUrl,
+  slateCandidates,
+} from "./lib/espn.mts";
+import { TEAM_IDS } from "./lib/teams.mts";
+import { stamp } from "./lib/meta.mts";
 
-const BASE = process.env.SLATE_BASE ?? "https://site.api.espn.com/apis/site/v2/sports/football/nfl";
+const BASE = process.env.SLATE_BASE ?? SITE;
 const OUT = "src/data/slate.json";
 
-/** Regular season opens Wed 9 Sep 2026; weeks run Wednesday to Tuesday. */
-const SEASON = 2026;
-const WEEK_ONE_START = Date.UTC(2026, 8, 9); // month is 0-indexed
-const WEEKS = 18;
-
 /**
- * Derive the regular-season week from today's date.
+ * The season and regular-season weeks to try, in order.
  *
- * Deliberately NOT read from ESPN's default scoreboard: right now that returns
- * `season.type: 1` — preseason — and would silently hand back preseason games
- * as if they were the real slate.
+ * Read from ESPN's calendar rather than counted from a hardcoded opening day,
+ * which had to be edited every August. Preseason maps to Week 1 and the
+ * playoffs hold at Week 18 — see regularSeasonWeek() and slateCandidates()
+ * for why, including the off-season fallback to last season's Week 18. The
+ * scoreboard request itself always carries seasontype=2, so the preseason
+ * games ESPN serves by default can never pose as the real slate.
  */
-function currentWeek() {
+async function weeksToTry() {
+  const phase = await currentPhase(BASE);
   if (process.env.WEEK) {
     const w = Number(process.env.WEEK);
-    if (!Number.isInteger(w) || w < 1 || w > WEEKS) {
-      throw new Error(`WEEK must be 1–${WEEKS}, got "${process.env.WEEK}"`);
+    if (!Number.isInteger(w) || w < 1 || w > REGULAR_SEASON_WEEKS) {
+      throw new Error(`WEEK must be 1–${REGULAR_SEASON_WEEKS}, got "${process.env.WEEK}"`);
     }
-    return w;
+    return { phase, tries: [{ season: phase.season, week: w }] };
   }
-  const days = (Date.now() - WEEK_ONE_START) / 86_400_000;
-  return Math.min(WEEKS, Math.max(1, Math.floor(days / 7) + 1));
-}
-
-async function getJson(url) {
-  const res = await fetch(url, { headers: { "user-agent": "field-guide" } });
-  if (!res.ok) throw new Error(`${url} returned ${res.status}`);
-  return res.json();
+  return { phase, tries: slateCandidates(phase) };
 }
 
 /** "SEA -3.5" → the margin as a positive number, plus who's favoured. */
@@ -110,14 +112,26 @@ async function fetchInjuries() {
 }
 
 async function main() {
-  const week = currentWeek();
-  const board = await getJson(
-    `${BASE}/scoreboard?dates=${SEASON}&seasontype=2&week=${week}`,
-  );
+  const { phase, tries } = await weeksToTry();
+  let season, week, events = [];
+  for (const t of tries) {
+    const board = await getJson(scoreboardUrl(t.season, t.week, BASE));
+    events = board.events ?? [];
+    ({ season, week } = t);
+    if (events.length > 0) break;
+    console.log(`${t.season} week ${t.week}: no games on ESPN.`);
+  }
 
-  const events = board.events ?? [];
   if (events.length === 0) {
-    throw new Error(`Week ${week} returned no games. Refusing to overwrite good data.`);
+    if (tries.length > 1) {
+      // Off season, schedule not out yet: nothing new is correct, not an error.
+      console.log("Nothing to show yet — keeping the committed slate.");
+      return;
+    }
+    throw new Error(
+      `${season} week ${week} returned no games (phase type ${phase.seasonType}). ` +
+        "Refusing to overwrite good data.",
+    );
   }
 
   const games = events.map((event) => {
@@ -144,10 +158,7 @@ async function main() {
 
   // Byes are absent from the response rather than flagged, so derive them.
   const playing = new Set(games.flatMap((g) => [g.home, g.away]));
-  const allTeams = JSON.parse(
-    await readFile("src/lib/teams/nfl-teams.json", "utf8"),
-  ).map((t) => t.id);
-  const byes = allTeams.filter((id) => !playing.has(id)).sort();
+  const byes = TEAM_IDS.filter((id) => !playing.has(id)).sort();
 
   // Sanity gate before anything is written. 32 teams are either playing or on
   // a bye; if that doesn't hold, the response is malformed and last week's
@@ -161,9 +172,8 @@ async function main() {
   const missingSpread = games.filter((g) => g.spread === null).length;
 
   const slate = {
-    season: SEASON,
+    season,
     week,
-    fetchedAt: new Date().toISOString(),
     games,
     byes,
     injuries: await fetchInjuries(),
@@ -171,6 +181,7 @@ async function main() {
 
   await mkdir("src/data", { recursive: true });
   await writeFile(OUT, `${JSON.stringify(slate, null, 2)}\n`);
+  stamp("slate");
 
   console.log(
     `week ${week}: ${games.length} games, ${byes.length} on bye, ` +

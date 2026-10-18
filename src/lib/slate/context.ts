@@ -2,93 +2,72 @@
  * The two §8 factors no API provides: rivalries, and which quarterbacks are
  * worth crossing the room for.
  *
- * Hand-kept on purpose. Both are judgements, not data, and pretending
- * otherwise by scraping something would make them look more authoritative than
- * they are.
+ * Both lists are hand-kept JSON beside this file — editorial data, not code.
+ * Rivalries are a judgement and say so. The quarterback list is a checkable
+ * fact (MVP winners), joined to live data: who is starting this week.
  */
+
+import rivalries from "./rivalries.json";
+import starQuarterbacks from "./star-quarterbacks.json";
+import { injuriesFor } from "@/lib/slate";
+import { startingQb } from "@/lib/team-detail";
+import { team } from "@/lib/teams";
 
 /**
- * Rivalries — pairs that carry weight beyond the standings.
- *
- * Divisional games already score on their own, so the ones that earn their keep
- * here are the cross-division grudges, Bills–Chiefs above all: it's the defining
- * matchup of Buffalo's last decade and it isn't divisional, so nothing else in
- * the scoring would catch it.
+ * Rivalries — pairs that carry weight beyond the standings. The list lives in
+ * rivalries.json, with the reasoning for what goes in it.
  */
-const RIVALRIES: [string, string][] = [
-  // The modern ones, none of them divisional
-  ["BUF", "KC"],
-  ["KC", "CIN"],
-  ["SF", "DAL"],
-  // Long-standing, divisional as well — they get both bumps, correctly
-  ["GB", "CHI"],
-  ["GB", "MIN"],
-  ["PIT", "BAL"],
-  ["PIT", "CLE"],
-  ["PIT", "CIN"],
-  ["DAL", "PHI"],
-  ["DAL", "WSH"],
-  ["DAL", "NYG"],
-  ["NYG", "PHI"],
-  ["KC", "LV"],
-  ["KC", "DEN"],
-  ["DEN", "LV"],
-  ["SF", "SEA"],
-  ["SF", "LAR"],
-  ["SEA", "LAR"],
-  ["NO", "ATL"],
-  ["NO", "TB"],
-  ["TB", "CAR"],
-  ["IND", "TEN"],
-  ["HOU", "IND"],
-  ["BUF", "MIA"],
-  ["BUF", "NE"],
-  ["BUF", "NYJ"],
-  ["NE", "NYJ"],
-  ["MIA", "NYJ"],
-  ["CHI", "DET"],
-  ["DET", "MIN"],
-  ["BAL", "CIN"],
-  ["BAL", "CLE"],
-  ["CLE", "CIN"],
-  ["JAX", "TEN"],
-  ["JAX", "HOU"],
-  ["LAC", "KC"],
-  ["ARI", "SEA"],
-  ["CAR", "ATL"],
-];
-
 const RIVALRY_KEYS = new Set(
-  RIVALRIES.map(([a, b]) => [a, b].sort().join("|")),
+  (rivalries.pairs as [string, string][]).map(([a, b]) => key(a, b)),
 );
 
+function key(a: string, b: string): string {
+  return [team(a)?.id ?? a, team(b)?.id ?? b].sort().join("|");
+}
+
 export function isRivalry(a: string, b: string): boolean {
-  return RIVALRY_KEYS.has([a, b].sort().join("|"));
+  return RIVALRY_KEYS.has(key(a, b));
 }
 
 /**
  * Quarterbacks whose presence alone makes a game worth watching.
  *
- * Deliberately short. Every name here was checked against 2026 reporting —
- * Allen, Mahomes and Stafford were the consensus top three going into the
- * season, Stafford as reigning MVP. Others widely assumed to belong could not
- * be confirmed as starters for their teams, and a list that under-fires costs
- * a game one point, while a list that invents a starter is the confident
- * wrongness this whole product exists to avoid.
+ * This was a list of three TEAMS — BUF, KC, LAR — which is a claim about a
+ * player stored against the wrong thing: trade one of them, or bench him, and
+ * the bonus silently stayed with the club. Now it is keyed by ESPN athlete id
+ * (star-quarterbacks.json) and checked against the player actually starting.
  *
- * The player name is stored so this stays auditable, but it is never rendered:
- * the reason sentence says "two of the best quarterbacks in the league", never
- * a name. A stale entry therefore skews a score slightly and states nothing
- * false about a person.
- *
- * Extend it as more get confirmed.
+ * The criterion is an AP MVP award rather than a ranking of who is "elite",
+ * because an award can be checked and a ranking can't — and the reason
+ * sentence says "a former MVP", which is exactly what the list guarantees.
  */
-const STAR_QB_TEAMS: Record<string, string> = {
-  BUF: "Josh Allen",
-  KC: "Patrick Mahomes",
-  LAR: "Matthew Stafford",
-};
+const STAR_QB_IDS = new Set(starQuarterbacks.players.map((p) => p.id));
 
-export function hasStarQb(teamId: string): boolean {
-  return teamId in STAR_QB_TEAMS;
+export function isStarQb(athleteId: string): boolean {
+  return STAR_QB_IDS.has(athleteId);
+}
+
+/** A ruling that means he will not, or almost certainly will not, play. */
+const RULED_OUT = new Set(["out", "doubtful", "injured reserve"]);
+
+/**
+ * Is a former MVP starting at quarterback for this team this week?
+ *
+ * Starter from the depth chart; ruled out if the week's injury report has him
+ * out or doubtful — the depth chart can still list an injured starter first.
+ * Lookups are parameters so the rule can be tested on fixed inputs.
+ */
+export function hasStarQb(
+  teamId: string,
+  lookup: {
+    starter?: (teamId: string) => { id: string; name: string } | null;
+    injuries?: (teamId: string) => { player: string; status: string }[];
+  } = {},
+): boolean {
+  const { starter = startingQb, injuries = injuriesFor } = lookup;
+  const qb = starter(team(teamId)?.id ?? teamId);
+  if (!qb || !isStarQb(qb.id)) return false;
+  return !injuries(team(teamId)?.id ?? teamId).some(
+    (i) => i.player === qb.name && RULED_OUT.has(i.status.toLowerCase()),
+  );
 }

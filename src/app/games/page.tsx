@@ -1,91 +1,100 @@
 import type { Metadata } from "next";
-import { AlertTriangle } from "lucide-react";
-import { GameCard } from "@/components/game-card";
-import { SLATE, daysStale } from "@/lib/slate";
-import { sortForViewing } from "@/lib/watchability";
-import { teamName } from "@/lib/teams";
+import { FlagCountButton } from "@/components/flag/flag-count-button";
+import { ByeCard } from "@/components/games/bye-card";
+import { kickoffLabel } from "@/components/games/format";
+import { GameCard } from "@/components/games/game-card";
+import { PlayedGameRow, StartedGameCard } from "@/components/games/started-game-card";
+import { TeamLogo } from "@/components/games/team-logo";
+import { TimedSlate } from "@/components/games/timed";
+import { StaleBanner } from "@/components/stale-banner";
+import { PageShell } from "@/components/ui/page-header";
+import { PageTitle } from "@/components/ui/page-title";
+import { Card } from "@/components/ui/card";
+import { SectionHeader } from "@/components/ui/section-header";
+import { gamePhase } from "@/lib/game-phase";
+import { createExplainer } from "@/lib/glossary/explain";
+import { SLATE } from "@/lib/slate";
+import { sortForViewing, watchability } from "@/lib/watchability";
 
 export const metadata: Metadata = {
   title: "Games — Field guide",
   description: "What's on this week and which ones are worth your time.",
 };
 
-// Fixed timezone so the prerendered HTML and the browser agree — otherwise
-// React reports a hydration mismatch for anyone outside Eastern.
-const time = new Intl.DateTimeFormat("en-US", {
-  weekday: "short",
-  hour: "numeric",
-  minute: "2-digit",
-  timeZone: "America/New_York",
-});
-const day = new Intl.DateTimeFormat("en-US", {
-  day: "numeric",
-  month: "short",
-  timeZone: "America/New_York",
-});
+const YOURS = "BUF";
 
 /**
  * The week's real slate, ordered for deciding what to turn on (§8): Bills
- * first regardless of score, then by how watchable the game is.
+ * first regardless of score, then by how watchable the game is. Games the
+ * scoring rates a 1 fold into one row at the bottom.
  *
  * Reads the JSON that GitHub Actions commits — never ESPN at request time (§4).
- * Deliberately NOT live scores; §2 rules those out. This is read before kickoff.
+ * Deliberately NOT live scores; §2 rules those out. This is read before kickoff,
+ * so a game that has kicked off drops out of the ranking into "Already
+ * played" — decided in the browser (TimedSlate), because this page is built
+ * once and would otherwise freeze "upcoming" at build time.
  */
 export default function GamesPage() {
+  const explain = createExplainer();
   const slate = sortForViewing(SLATE.games, SLATE.week);
-  const stale = daysStale();
+  const isYours = (g: (typeof slate)[number]) => g.home === YOURS || g.away === YOURS;
+  // Scoring a 1 means "nothing much riding on it": those fold into one row.
+  const folds = (g: (typeof slate)[number]) =>
+    !isYours(g) && watchability(g, SLATE.week).score <= 1;
+
+  const items = slate.map((game) => ({
+    id: game.id,
+    kickoff: game.kickoff,
+    serverPhase: gamePhase(game.kickoff),
+    folded: folds(game),
+    logos: (
+      <>
+        <TeamLogo id={game.away} size={24} />
+        <TeamLogo id={game.home} size={24} />
+      </>
+    ),
+    card: (
+      <GameCard
+        game={game}
+        week={SLATE.week}
+        timeLabel={kickoffLabel(game)}
+        yours={isYours(game)}
+        explain={explain}
+      />
+    ),
+    live: <StartedGameCard game={game} phase="live" yours={isYours(game)} />,
+    played: <PlayedGameRow game={game} yours={isYours(game)} />,
+  }));
 
   return (
-    <div className="mx-auto w-full max-w-2xl flex-1 px-4 pb-10 pt-8 sm:px-6">
-      <header>
-        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
-          Week {SLATE.week}
-        </p>
-        <h1 className="mt-1 text-[2rem] font-bold leading-tight tracking-tight text-fg">
-          What to watch
-        </h1>
-        <p className="mt-1.5 text-sm text-fg-dim">
-          {SLATE.games.length} games · updated {day.format(new Date(SLATE.fetchedAt))}
-        </p>
-      </header>
+    <PageShell>
+      <PageTitle
+        title="What to watch"
+        subtitle={`Week ${SLATE.week} · ${SLATE.games.length} games · Bills always first`}
+        action={<FlagCountButton className="lg:hidden" />}
+      />
 
-      {/* Stale is acceptable — §4 prefers it to an error — but silently stale
-          is not, so past three days it says so. */}
-      {stale > 3 ? (
-        <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-pencil/30 bg-pencil/[0.08] px-3 py-2.5">
-          <AlertTriangle size={15} className="mt-0.5 shrink-0 text-pencil" aria-hidden />
-          <p className="text-[0.8rem] leading-snug text-fg-dim">
-            <span className="font-semibold text-pencil">
-              This is {stale} days old.
-            </span>{" "}
-            The daily update hasn&rsquo;t run. Spreads and injuries may have moved.
-          </p>
-        </div>
-      ) : null}
+      <StaleBanner fetchedAt={SLATE.fetchedAt} />
 
-      <div className="mt-5 space-y-3">
-        {slate.map((game) => (
-          <GameCard
-            key={game.id}
-            game={game}
-            week={SLATE.week}
-            timeLabel={time.format(new Date(game.kickoff))}
-            highlight={game.home === "BUF" || game.away === "BUF"}
-          />
-        ))}
+      <div className="mt-4">
+        <TimedSlate
+          items={items}
+          playedHeader={<SectionHeader title="Already played" />}
+          weekDone={
+            <Card tone="quiet">
+              <p className="text-[15px] leading-[1.45] text-chalk">
+                {`Week ${SLATE.week} is done. `}Next week&rsquo;s games, ranked,
+                land here after the daily refresh.
+              </p>
+            </Card>
+          }
+        />
       </div>
 
       {/* §13: a team not playing is not a bug, and the UI must say so. */}
-      <section className="mt-6 rounded-2xl border border-line bg-surface/60 p-4">
-        <h2 className="text-sm font-semibold text-fg">
-          {SLATE.byes.length === 0 ? "Nobody is off this week" : "Not playing this week"}
-        </h2>
-        <p className="mt-1 text-sm leading-snug text-fg-dim">
-          {SLATE.byes.length === 0
-            ? `All 32 teams play in week ${SLATE.week}.`
-            : `${SLATE.byes.map(teamName).join(", ")} are on a bye — a scheduled week off, not a mistake.`}
-        </p>
-      </section>
-    </div>
+      <div className="mt-2.5">
+        <ByeCard byes={SLATE.byes} week={SLATE.week} explain={explain} />
+      </div>
+    </PageShell>
   );
 }

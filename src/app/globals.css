@@ -1,34 +1,55 @@
 @import "tailwindcss";
 
-/* Design tokens — CLAUDE.md §10.
+/* Design tokens — CLAUDE.md §10, "Yellow Line".
+   The approved proposal is docs/design/yellow-line.html; values come from it.
    Tailwind v4 has no tailwind.config.js; the theme lives here as CSS. */
 
 /* Colours get a plain @theme block so Tailwind also emits the --color-*
    custom properties on :root, usable in handwritten CSS and inline styles.
 
-   --color-ink MUST stay in sync with INK in scripts/fetch-teams.mjs, which
-   contrast-corrects all 32 team colours against it. Change one, re-run the
-   other. */
+   --color-night and --color-surface MUST stay in sync with BACKGROUNDS in
+   scripts/lib/display-color.mjs, which contrast-corrects all 32 team colours
+   against both (tests/display-color.test.ts checks they match). Change one,
+   then run `npm run fetch:teams -- --colors-only`. */
 @theme {
-  --color-ink: #0a0c0b; /* page background, near-black with a faint green cast */
-  --color-surface: #141817; /* cards */
-  --color-surface-2: #1e2422; /* raised / pressed */
-  --color-line: #2a302e; /* hairline borders */
-  --color-fg: #f2f4f3; /* primary text */
-  --color-fg-dim: #98a29e; /* secondary text */
+  /* ground */
+  --color-night: #0b100e; /* page ground, near-black with a green cast */
+  --color-surface: #141b18; /* cards */
+  --color-surface-2: #1d2622; /* raised, chips, quiet tiles */
+  --color-line: #2a3530; /* hairlines */
 
-  /* Accents keep the meanings §10 assigned them; only the values changed.
-     The originals were mixed for a light background and are unreadable here —
-     the old royal #00338D managed 1.7:1 against ink. */
-  --color-amber: #ffc53d; /* "watch this" */
-  --color-pencil: #ff6b5e; /* flags and urgency */
-  --color-royal: #4c8dff; /* Bills / allegiance accent */
+  /* field — turf belongs to game cards only, never a general surface */
+  --color-turf: #123524;
+  --color-turf-2: #164029;
+  --color-chalk-line: rgb(242 245 240 / 0.55);
+
+  /* text */
+  --color-chalk: #f2f5f0; /* primary text, 15.9:1 on surface */
+  --color-chalk-dim: #9daaa3; /* secondary text, 7.3:1 on surface */
+
+  /* signals — each one means exactly one thing */
+  --color-yellow: #f5e12a; /* the first-down line: "this is explained" + "watch this" */
+  --color-challenge: #ff5b4f; /* the challenge flag: Krish contests a phrase */
+  --color-mint: #3de3a6; /* checked / good */
+  --color-royal: #5b95ff; /* Bills, "your team" */
+
+  /* shape */
+  --radius-card: 22px;
+  --radius-inner: 14px;
+  --radius-sheet: 28px;
+
+  /* motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Fonts get `inline` because the value points at the variable next/font
-   defines on the <html> element in layout.tsx. One family, everywhere. */
+/* Fonts get `inline` because the values point at the variables next/font
+   defines on the <html> element in layout.tsx.
+   - display: Big Shoulders, scoreboard lettering for titles and numerals.
+   - sans: Archivo, for UI and reading; its width axis gives the condensed
+     label without a third family. */
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-big-shoulders), var(--font-archivo), sans-serif;
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Numerals in the same column should line up. Anything tabular gets this. */
@@ -37,18 +58,88 @@
   font-feature-settings: "tnum";
 }
 
+/* The condensed down-and-distance label: kickoff times, section asides,
+   stat captions. Replaces the `text-[0.7rem] uppercase tracking-[0.18em]`
+   string that was copied into a dozen files. Colour is left to the caller. */
+@utility label {
+  font-family: var(--font-sans);
+  font-stretch: 75%;
+  font-weight: 700;
+  font-size: 0.78125rem; /* 12.5px */
+  line-height: 1.2;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The same label at 11px, for the two-line caption under a rating tile. */
+@utility label-sm {
+  font-family: var(--font-sans);
+  font-stretch: 75%;
+  font-weight: 700;
+  font-size: 0.6875rem; /* 11px */
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Display type: Big Shoulders at its heavy weight, tight leading. */
+@utility heading {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.005em;
+}
+
+/* The signature (§10): an explained term sits on the yellow first-down line.
+   A background image rather than text-decoration so the rule can flood up to
+   fill the word when its sheet opens (`data-open`). */
+@utility explained {
+  color: var(--color-chalk);
+  text-decoration: none;
+  background-image: linear-gradient(var(--color-yellow), var(--color-yellow));
+  background-size: 100% 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+  border-radius: 1px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition:
+    background-size 320ms var(--ease-out-expo),
+    color 120ms ease-out;
+
+  &[data-open] {
+    background-size: 100% 100%;
+    color: var(--color-night);
+  }
+}
+
 @layer base {
-  body {
-    background-color: var(--color-ink);
-    color: var(--color-fg);
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
+  html {
+    background-color: var(--color-night);
+    color-scheme: dark;
   }
 
-  /* §10 quality floor: keyboard focus must always be visible. Amber rather
-     than pencil — it reads clearly against both ink and every team colour. */
+  body {
+    background-color: var(--color-night);
+    color: var(--color-chalk);
+    font-family: var(--font-sans);
+    font-stretch: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* The parts nobody draws still carry the palette. */
+  ::selection {
+    background: var(--color-yellow);
+    color: var(--color-night);
+  }
+
+  /* §10 quality floor: keyboard focus must always be visible. Yellow reads
+     clearly against night, surface, turf and every team colour. */
   :focus-visible {
-    outline: 2px solid var(--color-amber);
+    outline: 2px solid var(--color-yellow);
     outline-offset: 2px;
   }
 }

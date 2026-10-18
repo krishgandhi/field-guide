@@ -4,9 +4,10 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import { BignessPill } from "@/components/ui/score-meter";
-import { Card } from "@/components/ui/page-header";
-import { UncheckedBadge } from "@/components/ui/unchecked-badge";
+import { SIZE_FILTERS as SIZES, matchesSize } from "@/lib/moves/bigness";
+import { Card } from "@/components/ui/card";
+import { BignessChip, CheckedChip } from "@/components/moves/move-chips";
+import { KIND_LABEL, kindLabel } from "@/lib/moves/kinds";
 
 /**
  * The Moves list, with sorting and filtering.
@@ -40,39 +41,6 @@ export type MoveListItem = {
 type Sort = "newest" | "biggest";
 
 /**
- * The words the UI already uses for a bigness score, from BignessPill. Naming
- * the filter "severity" would introduce a second vocabulary for one idea —
- * §10 says name things by what he recognises.
- */
-const SIZES = [
-  { value: "5", label: "Huge" },
-  { value: "4", label: "Big" },
-  { value: "3", label: "Notable" },
-  { value: "1-2", label: "Minor" },
-];
-
-/**
- * What each kind is called on screen. Moves covers more than transactions now
- * — a starting job changing hands matters as much as a trade — and the chip is
- * what tells you which you're looking at without opening it.
- */
-const KIND_LABEL: Record<string, string> = {
-  trade: "Trade",
-  signing: "Signing",
-  contract: "Contract",
-  release: "Release",
-  role: "Role change",
-  injury: "Injury",
-  coaching: "Coaching",
-};
-
-function matchesSize(bigness: number, filter: string): boolean {
-  if (filter === "all") return true;
-  if (filter === "1-2") return bigness <= 2;
-  return bigness === Number(filter);
-}
-
-/**
  * A native select that looks like the rest of the UI.
  *
  * appearance-none strips the platform chrome including the arrow, so the arrow
@@ -96,12 +64,12 @@ function Picker({
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="min-h-11 w-full appearance-none rounded-xl border border-line bg-surface pl-3 pr-9 text-sm text-fg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber"
+        className="min-h-11 w-full appearance-none truncate rounded-full bg-surface pl-3.5 pr-7 text-[14px] font-semibold text-chalk transition-colors duration-[120ms] hover:bg-surface-2"
       >
         {children}
       </select>
       <ChevronDown
-        className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-fg-dim"
+        className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-chalk-dim"
         aria-hidden
       />
     </label>
@@ -153,7 +121,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         <div
           role="group"
           aria-label="Sort moves"
-          className="flex gap-1 rounded-xl border border-line bg-surface p-1"
+          className="flex gap-1 rounded-full bg-surface p-1"
         >
           {(
             [
@@ -166,10 +134,10 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
               type="button"
               onClick={() => setSort(value)}
               aria-pressed={sort === value}
-              className={`min-h-11 flex-1 rounded-lg text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber ${
+              className={`min-h-11 flex-1 rounded-full text-[14.5px] font-bold transition-colors duration-[120ms] ${
                 sort === value
-                  ? "bg-surface-2 text-fg"
-                  : "text-fg-dim hover:text-fg"
+                  ? "bg-surface-2 text-chalk"
+                  : "text-chalk-dim hover:text-chalk"
               }`}
             >
               {label}
@@ -178,11 +146,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          <Picker
-            label="Filter by type"
-            value={kindFilter}
-            onChange={setKindFilter}
-          >
+          <Picker label="Filter by type" value={kindFilter} onChange={setKindFilter}>
             <option value="all">All types</option>
             {kinds.map((k) => (
               <option key={k} value={k}>
@@ -191,11 +155,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
             ))}
           </Picker>
 
-          <Picker
-            label="Filter by team"
-            value={teamFilter}
-            onChange={setTeamFilter}
-          >
+          <Picker label="Filter by team" value={teamFilter} onChange={setTeamFilter}>
             <option value="all">All teams</option>
             {teams.map(([id, name]) => (
               <option key={id} value={id}>
@@ -204,11 +164,7 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
             ))}
           </Picker>
 
-          <Picker
-            label="Filter by how big"
-            value={sizeFilter}
-            onChange={setSizeFilter}
-          >
+          <Picker label="Filter by how big" value={sizeFilter} onChange={setSizeFilter}>
             <option value="all">Any size</option>
             {SIZES.map((s) => (
               <option key={s.value} value={s.value}>
@@ -219,68 +175,76 @@ export function MovesList({ moves }: { moves: MoveListItem[] }) {
         </div>
       </div>
 
-      <p className="mt-3 text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+      <p className="label mb-3 mt-5 text-chalk-dim" aria-live="polite">
         {shown.length} of {moves.length}
       </p>
 
       {shown.length === 0 ? (
         /* §10: empty states are invitations, not apologies. */
-        <Card className="mt-3">
-          <p className="text-sm leading-relaxed text-fg-dim">
+        <Card>
+          <p className="text-[15px] leading-[1.45] text-chalk-dim">
             Nothing matches that combination yet. Widen the filters, or check
             back — the list grows through the season.
           </p>
         </Card>
       ) : (
-        <div className="mt-3 space-y-3">
-          {shown.map((move) => (
-            <Link key={move.slug} href={`/moves/${move.slug}`} className="block">
-              <Card className="transition-colors hover:border-fg/20">
-                {/* Wraps rather than compresses: with an Unverified badge alongside the
-                    type and size, a fixed row squeezed "14 August 2026" onto three
-                    lines and ran it into the crests. */}
-                <div className="mb-2 flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5">
-                  <span className="flex items-center gap-2">
-                    <span className="flex items-center gap-1.5">
-                      {move.crests.map((crest) =>
-                        crest.logo ? (
-                          <Image
-                            key={crest.id}
-                            src={crest.logo}
-                            alt={crest.name}
-                            width={18}
-                            height={18}
-                            className="h-[18px] w-[18px] object-contain"
-                          />
-                        ) : null,
-                      )}
-                    </span>
-                    <span className="tnum whitespace-nowrap text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
-                      {move.dateLabel}
-                    </span>
-                  </span>
-                  <span className="flex shrink-0 flex-wrap items-center justify-end gap-1.5">
-                    {move.verified ? null : (
-                      <UncheckedBadge sensitive={move.sensitive} />
-                    )}
-                    <span className="rounded-full border border-line px-2 py-0.5 text-[0.65rem] font-semibold uppercase tracking-wide text-fg-dim">
-                      {KIND_LABEL[move.kind] ?? move.kind}
-                    </span>
-                    <BignessPill value={move.bigness} />
-                  </span>
-                </div>
-
-                <h2 className="text-[1.05rem] font-semibold leading-snug text-fg">
-                  {move.headline}
-                </h2>
-                <p className="mt-1.5 text-sm leading-snug text-fg-dim">
-                  {move.soWhat}
-                </p>
-              </Card>
-            </Link>
-          ))}
-        </div>
+        <Card pad="none" className="px-4">
+          <ul className="divide-y divide-line">
+            {shown.map((move) => (
+              <li key={move.slug}>
+                <Link href={`/moves/${move.slug}`} className="group flex gap-3 py-4">
+                  <Crests crests={move.crests} />
+                  <div className="min-w-0 flex-1">
+                    <p className="label flex flex-wrap gap-x-1.5 text-chalk-dim">
+                      <span>{kindLabel(move.kind)}</span>
+                      <span aria-hidden>·</span>
+                      <span className="tnum" data-move-date>{move.dateLabel}</span>
+                    </p>
+                    <h2 className="mt-1 text-[16px] font-bold leading-[1.3] text-chalk underline-offset-[3px] text-pretty group-hover:underline group-hover:decoration-chalk-dim">
+                      {move.headline}
+                    </h2>
+                    <p className="mt-1 text-[14.5px] leading-[1.45] text-chalk-dim">
+                      {move.soWhat}
+                    </p>
+                    <div className="mt-2.5 flex flex-wrap gap-1.5">
+                      <BignessChip value={move.bigness} size="sm" />
+                      <CheckedChip verified={move.verified} sensitive={move.sensitive} size="sm" />
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Card>
       )}
     </>
+  );
+}
+
+/**
+ * The teams in a move as logo discs, from crests resolved on the server —
+ * the client never ships the team registry. One disc for one team, two
+ * overlapping for a pair, a row for three.
+ */
+function Crests({ crests }: { crests: MoveListItem["crests"] }) {
+  const shown = crests.filter((c) => c.logo).slice(0, 3);
+  const disc = (c: MoveListItem["crests"][number], px: number, box: number, extra = "") => (
+    <span
+      key={c.id}
+      className={`grid place-items-center rounded-full bg-surface-2 ${extra}`}
+      style={{ width: box, height: box }}
+    >
+      <Image src={c.logo!} alt="" width={px} height={px} className="object-contain" style={{ width: px, height: px }} />
+    </span>
+  );
+  if (shown.length === 1) {
+    return <span aria-hidden className="shrink-0">{disc(shown[0], 28, 44)}</span>;
+  }
+  return (
+    <span aria-hidden className="relative block size-11 shrink-0">
+      {shown.slice(0, 2).map((c, i) =>
+        disc(c, 22, 30, i === 0 ? "absolute left-0 top-0" : "absolute bottom-0 right-0 ring-[3px] ring-surface"),
+      )}
+    </span>
   );
 }

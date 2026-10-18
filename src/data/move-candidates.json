@@ -1,5 +1,4 @@
 {
-  "generatedAt": "2026-10-17T14:52:47.469Z",
   "candidates": [
     {
       "id": "50195809",
@@ -23,7 +22,8 @@
           "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner"
+      "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner",
+      "attempts": 0
     },
     {
       "id": "50197704",
@@ -45,7 +45,8 @@
           "currentTeam": "SEA"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50197704/seahawks-sticking-sam-darnold-starter-ints"
+      "url": "https://www.espn.com/nfl/story/_/id/50197704/seahawks-sticking-sam-darnold-starter-ints",
+      "attempts": 0
     },
     {
       "id": "50197342",
@@ -73,122 +74,8 @@
           "currentTeam": "BAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns"
-    },
-    {
-      "id": "50185418",
-      "headline": "Rams' Alaric Jackson has suspension cut to 1 game following appeal",
-      "description": "Alaric Jackson's suspension for punching Bradley Chubb after Monday night's game between the Bills and Rams has been reduced from two games to one.",
-      "published": "2026-10-15",
-      "likelyKind": "transaction",
-      "teams": [
-        "Buffalo Bills",
-        "Los Angeles Rams"
-      ],
-      "teamIds": [
-        "BUF",
-        "LAR"
-      ],
-      "players": [
-        {
-          "id": "4036135",
-          "name": "Alaric Jackson",
-          "position": "Offensive Tackle",
-          "currentTeam": "LAR"
-        },
-        {
-          "id": "3116733",
-          "name": "Bradley Chubb",
-          "position": "Linebacker",
-          "currentTeam": "BUF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50185418/rams-alaric-jackson-suspension-cut-1-game"
-    },
-    {
-      "id": "50174583",
-      "headline": "Jaguars WR Parker Washington has the clutch gene: Will that earn him an extension?",
-      "description": "Did you see Washington's one-handed grab in London? How did he get so good at contested catches? And how did he quickly become a big part of the Jaguars' offense?",
-      "published": "2026-10-14",
-      "likelyKind": "transaction",
-      "teams": [
-        "Jacksonville Jaguars"
-      ],
-      "teamIds": [
-        "JAX"
-      ],
-      "players": [
-        {
-          "id": "4432620",
-          "name": "Parker Washington",
-          "position": "Wide Receiver",
-          "currentTeam": "JAX"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50174583/jacksonville-jaguars-parker-washington-2026-breakout"
-    },
-    {
-      "id": "50174944",
-      "headline": "Zxavian Harris eligible to sign with NFL teams despite bid to play for LSU",
-      "description": "The NFL has reversed course and now says that former Ole Miss DL Zxavian Harris is free to sign with teams this season after a failed attempt to return to college football at LSU.",
-      "published": "2026-10-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "LSU Tigers",
-        "Louisiana State University",
-        "Ole Miss Rebels",
-        "University of Mississippi"
-      ],
-      "teamIds": [],
-      "players": [
-        {
-          "id": "4685365",
-          "name": "Zxavian Harris",
-          "position": "Defensive Tackle",
-          "currentTeam": "NO"
-        },
-        {
-          "id": "4838696",
-          "name": "Dae'Quan Wright",
-          "position": "Tight End",
-          "currentTeam": "CLE"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50174944/zxavian-harris-eligible-sign-nfl-teams-lsu-bid"
-    },
-    {
-      "id": "50167782",
-      "headline": "Marvin Harrison Jr. latest in Texans' quest to solve their WR2 conundrum",
-      "description": "Houston has traded and drafted receivers, hoping to complement No. 1 wideout Nico Collins and QB C.J. Stroud.",
-      "published": "2026-10-13",
-      "likelyKind": "transaction",
-      "teams": [
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "4366031",
-          "name": "Tank Dell",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "4258173",
-          "name": "Nico Collins",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50167782/texans-wr2-issues-marvin-harrison-jr"
+      "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns",
+      "attempts": 0
     },
     {
       "id": "50167021",
@@ -210,7 +97,8 @@
           "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50167021/source-packers-lose-hargrave-season-ending-torn-achilles"
+      "url": "https://www.espn.com/nfl/story/_/id/50167021/source-packers-lose-hargrave-season-ending-torn-achilles",
+      "attempts": 0
     },
     {
       "id": "50158326",
@@ -244,7 +132,8 @@
           "currentTeam": "HOU"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade"
+      "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade",
+      "attempts": 0
     },
     {
       "id": "50148005",
@@ -266,7 +155,8 @@
           "currentTeam": "ARI"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr"
+      "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr",
+      "attempts": 0
     },
     {
       "id": "50148833",
@@ -288,7 +178,8 @@
           "currentTeam": "IND"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury"
+      "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury",
+      "attempts": 0
     },
     {
       "id": "50147669",
@@ -312,7 +203,8 @@
           "currentTeam": "BAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50147669/sources-ravens-held-cam-jurgens-physical-trade-eagles"
+      "url": "https://www.espn.com/nfl/story/_/id/50147669/sources-ravens-held-cam-jurgens-physical-trade-eagles",
+      "attempts": 0
     },
     {
       "id": "50142134",
@@ -334,7 +226,8 @@
           "currentTeam": "PHI"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion"
+      "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion",
+      "attempts": 0
     },
     {
       "id": "50134415",
@@ -364,7 +257,8 @@
           "currentTeam": "DET"
         }
       ],
-      "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5"
+      "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5",
+      "attempts": 0
     },
     {
       "id": "50138218",
@@ -386,7 +280,8 @@
           "currentTeam": "TB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50138218/undrafted-rookie-qb-daniels-savors-thursday-night-win-vs-cowboys"
+      "url": "https://www.espn.com/nfl/story/_/id/50138218/undrafted-rookie-qb-daniels-savors-thursday-night-win-vs-cowboys",
+      "attempts": 0
     },
     {
       "id": "50127865",
@@ -408,7 +303,8 @@
           "currentTeam": "DET"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50127865/te-sam-laporta-says-extension-talks-lions-stalemate"
+      "url": "https://www.espn.com/nfl/story/_/id/50127865/te-sam-laporta-says-extension-talks-lions-stalemate",
+      "attempts": 0
     },
     {
       "id": "50124795",
@@ -442,7 +338,8 @@
           "currentTeam": "SF"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50124795/san-francisco-49ers-2026-season-injuries-list"
+      "url": "https://www.espn.com/nfl/story/_/id/50124795/san-francisco-49ers-2026-season-injuries-list",
+      "attempts": 0
     },
     {
       "id": "50126306",
@@ -466,7 +363,8 @@
           "currentTeam": "BAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles"
+      "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles",
+      "attempts": 0
     },
     {
       "id": "50121315",
@@ -490,7 +388,8 @@
           "currentTeam": "TEN"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial"
+      "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial",
+      "attempts": 0
     },
     {
       "id": "50121196",
@@ -512,7 +411,8 @@
           "currentTeam": "NYG"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50121196/giants-berrios-says-undergo-season-ending-foot-surgery"
+      "url": "https://www.espn.com/nfl/story/_/id/50121196/giants-berrios-says-undergo-season-ending-foot-surgery",
+      "attempts": 0
     },
     {
       "id": "50111468",
@@ -540,7 +440,8 @@
           "currentTeam": "MIN"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion"
+      "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion",
+      "attempts": 0
     },
     {
       "id": "50110763",
@@ -562,7 +463,8 @@
           "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles"
+      "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles",
+      "attempts": 0
     },
     {
       "id": "50110486",
@@ -586,7 +488,8 @@
           "currentTeam": "CHI"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50110486/ben-johnson-tyson-bagent-start-qb-bears-vs-packers"
+      "url": "https://www.espn.com/nfl/story/_/id/50110486/ben-johnson-tyson-bagent-start-qb-bears-vs-packers",
+      "attempts": 0
     },
     {
       "id": "50109680",
@@ -608,7 +511,8 @@
           "currentTeam": "MIA"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says"
+      "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says",
+      "attempts": 0
     },
     {
       "id": "50095248",
@@ -632,7 +536,8 @@
           "currentTeam": "DAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade"
+      "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade",
+      "attempts": 0
     },
     {
       "id": "50087681",
@@ -666,7 +571,8 @@
           "currentTeam": "NE"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50087681/patriots-romeo-doubs-bills-game"
+      "url": "https://www.espn.com/nfl/story/_/id/50087681/patriots-romeo-doubs-bills-game",
+      "attempts": 0
     },
     {
       "id": "50092744",
@@ -688,7 +594,8 @@
           "currentTeam": "CHI"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50092744/bears-lt-braxton-jones-ir-theo-benedet-start-vs-jets"
+      "url": "https://www.espn.com/nfl/story/_/id/50092744/bears-lt-braxton-jones-ir-theo-benedet-start-vs-jets",
+      "attempts": 0
     },
     {
       "id": "50086094",
@@ -710,7 +617,8 @@
           "currentTeam": "SEA"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50086094/seahawks-jaxon-smith-njigba-historic-start"
+      "url": "https://www.espn.com/nfl/story/_/id/50086094/seahawks-jaxon-smith-njigba-historic-start",
+      "attempts": 0
     },
     {
       "id": "50086232",
@@ -732,7 +640,8 @@
           "currentTeam": "DAL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys"
+      "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys",
+      "attempts": 0
     },
     {
       "id": "50085908",
@@ -756,7 +665,8 @@
           "currentTeam": "NYG"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings"
+      "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings",
+      "attempts": 0
     },
     {
       "id": "50085487",
@@ -790,7 +700,8 @@
           "currentTeam": "CHI"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter"
+      "url": "https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter",
+      "attempts": 0
     },
     {
       "id": "50069588",
@@ -820,7 +731,8 @@
           "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/fantasy/football/story/_/id/50069588/fantasy-football-start-sit-sleepers-breakouts-week-4"
+      "url": "https://www.espn.com/fantasy/football/story/_/id/50069588/fantasy-football-start-sit-sleepers-breakouts-week-4",
+      "attempts": 0
     },
     {
       "id": "50052555",
@@ -851,7 +763,8 @@
           "currentTeam": "KC"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo"
+      "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo",
+      "attempts": 0
     },
     {
       "id": "50076570",
@@ -875,7 +788,8 @@
           "currentTeam": "PIT"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys"
+      "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys",
+      "attempts": 0
     },
     {
       "id": "50043542",
@@ -909,7 +823,8 @@
           "currentTeam": "PIT"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals"
+      "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals",
+      "attempts": 0
     },
     {
       "id": "50074351",
@@ -933,7 +848,8 @@
           "currentTeam": "PIT"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50074351/sources-steelers-trade-joey-porter-jr-cowboys"
+      "url": "https://www.espn.com/nfl/story/_/id/50074351/sources-steelers-trade-joey-porter-jr-cowboys",
+      "attempts": 0
     },
     {
       "id": "50071951",
@@ -955,7 +871,8 @@
           "currentTeam": "ATL"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50071951/falcons-sign-dt-gervon-dexter-sr-four-year-extension"
+      "url": "https://www.espn.com/nfl/story/_/id/50071951/falcons-sign-dt-gervon-dexter-sr-four-year-extension",
+      "attempts": 0
     },
     {
       "id": "50068583",
@@ -977,7 +894,8 @@
           "currentTeam": "GB"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury"
+      "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury",
+      "attempts": 0
     },
     {
       "id": "50071302",
@@ -999,7 +917,8 @@
           "currentTeam": "NYG"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50071302/giants-harbaugh-explains-reasoning-releasing-beckham"
+      "url": "https://www.espn.com/nfl/story/_/id/50071302/giants-harbaugh-explains-reasoning-releasing-beckham",
+      "attempts": 0
     },
     {
       "id": "50067128",
@@ -1021,7 +940,207 @@
           "currentTeam": "TEN"
         }
       ],
-      "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal"
+      "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal",
+      "attempts": 0
+    },
+    {
+      "id": "50059771",
+      "headline": "Inside George Kittle's 243-day recovery from torn Achilles",
+      "description": "Despite tearing his Achilles in the playoffs, Kittle appears to be back to his normal self. Here's how he won the recovery process.",
+      "published": "2026-09-29",
+      "likelyKind": "injury",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "3040151",
+          "name": "George Kittle",
+          "position": "Tight End",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059771/san-francisco-49ers-george-kittle-torn-achilles-recovery",
+      "attempts": 0
+    },
+    {
+      "id": "50059809",
+      "headline": "Source - Bengals cut Ke'Shawn Williams after costly muffed punt",
+      "description": "The Cincinnati Bengals cut WR Ke'Shawn Williams after he muffed a punt that eventually led to the Pittsburgh Steelers' 30-27 win, a source told ESPN's Jeremy Fowler. Earlier Tuesday, Cincinnati signed WR Mitch Tinsley, per ESPN's Adam Schefter.",
+      "published": "2026-09-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cincinnati Bengals"
+      ],
+      "teamIds": [
+        "CIN"
+      ],
+      "players": [
+        {
+          "id": "4570738",
+          "name": "Ke'Shawn Williams",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        },
+        {
+          "id": "4368003",
+          "name": "Andrei Iosivas",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        },
+        {
+          "id": "5092508",
+          "name": "Colbie Young",
+          "position": "Wide Receiver",
+          "currentTeam": "CIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059809/source-bengals-cut-keshawn-williams-costly-muffed-punt",
+      "attempts": 0
+    },
+    {
+      "id": "50059755",
+      "headline": "Sources: Giants to release fan favorite Odell Beckham Jr.",
+      "description": "The Giants are releasing veteran wide receiver Odell Beckham Jr., sources told NFL Network.",
+      "published": "2026-09-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "16733",
+          "name": "Odell Beckham Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr",
+      "attempts": 0
+    },
+    {
+      "id": "50053035",
+      "headline": "J.J. McCarthy traded to Giants: Will he succeed in New York?",
+      "description": "With Jaxson Dart out for the season, the Giants dealt a fifth-round pick to Minnesota for McCarthy. But does this move the needle for New York? Can it work?",
+      "published": "2026-09-28",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Giants",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "NYG",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell",
+      "attempts": 0
+    }
+  ],
+  "givenUp": [
+    {
+      "id": "50052903",
+      "headline": "McCarthy exits Vikings as one of franchise's biggest draft busts",
+      "description": "J.J. McCarthy was the No. 10 pick in 2024 but played only 10 games before being traded to the Giants on Monday.",
+      "published": "2026-09-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50052903/nfl-minnesota-vikings-jj-mccarthy-trade-new-york-giants-kevin-occonnell",
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-18"
+    },
+    {
+      "id": "50052864",
+      "headline": "Giants acquire QB J.J. McCarthy in trade with Vikings",
+      "description": "The Giants are trading for Vikings quarterback J.J. McCarthy, sending a 2027 fifth-round draft pick to Minnesota for the 2024 first-round pick.",
+      "published": "2026-09-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "NYG",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "2969939",
+          "name": "Jameis Winston",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "4243322",
+          "name": "Jake Haener",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50052864/sources-giants-acquire-qb-jj-mccarthy-trade-vikings",
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-18"
+    },
+    {
+      "id": "50052520",
+      "headline": "Source: Packers signing veteran O-lineman Mekhi Becton",
+      "description": "Veteran offensive lineman Mekhi Becton is signing with the Packers, a source told ESPN's Jeremy Fowler on Monday.",
+      "published": "2026-09-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4240090",
+          "name": "Mekhi Becton",
+          "position": "Offensive Lineman",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50052520/source-packers-signing-veteran-o-lineman-mekhi-becton",
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-18"
     }
   ]
 }

@@ -6,14 +6,15 @@ import { MdxContent } from "@/components/mdx-content";
 import { PersonCard } from "@/components/moves/person-card";
 import { SampleDataBadge } from "@/components/ui/sample-data-badge";
 import { UncheckedBadge } from "@/components/ui/unchecked-badge";
-import { BignessPill, ScoreMeter } from "@/components/ui/score-meter";
+import { ScoreMeter } from "@/components/ui/score-meter";
+import { BignessChip } from "@/components/moves/move-chips";
 import {
   Card,
   PageHeader,
   PageShell,
   SectionHeader,
 } from "@/components/ui/page-header";
-import { getMove, getMoveSlugs } from "@/lib/moves";
+import { getMove, getMoveSlugs, verifiedBadgeCopy } from "@/lib/moves";
 import { createExplainer } from "@/lib/glossary/explain";
 import { peopleByIds } from "@/lib/people";
 import { teamLogo, teamName } from "@/lib/teams";
@@ -74,18 +75,18 @@ export default async function MoveDetailPage({ params }: PageProps) {
             ) : null;
           })}
         </span>
-        <span className="text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+        <span className="text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
           {move.dateLabel}
         </span>
-        <BignessPill value={move.bigness} />
+        <BignessChip value={move.bigness} size="sm" />
       </div>
 
-      <p className="mt-4 text-[1.05rem] leading-relaxed text-fg">
+      <p className="mt-4 text-[1.05rem] leading-relaxed text-chalk">
         {explain(move.soWhat)}
       </p>
 
       {move.verified ? (
-        <SampleDataBadge note="Real event. The scores below are judgement calls." />
+        <SampleDataBadge {...verifiedBadgeCopy(move)} />
       ) : (
         <UncheckedBadge sensitive={move.sensitive} full />
       )}
@@ -97,10 +98,10 @@ export default async function MoveDetailPage({ params }: PageProps) {
             {move.rubric.map((axis) => (
               <Card key={axis.axis}>
                 <div className="flex items-center justify-between gap-3">
-                  <h3 className="text-sm font-semibold text-fg">{axis.axis}</h3>
+                  <h3 className="text-sm font-semibold text-chalk">{axis.axis}</h3>
                   <ScoreMeter value={axis.score} label={axis.axis} />
                 </div>
-                <p className="mt-1.5 text-sm leading-snug text-fg-dim">
+                <p className="mt-1.5 text-sm leading-snug text-chalk-dim">
                   {explain(axis.note)}
                 </p>
               </Card>
@@ -112,7 +113,7 @@ export default async function MoveDetailPage({ params }: PageProps) {
         <>
           <SectionHeader title="Why it's big" />
           <Card>
-            <p className="text-sm leading-relaxed text-fg-dim">
+            <p className="text-sm leading-relaxed text-chalk-dim">
               The six-point checklist is built for player trades and signings —
               it opens with &ldquo;player quality&rdquo; and &ldquo;positional
               value&rdquo;, which have nothing useful to say about a coaching
@@ -162,11 +163,11 @@ export default async function MoveDetailPage({ params }: PageProps) {
                   href={src.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-line bg-surface px-4 transition-colors hover:border-fg/20"
+                  className="flex min-h-11 items-center justify-between gap-3 rounded-xl border border-line bg-surface px-4 transition-colors hover:border-chalk/20"
                 >
-                  <span className="text-sm font-medium text-fg">{src.label}</span>
+                  <span className="text-sm font-medium text-chalk">{src.label}</span>
                   <ExternalLink
-                    className="h-4 w-4 shrink-0 text-fg-dim"
+                    className="h-4 w-4 shrink-0 text-chalk-dim"
                     aria-hidden
                   />
                   <span className="sr-only">(opens in a new tab)</span>

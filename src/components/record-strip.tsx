@@ -1,4 +1,4 @@
-import { STANDINGS, finishLabel, madePlayoffs, recordFor, recordLabel } from "@/lib/standings";
+import { STANDINGS, finishLabel, inTopSeven, recordFor, recordLabel } from "@/lib/standings";
 
 /**
  * A team's record and how they finished.
@@ -11,19 +11,19 @@ export function RecordStrip({ teamId }: { teamId: string }) {
   const record = recordFor(teamId);
   if (!record) return null;
 
-  const made = madePlayoffs(record);
+  const made = inTopSeven(record);
 
   return (
     <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 rounded-xl border border-line bg-surface px-4 py-3">
-      <span className="tnum text-xl font-bold tracking-tight text-fg">
+      <span className="tnum text-xl font-bold tracking-tight text-chalk">
         {recordLabel(record)}
       </span>
       <span
-        className={`text-sm ${made ? "text-amber" : "text-fg-dim"}`}
+        className={`text-sm ${made ? "text-yellow" : "text-chalk-dim"}`}
       >
         {finishLabel(teamId)}
       </span>
-      <span className="ml-auto text-[0.7rem] uppercase tracking-wider text-fg-dim/70">
+      <span className="ml-auto text-[0.7rem] uppercase tracking-wider text-chalk-dim/70">
         {STANDINGS.isPreviousSeason
           ? `${STANDINGS.season} final`
           : `${STANDINGS.season} season`}

@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Agent worktrees are full copies of the repo; linting them doubles the
+    // work and reports the same files twice.
+    ".claude/**",
   ]),
   // The build scripts are plain Node ESM, not TypeScript, so nothing was
   // checking for undefined references in them. That let a refactor leave a

@@ -8,7 +8,7 @@ import { ArrowRight, X } from "lucide-react";
  * An auto-linked glossary term (§6a) — the product's signature element.
  *
  * "The jargon gets explained" is the whole thesis, so this is the one place
- * §10 says to spend boldness: a dotted amber underline, and an explanation one
+ * §10 says to spend boldness: the yellow first-down line under the word, and an explanation one
  * gesture away without leaving the sentence you're reading.
  *
  * Desktop hovers a card; touch opens a bottom sheet, because a hover card is
@@ -71,7 +71,10 @@ export function GlossaryTerm({
         onMouseLeave={() => !coarse && setOpen(false)}
         onFocus={() => !coarse && setOpen(true)}
         onBlur={() => !coarse && setOpen(false)}
-        className="text-fg underline decoration-amber/70 decoration-dotted decoration-2 underline-offset-4 transition-colors hover:decoration-amber"
+        // The first-down line under the word (§10). It floods to fill the
+        // word while the explanation is open.
+        data-open={open ? "" : undefined}
+        className="explained"
       >
         {children}
       </Link>
@@ -83,11 +86,11 @@ export function GlossaryTerm({
           aria-label={title}
           className="absolute left-0 top-[calc(100%+8px)] z-50 block w-64 max-w-[calc(100vw-2rem)] rounded-xl border border-line bg-surface-2 p-3 text-left shadow-2xl"
         >
-          <span className="block text-sm font-semibold text-fg">{title}</span>
-          <span className="mt-1 block text-sm leading-snug text-fg-dim">
+          <span className="block text-sm font-semibold text-chalk">{title}</span>
+          <span className="mt-1 block text-sm leading-snug text-chalk-dim">
             {summary}
           </span>
-          <span className="mt-2 flex items-center gap-1 text-[0.8rem] font-medium text-amber">
+          <span className="mt-2 flex items-center gap-1 text-[0.8rem] font-medium text-yellow">
             Read more
             <ArrowRight size={13} aria-hidden />
           </span>
@@ -100,7 +103,7 @@ export function GlossaryTerm({
           className="fixed inset-0 z-[60] block"
           onClick={() => setOpen(false)}
         >
-          <span className="absolute inset-0 block bg-ink/70" />
+          <span className="absolute inset-0 block bg-night/70" />
           <span
             role="dialog"
             aria-modal="true"
@@ -110,27 +113,27 @@ export function GlossaryTerm({
           >
             <span
               aria-hidden
-              className="mx-auto mb-4 block h-1 w-10 rounded-full bg-fg/20"
+              className="mx-auto mb-4 block h-1 w-10 rounded-full bg-chalk/20"
             />
             <span className="flex items-start justify-between gap-4">
-              <span className="block text-lg font-semibold text-fg">
+              <span className="block text-lg font-semibold text-chalk">
                 {title}
               </span>
               <button
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close"
-                className="-mr-2 -mt-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-fg-dim"
+                className="-mr-2 -mt-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-chalk-dim"
               >
                 <X size={18} aria-hidden />
               </button>
             </span>
-            <span className="mt-1 block text-[0.95rem] leading-relaxed text-fg-dim">
+            <span className="mt-1 block text-[0.95rem] leading-relaxed text-chalk-dim">
               {summary}
             </span>
             <Link
               href={href}
-              className="mt-4 flex min-h-12 items-center justify-center gap-1.5 rounded-xl bg-amber text-sm font-semibold text-ink"
+              className="mt-4 flex min-h-12 items-center justify-center gap-1.5 rounded-xl bg-yellow text-sm font-semibold text-night"
             >
               Read the full entry
               <ArrowRight size={15} aria-hidden />

@@ -21,7 +21,7 @@ export default function GlossaryIndexPage() {
 
       {entries.length === 0 ? (
         // §10: empty states are invitations, not apologies.
-        <p className="mt-5 leading-relaxed text-fg-dim">
+        <p className="mt-5 leading-relaxed text-chalk-dim">
           Nothing here yet. The first entries go in{" "}
           <code className="rounded bg-surface-2 px-1 py-0.5 text-[0.85em]">
             content/glossary/
@@ -34,10 +34,10 @@ export default function GlossaryIndexPage() {
             <Link
               key={entry.slug}
               href={`/glossary/${entry.slug}`}
-              className="block rounded-2xl border border-line bg-surface px-4 py-3.5 transition-colors hover:border-fg/20"
+              className="block rounded-2xl border border-line bg-surface px-4 py-3.5 transition-colors hover:border-chalk/20"
             >
-              <h2 className="text-base font-semibold text-fg">{entry.title}</h2>
-              <p className="mt-0.5 text-sm leading-snug text-fg-dim">
+              <h2 className="text-base font-semibold text-chalk">{entry.title}</h2>
+              <p className="mt-0.5 text-sm leading-snug text-chalk-dim">
                 {entry.summary}
               </p>
             </Link>

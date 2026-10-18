@@ -1,7 +1,6 @@
 {
   "season": 2026,
   "week": 6,
-  "fetchedAt": "2026-10-17T14:02:15.377Z",
   "games": [
     {
       "id": "401872995",
@@ -22,7 +21,7 @@
       "away": "HOU",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "NFL Net",
       "venue": "Wembley Stadium",
       "neutralSite": true
@@ -81,7 +80,7 @@
       "home": "NYG",
       "away": "NO",
       "spread": 1.5,
-      "favourite": "away",
+      "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "Fox",
       "venue": "MetLife Stadium",
@@ -219,18 +218,13 @@
         "status": "Out"
       },
       {
-        "player": "Dayo Odeyingbo",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Kyler Gordon",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
         "player": "T.J. Edwards",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Kyle Monangai",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -242,6 +236,11 @@
       }
     ],
     "DAL": [
+      {
+        "player": "DeMarvion Overshown",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Cobie Durant",
         "position": "CB",
@@ -269,11 +268,6 @@
       {
         "player": "Benjamin St-Juste",
         "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Skyy Moore",
-        "position": "WR",
         "status": "Out"
       },
       {
@@ -399,11 +393,6 @@
     ],
     "PHI": [
       {
-        "player": "Jalen Hurts",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
         "player": "AJ Epenesa",
         "position": "DE",
         "status": "Doubtful"
@@ -417,6 +406,11 @@
         "player": "Michael Carter II",
         "position": "CB",
         "status": "Out"
+      },
+      {
+        "player": "Saquon Barkley",
+        "position": "RB",
+        "status": "Out"
       }
     ],
     "PIT": [
@@ -424,14 +418,14 @@
         "player": "Ben Skowronek",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "Roman Wilson",
-        "position": "WR",
-        "status": "Out"
       }
     ],
     "SF": [
+      {
+        "player": "Nick Bosa",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Deebo Samuel Sr.",
         "position": "WR",
@@ -481,7 +475,22 @@
       {
         "player": "Marcus Mariota",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Javontae Jean-Baptiste",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Charles Omenihu",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Jacory Croskey-Merritt",
+        "position": "RB",
+        "status": "Out"
       }
     ]
   }

@@ -2,18 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { PageHeader, PageShell } from "@/components/ui/page-header";
-import { TEAMS } from "@/lib/mock/teams";
 import { getSlugs } from "@/lib/content";
-import { teamLogo } from "@/lib/teams";
+import {
+  NFL_TEAMS,
+  teamLogo,
+  teamsInDivision,
+  type Conference,
+  type DivisionName,
+} from "@/lib/teams";
 import { recordFor, recordLabel } from "@/lib/standings";
-import type { Team } from "@/lib/mock/types";
 
 export const metadata: Metadata = {
   title: "Teams — Field guide",
   description: "All 32 teams, by division.",
 };
 
-const ORDER: [Team["conference"], Team["division"]][] = [
+const ORDER: [Conference, DivisionName][] = [
   ["AFC", "East"], ["AFC", "North"], ["AFC", "South"], ["AFC", "West"],
   ["NFC", "East"], ["NFC", "North"], ["NFC", "South"], ["NFC", "West"],
 ];
@@ -33,26 +37,24 @@ export default function TeamsPage() {
     <PageShell>
       <PageHeader kicker="All 32" title="Teams" />
 
-      <p className="mt-2 text-sm text-fg-dim">
-        {written} of {TEAMS.length} written up so far.
+      <p className="mt-2 text-sm text-chalk-dim">
+        {written} of {NFL_TEAMS.length} written up so far.
       </p>
 
       {ORDER.map(([conference, division]) => (
         <section key={`${conference}-${division}`} className="mt-6">
-          <h2 className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-dim">
+          <h2 className="mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-chalk-dim">
             {conference} {division}
           </h2>
           <div className="grid grid-cols-2 gap-2">
-            {TEAMS.filter(
-              (t) => t.conference === conference && t.division === division,
-            ).map((team) => {
+            {teamsInDivision(conference, division).map((team) => {
               const logo = teamLogo(team.id);
               const record = recordFor(team.id);
               return (
                 <Link
                   key={team.id}
                   href={`/teams/${team.slug}`}
-                  className="flex min-h-14 items-center gap-2.5 rounded-xl border border-line bg-surface px-3 py-2.5 transition-colors hover:border-fg/20"
+                  className="flex min-h-14 items-center gap-2.5 rounded-xl border border-line bg-surface px-3 py-2.5 transition-colors hover:border-chalk/20"
                 >
                   {logo ? (
                     <Image
@@ -64,13 +66,13 @@ export default function TeamsPage() {
                     />
                   ) : null}
                   <span className="min-w-0">
-                    <span className="block truncate text-sm font-semibold text-fg">
+                    <span className="block truncate text-sm font-semibold text-chalk">
                       {team.name}
                     </span>
                     {/* Record rather than a "not written" label: it's real for
                         all 32, so the grid is useful before the write-ups exist. */}
                     {record ? (
-                      <span className="tnum block text-[0.7rem] text-fg-dim">
+                      <span className="tnum block text-[0.7rem] text-chalk-dim">
                         {recordLabel(record)}
                       </span>
                     ) : null}

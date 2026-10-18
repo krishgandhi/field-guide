@@ -1,0 +1,248 @@
+name: Refresh data
+
+# The one daily job that keeps the site current. In order:
+#
+#   1. fetch    — ESPN: slate, standings, team detail, move candidates
+#   2. write    — Claude: move drafts, then people (who the moves name), then
+#                 game reasons, unit notes and profile lines
+#   3. validate — never modify an existing move entry
+#   4. check    — typecheck, tests and a full production build
+#   5. commit   — one commit, only if real data changed
+#
+# Replaces refresh-slate.yml (11:00) and detect-moves.yml (12:00). Two jobs
+# pushing to main an hour apart raced each other, each made its own commit
+# and production build, and neither ran the tests first. One job, one commit.
+#
+# Pages never call ESPN or Claude at request time (CLAUDE.md §4): this job
+# commits JSON and MDX, and the commit triggers the Vercel deploy.
+#
+# GitHub Actions rather than Vercel Cron: Vercel's Hobby plan caps cron at once
+# a day and can't commit to the repo, and this keeps every data change a diff.
+#
+# Note: a push made with GITHUB_TOKEN does not trigger other workflows, so
+# ci.yml never sees these commits. Step 4 is the gate, not CI.
+
+on:
+  schedule:
+    # 11:00 UTC daily — about 7am Eastern: before the 1pm Sunday games, after
+    # the Wednesday–Friday injury reports. Same time as the old slate job;
+    # the moves job's separate 12:00 run is folded in here.
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# A slow run must never overlap the next one.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    # A normal run takes a few minutes. ESPN's client stops calling after five
+    # outages in a row, so a down ESPN can't run this for hours; this is the
+    # backstop if something else hangs.
+    #
+    # The job limit must stay ABOVE the sum of the writers' own limits below
+    # (26 + 8 + 10 + 8 = 52 minutes) plus fetch, check and build: a job that
+    # hits its limit is killed before "Commit if changed", and everything it
+    # fetched is lost. Each writer is cut off by `timeout` instead, which
+    # step.sh records as an ordinary failure, and the job carries on.
+    timeout-minutes: 80
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Start the summary
+        run: |
+          {
+            echo "### Data refresh $(date -u +%Y-%m-%d)"
+            echo
+            echo "| Step | Result |"
+            echo "|---|---|"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # --- 1. fetch ----------------------------------------------------------
+      # Every step goes through scripts/ci/step.sh instead of
+      # continue-on-error: an ordinary failure is a warning and the job carries
+      # on (an ESPN outage mustn't cost the moves pipeline), but it is always
+      # in the summary, and a rejected API key or a failed --required step
+      # fails the whole job at the end.
+      #
+      # These four use Node builtins only, so they run before `npm ci` and a
+      # broken dependency can never stop a refresh.
+
+      # Required: this is the page he opens on a Sunday morning.
+      - name: Fetch slate
+        run: scripts/ci/step.sh --required "Fetch slate" node scripts/fetch-slate.mjs
+
+      - name: Fetch standings
+        run: scripts/ci/step.sh "Fetch standings" node scripts/fetch-standings.mjs
+
+      # Reads standings.json, so it runs after the step above.
+      - name: Fetch team detail
+        run: scripts/ci/step.sh "Fetch team detail" node scripts/fetch-team-detail.mjs
+
+      - name: Detect move candidates
+        run: scripts/ci/step.sh "Detect moves" node scripts/detect-moves.mjs
+
+      # Everything below needs dependencies. A failure here fails the job
+      # outright: without them nothing can be checked, so nothing is committed.
+      - name: Install
+        run: npm ci
+
+      # --- 2. write ----------------------------------------------------------
+      # Each writer calls Claude only for what its cache doesn't already hold,
+      # so most days these make no calls at all. With no key they still prune
+      # and re-check what's stored.
+
+      # Every writer reads its cache first, so on a quiet day nothing calls
+      # Claude and a revoked key would go unnoticed until the day it matters.
+      # A Models API lookup: authenticated, bills no tokens. Exit 3 fails the
+      # job at the end, like any rejected key.
+      - name: Check Claude key
+        run: scripts/ci/step.sh "Check Claude key" node scripts/probe-key.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # draft-moves stops starting batches after 12 minutes (worst case ~24);
+      # the `timeout` is the backstop. A run cut off writes nothing and counts
+      # no attempts, so its candidates simply come back tomorrow.
+      - name: Draft moves
+        run: scripts/ci/step.sh "Draft moves" timeout --kill-after=30s 26m node scripts/draft-moves.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # After drafting, so people named in a move published today get a card.
+      - name: Fetch people
+        run: scripts/ci/step.sh "Fetch people" node scripts/fetch-people.mjs
+
+      - name: Write game reasons
+        run: scripts/ci/step.sh "Write game reasons" timeout --kill-after=30s 8m npm run --silent write:reasons
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Write unit notes
+        run: scripts/ci/step.sh "Write unit notes" timeout --kill-after=30s 10m npm run --silent write:units
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Write profile lines
+        run: scripts/ci/step.sh "Write profile lines" timeout --kill-after=30s 8m npm run --silent write:profiles
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # --- 3. validate -------------------------------------------------------
+      # The job may ADD move entries, never change one. Hand-written entries
+      # have been fact-checked; a generated file overwriting one would silently
+      # replace verified content with a machine guess.
+      - name: Refuse to modify an existing move
+        run: |
+          changed=$(git status --porcelain -- content/moves/ ':!content/moves/_drafts/' | grep -v '^??' || true)
+          if [ -n "$changed" ]; then
+            echo "::error::This job may only add new move files, never change existing ones:"
+            echo "$changed"
+            exit 1
+          fi
+
+      - name: List anything held back
+        run: |
+          held=$(npm run --silent drafts || echo "(npm run drafts failed — check the log)")
+          echo "$held"
+          if ! echo "$held" | grep -q "^Nothing held back" || echo "$held" | grep -q "GIVEN UP"; then
+            { echo; echo "<details><summary>Held or given-up moves</summary>"; echo; echo '```'; echo "$held"; echo '```'; echo "</details>"; } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # --- 4. check ----------------------------------------------------------
+      # The real gate. A data file that breaks a type, a test or the build
+      # fails the job here and nothing is committed, so main keeps building.
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      # --- 5. commit ---------------------------------------------------------
+      - name: Commit if changed
+        run: |
+          mkdir -p content/moves/_drafts
+          decision=$(node scripts/commit-decision.mjs)
+          echo "Commit decision: $decision"
+          echo "| Commit | $decision |" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$decision" = "none" ]; then
+            echo "Only timestamps moved — nothing to commit, no deploy."
+            exit 0
+          fi
+
+          new_moves=$(git status --porcelain --untracked-files=all -- content/moves/ ':!content/moves/_drafts/' | grep -c '^??' || true)
+          today=$(date -u +%Y-%m-%d)
+          if [ "$decision" = "heartbeat" ]; then
+            git add src/data/meta.json
+            message="data: heartbeat, nothing changed ($today)"
+          else
+            git add src/data/ public/players/ content/moves/
+            if [ "$new_moves" -gt 0 ]; then
+              message="data: refresh, $new_moves new move(s) ($today)"
+            else
+              message="data: refresh ($today)"
+            fi
+          fi
+
+          # Author as Krish, not as an unrecognised bot address. Vercel only
+          # builds commits whose Git author it recognises, and every one of the
+          # 14 commits made as bot@users.noreply.github.com was rejected with
+          # "Deployment was blocked" — so the data refreshed in the repo and
+          # never once reached the live site. The name still reads as the bot,
+          # so `git log` stays honest about what wrote it.
+          git config user.name  "field-guide bot"
+          git config user.email "krishgandhi2017@gmail.com"
+          # "data:" prefix so these filter out of the history that should stay
+          # readable as a record of actual work (§3).
+          git commit -m "$message"
+
+          # Push can lose a race with a hand push to main. Rebase and retry,
+          # preferring this run's version of any conflict: everything it
+          # commits is generated output, and the fresh run is by definition
+          # the correct one. (In a rebase "theirs" is the commit being replayed
+          # — this one.)
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto origin/main."
+            git fetch origin main || exit 1
+            if ! git rebase -X theirs origin/main; then
+              git rebase --abort || true
+              echo "::error::Rebase failed outright; leaving main untouched."
+              exit 1
+            fi
+            # The rebase put this data on top of code the checks above never
+            # saw. Check again before pushing; if it fails, push nothing and
+            # let tomorrow's run start clean from the new main.
+            if ! { npx tsc --noEmit && npm test && npm run build; }; then
+              echo "::error::Checks failed after rebasing onto the new main; nothing pushed. The next run retries."
+              exit 1
+            fi
+          done
+          echo "::error::Still could not push after three attempts."
+          exit 1
+
+      # Last, so the data that did refresh is committed first.
+      - name: Fail if a required step or the API key failed
+        if: always()
+        run: |
+          fatal="$RUNNER_TEMP/fatal"
+          if [ -s "$fatal" ]; then
+            echo "::error::These steps failed in a way that needs a human:"
+            cat "$fatal"
+            exit 1
+          fi

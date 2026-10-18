@@ -9,139 +9,119 @@
  * about a unit, and it is what this writes.
  *
  * Same discipline as write-profiles.mjs: characterise from supplied evidence
- * only. The model gets efficiency and scoring ranks, an ADJUSTED run/pass
- * split, the unit's key players, and this site's own sourced move entries.
+ * only. The model gets rank TIERS, an ADJUSTED run/pass split bucketed against
+ * the league median (computed from the data, not hardcoded), the unit's key
+ * players, and this site's own sourced move entries — see
+ * scripts/lib/unit-evidence.mjs for why all of it is coarse.
  *
- * It is deliberately NOT given raw attempt counts. Buffalo ranked first in the
- * league in rushing attempts last season, and the obvious reading — a
- * run-first team — is wrong: 112 of those carries were Josh Allen's own, 40
+ * It is deliberately NOT given raw attempt counts. In 2025 Buffalo ranked
+ * first in the league in rushing attempts, and the obvious reading — a
+ * run-first team — was wrong: 112 of those carries were Josh Allen's own, 40
  * sacks never appear in the pass column, and a 12-5 team runs out a lot of
- * clocks. Adjusted, they sat 28th of 32 in pass share against a league median
- * of 58.8%. Mildly run-leaning, not a philosophy. Volume ranks cannot tell
- * intent from circumstance, so they don't get shown.
+ * clocks. Volume ranks cannot tell intent from circumstance, so they don't get
+ * shown.
  *
- * Cached in src/data/team-detail.json and regenerated only when the evidence
- * or the brief changes (§13).
+ * The brief states which season the statistics describe, read from
+ * team-detail.json. It used to say "last season" unconditionally, which became
+ * false the week the fetcher switched to 2026 numbers.
+ *
+ * Stored in src/data/prose-cache.json under "units", keyed on the evidence
+ * and the prompt version, and regenerated only when either changes (§13).
+ * Without an API key this still runs: it prunes, and drops any out-of-date
+ * note that no longer validates against the current evidence.
  *
  *   ANTHROPIC_API_KEY=... npm run write:units
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
-import path from "node:path";
-import { createHash } from "node:crypto";
-import Anthropic from "@anthropic-ai/sdk";
-import { problemWithNote } from "./lib/unit-note-validation.mjs";
+import { readFileSync, existsSync } from "node:fs";
+import { problemWithNote, problemWithStaleNote, repeatsCoaching } from "./lib/unit-note-validation.mjs";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import { readMoves } from "./lib/moves.mts";
+import { leagueContext, unitEvidence } from "./lib/unit-evidence.mjs";
+import {
+  chunk,
+  needsWriting,
+  printLog,
+  proseKey,
+  readCache,
+  settle,
+  writeCache,
+} from "./lib/prose-cache.mts";
 
 const DETAIL = "src/data/team-detail.json";
-const MOVES = "content/moves";
 
-/** Bump when the brief changes materially, to rewrite existing lines. */
-const PROMPT_VERSION = 6;
+/**
+ * Bump when the brief changes materially, to rewrite existing lines.
+ * 8: the coaching situation belongs to the offence note only — all three
+ * Buffalo notes ended "now under new head coach Joe Brady".
+ */
+const PROMPT_VERSION = 8;
 
 const SELF_TEST = process.argv.includes("--self-test");
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.log("No ANTHROPIC_API_KEY — no unit notes written.");
-  process.exit(0);
+if (SELF_TEST && !hasKey()) {
+  console.log("Self-test needs ANTHROPIC_API_KEY.");
+  process.exit(1);
 }
 if (!existsSync(DETAIL)) {
   console.log("No team detail cache. Run fetch-team-detail.mjs first.");
   process.exit(0);
 }
 
-const cache = JSON.parse(readFileSync(DETAIL, "utf8"));
+const detail = JSON.parse(readFileSync(DETAIL, "utf8"));
+const prose = readCache();
 const UNITS = ["offence", "defence", "specialTeams"];
 
 /** What this site already says about the team — sourced prose, safe to reuse. */
 function movesFor(teamId) {
   const out = [];
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    const teams = raw.match(/^ {2}teams: \[([^\]]*)\]/m)?.[1] ?? "";
-    if (!teams.split(",").some((t) => t.trim() === teamId)) continue;
-    const title = raw.match(/^title: (.+)$/m)?.[1];
-    const summary = raw.match(/^summary: (.+)$/m)?.[1];
+  for (const { title, summary, move } of readMoves()) {
+    if (!move.teams.includes(teamId)) continue;
     if (title) out.push(summary ? `${title} — ${summary}` : title);
   }
   return out;
 }
 
-function evidenceFor(teamId, team, unit) {
-  const u = team.units[unit];
-  // Underscore keys are inputs to the pass-rate maths, not evidence. Handing
-  // over "rushing attempts rank 1" invites exactly the wrong conclusion.
-  const stats = Object.fromEntries(
-    Object.entries(u.stats ?? {}).filter(([k]) => !k.startsWith("_")),
-  );
-  return {
-    unit,
-    rankInLeague: u.rank,
-    statRanksOutOf32: stats,
-    ...(unit === "offence"
-      ? {
-          /** Adjusted for the quarterback's own carries and for sacks. */
-          passPlaySharePct: u.passPlayShare,
-          passPlayShareRank: u.passPlayShareRank,
-          leagueMedianPassShare: 58.8,
-          quarterbackOwnCarries: u.quarterbackCarries,
-        }
-      : {}),
-    keyPlayers: (u.players ?? []).map((p) => ({
-      position: p.label,
-      name: p.name,
-      // "(CAR)" on a player now in Buffalo is a sourced hint that he came from
-      // elsewhere. It does NOT say when, and the brief forbids guessing.
-      drafted: p.draftedBy ?? null,
-      // Which season this is for him, counting from 1. ESPN's own field uses 0
-      // for a rookie and then counts inclusively — a 2025 pick reads 2 in 2026
-      // — so it is handed over normalised. Reading the draft year as "this
-      // year" made the model call ten second-year players rookies.
-      seasonInTheLeague: p.experience === 0 ? 1 : (p.experience ?? null),
-    })),
-    headCoach: team.coach?.name ?? null,
-    // ESPN counts seasons as an NFL head coach ANYWHERE, not with this club, so
-    // 0 proves the man is new and any other number proves nothing either way —
-    // Vrabel reads 7 in his second year at New England. It is enough to stop
-    // the model calling a coach new from memory, which is what it did when all
-    // it had was a name.
-    headCoachSeasonsAsHeadCoach: team.coach?.experience ?? null,
-    recentMovesInvolvingThisTeam: movesFor(teamId),
-  };
-}
-
-const hashOf = (evidence) =>
-  createHash("sha256").update(JSON.stringify(evidence)).digest("hex").slice(0, 16);
+const league = leagueContext(detail.teams);
+const evidenceFor = (teamId, team, unit) =>
+  unitEvidence(teamId, team, unit, league, movesFor(teamId));
 
 // --- what needs writing ----------------------------------------------------
 
-const todo = [];
-for (const [teamId, team] of Object.entries(cache.teams ?? {})) {
+/** Every unit in the league, with its evidence and the key of that evidence. */
+const wanted = [];
+for (const [teamId, team] of Object.entries(detail.teams ?? {})) {
   for (const unit of UNITS) {
-    const u = team.units[unit];
     const evidence = evidenceFor(teamId, team, unit);
-    const hash = hashOf(evidence);
-    if (u.blurb && u.blurbHash === hash && u.promptVersion === PROMPT_VERSION) {
-      continue;
-    }
-    todo.push({ key: `${teamId}:${unit}`, teamId, unit, evidence, hash });
+    wanted.push({
+      subject: `${teamId}:${unit}`,
+      // The season framing changes the brief, so it is part of the key.
+      key: proseKey(PROMPT_VERSION, { evidence, season: detail.statsSeason, previousSeason: detail.previousSeason }),
+      evidence,
+    });
   }
 }
+const evidenceOf = new Map(wanted.map((w) => [w.subject, w.evidence]));
 
-if (todo.length === 0) {
-  console.log("Every unit already has a line. Nothing to generate.");
-  process.exit(0);
+const todo = needsWriting(prose.units, wanted);
+// The self-test takes any three units, cached or not: it exists to prove the call works.
+const batch = !hasKey() ? [] : SELF_TEST ? wanted.slice(0, 3) : todo;
+if (!hasKey()) {
+  console.log(`No ANTHROPIC_API_KEY — ${todo.length} unit note(s) would be written; checking existing ones only.`);
+} else {
+  console.log(
+    `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
+  );
 }
 
-const batch = SELF_TEST ? todo.slice(0, 3) : todo;
-console.log(
-  `${todo.length} unit note(s) to write${SELF_TEST ? " — self-test, writing 3 and saving none" : ""}.\n`,
-);
-
-const client = new Anthropic();
+/** What the statistics describe, in the brief's own words. */
+const SEASON_RULE = detail.previousSeason
+  ? `1. THE STATISTICS DESCRIBE LAST SEASON (${detail.statsSeason}); this season has not produced enough data yet. If the evidence shows the head coach changed, last season's tendencies belong to the previous regime and you should say so rather than presenting them as what this team is. A note that describes a team as its fired coach built it is worse than useless to someone about to talk about this year.`
+  : `1. THE STATISTICS DESCRIBE THE ${detail.statsSeason} SEASON SO FAR — this season, under the current head coach. Never call them last season's. A few weeks of games can mislead, so describe tendencies ("so far this season they have…") rather than settled identity.`;
 
 const SYSTEM = `You describe one unit of an NFL team — its offence, its defence or its special teams — to someone who has watched a bit of football but does not follow it closely.
 
-You get that unit's league ranks out of 32, its key players with where each was drafted, the head coach, and summaries of recent moves involving the team from this site.
+You get where that unit sits in the league (as tiers: top quarter, middle, bottom quarter, where "top" means ESPN ranked them nearest 1st for that stat), its key players with where each was drafted, the head coach, and summaries of recent moves involving the team from this site.
 
 There are two different rules for facts and for reading them.
 
@@ -151,9 +131,11 @@ THE READING IS YOURS. You may interpret what the numbers imply, connect them to 
 
 Two things follow from that, and they matter:
 
-1. THE STATISTICS DESCRIBE LAST SEASON. If the evidence shows the head coach changed, last season's tendencies belong to the previous regime and you should say so rather than presenting them as what this team is. A note that describes a team as its fired coach built it is worse than useless to someone about to talk about this year.
+${SEASON_RULE}
 
 Only two things in the evidence show a coaching change: headCoachSeasonsAsHeadCoach is 0, or a coaching move appears in recentMovesInvolvingThisTeam. If neither holds, the coach is NOT new — name him if he is worth naming, but do not say he took over, arrived, is new, or inherited anything from a previous staff. Any other number in that field proves nothing: it counts seasons as a head coach anywhere in the league, so a coach in his first year with this team can read 7.
+
+SAY THE COACHING SITUATION ONCE PER TEAM, IN THE OFFENCE NOTE. The three notes for a team sit one under another on the same page, beneath a line that already names the head coach and says whether it is his first season. Ending every note with "now under new head coach X" reads as filler. In a defence or special-teams note, do not name the head coach, say "head coach", or mention a coaching change at all. If the statistics come from a previous regime, you may say they are last season's — that is about the numbers, not the coach.
 
 2. NEVER SAY A PLAYER IS NEW, CAME FROM ANYWHERE, WAS SIGNED, OR WAS TRADED unless that exact move appears in recentMovesInvolvingThisTeam.
 
@@ -161,22 +143,21 @@ Only two things in the evidence show a coaching change: headCoachSeasonsAsHeadCo
 
 The "drafted" field says WHO DRAFTED HIM, not where he was last. A player drafted by Denver in 2018 and now in Buffalo has probably played for other clubs in between — writing "came from Denver" is simply false. You may say "a first-round pick of Denver's" or "drafted fifth overall by Denver", because those are what the field actually says. You may not turn it into a transfer.
 
-For an offence you also get passPlaySharePct: the share of plays that were pass plays, already adjusted for sacks and for the quarterback's own carries, with the league median for comparison. USE THIS, not your instincts, to judge whether a team leans run or pass. It is the honest version — raw carry counts are inflated by quarterback scrambles and by teams running out the clock when ahead.
+For an offence you also get passPlayShare: how the share of plays that were pass plays compares with this season's league median, already adjusted for sacks and for the quarterback's own carries. USE THIS, not your instincts, to judge whether a team leans run or pass. It is the honest version — raw carry counts are inflated by quarterback scrambles and by teams running out the clock when ahead.
 
 Write ONE or TWO sentences saying what kind of unit this is. Not how good — a rating already sits next to your words and says that. What KIND.
 
 The useful things to say, when the evidence supports them:
-- How they play, judged from passPlaySharePct against the league median. A team well below the median leans on the run; well above, they throw. Close to it, say nothing about balance — most teams are unremarkable here and pretending otherwise is worse than silence.
-- If quarterbackOwnCarries is high, the interesting fact is that the quarterback is a major part of the running game, NOT that the team is run-heavy.
+- How they play, judged from passPlayShare. A team that passes noticeably less than the median leans on the run; noticeably more, they throw. Close to it, say nothing about balance — most teams are unremarkable here and pretending otherwise is worse than silence.
+- If quarterbackRunsALot is true, the interesting fact is that the quarterback is a major part of the running game, NOT that the team is run-heavy.
 - Who it runs through. Name the player the unit is built around if the evidence points at one.
 - What just changed, and what it points to. A new head coach or a move in the list are signals about direction. A key player drafted by another club is a weaker hint — it tells you he was acquired at some point, not recently. A unit that ran a lot under a coach who has since been fired may not run a lot now, and saying so is more useful than repeating last year's split.
 
 Hard rules:
-- Never state a number that is not in the evidence. Prefer plain words: "ran the ball more than any other team" rather than "547 carries".
-- Use at most one figure, and only if it genuinely helps.
+- Never state a number that is not in the evidence. You are given tiers, not figures, so describe in plain words: "among the teams that run the most" rather than a count.
 - Do not restate the rank. "Fourth-best for points scored" already appears directly above your sentence; repeating it wastes the only two sentences you get.
 - Do NOT pass judgement on the unit overall — no "middling", "strong", "poor", "ordinary", "unremarkable" about the unit as a whole. The rating beside you already says how good it is, and one of these words next to four dots out of five reads as a contradiction. Describe traits instead: what they do a lot of, what they do well, what they don't.
-- You MAY say a specific thing is a weakness ("rarely gets to the quarterback") when a rank supports it. That is a trait, not a verdict on the unit.
+- You MAY say a specific thing is a weakness ("rarely gets to the quarterback") when a tier supports it. That is a trait, not a verdict on the unit.
 - If nothing is distinctive, name the players and what the unit is built around. Silence about character is better than a verdict that fights the rating.
 - Never mention a player who is not in the evidence.
 - Do not describe a team's "philosophy" or "identity" as though you know their intent. Describe what the numbers show them doing.
@@ -199,103 +180,86 @@ const schema = {
   additionalProperties: false,
 };
 
+// --- validation and storage ------------------------------------------------
+
+// The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
+// without an API key. New text gets problemWithNote plus the repeatsCoaching
+// style rule. An out-of-date note — one written for evidence that has since
+// moved — may stay up until its replacement validates only if it passes the
+// stricter problemWithStaleNote, which also requires every person it names to
+// be in the unit or coaching the team today. problemWithNote alone doesn't
+// check names (only an arrival claim's), so it let a note naming last year's
+// starter stand: New Orleans once kept describing a receiver who had left the
+// depth chart. §9's bargain is a missing entry, never a wrong one, so a note
+// that fails is removed.
+// repeatsCoaching is a style rule and stays out of the stale check: an existing
+// note that names the coach is repetitive, not wrong, so it may stay up until a
+// replacement validates rather than leaving a gap.
+const validate = (text, subject) =>
+  problemWithNote(text, evidenceOf.get(subject)) ?? repeatsCoaching(text, evidenceOf.get(subject));
+const validateStale = (text, subject) => problemWithStaleNote(text, evidenceOf.get(subject));
+
+/**
+ * Settle everything returned so far against the section as this run found
+ * it, and save. Called after every batch, so a run cut off part-way (by an
+ * error or the workflow's time limit) keeps what it already paid for.
+ * Settling from the starting section each time makes repeated calls safe.
+ */
+const before = prose.units;
+function persist() {
+  const { section, log } = settle(before, wanted, results, validate, validateStale);
+  prose.units = section;
+  writeCache(prose);
+  return log;
+}
+
 /** Batched so one request covers many units; 96 separate calls would be silly. */
 const CHUNK = 12;
 const results = new Map();
 let tokensIn = 0;
 let tokensOut = 0;
 
-for (let i = 0; i < batch.length; i += CHUNK) {
-  const slice = batch.slice(i, i + CHUNK);
-  const response = await client.beta.messages.create({
-    model: "claude-opus-5",
-    max_tokens: 8000,
-    system: SYSTEM,
-    output_config: { effort: "medium", format: { type: "json_schema", schema } },
-    betas: ["server-side-fallback-2026-07-01"],
-    fallbacks: "default",
-    messages: [
-      {
-        role: "user",
-        content: `Write one entry per unit.\n\n${JSON.stringify(
-          slice.map((t) => ({ key: t.key, ...t.evidence })),
-          null,
-          2,
-        )}`,
-      },
-    ],
-  });
-
-  if (response.stop_reason === "refusal") {
-    console.error("Model declined a batch. Skipping it.");
+for (const slice of chunk(batch, CHUNK)) {
+  let data, usage;
+  try {
+    ({ data, usage } = await generateJson({
+      label: "write-unit-notes",
+      model: MODELS.prose,
+      system: SYSTEM,
+      user: `Write one entry per unit.\n\n${JSON.stringify(
+        slice.map((t) => ({ key: t.subject, ...t.evidence })),
+        null,
+        2,
+      )}`,
+      schema,
+      maxTokens: 8000,
+      effort: "medium",
+    }));
+  } catch (err) {
+    // A refusal or an empty reply is expected now and then; anything else
+    // (truncated, overloaded, timed out) is a real failure. Either way the
+    // other batches still run, and what earlier batches wrote is already
+    // saved — a failure part-way used to throw away every batch before it.
+    if (!isNoResult(err)) process.exitCode = 1;
+    console.error(`${err.message}. Skipping this batch.`);
     continue;
   }
-  const payload = response.content.find((b) => b.type === "text")?.text;
-  if (!payload) continue;
-  for (const n of JSON.parse(payload).notes ?? []) results.set(n.key, n.blurb);
-  tokensIn += response.usage.input_tokens;
-  tokensOut += response.usage.output_tokens;
+  const asked = new Set(slice.map((t) => t.subject));
+  for (const n of data.notes ?? []) if (asked.has(n.key)) results.set(n.key, n.blurb);
+  tokensIn += usage.input;
+  tokensOut += usage.output;
+  if (!SELF_TEST) persist();
 }
 
-// --- validation ------------------------------------------------------------
-
-// The guards live in scripts/lib/unit-note-validation.mjs so they can be tested
-// without an API key — importing this file starts calling the model.
-
-let accepted = 0;
-const rejected = [];
-/** Superseded notes dropped because their replacement failed validation. */
-const cleared = [];
-
-for (const item of batch) {
-  const blurb = results.get(item.key);
-  if (!blurb) {
-    rejected.push(`${item.key}: no response`);
-    continue;
+if (SELF_TEST) {
+  for (const item of batch) {
+    const blurb = results.get(item.subject);
+    const problem = blurb ? validate(blurb, item.subject) : "no response";
+    console.log(`  ${item.subject}\n    ${problem ? `REJECTED (${problem})` : "ok"}: "${blurb ?? ""}"`);
   }
-  const problem = problemWithNote(blurb, item.evidence);
-  if (problem) {
-    rejected.push(`${item.key}: ${problem} — "${blurb}"`);
-    // A rejection used to leave the previous note standing, which looks safe
-    // and isn't. Anything reaching this loop is here because its note is
-    // missing, or the brief has moved on, or the evidence has — so the stored
-    // note is stale by definition, and the rule the replacement broke is
-    // usually the rule the old note breaks too. Checking the prompt version
-    // alone missed the second case: New Orleans kept describing a receiver who
-    // had left the depth chart, because the note and the brief were the same
-    // vintage and only the roster had changed. §9's bargain is a missing entry,
-    // never a wrong one, so the stale note goes and the next run tries again.
-    if (!SELF_TEST) {
-      const unit = cache.teams[item.teamId].units[item.unit];
-      if (unit.blurb) {
-        unit.blurb = null;
-        unit.blurbHash = null;
-        unit.promptVersion = null;
-        cleared.push(item.key);
-      }
-    }
-    continue;
-  }
-  if (!SELF_TEST) {
-    const unit = cache.teams[item.teamId].units[item.unit];
-    unit.blurb = blurb.trim();
-    unit.blurbHash = item.hash;
-    unit.promptVersion = PROMPT_VERSION;
-  }
-  accepted++;
-  if (SELF_TEST) console.log(`  ${item.key}\n    "${blurb.trim()}"`);
-}
-
-if (!SELF_TEST) {
-  cache.unitNotesWrittenAt = new Date().toISOString();
-  writeFileSync(DETAIL, `${JSON.stringify(cache, null, 2)}\n`);
-} else {
   console.log("\n(self-test: nothing written)");
+  if (results.size === 0) process.exit(1);
+} else {
+  printLog("unit notes", persist());
 }
-
-console.log(`\n${accepted}/${batch.length} accepted`);
-for (const r of rejected.slice(0, 10)) console.log(`  rejected — ${r}`);
-if (cleared.length > 0) {
-  console.log(`dropped ${cleared.length} superseded note(s): ${cleared.join(", ")}`);
-}
-console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);
+if (tokensIn) console.log(`tokens: ${tokensIn} in, ${tokensOut} out`);

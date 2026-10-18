@@ -21,23 +21,23 @@ import { rehypeGlossaryLinks } from "@/lib/glossary/rehype-glossary-links";
 // larger size and looser leading than the dense card screens.
 const components = {
   h2: (props: React.ComponentProps<"h2">) => (
-    <h2 className="mb-2 mt-8 text-lg font-semibold text-fg" {...props} />
+    <h2 className="mb-2 mt-8 text-lg font-semibold text-chalk" {...props} />
   ),
   h3: (props: React.ComponentProps<"h3">) => (
-    <h3 className="mb-1.5 mt-6 text-base font-semibold text-fg" {...props} />
+    <h3 className="mb-1.5 mt-6 text-base font-semibold text-chalk" {...props} />
   ),
   p: (props: React.ComponentProps<"p">) => (
-    <p className="my-4 text-[1.05rem] leading-[1.7] text-fg/90" {...props} />
+    <p className="my-4 text-[1.05rem] leading-[1.7] text-chalk/90" {...props} />
   ),
   ul: (props: React.ComponentProps<"ul">) => (
     <ul
-      className="my-4 list-disc space-y-1.5 pl-5 text-[1.05rem] leading-[1.7] text-fg/90"
+      className="my-4 list-disc space-y-1.5 pl-5 text-[1.05rem] leading-[1.7] text-chalk/90"
       {...props}
     />
   ),
   ol: (props: React.ComponentProps<"ol">) => (
     <ol
-      className="my-4 list-decimal space-y-1.5 pl-5 text-[1.05rem] leading-[1.7] text-fg/90"
+      className="my-4 list-decimal space-y-1.5 pl-5 text-[1.05rem] leading-[1.7] text-chalk/90"
       {...props}
     />
   ),
@@ -62,9 +62,11 @@ const components = {
         </GlossaryTerm>
       );
     }
+    // A plain link is underlined in chalk, never yellow: yellow under text
+    // means "this term is explained" and nothing else (§10).
     return (
       <a
-        className="text-amber underline decoration-amber/40 underline-offset-2 hover:decoration-amber"
+        className="text-chalk underline decoration-chalk-dim/60 decoration-1 underline-offset-[3px] hover:decoration-chalk"
         {...props}
       >
         {children}
@@ -72,11 +74,11 @@ const components = {
     );
   },
   strong: (props: React.ComponentProps<"strong">) => (
-    <strong className="font-semibold text-fg" {...props} />
+    <strong className="font-semibold text-chalk" {...props} />
   ),
   blockquote: (props: React.ComponentProps<"blockquote">) => (
     <blockquote
-      className="my-5 border-l-2 border-amber/60 pl-4 italic text-fg-dim"
+      className="my-5 border-l-2 border-line pl-4 italic text-chalk-dim"
       {...props}
     />
   ),
@@ -85,7 +87,7 @@ const components = {
   ),
   code: (props: React.ComponentProps<"code">) => (
     <code
-      className="rounded bg-surface-2 px-1.5 py-0.5 text-[0.9em] text-fg"
+      className="rounded bg-surface-2 px-1.5 py-0.5 text-[0.9em] text-chalk"
       {...props}
     />
   ),
@@ -104,12 +106,12 @@ const components = {
   ),
   th: (props: React.ComponentProps<"th">) => (
     <th
-      className="border-b border-line bg-surface px-3 py-2 text-left text-[0.7rem] font-semibold uppercase tracking-wider text-fg-dim"
+      className="border-b border-line bg-surface px-3 py-2 text-left text-[0.7rem] font-semibold uppercase tracking-wider text-chalk-dim"
       {...props}
     />
   ),
   td: (props: React.ComponentProps<"td">) => (
-    <td className="border-b border-line px-3 py-2 align-top text-fg/90" {...props} />
+    <td className="border-b border-line px-3 py-2 align-top text-chalk/90" {...props} />
   ),
 };
 

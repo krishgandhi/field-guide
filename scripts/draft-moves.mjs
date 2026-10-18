@@ -28,8 +28,37 @@
  */
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
-import Anthropic from "@anthropic-ai/sdk";
-import { isSensitive, problemsWith, yamlFold } from "./lib/draft-validation.mjs";
+import { MODELS, generateJson, hasKey } from "./lib/claude.mts";
+import { isSensitive, problemsWith } from "./lib/draft-validation.mjs";
+import { buildMoveFile, moveFileProblems } from "./lib/move-file.mjs";
+import { sanitiseSlug, targetFor } from "./lib/move-output.mjs";
+import { chunk } from "./lib/prose-cache.mts";
+import { MAX_ATTEMPTS, addGivenUp, attemptedIn, recordAttempts } from "./lib/move-worklist.mjs";
+
+/**
+ * Candidates per request.
+ *
+ * All of them used to go in one request with a 16k-token budget: forty
+ * candidates, each answer carrying six rubric notes and a body, could not fit,
+ * and nothing checked whether the answer had been cut off. Six fits with
+ * room to spare, and one bad batch costs six candidates an attempt, not all.
+ */
+const BATCH_SIZE = 6;
+/**
+ * Batches per run, to bound a day's spend after a long outage. What doesn't
+ * fit waits for tomorrow — it stays on the worklist, it isn't dropped.
+ */
+const MAX_BATCHES = 4;
+/**
+ * Time limits, so the refresh job always reaches its commit step. Each call
+ * gets BATCH_TIMEOUT_MS per attempt (one retry, see claude.mts), and no new
+ * batch starts once RUN_BUDGET_MS has gone: worst case is the budget plus
+ * one batch's two attempts, about 24 minutes. What doesn't start waits for
+ * tomorrow, with no attempt counted.
+ */
+const BATCH_TIMEOUT_MS = 6 * 60_000;
+const RUN_BUDGET_MS = 12 * 60_000;
+const startedAt = Date.now();
 
 const CANDIDATES = "src/data/move-candidates.json";
 /**
@@ -80,12 +109,13 @@ const FIXTURE = [
 
 // No key: exit clean. Same posture as write-reasons.mjs — this is the normal
 // state locally and on a fork, not an error.
-if (!process.env.ANTHROPIC_API_KEY) {
+if (!hasKey()) {
   console.log("No ANTHROPIC_API_KEY — no drafts written.");
   process.exit(0);
 }
 
 let candidates;
+let worklistFile = { candidates: [], givenUp: [] };
 if (SELF_TEST) {
   console.log("Self-test: calling the API with a fixture. Nothing will be written.\n");
   candidates = FIXTURE;
@@ -94,14 +124,13 @@ if (SELF_TEST) {
     console.log("No candidates file. Run detect-moves.mjs first.");
     process.exit(0);
   }
-  ({ candidates = [] } = JSON.parse(readFileSync(CANDIDATES, "utf8")));
+  worklistFile = { candidates: [], givenUp: [], ...JSON.parse(readFileSync(CANDIDATES, "utf8")) };
+  candidates = worklistFile.candidates;
   if (candidates.length === 0) {
     console.log("No candidates to draft.");
     process.exit(0);
   }
 }
-
-const client = new Anthropic();
 
 const SYSTEM = `You apply a fixed rubric to NFL transactions for a site that explains the sport to a newcomer.
 
@@ -131,6 +160,7 @@ ABSOLUTE RULES:
 - Every number you write must appear in the supplied text. Do not state a contract figure, a draft pick, a year or an age that is not there. If you don't have the number, write around it.
 - Never reproduce sentences from the source. Summarise in your own words.
 - Plain English. No jargon a newcomer wouldn't know, and no words like "leverage", "efficiency" or "seeding".
+- The title is sentence case: capitalise the first word and proper nouns only. "Patriots sign DaQuan Jones to a one-year deal", never "Patriots Sign DaQuan Jones to a One-Year Deal".
 - The summary is ONE sentence saying why a newcomer should care.
 - The body is two short paragraphs: what it means, and why it matters to a Buffalo Bills fan if it genuinely does.`;
 
@@ -203,40 +233,66 @@ const schema = {
   additionalProperties: false,
 };
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 16000,
-  system: SYSTEM,
-  // Higher effort than write-reasons: this is a judgement task (is it a move
-  // at all, and how big), not a short writing task.
-  output_config: { effort: "high", format: { type: "json_schema", schema } },
-  thinking: { type: "adaptive" },
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Assess each candidate.\n\n${JSON.stringify(candidates, null, 2)}`,
-    },
-  ],
-});
-
-// Check before reading content: a refusal returns HTTP 200 with empty or
-// partial content, and indexing into it blind would throw.
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). No drafts written.`,
-  );
-  process.exit(0);
+const batches = chunk(candidates, BATCH_SIZE);
+const thisRun = batches.slice(0, MAX_BATCHES);
+if (batches.length > thisRun.length) {
+  const waiting = batches.slice(MAX_BATCHES).flat();
+  console.log(`${waiting.length} candidate(s) wait for the next run (cap of ${MAX_BATCHES} batches per run).`);
 }
 
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. No drafts written.");
-  process.exit(0);
+/** Every entry the model returned, across batches. */
+const entries = [];
+/**
+ * Candidates the model actually answered for and left without an outcome —
+ * see attemptedIn for why a failed request doesn't count.
+ */
+const attempted = new Set();
+const usage = { input: 0, output: 0 };
+
+for (const [i, batch] of thisRun.entries()) {
+  if (Date.now() - startedAt > RUN_BUDGET_MS) {
+    console.log(`  out of time — batches ${i + 1}–${thisRun.length} wait for the next run.`);
+    break;
+  }
+  try {
+    const { data, usage: u } = await generateJson({
+      label: `draft-moves ${i + 1}/${thisRun.length}`,
+      model: MODELS.moveDrafts,
+      system: SYSTEM,
+      user: `Assess each candidate.\n\n${JSON.stringify(batch, null, 2)}`,
+      schema,
+      maxTokens: 16000,
+      // Higher effort than write-reasons: this is a judgement task (is it a
+      // move at all, and how big), not a short writing task.
+      effort: "high",
+      thinking: true,
+      timeoutMs: BATCH_TIMEOUT_MS,
+    });
+    usage.input += u.input;
+    usage.output += u.output;
+    const ids = new Set(batch.map((c) => c.id));
+    const answered = (data.entries ?? []).filter((e) => ids.has(e.id));
+    entries.push(...answered);
+    const missing = attemptedIn(batch, { answered: new Set(answered.map((e) => e.id)) });
+    for (const id of missing) attempted.add(id);
+    for (const c of batch.filter((c) => missing.includes(c.id))) {
+      console.log(`  no answer for ${c.id} — ${c.headline}`);
+    }
+  } catch (err) {
+    // Truncated, overloaded, timed out or a network failure: no attempt is
+    // counted, and the batch simply waits for tomorrow. Only a refusal
+    // counts, since that is an answer. A rejected key never reaches here —
+    // generateJson exits the process, so it fails the job loudly.
+    for (const id of attemptedIn(batch, { error: err })) attempted.add(id);
+    console.error(`  batch ${i + 1} failed: ${err.message}`);
+  }
 }
 
-const { entries } = JSON.parse(payload);
+// The self-test exists to prove the call works; a failed call must not pass.
+if (SELF_TEST && entries.length === 0) {
+  console.error("Self-test: the API call produced no entries.");
+  process.exit(1);
+}
 
 if (!SELF_TEST) mkdirSync(HELD, { recursive: true });
 
@@ -258,14 +314,15 @@ for (const entry of entries) {
     continue;
   }
 
-  const problems = problemsWith(entry, candidate);
-
   // Held, not discarded: a rejected draft is still a signal that something
   // happened, and it may only need one line fixing by hand.
-  const held = problems.length > 0;
+  const problems = problemsWith(entry, candidate);
 
   const date = candidate.published || new Date().toISOString().slice(0, 10);
-  const slug = `${date.slice(0, 7)}-${entry.slug}`;
+  // Sanitised before any path is built: the model's slug is checked by
+  // problemsWith (a bad one is held), but it must never reach the filesystem
+  // as given — a "/" in it used to crash the run before anything was saved.
+  const slug = `${date.slice(0, 7)}-${sanitiseSlug(entry.slug)}`;
   // The model picks which of ESPN's tagged clubs are actually party to the
   // move; problemsWith has already checked they're a subset, so there is
   // nothing invented here.
@@ -275,41 +332,23 @@ for (const entry of entries) {
     isSensitive(`${entry.summary} ${entry.body}`) ||
     isSensitive(`${candidate.headline} ${candidate.description}`);
 
-  const mdx = `---
-title: ${entry.title}
-slug: ${slug}
-type: moves
-summary: ${entry.summary}
-reviewed: false
-lastUpdated: ${new Date().toISOString().slice(0, 10)}
-move:
-  date: "${date}"
-  kind: ${entry.kind}
-  teams: [${teams.join(", ")}]
-  bigness: ${entry.bigness}
-  # Machine-written from a single headline. verified stays false until a human
-  # has read it against the reporting linked below.
-  verified: false
-  sensitive: ${sensitive}
-  sources:
-    - label: ESPN
-      url: ${candidate.url}
-  people: [${(candidate.players ?? [])
-    .map((pl) => pl.id)
-    .filter(Boolean)
-    .map((id) => `"${id}"`)
-    .join(", ")}]
-  rubric:
-${(entry.rubric ?? [])
-  .map(
-    (r) =>
-      `    - axis: ${r.axis}\n      score: ${r.score}\n      note: >-\n${yamlFold(r.note)}`,
-  )
-  .join("\n")}
----
-
-${entry.body.trim()}
-`;
+  const mdx = buildMoveFile({
+    entry,
+    candidate,
+    slug,
+    date,
+    teams,
+    sensitive,
+    today: new Date().toISOString().slice(0, 10),
+  });
+  // Read the file back exactly as the build will. Anything the build would
+  // reject is held, never published — one bad file used to fail every page.
+  problems.push(...moveFileProblems(mdx, slug));
+  // Never overwrite: a slug already published (committed, or written earlier
+  // this run) is held under a free name instead of failing the job.
+  const target = targetFor({ slug, held: problems.length > 0, publishedDir: PUBLISHED, heldDir: HELD });
+  if (target.reason) problems.push(target.reason);
+  const held = target.held;
 
   if (SELF_TEST) {
     written++;
@@ -322,35 +361,57 @@ ${entry.body.trim()}
   }
 
   if (held) {
-    writeFileSync(`${HELD}/${slug}.mdx`, mdx);
+    writeFileSync(target.file, mdx);
     rejected++;
     decided.push(candidate.id);
-    console.log(`  HELD    ${slug}.mdx`);
+    console.log(`  HELD    ${target.file}`);
     for (const p of problems) console.log(`          ${p}`);
     continue;
   }
 
-  writeFileSync(`${PUBLISHED}/${slug}.mdx`, mdx);
+  writeFileSync(target.file, mdx);
   written++;
   decided.push(candidate.id);
-  console.log(`  publish ${slug}.mdx${sensitive ? "  (sensitive)" : ""}`);
+  console.log(`  publish ${target.file}${sensitive ? "  (sensitive)" : ""}`);
 }
 
-if (!SELF_TEST && decided.length > 0) {
-  const seen = existsSync(SEEN) ? JSON.parse(readFileSync(SEEN, "utf8")) : [];
-  const next = [...new Set([...decided, ...seen])].slice(0, SEEN_LIMIT);
-  writeFileSync(SEEN, `${JSON.stringify(next, null, 2)}\n`);
+let gaveUp = [];
+if (!SELF_TEST) {
+  // Retire what got an outcome; count an attempt for what was sent and came
+  // back with nothing; give up at the cap rather than retrying for ever.
+  const { remaining, givenUp } = recordAttempts(candidates, {
+    decided: new Set(decided),
+    attempted,
+  });
+  gaveUp = givenUp;
+  const today = new Date().toISOString().slice(0, 10);
+  writeFileSync(
+    CANDIDATES,
+    `${JSON.stringify(
+      { ...worklistFile, candidates: remaining, givenUp: addGivenUp(worklistFile.givenUp ?? [], givenUp, today) },
+      null,
+      2,
+    )}\n`,
+  );
+  // Given-up candidates are seen too, so detection doesn't re-propose them.
+  const retired = [...decided, ...givenUp.map((c) => c.id)];
+  if (retired.length > 0) {
+    const seen = existsSync(SEEN) ? JSON.parse(readFileSync(SEEN, "utf8")) : [];
+    const next = [...new Set([...retired, ...seen])].slice(0, SEEN_LIMIT);
+    writeFileSync(SEEN, `${JSON.stringify(next, null, 2)}\n`);
+  }
 }
 
 console.log(
   `\n${written} published, ${skipped} skipped by the model, ${rejected} held for review.`,
 );
+for (const c of gaveUp) {
+  console.log(`  GAVE UP after ${MAX_ATTEMPTS} attempts: ${c.headline}`);
+}
 // Logged because write-reasons.mjs logs it and this one didn't, which made the
 // spend impossible to attribute between them. This is the pricier of the two:
 // high effort plus adaptive thinking, and thinking bills as output.
-console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
-);
+console.log(`tokens: ${usage.input} in, ${usage.output} out`);
 if (rejected > 0) {
   console.log(`Held entries are in ${HELD}/ and are NOT on the site. npm run drafts lists them.`);
 }

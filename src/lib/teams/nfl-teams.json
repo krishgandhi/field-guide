@@ -7,7 +7,7 @@
     "name": "Cardinals",
     "displayName": "Arizona Cardinals",
     "brandColor": "#A40227",
-    "displayColor": "#F2033A",
+    "displayColor": "#FC1C4F",
     "logo": "/logos/ari.png"
   },
   {
@@ -18,7 +18,7 @@
     "name": "Falcons",
     "displayName": "Atlanta Falcons",
     "brandColor": "#A71930",
-    "displayColor": "#E13753",
+    "displayColor": "#E44962",
     "logo": "/logos/atl.png"
   },
   {
@@ -29,7 +29,7 @@
     "name": "Ravens",
     "displayName": "Baltimore Ravens",
     "brandColor": "#29126F",
-    "displayColor": "#8565E6",
+    "displayColor": "#8C6EE8",
     "logo": "/logos/bal.png"
   },
   {
@@ -40,7 +40,7 @@
     "name": "Bills",
     "displayName": "Buffalo Bills",
     "brandColor": "#00338D",
-    "displayColor": "#1F70FF",
+    "displayColor": "#337DFF",
     "logo": "/logos/buf.png"
   },
   {
@@ -51,7 +51,7 @@
     "name": "Panthers",
     "displayName": "Carolina Panthers",
     "brandColor": "#0085CA",
-    "displayColor": "#0085CA",
+    "displayColor": "#008AD1",
     "logo": "/logos/car.png"
   },
   {
@@ -62,7 +62,7 @@
     "name": "Bears",
     "displayName": "Chicago Bears",
     "brandColor": "#0B1C3A",
-    "displayColor": "#3E77DA",
+    "displayColor": "#4B80DD",
     "logo": "/logos/chi.png"
   },
   {
@@ -84,7 +84,7 @@
     "name": "Browns",
     "displayName": "Cleveland Browns",
     "brandColor": "#472A08",
-    "displayColor": "#B36A14",
+    "displayColor": "#BC6F15",
     "logo": "/logos/cle.png"
   },
   {
@@ -95,7 +95,7 @@
     "name": "Cowboys",
     "displayName": "Dallas Cowboys",
     "brandColor": "#002A5C",
-    "displayColor": "#0074FF",
+    "displayColor": "#1480FF",
     "logo": "/logos/dal.png"
   },
   {
@@ -106,7 +106,7 @@
     "name": "Broncos",
     "displayName": "Denver Broncos",
     "brandColor": "#0A2343",
-    "displayColor": "#2A79DF",
+    "displayColor": "#3782E1",
     "logo": "/logos/den.png"
   },
   {
@@ -117,7 +117,7 @@
     "name": "Lions",
     "displayName": "Detroit Lions",
     "brandColor": "#0076B6",
-    "displayColor": "#0081C7",
+    "displayColor": "#0088D1",
     "logo": "/logos/det.png"
   },
   {
@@ -128,7 +128,7 @@
     "name": "Packers",
     "displayName": "Green Bay Packers",
     "brandColor": "#204E32",
-    "displayColor": "#388958",
+    "displayColor": "#3D945F",
     "logo": "/logos/gb.png"
   },
   {
@@ -139,7 +139,7 @@
     "name": "Texans",
     "displayName": "Houston Texans",
     "brandColor": "#021018",
-    "displayColor": "#1081C1",
+    "displayColor": "#118ACF",
     "logo": "/logos/hou.png"
   },
   {
@@ -150,7 +150,7 @@
     "name": "Colts",
     "displayName": "Indianapolis Colts",
     "brandColor": "#003B75",
-    "displayColor": "#0079F0",
+    "displayColor": "#0081FF",
     "logo": "/logos/ind.png"
   },
   {
@@ -161,7 +161,7 @@
     "name": "Jaguars",
     "displayName": "Jacksonville Jaguars",
     "brandColor": "#007487",
-    "displayColor": "#00889E",
+    "displayColor": "#0091A8",
     "logo": "/logos/jax.png"
   },
   {
@@ -172,7 +172,7 @@
     "name": "Chiefs",
     "displayName": "Kansas City Chiefs",
     "brandColor": "#E31837",
-    "displayColor": "#E92B48",
+    "displayColor": "#EB425C",
     "logo": "/logos/kc.png"
   },
   {
@@ -183,7 +183,7 @@
     "name": "Chargers",
     "displayName": "Los Angeles Chargers",
     "brandColor": "#0080C6",
-    "displayColor": "#0080C6",
+    "displayColor": "#008AD6",
     "logo": "/logos/lac.png"
   },
   {
@@ -194,7 +194,7 @@
     "name": "Rams",
     "displayName": "Los Angeles Rams",
     "brandColor": "#003594",
-    "displayColor": "#2472FF",
+    "displayColor": "#337CFF",
     "logo": "/logos/lar.png"
   },
   {
@@ -205,7 +205,7 @@
     "name": "Raiders",
     "displayName": "Las Vegas Raiders",
     "brandColor": "#000000",
-    "displayColor": "#7A7A7A",
+    "displayColor": "#828282",
     "logo": "/logos/lv.png"
   },
   {
@@ -216,7 +216,7 @@
     "name": "Dolphins",
     "displayName": "Miami Dolphins",
     "brandColor": "#008E97",
-    "displayColor": "#008E97",
+    "displayColor": "#009099",
     "logo": "/logos/mia.png"
   },
   {
@@ -227,7 +227,7 @@
     "name": "Vikings",
     "displayName": "Minnesota Vikings",
     "brandColor": "#4F2683",
-    "displayColor": "#9261D1",
+    "displayColor": "#9B6DD5",
     "logo": "/logos/min.png"
   },
   {
@@ -238,7 +238,7 @@
     "name": "Patriots",
     "displayName": "New England Patriots",
     "brandColor": "#002A5C",
-    "displayColor": "#0074FF",
+    "displayColor": "#1480FF",
     "logo": "/logos/ne.png"
   },
   {
@@ -260,7 +260,7 @@
     "name": "Giants",
     "displayName": "New York Giants",
     "brandColor": "#003C7F",
-    "displayColor": "#0074F5",
+    "displayColor": "#0A7EFF",
     "logo": "/logos/nyg.png"
   },
   {
@@ -271,7 +271,7 @@
     "name": "Jets",
     "displayName": "New York Jets",
     "brandColor": "#115740",
-    "displayColor": "#1C8D68",
+    "displayColor": "#1D956E",
     "logo": "/logos/nyj.png"
   },
   {
@@ -282,7 +282,7 @@
     "name": "Eagles",
     "displayName": "Philadelphia Eagles",
     "brandColor": "#06424D",
-    "displayColor": "#0C869C",
+    "displayColor": "#0D8EA6",
     "logo": "/logos/phi.png"
   },
   {
@@ -304,7 +304,7 @@
     "name": "Seahawks",
     "displayName": "Seattle Seahawks",
     "brandColor": "#002A5C",
-    "displayColor": "#0074FF",
+    "displayColor": "#1480FF",
     "logo": "/logos/sea.png"
   },
   {
@@ -315,7 +315,7 @@
     "name": "49ers",
     "displayName": "San Francisco 49ers",
     "brandColor": "#AA0000",
-    "displayColor": "#F50000",
+    "displayColor": "#FF1A1A",
     "logo": "/logos/sf.png"
   },
   {
@@ -326,7 +326,7 @@
     "name": "Buccaneers",
     "displayName": "Tampa Bay Buccaneers",
     "brandColor": "#BD1C36",
-    "displayColor": "#E13753",
+    "displayColor": "#E44962",
     "logo": "/logos/tb.png"
   },
   {
@@ -348,7 +348,7 @@
     "name": "Commanders",
     "displayName": "Washington Commanders",
     "brandColor": "#5A1414",
-    "displayColor": "#D64747",
+    "displayColor": "#DA5858",
     "logo": "/logos/wsh.png"
   }
 ]

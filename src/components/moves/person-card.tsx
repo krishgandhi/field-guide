@@ -42,11 +42,11 @@ export function PersonCard({
           />
         ) : null}
         <div className="min-w-0">
-          <p className="truncate text-[0.95rem] font-semibold leading-tight text-fg">
+          <p className="truncate text-[0.95rem] font-semibold leading-tight text-chalk">
             {person.name}
           </p>
           {facts ? (
-            <p className="tnum mt-0.5 text-[0.7rem] font-medium uppercase tracking-wider text-fg-dim">
+            <p className="tnum mt-0.5 text-[0.7rem] font-medium uppercase tracking-wider text-chalk-dim">
               {facts}
             </p>
           ) : null}
@@ -54,14 +54,14 @@ export function PersonCard({
       </div>
 
       {person.blurb ? (
-        <p className="mt-3 text-sm leading-relaxed text-fg-dim">
+        <p className="mt-3 text-sm leading-relaxed text-chalk-dim">
           {explain(person.blurb)}
         </p>
       ) : null}
 
       {/* Last, and quiet: useful once you care, noise before that. */}
       {drafted || person.college || person.team ? (
-        <p className="mt-2.5 text-[0.75rem] leading-snug text-fg-dim/80">
+        <p className="mt-2.5 text-[0.75rem] leading-snug text-chalk-dim/80">
           {[drafted, person.college, person.team].filter(Boolean).join(" · ")}
         </p>
       ) : null}

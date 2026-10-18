@@ -1,9 +1,12 @@
 /**
  * Write the one-line description on each player's profile card, using Claude.
  *
- * Runs after fetch-people.mjs and fills in the `blurb` for anyone who lacks
- * one. Cached in src/data/people.json, so a sentence is generated once per
- * person rather than per build (§13).
+ * Runs after fetch-people.mjs. Lines live in src/data/prose-cache.json under
+ * "profiles", keyed on the coarse evidence below and the prompt version, so a
+ * sentence is generated once per person and again only when something a
+ * reader would notice changes — a new award, a new team (§13). Without an
+ * API key this still runs: it prunes people no move names any more and drops
+ * any old line that no longer validates.
  *
  * IT CHARACTERISES, BUT ONLY FROM SUPPLIED EVIDENCE.
  *
@@ -14,7 +17,8 @@
  * layer, and refusing to do it missed the point of the product.
  *
  * The fix is evidence, not licence. The model gets awards (Allen's MVP),
- * career and season splits (4,721 career rushing yards for a quarterback), and
+ * career totals floored to "at least" figures (at least 4,000 career rushing
+ * yards for a quarterback — see scripts/lib/profile-evidence.mjs), and
  * this site's own already-sourced prose about the person. It may say anything
  * that evidence supports, and nothing it doesn't. A thin résumé gets a factual
  * line — that restraint is the point.
@@ -26,10 +30,19 @@
  *   ANTHROPIC_API_KEY=... npm run write:profiles
  */
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
-import path from "node:path";
-import Anthropic from "@anthropic-ai/sdk";
-import { numbersIn, sentenceCount } from "./lib/draft-validation.mjs";
+import { readFileSync, existsSync } from "node:fs";
+import { MODELS, generateJson, hasKey, isNoResult } from "./lib/claude.mts";
+import { readMoves } from "./lib/moves.mts";
+import { problemWithBlurb, problemWithStaleBlurb, profileEvidence } from "./lib/profile-evidence.mjs";
+import {
+  chunk,
+  needsWriting,
+  printLog,
+  proseKey,
+  readCache,
+  settle,
+  writeCache,
+} from "./lib/prose-cache.mts";
 
 const PEOPLE = "src/data/people.json";
 
@@ -38,8 +51,7 @@ const PEOPLE = "src/data/people.json";
  * The evidence hash only catches changes in the FACTS; without this, a better
  * prompt would never reach the players already done.
  */
-const PROMPT_VERSION = 2;
-const MOVES = "content/moves";
+const PROMPT_VERSION = 3;
 
 /** --self-test: one fixture person through the real API, writing nothing. */
 const SELF_TEST = process.argv.includes("--self-test");
@@ -58,9 +70,9 @@ const FIXTURE = {
   college: "Illinois",
 };
 
-if (!process.env.ANTHROPIC_API_KEY) {
-  console.log("No ANTHROPIC_API_KEY — no profile lines written.");
-  process.exit(0);
+if (SELF_TEST && !hasKey()) {
+  console.log("Self-test needs ANTHROPIC_API_KEY.");
+  process.exit(1);
 }
 if (!SELF_TEST && !existsSync(PEOPLE)) {
   console.log("No people cache. Run fetch-people.mjs first.");
@@ -81,32 +93,38 @@ const cache = SELF_TEST
  */
 function contextFor(id) {
   const lines = [];
-  for (const file of readdirSync(MOVES).filter((f) => f.endsWith(".mdx"))) {
-    const raw = readFileSync(path.join(MOVES, file), "utf8");
-    if (!raw.includes(`"${id}"`)) continue;
-    const summary = raw.match(/^summary: (.+)$/m)?.[1];
+  for (const { summary, move } of readMoves()) {
+    if (!move.people.includes(id)) continue;
     if (summary) lines.push(summary);
-    for (const note of raw.matchAll(/^ {6}note: >-\n((?: {8}.*\n)+)/gm)) {
-      lines.push(note[1].split(/\s+/).filter(Boolean).join(" "));
+    for (const { note } of move.rubric) {
+      if (note) lines.push(String(note).split(/\s+/).filter(Boolean).join(" "));
     }
   }
   return lines;
 }
 
-const todo = Object.values(cache.people).filter(
-  (p) => p.name && (!p.blurb || p.promptVersion !== PROMPT_VERSION),
-);
-if (todo.length === 0) {
-  console.log("Every profile already has a line. Nothing to generate.");
-  process.exit(0);
-}
-console.log(`${todo.length} profile line(s) to write.\n`);
+/** Everyone with a name, with the evidence their line is written from. */
+const wanted = Object.values(cache.people)
+  .filter((p) => p.name)
+  .map((p) => {
+    const evidence = profileEvidence(p, contextFor(p.id));
+    return { subject: p.id, key: proseKey(PROMPT_VERSION, evidence), evidence, person: p };
+  });
+const byId = new Map(wanted.map((w) => [w.subject, w]));
+const prose = readCache();
 
-const client = new Anthropic();
+const todo = SELF_TEST ? wanted : needsWriting(prose.profiles, wanted);
+if (!hasKey()) {
+  console.log(`No ANTHROPIC_API_KEY — ${todo.length} profile line(s) would be written; checking existing ones only.`);
+} else if (todo.length === 0) {
+  console.log("Every profile line is current. Nothing to generate.");
+} else {
+  console.log(`${todo.length} profile line(s) to write.\n`);
+}
 
 const SYSTEM = `You introduce an NFL player to someone who has watched a bit of football, does not follow it closely, and has never heard of this person.
 
-You get his record (position, age, size, draft, college, experience, team), his awards, his career and season statistics, and sentences about him from articles on this site. That is your evidence. You have no other knowledge of him and must not draw on any you think you have.
+You get his record (position, age, size, draft, college, experience, team), his awards, his career totals as "at least" figures (careerTotalsAtLeast: 4000 means at least four thousand), and sentences about him from articles on this site. That is your evidence. You have no other knowledge of him and must not draw on any you think you have.
 
 Write TWO sentences:
 1. Who he is — position, where he was drafted, how far into his career he is.
@@ -122,7 +140,7 @@ Ground every judgement in the evidence:
 
 Hard rules:
 - Never state a number that is not in the supplied evidence.
-- Use AT MOST two figures, and spell them out: "more than four thousand career rushing yards". A line that ends in a list of totals reads like a stat sheet, which is the thing this site replaces. One vivid number beats four.
+- Use AT MOST two figures, and spell them out: "more than four thousand career rushing yards". Career totals are floors, so say "more than" or "at least", never an exact total. A line that ends in a list of totals reads like a stat sheet, which is the thing this site replaces. One vivid number beats four.
 - Do not repeat his name — the card shows it directly above your sentences.
 - Plain spoken English, 45 to 65 words total, never more than 75, ending in a full stop. Anything longer is thrown away and the player gets no line at all — Aaron Donald's first attempt ran to 88 and was lost.
 - Explain a position the first time it would puzzle someone: "a centre, the lineman who snaps the ball". This gloss is the FIRST thing to cut if you are near the word limit — a long, decorated career needs the words more than the definition does, and running over loses the whole line.
@@ -145,130 +163,85 @@ const schema = {
   additionalProperties: false,
 };
 
-const input = todo.map((p) => ({
-  id: p.id,
-  position: p.position,
-  age: p.age,
-  height: p.height,
-  weight: p.weight,
-  experience: p.experience,
-  draft: p.draft,
-  college: p.college,
-  currentTeam: p.team,
-  awards: p.awards ?? [],
-  careerStats: p.career ?? {},
-  lastSeasonStats: p.season ?? {},
-  mentionedOnSiteAs: contextFor(p.id),
-}));
+// --- validation and storage ------------------------------------------------
 
-const response = await client.beta.messages.create({
-  model: "claude-opus-5",
-  max_tokens: 8000,
-  system: SYSTEM,
-  output_config: { effort: "medium", format: { type: "json_schema", schema } },
-  betas: ["server-side-fallback-2026-07-01"],
-  fallbacks: "default",
-  messages: [
-    {
-      role: "user",
-      content: `Write one sentence for each.\n\n${JSON.stringify(input, null, 2)}`,
-    },
-  ],
-});
+// The guards live in scripts/lib/profile-evidence.mjs so they can be tested
+// without a key. An out-of-date line may stay up until a replacement
+// validates — fetch-people used to delete lines before anything replaced
+// them — but only by the stricter problemWithStaleBlurb, which also refuses a
+// line naming a former club without his current one. A trade moves the key,
+// and the old line is exactly the one that may still call him a Brown.
+const validate = (text, id) => {
+  const w = byId.get(id);
+  return problemWithBlurb(text, w.person, w.evidence.mentionedOnSiteAs);
+};
+const validateStale = (text, id) => {
+  const w = byId.get(id);
+  return problemWithStaleBlurb(text, w.person, w.evidence.mentionedOnSiteAs);
+};
 
-if (response.stop_reason === "refusal") {
-  console.error(
-    `Model declined (${response.stop_details?.category ?? "unknown"}). No lines written.`,
-  );
-  process.exit(0);
+const results = new Map();
+
+/**
+ * Settle what's come back so far against the section as this run found it,
+ * and save — after every batch, so a failure or the workflow's time limit
+ * part-way keeps what earlier batches paid for.
+ */
+const before = prose.profiles;
+function persist() {
+  const { section, log } = settle(before, wanted, results, validate, validateStale);
+  prose.profiles = section;
+  writeCache(prose);
+  return log;
 }
-const payload = response.content.find((b) => b.type === "text")?.text;
-if (!payload) {
-  console.error("No text block in response. No lines written.");
-  process.exit(0);
-}
-const { profiles } = JSON.parse(payload);
 
-// --- validation ------------------------------------------------------------
-
-const byId = new Map(todo.map((p) => [p.id, p]));
-
-/** Everything wrong with a line, or null. Exported shape mirrors the others. */
-export function problemWithBlurb(text, person, context = []) {
-  const trimmed = String(text ?? "").trim();
-  const words = trimmed.split(/\s+/).length;
-  // Two sentences now: one placing him, one saying what kind of player he is.
-  if (words < 25 || words > 80) return `${words} words`;
-  if (!/[.!?]$/.test(trimmed)) return "no end punctuation";
-  const sentences = sentenceCount(trimmed);
-  if (sentences > 3) return `${sentences} sentences, expected two`;
-
-  // Every figure must come from something we supplied — the ESPN record OR the
-  // site's own already-sourced prose, which is handed over as context.
-  //
-  // The first run rejected four correct lines because this only allowed the
-  // ESPN record: $12m, $67.5m and $132m all came from our own entries. Giving
-  // the model context and then refusing to let it use that context is a bug in
-  // the guard, not a fault in the output.
-  const allowed = new Set(
-    numbersIn(
-      [
-        person.draft,
-        person.age,
-        person.experience,
-        person.height,
-        person.weight,
-        // Awards and stats are evidence the model is meant to use, so their
-        // figures have to be allowed through the same guard.
-        JSON.stringify(person.awards ?? []),
-        JSON.stringify(person.career ?? {}),
-        JSON.stringify(person.season ?? {}),
-        ...context,
-      ]
-        .filter(Boolean)
-        .join(" "),
-    ),
-  );
-  // Ordinals the model legitimately writes out: "fifth overall" has no digits,
-  // but "2023" and "5" both come from the draft string, so this stays tight.
-  const invented = numbersIn(trimmed).filter((n) => !allowed.has(n));
-  if (invented.length > 0) return `invented figures: ${invented.join(", ")}`;
-
-  if (person.name && trimmed.includes(person.name.split(" ").at(-1))) {
-    return "repeats his name, which the card already shows";
+/**
+ * People per request. Everyone used to go in one 8k-token call: after a
+ * prompt change that is every person in people.json at once, and one
+ * truncated reply lost all of them.
+ */
+const BATCH_SIZE = 6;
+const usage = { input: 0, output: 0 };
+if (hasKey()) {
+  for (const slice of chunk(todo, BATCH_SIZE)) {
+    try {
+      const { data, usage: u } = await generateJson({
+        label: "write-profiles",
+        model: MODELS.prose,
+        system: SYSTEM,
+        user: `Write one sentence for each.\n\n${JSON.stringify(
+          slice.map((t) => t.evidence),
+          null,
+          2,
+        )}`,
+        schema,
+        maxTokens: 4000,
+        effort: "medium",
+      });
+      usage.input += u.input;
+      usage.output += u.output;
+      const asked = new Set(slice.map((t) => t.subject));
+      for (const { id, blurb } of data.profiles ?? []) if (asked.has(id)) results.set(id, blurb);
+    } catch (err) {
+      // Refusal or empty: expected now and then. Anything else is a real
+      // failure, reported in the exit code, but the other batches still run.
+      if (!isNoResult(err)) process.exitCode = 1;
+      console.error(`${err.message}. Skipping this batch.`);
+      continue;
+    }
+    if (!SELF_TEST) persist();
   }
-  return null;
 }
 
-let accepted = 0;
-const rejected = [];
-
-for (const { id, blurb } of profiles ?? []) {
-  const person = byId.get(id);
-  if (!person) {
-    rejected.push(`unknown id ${id}`);
-    continue;
+if (SELF_TEST) {
+  for (const t of todo) {
+    const blurb = results.get(t.subject);
+    const problem = blurb ? validate(blurb, t.subject) : "no response";
+    console.log(`  ${t.person.name}\n    ${problem ? `REJECTED (${problem})` : "ok"}: "${blurb ?? ""}"`);
   }
-  const problem = problemWithBlurb(blurb, person, contextFor(id));
-  if (problem) {
-    rejected.push(`${person.name}: ${problem} — "${blurb}"`);
-    continue;
-  }
-  cache.people[id].blurb = blurb.trim();
-  cache.people[id].promptVersion = PROMPT_VERSION;
-  accepted++;
-  console.log(`  ${person.name}\n    "${blurb.trim()}"`);
-}
-
-if (!SELF_TEST) {
-  cache.profilesWrittenAt = new Date().toISOString();
-  writeFileSync(PEOPLE, `${JSON.stringify(cache, null, 2)}\n`);
-} else {
   console.log("\n(self-test: nothing written)");
+  if (results.size === 0) process.exit(1);
+} else {
+  printLog("profile lines", persist());
 }
-
-console.log(`\n${accepted}/${todo.length} accepted`);
-for (const r of rejected) console.log(`  rejected — ${r}`);
-console.log(
-  `tokens: ${response.usage.input_tokens} in, ${response.usage.output_tokens} out`,
-);
+if (usage.input) console.log(`tokens: ${usage.input} in, ${usage.output} out`);

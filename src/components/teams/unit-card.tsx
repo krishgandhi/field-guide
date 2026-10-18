@@ -21,7 +21,7 @@ export function UnitCard({ title, unit }: { title: string; unit: Unit }) {
   return (
     <Card>
       <div className="flex items-center justify-between gap-3">
-        <h3 className="text-sm font-semibold text-fg">{title}</h3>
+        <h3 className="text-sm font-semibold text-chalk">{title}</h3>
         {unit.score !== null ? (
           <ScoreMeter value={unit.score} label={title} />
         ) : null}
@@ -31,10 +31,10 @@ export function UnitCard({ title, unit }: { title: string; unit: Unit }) {
           Josh Allen" is what someone actually wants to know. The rank sits
           under it as the caption for the meter — short, and never wrong. */}
       {unit.blurb ? (
-        <p className="mt-1.5 text-sm leading-snug text-fg">{unit.blurb}</p>
+        <p className="mt-1.5 text-sm leading-snug text-chalk">{unit.blurb}</p>
       ) : null}
       <p
-        className={`text-[0.78rem] leading-snug text-fg-dim ${
+        className={`text-[0.78rem] leading-snug text-chalk-dim ${
           unit.blurb ? "mt-1.5" : "mt-1.5 text-sm"
         }`}
       >
@@ -48,10 +48,10 @@ export function UnitCard({ title, unit }: { title: string; unit: Unit }) {
               key={`${player.id}-${player.label}`}
               className="flex items-baseline gap-2.5 text-sm"
             >
-              <span className="w-8 shrink-0 text-[0.7rem] font-semibold uppercase tracking-wider text-fg-dim">
+              <span className="w-8 shrink-0 text-[0.7rem] font-semibold uppercase tracking-wider text-chalk-dim">
                 {player.label}
               </span>
-              <span className="min-w-0 text-fg">{player.name}</span>
+              <span className="min-w-0 text-chalk">{player.name}</span>
             </li>
           ))}
         </ul>

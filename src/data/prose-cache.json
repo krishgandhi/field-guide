@@ -1,0 +1,267 @@
+{
+  "reasons": {},
+  "units": {
+    "ARI:specialTeams": {
+      "text": "Chad Ryland has been among the more accurate kickers on field goals, with Devin Duvernay handling kick returns, and the whole operation reports to new head coach Mike LaFleur.",
+      "key": null
+    },
+    "ATL:specialTeams": {
+      "text": "Nick Folk, now in his nineteenth season, is a reliable kicker on field goals, while running back Brian Robinson Jr. doubles up on kick returns.",
+      "key": null
+    },
+    "BAL:defence": {
+      "text": "Experienced through the middle and back, with Nnamdi Madubuike, Calais Campbell, Marlon Humphrey and Nate Wiggins, but sacks were hard to come by. Jesse Minter has just taken over as head coach.",
+      "key": null
+    },
+    "BAL:offence": {
+      "text": "Last year it ran far more than most teams and gained more per carry than anyone, through Derrick Henry and Lamar Jackson's own legs. Jesse Minter now takes over, so that balance may shift.",
+      "key": null
+    },
+    "BAL:specialTeams": {
+      "text": "Second-year kicker Tyler Loop was accurate on field goals, with Rasheen Ali returning kicks, under new head coach Jesse Minter.",
+      "key": null
+    },
+    "BUF:defence": {
+      "text": "Sacks and takeaways both come at a modest rate; the group leans on Ed Oliver and Bradley Chubb up front and young corners Christian Benford and Maxwell Hairston, now under new head coach Joe Brady.",
+      "key": null
+    },
+    "BUF:offence": {
+      "text": "No team passed less often last season, yet they scored more rushing touchdowns than anyone, with Josh Allen and James Cook driving it. Joe Brady has been promoted from inside to head coach.",
+      "key": null
+    },
+    "CAR:offence": {
+      "text": "Leans on the run more than most, though it rarely gets carries into the end zone. Bryce Young throws to Tetairoa McMillan, in his second season, with Chuba Hubbard carrying.",
+      "key": null
+    },
+    "CHI:defence": {
+      "text": "Takes the ball away more than any other defence, though the pass rush from Montez Sweat and Dayo Odeyingbo does not get home often; Jaylon Johnson and Tyrique Stevenson man the corners.",
+      "key": null
+    },
+    "CHI:offence": {
+      "text": "Runs the ball more than most teams and gains good yards doing it, while rarely giving the ball away. Caleb Williams throws to a very young group in Rome Odunze, Luther Burden III and Colston Loveland.",
+      "key": null
+    },
+    "CIN:offence": {
+      "text": "Throws almost more than anyone in the league, with Joe Burrow feeding Ja'Marr Chase and Tee Higgins for touchdowns. The running game gains little, and the ball gets given away often.",
+      "key": null
+    },
+    "CLE:offence": {
+      "text": "Gained less per pass than any other offence last season under a different staff; Todd Monken now takes over, with rookies KC Concepcion and tackle Spencer Fano among the pieces.",
+      "key": null
+    },
+    "CLE:specialTeams": {
+      "text": "Andre Szmyt was accurate on field goals, with Malachi Corley, a third-round pick of the Jets, returning kicks.",
+      "key": null
+    },
+    "DAL:offence": {
+      "text": "Leans towards throwing, with Dak Prescott spreading it between CeeDee Lamb and George Pickens for plenty of passing touchdowns, and running the ball himself a fair bit too.",
+      "key": null
+    },
+    "DAL:specialTeams": {
+      "text": "Kicker Brandon Aubrey makes almost everything he tries, among the most accurate in the league, with KaVontae Turpin handling kick returns.",
+      "key": null
+    },
+    "DEN:defence": {
+      "text": "Sacked the quarterback more than any other team, with Zach Allen and Nik Bonitto rushing and Pat Surtain II covering, but takeaways were scarce.",
+      "key": null
+    },
+    "DEN:offence": {
+      "text": "Bo Nix, in his third season, runs an offence that gains little per throw — only a handful of teams averaged fewer yards per pass — with Courtland Sutton, Jaylen Waddle and Evan Engram as his targets and a steady ground game under Sean Payton.",
+      "key": null
+    },
+    "DET:offence": {
+      "text": "Scores heavily both through the air and on the ground, built around Jared Goff throwing to Amon-Ra St. Brown and Jahmyr Gibbs carrying it behind Penei Sewell.",
+      "key": null
+    },
+    "DET:specialTeams": {
+      "text": "Kicker Jake Bates is the main name here, with Jacob Saylors returning kicks; the kicking has been fairly dependable, the return and coverage work less so.",
+      "key": null
+    },
+    "GB:defence": {
+      "text": "Doesn't get to the quarterback much and forces few turnovers, leaning on interior linemen Devonte Wyatt and Karl Brooks, with rookie cornerback Brandon Cisse alongside Keisean Nixon.",
+      "key": null
+    },
+    "GB:specialTeams": {
+      "text": "Rookie kicker Trey Smack handles the field goals, which have gone in at a good rate, with Skyy Moore returning kicks.",
+      "key": null
+    },
+    "HOU:defence": {
+      "text": "Gets after the quarterback through Will Anderson Jr. and Danielle Hunter, and takes the ball away as often as any defence, with Derek Stingley Jr. and Kamari Lassiter covering.",
+      "key": null
+    },
+    "HOU:offence": {
+      "text": "Runs through C.J. Stroud and Nico Collins and takes very good care of the ball, but the ground game with David Montgomery gained little and scored rarely.",
+      "key": null
+    },
+    "JAX:defence": {
+      "text": "Takes the ball away about as often as anyone, but rarely sacks the quarterback despite first-round pass rushers Travon Walker and Josh Hines-Allen. Travis Hunter also plays receiver.",
+      "key": null
+    },
+    "JAX:offence": {
+      "text": "Trevor Lawrence is a big part of the running game himself, carrying the ball often; the handoffs went nowhere much, yet both the run and pass games scored plenty of touchdowns.",
+      "key": null
+    },
+    "KC:offence": {
+      "text": "One of the most pass-heavy attacks in the league, running through Patrick Mahomes with Rashee Rice, Xavier Worthy and the veteran Travis Kelce catching them.",
+      "key": null
+    },
+    "KC:specialTeams": {
+      "text": "Centred on veteran kicker Harrison Butker, who converted a high share of his field goals, with Nikko Remigio returning kicks.",
+      "key": null
+    },
+    "LAC:defence": {
+      "text": "A defence that takes the ball away at a good rate and gets after the quarterback, with 13th-season veteran Khalil Mack, a fifth overall pick of Oakland's back in 2014, still the headline name.",
+      "key": null
+    },
+    "LAC:specialTeams": {
+      "text": "Kicking is the strength here: Cameron Dicker made a higher share of his field goals than any other kicker, with Derius Davis handling kick returns.",
+      "key": null
+    },
+    "LAR:offence": {
+      "text": "A passing offence first: Matthew Stafford threw for more touchdowns than any other quarterback, with Puka Nacua and Davante Adams outside and Kyren Williams carrying the run game.",
+      "key": null
+    },
+    "LV:specialTeams": {
+      "text": "Matt Gay is a reliable field-goal kicker and Dylan Laube handles kick returns. Klint Kubiak is now the head coach, his first season in the job.",
+      "key": null
+    },
+    "MIA:defence": {
+      "text": "A linebacker-heavy group led by Chop Robinson, middling for both sacks and takeaways last season under the previous staff; Jeff Hafley has since taken over as head coach.",
+      "key": null
+    },
+    "MIA:specialTeams": {
+      "text": "Riley Patterson was among the most accurate kickers in the league, and Malik Washington doubles as the kick returner, with Jeff Hafley now overseeing the whole operation.",
+      "key": null
+    },
+    "MIN:defence": {
+      "text": "A pass rush that gets home often, with 2024 first-rounder Dallas Turner and young interior linemen leading it, and a secondary that chips in a fair share of takeaways.",
+      "key": null
+    },
+    "MIN:specialTeams": {
+      "text": "Built around kicker Will Reichard, who was the most accurate field-goal kicker in the league, with Myles Price handling kick returns.",
+      "key": null
+    },
+    "NE:defence": {
+      "text": "A unit fronted by interior men Christian Barmore and Milton Williams and by Christian Gonzalez, just made the league's best-paid cornerback. It rarely sacks the quarterback or forces turnovers.",
+      "key": null
+    },
+    "NE:specialTeams": {
+      "text": "Andy Borregales makes his field goals at close to the best rate in the league; Kyle Williams handles kick returns.",
+      "key": null
+    },
+    "NO:defence": {
+      "text": "A front-led unit: veteran Cameron Jordan and Chase Young get after the quarterback at a decent clip, with young corners Kool-Aid McKinstry and Quincy Riley behind them.",
+      "key": null
+    },
+    "NO:specialTeams": {
+      "text": "Daniel Carlson's field-goal kicking is around the middle of the league, so the problems lie in the coverage and return phases, where rookie Barion Brown handles kickoffs.",
+      "key": null
+    },
+    "NYG:defence": {
+      "text": "Gets a fair amount of pressure but rarely forces fumbles or interceptions. Abdul Carter, the third pick overall, is in his second season alongside corners Deonte Banks and Greg Newsome II.",
+      "key": null
+    },
+    "NYJ:offence": {
+      "text": "They run the ball well enough per carry with Breece Hall, but almost nothing comes through the air — the fewest yards per throw of nearly any team, despite Garrett Wilson.",
+      "key": null
+    },
+    "PHI:defence": {
+      "text": "Built around Jalen Carter inside and Jonathan Greenard rushing off the edge, with young cornerback Quinyon Mitchell and Riq Woolen outside.",
+      "key": null
+    },
+    "PHI:specialTeams": {
+      "text": "Rests largely on long-serving kicker Jake Elliott, with Will Shipley taking the kick returns.",
+      "key": null
+    },
+    "PIT:specialTeams": {
+      "text": "Built around Chris Boswell, a kicker deep into his career who converts at a respectable clip, with rookie Kaden Wetjen handling kick returns.",
+      "key": null
+    },
+    "SEA:specialTeams": {
+      "text": "Jason Myers is reliable from placekicks and Rashid Shaheed, also a receiver, handles kick returns.",
+      "key": null
+    },
+    "SF:defence": {
+      "text": "A unit that got to the quarterback less than anyone else last season and forced few turnovers, still built around Nick Bosa up front and homegrown corners Deommodore Lenoir and Renardo Green.",
+      "key": null
+    },
+    "SF:offence": {
+      "text": "They throw a little less than most teams and get very little per carry, but score through the air often, with Brock Purdy finding George Kittle, Mike Evans and Deebo Samuel, and Christian McCaffrey doing plenty of the work.",
+      "key": null
+    },
+    "SF:specialTeams": {
+      "text": "Eddy Pineiro made a higher share of his field goals than any kicker in the league, and Deebo Samuel doubles as the kick returner.",
+      "key": null
+    },
+    "TB:defence": {
+      "text": "A group that takes the ball away more often than most, led by pass-rushing tackle Calijah Kancey and Yaya Diaby, with Zyon McCollum and second-year corner Benjamin Morrison behind them. Sacks come at an average rate.",
+      "key": null
+    },
+    "TB:offence": {
+      "text": "Baker Mayfield, just handed a big extension, leads a group that throws slightly less than most and doesn't get much per carry, with Bucky Irving running behind Tristan Wirfs and Chris Godwin and Emeka Egbuka catching.",
+      "key": null
+    },
+    "TB:specialTeams": {
+      "text": "Kicker Chase McLaughlin is the strength here, making field goals at one of the better rates in the league, with Kameron Johnson handling kick returns.",
+      "key": null
+    },
+    "TEN:defence": {
+      "text": "They get after the quarterback well enough through John Franklin-Myers and Jermaine Johnson, but rarely take the ball away from opponents.",
+      "key": null
+    },
+    "TEN:offence": {
+      "text": "One of the pass-heaviest teams in the league, built around second-year quarterback Cam Ward, though the throws gained little; rookie Carnell Tate arrives as a top-five pick.",
+      "key": null
+    },
+    "TEN:specialTeams": {
+      "text": "Joey Slye handles the kicking, with Chimere Dike returning kicks.",
+      "key": null
+    },
+    "WSH:defence": {
+      "text": "Gets after the quarterback often enough, but almost never takes the ball away — only one team forced fewer turnovers.",
+      "key": null
+    },
+    "WSH:offence": {
+      "text": "One of the most run-leaning teams in the league, and they move the ball well on the ground, but their passing game with Jayden Daniels produced few touchdowns despite Terry McLaurin and Stefon Diggs.",
+      "key": null
+    }
+  },
+  "profiles": {
+    "13976": {
+      "text": "An outside linebacker whose job is chasing quarterbacks, taken second overall in 2011 and now in a sixteenth season, most recently signing a one-year deal with Dallas. He was Defensive Rookie of the Year and a Super Bowl MVP, and he has piled up well over a hundred career sacks, though at this age a short contract suggests a team checking what is left.",
+      "key": null
+    },
+    "16716": {
+      "text": "A defensive tackle — an interior lineman whose job is to blow up plays from the middle of the defence — taken in the first round in 2014 and now in his tenth season with the Rams, having un-retired at thirty-five. Three Defensive Player of the Year awards and more than a hundred career sacks make him one of the best defenders anyone has watched, though the question now is how much is left.",
+      "key": null
+    },
+    "3122132": {
+      "text": "A defensive end — one of the linemen whose job is to chase down the quarterback — taken first overall in 2017 and now in his tenth season, recently traded from Cleveland to the Rams. He is the best defensive player in football, a two-time Defensive Player of the Year with more than a hundred and twenty-five career sacks, and he set the single-season record on his way out of Cleveland.",
+      "key": null
+    },
+    "4047646": {
+      "text": "A wide receiver picked in the second round in 2019, now eight seasons in and on his way to New England after a spell in Philadelphia. He is a genuine number one target, the kind a defence has to plan its whole week around, with more than eight thousand career receiving yards and a knack for the big play.",
+      "key": null
+    },
+    "4241479": {
+      "text": "A quarterback drafted fifth overall in 2020, now in his seventh season and starting for Atlanta after Miami released him. He is an accurate, quick-release passer who completes about sixty-eight percent of his throws and rarely runs, but no Pro Bowls or awards here — and his old team took a record salary-cap hit simply to be rid of the contract, which says plenty.",
+      "key": null
+    },
+    "4242512": {
+      "text": "A quarterback taken in the third round in 2022, now in his fifth season and handed the starting job in Miami on a large contract. He has been a career backup with only a handful of starts, mostly covering for an injured teammate in Green Bay, and he looked lively doing it, throwing efficiently and running well — but that is a long way from proof he can start.",
+      "key": null
+    },
+    "4360499": {
+      "text": "A centre — the lineman who snaps the ball to the quarterback — drafted twenty-fifth overall in 2022 and now in his fifth season, having left Baltimore for Las Vegas in free agency. He has made the Pro Bowl three years running and started every game he has played, and Baltimore's running game was the league's most efficient in front of him; the Raiders gave him the biggest contract an interior lineman has ever had.",
+      "key": null
+    },
+    "4578085": {
+      "text": "A defensive end — one of the linemen whose main job is getting to the quarterback — picked nineteenth overall in 2024 and now in his third season, having just been traded to Cleveland. He was Defensive Rookie of the Year and has a dozen sacks already, so the early signs are strong, but he is young enough that the big years are still ahead of him.",
+      "key": null
+    },
+    "4686772": {
+      "text": "A cornerback drafted seventeenth overall in 2023, now four seasons into his career with New England. He is the team's top cover man and they have just handed him the largest contract ever given to a cornerback, which tells you more than his numbers do — the raw totals are modest, but the money is the club's clearest statement of belief.",
+      "key": null
+    }
+  }
+}

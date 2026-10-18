@@ -83,7 +83,8 @@ lastUpdated: 2026-07-29
 ---
 ```
 
-`type: moves` carries one extra block, and nothing else may:
+Two types carry one extra block each — `move:` on `type: moves`, `calendar:`
+on `type: calendar` — and no other type may carry either. The moves block:
 
 ```yaml
 move:
@@ -113,7 +114,16 @@ season-altering only: routine weekly knocks are live data, already shown on
 game cards and team pages, and an MDX file for a "questionable" ankle is stale
 in three days.
 
-The filename's date prefix must be a prefix of `move.date`. `npm run test:moves`
+`type: calendar` carries the date it is about, so the home screen can show the
+next one rather than whichever file sorts first:
+
+```yaml
+calendar:
+  date: "2026-11-03"     # always YYYY-MM-DD; the schema rejects the block
+                         # anywhere but type: calendar
+```
+
+The filename's date prefix must be a prefix of `move.date`. `npm test` (tests/moves.test.ts)
 enforces that, plus §5's two-sentences-per-axis budget.
 
 `reviewed: false` renders a small marker in development only — never in production. It's a to-do list, not a disclaimer to the reader.
@@ -275,41 +285,50 @@ out, and the card itself displays no statistics.
 
 ## 10. Design direction
 
-*Revised August 2026. This section previously specified a light "coach's laminated call sheet" — paper-grey background, editorial serif, monospace data. It was built exactly as written and it read as a printed document, not an app. Krish's verdict: "the UI sucks… I want it to be the NFL App for newbies to use." The old direction is dead; don't reintroduce it.*
+*Revised October 2026. Two directions are dead and must not come back. The first, a light "coach's laminated call sheet" (paper grey, editorial serif, monospace data), read as a printed document. The second, an Apple Sports / Real imitation in Inter on near-black, was competent and samey: every card the same, every label the same small grey caps, nothing that said football. The approved proposal for what replaced it is `docs/design/yellow-line.html`, with renders in `docs/design/yellow-line-row*.png`. Match it.*
 
-**Concept: a modern consumer sports app.** Reference points are **Apple Sports** and **Real** — dark, logo-forward, card-based, all-sans. Content sits on cards floating over a near-black page. Team identity comes from logos, not from chrome. It should look like something he'd have downloaded, not like a reference site about football.
+**Concept: Yellow Line.** The yellow first-down line is the one piece of broadcast graphics built to explain football to people watching it. It is this product's mark: every explained term sits on it, every "watch this" signal is its colour. Around it, a social sports app (Sleeper energy, not a reference site) on a night-turf ground: chunky rounded cards, jersey-numeral ratings, condensed down-and-distance labels, a five-tab bottom bar. The football field itself appears only where a game is the subject. Krish's own flags are the red challenge flag: he is contesting the call, and the queue is where the review happens.
 
-**Palette** — dark, so team logos and colour carry the interest:
+**Palette** — dark with a green cast, so logos and the yellow line carry the interest. Tokens live in `src/app/globals.css`; Tailwind classes use the names (`bg-night`, `text-chalk-dim`, `border-line`).
 
 ```
---ink        #0A0C0B   page background, near-black with a faint green cast
---surface    #141817   cards
---surface-2  #1E2422   raised / pressed
---line       #2A302E   hairline borders
---fg         #F2F4F3   primary text
---fg-dim     #98A29E   secondary text
---amber      #FFC53D   "watch this"
---pencil     #FF6B5E   flags and urgency
---royal      #4C8DFF   Bills / allegiance accent
+--night      #0B100E   page ground
+--surface    #141B18   cards
+--surface-2  #1D2622   raised, chips, quiet tiles
+--line       #2A3530   hairlines
+--turf       #123524   field cards only, never a general surface
+--turf-2     #164029   the second mown stripe
+--chalk      #F2F5F0   primary text
+--chalk-dim  #9DAAA3   secondary text
+--yellow     #F5E12A   explained terms and "watch this". Nothing else.
+--challenge  #FF5B4F   flags: Krish contesting a phrase
+--mint       #3DE3A6   checked / good
+--royal      #5B95FF   Bills, "your team"
 ```
 
-The accents keep the meanings the old palette gave them; only the values changed. The originals were mixed for a light background and are unreadable here — the old royal `#00338D` managed 1.7:1 against ink.
+Every text token clears 4.5:1 on both night and surface; night on a yellow fill clears it too. Yellow means one of two things and must not be spent on decoration — a third meaning dilutes the signature.
 
-**Type: one family, Inter.** UI, data and long reads all use it. A single modern sans is most of what separates "app" from "document". Reading comfort comes from size, measure and leading, not a second family. Numerals in columns get `tabular-nums`.
+**Type: two families.** Big Shoulders (Google's successor to Big Shoulders Display; its optical-size axis picks the display cut at large sizes) for page titles, section headings and numerals — scoreboard lettering. Archivo for everything else, including long reads; its width axis supplies the condensed down-and-distance label (`label` utility: 75% width, 700 weight, uppercase, 0.07em tracking). Both load through `next/font/google`, self-hosted at build. Numerals in columns get `tabular-nums`.
+
+**Shape and space:** card radius 22, inner 14, chips and buttons fully round, sheet 28 on top. Spacing on 4/8/12/16/24/32/48, 16px page gutter. Flat cards on night; shadow only on things that float (sheet, flag popover).
+
+**Components** (in `src/components/ui/`): the rating tile (a 48×52 jersey numeral — 5 solid yellow, 4 yellow outline, 3 chalk outline, 1–2 quiet — always with its two-word label and a sentence), chips (solid yellow, yellow outline, quiet, mint, royal, unchecked), the field card (mown stripes, yard lines, logos in the end zones — reserved for the one game that matters to him that week), the tab bar (active tab gets a pill and a yellow line along its top edge), the yard bar for rubric axes, the trade ledger.
+
+**Motion:** taps 120ms; the sheet rises over 320ms on `cubic-bezier(.16,1,.3,1)`. The one authored moment is a tapped term's yellow line flooding up to fill the word as its sheet rises. Under `prefers-reduced-motion` the sheet cross-fades and the flood is instant. No other entrances.
 
 ### Team logos and colours — two rules learned the hard way
 
 **Logos are bundled, never hotlinked.** `npm run fetch:teams` pulls all 32 from ESPN into `public/logos/` and writes `src/lib/teams/nfl-teams.json`. Pages read the JSON. This is §4's data-flow rule; it also means ESPN breaking never breaks the site. Use the `500-dark` variant — for black-heavy logos (Raiders, Jets, Saints) ESPN serves a version with a white keyline that survives a dark background, and returns the standard logo for everyone else.
 
-**Never render an official brand colour directly.** 22 of the 32 fail contrast against `--ink`; Buffalo's `#00338D` is 1.7:1, effectively invisible. The fetch script computes a `displayColor` per team — the brand hue lifted until it clears 4.5:1 — and that is the only colour the UI renders. Teams whose primary is black (Steelers, Raiders) fall back to their `alternateColor`, because lightening black only ever produces grey.
+**Never render an official brand colour directly.** 22 of the 32 fail contrast against the page ground; Buffalo's `#00338D` is 1.7:1, effectively invisible. The fetch script computes a `displayColor` per team — the brand hue lifted until it clears 4.5:1 — and that is the only colour the UI renders. Teams whose primary is black (Steelers, Raiders) fall back to their `alternateColor`, because lightening black only ever produces grey.
 
 A consequence worth knowing: lifting the navies converges Dallas, New England, Seattle and the Giants on nearly the same blue. **Colour cannot identify a team here.** The logo does that; colour is decoration.
 
-**Signature element: the explained term.** Auto-linked glossary terms (§6a) get a dotted amber underline and, on tap, a sheet that slides up from the bottom. The old spec put a hand-drawn grease-pencil stroke here; the reasoning behind it still holds even though the execution doesn't. "The jargon gets explained" is the entire product thesis, so the jargon marker is the one place to spend boldness — everything else stays quiet.
+**Signature element: the explained term.** Auto-linked glossary terms (§6a) sit on a solid 3px yellow rule — the first-down line under the word. On tap it floods to a full yellow block while a sheet rises from the bottom. No other element on the site puts yellow under text. "The jargon gets explained" is the entire product thesis, so this is the one place to spend boldness; everything else stays quiet.
 
-**Quality floor, unannounced:** responsive to 380px, visible keyboard focus, `prefers-reduced-motion` respected, tap targets 44px minimum. Phone is the primary device — he will read this on transit and in bars.
+**Quality floor, unannounced:** responsive to 380px, visible keyboard focus, `prefers-reduced-motion` respected, tap targets 44px minimum, safe-area insets on the tab bar. Phone is the primary device — he will read this on transit and in bars.
 
-**Copy voice:** plain verbs, sentence case, active voice. Name things by what he recognizes, not by how the system works. "Flag this" not "Submit annotation." Empty states are invitations, not apologies.
+**Copy voice:** plain verbs, sentence case, active voice. Name things by what he recognizes, not by how the system works. "Flag this" not "Submit annotation"; "Rams by 3.5" not "fav". Empty states are invitations, not apologies.
 
 ## 11. Build order
 
