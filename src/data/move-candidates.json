@@ -1,6 +1,136 @@
 {
   "candidates": [
     {
+      "id": "50218378",
+      "headline": "Jalen Hurts expected to miss season after blood clots discovered in QB's lungs",
+      "description": "Eagles QB Jalen Hurts is expected to miss the rest of the season after doctors discovered multiple blood clots in his lungs, according to NFL Network and ESPN.",
+      "published": "2026-10-19",
+      "likelyKind": "injury",
+      "teams": [
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4040715",
+          "name": "Jalen Hurts",
+          "position": "Quarterback",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50218378/eagles-jalen-hurts-season-due-blood-clots-lungs",
+      "attempts": 0
+    },
+    {
+      "id": "50218249",
+      "headline": "Falcons sign veteran QB Andy Dalton, release QB Cooper Rush",
+      "description": "The Falcons have signed veteran quarterback Andy Dalton and released quarterback Cooper Rush, the team announced on Monday.",
+      "published": "2026-10-19",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "14012",
+          "name": "Andy Dalton",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "2972515",
+          "name": "Cooper Rush",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50218249/sources-falcons-signing-qb-dalton-releasing-qb-rush",
+      "attempts": 0
+    },
+    {
+      "id": "50217832",
+      "headline": "Packers' D shines vs. Cowboys as Micah Parsons nears return",
+      "description": "Even without Parsons, who is recovering from a torn ACL, Green Bay's defense has shut down its past three opponents.",
+      "published": "2026-10-19",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4361423",
+          "name": "Micah Parsons",
+          "position": "Defensive End",
+          "currentTeam": "GB"
+        },
+        {
+          "id": "4428863",
+          "name": "Evan Williams",
+          "position": "Safety",
+          "currentTeam": "GB"
+        },
+        {
+          "id": "5076652",
+          "name": "Brandon Cisse",
+          "position": "Cornerback",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50217832/packers-defeat-cowboys-micah-parsons-josh-jacobs",
+      "attempts": 0
+    },
+    {
+      "id": "50211304",
+      "headline": "Judging overreactions to NFL Week 6: Regretting Daniel Jones, A.J. Brown deals?",
+      "description": "Did the Colts severely misfire by re-signing Jones? What about the Patriots with the A.J. Brown trade? We're judging overreactions to Sunday's games.",
+      "published": "2026-10-19",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts",
+        "New England Patriots",
+        "Jacksonville Jaguars",
+        "Los Angeles Rams",
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "IND",
+        "NE",
+        "JAX",
+        "LAR",
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "4426338",
+          "name": "Bo Nix",
+          "position": "Quarterback",
+          "currentTeam": "DEN"
+        },
+        {
+          "id": "4038941",
+          "name": "Justin Herbert",
+          "position": "Quarterback",
+          "currentTeam": "LAC"
+        },
+        {
+          "id": "4696981",
+          "name": "Cam Skattebo",
+          "position": "Running Back",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50211304/week-6-overreactions-2026-graziano-aj-brown-jones-rams",
+      "attempts": 0
+    },
+    {
       "id": "50195809",
       "headline": "What Cowboys-Packers' Micah Parsons trade means a year later",
       "description": "We examine the fallout and lingering impact on both franchises more than a year after the blockbuster deal.",
@@ -942,7 +1072,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50059771",
       "headline": "Inside George Kittle's 243-day recovery from torn Achilles",
@@ -964,7 +1096,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50059771/san-francisco-49ers-george-kittle-torn-achilles-recovery",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-19"
     },
     {
       "id": "50059809",
@@ -999,7 +1133,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50059809/source-bengals-cut-keshawn-williams-costly-muffed-punt",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-19"
     },
     {
       "id": "50059755",
@@ -1022,7 +1158,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-19"
     },
     {
       "id": "50053035",
@@ -1047,10 +1185,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-19"
+    },
     {
       "id": "50052903",
       "headline": "McCarthy exits Vikings as one of franchise's biggest draft busts",
