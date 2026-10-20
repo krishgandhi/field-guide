@@ -1,6 +1,168 @@
 {
   "candidates": [
     {
+      "id": "50228692",
+      "headline": "Titans abruptly release DT Jordan Elliott for undisclosed reasons",
+      "description": "The Titans abruptly released defensive tackle Jordan Elliott on Tuesday, citing an undisclosed \"incident\" from Thursday at the team's facility.",
+      "published": "2026-10-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4039052",
+          "name": "Jordan Elliott",
+          "position": "Defensive Tackle",
+          "currentTeam": "TEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50228692/titans-abruptly-release-dt-jordan-elliott-undisclosed-reasons",
+      "attempts": 0
+    },
+    {
+      "id": "50221426",
+      "headline": "Rams suffer several major injuries, including to WR Adams, who's out 6-10 weeks",
+      "description": "Rams wideout Davante Adams ruptured a hamstring in Sunday's loss to the Cardinals, and he will be sidelined for six to 10 weeks, coach Sean McVay announced.",
+      "published": "2026-10-20",
+      "likelyKind": "injury",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "16800",
+          "name": "Davante Adams",
+          "position": "Wide Receiver",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "3125114",
+          "name": "Poona Ford",
+          "position": "Defensive Tackle",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "4250621",
+          "name": "Kobie Turner",
+          "position": "Defensive End",
+          "currentTeam": "LAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50221426/rams-lose-star-wr-davante-adams-6-10-weeks-mcvay-says",
+      "attempts": 0
+    },
+    {
+      "id": "50221241",
+      "headline": "John Harbaugh: Giants 'honing in on' QB decision for Sunday vs. Texans",
+      "description": "The Giants are \"honing in on\" a decision on who will start at quarterback for Sunday's game against the Texans, coach John Harbaugh said Monday.",
+      "published": "2026-10-19",
+      "likelyKind": "role",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "4433970",
+          "name": "J.J. McCarthy",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "2969939",
+          "name": "Jameis Winston",
+          "position": "Quarterback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50221241/john-harbaugh-giants-honing-qb-decision-week-7",
+      "attempts": 0
+    },
+    {
+      "id": "50220744",
+      "headline": "Colts to stick with Daniel Jones at quarterback vs. Vikings",
+      "description": "Daniel Jones will remain the Indianapolis Colts' starting quarterback when they travel to play the Minnesota Vikings in Week 7, coach Shane Steichen said.",
+      "published": "2026-10-19",
+      "likelyKind": "role",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50220744/colts-stick-daniel-jones-quarterback-vs-vikings",
+      "attempts": 0
+    },
+    {
+      "id": "50219961",
+      "headline": "Mayfield to practice this week but Buccaneers to prep as if Daniels will play",
+      "description": "Baker Mayfield will return to practice Wednesday for the Buccaneers, but the team will prepare as if Jalon Daniels will start at QB, coach Todd Bowles said.",
+      "published": "2026-10-19",
+      "likelyKind": "role",
+      "teams": [
+        "Tampa Bay Buccaneers"
+      ],
+      "teamIds": [
+        "TB"
+      ],
+      "players": [
+        {
+          "id": "3052587",
+          "name": "Baker Mayfield",
+          "position": "Quarterback",
+          "currentTeam": "TB"
+        },
+        {
+          "id": "4596472",
+          "name": "Jalon Daniels",
+          "position": "Quarterback",
+          "currentTeam": "TB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50219961/mayfield-practice-buccaneers-prep-daniels-play",
+      "attempts": 0
+    },
+    {
+      "id": "50218623",
+      "headline": "What does firing GM Ballard mean for Colts coach Steichen?",
+      "description": "Carlie Irsay-Gordon made a big change Monday, but is it the first of many as the trade deadline nears?",
+      "published": "2026-10-19",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50218623/colts-fire-gm-chris-ballard-shane-steichen",
+      "attempts": 0
+    },
+    {
       "id": "50218378",
       "headline": "Jalen Hurts expected to miss season after blood clots discovered in QB's lungs",
       "description": "Eagles QB Jalen Hurts is expected to miss the rest of the season after doctors discovered multiple blood clots in his lungs, according to NFL Network and ESPN.",
@@ -920,7 +1082,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50043542",
       "headline": "NFL trade deadline grades: Joey Porter Jr. to Cowboys, J.J. McCarthy to Giants",
@@ -954,7 +1118,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
     },
     {
       "id": "50074351",
@@ -979,7 +1145,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50074351/sources-steelers-trade-joey-porter-jr-cowboys",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
     },
     {
       "id": "50071951",
@@ -1002,7 +1170,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50071951/falcons-sign-dt-gervon-dexter-sr-four-year-extension",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
     },
     {
       "id": "50068583",
@@ -1025,7 +1195,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
     },
     {
       "id": "50071302",
@@ -1048,7 +1220,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50071302/giants-harbaugh-explains-reasoning-releasing-beckham",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
     },
     {
       "id": "50067128",
@@ -1071,10 +1245,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-20"
+    },
     {
       "id": "50059771",
       "headline": "Inside George Kittle's 243-day recovery from torn Achilles",

@@ -3,18 +3,6 @@
   "week": 6,
   "games": [
     {
-      "id": "401873008",
-      "kickoff": "2026-10-20T00:15Z",
-      "home": "SF",
-      "away": "WSH",
-      "spread": 7.5,
-      "favourite": "home",
-      "overUnder": 51.5,
-      "broadcast": "ESPN, ABC",
-      "venue": "Levi's Stadium",
-      "neutralSite": false
-    },
-    {
       "id": "401872995",
       "kickoff": "2026-10-16T00:15Z",
       "home": "DEN",
@@ -169,6 +157,18 @@
       "broadcast": "NBC",
       "venue": "Lambeau Field",
       "neutralSite": false
+    },
+    {
+      "id": "401873008",
+      "kickoff": "2026-10-20T00:15Z",
+      "home": "SF",
+      "away": "WSH",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN, ABC",
+      "venue": "Levi's Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [
@@ -220,23 +220,13 @@
     ],
     "CHI": [
       {
-        "player": "Tyrique Stevenson Sr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Kyle Monangai",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
         "player": "T.J. Edwards",
         "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Keyshaun Elliott",
-        "position": "LB",
+        "player": "Kyle Monangai",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -248,6 +238,11 @@
       }
     ],
     "DAL": [
+      {
+        "player": "Dee Winters",
+        "position": "LB",
+        "status": "Doubtful"
+      },
       {
         "player": "DeMarvion Overshown",
         "position": "LB",
@@ -268,18 +263,13 @@
     ],
     "GB": [
       {
-        "player": "Benjamin St-Juste",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Josh Jacobs",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
         "player": "Micah Parsons",
         "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Benjamin St-Juste",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -350,19 +340,27 @@
     ],
     "LAR": [
       {
+        "player": "Kobie Turner",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Davante Adams",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Trent McDuffie",
         "position": "CB",
         "status": "Out"
       }
     ],
-    "MIA": [
+    "NE": [
       {
-        "player": "Storm Duck",
+        "player": "Carlton Davis III",
         "position": "CB",
         "status": "Out"
-      }
-    ],
-    "NE": [
+      },
       {
         "player": "Karon Prunty",
         "position": "CB",
@@ -370,11 +368,6 @@
       },
       {
         "player": "Channing Canada",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Carlton Davis III",
         "position": "CB",
         "status": "Out"
       }
@@ -422,42 +415,27 @@
     ],
     "PHI": [
       {
-        "player": "Joe Milton",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
         "player": "AJ Epenesa",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Hollywood Brown",
-        "position": "WR",
         "status": "Out"
       },
       {
         "player": "Jalyx Hunt",
         "position": "LB",
         "status": "Out"
-      }
-    ],
-    "PIT": [
-      {
-        "player": "Drew Allar",
-        "position": "QB",
-        "status": "Out"
       },
       {
-        "player": "Will Howard",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Eli Heidenreich",
+        "player": "Saquon Barkley",
         "position": "RB",
         "status": "Out"
       },
+      {
+        "player": "Michael Carter II",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "PIT": [
       {
         "player": "Ben Skowronek",
         "position": "WR",
@@ -466,8 +444,13 @@
     ],
     "SF": [
       {
-        "player": "Nick Bosa",
-        "position": "DE",
+        "player": "Kurtis Rourke",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Garret Wallow",
+        "position": "LB",
         "status": "Out"
       },
       {
@@ -476,12 +459,22 @@
         "status": "Out"
       },
       {
-        "player": "Garret Wallow",
-        "position": "LB",
+        "player": "Nick Bosa",
+        "position": "DE",
         "status": "Out"
       }
     ],
     "SEA": [
+      {
+        "player": "Elijah Arroyo",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Zach Charbonnet",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Chazz Surratt",
         "position": "LB",
@@ -490,16 +483,6 @@
       {
         "player": "Drake Thomas",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Elijah Arroyo",
-        "position": "TE",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Zach Charbonnet",
-        "position": "RB",
         "status": "Out"
       }
     ],
@@ -520,23 +503,6 @@
         "status": "Out"
       }
     ],
-    "TEN": [
-      {
-        "player": "Kylen Granson",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Nicholas Singleton",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Alontae Taylor",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
     "WSH": [
       {
         "player": "Marcus Mariota",
@@ -544,18 +510,18 @@
         "status": "Out"
       },
       {
-        "player": "Javontae Jean-Baptiste",
-        "position": "LB",
+        "player": "Terry McLaurin",
+        "position": "WR",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Isaac Yiadom",
+        "position": "CB",
         "status": "Out"
       },
       {
         "player": "Charles Omenihu",
         "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Jacory Croskey-Merritt",
-        "position": "RB",
         "status": "Out"
       }
     ]
