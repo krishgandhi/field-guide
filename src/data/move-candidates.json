@@ -1,6 +1,104 @@
 {
   "candidates": [
     {
+      "id": "50232379",
+      "headline": "Steelers bring back veteran Marquez Valdes-Scantling amid receiver injury woes",
+      "description": "The Steelers, in need of help at wide receiver with Michael Pittman Jr. and Roman Wilson out because of injuries, signed veteran Marquez Valdes-Scantling on Tuesday.",
+      "published": "2026-10-21",
+      "likelyKind": "transaction",
+      "teams": [
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "3051738",
+          "name": "Marquez Valdes-Scantling",
+          "position": "Wide Receiver",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50232379/steelers-bring-back-marquez-valdes-scantling-amid-wr-injuries",
+      "attempts": 0
+    },
+    {
+      "id": "50231705",
+      "headline": "Sources: Rams signing free agent kicker Brandon McManus",
+      "description": "The Rams, after releasing Harrison Mevis and an injury to Blake Grupe, are signing free agent kicker Brandon McManus, sources told NFL Network.",
+      "published": "2026-10-21",
+      "likelyKind": "transaction",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "16339",
+          "name": "Brandon McManus",
+          "position": "Place Kicker",
+          "currentTeam": "LAR"
+        },
+        {
+          "id": "4259619",
+          "name": "Blake Grupe",
+          "position": "Place Kicker",
+          "currentTeam": "LAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50231705/sources-rams-signing-free-agent-kicker-brandon-mcmanus",
+      "attempts": 0
+    },
+    {
+      "id": "50230371",
+      "headline": "Commanders WR Terry McLaurin has torn patellar tendon, ending his season",
+      "description": "Commanders wide receiver Terry McLaurin suffered a torn patellar tendon, an injury that will end his season, coach Dan Quinn announced Tuesday.",
+      "published": "2026-10-20",
+      "likelyKind": "injury",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "3121422",
+          "name": "Terry McLaurin",
+          "position": "Wide Receiver",
+          "currentTeam": "WSH"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50230371/commanders-wr-terry-mclaurin-torn-patellar-tendon",
+      "attempts": 0
+    },
+    {
+      "id": "50229491",
+      "headline": "Dolphins release Riley Patterson after Week 5 problems defending kickoffs",
+      "description": "The Dolphins released kicker Riley Patterson in a move aimed to improve one of the NFL's worst special teams units.",
+      "published": "2026-10-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "Miami Dolphins"
+      ],
+      "teamIds": [
+        "MIA"
+      ],
+      "players": [
+        {
+          "id": "4243371",
+          "name": "Riley Patterson",
+          "position": "Place Kicker",
+          "currentTeam": "MIA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50229491/sources-dolphins-release-riley-patterson-amid-kickoff-woes",
+      "attempts": 0
+    },
+    {
       "id": "50228692",
       "headline": "Titans abruptly release DT Jordan Elliott for undisclosed reasons",
       "description": "The Titans abruptly released defensive tackle Jordan Elliott on Tuesday, citing an undisclosed \"incident\" from Thursday at the team's facility.",
@@ -959,7 +1057,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50085487",
       "headline": "Bears coach Ben Johnson not ready to name QB starter",
@@ -993,7 +1093,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-21"
     },
     {
       "id": "50069588",
@@ -1024,7 +1126,9 @@
         }
       ],
       "url": "https://www.espn.com/fantasy/football/story/_/id/50069588/fantasy-football-start-sit-sleepers-breakouts-week-4",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-21"
     },
     {
       "id": "50052555",
@@ -1056,7 +1160,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-21"
     },
     {
       "id": "50076570",
@@ -1081,10 +1187,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-21"
+    },
     {
       "id": "50043542",
       "headline": "NFL trade deadline grades: Joey Porter Jr. to Cowboys, J.J. McCarthy to Giants",

@@ -2089,12 +2089,12 @@
               "draftedBy": "2020: Rd 1, Pk 26 (GB)"
             },
             {
-              "id": "4429023",
-              "name": "MarShawn Lloyd",
+              "id": "4047365",
+              "name": "Josh Jacobs",
               "label": "RB",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 3, Pk 88 (GB)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 1, Pk 24 (OAK)"
             },
             {
               "id": "4248528",
@@ -3358,11 +3358,11 @@
         "specialTeams": {
           "players": [
             {
-              "id": "4259619",
-              "name": "Blake Grupe",
+              "id": "16339",
+              "name": "Brandon McManus",
               "label": "K",
-              "debutYear": null,
-              "experience": 4,
+              "debutYear": 2014,
+              "experience": 13,
               "draftedBy": null
             },
             {
@@ -3732,24 +3732,7 @@
           }
         },
         "specialTeams": {
-          "players": [
-            {
-              "id": "4243371",
-              "name": "Riley Patterson",
-              "label": "K",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": null
-            },
-            {
-              "id": "4682745",
-              "name": "Jaylen Wright",
-              "label": "KR",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 4, Pk 120 (MIA)"
-            }
-          ],
+          "players": [],
           "rank": 21,
           "score": 2,
           "note": "Below average at kicking field goals so far this season, 21st of 32.",
@@ -5857,20 +5840,20 @@
               "draftedBy": "2022: Rd 3, Pk 91 (TB)"
             },
             {
-              "id": "3121422",
-              "name": "Terry McLaurin",
-              "label": "WR",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 3, Pk 76 (WSH)"
-            },
-            {
               "id": "2976212",
               "name": "Stefon Diggs",
               "label": "WR",
               "debutYear": 2015,
               "experience": 12,
               "draftedBy": "2015: Rd 5, Pk 146 (MIN)"
+            },
+            {
+              "id": "5081432",
+              "name": "Antonio Williams",
+              "label": "WR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 71 (WSH)"
             },
             {
               "id": "4360635",
