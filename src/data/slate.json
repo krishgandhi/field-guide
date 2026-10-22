@@ -31,9 +31,9 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "ATL",
       "away": "SF",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "away",
-      "overUnder": 50.5,
+      "overUnder": 49.5,
       "broadcast": "Fox",
       "venue": "Mercedes-Benz Stadium",
       "neutralSite": false
@@ -79,7 +79,7 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "CAR",
       "away": "TB",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 44.5,
       "broadcast": "Fox",
@@ -91,9 +91,9 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "BAL",
       "away": "CIN",
-      "spread": 3,
-      "favourite": "home",
-      "overUnder": 51.5,
+      "spread": 1.5,
+      "favourite": "away",
+      "overUnder": 48.5,
       "broadcast": "CBS",
       "venue": "M&T Bank Stadium",
       "neutralSite": false
@@ -103,7 +103,7 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "HOU",
       "away": "NYG",
-      "spread": 10,
+      "spread": 10.5,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "Fox",
@@ -139,7 +139,7 @@
       "kickoff": "2026-10-25T20:25Z",
       "home": "LV",
       "away": "LAR",
-      "spread": 4.5,
+      "spread": 3.5,
       "favourite": "away",
       "overUnder": 48.5,
       "broadcast": "Fox",
@@ -151,7 +151,7 @@
       "kickoff": "2026-10-26T00:20Z",
       "home": "SEA",
       "away": "KC",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "NBC",
@@ -178,6 +178,30 @@
     "WSH"
   ],
   "injuries": {
+    "CAR": [
+      {
+        "player": "Jaelan Phillips",
+        "position": "LB",
+        "status": "Doubtful"
+      }
+    ],
+    "CHI": [
+      {
+        "player": "Jack Sanborn",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "T.J. Edwards",
+        "position": "LB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Kyle Monangai",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "DAL": [
       {
         "player": "Dee Winters",
@@ -187,8 +211,8 @@
     ],
     "DEN": [
       {
-        "player": "Pat Surtain II",
-        "position": "CB",
+        "player": "Jonah Elliss",
+        "position": "LB",
         "status": "Doubtful"
       }
     ],
@@ -206,17 +230,27 @@
         "status": "Doubtful"
       }
     ],
-    "LAR": [
+    "NE": [
       {
-        "player": "Kobie Turner",
-        "position": "DE",
+        "player": "Channing Canada",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Karon Prunty",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Carlton Davis III",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "NYJ": [
       {
-        "player": "Adonai Mitchell",
-        "position": "WR",
+        "player": "Joseph Ossai",
+        "position": "DE",
         "status": "Doubtful"
       }
     ],
@@ -234,13 +268,13 @@
     ],
     "SEA": [
       {
-        "player": "Elijah Arroyo",
-        "position": "TE",
+        "player": "Zach Charbonnet",
+        "position": "RB",
         "status": "Out"
       },
       {
-        "player": "Zach Charbonnet",
-        "position": "RB",
+        "player": "Elijah Arroyo",
+        "position": "TE",
         "status": "Out"
       }
     ],
