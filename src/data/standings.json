@@ -38,15 +38,6 @@
       "pointsAgainst": 122,
       "conferenceRank": 4
     },
-    "NE": {
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 23,
-      "pointsFor": 136,
-      "pointsAgainst": 113,
-      "conferenceRank": 5
-    },
     "DEN": {
       "wins": 4,
       "losses": 2,
@@ -54,7 +45,7 @@
       "pointDifferential": -11,
       "pointsFor": 114,
       "pointsAgainst": 125,
-      "conferenceRank": 6
+      "conferenceRank": 5
     },
     "PIT": {
       "wins": 4,
@@ -63,7 +54,7 @@
       "pointDifferential": 9,
       "pointsFor": 137,
       "pointsAgainst": 128,
-      "conferenceRank": 7
+      "conferenceRank": 6
     },
     "BAL": {
       "wins": 4,
@@ -72,7 +63,7 @@
       "pointDifferential": 24,
       "pointsFor": 156,
       "pointsAgainst": 132,
-      "conferenceRank": 8
+      "conferenceRank": 7
     },
     "CIN": {
       "wins": 3,
@@ -81,6 +72,15 @@
       "pointDifferential": 19,
       "pointsFor": 128,
       "pointsAgainst": 109,
+      "conferenceRank": 8
+    },
+    "NE": {
+      "wins": 4,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": 17,
+      "pointsFor": 160,
+      "pointsAgainst": 143,
       "conferenceRank": 9
     },
     "LV": {
@@ -164,6 +164,15 @@
       "pointsAgainst": 64,
       "conferenceRank": 2
     },
+    "CHI": {
+      "wins": 5,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 37,
+      "pointsFor": 180,
+      "pointsAgainst": 143,
+      "conferenceRank": 5
+    },
     "GB": {
       "wins": 4,
       "losses": 2,
@@ -171,15 +180,6 @@
       "pointDifferential": 2,
       "pointsFor": 127,
       "pointsAgainst": 125,
-      "conferenceRank": 5
-    },
-    "CHI": {
-      "wins": 4,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 31,
-      "pointsFor": 150,
-      "pointsAgainst": 119,
       "conferenceRank": 6
     },
     "CAR": {

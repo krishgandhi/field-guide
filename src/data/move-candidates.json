@@ -1,6 +1,29 @@
 {
   "candidates": [
     {
+      "id": "50256842",
+      "headline": "Sources: Jaguars LT Harrison out for season after surgery reveals torn ACL",
+      "description": "Jaguars left tackle Anton Harrison will miss the rest of the season because of a torn ACL in his right knee, league sources told NFL Network's Ian Rapoport.",
+      "published": "2026-10-23",
+      "likelyKind": "injury",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4692525",
+          "name": "Anton Harrison",
+          "position": "Offensive Tackle",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50256842/sources-jaguars-lt-anton-harrison-season-torn-acl",
+      "attempts": 0
+    },
+    {
       "id": "50232379",
       "headline": "Steelers bring back veteran Marquez Valdes-Scantling amid receiver injury woes",
       "description": "The Steelers, in need of help at wide receiver with Michael Pittman Jr. and Roman Wilson out because of injuries, signed veteran Marquez Valdes-Scantling on Tuesday.",
@@ -1032,7 +1055,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50085908",
       "headline": "McCarthy: Trade to Giants a 'shock,' turns page on Vikings",
@@ -1056,10 +1081,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-23"
+    },
     {
       "id": "50085487",
       "headline": "Bears coach Ben Johnson not ready to name QB starter",

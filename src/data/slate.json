@@ -7,9 +7,9 @@
       "kickoff": "2026-10-23T00:15Z",
       "home": "CHI",
       "away": "NE",
-      "spread": 3,
-      "favourite": "home",
-      "overUnder": 50.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Soldier Field",
       "neutralSite": false
@@ -19,7 +19,7 @@
       "kickoff": "2026-10-25T13:30Z",
       "home": "NO",
       "away": "PIT",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 44.5,
       "broadcast": "NFL Net",
@@ -92,7 +92,7 @@
       "home": "BAL",
       "away": "CIN",
       "spread": 1.5,
-      "favourite": "away",
+      "favourite": "home",
       "overUnder": 48.5,
       "broadcast": "CBS",
       "venue": "M&T Bank Stadium",
@@ -187,14 +187,19 @@
     ],
     "CHI": [
       {
-        "player": "Jack Sanborn",
-        "position": "LB",
+        "player": "Case Keenum",
+        "position": "QB",
         "status": "Out"
       },
       {
         "player": "T.J. Edwards",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Nick McCloud",
+        "position": "CB",
+        "status": "Out"
       },
       {
         "player": "Kyle Monangai",
@@ -218,9 +223,21 @@
     ],
     "GB": [
       {
+        "player": "Luke Musgrave",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Micah Parsons",
         "position": "DE",
         "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "David Montgomery",
+        "position": "RB",
+        "status": "Doubtful"
       }
     ],
     "IND": [
@@ -231,6 +248,11 @@
       }
     ],
     "NE": [
+      {
+        "player": "Behren Morton",
+        "position": "QB",
+        "status": "Out"
+      },
       {
         "player": "Channing Canada",
         "position": "CB",
@@ -251,7 +273,24 @@
       {
         "player": "Joseph Ossai",
         "position": "DE",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Kiko Mauigoa",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "PIT": [
+      {
+        "player": "Brandin Echols",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Ben Skowronek",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "SF": [
@@ -263,18 +302,6 @@
       {
         "player": "Garret Wallow",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "SEA": [
-      {
-        "player": "Zach Charbonnet",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Elijah Arroyo",
-        "position": "TE",
         "status": "Out"
       }
     ],
