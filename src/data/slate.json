@@ -43,9 +43,9 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "TEN",
       "away": "CLE",
-      "spread": 1.5,
+      "spread": 2.5,
       "favourite": "away",
-      "overUnder": 37.5,
+      "overUnder": 36.5,
       "broadcast": "CBS",
       "venue": "Nissan Stadium",
       "neutralSite": false
@@ -92,8 +92,8 @@
       "home": "BAL",
       "away": "CIN",
       "spread": 1.5,
-      "favourite": "home",
-      "overUnder": 48.5,
+      "favourite": "away",
+      "overUnder": 47.5,
       "broadcast": "CBS",
       "venue": "M&T Bank Stadium",
       "neutralSite": false
@@ -103,7 +103,7 @@
       "kickoff": "2026-10-25T17:00Z",
       "home": "HOU",
       "away": "NYG",
-      "spread": 10.5,
+      "spread": 10,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "Fox",
@@ -139,7 +139,7 @@
       "kickoff": "2026-10-25T20:25Z",
       "home": "LV",
       "away": "LAR",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 48.5,
       "broadcast": "Fox",
@@ -178,11 +178,47 @@
     "WSH"
   ],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Jeremiyah Love",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "ATL": [
+      {
+        "player": "Billy Bowman Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Divine Deablo",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Brian Robinson Jr.",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "BAL": [
+      {
+        "player": "Tavius Robinson",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CAR": [
+      {
+        "player": "Thomas Incoom",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Jaelan Phillips",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "CHI": [
@@ -218,10 +254,20 @@
       {
         "player": "Jonah Elliss",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Tyler Badie",
+        "position": "RB",
+        "status": "Out"
       }
     ],
     "GB": [
+      {
+        "player": "Zaire Franklin",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Luke Musgrave",
         "position": "TE",
@@ -237,13 +283,54 @@
       {
         "player": "David Montgomery",
         "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "IND": [
       {
         "player": "Sauce Gardner",
         "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Tyler Warren",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Anthony Gould",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "KC": [
+      {
+        "player": "Brashard Smith",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Rashee Rice",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "LAR": [
+      {
+        "player": "Nate Landman",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Reese Taylor",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Robert Beal Jr.",
+        "position": "DE",
         "status": "Doubtful"
       }
     ],
@@ -269,15 +356,32 @@
         "status": "Out"
       }
     ],
-    "NYJ": [
+    "NYG": [
       {
-        "player": "Joseph Ossai",
-        "position": "DE",
+        "player": "Tremaine Edmunds",
+        "position": "LB",
         "status": "Out"
       },
       {
+        "player": "Greg Newsome II",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Theo Johnson",
+        "position": "TE",
+        "status": "Doubtful"
+      }
+    ],
+    "NYJ": [
+      {
         "player": "Kiko Mauigoa",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Joseph Ossai",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -295,13 +399,47 @@
     ],
     "SF": [
       {
-        "player": "Deebo Samuel Sr.",
-        "position": "WR",
+        "player": "Garret Wallow",
+        "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Garret Wallow",
+        "player": "Luke Gifford",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Nick Bosa",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Deebo Samuel Sr.",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "SEA": [
+      {
+        "player": "Chazz Surratt",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Drake Thomas",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Zach Charbonnet",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Emeka Egbuka",
+        "position": "WR",
         "status": "Out"
       }
     ],

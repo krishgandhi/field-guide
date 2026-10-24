@@ -1,6 +1,64 @@
 {
   "candidates": [
     {
+      "id": "50258881",
+      "headline": "Inside the silent messages Boye Mafe sends every game day",
+      "description": "The Bengals defensive end uses sign language to say \"I love you\" to his mother, Bola, who died of pancreatic cancer in 2018.",
+      "published": "2026-10-24",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cincinnati Bengals"
+      ],
+      "teamIds": [
+        "CIN"
+      ],
+      "players": [
+        {
+          "id": "4240754",
+          "name": "Boye Mafe",
+          "position": "Defensive End",
+          "currentTeam": "CIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50258881/cincinnati-bengals-boye-mafe-sign-language",
+      "attempts": 0
+    },
+    {
+      "id": "50260899",
+      "headline": "Giants LB Tremaine Edmunds (chest) out for year, source says",
+      "description": "Giants linebacker Tremaine Edmunds will miss the rest of the season with a torn chest muscle, a source told ESPN's Jordan Raanan. Edmunds leads the team with 50 tackles and wears the green dot to make the calls on defense.",
+      "published": "2026-10-23",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "3929950",
+          "name": "Tremaine Edmunds",
+          "position": "Linebacker",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "4036132",
+          "name": "Chauncey Golston",
+          "position": "Defensive End",
+          "currentTeam": "NYG"
+        },
+        {
+          "id": "4371961",
+          "name": "Micah McFadden",
+          "position": "Linebacker",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50260899/giants-lb-tremaine-edmunds-chest-year-source-says",
+      "attempts": 0
+    },
+    {
       "id": "50256842",
       "headline": "Sources: Jaguars LT Harrison out for season after surgery reveals torn ACL",
       "description": "Jaguars left tackle Anton Harrison will miss the rest of the season because of a torn ACL in his right knee, league sources told NFL Network's Ian Rapoport.",
@@ -1009,7 +1067,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50092744/bears-lt-braxton-jones-ir-theo-benedet-start-vs-jets",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50086094",
       "headline": "Seahawks WR Jaxon Smith-Njigba off to a historic start, but is it sustainable?",
@@ -1031,7 +1091,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50086094/seahawks-jaxon-smith-njigba-historic-start",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-24"
     },
     {
       "id": "50086232",
@@ -1054,10 +1116,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-24"
+    },
     {
       "id": "50085908",
       "headline": "McCarthy: Trade to Giants a 'shock,' turns page on Vikings",
