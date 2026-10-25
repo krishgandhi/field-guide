@@ -1,6 +1,64 @@
 {
   "candidates": [
     {
+      "id": "50272352",
+      "headline": "Sources: Colts face big decisions on star players as NFL trade deadline looms",
+      "description": "The Colts are expected to field trade inquiries on some of their star players, including Jonathan Taylor, DeForest Buckner and Quenton Nelson.",
+      "published": "2026-10-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50272352/sources-decisions-loom-colts-nfl-trade-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50275489",
+      "headline": "Browns DT Maliek Collins lands 2-year extension worth $30 million, agent says",
+      "description": "The Browns and DT Maliek Collins have agreed to terms on a two-year, $30M extension that includes $23M guaranteed, his agent told ESPN and NFL Network.",
+      "published": "2026-10-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cleveland Browns"
+      ],
+      "teamIds": [
+        "CLE"
+      ],
+      "players": [
+        {
+          "id": "3040471",
+          "name": "Maliek Collins",
+          "position": "Defensive Tackle",
+          "currentTeam": "CLE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50275489/browns-maliek-collins-lands-2-year-extension-agent-says",
+      "attempts": 0
+    },
+    {
       "id": "50258881",
       "headline": "Inside the silent messages Boye Mafe sends every game day",
       "description": "The Bengals defensive end uses sign language to say \"I love you\" to his mother, Bola, who died of pancreatic cancer in 2018.",
@@ -1009,7 +1067,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50087681",
       "headline": "Patriots preach patience when it comes to receiver WR Romeo Doubs' modest start",
@@ -1043,7 +1103,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50087681/patriots-romeo-doubs-bills-game",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-25"
     },
     {
       "id": "50092744",
@@ -1066,10 +1128,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50092744/bears-lt-braxton-jones-ir-theo-benedet-start-vs-jets",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-25"
+    },
     {
       "id": "50086094",
       "headline": "Seahawks WR Jaxon Smith-Njigba off to a historic start, but is it sustainable?",

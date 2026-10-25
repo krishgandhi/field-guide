@@ -317,12 +317,12 @@
               "draftedBy": "2017: Rd 4, Pk 125 (LAR)"
             },
             {
-              "id": "4240596",
-              "name": "C.J. Henderson",
+              "id": "4239995",
+              "name": "A.J. Terrell Jr.",
               "label": "CB",
               "debutYear": 2020,
-              "experience": 6,
-              "draftedBy": "2020: Rd 1, Pk 9 (JAX)"
+              "experience": 7,
+              "draftedBy": "2020: Rd 1, Pk 16 (ATL)"
             },
             {
               "id": "3895841",
@@ -1862,12 +1862,12 @@
               "draftedBy": null
             },
             {
-              "id": "4362748",
-              "name": "Tyler Badie",
+              "id": "4702555",
+              "name": "Jonah Coleman",
               "label": "KR",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2022: Rd 6, Pk 196 (BAL)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 4, Pk 108 (DEN)"
             }
           ],
           "rank": 28,
@@ -2138,7 +2138,7 @@
               "rank": 30
             },
             "_passAttempts": {
-              "value": "226",
+              "value": "225",
               "rank": 7
             },
             "_sacks": {
@@ -2166,8 +2166,8 @@
               "rank": 15
             }
           },
-          "passPlayShare": 67.7,
-          "passPlayShareRank": 2,
+          "passPlayShare": 67.6,
+          "passPlayShareRank": 3,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -3732,7 +3732,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "3043234",
+              "name": "Zane Gonzalez",
+              "label": "K",
+              "debutYear": 2017,
+              "experience": 9,
+              "draftedBy": "2017: Rd 7, Pk 224 (CLE)"
+            },
+            {
+              "id": "4682745",
+              "name": "Jaylen Wright",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 120 (MIA)"
+            }
+          ],
           "rank": 21,
           "score": 2,
           "note": "Below average at kicking field goals so far this season, 21st of 32.",
@@ -4256,12 +4273,12 @@
               "draftedBy": "2024: Rd 2, Pk 41 (NO)"
             },
             {
-              "id": "4428350",
-              "name": "Quincy Riley",
+              "id": "4429568",
+              "name": "Martin Emerson Jr.",
               "label": "CB",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 4, Pk 131 (NO)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 3, Pk 68 (CLE)"
             }
           ],
           "rank": 31,
@@ -4436,12 +4453,12 @@
               "draftedBy": "2025: Rd 1, Pk 3 (NYG)"
             },
             {
-              "id": "4428328",
-              "name": "Deonte Banks",
+              "id": "4242547",
+              "name": "Paulson Adebo",
               "label": "CB",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
+              "experience": 6,
+              "draftedBy": "2021: Rd 3, Pk 76 (NO)"
             },
             {
               "id": "4361266",
@@ -4970,7 +4987,7 @@
             }
           },
           "passPlayShare": 67.7,
-          "passPlayShareRank": 3,
+          "passPlayShareRank": 2,
           "quarterbackCarries": 9
         },
         "defence": {
