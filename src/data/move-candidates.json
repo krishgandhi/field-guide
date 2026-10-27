@@ -1,6 +1,136 @@
 {
   "candidates": [
     {
+      "id": "50278890",
+      "headline": "Seven things Solak thinks entering NFL Week 8: WR trade for Chiefs? Goff for MVP?",
+      "description": "Get ready for Week 8 with takes on the Chiefs' trade deadline plan, Jared Goff's sneaky season, Kevin Stefanski's Coach of the Year case and the Ravens' struggling defense.",
+      "published": "2026-10-27",
+      "likelyKind": "transaction",
+      "teams": [
+        "Kansas City Chiefs",
+        "Atlanta Falcons",
+        "Baltimore Ravens",
+        "Indianapolis Colts",
+        "Denver Broncos",
+        "Detroit Lions",
+        "Carolina Panthers"
+      ],
+      "teamIds": [
+        "KC",
+        "ATL",
+        "BAL",
+        "IND",
+        "DEN",
+        "DET",
+        "CAR"
+      ],
+      "players": [
+        {
+          "id": "3046779",
+          "name": "Jared Goff",
+          "position": "Quarterback",
+          "currentTeam": "DET"
+        },
+        {
+          "id": "4702555",
+          "name": "Jonah Coleman",
+          "position": "Running Back",
+          "currentTeam": "DEN"
+        },
+        {
+          "id": "4685720",
+          "name": "Bryce Young",
+          "position": "Quarterback",
+          "currentTeam": "CAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50278890/week-8-seven-things-solak-thinks-chiefs-trade-goff-mvp",
+      "attempts": 0
+    },
+    {
+      "id": "50043471",
+      "headline": "2026 NFL trade deadline updates: Marvin Harrison Jr., Cam Jurgens on the move",
+      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Cards sending Marvin Harrison Jr. to the Texans.",
+      "published": "2026-10-27",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants",
+        "Dallas Cowboys",
+        "Pittsburgh Steelers",
+        "Philadelphia Eagles",
+        "Baltimore Ravens",
+        "Arizona Cardinals",
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG",
+        "DAL",
+        "PIT",
+        "PHI",
+        "BAL",
+        "ARI",
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
+      "attempts": 0
+    },
+    {
+      "id": "50291573",
+      "headline": "Cardinals WR Jalen Brooks to miss rest of season with wrist injury",
+      "description": "Cardinals wide receiver Jalen Brooks posted on social media Monday that he will miss the rest of the season with a wrist injury.",
+      "published": "2026-10-26",
+      "likelyKind": "injury",
+      "teams": [
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "4692835",
+          "name": "Jalen Brooks",
+          "position": "Wide Receiver",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50291573/cardinals-jalen-brooks-wrist-miss-rest-season",
+      "attempts": 0
+    },
+    {
+      "id": "50291280",
+      "headline": "Panthers RT Taylor Moton to undergo season-ending ankle surgery",
+      "description": "Panthers right tackle Taylor Moton will undergo season-ending ankle surgery while also recovering from a fractured fibula in his left leg.",
+      "published": "2026-10-26",
+      "likelyKind": "injury",
+      "teams": [
+        "Carolina Panthers"
+      ],
+      "teamIds": [
+        "CAR"
+      ],
+      "players": [
+        {
+          "id": "2973051",
+          "name": "Taylor Moton",
+          "position": "Offensive Tackle",
+          "currentTeam": "CAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50291280/panthers-taylor-moton-season-ending-ankle-surgery",
+      "attempts": 0
+    },
+    {
       "id": "50272352",
       "headline": "Sources: Colts face big decisions on star players as NFL trade deadline looms",
       "description": "The Colts are expected to field trade inquiries on some of their star players, including Jonathan Taylor, DeForest Buckner and Quenton Nelson.",
@@ -971,7 +1101,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50110763",
       "headline": "Sources: Packers LB Edgerrin Cooper has torn Achilles",
@@ -993,7 +1125,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-27"
     },
     {
       "id": "50110486",
@@ -1018,7 +1152,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50110486/ben-johnson-tyson-bagent-start-qb-bears-vs-packers",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-27"
     },
     {
       "id": "50109680",
@@ -1041,7 +1177,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-27"
     },
     {
       "id": "50095248",
@@ -1066,10 +1204,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-27"
+    },
     {
       "id": "50087681",
       "headline": "Patriots preach patience when it comes to receiver WR Romeo Doubs' modest start",
