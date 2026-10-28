@@ -1,6 +1,148 @@
 {
   "candidates": [
     {
+      "id": "50309159",
+      "headline": "Source: Colts' Josh Downs requests trade; Jonathan Taylor hasn't, per coach",
+      "description": "Colts wide receiver Josh Downs is requesting a trade amid the team's rebuilding efforts, a source told ESPN's Jeremy Fowler on Wednesday.",
+      "published": "2026-10-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4688813",
+          "name": "Josh Downs",
+          "position": "Wide Receiver",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50309159/source-wr-downs-requests-trade-rb-taylor-per-coach",
+      "attempts": 0
+    },
+    {
+      "id": "50302002",
+      "headline": "Buckner, Nelson trades signal Colts' rebuild underway",
+      "description": "DeForest Buckner and Quenton Nelson are headed to contending teams. Could Jonathan Taylor be next?",
+      "published": "2026-10-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        },
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50302002/colts-deforest-buckner-quenton-nelson-jonathan-taylor",
+      "attempts": 0
+    },
+    {
+      "id": "50301125",
+      "headline": "Colts trade DT DeForest Buckner to 49ers in another major move",
+      "description": "The Colts have traded DeForest Buckner to the Colts for a 2027 fourth-round pick.",
+      "published": "2026-10-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "San Francisco 49ers",
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "SF",
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50301125/colts-trade-de-deforest-buckner-49ers",
+      "attempts": 0
+    },
+    {
+      "id": "50043471",
+      "headline": "2026 NFL trade deadline updates: DeForest Buckner, Quenton Nelson on the move",
+      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Colts dealing Quenton Nelson and DeForest Buckner.",
+      "published": "2026-10-27",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants",
+        "Dallas Cowboys",
+        "Pittsburgh Steelers",
+        "Philadelphia Eagles",
+        "Baltimore Ravens",
+        "Arizona Cardinals",
+        "Houston Texans",
+        "Seattle Seahawks",
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG",
+        "DAL",
+        "PIT",
+        "PHI",
+        "BAL",
+        "ARI",
+        "HOU",
+        "SEA",
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        },
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
+      "attempts": 0
+    },
+    {
       "id": "50278890",
       "headline": "Seven things Solak thinks entering NFL Week 8: WR trade for Chiefs? Goff for MVP?",
       "description": "Get ready for Week 8 with takes on the Chiefs' trade deadline plan, Jared Goff's sneaky season, Kevin Stefanski's Coach of the Year case and the Ravens' struggling defense.",
@@ -45,43 +187,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50278890/week-8-seven-things-solak-thinks-chiefs-trade-goff-mvp",
-      "attempts": 0
-    },
-    {
-      "id": "50043471",
-      "headline": "2026 NFL trade deadline updates: Marvin Harrison Jr., Cam Jurgens on the move",
-      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Cards sending Marvin Harrison Jr. to the Texans.",
-      "published": "2026-10-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants",
-        "Dallas Cowboys",
-        "Pittsburgh Steelers",
-        "Philadelphia Eagles",
-        "Baltimore Ravens",
-        "Arizona Cardinals",
-        "Houston Texans"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG",
-        "DAL",
-        "PIT",
-        "PHI",
-        "BAL",
-        "ARI",
-        "HOU"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
       "attempts": 0
     },
     {
@@ -1024,7 +1129,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50121315",
       "headline": "Tyreek Hill's wife recounts assault, verbal abuse at trial",
@@ -1048,7 +1155,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-28"
     },
     {
       "id": "50121196",
@@ -1071,7 +1180,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50121196/giants-berrios-says-undergo-season-ending-foot-surgery",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-28"
     },
     {
       "id": "50111468",
@@ -1100,10 +1211,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-28"
+    },
     {
       "id": "50110763",
       "headline": "Sources: Packers LB Edgerrin Cooper has torn Achilles",

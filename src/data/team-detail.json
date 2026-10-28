@@ -325,12 +325,12 @@
               "draftedBy": "2020: Rd 1, Pk 16 (ATL)"
             },
             {
-              "id": "3895841",
-              "name": "Mike Hughes",
+              "id": "4240596",
+              "name": "C.J. Henderson",
               "label": "CB",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 1, Pk 30 (MIN)"
+              "debutYear": 2020,
+              "experience": 6,
+              "draftedBy": "2020: Rd 1, Pk 9 (JAX)"
             }
           ],
           "rank": 26,
@@ -1713,12 +1713,12 @@
               "draftedBy": "2024: Rd 1, Pk 12 (DEN)"
             },
             {
-              "id": "4702555",
-              "name": "Jonah Coleman",
+              "id": "4241985",
+              "name": "J.K. Dobbins",
               "label": "RB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 4, Pk 108 (DEN)"
+              "debutYear": 2020,
+              "experience": 7,
+              "draftedBy": "2020: Rd 2, Pk 55 (BAL)"
             },
             {
               "id": "4372016",
@@ -3489,12 +3489,12 @@
         "defence": {
           "players": [
             {
-              "id": "4373956",
-              "name": "Jonah Laulu",
+              "id": "3045172",
+              "name": "Folorunso Fatukasi",
               "label": "DT",
-              "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 7, Pk 234 (IND)"
+              "debutYear": 2018,
+              "experience": 8,
+              "draftedBy": "2018: Rd 6, Pk 180 (NYJ)"
             },
             {
               "id": "4429109",
