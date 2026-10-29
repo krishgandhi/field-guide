@@ -9,7 +9,7 @@
       "away": "CAR",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 46.5,
       "broadcast": "Prime Video",
       "venue": "Lambeau Field",
       "neutralSite": false
@@ -31,7 +31,7 @@
       "kickoff": "2026-11-01T18:00Z",
       "home": "CIN",
       "away": "TEN",
-      "spread": 10,
+      "spread": 11.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -103,7 +103,7 @@
       "kickoff": "2026-11-01T18:00Z",
       "home": "JAX",
       "away": "IND",
-      "spread": 9.5,
+      "spread": 10,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -151,7 +151,7 @@
       "kickoff": "2026-11-02T01:20Z",
       "home": "WSH",
       "away": "PHI",
-      "spread": 5.5,
+      "spread": 6,
       "favourite": "home",
       "overUnder": 40.5,
       "broadcast": "NBC",
@@ -185,11 +185,30 @@
         "status": "Out"
       }
     ],
+    "BUF": [
+      {
+        "player": "Tyrell Shavers",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "CAR": [
+      {
+        "player": "Jaelan Phillips",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "GB": [
       {
         "player": "Zaire Franklin",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
       }
     ],
     "NYJ": [

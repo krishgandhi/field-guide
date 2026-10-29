@@ -1,6 +1,226 @@
 {
   "candidates": [
     {
+      "id": "50319153",
+      "headline": "Bears get Jeffery Simmons: Key intel on blockbuster trade",
+      "description": "Is Jeffery Simmons the key missing piece for the Bears' Super Bowl puzzle? Here are key takeaways from the blockbuster trade.",
+      "published": "2026-10-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Chicago Bears",
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "CHI",
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4035369",
+          "name": "Jeffery Simmons",
+          "position": "Defensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50319153/jeffery-simmons-trade-titans-bears-draft-picks-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50319874",
+      "headline": "Colts' Jonathan Taylor confirms he hasn't requested trade: 'Proud to be here'",
+      "description": "The Colts' Jonathan Taylor confirmed he has not asked for a trade amid the team's roster overhaul, but he acknowledged any and all changes are possible.",
+      "published": "2026-10-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50319874/colts-jonathan-taylor-confirms-requested-trade",
+      "attempts": 0
+    },
+    {
+      "id": "50318351",
+      "headline": "Bears acquire All-Pro DT Jeffery Simmons in trade with Titans",
+      "description": "The Bears are acquiring All-Pro defensive tackle Jeffery Simmons from the Titans.",
+      "published": "2026-10-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Chicago Bears",
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "CHI",
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4035369",
+          "name": "Jeffery Simmons",
+          "position": "Defensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50318351/sources-bears-trade-all-pro-dt-jeffery-simmons",
+      "attempts": 0
+    },
+    {
+      "id": "50043471",
+      "headline": "2026 NFL trade deadline updates: Jeffery Simmons, Quenton Nelson on the move",
+      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including a blockbuster sending Jeffery Simmons to Chicago.",
+      "published": "2026-10-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants",
+        "Dallas Cowboys",
+        "Pittsburgh Steelers",
+        "Philadelphia Eagles",
+        "Baltimore Ravens",
+        "Arizona Cardinals",
+        "Houston Texans",
+        "Seattle Seahawks",
+        "Indianapolis Colts",
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG",
+        "DAL",
+        "PIT",
+        "PHI",
+        "BAL",
+        "ARI",
+        "HOU",
+        "SEA",
+        "IND",
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        },
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
+      "attempts": 0
+    },
+    {
+      "id": "50312624",
+      "headline": "Cardinals' Budda Baker hopes to stay with Arizona at trade deadline",
+      "description": "Budda Baker hopes that when the trade deadline passes, he'll still be in Arizona.",
+      "published": "2026-10-29",
+      "likelyKind": "transaction",
+      "teams": [
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "3127287",
+          "name": "Budda Baker",
+          "position": "Safety",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50312624/cardinals-budda-baker-stay-arizona-trade-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50311414",
+      "headline": "Texans put WR Jaylin Noel on IR with expected season-ending turf toe injury",
+      "description": "The Texans placed wide receiver Jaylin Noel on injured reserve; he is expected to miss the rest of the season with turf toe, a source confirmed.",
+      "published": "2026-10-28",
+      "likelyKind": "injury",
+      "teams": [
+        "Houston Texans"
+      ],
+      "teamIds": [
+        "HOU"
+      ],
+      "players": [
+        {
+          "id": "4586312",
+          "name": "Jaylin Noel",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50311414/texans-put-wr-jaylin-noel-ir-turf-toe-injury",
+      "attempts": 0
+    },
+    {
+      "id": "50308919",
+      "headline": "Jets WR Garrett Wilson says he doesn't want to be traded but does want to win",
+      "description": "Jets receiver Garrett Wilson says he doesn't want to be traded but he expressed that he's frustrated by his target share and, most of all, losing.",
+      "published": "2026-10-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4569618",
+          "name": "Garrett Wilson",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50308919/jets-wr-garrett-wilson-says-want-traded",
+      "attempts": 0
+    },
+    {
+      "id": "50311100",
+      "headline": "Brian Thomas Jr. trying to ignore trade talk, 'keep working hard' for Jaguars",
+      "description": "Jaguars receiver Brian Thomas Jr. said Wednesday that he isn't concerned about being the subject of recent trade rumors.",
+      "published": "2026-10-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4432773",
+          "name": "Brian Thomas Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50311100/jaguars-brian-thomas-jr-trying-ignore-trade-talk",
+      "attempts": 0
+    },
+    {
       "id": "50309159",
       "headline": "Source: Colts' Josh Downs requests trade; Jonathan Taylor hasn't, per coach",
       "description": "Colts wide receiver Josh Downs is requesting a trade amid the team's rebuilding efforts, a source told ESPN's Jeremy Fowler on Wednesday.",
@@ -87,59 +307,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50301125/colts-trade-de-deforest-buckner-49ers",
-      "attempts": 0
-    },
-    {
-      "id": "50043471",
-      "headline": "2026 NFL trade deadline updates: DeForest Buckner, Quenton Nelson on the move",
-      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including the Colts dealing Quenton Nelson and DeForest Buckner.",
-      "published": "2026-10-27",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants",
-        "Dallas Cowboys",
-        "Pittsburgh Steelers",
-        "Philadelphia Eagles",
-        "Baltimore Ravens",
-        "Arizona Cardinals",
-        "Houston Texans",
-        "Seattle Seahawks",
-        "Indianapolis Colts"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG",
-        "DAL",
-        "PIT",
-        "PHI",
-        "BAL",
-        "ARI",
-        "HOU",
-        "SEA",
-        "IND"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "3129308",
-          "name": "Quenton Nelson",
-          "position": "Guard",
-          "currentTeam": "SEA"
-        },
-        {
-          "id": "2971282",
-          "name": "DeForest Buckner",
-          "position": "Defensive Tackle",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
       "attempts": 0
     },
     {
@@ -944,7 +1111,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50147669",
       "headline": "Sources: Ravens held Cam Jurgens physical before trade with Eagles",
@@ -968,7 +1137,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50147669/sources-ravens-held-cam-jurgens-physical-trade-eagles",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50142134",
@@ -991,7 +1162,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50134415",
@@ -1022,7 +1195,9 @@
         }
       ],
       "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50138218",
@@ -1045,7 +1220,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50138218/undrafted-rookie-qb-daniels-savors-thursday-night-win-vs-cowboys",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50127865",
@@ -1068,7 +1245,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50127865/te-sam-laporta-says-extension-talks-lions-stalemate",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50124795",
@@ -1103,7 +1282,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50124795/san-francisco-49ers-2026-season-injuries-list",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
     },
     {
       "id": "50126306",
@@ -1128,10 +1309,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-29"
+    },
     {
       "id": "50121315",
       "headline": "Tyreek Hill's wife recounts assault, verbal abuse at trial",
