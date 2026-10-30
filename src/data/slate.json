@@ -7,9 +7,9 @@
       "kickoff": "2026-10-30T00:15Z",
       "home": "GB",
       "away": "CAR",
-      "spread": 3.5,
-      "favourite": "home",
-      "overUnder": 46.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Lambeau Field",
       "neutralSite": false
@@ -31,7 +31,7 @@
       "kickoff": "2026-11-01T18:00Z",
       "home": "CIN",
       "away": "TEN",
-      "spread": 11.5,
+      "spread": 12.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "CBS",
@@ -93,7 +93,7 @@
       "away": "ATL",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "Fox",
       "venue": "Raymond James Stadium",
       "neutralSite": false
@@ -194,12 +194,37 @@
     ],
     "CAR": [
       {
+        "player": "Haynes King",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Ja'Tavion Sanders",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "AJ Dillon",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Jaelan Phillips",
         "position": "LB",
         "status": "Out"
       }
     ],
     "GB": [
+      {
+        "player": "Kaleb Johnson",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Jonnu Smith",
+        "position": "TE",
+        "status": "Out"
+      },
       {
         "player": "Zaire Franklin",
         "position": "LB",
@@ -216,6 +241,13 @@
         "player": "Joseph Ossai",
         "position": "DE",
         "status": "Doubtful"
+      }
+    ],
+    "TB": [
+      {
+        "player": "Emeka Egbuka",
+        "position": "WR",
+        "status": "Out"
       }
     ]
   }

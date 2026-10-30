@@ -1,6 +1,58 @@
 {
   "candidates": [
     {
+      "id": "50327830",
+      "headline": "Inside how Titans were convinced to trade their best player",
+      "description": "Titans GM Mike Borgonzi got an offer he couldn't refuse, and now Jeffery Simmons is a Chicago Bear.",
+      "published": "2026-10-30",
+      "likelyKind": "transaction",
+      "teams": [
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4035369",
+          "name": "Jeffery Simmons",
+          "position": "Defensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50327830/titans-call-too-good-pass-next-trading-jeffery-simmons",
+      "attempts": 0
+    },
+    {
+      "id": "50313034",
+      "headline": "When will the Raiders make Fernando Mendoza the starting QB?",
+      "description": "Making the case for and against the Raiders switching to Fernando Mendoza as QB1.",
+      "published": "2026-10-30",
+      "likelyKind": "role",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50313034/las-vegas-raiders-fernando-mendoza-starter-kirk-cousins",
+      "attempts": 0
+    },
+    {
       "id": "50319153",
       "headline": "Bears get Jeffery Simmons: Key intel on blockbuster trade",
       "description": "Is Jeffery Simmons the key missing piece for the Bears' Super Bowl puzzle? Here are key takeaways from the blockbuster trade.",
@@ -1065,7 +1117,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50148005",
       "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",
@@ -1087,7 +1141,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-30"
     },
     {
       "id": "50148833",
@@ -1110,10 +1166,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-30"
+    },
     {
       "id": "50147669",
       "headline": "Sources: Ravens held Cam Jurgens physical before trade with Eagles",

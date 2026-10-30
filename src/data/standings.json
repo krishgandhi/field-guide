@@ -182,6 +182,15 @@
       "pointsAgainst": 165,
       "conferenceRank": 6
     },
+    "GB": {
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": 7,
+      "pointsFor": 171,
+      "pointsAgainst": 164,
+      "conferenceRank": 7
+    },
     "NYG": {
       "wins": 4,
       "losses": 2,
@@ -190,15 +199,6 @@
       "pointsFor": 163,
       "pointsAgainst": 161,
       "conferenceRank": 3
-    },
-    "GB": {
-      "wins": 4,
-      "losses": 3,
-      "ties": 0,
-      "pointDifferential": -1,
-      "pointsFor": 144,
-      "pointsAgainst": 145,
-      "conferenceRank": 7
     },
     "SEA": {
       "wins": 4,
@@ -211,11 +211,11 @@
     },
     "CAR": {
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "pointDifferential": -7,
-      "pointsFor": 159,
-      "pointsAgainst": 166,
+      "pointDifferential": -15,
+      "pointsFor": 178,
+      "pointsAgainst": 193,
       "conferenceRank": 4
     },
     "ATL": {
