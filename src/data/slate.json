@@ -81,7 +81,7 @@
       "away": "CLE",
       "spread": 3.5,
       "favourite": "home",
-      "overUnder": 39.5,
+      "overUnder": 38.5,
       "broadcast": "CBS",
       "venue": "Acrisure Stadium",
       "neutralSite": false
@@ -185,6 +185,13 @@
         "status": "Out"
       }
     ],
+    "ATL": [
+      {
+        "player": "Brian Robinson Jr.",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "BUF": [
       {
         "player": "Tyrell Shavers",
@@ -214,7 +221,31 @@
         "status": "Out"
       }
     ],
+    "DAL": [
+      {
+        "player": "Dee Winters",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "KaVontae Turpin",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "DEN": [
+      {
+        "player": "RJ Harvey",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "GB": [
+      {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Kaleb Johnson",
         "position": "RB",
@@ -229,24 +260,101 @@
         "player": "Zaire Franklin",
         "position": "LB",
         "status": "Out"
+      }
+    ],
+    "IND": [
+      {
+        "player": "Anthony Gould",
+        "position": "WR",
+        "status": "Out"
       },
       {
-        "player": "Micah Parsons",
+        "player": "Justin Walley",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "LV": [
+      {
+        "player": "Patrick Johnson",
         "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "LAC": [
+      {
+        "player": "Deane Leonard",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Brenen Thompson",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "NYJ": [
       {
+        "player": "David Bailey",
+        "position": "LB",
+        "status": "Doubtful"
+      },
+      {
         "player": "Joseph Ossai",
         "position": "DE",
-        "status": "Doubtful"
+        "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Jihaad Campbell",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Britain Covey",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Dontayvion Wicks",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "DeVonta Smith",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "PIT": [
+      {
+        "player": "Doneiko Slaughter",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Brandin Echols",
+        "position": "CB",
+        "status": "Out"
       }
     ],
     "TB": [
       {
         "player": "Emeka Egbuka",
         "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "TEN": [
+      {
+        "player": "Carnell Tate",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Tyjae Spears",
+        "position": "RB",
         "status": "Out"
       }
     ]

@@ -1,6 +1,98 @@
 {
   "candidates": [
     {
+      "id": "50336399",
+      "headline": "Source: Commanders DT Daron Payne suffered season-ending foot injury",
+      "description": "Commanders defensive tackle Daron Payne suffered a season-ending Jones fracture in practice Friday, a source told ESPN's Adam Schefter.",
+      "published": "2026-10-31",
+      "likelyKind": "injury",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "3925354",
+          "name": "Daron Payne",
+          "position": "Defensive Tackle",
+          "currentTeam": "WSH"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50336399/source-commanders-dt-payne-suffered-season-ending-foot-injury",
+      "attempts": 0
+    },
+    {
+      "id": "50331651",
+      "headline": "'No way' that Jets trade star WR Garrett Wilson before deadline, source says",
+      "description": "The Jets are not expected to trade Garrett Wilson, sources told ESPN, despite increased speculation about the star wide receiver's future.",
+      "published": "2026-10-31",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4569618",
+          "name": "Garrett Wilson",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50331651/no-way-jets-trade-garrett-wilson-deadline-source-says",
+      "attempts": 0
+    },
+    {
+      "id": "50323095",
+      "headline": "Sources: Colts willing to trade RB Jonathan Taylor, active in talks with teams",
+      "description": "The Colts now are open to trading Jonathan Taylor, sources told ESPN and NFL Network, and multiple teams have reached out to Indianapolis.",
+      "published": "2026-10-31",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "attempts": 0
+    },
+    {
+      "id": "50331045",
+      "headline": "Colts' Shane Steichen: WR Josh Downs 'ready to go' despite trade request",
+      "description": "Colts coach Shane Steichen says receiver Josh Downs practiced all week and is \"ready to go\" despite the trade request he made earlier this week.",
+      "published": "2026-10-30",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4688813",
+          "name": "Josh Downs",
+          "position": "Wide Receiver",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50331045/colts-steichen-wr-downs-ready-go-trade-demand",
+      "attempts": 0
+    },
+    {
       "id": "50327830",
       "headline": "Inside how Titans were convinced to trade their best player",
       "description": "Titans GM Mike Borgonzi got an offer he couldn't refuse, and now Jeffery Simmons is a Chicago Bear.",
@@ -1007,7 +1099,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50197704",
       "headline": "Seahawks sticking with Sam Darnold as starter despite INTs",
@@ -1029,7 +1123,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50197704/seahawks-sticking-sam-darnold-starter-ints",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-31"
     },
     {
       "id": "50197342",
@@ -1058,7 +1154,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-31"
     },
     {
       "id": "50167021",
@@ -1081,7 +1179,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50167021/source-packers-lose-hargrave-season-ending-torn-achilles",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-31"
     },
     {
       "id": "50158326",
@@ -1116,10 +1216,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-10-31"
+    },
     {
       "id": "50148005",
       "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",

@@ -71,7 +71,7 @@
             },
             "_passAttempts": {
               "value": "283",
-              "rank": 1
+              "rank": 2
             },
             "_sacks": {
               "value": "15",
@@ -87,7 +87,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 27
+              "rank": 28
             },
             "passing touchdowns": {
               "value": "10",
@@ -271,7 +271,7 @@
             },
             "yards per pass": {
               "value": "7.4",
-              "rank": 13
+              "rank": 12
             },
             "rushing touchdowns": {
               "value": "8",
@@ -339,7 +339,7 @@
           "stats": {
             "sacks": {
               "value": "17",
-              "rank": 11
+              "rank": 12
             },
             "takeaways": {
               "value": "9",
@@ -451,7 +451,7 @@
             },
             "_sacks": {
               "value": "18",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "4.7",
@@ -527,7 +527,7 @@
           "stats": {
             "sacks": {
               "value": "16",
-              "rank": 15
+              "rank": 16
             },
             "takeaways": {
               "value": "6",
@@ -819,15 +819,15 @@
           "stats": {
             "_runAttempts": {
               "value": "169",
-              "rank": 30
+              "rank": 21
             },
             "_passAttempts": {
               "value": "274",
-              "rank": 13
+              "rank": 4
             },
             "_sacks": {
               "value": "23",
-              "rank": 12
+              "rank": 2
             },
             "yards per carry": {
               "value": "4.2",
@@ -835,15 +835,15 @@
             },
             "yards per pass": {
               "value": "7.2",
-              "rank": 10
+              "rank": 15
             },
             "rushing touchdowns": {
               "value": "7",
-              "rank": 14
+              "rank": 11
             },
             "passing touchdowns": {
               "value": "13",
-              "rank": 12
+              "rank": 8
             },
             "turnovers given away": {
               "value": "10",
@@ -881,12 +881,12 @@
               "draftedBy": "2021: Rd 1, Pk 18 (MIA)"
             },
             {
-              "id": "4240595",
-              "name": "Marco Wilson",
-              "label": "CB",
+              "id": "5225251",
+              "name": "Malcolm DeWalt IV",
+              "label": "DB",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 4, Pk 136 (ARI)"
+              "experience": 0,
+              "draftedBy": null
             },
             {
               "id": "5151083",
@@ -1011,11 +1011,11 @@
             },
             "_passAttempts": {
               "value": "241",
-              "rank": 9
+              "rank": 10
             },
             "_sacks": {
               "value": "18",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "4.4",
@@ -1023,7 +1023,7 @@
             },
             "yards per pass": {
               "value": "7.4",
-              "rank": 13
+              "rank": 12
             },
             "rushing touchdowns": {
               "value": "14",
@@ -1091,7 +1091,7 @@
           "stats": {
             "sacks": {
               "value": "19",
-              "rank": 7
+              "rank": 8
             },
             "takeaways": {
               "value": "10",
@@ -1215,11 +1215,11 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 27
+              "rank": 28
             },
             "passing touchdowns": {
               "value": "15",
-              "rank": 2
+              "rank": 3
             },
             "turnovers given away": {
               "value": "6",
@@ -1279,7 +1279,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 1
+              "rank": 2
             },
             "takeaways": {
               "value": "9",
@@ -1403,7 +1403,7 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "7",
@@ -1467,7 +1467,7 @@
           "stats": {
             "sacks": {
               "value": "20",
-              "rank": 6
+              "rank": 7
             },
             "takeaways": {
               "value": "9",
@@ -1571,11 +1571,11 @@
           "stats": {
             "_runAttempts": {
               "value": "160",
-              "rank": 27
+              "rank": 29
             },
             "_passAttempts": {
               "value": "273",
-              "rank": 3
+              "rank": 5
             },
             "_sacks": {
               "value": "7",
@@ -1595,7 +1595,7 @@
             },
             "passing touchdowns": {
               "value": "13",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "7",
@@ -1843,7 +1843,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 1
+              "rank": 2
             },
             "takeaways": {
               "value": "10",
@@ -1947,7 +1947,7 @@
           "stats": {
             "_runAttempts": {
               "value": "163",
-              "rank": 24
+              "rank": 26
             },
             "_passAttempts": {
               "value": "223",
@@ -1959,7 +1959,7 @@
             },
             "yards per carry": {
               "value": "4.2",
-              "rank": 13
+              "rank": 12
             },
             "yards per pass": {
               "value": "8.0",
@@ -1971,7 +1971,7 @@
             },
             "passing touchdowns": {
               "value": "14",
-              "rank": 4
+              "rank": 5
             },
             "turnovers given away": {
               "value": "3",
@@ -2031,7 +2031,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 1
+              "rank": 2
             },
             "takeaways": {
               "value": "6",
@@ -2135,11 +2135,11 @@
           "stats": {
             "_runAttempts": {
               "value": "170",
-              "rank": 31
+              "rank": 20
             },
             "_passAttempts": {
               "value": "312",
-              "rank": 5
+              "rank": 1
             },
             "_sacks": {
               "value": "14",
@@ -2155,11 +2155,11 @@
             },
             "rushing touchdowns": {
               "value": "4",
-              "rank": 27
+              "rank": 23
             },
             "passing touchdowns": {
               "value": "16",
-              "rank": 7
+              "rank": 1
             },
             "turnovers given away": {
               "value": "11",
@@ -2219,7 +2219,7 @@
           "stats": {
             "sacks": {
               "value": "22",
-              "rank": 15
+              "rank": 1
             },
             "takeaways": {
               "value": "15",
@@ -2323,11 +2323,11 @@
           "stats": {
             "_runAttempts": {
               "value": "167",
-              "rank": 21
+              "rank": 23
             },
             "_passAttempts": {
               "value": "248",
-              "rank": 8
+              "rank": 9
             },
             "_sacks": {
               "value": "15",
@@ -2343,7 +2343,7 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "11",
@@ -2407,7 +2407,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 1
+              "rank": 2
             },
             "takeaways": {
               "value": "6",
@@ -2515,11 +2515,11 @@
             },
             "_passAttempts": {
               "value": "240",
-              "rank": 11
+              "rank": 12
             },
             "_sacks": {
               "value": "19",
-              "rank": 7
+              "rank": 8
             },
             "yards per carry": {
               "value": "4.1",
@@ -2699,7 +2699,7 @@
           "stats": {
             "_runAttempts": {
               "value": "167",
-              "rank": 21
+              "rank": 23
             },
             "_passAttempts": {
               "value": "184",
@@ -2723,7 +2723,7 @@
             },
             "passing touchdowns": {
               "value": "14",
-              "rank": 4
+              "rank": 5
             },
             "turnovers given away": {
               "value": "4",
@@ -2887,7 +2887,7 @@
           "stats": {
             "_runAttempts": {
               "value": "161",
-              "rank": 25
+              "rank": 27
             },
             "_passAttempts": {
               "value": "191",
@@ -3075,7 +3075,7 @@
           "stats": {
             "_runAttempts": {
               "value": "169",
-              "rank": 20
+              "rank": 21
             },
             "_passAttempts": {
               "value": "181",
@@ -3083,11 +3083,11 @@
             },
             "_sacks": {
               "value": "21",
-              "rank": 4
+              "rank": 5
             },
             "yards per carry": {
               "value": "4.2",
-              "rank": 13
+              "rank": 12
             },
             "yards per pass": {
               "value": "6.3",
@@ -3267,7 +3267,7 @@
             },
             "_passAttempts": {
               "value": "281",
-              "rank": 2
+              "rank": 3
             },
             "_sacks": {
               "value": "11",
@@ -3287,7 +3287,7 @@
             },
             "passing touchdowns": {
               "value": "14",
-              "rank": 4
+              "rank": 5
             },
             "turnovers given away": {
               "value": "11",
@@ -3455,7 +3455,7 @@
             },
             "_passAttempts": {
               "value": "266",
-              "rank": 6
+              "rank": 7
             },
             "_sacks": {
               "value": "10",
@@ -3467,11 +3467,11 @@
             },
             "yards per pass": {
               "value": "7.3",
-              "rank": 15
+              "rank": 14
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 27
+              "rank": 28
             },
             "passing touchdowns": {
               "value": "16",
@@ -3535,7 +3535,7 @@
           "stats": {
             "sacks": {
               "value": "16",
-              "rank": 15
+              "rank": 16
             },
             "takeaways": {
               "value": "12",
@@ -3835,7 +3835,7 @@
             },
             "_sacks": {
               "value": "18",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "4.0",
@@ -3847,7 +3847,7 @@
             },
             "rushing touchdowns": {
               "value": "3",
-              "rank": 27
+              "rank": 28
             },
             "passing touchdowns": {
               "value": "6",
@@ -3911,7 +3911,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 1
+              "rank": 2
             },
             "takeaways": {
               "value": "11",
@@ -4027,7 +4027,7 @@
             },
             "yards per carry": {
               "value": "4.2",
-              "rank": 13
+              "rank": 12
             },
             "yards per pass": {
               "value": "8.3",
@@ -4039,7 +4039,7 @@
             },
             "passing touchdowns": {
               "value": "13",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "14",
@@ -4099,7 +4099,7 @@
           "stats": {
             "sacks": {
               "value": "17",
-              "rank": 11
+              "rank": 12
             },
             "takeaways": {
               "value": "7",
@@ -4207,7 +4207,7 @@
             },
             "_passAttempts": {
               "value": "273",
-              "rank": 3
+              "rank": 5
             },
             "_sacks": {
               "value": "15",
@@ -4223,11 +4223,11 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "13",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "13",
@@ -4287,7 +4287,7 @@
           "stats": {
             "sacks": {
               "value": "18",
-              "rank": 9
+              "rank": 10
             },
             "takeaways": {
               "value": "9",
@@ -4395,11 +4395,11 @@
             },
             "_passAttempts": {
               "value": "241",
-              "rank": 9
+              "rank": 10
             },
             "_sacks": {
               "value": "21",
-              "rank": 4
+              "rank": 5
             },
             "yards per carry": {
               "value": "4.1",
@@ -4411,7 +4411,7 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "11",
@@ -4587,7 +4587,7 @@
             },
             "_sacks": {
               "value": "21",
-              "rank": 4
+              "rank": 5
             },
             "yards per carry": {
               "value": "3.8",
@@ -4663,7 +4663,7 @@
           "stats": {
             "sacks": {
               "value": "19",
-              "rank": 7
+              "rank": 8
             },
             "takeaways": {
               "value": "8",
@@ -4767,15 +4767,15 @@
           "stats": {
             "_runAttempts": {
               "value": "159",
-              "rank": 29
+              "rank": 31
             },
             "_passAttempts": {
               "value": "235",
-              "rank": 12
+              "rank": 13
             },
             "_sacks": {
               "value": "18",
-              "rank": 8
+              "rank": 9
             },
             "yards per carry": {
               "value": "3.9",
@@ -4787,7 +4787,7 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "10",
@@ -4955,15 +4955,15 @@
           "stats": {
             "_runAttempts": {
               "value": "160",
-              "rank": 27
+              "rank": 29
             },
             "_passAttempts": {
               "value": "265",
-              "rank": 7
+              "rank": 8
             },
             "_sacks": {
               "value": "22",
-              "rank": 2
+              "rank": 3
             },
             "yards per carry": {
               "value": "4.6",
@@ -4979,7 +4979,7 @@
             },
             "passing touchdowns": {
               "value": "13",
-              "rank": 7
+              "rank": 8
             },
             "turnovers given away": {
               "value": "7",
@@ -5039,7 +5039,7 @@
           "stats": {
             "sacks": {
               "value": "18",
-              "rank": 9
+              "rank": 10
             },
             "takeaways": {
               "value": "11",
@@ -5129,12 +5129,12 @@
               "draftedBy": "2024: Rd 4, Pk 121 (SEA)"
             },
             {
-              "id": "3914630",
-              "name": "Josh Jones",
-              "label": "G",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 3, Pk 72 (ARI)"
+              "id": "4426376",
+              "name": "Charles Cross",
+              "label": "OT",
+              "debutYear": null,
+              "experience": 5,
+              "draftedBy": "2022: Rd 1, Pk 9 (SEA)"
             }
           ],
           "rank": 12,
@@ -5163,11 +5163,11 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "12",
-              "rank": 12
+              "rank": 13
             },
             "turnovers given away": {
               "value": "13",
@@ -5227,7 +5227,7 @@
           "stats": {
             "sacks": {
               "value": "17",
-              "rank": 11
+              "rank": 12
             },
             "takeaways": {
               "value": "12",
@@ -5355,7 +5355,7 @@
             },
             "passing touchdowns": {
               "value": "15",
-              "rank": 2
+              "rank": 3
             },
             "turnovers given away": {
               "value": "10",
@@ -5527,7 +5527,7 @@
             },
             "_sacks": {
               "value": "22",
-              "rank": 2
+              "rank": 3
             },
             "yards per carry": {
               "value": "4.9",
@@ -5603,7 +5603,7 @@
           "stats": {
             "sacks": {
               "value": "16",
-              "rank": 15
+              "rank": 16
             },
             "takeaways": {
               "value": "12",
@@ -5707,7 +5707,7 @@
           "stats": {
             "_runAttempts": {
               "value": "161",
-              "rank": 25
+              "rank": 27
             },
             "_passAttempts": {
               "value": "208",
@@ -5727,7 +5727,7 @@
             },
             "rushing touchdowns": {
               "value": "6",
-              "rank": 14
+              "rank": 15
             },
             "passing touchdowns": {
               "value": "4",
@@ -5791,7 +5791,7 @@
           "stats": {
             "sacks": {
               "value": "17",
-              "rank": 11
+              "rank": 12
             },
             "takeaways": {
               "value": "7",
@@ -5895,7 +5895,7 @@
           "stats": {
             "_runAttempts": {
               "value": "165",
-              "rank": 23
+              "rank": 25
             },
             "_passAttempts": {
               "value": "202",
@@ -5933,12 +5933,12 @@
         "defence": {
           "players": [
             {
-              "id": "3929956",
-              "name": "Tim Settle",
-              "label": "DT",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 5, Pk 163 (WSH)"
+              "id": "3929865",
+              "name": "Charles Omenihu",
+              "label": "DE",
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": "2019: Rd 5, Pk 161 (HOU)"
             },
             {
               "id": "4259491",
