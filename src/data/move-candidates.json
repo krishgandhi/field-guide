@@ -1,6 +1,210 @@
 {
   "candidates": [
     {
+      "id": "50343678",
+      "headline": "Sources: Bears, Titans used Myles Garrett deal as framework for Simmons trade",
+      "description": "The Bears and Titans came up with a Jeffery Simmons proposal that was based off this year's Myles Garrett trade, sources told ESPN.",
+      "published": "2026-11-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Chicago Bears",
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "CHI",
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4035369",
+          "name": "Jeffery Simmons",
+          "position": "Defensive Tackle",
+          "currentTeam": "CHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50343678/bears-trade-jeffery-simmons-based-myles-garrett-deal",
+      "attempts": 0
+    },
+    {
+      "id": "50336880",
+      "headline": "Sources: Saquon Barkley won't be traded by deadline despite Eagles' struggles",
+      "description": "Saquon Barkley will not be traded before the trade deadline, sources told NFL Network, putting an end to speculation that the Eagles RB could be on the move.",
+      "published": "2026-11-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "3929630",
+          "name": "Saquon Barkley",
+          "position": "Running Back",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50336880/sources-eagles-trade-star-rb-saquon-barkley",
+      "attempts": 0
+    },
+    {
+      "id": "50335308",
+      "headline": "Sources: Raiders not planning on trading Maxx Crosby, who wants to stay",
+      "description": "The Raiders do not plan on trading Maxx Crosby, who wants to stay in Las Vegas, sources told ESPN.",
+      "published": "2026-11-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "3916655",
+          "name": "Maxx Crosby",
+          "position": "Defensive End",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50335308/raiders-not-planning-trading-maxx-crosby-sources-say",
+      "attempts": 0
+    },
+    {
+      "id": "50329135",
+      "headline": "Will usually active Jets play or pass before trade deadline?",
+      "description": "New York could look to add to its pile of assets ahead of the Nov. 10 trade deadline.",
+      "published": "2026-11-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4685247",
+          "name": "Braelon Allen",
+          "position": "Running Back",
+          "currentTeam": "NYJ"
+        },
+        {
+          "id": "4569618",
+          "name": "Garrett Wilson",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        },
+        {
+          "id": "4361331",
+          "name": "Jamien Sherwood",
+          "position": "Linebacker",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50329135/jets-trade-deadline-rumors-allen-mcdonald-brownlee",
+      "attempts": 0
+    },
+    {
+      "id": "50323095",
+      "headline": "Sources: Colts willing to trade RB Jonathan Taylor, active in talks with teams",
+      "description": "The Colts now are open to trading Jonathan Taylor, sources told ESPN and NFL Network, and multiple teams have reached out to Indianapolis.",
+      "published": "2026-11-01",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
+      "attempts": 0
+    },
+    {
+      "id": "50340504",
+      "headline": "Derwin James placed on injured reserve after hamstring rehab setback",
+      "description": "The Chargers have placed safety Derwin James Jr. on injured reserve because of a hamstring injury.",
+      "published": "2026-10-31",
+      "likelyKind": "injury",
+      "teams": [
+        "Los Angeles Chargers"
+      ],
+      "teamIds": [
+        "LAC"
+      ],
+      "players": [
+        {
+          "id": "3691739",
+          "name": "Derwin James Jr.",
+          "position": "Safety",
+          "currentTeam": "LAC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50340504/chargers-safety-james-hamstring-placed-injured-reserve",
+      "attempts": 0
+    },
+    {
+      "id": "50339066",
+      "headline": "T'Vondre Sweat placed on injured reserve with knee injury",
+      "description": "The Jets will be without T'Vondre Sweat for at least the next four games, as the starting nose tackle was placed on injured reserve Saturday with a knee sprain.",
+      "published": "2026-10-31",
+      "likelyKind": "injury",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4428617",
+          "name": "T'Vondre Sweat",
+          "position": "Defensive Tackle",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50339066/tvondre-sweat-placed-injured-reserve-knee-injury",
+      "attempts": 0
+    },
+    {
+      "id": "50338005",
+      "headline": "NFL to review additional allegations against Packers RB Josh Jacobs",
+      "description": "The NFL said it will look into additional allegations of physical and verbal abuse by Packers RB Josh Jacobs that were revealed as part of a public records release from the Hobart/Lawrence Police Department.",
+      "published": "2026-10-31",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4047365",
+          "name": "Josh Jacobs",
+          "position": "Running Back",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
+      "attempts": 0
+    },
+    {
       "id": "50336399",
       "headline": "Source: Commanders DT Daron Payne suffered season-ending foot injury",
       "description": "Commanders defensive tackle Daron Payne suffered a season-ending Jones fracture in practice Friday, a source told ESPN's Adam Schefter.",
@@ -44,29 +248,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50331651/no-way-jets-trade-garrett-wilson-deadline-source-says",
-      "attempts": 0
-    },
-    {
-      "id": "50323095",
-      "headline": "Sources: Colts willing to trade RB Jonathan Taylor, active in talks with teams",
-      "description": "The Colts now are open to trading Jonathan Taylor, sources told ESPN and NFL Network, and multiple teams have reached out to Indianapolis.",
-      "published": "2026-10-31",
-      "likelyKind": "transaction",
-      "teams": [
-        "Indianapolis Colts"
-      ],
-      "teamIds": [
-        "IND"
-      ],
-      "players": [
-        {
-          "id": "4242335",
-          "name": "Jonathan Taylor",
-          "position": "Running Back",
-          "currentTeam": "IND"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
       "attempts": 0
     },
     {
@@ -892,7 +1073,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50220744/colts-stick-daniel-jones-quarterback-vs-vikings",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50219961",
       "headline": "Mayfield to practice this week but Buccaneers to prep as if Daniels will play",
@@ -920,7 +1103,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50219961/mayfield-practice-buccaneers-prep-daniels-play",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50218623",
@@ -943,7 +1128,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50218623/colts-fire-gm-chris-ballard-shane-steichen",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50218378",
@@ -966,7 +1153,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50218378/eagles-jalen-hurts-season-due-blood-clots-lungs",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50218249",
@@ -995,7 +1184,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50218249/sources-falcons-signing-qb-dalton-releasing-qb-rush",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50217832",
@@ -1030,7 +1221,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50217832/packers-defeat-cowboys-micah-parsons-josh-jacobs",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50211304",
@@ -1073,7 +1266,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50211304/week-6-overreactions-2026-graziano-aj-brown-jones-rams",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
     },
     {
       "id": "50195809",
@@ -1098,10 +1293,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-01"
+    },
     {
       "id": "50197704",
       "headline": "Seahawks sticking with Sam Darnold as starter despite INTs",
