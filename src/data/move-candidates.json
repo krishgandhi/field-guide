@@ -1,6 +1,180 @@
 {
   "candidates": [
     {
+      "id": "50360680",
+      "headline": "Lions LB Jack Campbell still in hospital, but signs positive",
+      "description": "Lions linebacker Jack Campbell is still in the hospital for evaluation and monitoring of a neck injury, but the team said in a statement \"preliminary indications are positive.\"",
+      "published": "2026-11-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Detroit Lions"
+      ],
+      "teamIds": [
+        "DET"
+      ],
+      "players": [
+        {
+          "id": "4569465",
+          "name": "Jack Campbell",
+          "position": "Linebacker",
+          "currentTeam": "DET"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50360680/lions-lb-jack-campbell-hospital-signs-positive",
+      "attempts": 0
+    },
+    {
+      "id": "50360220",
+      "headline": "Shane Steichen sticking with Daniel Jones as Colts' QB1 for Week 9 vs. Cowboys",
+      "description": "Daniel Jones will remain the Colts' starting quarterback for Sunday's game against the Cowboys.",
+      "published": "2026-11-02",
+      "likelyKind": "role",
+      "teams": [
+        "Indianapolis Colts",
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "IND",
+        "DAL"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50360220/colts-sticking-daniel-jones-qb1-week-9",
+      "attempts": 0
+    },
+    {
+      "id": "50359850",
+      "headline": "Record-setting deal? Trade? A look at Lamar Jackson's cloudy future with Ravens",
+      "description": "It's possible that Jackson's final snap with the Ravens ended with injury Sunday night.",
+      "published": "2026-11-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50359850/look-lamar-jackson-cloudy-future-baltimore-ravens",
+      "attempts": 0
+    },
+    {
+      "id": "50043471",
+      "headline": "2026 NFL trade deadline updates: Jeffery Simmons, Quenton Nelson on the move",
+      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including a blockbuster sending Jeffery Simmons to Chicago.",
+      "published": "2026-11-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "New York Giants",
+        "Dallas Cowboys",
+        "Pittsburgh Steelers",
+        "Philadelphia Eagles",
+        "Baltimore Ravens",
+        "Arizona Cardinals",
+        "Houston Texans",
+        "Seattle Seahawks",
+        "Indianapolis Colts",
+        "Chicago Bears"
+      ],
+      "teamIds": [
+        "MIN",
+        "NYG",
+        "DAL",
+        "PIT",
+        "PHI",
+        "BAL",
+        "ARI",
+        "HOU",
+        "SEA",
+        "IND",
+        "CHI"
+      ],
+      "players": [
+        {
+          "id": "4432708",
+          "name": "Marvin Harrison Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "HOU"
+        },
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
+      "attempts": 0
+    },
+    {
+      "id": "50352650",
+      "headline": "Can Seahawks' Rashid Shaheed become a complementary WR to Jaxon Smith-Njigba?",
+      "description": "Shaheed was a big part of the Seahawks' Super Bowl run as a returner and earned a new three-year contract. But he has been quiet as a receiver since his trade to Seattle.",
+      "published": "2026-11-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "4032473",
+          "name": "Rashid Shaheed",
+          "position": "Wide Receiver",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50352650/seattle-seahawks-trade-rashid-shadeed-jaxon-smith-njigba",
+      "attempts": 0
+    },
+    {
+      "id": "50356092",
+      "headline": "Saquon Barkley has assurances he won't be traded, wants to help Eagles 'fix it'",
+      "description": "Speaking after Sunday night's 27-10 loss to the Washington Commanders, Philadelphia Eagles running back Saquon Barkley told reporters he has received assurances from the front office that he will remain with the club beyond the Nov. 10 trade deadline.",
+      "published": "2026-11-02",
+      "likelyKind": "transaction",
+      "teams": [
+        "Washington Commanders",
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "WSH",
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "3929630",
+          "name": "Saquon Barkley",
+          "position": "Running Back",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50356092/saquon-barkley-assurances-eagles-dealt",
+      "attempts": 0
+    },
+    {
       "id": "50343678",
       "headline": "Sources: Bears, Titans used Myles Garrett deal as framework for Simmons trade",
       "description": "The Bears and Titans came up with a Jeffery Simmons proposal that was based off this year's Myles Garrett trade, sources told ESPN.",
@@ -396,61 +570,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50318351/sources-bears-trade-all-pro-dt-jeffery-simmons",
-      "attempts": 0
-    },
-    {
-      "id": "50043471",
-      "headline": "2026 NFL trade deadline updates: Jeffery Simmons, Quenton Nelson on the move",
-      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including a blockbuster sending Jeffery Simmons to Chicago.",
-      "published": "2026-10-29",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants",
-        "Dallas Cowboys",
-        "Pittsburgh Steelers",
-        "Philadelphia Eagles",
-        "Baltimore Ravens",
-        "Arizona Cardinals",
-        "Houston Texans",
-        "Seattle Seahawks",
-        "Indianapolis Colts",
-        "Chicago Bears"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG",
-        "DAL",
-        "PIT",
-        "PHI",
-        "BAL",
-        "ARI",
-        "HOU",
-        "SEA",
-        "IND",
-        "CHI"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "3129308",
-          "name": "Quenton Nelson",
-          "position": "Guard",
-          "currentTeam": "SEA"
-        },
-        {
-          "id": "2971282",
-          "name": "DeForest Buckner",
-          "position": "Defensive Tackle",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
       "attempts": 0
     },
     {
@@ -940,7 +1059,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50230371/commanders-wr-terry-mclaurin-torn-patellar-tendon",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50229491",
       "headline": "Dolphins release Riley Patterson after Week 5 problems defending kickoffs",
@@ -962,7 +1083,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50229491/sources-dolphins-release-riley-patterson-amid-kickoff-woes",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-02"
     },
     {
       "id": "50228692",
@@ -985,7 +1108,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50228692/titans-abruptly-release-dt-jordan-elliott-undisclosed-reasons",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-02"
     },
     {
       "id": "50221426",
@@ -1020,7 +1145,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50221426/rams-lose-star-wr-davante-adams-6-10-weeks-mcvay-says",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-02"
     },
     {
       "id": "50221241",
@@ -1049,7 +1176,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50221241/john-harbaugh-giants-honing-qb-decision-week-7",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-02"
     },
     {
       "id": "50220744",
@@ -1072,10 +1201,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50220744/colts-stick-daniel-jones-quarterback-vs-vikings",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-02"
+    },
     {
       "id": "50219961",
       "headline": "Mayfield to practice this week but Buccaneers to prep as if Daniels will play",
