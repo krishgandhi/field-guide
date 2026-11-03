@@ -164,6 +164,15 @@
       "pointsAgainst": 93,
       "conferenceRank": 2
     },
+    "CHI": {
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 54,
+      "pointsFor": 214,
+      "pointsAgainst": 160,
+      "conferenceRank": 5
+    },
     "DET": {
       "wins": 5,
       "losses": 2,
@@ -171,15 +180,6 @@
       "pointDifferential": 23,
       "pointsFor": 203,
       "pointsAgainst": 180,
-      "conferenceRank": 5
-    },
-    "CHI": {
-      "wins": 5,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 37,
-      "pointsFor": 180,
-      "pointsAgainst": 143,
       "conferenceRank": 6
     },
     "GB": {
@@ -202,11 +202,11 @@
     },
     "SEA": {
       "wins": 4,
-      "losses": 3,
+      "losses": 4,
       "ties": 0,
-      "pointDifferential": 43,
-      "pointsFor": 168,
-      "pointsAgainst": 125,
+      "pointDifferential": 26,
+      "pointsFor": 185,
+      "pointsAgainst": 159,
       "conferenceRank": 8
     },
     "LAR": {

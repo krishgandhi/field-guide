@@ -1,6 +1,86 @@
 {
   "candidates": [
     {
+      "id": "50355612",
+      "headline": "Seven things Solak thinks for NFL Week 9: Bucs atop NFC South? RB trades coming?",
+      "description": "Get ready for Week 9 with takes on the Bucs' division chances, why RBs could dominate the trade deadline and which teams should at least ask about Justin Herbert.",
+      "published": "2026-11-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "Pittsburgh Steelers",
+        "Cincinnati Bengals",
+        "Dallas Cowboys",
+        "Cleveland Browns",
+        "Tampa Bay Buccaneers",
+        "Jacksonville Jaguars",
+        "New York Jets",
+        "Minnesota Vikings",
+        "Seattle Seahawks",
+        "Chicago Bears",
+        "Tennessee Titans",
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "PIT",
+        "CIN",
+        "DAL",
+        "CLE",
+        "TB",
+        "JAX",
+        "NYJ",
+        "MIN",
+        "SEA",
+        "CHI",
+        "TEN",
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4038941",
+          "name": "Justin Herbert",
+          "position": "Quarterback",
+          "currentTeam": "LAC"
+        },
+        {
+          "id": "4596448",
+          "name": "Bucky Irving",
+          "position": "Running Back",
+          "currentTeam": "TB"
+        },
+        {
+          "id": "4426354",
+          "name": "George Pickens",
+          "position": "Wide Receiver",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50355612/week-9-seven-things-solak-thinks-trades-standings",
+      "attempts": 0
+    },
+    {
+      "id": "50360528",
+      "headline": "Why Colts are right to consider trading Jonathan Taylor",
+      "description": "As the Colts begin their rebuild, they need draft picks, and Taylor is their most valuable asset.",
+      "published": "2026-11-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50360528/colts-jonathan-taylor-trade-deadline",
+      "attempts": 0
+    },
+    {
       "id": "50360680",
       "headline": "Lions LB Jack Campbell still in hospital, but signs positive",
       "description": "Lions linebacker Jack Campbell is still in the hospital for evaluation and monitoring of a neck injury, but the team said in a statement \"preliminary indications are positive.\"",
@@ -1007,7 +1087,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50232379/steelers-bring-back-marquez-valdes-scantling-amid-wr-injuries",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50231705",
       "headline": "Sources: Rams signing free agent kicker Brandon McManus",
@@ -1035,7 +1117,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50231705/sources-rams-signing-free-agent-kicker-brandon-mcmanus",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-03"
     },
     {
       "id": "50230371",
@@ -1058,10 +1142,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50230371/commanders-wr-terry-mclaurin-torn-patellar-tendon",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-03"
+    },
     {
       "id": "50229491",
       "headline": "Dolphins release Riley Patterson after Week 5 problems defending kickoffs",

@@ -3,18 +3,6 @@
   "week": 8,
   "games": [
     {
-      "id": "401873036",
-      "kickoff": "2026-11-03T01:15Z",
-      "home": "SEA",
-      "away": "CHI",
-      "spread": 3.5,
-      "favourite": "home",
-      "overUnder": 46.5,
-      "broadcast": "ESPN",
-      "venue": "Lumen Field",
-      "neutralSite": false
-    },
-    {
       "id": "401873023",
       "kickoff": "2026-10-30T00:15Z",
       "home": "GB",
@@ -169,6 +157,18 @@
       "broadcast": "NBC",
       "venue": "Northwest Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401873036",
+      "kickoff": "2026-11-03T01:15Z",
+      "home": "SEA",
+      "away": "CHI",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN",
+      "venue": "Lumen Field",
+      "neutralSite": false
     }
   ],
   "byes": [
@@ -178,103 +178,47 @@
     "SF"
   ],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Kendrick Bourne",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
     "ATL": [
+      {
+        "player": "Samson Ebukam",
+        "position": "DE",
+        "status": "Out"
+      },
       {
         "player": "Zachariah Branch",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "Brian Robinson Jr.",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Billy Bowman Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Divine Deablo",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "BAL": [
+      {
+        "player": "Tyler Huntley",
+        "position": "QB",
+        "status": "Doubtful"
+      },
       {
         "player": "Lamar Jackson",
         "position": "QB",
         "status": "Out"
       }
     ],
-    "BUF": [
-      {
-        "player": "Dee Alford",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Tyrell Shavers",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "CAR": [
-      {
-        "player": "Haynes King",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
-        "player": "Ja'Tavion Sanders",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "AJ Dillon",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Jaelan Phillips",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Kyle Monangai",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "DAL": [
-      {
-        "player": "Dee Winters",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Luke Schoonmaker",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "KaVontae Turpin",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "DET": [
-      {
-        "player": "Jack Campbell",
-        "position": "LB",
-        "status": "Doubtful"
-      },
       {
         "player": "Jimmy Rolder",
         "position": "LB",
         "status": "Out"
+      },
+      {
+        "player": "Jack Campbell",
+        "position": "LB",
+        "status": "Doubtful"
       }
     ],
     "GB": [
@@ -282,136 +226,17 @@
         "player": "Micah Parsons",
         "position": "DE",
         "status": "Out"
-      },
-      {
-        "player": "Kaleb Johnson",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Jonnu Smith",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Zaire Franklin",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "IND": [
-      {
-        "player": "Justin Walley",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Anthony Gould",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Bryce Boettcher",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "KC": [
-      {
-        "player": "Mansoor Delane",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "LAC": [
-      {
-        "player": "Brenen Thompson",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Deane Leonard",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Rodney Shelley",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Donte Jackson",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "LAR": [
-      {
-        "player": "Colby Parkinson",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "NE": [
-      {
-        "player": "TreVeyon Henderson",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "A.J. Brown",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "NYJ": [
-      {
-        "player": "Joseph Ossai",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "David Bailey",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Breece Hall",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "PHI": [
-      {
-        "player": "Dontayvion Wicks",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "DeVonta Smith",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Jonathan Jones",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Jihaad Campbell",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "PIT": [
       {
-        "player": "Ben Skowronek",
-        "position": "WR",
+        "player": "Doneiko Slaughter",
+        "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Doneiko Slaughter",
-        "position": "CB",
+        "player": "Ben Skowronek",
+        "position": "WR",
         "status": "Out"
       },
       {
@@ -427,29 +252,7 @@
         "status": "Out"
       }
     ],
-    "SEA": [
-      {
-        "player": "Velus Jones Jr.",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Uchenna Nwosu",
-        "position": "LB",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Rashid Shaheed",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "TB": [
-      {
-        "player": "Emeka Egbuka",
-        "position": "WR",
-        "status": "Out"
-      },
       {
         "player": "Yaya Diaby",
         "position": "LB",
