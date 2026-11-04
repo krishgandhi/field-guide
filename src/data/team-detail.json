@@ -21,12 +21,12 @@
               "draftedBy": "2019: Rd 6, Pk 178 (JAX)"
             },
             {
-              "id": "4870808",
-              "name": "Jeremiyah Love",
+              "id": "4373626",
+              "name": "Tyler Allgeier",
               "label": "RB",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 1, Pk 3 (ARI)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 5, Pk 151 (ATL)"
             },
             {
               "id": "4360761",
@@ -287,7 +287,7 @@
             }
           },
           "passPlayShare": 52.6,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 30,
           "quarterbackCarries": 17
         },
         "defence": {
@@ -389,11 +389,11 @@
         "offence": {
           "players": [
             {
-              "id": "4035671",
-              "name": "Tyler Huntley",
+              "id": "4429582",
+              "name": "Joe Fagnano",
               "label": "QB",
-              "debutYear": 2020,
-              "experience": 7,
+              "debutYear": null,
+              "experience": 0,
               "draftedBy": null
             },
             {
@@ -474,9 +474,9 @@
               "rank": 19
             }
           },
-          "passPlayShare": 54,
-          "passPlayShareRank": 29,
-          "quarterbackCarries": 18
+          "passPlayShare": 52.3,
+          "passPlayShareRank": 31,
+          "quarterbackCarries": 3
         },
         "defence": {
           "players": [
@@ -1039,7 +1039,7 @@
             }
           },
           "passPlayShare": 53.6,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 29,
           "quarterbackCarries": 26
         },
         "defence": {
@@ -3366,12 +3366,12 @@
               "draftedBy": null
             },
             {
-              "id": "3919510",
-              "name": "Alex Bachman",
+              "id": "4569382",
+              "name": "Jordan Whittington",
               "label": "KR",
-              "debutYear": 2019,
+              "debutYear": null,
               "experience": 3,
-              "draftedBy": null
+              "draftedBy": "2024: Rd 6, Pk 213 (LAR)"
             }
           ],
           "rank": 32,
@@ -4296,24 +4296,7 @@
           }
         },
         "specialTeams": {
-          "players": [
-            {
-              "id": "3051909",
-              "name": "Daniel Carlson",
-              "label": "K",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 5, Pk 167 (MIN)"
-            },
-            {
-              "id": "4698597",
-              "name": "Barion Brown",
-              "label": "KR",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 6, Pk 190 (NO)"
-            }
-          ],
+          "players": [],
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals so far this season — 30th of 32.",
@@ -5941,12 +5924,12 @@
               "draftedBy": "2019: Rd 5, Pk 161 (HOU)"
             },
             {
-              "id": "4259491",
-              "name": "Javon Kinlaw",
+              "id": "3886601",
+              "name": "Shy Tuttle",
               "label": "DT",
-              "debutYear": 2020,
-              "experience": 7,
-              "draftedBy": "2020: Rd 1, Pk 14 (SF)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "3928979",

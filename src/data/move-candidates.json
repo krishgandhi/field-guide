@@ -1,6 +1,260 @@
 {
   "candidates": [
     {
+      "id": "50380067",
+      "headline": "Lions' Jack Campbell has full movement in lower body after neck injury",
+      "description": "Lions All-Pro linebacker Jack Campbell released a statement Wednesday saying he has full movement in his lower body and is making progress with movement in his upper body as he recovers from a neck injury, suffered in Sunday's game.",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "Detroit Lions"
+      ],
+      "teamIds": [
+        "DET"
+      ],
+      "players": [
+        {
+          "id": "4569465",
+          "name": "Jack Campbell",
+          "position": "Linebacker",
+          "currentTeam": "DET"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50380067/lions-lb-campbell-full-movement-lower-body-neck-injury",
+      "attempts": 0
+    },
+    {
+      "id": "50378819",
+      "headline": "Browns QB Deshaun Watson in concussion protocol; status vs. Saints unclear",
+      "description": "The Browns have placed starting QB Deshaun Watson in the concussion protocol, leaving his status for Sunday's matchup against the Saints in question.",
+      "published": "2026-11-04",
+      "likelyKind": "role",
+      "teams": [
+        "Cleveland Browns"
+      ],
+      "teamIds": [
+        "CLE"
+      ],
+      "players": [
+        {
+          "id": "3122840",
+          "name": "Deshaun Watson",
+          "position": "Quarterback",
+          "currentTeam": "CLE"
+        },
+        {
+          "id": "4432762",
+          "name": "Shedeur Sanders",
+          "position": "Quarterback",
+          "currentTeam": "CLE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50378819/browns-qb-watson-concussion-protocol-status-vs-saints-unclear",
+      "attempts": 0
+    },
+    {
+      "id": "50378427",
+      "headline": "Source: Commanders lose another DL with Kinlaw out for season after knee surgery",
+      "description": "The Commanders lost a second defensive line starter for the season in less than a week as Javon Kinlaw underwent season-ending knee surgery, a source told ESPN's Adam Schefter.",
+      "published": "2026-11-04",
+      "likelyKind": "injury",
+      "teams": [
+        "Washington Commanders"
+      ],
+      "teamIds": [
+        "WSH"
+      ],
+      "players": [
+        {
+          "id": "4259491",
+          "name": "Javon Kinlaw",
+          "position": "Defensive Tackle",
+          "currentTeam": "WSH"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50378427/source-commanders-javon-kinlaw-knee-surgery-season",
+      "attempts": 0
+    },
+    {
+      "id": "50378134",
+      "headline": "Sources: Ravens QB Huntley (turf toe) to miss rest of 2026 season",
+      "description": "Tests revealed that Ravens quarterback Tyler \"Snoop\" Huntley suffered a season-ending turf toe injury, sources told ESPN and NFL Network.",
+      "published": "2026-11-04",
+      "likelyKind": "injury",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "4035671",
+          "name": "Tyler Huntley",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "4429582",
+          "name": "Joe Fagnano",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50378134/sources-ravens-qb-tyler-snoop-huntley-season",
+      "attempts": 0
+    },
+    {
+      "id": "50371759",
+      "headline": "Sam Darnold is struggling under pressure, but Seahawks patient with O-line",
+      "description": "Seattle's trade for Quenton Nelson last week shuffled the offensive line ahead of its decisive loss to the Bears. Will the pass protection get better?",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "Seattle Seahawks"
+      ],
+      "teamIds": [
+        "SEA"
+      ],
+      "players": [
+        {
+          "id": "3912547",
+          "name": "Sam Darnold",
+          "position": "Quarterback",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "3129308",
+          "name": "Quenton Nelson",
+          "position": "Guard",
+          "currentTeam": "SEA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50371759/nfl-seahawks-bears-sam-darnold-pressure",
+      "attempts": 0
+    },
+    {
+      "id": "50372284",
+      "headline": "Saints release veteran kicker Daniel Carlson after he posted 2nd-worst FG% in NFL",
+      "description": "Veteran kicker Daniel Carlson, whose 66.7% accuracy on field goals was tied for second worst in the NFL this season, was released by the Saints on Tuesday.",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "New Orleans Saints"
+      ],
+      "teamIds": [
+        "NO"
+      ],
+      "players": [
+        {
+          "id": "3051909",
+          "name": "Daniel Carlson",
+          "position": "Place Kicker",
+          "currentTeam": "NO"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50372284/saints-release-veteran-kicker-daniel-carlson-7-games",
+      "attempts": 0
+    },
+    {
+      "id": "50372281",
+      "headline": "Giants, CB Greg Newsome II agree to 3-year, $46M extension",
+      "description": "The Giants have reached agreement with cornerback Greg Newsome II on a three-year, $46 million extension, his agents told ESPN's Adam Schefter.",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Giants"
+      ],
+      "teamIds": [
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "4361266",
+          "name": "Greg Newsome II",
+          "position": "Cornerback",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50372281/giants-cb-greg-newsome-ii-agree-3-year-46m-extension",
+      "attempts": 0
+    },
+    {
+      "id": "50371976",
+      "headline": "Source: Colts, Adetomiwa Adebawore agree to 2-year, $35M extension",
+      "description": "The Colts and defensive tackle Adetomiwa Adebawore have agreed to terms on a two-year, $35 million extension, a source told NFL Network's Mike Garafolo.",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4427635",
+          "name": "Adetomiwa Adebawore",
+          "position": "Defensive Tackle",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50371976/source-colts-adetomiwa-adebawore-reach-2-year-35m-deal",
+      "attempts": 0
+    },
+    {
+      "id": "50370431",
+      "headline": "Josh Allen-produced short doc on Buffalo storm gets release date, trailer",
+      "description": "The short documentary on the once-in-a-generation Buffalo blizzard will be released on Nov. 24.",
+      "published": "2026-11-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "Buffalo Bills"
+      ],
+      "teamIds": [
+        "BUF"
+      ],
+      "players": [
+        {
+          "id": "3918298",
+          "name": "Josh Allen",
+          "position": "Quarterback",
+          "currentTeam": "BUF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50370431/buffalo-miracle-hbo-trailer-josh-allen",
+      "attempts": 0
+    },
+    {
+      "id": "50372292",
+      "headline": "Bills release C.J. Gardner-Johnson after one-game spitting suspension",
+      "description": "The Bills have released safety C.J. Gardner-Johnson, the team announced Tuesday.",
+      "published": "2026-11-03",
+      "likelyKind": "transaction",
+      "teams": [
+        "Buffalo Bills"
+      ],
+      "teamIds": [
+        "BUF"
+      ],
+      "players": [
+        {
+          "id": "4034953",
+          "name": "C.J. Gardner-Johnson",
+          "position": "Safety",
+          "currentTeam": "BUF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50372292/bills-release-safety-cj-gardner-johnson",
+      "attempts": 0
+    },
+    {
       "id": "50355612",
       "headline": "Seven things Solak thinks for NFL Week 9: Bucs atop NFC South? RB trades coming?",
       "description": "Get ready for Week 9 with takes on the Bucs' division chances, why RBs could dominate the trade deadline and which teams should at least ask about Justin Herbert.",
@@ -149,61 +403,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50359850/look-lamar-jackson-cloudy-future-baltimore-ravens",
-      "attempts": 0
-    },
-    {
-      "id": "50043471",
-      "headline": "2026 NFL trade deadline updates: Jeffery Simmons, Quenton Nelson on the move",
-      "description": "The NFL trade deadline is Nov. 10, but deals have already started. We're tracking all moves, including a blockbuster sending Jeffery Simmons to Chicago.",
-      "published": "2026-11-02",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants",
-        "Dallas Cowboys",
-        "Pittsburgh Steelers",
-        "Philadelphia Eagles",
-        "Baltimore Ravens",
-        "Arizona Cardinals",
-        "Houston Texans",
-        "Seattle Seahawks",
-        "Indianapolis Colts",
-        "Chicago Bears"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG",
-        "DAL",
-        "PIT",
-        "PHI",
-        "BAL",
-        "ARI",
-        "HOU",
-        "SEA",
-        "IND",
-        "CHI"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        },
-        {
-          "id": "3129308",
-          "name": "Quenton Nelson",
-          "position": "Guard",
-          "currentTeam": "SEA"
-        },
-        {
-          "id": "2971282",
-          "name": "DeForest Buckner",
-          "position": "Defensive Tackle",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043471/2026-trade-deadline-updates-latest-news-deals-terms",
       "attempts": 0
     },
     {
@@ -832,7 +1031,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50301125/colts-trade-de-deforest-buckner-49ers",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50278890",
       "headline": "Seven things Solak thinks entering NFL Week 8: WR trade for Chiefs? Goff for MVP?",
@@ -878,7 +1079,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50278890/week-8-seven-things-solak-thinks-chiefs-trade-goff-mvp",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50291573",
@@ -901,7 +1104,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50291573/cardinals-jalen-brooks-wrist-miss-rest-season",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50291280",
@@ -924,7 +1129,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50291280/panthers-taylor-moton-season-ending-ankle-surgery",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50272352",
@@ -959,7 +1166,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50272352/sources-decisions-loom-colts-nfl-trade-deadline",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50275489",
@@ -982,7 +1191,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50275489/browns-maliek-collins-lands-2-year-extension-agent-says",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50258881",
@@ -1005,7 +1216,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50258881/cincinnati-bengals-boye-mafe-sign-language",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50260899",
@@ -1040,7 +1253,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50260899/giants-lb-tremaine-edmunds-chest-year-source-says",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50256842",
@@ -1063,7 +1278,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50256842/sources-jaguars-lt-anton-harrison-season-torn-acl",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
     },
     {
       "id": "50232379",
@@ -1086,10 +1303,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50232379/steelers-bring-back-marquez-valdes-scantling-amid-wr-injuries",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-04"
+    },
     {
       "id": "50231705",
       "headline": "Sources: Rams signing free agent kicker Brandon McManus",
