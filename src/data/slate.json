@@ -31,7 +31,7 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "IND",
       "away": "DAL",
-      "spread": 6,
+      "spread": 5.5,
       "favourite": "away",
       "overUnder": 51.5,
       "broadcast": "Fox",
@@ -81,7 +81,7 @@
       "away": "NYG",
       "spread": 3.5,
       "favourite": "away",
-      "overUnder": 39.5,
+      "overUnder": 38.5,
       "broadcast": "Fox",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -91,9 +91,9 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "WSH",
       "away": "LAR",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "away",
-      "overUnder": 47.5,
+      "overUnder": 48.5,
       "broadcast": "Fox",
       "venue": "Northwest Stadium",
       "neutralSite": false
@@ -105,7 +105,7 @@
       "away": "DEN",
       "spread": 2.5,
       "favourite": "away",
-      "overUnder": 43.5,
+      "overUnder": 44.5,
       "broadcast": "CBS",
       "venue": "Bank of America Stadium",
       "neutralSite": false
@@ -129,7 +129,7 @@
       "away": "GB",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 46.5,
+      "overUnder": 45.5,
       "broadcast": "Fox",
       "venue": "Gillette Stadium",
       "neutralSite": false
@@ -141,7 +141,7 @@
       "away": "LV",
       "spread": 10,
       "favourite": "home",
-      "overUnder": 52.5,
+      "overUnder": 51.5,
       "broadcast": "Fox",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -151,9 +151,9 @@
       "kickoff": "2026-11-08T21:25Z",
       "home": "SEA",
       "away": "ARI",
-      "spread": 12.5,
+      "spread": 8.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 39.5,
       "broadcast": "Fox",
       "venue": "Lumen Field",
       "neutralSite": false
@@ -216,6 +216,34 @@
         "status": "Out"
       }
     ],
+    "HOU": [
+      {
+        "player": "David Montgomery",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "LAC": [
+      {
+        "player": "Brenen Thompson",
+        "position": "WR",
+        "status": "Doubtful"
+      }
+    ],
+    "LAR": [
+      {
+        "player": "Jaylen Watson",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Darrell Baker Jr.",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "PIT": [
       {
         "player": "Doneiko Slaughter",
@@ -237,6 +265,13 @@
       {
         "player": "Brandon Aiyuk",
         "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "SEA": [
+      {
+        "player": "Sam Darnold",
+        "position": "QB",
         "status": "Out"
       }
     ],

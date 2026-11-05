@@ -1,6 +1,181 @@
 {
   "candidates": [
     {
+      "id": "50390525",
+      "headline": "Jonathan Taylor 'can't avoid' trade speculation as Colts go through talks",
+      "description": "Running back Jonathan Taylor, who is the subject of talks between the Colts and multiple teams ahead of the NFL trade deadline, said he's ready for some finality after weeks of speculation about his future.",
+      "published": "2026-11-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50390525/colts-rb-jonathan-taylor-awaits-resolution-trade-rumbling",
+      "attempts": 0
+    },
+    {
+      "id": "50382587",
+      "headline": "Is DeForest Buckner's 'nostalgic' trade return the final piece for the 49ers?",
+      "description": "After being traded from the 49ers in 2020, Buckner is back in the Bay Area. The goal for him and his teammates is the same as it was before: Super Bowl or bust.",
+      "published": "2026-11-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "2971282",
+          "name": "DeForest Buckner",
+          "position": "Defensive Tackle",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50382587/san-francisco-49ers-deforest-buckner-return",
+      "attempts": 0
+    },
+    {
+      "id": "50379105",
+      "headline": "Could the Panthers make a trade deadline move? 5 potential targets",
+      "description": "Let's dive into which players could make sense for a trade for the NFC South-leading team with limited cap space.",
+      "published": "2026-11-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "Carolina Panthers"
+      ],
+      "teamIds": [
+        "CAR"
+      ],
+      "players": [
+        {
+          "id": "4875295",
+          "name": "Jackson Powers-Johnson",
+          "position": "Guard",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "4361767",
+          "name": "Will McDonald IV",
+          "position": "Defensive End",
+          "currentTeam": "NYJ"
+        },
+        {
+          "id": "4430968",
+          "name": "Kimani Vidal",
+          "position": "Running Back",
+          "currentTeam": "LAC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50379105/carolina-panthers-trade-deadline-five-potential-options",
+      "attempts": 0
+    },
+    {
+      "id": "50383288",
+      "headline": "RB Josh Jacobs not anticipating missing more time despite additional allegations",
+      "description": "Packers running back Josh Jacobs said he's operating under the assumption that he won't have to sit out any more games than the six he already missed while on the NFL commissioner's exempt list despite the release of additional allegations against him.",
+      "published": "2026-11-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4047365",
+          "name": "Josh Jacobs",
+          "position": "Running Back",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50383288/packers-josh-jacobs-not-worried-missing-more-games-additional-allegations",
+      "attempts": 0
+    },
+    {
+      "id": "50381318",
+      "headline": "Sources: Ravens finalizing trade with Cardinals for QB Jacoby Brissett",
+      "description": "The Cardinals are finalizing a trade to send quarterback Jacoby Brissett to the Ravens, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
+      "published": "2026-11-05",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens",
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "BAL",
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "2578570",
+          "name": "Jacoby Brissett",
+          "position": "Quarterback",
+          "currentTeam": "ARI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50381318/sources-ravens-finalizing-trade-cardinals-qb-brissett",
+      "attempts": 0
+    },
+    {
+      "id": "50382837",
+      "headline": "Rams CB Jaylen Watson needs season-ending shoulder surgery, Sean Mcvay says",
+      "description": "Rams cornerback Jaylen Watson will need shoulder surgery and be out for the rest of the season.",
+      "published": "2026-11-04",
+      "likelyKind": "injury",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "4697639",
+          "name": "Jaylen Watson",
+          "position": "Cornerback",
+          "currentTeam": "LAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50382837/rams-cb-jaylen-watson-needs-season-ending-shoulder-surgery",
+      "attempts": 0
+    },
+    {
+      "id": "50381853",
+      "headline": "Colts' Shane Steichen defends Jonathan Taylor usage, says RB will keep role",
+      "description": "Jonathan Taylor will continue to play his usual role with the Colts despite being at the center of trade talks with multiple teams, Shane Steichen said.",
+      "published": "2026-11-04",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50381853/shane-steichen-defends-colts-jonathan-taylor-usage-trade",
+      "attempts": 0
+    },
+    {
       "id": "50380067",
       "headline": "Lions' Jack Campbell has full movement in lower body after neck injury",
       "description": "Lions All-Pro linebacker Jack Campbell released a statement Wednesday saying he has full movement in his lower body and is making progress with movement in his upper body as he recovers from a neck injury, suffered in Sunday's game.",
@@ -850,7 +1025,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50318351/sources-bears-trade-all-pro-dt-jeffery-simmons",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50312624",
       "headline": "Cardinals' Budda Baker hopes to stay with Arizona at trade deadline",
@@ -872,7 +1049,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50312624/cardinals-budda-baker-stay-arizona-trade-deadline",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50311414",
@@ -895,7 +1074,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50311414/texans-put-wr-jaylin-noel-ir-turf-toe-injury",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50308919",
@@ -918,7 +1099,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50308919/jets-wr-garrett-wilson-says-want-traded",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50311100",
@@ -941,7 +1124,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50311100/jaguars-brian-thomas-jr-trying-ignore-trade-talk",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50309159",
@@ -970,7 +1155,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50309159/source-wr-downs-requests-trade-rb-taylor-per-coach",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50302002",
@@ -1005,7 +1192,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50302002/colts-deforest-buckner-quenton-nelson-jonathan-taylor",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
     },
     {
       "id": "50301125",
@@ -1030,10 +1219,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50301125/colts-trade-de-deforest-buckner-49ers",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-05"
+    },
     {
       "id": "50278890",
       "headline": "Seven things Solak thinks entering NFL Week 8: WR trade for Chiefs? Goff for MVP?",

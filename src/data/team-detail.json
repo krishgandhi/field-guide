@@ -1791,7 +1791,7 @@
             }
           },
           "passPlayShare": 61.3,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 32
         },
         "defence": {
@@ -3295,7 +3295,7 @@
             }
           },
           "passPlayShare": 61.5,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 14
         },
         "defence": {
@@ -3325,12 +3325,12 @@
               "draftedBy": "2023: Rd 7, Pk 259 (LAR)"
             },
             {
-              "id": "4697639",
-              "name": "Jaylen Watson",
+              "id": "4572371",
+              "name": "Josh Wallace",
               "label": "CB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 7, Pk 243 (KC)"
+              "experience": 3,
+              "draftedBy": null
             },
             {
               "id": "4426405",
@@ -4296,7 +4296,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "5208518",
+              "name": "Charlie Smyth",
+              "label": "K",
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": null
+            },
+            {
+              "id": "4698597",
+              "name": "Barion Brown",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 6, Pk 190 (NO)"
+            }
+          ],
           "rank": 30,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals so far this season — 30th of 32.",
@@ -4696,12 +4713,12 @@
         "offence": {
           "players": [
             {
-              "id": "4685201",
-              "name": "Tanner McKee",
+              "id": "4360698",
+              "name": "Joe Milton",
               "label": "QB",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 6, Pk 188 (PHI)"
+              "experience": 3,
+              "draftedBy": "2024: Rd 6, Pk 193 (NE)"
             },
             {
               "id": "3929630",
@@ -4781,9 +4798,9 @@
               "rank": 19
             }
           },
-          "passPlayShare": 61.6,
-          "passPlayShareRank": 11,
-          "quarterbackCarries": 6
+          "passPlayShare": 60.8,
+          "passPlayShareRank": 14,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -5722,7 +5739,7 @@
             }
           },
           "passPlayShare": 61.6,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 26
         },
         "defence": {
