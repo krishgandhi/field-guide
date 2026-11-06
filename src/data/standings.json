@@ -20,6 +20,15 @@
       "pointsAgainst": 165,
       "conferenceRank": 2
     },
+    "JAX": {
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 108,
+      "pointsFor": 229,
+      "pointsAgainst": 121,
+      "conferenceRank": 3
+    },
     "PIT": {
       "wins": 6,
       "losses": 2,
@@ -27,15 +36,6 @@
       "pointDifferential": 36,
       "pointsFor": 180,
       "pointsAgainst": 144,
-      "conferenceRank": 3
-    },
-    "JAX": {
-      "wins": 5,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 85,
-      "pointsFor": 196,
-      "pointsAgainst": 111,
       "conferenceRank": 4
     },
     "KC": {
@@ -85,11 +85,11 @@
     },
     "BAL": {
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0,
-      "pointDifferential": -24,
-      "pointsFor": 179,
-      "pointsAgainst": 203,
+      "pointDifferential": -47,
+      "pointsFor": 189,
+      "pointsAgainst": 236,
       "conferenceRank": 10
     },
     "HOU": {

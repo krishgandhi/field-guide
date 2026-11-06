@@ -1,6 +1,143 @@
 {
   "candidates": [
     {
+      "id": "50400123",
+      "headline": "Sources: Ravens trade 4th-, 7th-rounders to get Jacoby Brissett, 5th-round pick",
+      "description": "The Ravens will acquire quarterback Jacoby Brissett and a 2027 fifth-round pick for a fourth-round pick in 2027 and seventh-round pick in 2028, sources told ESPN and NFL Network.",
+      "published": "2026-11-06",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens",
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "BAL",
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "2578570",
+          "name": "Jacoby Brissett",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "3916387",
+          "name": "Lamar Jackson",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "4035671",
+          "name": "Tyler Huntley",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50400123/ravens-complete-trade-cardinals-qb-jacoby-brissett",
+      "attempts": 0
+    },
+    {
+      "id": "50359560",
+      "headline": "Regrading 2025 NFL deadline trades: How Gardner, Williams deals look right now",
+      "description": "How do the Sauce Gardner and Quinnen Williams blockbuster trades look one year later? What about the Jakobi Meyers, Rashid Shaheed and Jaelan Phillips deals?",
+      "published": "2026-11-06",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets",
+        "Indianapolis Colts",
+        "Dallas Cowboys",
+        "Jacksonville Jaguars",
+        "Las Vegas Raiders",
+        "Los Angeles Chargers",
+        "Baltimore Ravens",
+        "Philadelphia Eagles",
+        "Miami Dolphins",
+        "Seattle Seahawks",
+        "New Orleans Saints",
+        "San Francisco 49ers",
+        "New England Patriots",
+        "Cleveland Browns"
+      ],
+      "teamIds": [
+        "NYJ",
+        "IND",
+        "DAL",
+        "JAX",
+        "LV",
+        "LAC",
+        "BAL",
+        "PHI",
+        "MIA",
+        "SEA",
+        "NO",
+        "SF",
+        "NE",
+        "CLE"
+      ],
+      "players": [
+        {
+          "id": "4427250",
+          "name": "Sauce Gardner",
+          "position": "Cornerback",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4040982",
+          "name": "Quinnen Williams",
+          "position": "Defensive Tackle",
+          "currentTeam": "DAL"
+        },
+        {
+          "id": "3916433",
+          "name": "Jakobi Meyers",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50359560/regrading-deals-2025-nfl-trade-deadline-williams-gardner",
+      "attempts": 0
+    },
+    {
+      "id": "50360565",
+      "headline": "How the Jets trading stars Quinnen Williams and Sauce Gardner looks a year later",
+      "description": "Hours before the 2025 trade deadline, New York stockpiled first-round picks by sending its two stars to the Colts and Cowboys.",
+      "published": "2026-11-06",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets",
+        "Dallas Cowboys",
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "NYJ",
+        "DAL",
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4040982",
+          "name": "Quinnen Williams",
+          "position": "Defensive Tackle",
+          "currentTeam": "DAL"
+        },
+        {
+          "id": "4427250",
+          "name": "Sauce Gardner",
+          "position": "Cornerback",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4597500",
+          "name": "Adonai Mitchell",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50360565/trade-deadline-quinnen-sauce-jets-cowboys-colts",
+      "attempts": 0
+    },
+    {
       "id": "50390525",
       "headline": "Jonathan Taylor 'can't avoid' trade speculation as Colts go through talks",
       "description": "Running back Jonathan Taylor, who is the subject of talks between the Colts and multiple teams ahead of the NFL trade deadline, said he's ready for some finality after weeks of speculation about his future.",
@@ -952,7 +1089,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50313034/las-vegas-raiders-fernando-mendoza-starter-kirk-cousins",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50319153",
       "headline": "Bears get Jeffery Simmons: Key intel on blockbuster trade",
@@ -976,7 +1115,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50319153/jeffery-simmons-trade-titans-bears-draft-picks-deadline",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-06"
     },
     {
       "id": "50319874",
@@ -999,7 +1140,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50319874/colts-jonathan-taylor-confirms-requested-trade",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-06"
     },
     {
       "id": "50318351",
@@ -1024,10 +1167,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50318351/sources-bears-trade-all-pro-dt-jeffery-simmons",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-06"
+    },
     {
       "id": "50312624",
       "headline": "Cardinals' Budda Baker hopes to stay with Arizona at trade deadline",
