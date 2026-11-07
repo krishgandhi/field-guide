@@ -19,7 +19,7 @@
       "kickoff": "2026-11-08T14:30Z",
       "home": "ATL",
       "away": "CIN",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "away",
       "overUnder": 52.5,
       "broadcast": "NFL Net",
@@ -31,7 +31,7 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "IND",
       "away": "DAL",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "away",
       "overUnder": 51.5,
       "broadcast": "Fox",
@@ -43,9 +43,9 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "KC",
       "away": "NYJ",
-      "spread": 9.5,
+      "spread": 8.5,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "CBS",
       "venue": "Arrowhead Stadium",
       "neutralSite": false
@@ -57,7 +57,7 @@
       "away": "DET",
       "spread": 6.5,
       "favourite": "away",
-      "overUnder": 50.5,
+      "overUnder": 49.5,
       "broadcast": "Fox",
       "venue": "Hard Rock Stadium",
       "neutralSite": false
@@ -67,7 +67,7 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "NO",
       "away": "CLE",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "CBS",
@@ -79,7 +79,7 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "PHI",
       "away": "NYG",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 38.5,
       "broadcast": "Fox",
@@ -93,7 +93,7 @@
       "away": "LAR",
       "spread": 4.5,
       "favourite": "away",
-      "overUnder": 48.5,
+      "overUnder": 47.5,
       "broadcast": "Fox",
       "venue": "Northwest Stadium",
       "neutralSite": false
@@ -103,7 +103,7 @@
       "kickoff": "2026-11-08T18:00Z",
       "home": "CAR",
       "away": "DEN",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "away",
       "overUnder": 44.5,
       "broadcast": "CBS",
@@ -177,7 +177,7 @@
       "away": "BUF",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "ESPN, ABC",
       "venue": "U.S. Bank Stadium",
       "neutralSite": false
@@ -188,6 +188,13 @@
     "TEN"
   ],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Bam Knight",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "ATL": [
       {
         "player": "Brian Robinson Jr.",
@@ -217,14 +224,75 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Will Lee III",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jaelan Phillips",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Bobby Okereke",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "DAL": [
+      {
+        "player": "Malachi Lawrence",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "KaVontae Turpin",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "DEN": [
+      {
+        "player": "Kris Abrams-Draine",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Eyioma Uwazurike",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
     "DET": [
+      {
+        "player": "DJ Wonnum",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "D.J. Reed",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Jack Campbell",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "GB": [
+      {
+        "player": "Zaire Franklin",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Josh Whyle",
+        "position": "TE",
+        "status": "Out"
+      },
       {
         "player": "Micah Parsons",
         "position": "DE",
@@ -235,6 +303,18 @@
       {
         "player": "David Montgomery",
         "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "IND": [
+      {
+        "player": "Justin Walley",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Akeem Davis-Gaither",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -255,7 +335,19 @@
         "status": "Out"
       }
     ],
+    "KC": [
+      {
+        "player": "Mansoor Delane",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "LAC": [
+      {
+        "player": "Deane Leonard",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Brenen Thompson",
         "position": "WR",
@@ -276,15 +368,63 @@
         "status": "Out"
       }
     ],
+    "NE": [
+      {
+        "player": "TreVeyon Henderson",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "A.J. Brown",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "CJ Donaldson",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "NYG": [
+      {
+        "player": "Cam Skattebo",
+        "position": "RB",
+        "status": "Doubtful"
+      }
+    ],
     "NYJ": [
+      {
+        "player": "Trevin Wallace",
+        "position": "LB",
+        "status": "Out"
+      },
       {
         "player": "Garrett Wilson",
         "position": "WR",
         "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Jonathan Jones",
+        "position": "CB",
+        "status": "Out"
       },
       {
-        "player": "Trevin Wallace",
+        "player": "Michael Carter II",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jihaad Campbell",
         "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Britain Covey",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -307,6 +447,21 @@
     ],
     "SF": [
       {
+        "player": "Mike Evans",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Christian Kirk",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Deebo Samuel Sr.",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Brandon Aiyuk",
         "position": "WR",
         "status": "Out"
@@ -316,6 +471,16 @@
       {
         "player": "Sam Darnold",
         "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Uchenna Nwosu",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Rashid Shaheed",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -340,6 +505,18 @@
       {
         "player": "Jaylon Jones",
         "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "WSH": [
+      {
+        "player": "Dyami Brown",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Treylon Burks",
+        "position": "WR",
         "status": "Out"
       }
     ]

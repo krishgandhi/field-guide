@@ -1,6 +1,75 @@
 {
   "candidates": [
     {
+      "id": "50403440",
+      "headline": "Colts in Daniel Jones trade talks as multiple teams call about QB, sources say",
+      "description": "The Colts have engaged in trade discussions with multiple teams involving quarterback Daniel Jones, sources told NFL Network and ESPN.",
+      "published": "2026-11-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50403440/sources-colts-engaged-daniel-jones-trade-talks",
+      "attempts": 0
+    },
+    {
+      "id": "50400748",
+      "headline": "Sources: Ravens not expected to deal RB Derrick Henry before NFL trade deadline",
+      "description": "Ravens running back Derrick Henry is not expected to be moved by the NFL trade deadline, league sources told ESPN.",
+      "published": "2026-11-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "3043078",
+          "name": "Derrick Henry",
+          "position": "Running Back",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50400748/sources-ravens-not-expected-trade-star-rb-derrick-henry",
+      "attempts": 0
+    },
+    {
+      "id": "50401403",
+      "headline": "Jacoby Brissett brings hope but realistic expectations for spiraling Ravens",
+      "description": "The Ravens know what they're getting in acquiring veteran journeyman QB, but does Jacoby Brissett know what he's in for?",
+      "published": "2026-11-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "2578570",
+          "name": "Jacoby Brissett",
+          "position": "Quarterback",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50401403/what-biggest-problems-facing-brissett-ravens",
+      "attempts": 0
+    },
+    {
       "id": "50400123",
       "headline": "Sources: Ravens trade 4th-, 7th-rounders to get Jacoby Brissett, 5th-round pick",
       "description": "The Ravens will acquire quarterback Jacoby Brissett and a 2027 fifth-round pick for a fourth-round pick in 2027 and seventh-round pick in 2028, sources told ESPN and NFL Network.",
@@ -1014,7 +1083,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50331651/no-way-jets-trade-garrett-wilson-deadline-source-says",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50331045",
       "headline": "Colts' Shane Steichen: WR Josh Downs 'ready to go' despite trade request",
@@ -1036,7 +1107,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50331045/colts-steichen-wr-downs-ready-go-trade-demand",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-07"
     },
     {
       "id": "50327830",
@@ -1059,7 +1132,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50327830/titans-call-too-good-pass-next-trading-jeffery-simmons",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-07"
     },
     {
       "id": "50313034",
@@ -1088,10 +1163,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50313034/las-vegas-raiders-fernando-mendoza-starter-kirk-cousins",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-07"
+    },
     {
       "id": "50319153",
       "headline": "Bears get Jeffery Simmons: Key intel on blockbuster trade",
