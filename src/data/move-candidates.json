@@ -1,6 +1,64 @@
 {
   "candidates": [
     {
+      "id": "50411320",
+      "headline": "Vikings WR Jauan Jennings on rebuffing return to 49ers: 'I love where I'm at'",
+      "description": "Jauan Jennings said he rebuffed the chance to return to the 49ers via trade despite struggling to produce for the Vikings because \"I love where I'm at.\"",
+      "published": "2026-11-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "3886598",
+          "name": "Jauan Jennings",
+          "position": "Wide Receiver",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50411320/jennings-rebuffing-return-49ers-love-where-at",
+      "attempts": 0
+    },
+    {
+      "id": "50410541",
+      "headline": "Saints activate WR Jordyn Tyson, LT Kelvin Banks, cut RB Kendre Miller",
+      "description": "Saints rookie wide receiver Jordyn Tyson and left tackle Kelvin Banks Jr. have been activated from injured reserve ahead of Sunday's game against the Browns.",
+      "published": "2026-11-07",
+      "likelyKind": "transaction",
+      "teams": [
+        "New Orleans Saints"
+      ],
+      "teamIds": [
+        "NO"
+      ],
+      "players": [
+        {
+          "id": "4880281",
+          "name": "Jordyn Tyson",
+          "position": "Wide Receiver",
+          "currentTeam": "NO"
+        },
+        {
+          "id": "4685260",
+          "name": "Kelvin Banks Jr.",
+          "position": "Offensive Tackle",
+          "currentTeam": "NO"
+        },
+        {
+          "id": "4599739",
+          "name": "Kendre Miller",
+          "position": "Running Back",
+          "currentTeam": "NO"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50410541/sources-saints-activate-wr-jordyn-tyson-lt-kelvin-banks",
+      "attempts": 0
+    },
+    {
       "id": "50403440",
       "headline": "Colts in Daniel Jones trade talks as multiple teams call about QB, sources say",
       "description": "The Colts have engaged in trade discussions with multiple teams involving quarterback Daniel Jones, sources told NFL Network and ESPN.",
@@ -1037,7 +1095,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50336399",
       "headline": "Source: Commanders DT Daron Payne suffered season-ending foot injury",
@@ -1059,7 +1119,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50336399/source-commanders-dt-payne-suffered-season-ending-foot-injury",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-08"
     },
     {
       "id": "50331651",
@@ -1082,10 +1144,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50331651/no-way-jets-trade-garrett-wilson-deadline-source-says",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-08"
+    },
     {
       "id": "50331045",
       "headline": "Colts' Shane Steichen: WR Josh Downs 'ready to go' despite trade request",
