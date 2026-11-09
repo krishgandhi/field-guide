@@ -1,6 +1,145 @@
 {
   "candidates": [
     {
+      "id": "50434559",
+      "headline": "Jets trade safety Andre Cisco to injury-plagued Lions for draft pick",
+      "description": "The Lions added to their injury-plagued secondary Monday, acquiring safety Andre Cisco in a trade with the Jets.",
+      "published": "2026-11-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Detroit Lions",
+        "New York Jets"
+      ],
+      "teamIds": [
+        "DET",
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4361939",
+          "name": "Andre Cisco",
+          "position": "Safety",
+          "currentTeam": "DET"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50434559/sources-jets-trade-safety-andre-cisco-lions",
+      "attempts": 0
+    },
+    {
+      "id": "50433312",
+      "headline": "Why the Raiders are better off standing pat at the NFL trade deadline",
+      "description": "The NFL trade deadline is on Tuesday at 4 p.m. ET. Have Kubiak, Raiders given hints that they might not make moves?",
+      "published": "2026-11-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "3916655",
+          "name": "Maxx Crosby",
+          "position": "Defensive End",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "4875295",
+          "name": "Jackson Powers-Johnson",
+          "position": "Guard",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50433312/las-vegas-raiders-2026-trade-deadline-approach",
+      "attempts": 0
+    },
+    {
+      "id": "50432695",
+      "headline": "Sources: Jets DE Will McDonald IV, frustrated by lack of use, requests trade",
+      "description": "Jets DE Will McDonald IV, frustrated by lack of playing time, has requested a trade, sources told NFL Network's Ian Rapoport. Jets say they have no plans to trade him.",
+      "published": "2026-11-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4361767",
+          "name": "Will McDonald IV",
+          "position": "Defensive End",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50432695/jets-pass-rusher-mcdonald-iv-requests-trade",
+      "attempts": 0
+    },
+    {
+      "id": "50432277",
+      "headline": "Jaguars bolster defense, trade for safety Jessie Bates, DT Davon Godchaux",
+      "description": "The Jaguars bolstered their defense, acquiring safety Jessie Bates III from the Falcons and defensive tackle Davon Godchaux from the Saints.",
+      "published": "2026-11-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons",
+        "Jacksonville Jaguars",
+        "New Orleans Saints"
+      ],
+      "teamIds": [
+        "ATL",
+        "JAX",
+        "NO"
+      ],
+      "players": [
+        {
+          "id": "3919512",
+          "name": "Jessie Bates III",
+          "position": "Safety",
+          "currentTeam": "JAX"
+        },
+        {
+          "id": "3115383",
+          "name": "Davon Godchaux",
+          "position": "Defensive Tackle",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50432277/sources-jaguars-get-jessie-bates-iii-trade-falcons",
+      "attempts": 0
+    },
+    {
+      "id": "50429795",
+      "headline": "Titans WR Calvin Ridley involved in incident at Nashville airport",
+      "description": "Titans WR Calvin Ridley was involved in an incident at Nashville International Airport over the weekend, details of which have not been released.",
+      "published": "2026-11-09",
+      "likelyKind": "transaction",
+      "teams": [
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "3925357",
+          "name": "Calvin Ridley",
+          "position": "Wide Receiver",
+          "currentTeam": "TEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50429795/titans-wr-ridley-involved-incident-nashville-airport",
+      "attempts": 0
+    },
+    {
       "id": "50411320",
       "headline": "Vikings WR Jauan Jennings on rebuffing return to 49ers: 'I love where I'm at'",
       "description": "Jauan Jennings said he rebuffed the chance to return to the 49ers via trade despite struggling to produce for the Vikings because \"I love where I'm at.\"",
@@ -968,7 +1107,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50335308/raiders-not-planning-trading-maxx-crosby-sources-say",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50329135",
       "headline": "Will usually active Jets play or pass before trade deadline?",
@@ -1002,7 +1143,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50329135/jets-trade-deadline-rumors-allen-mcdonald-brownlee",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-09"
     },
     {
       "id": "50323095",
@@ -1025,7 +1168,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50323095/sources-colts-willing-trade-star-rb-jonathan-taylor",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-09"
     },
     {
       "id": "50340504",
@@ -1048,7 +1193,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50340504/chargers-safety-james-hamstring-placed-injured-reserve",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-09"
     },
     {
       "id": "50339066",
@@ -1071,7 +1218,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50339066/tvondre-sweat-placed-injured-reserve-knee-injury",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-09"
     },
     {
       "id": "50338005",
@@ -1094,10 +1243,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50338005/nfl-review-additional-allegations-packers-jacobs",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-09"
+    },
     {
       "id": "50336399",
       "headline": "Source: Commanders DT Daron Payne suffered season-ending foot injury",
