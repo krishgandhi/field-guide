@@ -3,12 +3,12 @@
   "isPreviousSeason": false,
   "teams": {
     "BUF": {
-      "wins": 6,
+      "wins": 7,
       "losses": 1,
       "ties": 0,
-      "pointDifferential": 52,
-      "pointsFor": 233,
-      "pointsAgainst": 181,
+      "pointDifferential": 69,
+      "pointsFor": 256,
+      "pointsAgainst": 187,
       "conferenceRank": 1
     },
     "DEN": {
@@ -155,15 +155,6 @@
       "pointsAgainst": 156,
       "conferenceRank": 1
     },
-    "MIN": {
-      "wins": 6,
-      "losses": 1,
-      "ties": 0,
-      "pointDifferential": 47,
-      "pointsFor": 140,
-      "pointsAgainst": 93,
-      "conferenceRank": 2
-    },
     "CHI": {
       "wins": 7,
       "losses": 2,
@@ -171,7 +162,7 @@
       "pointDifferential": 57,
       "pointsFor": 241,
       "pointsAgainst": 184,
-      "conferenceRank": 5
+      "conferenceRank": 2
     },
     "DET": {
       "wins": 6,
@@ -180,6 +171,15 @@
       "pointDifferential": 33,
       "pointsFor": 222,
       "pointsAgainst": 189,
+      "conferenceRank": 5
+    },
+    "MIN": {
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "pointDifferential": 30,
+      "pointsFor": 146,
+      "pointsAgainst": 116,
       "conferenceRank": 6
     },
     "GB": {

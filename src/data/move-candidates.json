@@ -1,6 +1,234 @@
 {
   "candidates": [
     {
+      "id": "50444069",
+      "headline": "Source: Falcons cutting kicker Nick Folk, signing Jake Moody",
+      "description": "ESPN has confirmed that the Falcons are releasing kicker Nick Folk and signing Jake Moody.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons",
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "ATL",
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "10621",
+          "name": "Nick Folk",
+          "position": "Place Kicker",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4372066",
+          "name": "Jake Moody",
+          "position": "Place Kicker",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50444069/sources-falcons-cutting-kicker-nick-folk-signing-jake-moody",
+      "attempts": 0
+    },
+    {
+      "id": "50443891",
+      "headline": "Bengals nix agreed-upon trade with Eagles, sources say",
+      "description": "A trade that would've sent Eagles edge rusher Arnold Ebiketie to Cincinnati has been called off, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cincinnati Bengals",
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "CIN",
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4257591",
+          "name": "Arnold Ebiketie",
+          "position": "Linebacker",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50443891/bengals-nix-agreed-trade-eagles-sources-say",
+      "attempts": 0
+    },
+    {
+      "id": "50443653",
+      "headline": "Source: Dolphins captain Zach Sieler out for rest of season with ruptured biceps",
+      "description": "Dolphins DT Zach Sieler will miss the rest of the season with a ruptured biceps, a source told ESPN, leaving Miami without a critical team leader and captain.",
+      "published": "2026-11-10",
+      "likelyKind": "injury",
+      "teams": [
+        "Miami Dolphins"
+      ],
+      "teamIds": [
+        "MIA"
+      ],
+      "players": [
+        {
+          "id": "3057956",
+          "name": "Zach Sieler",
+          "position": "Defensive Tackle",
+          "currentTeam": "MIA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50443653/source-dolphins-captain-zach-sieler-rest-season",
+      "attempts": 0
+    },
+    {
+      "id": "50443229",
+      "headline": "Bengals trade for Eagles LB Arnold Ebiketie, sources say",
+      "description": "The Bengals have added edge rusher Arnold Ebiketie in a trade with the Eagles, sources told NFL Network's Ian Rapoport.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Philadelphia Eagles",
+        "Cincinnati Bengals"
+      ],
+      "teamIds": [
+        "PHI",
+        "CIN"
+      ],
+      "players": [
+        {
+          "id": "4257591",
+          "name": "Arnold Ebiketie",
+          "position": "Linebacker",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50443229/bengals-trade-eagles-lb-arnold-ebiketie-sources-say",
+      "attempts": 0
+    },
+    {
+      "id": "50443204",
+      "headline": "Sources: Vikings inquiring about QBs ahead of trade deadline",
+      "description": "The Vikings have started making calls around the league about trading for a quarterback ahead of Tuesday's deadline, sources told ESPN and NFL Network.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "2573079",
+          "name": "Carson Wentz",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "3917315",
+          "name": "Kyler Murray",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "4573398",
+          "name": "Max Brosmer",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50443204/sources-vikings-asking-qbs-ahead-trade-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50442903",
+      "headline": "Sources: Jaguars telling teams they aren't trading WR Brian Thomas Jr.",
+      "description": "The Jaguars plan to keep wide receiver Brian Thomas Jr. through the trade deadline, sources told ESPN's Jeremy Fowler.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4432773",
+          "name": "Brian Thomas Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50442903/jaguars-not-planning-trade-wr-brian-thomas-jr",
+      "attempts": 0
+    },
+    {
+      "id": "50434129",
+      "headline": "Seven things Solak thinks for NFL Week 10: Jaguars trades, All-Pro picks, more",
+      "description": "Get ready for Week 10 with takes on the Jaguars winning the AFC, Shedeur Sanders not earning a starting role, Fred Warner being the best player in football and more.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Cleveland Browns",
+        "San Francisco 49ers",
+        "Seattle Seahawks",
+        "Jacksonville Jaguars",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "CLE",
+        "SF",
+        "SEA",
+        "JAX",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "3138826",
+          "name": "Fred Warner",
+          "position": "Linebacker",
+          "currentTeam": "SF"
+        },
+        {
+          "id": "3924327",
+          "name": "Drew Lock",
+          "position": "Quarterback",
+          "currentTeam": "SEA"
+        },
+        {
+          "id": "4381558",
+          "name": "Jordan Davis",
+          "position": "Defensive Tackle",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50434129/week-10-seven-things-solak-thinks-trade-deadline-all-pro",
+      "attempts": 0
+    },
+    {
+      "id": "50440119",
+      "headline": "Vikings left at QB crossroads after Carson Wentz's poor MNF showing vs. Bills",
+      "description": "After a historically poor performance by Carson Wentz on Monday night, Vikings coach Kevin O'Connell was asked whether the team might trade for a QB ahead of Tuesday's deadline. He deferred the question to GM Nolan Teasley.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "2573079",
+          "name": "Carson Wentz",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50440119/vikings-kevin-oconnell-defers-qb-trade-question-gm-poor-mnf-outing-carson-wentz",
+      "attempts": 0
+    },
+    {
       "id": "50434559",
       "headline": "Jets trade safety Andre Cisco to injury-plagued Lions for draft pick",
       "description": "The Lions added to their injury-plagued secondary Monday, acquiring safety Andre Cisco in a trade with the Jets.",
@@ -911,7 +1139,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360528/colts-jonathan-taylor-trade-deadline",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50360680",
       "headline": "Lions LB Jack Campbell still in hospital, but signs positive",
@@ -933,7 +1163,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360680/lions-lb-jack-campbell-hospital-signs-positive",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50360220",
@@ -958,7 +1190,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360220/colts-sticking-daniel-jones-qb1-week-9",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50359850",
@@ -981,7 +1215,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50359850/look-lamar-jackson-cloudy-future-baltimore-ravens",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50352650",
@@ -1004,7 +1240,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50352650/seattle-seahawks-trade-rashid-shadeed-jaxon-smith-njigba",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50356092",
@@ -1029,7 +1267,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50356092/saquon-barkley-assurances-eagles-dealt",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50343678",
@@ -1054,7 +1294,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50343678/bears-trade-jeffery-simmons-based-myles-garrett-deal",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50336880",
@@ -1077,7 +1319,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50336880/sources-eagles-trade-star-rb-saquon-barkley",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
     },
     {
       "id": "50335308",
@@ -1106,10 +1350,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50335308/raiders-not-planning-trading-maxx-crosby-sources-say",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-10"
+    },
     {
       "id": "50329135",
       "headline": "Will usually active Jets play or pass before trade deadline?",
