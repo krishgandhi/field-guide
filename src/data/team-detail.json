@@ -13,12 +13,12 @@
         "offence": {
           "players": [
             {
-              "id": "4038524",
-              "name": "Gardner Minshew II",
+              "id": "4430841",
+              "name": "Carson Beck",
               "label": "QB",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 6, Pk 178 (JAX)"
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 3, Pk 65 (ARI)"
             },
             {
               "id": "4373626",
@@ -98,9 +98,9 @@
               "rank": 23
             }
           },
-          "passPlayShare": 62.9,
+          "passPlayShare": 62.8,
           "passPlayShareRank": 8,
-          "quarterbackCarries": 1
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -129,12 +129,12 @@
               "draftedBy": "2021: Rd 1, Pk 16 (ARI)"
             },
             {
-              "id": "4426923",
-              "name": "Kei'Trel Clark",
+              "id": "4431433",
+              "name": "Kalen King",
               "label": "CB",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 6, Pk 180 (ARI)"
+              "experience": 1,
+              "draftedBy": "2024: Rd 7, Pk 255 (GB)"
             },
             {
               "id": "4432668",
@@ -287,7 +287,7 @@
             }
           },
           "passPlayShare": 53.3,
-          "passPlayShareRank": 31,
+          "passPlayShareRank": 30,
           "quarterbackCarries": 20
         },
         "defence": {
@@ -475,7 +475,7 @@
             }
           },
           "passPlayShare": 53.4,
-          "passPlayShareRank": 30,
+          "passPlayShareRank": 29,
           "quarterbackCarries": 29
         },
         "defence": {
@@ -663,7 +663,7 @@
             }
           },
           "passPlayShare": 55.8,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 61
         },
         "defence": {
@@ -1039,7 +1039,7 @@
             }
           },
           "passPlayShare": 55,
-          "passPlayShareRank": 28,
+          "passPlayShareRank": 27,
           "quarterbackCarries": 31
         },
         "defence": {
@@ -1791,7 +1791,7 @@
             }
           },
           "passPlayShare": 61.6,
-          "passPlayShareRank": 12,
+          "passPlayShareRank": 11,
           "quarterbackCarries": 37
         },
         "defence": {
@@ -2473,20 +2473,20 @@
               "draftedBy": "2020: Rd 2, Pk 41 (IND)"
             },
             {
-              "id": "4688813",
-              "name": "Josh Downs",
+              "id": "3051889",
+              "name": "Laquon Treadwell",
               "label": "WR",
-              "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 79 (IND)"
+              "debutYear": 2016,
+              "experience": 10,
+              "draftedBy": "2016: Rd 1, Pk 23 (MIN)"
             },
             {
-              "id": "15818",
-              "name": "Keenan Allen",
+              "id": "4061956",
+              "name": "Ashton Dulin",
               "label": "WR",
-              "debutYear": 2013,
-              "experience": 13,
-              "draftedBy": "2013: Rd 3, Pk 76 (SD)"
+              "debutYear": 2019,
+              "experience": 8,
+              "draftedBy": null
             },
             {
               "id": "4431459",
@@ -2731,7 +2731,7 @@
             }
           },
           "passPlayShare": 53.5,
-          "passPlayShareRank": 29,
+          "passPlayShareRank": 28,
           "quarterbackCarries": 21
         },
         "defence": {
@@ -2857,12 +2857,12 @@
               "draftedBy": "2023: Rd 2, Pk 55 (KC)"
             },
             {
-              "id": "4683062",
-              "name": "Xavier Worthy",
+              "id": "4688813",
+              "name": "Josh Downs",
               "label": "WR",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 28 (KC)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 79 (IND)"
             },
             {
               "id": "15847",
@@ -2990,12 +2990,12 @@
               "draftedBy": "2017: Rd 7, Pk 233 (CAR)"
             },
             {
-              "id": "4372716",
-              "name": "Nikko Remigio",
+              "id": "4832955",
+              "name": "Emmett Johnson",
               "label": "KR",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": null
+              "experience": 0,
+              "draftedBy": "2026: Rd 5, Pk 161 (KC)"
             }
           ],
           "rank": 32,
@@ -3233,12 +3233,12 @@
               "draftedBy": "2023: Rd 5, Pk 177 (LAR)"
             },
             {
-              "id": "4360797",
-              "name": "Tutu Atwell",
+              "id": "4710855",
+              "name": "Konata Mumpfield",
               "label": "WR",
               "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 2, Pk 57 (LAR)"
+              "experience": 2,
+              "draftedBy": "2025: Rd 7, Pk 242 (LAR)"
             },
             {
               "id": "2573401",
@@ -3295,7 +3295,7 @@
             }
           },
           "passPlayShare": 61.5,
-          "passPlayShareRank": 14,
+          "passPlayShareRank": 13,
           "quarterbackCarries": 15
         },
         "defence": {
@@ -3366,12 +3366,12 @@
               "draftedBy": null
             },
             {
-              "id": "4569382",
-              "name": "Jordan Whittington",
+              "id": "4386544",
+              "name": "Xavier Smith",
               "label": "KR",
               "debutYear": null,
               "experience": 3,
-              "draftedBy": "2024: Rd 6, Pk 213 (LAR)"
+              "draftedBy": null
             }
           ],
           "rank": 30,
@@ -3397,12 +3397,12 @@
         "offence": {
           "players": [
             {
-              "id": "14880",
-              "name": "Kirk Cousins",
+              "id": "4837248",
+              "name": "Fernando Mendoza",
               "label": "QB",
-              "debutYear": 2012,
-              "experience": 15,
-              "draftedBy": "2012: Rd 4, Pk 102 (WSH)"
+              "debutYear": null,
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 1 (LV)"
             },
             {
               "id": "4890973",
@@ -3482,9 +3482,9 @@
               "rank": 10
             }
           },
-          "passPlayShare": 62.6,
-          "passPlayShareRank": 10,
-          "quarterbackCarries": 22
+          "passPlayShare": 60.3,
+          "passPlayShareRank": 15,
+          "quarterbackCarries": 1
         },
         "defence": {
           "players": [
@@ -3585,12 +3585,12 @@
         "offence": {
           "players": [
             {
-              "id": "4242512",
-              "name": "Malik Willis",
+              "id": "4433971",
+              "name": "Kyle McCord",
               "label": "QB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 3, Pk 86 (TEN)"
+              "experience": 1,
+              "draftedBy": "2025: Rd 6, Pk 181 (PHI)"
             },
             {
               "id": "4711533",
@@ -3670,9 +3670,9 @@
               "rank": 19
             }
           },
-          "passPlayShare": 56.8,
-          "passPlayShareRank": 24,
-          "quarterbackCarries": 38
+          "passPlayShare": 52,
+          "passPlayShareRank": 31,
+          "quarterbackCarries": null
         },
         "defence": {
           "players": [
@@ -3773,12 +3773,12 @@
         "offence": {
           "players": [
             {
-              "id": "3917315",
-              "name": "Kyler Murray",
+              "id": "14880",
+              "name": "Kirk Cousins",
               "label": "QB",
-              "debutYear": 2019,
-              "experience": 8,
-              "draftedBy": "2019: Rd 1, Pk 1 (ARI)"
+              "debutYear": 2012,
+              "experience": 15,
+              "draftedBy": "2012: Rd 4, Pk 102 (WSH)"
             },
             {
               "id": "4360569",
@@ -3858,9 +3858,9 @@
               "rank": 23
             }
           },
-          "passPlayShare": 57.7,
-          "passPlayShareRank": 22,
-          "quarterbackCarries": 29
+          "passPlayShare": 56.8,
+          "passPlayShareRank": 23,
+          "quarterbackCarries": 22
         },
         "defence": {
           "players": [
@@ -4423,7 +4423,7 @@
             }
           },
           "passPlayShare": 56.9,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": 9
         },
         "defence": {
@@ -4799,7 +4799,7 @@
             }
           },
           "passPlayShare": 62,
-          "passPlayShareRank": 11,
+          "passPlayShareRank": 10,
           "quarterbackCarries": 9
         },
         "defence": {
@@ -5175,7 +5175,7 @@
             }
           },
           "passPlayShare": 55.4,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 11
         },
         "defence": {
@@ -5363,7 +5363,7 @@
             }
           },
           "passPlayShare": 55.6,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 39
         },
         "defence": {
@@ -5622,11 +5622,11 @@
               "draftedBy": null
             },
             {
-              "id": "5097554",
-              "name": "Kameron Johnson",
+              "id": "4430871",
+              "name": "Sean Tucker",
               "label": "KR",
               "debutYear": null,
-              "experience": 3,
+              "experience": 4,
               "draftedBy": null
             }
           ],
@@ -5739,7 +5739,7 @@
             }
           },
           "passPlayShare": 61.6,
-          "passPlayShareRank": 13,
+          "passPlayShareRank": 12,
           "quarterbackCarries": 26
         },
         "defence": {
@@ -5927,7 +5927,7 @@
             }
           },
           "passPlayShare": 61.5,
-          "passPlayShareRank": 15,
+          "passPlayShareRank": 14,
           "quarterbackCarries": 31
         },
         "defence": {

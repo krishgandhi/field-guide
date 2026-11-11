@@ -1,205 +1,183 @@
 {
   "season": 2026,
-  "week": 9,
+  "week": 10,
   "games": [
     {
-      "id": "401873037",
-      "kickoff": "2026-11-06T01:15Z",
-      "home": "BAL",
-      "away": "JAX",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
+      "id": "401873052",
+      "kickoff": "2026-11-13T01:15Z",
+      "home": "NYG",
+      "away": "WSH",
+      "spread": 2.5,
+      "favourite": "home",
+      "overUnder": 41.5,
       "broadcast": "Prime Video",
-      "venue": "M&T Bank Stadium",
+      "venue": "MetLife Stadium",
       "neutralSite": false
     },
     {
-      "id": "401873038",
-      "kickoff": "2026-11-08T14:30Z",
-      "home": "ATL",
-      "away": "CIN",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "NFL Net",
-      "venue": "Santiago Bernabéu",
+      "id": "401873053",
+      "kickoff": "2026-11-15T14:30Z",
+      "home": "DET",
+      "away": "NE",
+      "spread": 2.5,
+      "favourite": "home",
+      "overUnder": 51.5,
+      "broadcast": "Fox",
+      "venue": "FC Bayern Munich Stadium",
       "neutralSite": true
     },
     {
-      "id": "401873040",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "IND",
-      "away": "DAL",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
+      "id": "401873058",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "ATL",
+      "away": "KC",
+      "spread": 3.5,
+      "favourite": "away",
+      "overUnder": 45.5,
+      "broadcast": "CBS",
+      "venue": "Mercedes-Benz Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873056",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "CLE",
+      "away": "HOU",
+      "spread": 4.5,
+      "favourite": "away",
+      "overUnder": 40.5,
       "broadcast": "Fox",
+      "venue": "Huntington Bank Field",
+      "neutralSite": false
+    },
+    {
+      "id": "401873060",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "GB",
+      "away": "MIN",
+      "spread": 3.5,
+      "favourite": "home",
+      "overUnder": 42.5,
+      "broadcast": "Fox",
+      "venue": "Lambeau Field",
+      "neutralSite": false
+    },
+    {
+      "id": "401873057",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "TEN",
+      "away": "JAX",
+      "spread": 10.5,
+      "favourite": "away",
+      "overUnder": 46.5,
+      "broadcast": "Fox",
+      "venue": "Nissan Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873059",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "IND",
+      "away": "MIA",
+      "spread": 3.5,
+      "favourite": "home",
+      "overUnder": 38.5,
+      "broadcast": "CBS",
       "venue": "Lucas Oil Stadium",
       "neutralSite": false
     },
     {
-      "id": "401873045",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "KC",
-      "away": "NYJ",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "CBS",
-      "venue": "Arrowhead Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873042",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "MIA",
-      "away": "DET",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "CBS",
-      "venue": "Hard Rock Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873039",
-      "kickoff": "2026-11-08T18:00Z",
+      "id": "401873055",
+      "kickoff": "2026-11-15T18:00Z",
       "home": "NO",
-      "away": "CLE",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "CBS",
+      "away": "CAR",
+      "spread": 2.5,
+      "favourite": "home",
+      "overUnder": 48.5,
+      "broadcast": "Fox",
       "venue": "Caesars Superdome",
       "neutralSite": false
     },
     {
-      "id": "401873044",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "PHI",
-      "away": "NYG",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Fox",
-      "venue": "Lincoln Financial Field",
-      "neutralSite": false
-    },
-    {
-      "id": "401873043",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "WSH",
-      "away": "LAR",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Fox",
-      "venue": "Northwest Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873041",
-      "kickoff": "2026-11-08T18:00Z",
-      "home": "CAR",
-      "away": "DEN",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "CBS",
-      "venue": "Bank of America Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873046",
-      "kickoff": "2026-11-08T21:05Z",
-      "home": "LAC",
-      "away": "HOU",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "CBS",
-      "venue": "SoFi Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873049",
-      "kickoff": "2026-11-08T21:25Z",
-      "home": "NE",
-      "away": "GB",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Fox",
-      "venue": "Gillette Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873047",
-      "kickoff": "2026-11-08T21:25Z",
-      "home": "SF",
-      "away": "LV",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Fox",
-      "venue": "Levi's Stadium",
-      "neutralSite": false
-    },
-    {
-      "id": "401873048",
-      "kickoff": "2026-11-08T21:25Z",
-      "home": "SEA",
-      "away": "ARI",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "Fox",
-      "venue": "Lumen Field",
-      "neutralSite": false
-    },
-    {
-      "id": "401873050",
-      "kickoff": "2026-11-09T01:20Z",
-      "home": "CHI",
-      "away": "TB",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "NBC",
-      "venue": "Soldier Field",
-      "neutralSite": false
-    },
-    {
-      "id": "401873051",
-      "kickoff": "2026-11-10T01:15Z",
-      "home": "MIN",
+      "id": "401873054",
+      "kickoff": "2026-11-15T18:00Z",
+      "home": "NYJ",
       "away": "BUF",
-      "spread": null,
-      "favourite": null,
-      "overUnder": null,
-      "broadcast": "ESPN, ABC",
-      "venue": "U.S. Bank Stadium",
+      "spread": 8.5,
+      "favourite": "away",
+      "overUnder": 50.5,
+      "broadcast": "CBS",
+      "venue": "MetLife Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873062",
+      "kickoff": "2026-11-15T21:05Z",
+      "home": "LV",
+      "away": "SEA",
+      "spread": 6.5,
+      "favourite": "away",
+      "overUnder": 40.5,
+      "broadcast": "CBS",
+      "venue": "Allegiant Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873061",
+      "kickoff": "2026-11-15T21:05Z",
+      "home": "ARI",
+      "away": "LAR",
+      "spread": 9.5,
+      "favourite": "away",
+      "overUnder": 39.5,
+      "broadcast": "CBS",
+      "venue": "State Farm Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873063",
+      "kickoff": "2026-11-15T21:25Z",
+      "home": "DAL",
+      "away": "SF",
+      "spread": 3.5,
+      "favourite": "away",
+      "overUnder": 55.5,
+      "broadcast": "Fox",
+      "venue": "AT&T Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873064",
+      "kickoff": "2026-11-16T01:20Z",
+      "home": "CIN",
+      "away": "PIT",
+      "spread": 3.5,
+      "favourite": "home",
+      "overUnder": 49.5,
+      "broadcast": "NBC",
+      "venue": "Paycor Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873065",
+      "kickoff": "2026-11-17T01:15Z",
+      "home": "BAL",
+      "away": "LAC",
+      "spread": 4.5,
+      "favourite": "home",
+      "overUnder": 38.5,
+      "broadcast": "ESPN",
+      "venue": "M&T Bank Stadium",
       "neutralSite": false
     }
   ],
   "byes": [
-    "PIT",
-    "TEN"
+    "CHI",
+    "DEN",
+    "PHI",
+    "TB"
   ],
   "injuries": {
-    "ARI": [
-      {
-        "player": "Gardner Minshew II",
-        "position": "QB",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Michael Wilson",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "ATL": [
       {
         "player": "Zachariah Branch",
@@ -231,6 +209,13 @@
         "status": "Out"
       }
     ],
+    "CLE": [
+      {
+        "player": "Deshaun Watson",
+        "position": "QB",
+        "status": "Out"
+      }
+    ],
     "DAL": [
       {
         "player": "Tyler Goodson",
@@ -257,13 +242,15 @@
         "status": "Doubtful"
       },
       {
-        "player": "Josh Jacobs",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
         "player": "Micah Parsons",
         "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "Cade Stover",
+        "position": "TE",
         "status": "Out"
       }
     ],
@@ -274,11 +261,11 @@
         "status": "Doubtful"
       }
     ],
-    "MIA": [
+    "MIN": [
       {
-        "player": "Darrell Baker Jr.",
-        "position": "CB",
-        "status": "Out"
+        "player": "Kyler Murray",
+        "position": "QB",
+        "status": "Doubtful"
       }
     ],
     "NE": [
@@ -286,6 +273,13 @@
         "player": "Rhamondre Stevenson",
         "position": "RB",
         "status": "Doubtful"
+      }
+    ],
+    "NYG": [
+      {
+        "player": "Cam Skattebo",
+        "position": "RB",
+        "status": "Out"
       }
     ],
     "PHI": [
@@ -328,6 +322,13 @@
       {
         "player": "Yaya Diaby",
         "position": "LB",
+        "status": "Out"
+      }
+    ],
+    "WSH": [
+      {
+        "player": "Colson Yankoff",
+        "position": "TE",
         "status": "Out"
       }
     ]

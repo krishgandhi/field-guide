@@ -1,6 +1,352 @@
 {
   "candidates": [
     {
+      "id": "50453373",
+      "headline": "Sources: Giants called Falcons to ask about Bijan Robinson before trade deadline",
+      "description": "The Giants made a call to the Falcons before the NFL trade deadline inquiring about star running back Bijan Robinson, multiple sources told ESPN.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons",
+        "New York Giants"
+      ],
+      "teamIds": [
+        "ATL",
+        "NYG"
+      ],
+      "players": [
+        {
+          "id": "4430807",
+          "name": "Bijan Robinson",
+          "position": "Running Back",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4696981",
+          "name": "Cam Skattebo",
+          "position": "Running Back",
+          "currentTeam": "NYG"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50453373/sources-giants-eyed-bijan-robinson-trade-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50442897",
+      "headline": "Questions on 2026 NFL trade deadline deals: Does Kirk Cousins lift the Vikings?",
+      "description": "Let's make sense of Kirk Cousins to the Vikings, Josh Downs to the Chiefs, the Jaguars getting aggressive, a wild Bengals comp-pick mixup and four teams' deadline silence.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "Jacksonville Jaguars",
+        "Cincinnati Bengals",
+        "Kansas City Chiefs",
+        "Los Angeles Rams",
+        "New York Giants",
+        "Detroit Lions"
+      ],
+      "teamIds": [
+        "MIN",
+        "JAX",
+        "CIN",
+        "KC",
+        "LAR",
+        "NYG",
+        "DET"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50442897/2026-trade-deadline-barnwell-questions-cousins-downs",
+      "attempts": 0
+    },
+    {
+      "id": "50445806",
+      "headline": "Cowboys rave about Quinnen Williams a year after trade deadline deal",
+      "description": "Voted a captain by his teammates, Williams is making a difference in Dallas on and off the field.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Dallas Cowboys"
+      ],
+      "teamIds": [
+        "DAL"
+      ],
+      "players": [
+        {
+          "id": "4040982",
+          "name": "Quinnen Williams",
+          "position": "Defensive Tackle",
+          "currentTeam": "DAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50445806/cowboys-quinnen-williams-trade-deadline",
+      "attempts": 0
+    },
+    {
+      "id": "50447827",
+      "headline": "The Philadelphia Eagles' 2026 trade haul is likely to age well over time",
+      "description": "Whether Philadelphia wants to go after its QB of the future or build up around Jalen Hurts, it has options.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4040715",
+          "name": "Jalen Hurts",
+          "position": "Quarterback",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50447827/philadelphia-eagles-trade-haul-2027-draft-picks",
+      "attempts": 0
+    },
+    {
+      "id": "50448300",
+      "headline": "Patrick and Brittany Mahomes announce baby No. 4 on NFL trade deadline day",
+      "description": "The couple shared the news on a busy trade deadline day that also brought receiver Josh Downs to Kansas City.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Kansas City Chiefs"
+      ],
+      "teamIds": [
+        "KC"
+      ],
+      "players": [
+        {
+          "id": "3139477",
+          "name": "Patrick Mahomes",
+          "position": "Quarterback",
+          "currentTeam": "KC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50448300/patrick-brittany-mahomes-fourth-child-announcement",
+      "attempts": 0
+    },
+    {
+      "id": "50447756",
+      "headline": "Raiders name Fernando Mendoza starting QB after trading Kirk Cousins",
+      "description": "No. 1 pick Fernando Mendoza was officially named the Raiders' starting quarterback Tuesday after the team traded Kirk Cousins to the Vikings.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50447756/raiders-name-fernando-mendoza-starting-qb-trading-kirk-cousins",
+      "attempts": 0
+    },
+    {
+      "id": "50444528",
+      "headline": "What the Kirk Cousins trade means for the Vikings and the Raiders",
+      "description": "We answered big questions surrounding the trade of quarterback Kirk Cousins from the Raiders to the Vikings.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "MIN",
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        },
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "3917315",
+          "name": "Kyler Murray",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50444528/kirk-cousins-trade-minnesota-vikings-las-vegas-raiders",
+      "attempts": 0
+    },
+    {
+      "id": "50443388",
+      "headline": "2026 NFL trade deadline winners, losers: Kirk Cousins, Josh Downs, Bengals, more",
+      "description": "Which teams made the best -- and worst -- moves before the NFL trade deadline? We're making sense of all the action.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders",
+        "Indianapolis Colts",
+        "Philadelphia Eagles",
+        "Tennessee Titans",
+        "Cincinnati Bengals",
+        "Kansas City Chiefs",
+        "Minnesota Vikings",
+        "Los Angeles Chargers",
+        "Chicago Bears",
+        "Arizona Cardinals"
+      ],
+      "teamIds": [
+        "LV",
+        "IND",
+        "PHI",
+        "TEN",
+        "CIN",
+        "KC",
+        "MIN",
+        "LAC",
+        "CHI",
+        "ARI"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "4262921",
+          "name": "Justin Jefferson",
+          "position": "Wide Receiver",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "4688813",
+          "name": "Josh Downs",
+          "position": "Wide Receiver",
+          "currentTeam": "KC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50443388/2026-nfl-trade-deadline-winners-losers-best-worst-deals",
+      "attempts": 0
+    },
+    {
+      "id": "50446669",
+      "headline": "From 2-7 to 6-2: Josh Downs reacts to Chiefs trade with Vince Carter GIF",
+      "description": "A moment from Vince Carter's retirement ceremony helped Downs sum up his feelings about joining Kansas City.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Kansas City Chiefs",
+        "Indianapolis Colts",
+        "Toronto Raptors"
+      ],
+      "teamIds": [
+        "KC",
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "4688813",
+          "name": "Josh Downs",
+          "position": "Wide Receiver",
+          "currentTeam": "KC"
+        },
+        {
+          "id": "3139477",
+          "name": "Patrick Mahomes",
+          "position": "Quarterback",
+          "currentTeam": "KC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50446669/chiefs-josh-downs-trade-reaction-vince-carter-gif",
+      "attempts": 0
+    },
+    {
+      "id": "50446805",
+      "headline": "RB Jonathan Taylor, QB Daniel Jones remain with Colts as trade deadline passes",
+      "description": "Colts RB Jonathan Taylor and QB Daniel Jones were the subject of trade overtures in recent days and weeks but were not traded before Tuesday's trade deadline.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4242335",
+          "name": "Jonathan Taylor",
+          "position": "Running Back",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50446805/rb-taylor-qb-jones-remain-colts-trade-deadline-passes",
+      "attempts": 0
+    },
+    {
+      "id": "50446499",
+      "headline": "Falcons trade center Ryan Neuzil to Ravens for guard Andrew Vorhees, pick",
+      "description": "The Ravens acquired Falcons starting center Ryan Neuzil in exchange for backup guard Andrew Vorhees and a conditional 2028 sixth-round pick.",
+      "published": "2026-11-10",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens",
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "BAL",
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4036444",
+          "name": "Ryan Neuzil",
+          "position": "Center",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "4243220",
+          "name": "Andrew Vorhees",
+          "position": "Guard",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50446499/falcons-trade-center-neuzil-ravens-guard-vorhees-pick",
+      "attempts": 0
+    },
+    {
       "id": "50444069",
       "headline": "Source: Falcons cutting kicker Nick Folk, signing Jake Moody",
       "description": "ESPN has confirmed that the Falcons are releasing kicker Nick Folk and signing Jake Moody.",
@@ -828,7 +1174,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50380067/lions-lb-campbell-full-movement-lower-body-neck-injury",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50378819",
       "headline": "Browns QB Deshaun Watson in concussion protocol; status vs. Saints unclear",
@@ -856,7 +1204,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50378819/browns-qb-watson-concussion-protocol-status-vs-saints-unclear",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50378427",
@@ -879,7 +1229,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50378427/source-commanders-javon-kinlaw-knee-surgery-season",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50378134",
@@ -914,7 +1266,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50378134/sources-ravens-qb-tyler-snoop-huntley-season",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50371759",
@@ -943,7 +1297,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50371759/nfl-seahawks-bears-sam-darnold-pressure",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50372284",
@@ -966,7 +1322,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50372284/saints-release-veteran-kicker-daniel-carlson-7-games",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50372281",
@@ -989,7 +1347,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50372281/giants-cb-greg-newsome-ii-agree-3-year-46m-extension",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50371976",
@@ -1012,7 +1372,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50371976/source-colts-adetomiwa-adebawore-reach-2-year-35m-deal",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50370431",
@@ -1035,7 +1397,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50370431/buffalo-miracle-hbo-trailer-josh-allen",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50372292",
@@ -1058,7 +1422,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50372292/bills-release-safety-cj-gardner-johnson",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50355612",
@@ -1115,7 +1481,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50355612/week-9-seven-things-solak-thinks-trades-standings",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
     },
     {
       "id": "50360528",
@@ -1138,10 +1506,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360528/colts-jonathan-taylor-trade-deadline",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-11"
+    },
     {
       "id": "50360680",
       "headline": "Lions LB Jack Campbell still in hospital, but signs positive",
@@ -3663,124 +4031,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-19"
-    },
-    {
-      "id": "50053035",
-      "headline": "J.J. McCarthy traded to Giants: Will he succeed in New York?",
-      "description": "With Jaxson Dart out for the season, the Giants dealt a fifth-round pick to Minnesota for McCarthy. But does this move the needle for New York? Can it work?",
-      "published": "2026-09-28",
-      "likelyKind": "injury",
-      "teams": [
-        "New York Giants",
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "NYG",
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50053035/jj-mccarthy-trade-giants-vikings-quarterback-deadline-barnwell",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-19"
-    },
-    {
-      "id": "50052903",
-      "headline": "McCarthy exits Vikings as one of franchise's biggest draft busts",
-      "description": "J.J. McCarthy was the No. 10 pick in 2024 but played only 10 games before being traded to the Giants on Monday.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052903/nfl-minnesota-vikings-jj-mccarthy-trade-new-york-giants-kevin-occonnell",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-18"
-    },
-    {
-      "id": "50052864",
-      "headline": "Giants acquire QB J.J. McCarthy in trade with Vikings",
-      "description": "The Giants are trading for Vikings quarterback J.J. McCarthy, sending a 2027 fifth-round draft pick to Minnesota for the 2024 first-round pick.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants",
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "NYG",
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        },
-        {
-          "id": "2969939",
-          "name": "Jameis Winston",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        },
-        {
-          "id": "4243322",
-          "name": "Jake Haener",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052864/sources-giants-acquire-qb-jj-mccarthy-trade-vikings",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-18"
-    },
-    {
-      "id": "50052520",
-      "headline": "Source: Packers signing veteran O-lineman Mekhi Becton",
-      "description": "Veteran offensive lineman Mekhi Becton is signing with the Packers, a source told ESPN's Jeremy Fowler on Monday.",
-      "published": "2026-09-28",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4240090",
-          "name": "Mekhi Becton",
-          "position": "Offensive Lineman",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052520/source-packers-signing-veteran-o-lineman-mekhi-becton",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-18"
     }
   ]
 }
