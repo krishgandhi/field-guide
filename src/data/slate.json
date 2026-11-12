@@ -9,7 +9,7 @@
       "away": "WSH",
       "spread": 2.5,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 40.5,
       "broadcast": "Prime Video",
       "venue": "MetLife Stadium",
       "neutralSite": false
@@ -31,9 +31,9 @@
       "kickoff": "2026-11-15T18:00Z",
       "home": "ATL",
       "away": "KC",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "away",
-      "overUnder": 45.5,
+      "overUnder": 46.5,
       "broadcast": "CBS",
       "venue": "Mercedes-Benz Stadium",
       "neutralSite": false
@@ -55,9 +55,9 @@
       "kickoff": "2026-11-15T18:00Z",
       "home": "GB",
       "away": "MIN",
-      "spread": 3.5,
+      "spread": 3,
       "favourite": "home",
-      "overUnder": 42.5,
+      "overUnder": 41.5,
       "broadcast": "Fox",
       "venue": "Lambeau Field",
       "neutralSite": false
@@ -192,6 +192,18 @@
         "status": "Out"
       }
     ],
+    "CAR": [
+      {
+        "player": "Will Lee III",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jaelan Phillips",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "CHI": [
       {
         "player": "Case Keenum",
@@ -218,6 +230,11 @@
     ],
     "DAL": [
       {
+        "player": "Luke Schoonmaker",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Tyler Goodson",
         "position": "RB",
         "status": "Out"
@@ -235,7 +252,19 @@
         "status": "Out"
       }
     ],
+    "DET": [
+      {
+        "player": "Jacob Saylors",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
     "GB": [
+      {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Zaire Franklin",
         "position": "LB",
@@ -244,6 +273,11 @@
       {
         "player": "Micah Parsons",
         "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "MarShawn Lloyd",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -254,11 +288,44 @@
         "status": "Out"
       }
     ],
+    "IND": [
+      {
+        "player": "Justin Walley",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "KC": [
+      {
+        "player": "Mansoor Delane",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "LV": [
+      {
+        "player": "Aidan O'Connell",
+        "position": "QB",
+        "status": "Out"
+      }
+    ],
     "LAR": [
       {
         "player": "Puka Nacua",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
+      }
+    ],
+    "MIA": [
+      {
+        "player": "Darrell Baker Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Jaylen Wright",
+        "position": "RB",
+        "status": "Out"
       }
     ],
     "MIN": [
@@ -273,12 +340,34 @@
         "player": "Rhamondre Stevenson",
         "position": "RB",
         "status": "Doubtful"
+      },
+      {
+        "player": "TreVeyon Henderson",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
+        "player": "Carlton Davis III",
+        "position": "CB",
+        "status": "Out"
       }
     ],
     "NYG": [
       {
+        "player": "Colton Hood",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
         "player": "Cam Skattebo",
         "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "NYJ": [
+      {
+        "player": "Garrett Wilson",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -304,6 +393,23 @@
         "status": "Out"
       }
     ],
+    "PIT": [
+      {
+        "player": "Brandin Echols",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Doneiko Slaughter",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Ben Skowronek",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
     "SF": [
       {
         "player": "Brandon Aiyuk",
@@ -316,6 +422,11 @@
         "player": "Sam Darnold",
         "position": "QB",
         "status": "Out"
+      },
+      {
+        "player": "Rashid Shaheed",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "TB": [
@@ -325,7 +436,19 @@
         "status": "Out"
       }
     ],
+    "TEN": [
+      {
+        "player": "Jaylon Jones",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "WSH": [
+      {
+        "player": "Treylon Burks",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Colson Yankoff",
         "position": "TE",

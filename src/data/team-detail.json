@@ -538,14 +538,6 @@
         "specialTeams": {
           "players": [
             {
-              "id": "4697745",
-              "name": "Tyler Loop",
-              "label": "K",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 6, Pk 186 (BAL)"
-            },
-            {
               "id": "4690143",
               "name": "LaJohntay Wester",
               "label": "KR",

@@ -1,6 +1,218 @@
 {
   "candidates": [
     {
+      "id": "50456429",
+      "headline": "Three Jaguars trade deadline takeaways, from 'F them picks' to BTJ staying",
+      "description": "The 6-2 Jaguars aggressively upgraded their defense at the deadline and kept the offense intact. Let's look at the aftermath of the three deals.",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4432773",
+          "name": "Brian Thomas Jr.",
+          "position": "Wide Receiver",
+          "currentTeam": "JAX"
+        },
+        {
+          "id": "4381558",
+          "name": "Jordan Davis",
+          "position": "Defensive Tackle",
+          "currentTeam": "JAX"
+        },
+        {
+          "id": "3919512",
+          "name": "Jessie Bates III",
+          "position": "Safety",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50456429/jaguars-trade-takeaways-james-gladstone-btj",
+      "attempts": 0
+    },
+    {
+      "id": "50454225",
+      "headline": "Why 2-7 Jets preferred to keep roster intact at trade deadline",
+      "description": "A year after making two blockbuster trades, New York stayed quiet at the NFL trade deadline.",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4361767",
+          "name": "Will McDonald IV",
+          "position": "Defensive End",
+          "currentTeam": "NYJ"
+        },
+        {
+          "id": "4427366",
+          "name": "Breece Hall",
+          "position": "Running Back",
+          "currentTeam": "NYJ"
+        },
+        {
+          "id": "4569618",
+          "name": "Garrett Wilson",
+          "position": "Wide Receiver",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50454225/jets-2026-trade-deadline-garrett-wilson-geno-smith",
+      "attempts": 0
+    },
+    {
+      "id": "50459330",
+      "headline": "Sources: Broncos-Chargers trade nixed due to concerns over Daiyan Henley's knee",
+      "description": "The Broncos announced late Wednesday that their trade to acquire linebacker Daiyan Henley from the Chargers \"will not be finalized.\"",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Denver Broncos",
+        "Los Angeles Chargers"
+      ],
+      "teamIds": [
+        "DEN",
+        "LAC"
+      ],
+      "players": [
+        {
+          "id": "4241597",
+          "name": "Daiyan Henley",
+          "position": "Linebacker",
+          "currentTeam": "LAC"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50459330/broncos-say-trade-chargers-lb-henley-not-finalized",
+      "attempts": 0
+    },
+    {
+      "id": "50456881",
+      "headline": "Veteran WR Keenan Allen feeling energized by trade to 49ers",
+      "description": "Keenan Allen said while he didn't expect to get traded, landing with a contending team in the 49ers has him feeling energized.",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "15818",
+          "name": "Keenan Allen",
+          "position": "Wide Receiver",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50456881/veteran-wr-keenan-allen-feels-energized-trade-49ers",
+      "attempts": 0
+    },
+    {
+      "id": "50456405",
+      "headline": "Fernando Mendoza relishes 'once-in-a-lifetime' opportunity as Raiders' QB1",
+      "description": "No. 1 pick Fernando Mendoza said Wednesday it's a \"once-in-a-lifetime\" opportunity to be the Raiders' starting quarterback, while his teammates and coach expressed their confidence in his ability to lead the offense.",
+      "published": "2026-11-12",
+      "likelyKind": "role",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50456405/fernando-mendoza-relishes-once-life-opportunity-raiders-starting-qb",
+      "attempts": 0
+    },
+    {
+      "id": "50455775",
+      "headline": "Kirk Cousins makes first comments on Minnesota trade at Great Clips",
+      "description": "Kirk Cousins offered some thoughts on his trade to Minnesota after the news broke in the most on-brand location imaginable.",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings",
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "MIN",
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50455775/kirk-cousins-minnesota-trade-great-clips",
+      "attempts": 0
+    },
+    {
+      "id": "50455771",
+      "headline": "Kirk Cousins says call with Kevin O'Connell convinced him to OK Vikings trade",
+      "description": "Kirk Cousins has rejoined the Vikings after not quite three years away, relishing his familiarity with the Twin Cities area, the people in the organization.",
+      "published": "2026-11-12",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50455771/kirk-cousins-reintroduced-vikings-starting-qb",
+      "attempts": 0
+    },
+    {
+      "id": "50454952",
+      "headline": "Jets' Will McDonald has 'earned' bigger role, coach says",
+      "description": "Jets coach Aaron Glenn said Will McDonald IV has \"earned\" a bigger role after meeting with the pass rusher following his trade request.",
+      "published": "2026-11-11",
+      "likelyKind": "transaction",
+      "teams": [
+        "New York Jets"
+      ],
+      "teamIds": [
+        "NYJ"
+      ],
+      "players": [
+        {
+          "id": "4361767",
+          "name": "Will McDonald IV",
+          "position": "Defensive End",
+          "currentTeam": "NYJ"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50454952/jets-mcdonald-earned-bigger-role-coach-says",
+      "attempts": 0
+    },
+    {
       "id": "50453373",
       "headline": "Sources: Giants called Falcons to ask about Bijan Robinson before trade deadline",
       "description": "The Giants made a call to the Falcons before the NFL trade deadline inquiring about star running back Bijan Robinson, multiple sources told ESPN.",
@@ -976,7 +1188,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360565/trade-deadline-quinnen-sauce-jets-cowboys-colts",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50390525",
       "headline": "Jonathan Taylor 'can't avoid' trade speculation as Colts go through talks",
@@ -998,7 +1212,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50390525/colts-rb-jonathan-taylor-awaits-resolution-trade-rumbling",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50382587",
@@ -1021,7 +1237,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50382587/san-francisco-49ers-deforest-buckner-return",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50379105",
@@ -1056,7 +1274,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50379105/carolina-panthers-trade-deadline-five-potential-options",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50383288",
@@ -1079,7 +1299,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50383288/packers-josh-jacobs-not-worried-missing-more-games-additional-allegations",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50381318",
@@ -1104,7 +1326,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50381318/sources-ravens-finalizing-trade-cardinals-qb-brissett",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50382837",
@@ -1127,7 +1351,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50382837/rams-cb-jaylen-watson-needs-season-ending-shoulder-surgery",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50381853",
@@ -1150,7 +1376,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50381853/shane-steichen-defends-colts-jonathan-taylor-usage-trade",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
     },
     {
       "id": "50380067",
@@ -1173,10 +1401,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50380067/lions-lb-campbell-full-movement-lower-body-neck-injury",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-12"
+    },
     {
       "id": "50378819",
       "headline": "Browns QB Deshaun Watson in concussion protocol; status vs. Saints unclear",
@@ -3817,220 +4045,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50074351",
-      "headline": "Steelers end standoff, trade Joey Porter Jr. to Cowboys",
-      "description": "The Steelers traded cornerback Joey Porter Jr. to the Cowboys for a 2027 sixth-round pick and a 2028 second-rounder.",
-      "published": "2026-10-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys",
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "DAL",
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50074351/sources-steelers-trade-joey-porter-jr-cowboys",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50071951",
-      "headline": "Falcons sign DT Gervon Dexter Sr. to four-year extension",
-      "description": "The Falcons signed Gervon Dexter Sr. to a four-year, $78 million contract extension, sources told ESPN.",
-      "published": "2026-10-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Atlanta Falcons"
-      ],
-      "teamIds": [
-        "ATL"
-      ],
-      "players": [
-        {
-          "id": "4429014",
-          "name": "Gervon Dexter Sr.",
-          "position": "Defensive Tackle",
-          "currentTeam": "ATL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50071951/falcons-sign-dt-gervon-dexter-sr-four-year-extension",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50068583",
-      "headline": "Packers WR Jayden Reed to undergo season-ending neck surgery",
-      "description": "Packers wide receiver Jayden Reed will undergo season-ending neck surgery and be placed on injured reserve, coach Matt LaFleur said Wednesday.",
-      "published": "2026-10-01",
-      "likelyKind": "injury",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4362249",
-          "name": "Jayden Reed",
-          "position": "Wide Receiver",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50068583/sources-packers-put-wr-jayden-reed-ir-due-neck-injury",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50071302",
-      "headline": "Giants' Harbaugh explains reasoning for releasing Beckham",
-      "description": "Giants coach John Harbaugh on Wednesday explained the team's decision for releasing wide receiver Odell Beckham Jr.",
-      "published": "2026-09-30",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants"
-      ],
-      "teamIds": [
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "16733",
-          "name": "Odell Beckham Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50071302/giants-harbaugh-explains-reasoning-releasing-beckham",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50067128",
-      "headline": "Packers, guard Kevin Zeitler agree to one-year deal",
-      "description": "Veteran guard Kevin Zeitler signed a one-year deal with the Packers.",
-      "published": "2026-09-30",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "14931",
-          "name": "Kevin Zeitler",
-          "position": "Guard",
-          "currentTeam": "TEN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50067128/packers-guard-kevin-zeitler-agree-one-year-deal",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
-    },
-    {
-      "id": "50059771",
-      "headline": "Inside George Kittle's 243-day recovery from torn Achilles",
-      "description": "Despite tearing his Achilles in the playoffs, Kittle appears to be back to his normal self. Here's how he won the recovery process.",
-      "published": "2026-09-29",
-      "likelyKind": "injury",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
-        {
-          "id": "3040151",
-          "name": "George Kittle",
-          "position": "Tight End",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059771/san-francisco-49ers-george-kittle-torn-achilles-recovery",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-19"
-    },
-    {
-      "id": "50059809",
-      "headline": "Source - Bengals cut Ke'Shawn Williams after costly muffed punt",
-      "description": "The Cincinnati Bengals cut WR Ke'Shawn Williams after he muffed a punt that eventually led to the Pittsburgh Steelers' 30-27 win, a source told ESPN's Jeremy Fowler. Earlier Tuesday, Cincinnati signed WR Mitch Tinsley, per ESPN's Adam Schefter.",
-      "published": "2026-09-29",
-      "likelyKind": "transaction",
-      "teams": [
-        "Cincinnati Bengals"
-      ],
-      "teamIds": [
-        "CIN"
-      ],
-      "players": [
-        {
-          "id": "4570738",
-          "name": "Ke'Shawn Williams",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        },
-        {
-          "id": "4368003",
-          "name": "Andrei Iosivas",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        },
-        {
-          "id": "5092508",
-          "name": "Colbie Young",
-          "position": "Wide Receiver",
-          "currentTeam": "CIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059809/source-bengals-cut-keshawn-williams-costly-muffed-punt",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-19"
-    },
-    {
-      "id": "50059755",
-      "headline": "Sources: Giants to release fan favorite Odell Beckham Jr.",
-      "description": "The Giants are releasing veteran wide receiver Odell Beckham Jr., sources told NFL Network.",
-      "published": "2026-09-29",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants"
-      ],
-      "teamIds": [
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "16733",
-          "name": "Odell Beckham Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50059755/sources-giants-release-fan-favorite-odell-beckham-jr",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-19"
     }
   ]
 }
