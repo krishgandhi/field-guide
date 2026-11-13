@@ -1,6 +1,70 @@
 {
   "candidates": [
     {
+      "id": "50472481",
+      "headline": "Jaguars holding out new players Jordan Davis, Jessie Bates to give them bye",
+      "description": "The Jaguars are holding out newly acquired Jordan Davis and Jessie Bates to give them a bye week.",
+      "published": "2026-11-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Jacksonville Jaguars"
+      ],
+      "teamIds": [
+        "JAX"
+      ],
+      "players": [
+        {
+          "id": "4381558",
+          "name": "Jordan Davis",
+          "position": "Defensive Tackle",
+          "currentTeam": "JAX"
+        },
+        {
+          "id": "3115383",
+          "name": "Davon Godchaux",
+          "position": "Defensive Tackle",
+          "currentTeam": "JAX"
+        },
+        {
+          "id": "4882093",
+          "name": "Bhayshul Tuten",
+          "position": "Running Back",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50472481/jaguars-holding-new-players-jordan-davis-jessie-bates-give-bye",
+      "attempts": 0
+    },
+    {
+      "id": "50471659",
+      "headline": "Falcons sign DE Cameron Thomas, CB C.J. Henderson to multiyear extensions",
+      "description": "The Atlanta Falcons have signed defensive end Cameron Thomas and cornerback C.J. Henderson to multiyear contract extensions, the team announced Friday.",
+      "published": "2026-11-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4361510",
+          "name": "Cameron Thomas",
+          "position": "Defensive End",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4240596",
+          "name": "C.J. Henderson",
+          "position": "Cornerback",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50471659/falcons-sign-de-thomas-cb-henderson-multiyear-extensions",
+      "attempts": 0
+    },
+    {
       "id": "50456429",
       "headline": "Three Jaguars trade deadline takeaways, from 'F them picks' to BTJ staying",
       "description": "The 6-2 Jaguars aggressively upgraded their defense at the deadline and kept the offense intact. Let's look at the aftermath of the three deals.",
@@ -1088,7 +1152,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50400123/ravens-complete-trade-cardinals-qb-jacoby-brissett",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50359560",
       "headline": "Regrading 2025 NFL deadline trades: How Gardner, Williams deals look right now",
@@ -1148,7 +1214,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50359560/regrading-deals-2025-nfl-trade-deadline-williams-gardner",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-13"
     },
     {
       "id": "50360565",
@@ -1187,10 +1255,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50360565/trade-deadline-quinnen-sauce-jets-cowboys-colts",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-13"
+    },
     {
       "id": "50390525",
       "headline": "Jonathan Taylor 'can't avoid' trade speculation as Colts go through talks",
@@ -3981,70 +4049,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-21"
-    },
-    {
-      "id": "50076570",
-      "headline": "Why Steelers traded Joey Porter Jr. to Cowboys, what's next?",
-      "description": "Our insiders dive into Porter's fit in Dallas, his potential for a contract extension and what's next for the Steelers.",
-      "published": "2026-10-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys",
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "DAL",
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50076570/pittsburgh-steelers-trade-joey-porter-jr-dallas-cowboys",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-21"
-    },
-    {
-      "id": "50043542",
-      "headline": "NFL trade deadline grades: Joey Porter Jr. to Cowboys, J.J. McCarthy to Giants",
-      "description": "Can Joey Porter Jr. clean up the Cowboys' defense? Will J.J. McCarthy improve the Giants' QB situation? We're grading NFL trades ahead of November's deadline.",
-      "published": "2026-10-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Minnesota Vikings",
-        "New York Giants",
-        "Dallas Cowboys",
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "MIN",
-        "NYG",
-        "DAL",
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        },
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "PIT"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50043542/2026-trade-deadline-grades-latest-best-worst-deals",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-20"
     }
   ]
 }

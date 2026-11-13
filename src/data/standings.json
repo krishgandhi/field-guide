@@ -193,11 +193,11 @@
     },
     "NYG": {
       "wins": 5,
-      "losses": 2,
+      "losses": 3,
       "ties": 1,
-      "pointDifferential": 10,
-      "pointsFor": 182,
-      "pointsAgainst": 172,
+      "pointDifferential": 7,
+      "pointsFor": 203,
+      "pointsAgainst": 196,
       "conferenceRank": 3
     },
     "SEA": {
@@ -243,6 +243,15 @@
       "pointDifferential": -31,
       "pointsFor": 185,
       "pointsAgainst": 216,
+      "conferenceRank": 12
+    },
+    "WSH": {
+      "wins": 3,
+      "losses": 5,
+      "ties": 1,
+      "pointDifferential": -27,
+      "pointsFor": 196,
+      "pointsAgainst": 223,
       "conferenceRank": 11
     },
     "TB": {
@@ -252,7 +261,7 @@
       "pointDifferential": 24,
       "pointsFor": 202,
       "pointsAgainst": 178,
-      "conferenceRank": 12
+      "conferenceRank": 13
     },
     "ATL": {
       "wins": 3,
@@ -261,7 +270,7 @@
       "pointDifferential": -35,
       "pointsFor": 188,
       "pointsAgainst": 223,
-      "conferenceRank": 13
+      "conferenceRank": 14
     },
     "ARI": {
       "wins": 3,
@@ -270,15 +279,6 @@
       "pointDifferential": -77,
       "pointsFor": 178,
       "pointsAgainst": 255,
-      "conferenceRank": 14
-    },
-    "WSH": {
-      "wins": 2,
-      "losses": 5,
-      "ties": 1,
-      "pointDifferential": -30,
-      "pointsFor": 172,
-      "pointsAgainst": 202,
       "conferenceRank": 15
     },
     "PHI": {

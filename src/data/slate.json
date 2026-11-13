@@ -7,9 +7,9 @@
       "kickoff": "2026-11-13T01:15Z",
       "home": "NYG",
       "away": "WSH",
-      "spread": 2.5,
-      "favourite": "home",
-      "overUnder": 40.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "MetLife Stadium",
       "neutralSite": false
@@ -19,9 +19,9 @@
       "kickoff": "2026-11-15T14:30Z",
       "home": "DET",
       "away": "NE",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
-      "overUnder": 51.5,
+      "overUnder": 49.5,
       "broadcast": "Fox",
       "venue": "FC Bayern Munich Stadium",
       "neutralSite": true
@@ -33,7 +33,7 @@
       "away": "KC",
       "spread": 3,
       "favourite": "away",
-      "overUnder": 46.5,
+      "overUnder": 47.5,
       "broadcast": "CBS",
       "venue": "Mercedes-Benz Stadium",
       "neutralSite": false
@@ -57,7 +57,7 @@
       "away": "MIN",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "Fox",
       "venue": "Lambeau Field",
       "neutralSite": false
@@ -182,7 +182,7 @@
       {
         "player": "Zachariah Branch",
         "position": "WR",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "BUF": [
@@ -194,46 +194,24 @@
     ],
     "CAR": [
       {
-        "player": "Will Lee III",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Jaelan Phillips",
+        "player": "Bobby Okereke",
         "position": "LB",
         "status": "Out"
       }
     ],
     "CHI": [
       {
-        "player": "Case Keenum",
-        "position": "QB",
+        "player": "Malik Muhammad II",
+        "position": "CB",
         "status": "Out"
       },
       {
         "player": "Kyle Monangai",
         "position": "RB",
         "status": "Out"
-      },
-      {
-        "player": "Malik Muhammad II",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "CLE": [
-      {
-        "player": "Deshaun Watson",
-        "position": "QB",
-        "status": "Out"
       }
     ],
     "DAL": [
-      {
-        "player": "Luke Schoonmaker",
-        "position": "TE",
-        "status": "Out"
-      },
       {
         "player": "Tyler Goodson",
         "position": "RB",
@@ -254,17 +232,12 @@
     ],
     "DET": [
       {
-        "player": "Jacob Saylors",
-        "position": "RB",
+        "player": "D.J. Reed",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "GB": [
-      {
-        "player": "Josh Jacobs",
-        "position": "RB",
-        "status": "Out"
-      },
       {
         "player": "Zaire Franklin",
         "position": "LB",
@@ -276,55 +249,37 @@
         "status": "Out"
       },
       {
-        "player": "MarShawn Lloyd",
+        "player": "Josh Jacobs",
         "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "HOU": [
-      {
-        "player": "Cade Stover",
-        "position": "TE",
         "status": "Out"
       }
     ],
     "IND": [
       {
-        "player": "Justin Walley",
-        "position": "CB",
+        "player": "Jaylon Carlies",
+        "position": "LB",
         "status": "Out"
-      }
-    ],
-    "KC": [
+      },
       {
-        "player": "Mansoor Delane",
-        "position": "CB",
+        "player": "Mo Alie-Cox",
+        "position": "TE",
         "status": "Out"
-      }
-    ],
-    "LV": [
+      },
       {
-        "player": "Aidan O'Connell",
-        "position": "QB",
-        "status": "Out"
-      }
-    ],
-    "LAR": [
-      {
-        "player": "Puka Nacua",
-        "position": "WR",
+        "player": "Akeem Davis-Gaither",
+        "position": "LB",
         "status": "Out"
       }
     ],
     "MIA": [
       {
-        "player": "Darrell Baker Jr.",
-        "position": "CB",
-        "status": "Out"
+        "player": "Chris Bell",
+        "position": "WR",
+        "status": "Doubtful"
       },
       {
-        "player": "Jaylen Wright",
-        "position": "RB",
+        "player": "Darrell Baker Jr.",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -336,11 +291,6 @@
       }
     ],
     "NE": [
-      {
-        "player": "Rhamondre Stevenson",
-        "position": "RB",
-        "status": "Doubtful"
-      },
       {
         "player": "TreVeyon Henderson",
         "position": "RB",
@@ -354,20 +304,30 @@
     ],
     "NYG": [
       {
-        "player": "Colton Hood",
+        "player": "Malik Harrison",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Nikko Reed",
         "position": "CB",
         "status": "Out"
       },
       {
-        "player": "Cam Skattebo",
-        "position": "RB",
+        "player": "Thomas Fidone II",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Paulson Adebo",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "NYJ": [
       {
-        "player": "Garrett Wilson",
-        "position": "WR",
+        "player": "Trevin Wallace",
+        "position": "LB",
         "status": "Out"
       }
     ],
@@ -393,23 +353,6 @@
         "status": "Out"
       }
     ],
-    "PIT": [
-      {
-        "player": "Brandin Echols",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Doneiko Slaughter",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Ben Skowronek",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "SF": [
       {
         "player": "Brandon Aiyuk",
@@ -422,11 +365,6 @@
         "player": "Sam Darnold",
         "position": "QB",
         "status": "Out"
-      },
-      {
-        "player": "Rashid Shaheed",
-        "position": "WR",
-        "status": "Out"
       }
     ],
     "TB": [
@@ -438,15 +376,30 @@
     ],
     "TEN": [
       {
-        "player": "Jaylon Jones",
-        "position": "CB",
+        "player": "Anthony Hill Jr.",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Cody Barton",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Carnell Tate",
+        "position": "WR",
         "status": "Out"
       }
     ],
     "WSH": [
       {
-        "player": "Treylon Burks",
-        "position": "WR",
+        "player": "Athan Kaliakmanis",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Isaac Yiadom",
+        "position": "CB",
         "status": "Out"
       },
       {
