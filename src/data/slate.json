@@ -19,7 +19,7 @@
       "kickoff": "2026-11-15T14:30Z",
       "home": "DET",
       "away": "NE",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "home",
       "overUnder": 49.5,
       "broadcast": "Fox",
@@ -55,7 +55,7 @@
       "kickoff": "2026-11-15T18:00Z",
       "home": "GB",
       "away": "MIN",
-      "spread": 3,
+      "spread": 2.5,
       "favourite": "home",
       "overUnder": 42.5,
       "broadcast": "Fox",
@@ -139,7 +139,7 @@
       "kickoff": "2026-11-15T21:25Z",
       "home": "DAL",
       "away": "SF",
-      "spread": 3.5,
+      "spread": 4.5,
       "favourite": "away",
       "overUnder": 55.5,
       "broadcast": "Fox",
@@ -180,6 +180,11 @@
   "injuries": {
     "ATL": [
       {
+        "player": "Divine Deablo",
+        "position": "LB",
+        "status": "Doubtful"
+      },
+      {
         "player": "Zachariah Branch",
         "position": "WR",
         "status": "Out"
@@ -213,6 +218,16 @@
     ],
     "DAL": [
       {
+        "player": "Donovan Ezeiruaku",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Jonathan Mingo",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Tyler Goodson",
         "position": "RB",
         "status": "Out"
@@ -239,18 +254,45 @@
     ],
     "GB": [
       {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Zaire Franklin",
         "position": "LB",
         "status": "Doubtful"
       },
       {
+        "player": "Josh Whyle",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
         "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "Danielle Hunter",
         "position": "DE",
         "status": "Out"
       },
       {
-        "player": "Josh Jacobs",
-        "position": "RB",
+        "player": "Brevin Jordan",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Azeez Al-Shaair",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Marvin Harrison Jr.",
+        "position": "WR",
         "status": "Out"
       }
     ],
@@ -261,17 +303,29 @@
         "status": "Out"
       },
       {
-        "player": "Mo Alie-Cox",
-        "position": "TE",
+        "player": "Akeem Davis-Gaither",
+        "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Akeem Davis-Gaither",
-        "position": "LB",
+        "player": "Mo Alie-Cox",
+        "position": "TE",
+        "status": "Out"
+      }
+    ],
+    "KC": [
+      {
+        "player": "Kenneth Walker III",
+        "position": "RB",
         "status": "Out"
       }
     ],
     "MIA": [
+      {
+        "player": "Jared Wayne",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Chris Bell",
         "position": "WR",
@@ -287,7 +341,22 @@
       {
         "player": "Kyler Murray",
         "position": "QB",
-        "status": "Doubtful"
+        "status": "Out"
+      },
+      {
+        "player": "Tyrion Ingram-Dawkins",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Blake Cashman",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Jauan Jennings",
+        "position": "WR",
+        "status": "Out"
       }
     ],
     "NE": [
@@ -299,6 +368,13 @@
       {
         "player": "Carlton Davis III",
         "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "CJ Donaldson",
+        "position": "RB",
         "status": "Out"
       }
     ],
@@ -355,6 +431,11 @@
     ],
     "SF": [
       {
+        "player": "Mike Evans",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Brandon Aiyuk",
         "position": "WR",
         "status": "Out"
@@ -376,12 +457,12 @@
     ],
     "TEN": [
       {
-        "player": "Anthony Hill Jr.",
+        "player": "Cody Barton",
         "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Cody Barton",
+        "player": "Anthony Hill Jr.",
         "position": "LB",
         "status": "Out"
       },

@@ -1,6 +1,135 @@
 {
   "candidates": [
     {
+      "id": "50479874",
+      "headline": "Sources: Vikings made initial Kirk Cousins trade call to Raiders before MNF",
+      "description": "The Vikings initially reached out to the Raiders about a Kirk Cousins trade before their MNF game against the Bills, sources told ESPN and NFL Network.",
+      "published": "2026-11-14",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders",
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "LV",
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50479874/sources-vikings-first-called-kirk-cousins-mnf",
+      "attempts": 0
+    },
+    {
+      "id": "50473666",
+      "headline": "Falcons insist winning still the goal despite trading Jessie Bates III",
+      "description": "Atlanta wanted to ensure trading away Jessie Bates III didn't send the wrong message to the team.",
+      "published": "2026-11-14",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4360423",
+          "name": "Michael Penix Jr.",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "3919512",
+          "name": "Jessie Bates III",
+          "position": "Safety",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50473666/atlanta-falcons-trade-deadline-jessie-bates-morale",
+      "attempts": 0
+    },
+    {
+      "id": "50466331",
+      "headline": "Why the Raiders named Fernando Mendoza as the starter",
+      "description": "The Raiders named Fernando Mendoza as the starter shortly after trading Kirk Cousins to the Vikings.",
+      "published": "2026-11-14",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50466331/las-vegas-raiders-why-fernando-mendoza-starting",
+      "attempts": 0
+    },
+    {
+      "id": "50472099",
+      "headline": "Despite Cousins trade, are Vikings back to square one at QB?",
+      "description": "Cousins can give some short-term relief, but his future and the search for a franchise QB remain uncertain.",
+      "published": "2026-11-14",
+      "likelyKind": "transaction",
+      "teams": [
+        "Minnesota Vikings"
+      ],
+      "teamIds": [
+        "MIN"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "3917315",
+          "name": "Kyler Murray",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50472099/vikings-kirk-cousins-trade-contract",
+      "attempts": 0
+    },
+    {
+      "id": "50473514",
+      "headline": "Eagles release wide receiver Hollywood Brown per request",
+      "description": "Receiver Hollywood Brown, who has played sparingly over the first half of the season, has been released by the Eagles upon his request.",
+      "published": "2026-11-13",
+      "likelyKind": "transaction",
+      "teams": [
+        "Philadelphia Eagles"
+      ],
+      "teamIds": [
+        "PHI"
+      ],
+      "players": [
+        {
+          "id": "4241372",
+          "name": "Hollywood Brown",
+          "position": "Wide Receiver",
+          "currentTeam": "PHI"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50473514/sources-eagles-release-wr-hollywood-brown-per-request",
+      "attempts": 0
+    },
+    {
       "id": "50472481",
       "headline": "Jaguars holding out new players Jordan Davis, Jessie Bates to give them bye",
       "description": "The Jaguars are holding out newly acquired Jordan Davis and Jessie Bates to give them a bye week.",
@@ -1011,7 +1140,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50411320/jennings-rebuffing-return-49ers-love-where-at",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50410541",
       "headline": "Saints activate WR Jordyn Tyson, LT Kelvin Banks, cut RB Kendre Miller",
@@ -1045,7 +1176,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50410541/sources-saints-activate-wr-jordyn-tyson-lt-kelvin-banks",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-14"
     },
     {
       "id": "50403440",
@@ -1068,7 +1201,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50403440/sources-colts-engaged-daniel-jones-trade-talks",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-14"
     },
     {
       "id": "50400748",
@@ -1091,7 +1226,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50400748/sources-ravens-not-expected-trade-star-rb-derrick-henry",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-14"
     },
     {
       "id": "50401403",
@@ -1114,7 +1251,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50401403/what-biggest-problems-facing-brissett-ravens",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-14"
     },
     {
       "id": "50400123",
@@ -1151,10 +1290,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50400123/ravens-complete-trade-cardinals-qb-jacoby-brissett",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-14"
+    },
     {
       "id": "50359560",
       "headline": "Regrading 2025 NFL deadline trades: How Gardner, Williams deals look right now",
@@ -3893,162 +4032,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-24"
-    },
-    {
-      "id": "50086232",
-      "headline": "Joey Porter Jr. without designation, could debut for Cowboys",
-      "description": "Newly acquired Cowboys cornerback Joey Porter Jr. does not carry an injury designation after practicing the past two days following his trade from the Steelers.",
-      "published": "2026-10-02",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys"
-      ],
-      "teamIds": [
-        "DAL"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "DAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50086232/joey-porter-jr-designation-debut-cowboys",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-24"
-    },
-    {
-      "id": "50085908",
-      "headline": "McCarthy: Trade to Giants a 'shock,' turns page on Vikings",
-      "description": "Quarterback J.J. McCarthy said it was a \"shock\" to be traded from the Vikings to the Giants this week but is looking at it as an opportunity to show what he can do.",
-      "published": "2026-10-02",
-      "likelyKind": "transaction",
-      "teams": [
-        "New York Giants",
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "NYG",
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4433970",
-          "name": "J.J. McCarthy",
-          "position": "Quarterback",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50085908/mccarthy-trade-giants-shock-turns-page-vikings",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-23"
-    },
-    {
-      "id": "50085487",
-      "headline": "Bears coach Ben Johnson not ready to name QB starter",
-      "description": "Bears coach Ben Johnson will not say whether Case Keenum or Tyson Bagent will start Sunday against the Jets.",
-      "published": "2026-10-02",
-      "likelyKind": "role",
-      "teams": [
-        "Chicago Bears"
-      ],
-      "teamIds": [
-        "CHI"
-      ],
-      "players": [
-        {
-          "id": "15168",
-          "name": "Case Keenum",
-          "position": "Quarterback",
-          "currentTeam": "CHI"
-        },
-        {
-          "id": "4434153",
-          "name": "Tyson Bagent",
-          "position": "Quarterback",
-          "currentTeam": "CHI"
-        },
-        {
-          "id": "4431611",
-          "name": "Caleb Williams",
-          "position": "Quarterback",
-          "currentTeam": "CHI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-21"
-    },
-    {
-      "id": "50069588",
-      "headline": "Don't be surprised if ... these three hot starters continue to shine all season",
-      "description": "Don't be surprised if a few early stars stay hot, and if a slow-starting QB enjoys a big Week 4.",
-      "published": "2026-10-02",
-      "likelyKind": "role",
-      "teams": [],
-      "teamIds": [],
-      "players": [
-        {
-          "id": "3917792",
-          "name": "Daniel Jones",
-          "position": "Quarterback",
-          "currentTeam": "IND"
-        },
-        {
-          "id": "4360689",
-          "name": "Tyler Shough",
-          "position": "Quarterback",
-          "currentTeam": "NO"
-        },
-        {
-          "id": "4248528",
-          "name": "Christian Watson",
-          "position": "Wide Receiver",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/fantasy/football/story/_/id/50069588/fantasy-football-start-sit-sleepers-breakouts-week-4",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-21"
-    },
-    {
-      "id": "50052555",
-      "headline": "Why Matthew Stafford made a cameo in Taylor Swift's 'Patient Zero' music video",
-      "description": "Why, yes, that was Matthew Stafford. Here's why all signs pointed to the reigning NFL MVP's music video cameo.",
-      "published": "2026-10-01",
-      "likelyKind": "transaction",
-      "teams": [
-        "Los Angeles Rams",
-        "Los Angeles Kings",
-        "Kansas City Chiefs"
-      ],
-      "teamIds": [
-        "LAR",
-        "KC"
-      ],
-      "players": [
-        {
-          "id": "12483",
-          "name": "Matthew Stafford",
-          "position": "Quarterback",
-          "currentTeam": "LAR"
-        },
-        {
-          "id": "15847",
-          "name": "Travis Kelce",
-          "position": "Tight End",
-          "currentTeam": "KC"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50052555/matthew-stafford-taylor-swift-rams-aries-patient-zero-music-video-cameo",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-21"
     }
   ]
 }
