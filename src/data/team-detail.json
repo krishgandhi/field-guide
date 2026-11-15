@@ -37,12 +37,12 @@
               "draftedBy": "2026: Rd 5, Pk 143 (ARI)"
             },
             {
-              "id": "4360739",
-              "name": "Simi Fehoko",
+              "id": "3059722",
+              "name": "Zay Jones",
               "label": "WR",
-              "debutYear": null,
-              "experience": 6,
-              "draftedBy": "2021: Rd 5, Pk 179 (DAL)"
+              "debutYear": 2017,
+              "experience": 9,
+              "draftedBy": "2017: Rd 2, Pk 37 (BUF)"
             },
             {
               "id": "4361307",
@@ -881,12 +881,12 @@
               "draftedBy": "2021: Rd 1, Pk 18 (MIA)"
             },
             {
-              "id": "5225251",
-              "name": "Malcolm DeWalt IV",
-              "label": "DB",
+              "id": "4240595",
+              "name": "Marco Wilson",
+              "label": "CB",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": null
+              "experience": 6,
+              "draftedBy": "2021: Rd 4, Pk 136 (ARI)"
             },
             {
               "id": "5151083",
@@ -922,12 +922,12 @@
               "draftedBy": null
             },
             {
-              "id": "4685350",
-              "name": "Trevor Etienne",
+              "id": "4709392",
+              "name": "Anthony Tyus III",
               "label": "KR",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 4, Pk 114 (CAR)"
+              "experience": 1,
+              "draftedBy": null
             }
           ],
           "rank": 6,
@@ -2238,12 +2238,12 @@
               "draftedBy": "2026: Rd 6, Pk 216 (GB)"
             },
             {
-              "id": "4259305",
-              "name": "Bo Melton",
+              "id": "4430191",
+              "name": "Skyy Moore",
               "label": "KR",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2022: Rd 7, Pk 229 (SEA)"
+              "experience": 5,
+              "draftedBy": "2022: Rd 2, Pk 54 (KC)"
             }
           ],
           "rank": 27,
@@ -2377,12 +2377,12 @@
               "draftedBy": "2015: Rd 3, Pk 88 (MIN)"
             },
             {
-              "id": "4033812",
-              "name": "Jake Hansen",
+              "id": "4837286",
+              "name": "Wade Woodaz",
               "label": "LB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": null
+              "experience": 0,
+              "draftedBy": "2026: Rd 4, Pk 123 (HOU)"
             },
             {
               "id": "4426434",
@@ -2549,12 +2549,12 @@
         "defence": {
           "players": [
             {
-              "id": "4566154",
-              "name": "Jaylahn Tuimoloau",
+              "id": "3843843",
+              "name": "Arden Key",
               "label": "DE",
-              "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 2, Pk 45 (IND)"
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 87 (OAK)"
             },
             {
               "id": "4426473",
@@ -4157,12 +4157,12 @@
               "draftedBy": "2025: Rd 2, Pk 40 (NO)"
             },
             {
-              "id": "3054850",
-              "name": "Alvin Kamara",
+              "id": "4239996",
+              "name": "Travis Etienne Jr.",
               "label": "RB",
-              "debutYear": 2017,
-              "experience": 10,
-              "draftedBy": "2017: Rd 3, Pk 67 (NO)"
+              "debutYear": null,
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 25 (JAX)"
             },
             {
               "id": "4361370",
@@ -4173,12 +4173,12 @@
               "draftedBy": "2022: Rd 1, Pk 11 (NO)"
             },
             {
-              "id": "4569559",
-              "name": "Devaughn Vele",
+              "id": "4880281",
+              "name": "Jordyn Tyson",
               "label": "WR",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 7, Pk 235 (DEN)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 8 (NO)"
             },
             {
               "id": "3929645",
@@ -4993,12 +4993,12 @@
         "defence": {
           "players": [
             {
-              "id": "4430947",
-              "name": "Yahya Black",
-              "label": "DE",
+              "id": "4682980",
+              "name": "Derrick Harmon",
+              "label": "DT",
               "debutYear": null,
               "experience": 2,
-              "draftedBy": "2025: Rd 5, Pk 164 (PIT)"
+              "draftedBy": "2025: Rd 1, Pk 21 (PIT)"
             },
             {
               "id": "13977",
