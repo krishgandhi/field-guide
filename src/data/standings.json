@@ -74,15 +74,6 @@
       "pointsAgainst": 242,
       "conferenceRank": 8
     },
-    "BAL": {
-      "wins": 4,
-      "losses": 5,
-      "ties": 0,
-      "pointDifferential": -47,
-      "pointsFor": 189,
-      "pointsAgainst": 236,
-      "conferenceRank": 9
-    },
     "LV": {
       "wins": 4,
       "losses": 6,
@@ -90,6 +81,15 @@
       "pointDifferential": -38,
       "pointsFor": 251,
       "pointsAgainst": 289,
+      "conferenceRank": 9
+    },
+    "BAL": {
+      "wins": 4,
+      "losses": 6,
+      "ties": 0,
+      "pointDifferential": -50,
+      "pointsFor": 209,
+      "pointsAgainst": 259,
       "conferenceRank": 10
     },
     "HOU": {
@@ -119,6 +119,15 @@
       "pointsAgainst": 254,
       "conferenceRank": 13
     },
+    "LAC": {
+      "wins": 1,
+      "losses": 8,
+      "ties": 0,
+      "pointDifferential": -95,
+      "pointsFor": 144,
+      "pointsAgainst": 239,
+      "conferenceRank": 14
+    },
     "MIA": {
       "wins": 1,
       "losses": 8,
@@ -126,7 +135,7 @@
       "pointDifferential": -76,
       "pointsFor": 148,
       "pointsAgainst": 224,
-      "conferenceRank": 14
+      "conferenceRank": 15
     },
     "TEN": {
       "wins": 1,
@@ -135,15 +144,6 @@
       "pointDifferential": -72,
       "pointsFor": 167,
       "pointsAgainst": 239,
-      "conferenceRank": 15
-    },
-    "LAC": {
-      "wins": 0,
-      "losses": 8,
-      "ties": 0,
-      "pointDifferential": -98,
-      "pointsFor": 121,
-      "pointsAgainst": 219,
       "conferenceRank": 16
     },
     "SF": {

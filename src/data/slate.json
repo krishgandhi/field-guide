@@ -3,18 +3,6 @@
   "week": 10,
   "games": [
     {
-      "id": "401873065",
-      "kickoff": "2026-11-17T01:15Z",
-      "home": "BAL",
-      "away": "LAC",
-      "spread": 4.5,
-      "favourite": "home",
-      "overUnder": 39.5,
-      "broadcast": "ESPN",
-      "venue": "M&T Bank Stadium",
-      "neutralSite": false
-    },
-    {
       "id": "401873052",
       "kickoff": "2026-11-13T01:15Z",
       "home": "NYG",
@@ -169,6 +157,18 @@
       "broadcast": "NBC",
       "venue": "Paycor Stadium",
       "neutralSite": false
+    },
+    {
+      "id": "401873065",
+      "kickoff": "2026-11-17T01:15Z",
+      "home": "BAL",
+      "away": "LAC",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN",
+      "venue": "M&T Bank Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [
@@ -178,6 +178,13 @@
     "TB"
   ],
   "injuries": {
+    "ARI": [
+      {
+        "player": "Jordan Burch",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "ATL": [
       {
         "player": "Divine Deablo",
@@ -197,65 +204,19 @@
         "status": "Out"
       }
     ],
-    "CAR": [
-      {
-        "player": "Bobby Okereke",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Will Lee III",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Kyle Monangai",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Malik Muhammad II",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
     "DAL": [
       {
         "player": "DaRon Bland",
         "position": "CB",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Jonathan Mingo",
-        "position": "WR",
         "status": "Out"
       },
       {
         "player": "Jake Ferguson",
         "position": "TE",
         "status": "Out"
-      },
-      {
-        "player": "Donovan Ezeiruaku",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "DEN": [
-      {
-        "player": "Kris Abrams-Draine",
-        "position": "CB",
-        "status": "Out"
       }
     ],
     "DET": [
-      {
-        "player": "D.J. Reed",
-        "position": "CB",
-        "status": "Out"
-      },
       {
         "player": "Aidan Hutchinson",
         "position": "DE",
@@ -263,11 +224,6 @@
       }
     ],
     "GB": [
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
-        "status": "Out"
-      },
       {
         "player": "Josh Jacobs",
         "position": "RB",
@@ -277,94 +233,28 @@
         "player": "Zaire Franklin",
         "position": "LB",
         "status": "Out"
+      },
+      {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
       }
     ],
     "HOU": [
       {
-        "player": "Danielle Hunter",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Brevin Jordan",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Marvin Harrison Jr.",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Azeez Al-Shaair",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "IND": [
-      {
-        "player": "Will Mallory",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Jaylon Carlies",
-        "position": "LB",
-        "status": "Out"
+        "player": "Woody Marks",
+        "position": "RB",
+        "status": "Doubtful"
       }
     ],
     "KC": [
-      {
-        "player": "Kenneth Walker III",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Jaydn Ott",
-        "position": "RB",
-        "status": "Out"
-      },
       {
         "player": "Jared Wiley",
         "position": "TE",
         "status": "Out"
       }
     ],
-    "LV": [
-      {
-        "player": "Dont'e Thornton Jr.",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "LAC": [
-      {
-        "player": "Brenen Thompson",
-        "position": "WR",
-        "status": "Doubtful"
-      },
-      {
-        "player": "Ladd McConkey",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Isas Waxter",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
     "MIA": [
-      {
-        "player": "Jared Wayne",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Chris Bell",
-        "position": "WR",
-        "status": "Out"
-      },
       {
         "player": "Darrell Baker Jr.",
         "position": "CB",
@@ -381,16 +271,6 @@
         "player": "Jordan Addison",
         "position": "WR",
         "status": "Out"
-      },
-      {
-        "player": "T.J. Hockenson",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Tyrion Ingram-Dawkins",
-        "position": "DE",
-        "status": "Out"
       }
     ],
     "NE": [
@@ -405,61 +285,6 @@
         "status": "Out"
       }
     ],
-    "NO": [
-      {
-        "player": "CJ Donaldson",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "NYG": [
-      {
-        "player": "Malik Harrison",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "NYJ": [
-      {
-        "player": "Trevin Wallace",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Jarvis Brownlee Jr.",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "PHI": [
-      {
-        "player": "Dontayvion Wicks",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "DeVonta Smith",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Jonathan Jones",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Britain Covey",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "SF": [
-      {
-        "player": "Mike Evans",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
     "SEA": [
       {
         "player": "Sam Darnold",
@@ -471,31 +296,7 @@
       {
         "player": "Yaya Diaby",
         "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "TEN": [
-      {
-        "player": "Anthony Hill Jr.",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Cody Barton",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Carnell Tate",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "WSH": [
-      {
-        "player": "Colson Yankoff",
-        "position": "TE",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ]
   }
