@@ -1,6 +1,29 @@
 {
   "candidates": [
     {
+      "id": "50513896",
+      "headline": "Source: Jordan Phillips latest Dolphins DT to suffer season-ending injury",
+      "description": "Dolphins DT Jordan Phillips will miss the rest of the season with torn biceps, a source confirmed to ESPN.",
+      "published": "2026-11-17",
+      "likelyKind": "injury",
+      "teams": [
+        "Miami Dolphins"
+      ],
+      "teamIds": [
+        "MIA"
+      ],
+      "players": [
+        {
+          "id": "4837188",
+          "name": "Jordan Phillips",
+          "position": "Defensive Tackle",
+          "currentTeam": "MIA"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50513896/source-dolphins-jordan-phillips-miss-rest-season",
+      "attempts": 0
+    },
+    {
       "id": "50502391",
       "headline": "Dolphins cut kicker Zane Gonzalez a day after costly misses in loss to Colts",
       "description": "The Dolphins waived kicker Zane Gonzalez on Monday, a day after he missed two field goals and an extra point in a 24-22 loss to the Colts.",
@@ -1107,7 +1130,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50433312/las-vegas-raiders-2026-trade-deadline-approach",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50432695",
       "headline": "Sources: Jets DE Will McDonald IV, frustrated by lack of use, requests trade",
@@ -1129,10 +1154,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50432695/jets-pass-rusher-mcdonald-iv-requests-trade",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-18"
+    },
     {
       "id": "50432277",
       "headline": "Jaguars bolster defense, trade for safety Jessie Bates, DT Davon Godchaux",
@@ -3990,33 +4015,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-27"
-    },
-    {
-      "id": "50095248",
-      "headline": "Sources: Steelers' contract philosophy led to Joey Porter Jr. trade",
-      "description": "The Steelers' philosophy of avoiding second-year contract guarantees was a factor in their inability to reach a deal with Joey Porter Jr., sources told NFL Network.",
-      "published": "2026-10-04",
-      "likelyKind": "transaction",
-      "teams": [
-        "Dallas Cowboys",
-        "Pittsburgh Steelers"
-      ],
-      "teamIds": [
-        "DAL",
-        "PIT"
-      ],
-      "players": [
-        {
-          "id": "4426506",
-          "name": "Joey Porter Jr.",
-          "position": "Cornerback",
-          "currentTeam": "DAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50095248/sources-steelers-contract-philosophy-led-joey-porter-jr-trade",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-27"
