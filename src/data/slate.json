@@ -21,7 +21,7 @@
       "away": "MIA",
       "spread": 16.5,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 44.5,
       "broadcast": "CBS",
       "venue": "Highmark Stadium",
       "neutralSite": false
@@ -55,9 +55,9 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "DET",
       "away": "TB",
-      "spread": 7,
+      "spread": 6,
       "favourite": "home",
-      "overUnder": 43.5,
+      "overUnder": 45.5,
       "broadcast": "Fox",
       "venue": "Ford Field",
       "neutralSite": false
@@ -81,7 +81,7 @@
       "away": "PIT",
       "spread": 4.5,
       "favourite": "away",
-      "overUnder": 38.5,
+      "overUnder": 37.5,
       "broadcast": "CBS",
       "venue": "Lincoln Financial Field",
       "neutralSite": false
@@ -91,7 +91,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "CAR",
       "away": "BAL",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
       "overUnder": 43.5,
       "broadcast": "Fox",
@@ -141,7 +141,7 @@
       "away": "MIN",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 46.5,
       "broadcast": "NBC",
       "venue": "Estadio Banorte",
       "neutralSite": true
@@ -153,7 +153,7 @@
       "away": "CIN",
       "spread": 6.5,
       "favourite": "away",
-      "overUnder": 54.5,
+      "overUnder": 53.5,
       "broadcast": "ESPN",
       "venue": "Northwest Stadium",
       "neutralSite": false
@@ -180,22 +180,22 @@
         "status": "Out"
       }
     ],
-    "DAL": [
+    "BAL": [
       {
-        "player": "DaRon Bland",
+        "player": "Marlon Humphrey",
         "position": "CB",
         "status": "Out"
-      },
+      }
+    ],
+    "DAL": [
       {
         "player": "Jake Ferguson",
         "position": "TE",
         "status": "Out"
-      }
-    ],
-    "DET": [
+      },
       {
-        "player": "Aidan Hutchinson",
-        "position": "DE",
+        "player": "DaRon Bland",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -218,9 +218,24 @@
     ],
     "HOU": [
       {
+        "player": "Danielle Hunter",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Brevin Jordan",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Marvin Harrison Jr.",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
         "player": "Woody Marks",
         "position": "RB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ],
     "IND": [
@@ -235,10 +250,10 @@
         "status": "Out"
       }
     ],
-    "KC": [
+    "MIA": [
       {
-        "player": "Jared Wiley",
-        "position": "TE",
+        "player": "Darrell Baker Jr.",
+        "position": "CB",
         "status": "Out"
       }
     ],

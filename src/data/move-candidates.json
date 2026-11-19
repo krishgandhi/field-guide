@@ -1,6 +1,52 @@
 {
   "candidates": [
     {
+      "id": "50532392",
+      "headline": "Sources: Broncos sign CB Riley Moss to four-year extension",
+      "description": "The Broncos locked up a key piece of their secondary by signing cornerback Riley Moss to a four-year extension, sources said.",
+      "published": "2026-11-19",
+      "likelyKind": "transaction",
+      "teams": [
+        "Denver Broncos"
+      ],
+      "teamIds": [
+        "DEN"
+      ],
+      "players": [
+        {
+          "id": "4382401",
+          "name": "Riley Moss",
+          "position": "Cornerback",
+          "currentTeam": "DEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50532392/sources-broncos-sign-cb-riley-moss-four-year-extension",
+      "attempts": 0
+    },
+    {
+      "id": "50523261",
+      "headline": "Titans WR Wan'Dale Robinson out for season with ankle injury",
+      "description": "Titans wide receiver Wan'Dale Robinson will miss the rest of the season due to an ankle injury, coach Robert Saleh said Wednesday.",
+      "published": "2026-11-18",
+      "likelyKind": "injury",
+      "teams": [
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "4569587",
+          "name": "Wan'Dale Robinson",
+          "position": "Wide Receiver",
+          "currentTeam": "TEN"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50523261/titans-wr-wandale-robinson-season-ankle-injury",
+      "attempts": 0
+    },
+    {
       "id": "50513896",
       "headline": "Source: Jordan Phillips latest Dolphins DT to suffer season-ending injury",
       "description": "Dolphins DT Jordan Phillips will miss the rest of the season with torn biceps, a source confirmed to ESPN.",
@@ -1070,7 +1116,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50440119/vikings-kevin-oconnell-defers-qb-trade-question-gm-poor-mnf-outing-carson-wentz",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50434559",
       "headline": "Jets trade safety Andre Cisco to injury-plagued Lions for draft pick",
@@ -1094,7 +1142,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50434559/sources-jets-trade-safety-andre-cisco-lions",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-19"
     },
     {
       "id": "50433312",
@@ -1129,10 +1179,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50433312/las-vegas-raiders-2026-trade-deadline-approach",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-19"
+    },
     {
       "id": "50432695",
       "headline": "Sources: Jets DE Will McDonald IV, frustrated by lack of use, requests trade",
@@ -3963,58 +4013,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-27"
-    },
-    {
-      "id": "50110486",
-      "headline": "Ben Johnson: Tyson Bagent will start at QB for Bears vs. Packers",
-      "description": "Tyson Bagent will be the Bears' starting quarterback for Sunday's game at the Packers, coach Ben Johnson announced Monday.",
-      "published": "2026-10-05",
-      "likelyKind": "role",
-      "teams": [
-        "Chicago Bears",
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "CHI",
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4434153",
-          "name": "Tyson Bagent",
-          "position": "Quarterback",
-          "currentTeam": "CHI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50110486/ben-johnson-tyson-bagent-start-qb-bears-vs-packers",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-27"
-    },
-    {
-      "id": "50109680",
-      "headline": "Tyreek Hill could sign with new team soon, agent says",
-      "description": "Free agent wide receiver Tyreek Hill could sign with a new team \"over the next few days,\" his agent, Drew Rosenhaus, told ESPN's Adam Schefter. Hill's former team, the Chiefs, are believed to be one of those interested.",
-      "published": "2026-10-05",
-      "likelyKind": "transaction",
-      "teams": [
-        "Kansas City Chiefs"
-      ],
-      "teamIds": [
-        "KC"
-      ],
-      "players": [
-        {
-          "id": "3116406",
-          "name": "Tyreek Hill",
-          "position": "Wide Receiver",
-          "currentTeam": "MIA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50109680/tyreek-hill-expected-sign-team-soon-agent-says",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-27"
