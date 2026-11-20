@@ -74,6 +74,15 @@
       "pointsAgainst": 242,
       "conferenceRank": 8
     },
+    "HOU": {
+      "wins": 4,
+      "losses": 6,
+      "ties": 0,
+      "pointDifferential": 37,
+      "pointsFor": 259,
+      "pointsAgainst": 222,
+      "conferenceRank": 9
+    },
     "LV": {
       "wins": 4,
       "losses": 6,
@@ -81,7 +90,7 @@
       "pointDifferential": -38,
       "pointsFor": 251,
       "pointsAgainst": 289,
-      "conferenceRank": 9
+      "conferenceRank": 10
     },
     "BAL": {
       "wins": 4,
@@ -90,24 +99,15 @@
       "pointDifferential": -50,
       "pointsFor": 209,
       "pointsAgainst": 259,
-      "conferenceRank": 10
-    },
-    "HOU": {
-      "wins": 3,
-      "losses": 6,
-      "ties": 0,
-      "pointDifferential": 14,
-      "pointsFor": 233,
-      "pointsAgainst": 219,
       "conferenceRank": 11
     },
     "IND": {
       "wins": 3,
-      "losses": 7,
+      "losses": 8,
       "ties": 0,
-      "pointDifferential": -63,
-      "pointsFor": 208,
-      "pointsAgainst": 271,
+      "pointDifferential": -86,
+      "pointsFor": 211,
+      "pointsAgainst": 297,
       "conferenceRank": 12
     },
     "NYJ": {

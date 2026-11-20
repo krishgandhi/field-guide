@@ -1,6 +1,88 @@
 {
   "candidates": [
     {
+      "id": "50542293",
+      "headline": "Colts release QB Daniel Jones, turn to Anthony Richardson Sr. for next start",
+      "description": "The Colts have released quarterback Daniel Jones and are turning to Anthony Richardson Sr. to start going forward, coach Shane Steichen announced.",
+      "published": "2026-11-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        },
+        {
+          "id": "4429084",
+          "name": "Anthony Richardson Sr.",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50542293/colts-release-qb-daniel-jones-blowout-loss-texans",
+      "attempts": 0
+    },
+    {
+      "id": "50525533",
+      "headline": "NFL offseason free agent and trade acquisitions that have and have not worked",
+      "description": "Kenneth Walker III and Devin Lloyd look great with their new teams in 2026. But Jaylen Waddle and Alontae Taylor haven't quite found their groove.",
+      "published": "2026-11-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "Las Vegas Raiders",
+        "Minnesota Vikings",
+        "Kansas City Chiefs",
+        "San Francisco 49ers",
+        "Cleveland Browns",
+        "Carolina Panthers",
+        "Denver Broncos",
+        "Los Angeles Chargers",
+        "Washington Commanders",
+        "Tennessee Titans"
+      ],
+      "teamIds": [
+        "LV",
+        "MIN",
+        "KC",
+        "SF",
+        "CLE",
+        "CAR",
+        "DEN",
+        "LAC",
+        "WSH",
+        "TEN"
+      ],
+      "players": [
+        {
+          "id": "14880",
+          "name": "Kirk Cousins",
+          "position": "Quarterback",
+          "currentTeam": "MIN"
+        },
+        {
+          "id": "4567048",
+          "name": "Kenneth Walker III",
+          "position": "Running Back",
+          "currentTeam": "KC"
+        },
+        {
+          "id": "16737",
+          "name": "Mike Evans",
+          "position": "Wide Receiver",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50525533/2026-offseason-change-scenery-fits-players-new-teams",
+      "attempts": 0
+    },
+    {
       "id": "50532392",
       "headline": "Sources: Broncos sign CB Riley Moss to four-year extension",
       "description": "The Broncos locked up a key piece of their secondary by signing cornerback Riley Moss to a four-year extension, sources said.",
@@ -1050,7 +1132,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50442903/jaguars-not-planning-trade-wr-brian-thomas-jr",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50434129",
       "headline": "Seven things Solak thinks for NFL Week 10: Jaguars trades, All-Pro picks, more",
@@ -1092,7 +1176,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50434129/week-10-seven-things-solak-thinks-trade-deadline-all-pro",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-20"
     },
     {
       "id": "50440119",
@@ -1115,10 +1201,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50440119/vikings-kevin-oconnell-defers-qb-trade-question-gm-poor-mnf-outing-carson-wentz",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-20"
+    },
     {
       "id": "50434559",
       "headline": "Jets trade safety Andre Cisco to injury-plagued Lions for draft pick",
@@ -3960,62 +4046,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-28"
-    },
-    {
-      "id": "50111468",
-      "headline": "Vikings LG Jackson likely out for season, LT Darrisaw has concussion",
-      "description": "Vikings left guard Donovan Jackson is headed for what is likely season-ending surgery to repair a meniscus tear in his knee, and left tackle Christian Darrisaw is in the concussion protocol.",
-      "published": "2026-10-05",
-      "likelyKind": "injury",
-      "teams": [
-        "Minnesota Vikings"
-      ],
-      "teamIds": [
-        "MIN"
-      ],
-      "players": [
-        {
-          "id": "4361985",
-          "name": "Christian Darrisaw",
-          "position": "Offensive Tackle",
-          "currentTeam": "MIN"
-        },
-        {
-          "id": "4431553",
-          "name": "Donovan Jackson",
-          "position": "Guard",
-          "currentTeam": "MIN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50111468/vikings-lg-jackson-likely-season-lt-darrisaw-concussion",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-28"
-    },
-    {
-      "id": "50110763",
-      "headline": "Sources: Packers LB Edgerrin Cooper has torn Achilles",
-      "description": "Packers linebacker Edgerrin Cooper suffered a season-ending Achilles tear during Sunday's 17-14 victory over the Buccaneers, sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
-      "published": "2026-10-05",
-      "likelyKind": "injury",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "4430438",
-          "name": "Edgerrin Cooper",
-          "position": "Linebacker",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50110763/sources-packers-lb-edgerrin-cooper-torn-achilles",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-27"
     }
   ]
 }

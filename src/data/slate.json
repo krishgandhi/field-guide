@@ -7,9 +7,9 @@
       "kickoff": "2026-11-20T01:15Z",
       "home": "HOU",
       "away": "IND",
-      "spread": 12.5,
-      "favourite": "home",
-      "overUnder": 44.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "Prime Video",
       "venue": "Reliant Stadium",
       "neutralSite": false
@@ -45,7 +45,7 @@
       "away": "TEN",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 55.5,
+      "overUnder": 54.5,
       "broadcast": "Fox",
       "venue": "AT&T Stadium",
       "neutralSite": false
@@ -55,7 +55,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "DET",
       "away": "TB",
-      "spread": 6,
+      "spread": 5.5,
       "favourite": "home",
       "overUnder": 45.5,
       "broadcast": "Fox",
@@ -67,7 +67,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "KC",
       "away": "ARI",
-      "spread": 15.5,
+      "spread": 16.5,
       "favourite": "home",
       "overUnder": 40.5,
       "broadcast": "CBS",
@@ -79,7 +79,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "PHI",
       "away": "PIT",
-      "spread": 4.5,
+      "spread": 3.5,
       "favourite": "away",
       "overUnder": 37.5,
       "broadcast": "CBS",
@@ -115,7 +115,7 @@
       "kickoff": "2026-11-22T21:25Z",
       "home": "DEN",
       "away": "LV",
-      "spread": 10,
+      "spread": 10.5,
       "favourite": "home",
       "overUnder": 40.5,
       "broadcast": "CBS",
@@ -139,7 +139,7 @@
       "kickoff": "2026-11-23T01:20Z",
       "home": "SF",
       "away": "MIN",
-      "spread": 3,
+      "spread": 3.5,
       "favourite": "home",
       "overUnder": 46.5,
       "broadcast": "NBC",
@@ -151,7 +151,7 @@
       "kickoff": "2026-11-24T01:15Z",
       "home": "WSH",
       "away": "CIN",
-      "spread": 6.5,
+      "spread": 6,
       "favourite": "away",
       "overUnder": 53.5,
       "broadcast": "ESPN",
@@ -187,6 +187,30 @@
         "status": "Out"
       }
     ],
+    "BUF": [
+      {
+        "player": "Dorian Williams",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Dalton Kincaid",
+        "position": "TE",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Christian Benford",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "CAR": [
+      {
+        "player": "Bobby Okereke",
+        "position": "LB",
+        "status": "Out"
+      }
+    ],
     "DAL": [
       {
         "player": "Jake Ferguson",
@@ -218,13 +242,13 @@
     ],
     "HOU": [
       {
-        "player": "Danielle Hunter",
+        "player": "Chris Braswell",
         "position": "DE",
-        "status": "Out"
+        "status": "Doubtful"
       },
       {
-        "player": "Brevin Jordan",
-        "position": "TE",
+        "player": "Woody Marks",
+        "position": "RB",
         "status": "Out"
       },
       {
@@ -233,12 +257,22 @@
         "status": "Out"
       },
       {
-        "player": "Woody Marks",
-        "position": "RB",
+        "player": "Danielle Hunter",
+        "position": "DE",
         "status": "Out"
       }
     ],
     "IND": [
+      {
+        "player": "Riley Leonard",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Sauce Gardner",
+        "position": "CB",
+        "status": "Out"
+      },
       {
         "player": "Charvarius Ward",
         "position": "CB",
@@ -281,7 +315,24 @@
         "status": "Out"
       }
     ],
+    "NYJ": [
+      {
+        "player": "Isaiah Williams",
+        "position": "WR",
+        "status": "Out"
+      },
+      {
+        "player": "Omar Cooper Jr.",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
     "SF": [
+      {
+        "player": "Isaac Guerendo",
+        "position": "RB",
+        "status": "Out"
+      },
       {
         "player": "Brandon Aiyuk",
         "position": "WR",
