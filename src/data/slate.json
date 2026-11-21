@@ -43,7 +43,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "DAL",
       "away": "TEN",
-      "spread": 8.5,
+      "spread": 7.5,
       "favourite": "home",
       "overUnder": 54.5,
       "broadcast": "Fox",
@@ -55,9 +55,9 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "DET",
       "away": "TB",
-      "spread": 5.5,
+      "spread": 4.5,
       "favourite": "home",
-      "overUnder": 45.5,
+      "overUnder": 46.5,
       "broadcast": "Fox",
       "venue": "Ford Field",
       "neutralSite": false
@@ -67,7 +67,7 @@
       "kickoff": "2026-11-22T18:00Z",
       "home": "KC",
       "away": "ARI",
-      "spread": 16.5,
+      "spread": 15.5,
       "favourite": "home",
       "overUnder": 40.5,
       "broadcast": "CBS",
@@ -105,7 +105,7 @@
       "away": "NYJ",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 41.5,
+      "overUnder": 42.5,
       "broadcast": "Fox",
       "venue": "SoFi Stadium",
       "neutralSite": false
@@ -194,14 +194,14 @@
         "status": "Out"
       },
       {
-        "player": "Dalton Kincaid",
-        "position": "TE",
-        "status": "Doubtful"
-      },
-      {
         "player": "Christian Benford",
         "position": "CB",
         "status": "Out"
+      },
+      {
+        "player": "Dalton Kincaid",
+        "position": "TE",
+        "status": "Doubtful"
       }
     ],
     "CAR": [
@@ -211,7 +211,19 @@
         "status": "Out"
       }
     ],
+    "CHI": [
+      {
+        "player": "Kyler Gordon",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
     "DAL": [
+      {
+        "player": "Jonathan Mingo",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Jake Ferguson",
         "position": "TE",
@@ -225,6 +237,11 @@
     ],
     "GB": [
       {
+        "player": "Micah Parsons",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
         "player": "Josh Jacobs",
         "position": "RB",
         "status": "Out"
@@ -232,11 +249,6 @@
       {
         "player": "Zaire Franklin",
         "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
         "status": "Out"
       }
     ],
@@ -254,11 +266,6 @@
       {
         "player": "Marvin Harrison Jr.",
         "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Danielle Hunter",
-        "position": "DE",
         "status": "Out"
       }
     ],
@@ -284,7 +291,36 @@
         "status": "Out"
       }
     ],
+    "KC": [
+      {
+        "player": "Kenneth Walker III",
+        "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "LAC": [
+      {
+        "player": "Rodney Shelley",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Daiyan Henley",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Brenen Thompson",
+        "position": "WR",
+        "status": "Doubtful"
+      }
+    ],
     "MIA": [
+      {
+        "player": "Jared Wayne",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Darrell Baker Jr.",
         "position": "CB",
@@ -307,10 +343,22 @@
       {
         "player": "Drake Maye",
         "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "A.J. Brown",
+        "position": "WR",
         "status": "Doubtful"
       },
       {
         "player": "Carlton Davis III",
+        "position": "CB",
+        "status": "Out"
+      }
+    ],
+    "NO": [
+      {
+        "player": "Martin Emerson Jr.",
         "position": "CB",
         "status": "Out"
       }
@@ -324,6 +372,30 @@
       {
         "player": "Omar Cooper Jr.",
         "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "PHI": [
+      {
+        "player": "Zack Baun",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Smael Mondon Jr.",
+        "position": "LB",
+        "status": "Doubtful"
+      },
+      {
+        "player": "Dontayvion Wicks",
+        "position": "WR",
+        "status": "Out"
+      }
+    ],
+    "PIT": [
+      {
+        "player": "Nick Herbig",
+        "position": "LB",
         "status": "Out"
       }
     ],

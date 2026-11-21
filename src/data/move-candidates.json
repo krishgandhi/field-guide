@@ -1,9 +1,73 @@
 {
   "candidates": [
     {
+      "id": "50473666",
+      "headline": "Falcons insist winning still the goal despite trading Jessie Bates III",
+      "description": "Atlanta wanted to ensure trading away Jessie Bates III didn't send the wrong message to the team.",
+      "published": "2026-11-21",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4360423",
+          "name": "Michael Penix Jr.",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "3919512",
+          "name": "Jessie Bates III",
+          "position": "Safety",
+          "currentTeam": "JAX"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50473666/atlanta-falcons-trade-deadline-jessie-bates-morale",
+      "attempts": 0
+    },
+    {
+      "id": "50543025",
+      "headline": "Justin Reid posts Saints farewell as team releases safety",
+      "description": "The Saints have granted Justin Reid's request to be released, with the safety posting on social media: \"In life and sports, things don't always go the way you planned or hoped they would.\"",
+      "published": "2026-11-20",
+      "likelyKind": "transaction",
+      "teams": [
+        "New Orleans Saints"
+      ],
+      "teamIds": [
+        "NO"
+      ],
+      "players": [
+        {
+          "id": "3931399",
+          "name": "Justin Reid",
+          "position": "Safety",
+          "currentTeam": "NO"
+        },
+        {
+          "id": "14882",
+          "name": "Kellen Moore",
+          "position": "Quarterback",
+          "currentTeam": "DAL"
+        },
+        {
+          "id": "4360949",
+          "name": "Jordan Howden",
+          "position": "Safety",
+          "currentTeam": "NO"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50543025/justin-reid-posts-saints-farewell-team-works-release",
+      "attempts": 0
+    },
+    {
       "id": "50542293",
-      "headline": "Colts release QB Daniel Jones, turn to Anthony Richardson Sr. for next start",
-      "description": "The Colts have released quarterback Daniel Jones and are turning to Anthony Richardson Sr. to start going forward, coach Shane Steichen announced.",
+      "headline": "Colts cut QB Daniel Jones, turn to Anthony Richardson Sr. for next start",
+      "description": "The Colts have cut quarterback Daniel Jones after a challenging 11-game stint in 2026 and are turning to Anthony Richardson Sr. to start going forward.",
       "published": "2026-11-20",
       "likelyKind": "transaction",
       "teams": [
@@ -243,35 +307,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50479874/sources-vikings-first-called-kirk-cousins-mnf",
-      "attempts": 0
-    },
-    {
-      "id": "50473666",
-      "headline": "Falcons insist winning still the goal despite trading Jessie Bates III",
-      "description": "Atlanta wanted to ensure trading away Jessie Bates III didn't send the wrong message to the team.",
-      "published": "2026-11-14",
-      "likelyKind": "transaction",
-      "teams": [
-        "Atlanta Falcons"
-      ],
-      "teamIds": [
-        "ATL"
-      ],
-      "players": [
-        {
-          "id": "4360423",
-          "name": "Michael Penix Jr.",
-          "position": "Quarterback",
-          "currentTeam": "ATL"
-        },
-        {
-          "id": "3919512",
-          "name": "Jessie Bates III",
-          "position": "Safety",
-          "currentTeam": "JAX"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50473666/atlanta-falcons-trade-deadline-jessie-bates-morale",
       "attempts": 0
     },
     {
@@ -1109,7 +1144,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443204/sources-vikings-asking-qbs-ahead-trade-deadline",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50442903",
       "headline": "Sources: Jaguars telling teams they aren't trading WR Brian Thomas Jr.",
@@ -1131,10 +1168,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50442903/jaguars-not-planning-trade-wr-brian-thomas-jr",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-21"
+    },
     {
       "id": "50434129",
       "headline": "Seven things Solak thinks for NFL Week 10: Jaguars trades, All-Pro picks, more",
@@ -4018,31 +4055,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-28"
-    },
-    {
-      "id": "50121196",
-      "headline": "Giants' Berrios says he'll undergo season-ending foot surgery",
-      "description": "Giants receiver Braxton Berrios will undergo season-ending surgery on his foot, he announced Tuesday on Instagram.",
-      "published": "2026-10-07",
-      "likelyKind": "injury",
-      "teams": [
-        "New York Giants"
-      ],
-      "teamIds": [
-        "NYG"
-      ],
-      "players": [
-        {
-          "id": "3123075",
-          "name": "Braxton Berrios",
-          "position": "Wide Receiver",
-          "currentTeam": "NYG"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50121196/giants-berrios-says-undergo-season-ending-foot-surgery",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-28"
