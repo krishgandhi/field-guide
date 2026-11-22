@@ -1,6 +1,29 @@
 {
   "candidates": [
     {
+      "id": "50557657",
+      "headline": "Sources: Ex-Colts QB Daniel Jones likely to wait before signing with new team",
+      "description": "If Daniel Jones clear waivers and becomes a free agent, the QB is unlikely to sign immediately, preferring to wait for the right opportunity, sources said.",
+      "published": "2026-11-22",
+      "likelyKind": "transaction",
+      "teams": [
+        "Indianapolis Colts"
+      ],
+      "teamIds": [
+        "IND"
+      ],
+      "players": [
+        {
+          "id": "3917792",
+          "name": "Daniel Jones",
+          "position": "Quarterback",
+          "currentTeam": "IND"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50557657/sources-daniel-jones-likely-wait-joining-new-team",
+      "attempts": 0
+    },
+    {
       "id": "50473666",
       "headline": "Falcons insist winning still the goal despite trading Jessie Bates III",
       "description": "Atlanta wanted to ensure trading away Jessie Bates III didn't send the wrong message to the team.",
@@ -1109,7 +1132,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443229/bengals-trade-eagles-lb-arnold-ebiketie-sources-say",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50443204",
       "headline": "Sources: Vikings inquiring about QBs ahead of trade deadline",
@@ -1143,10 +1168,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443204/sources-vikings-asking-qbs-ahead-trade-deadline",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-22"
+    },
     {
       "id": "50442903",
       "headline": "Sources: Jaguars telling teams they aren't trading WR Brian Thomas Jr.",
@@ -4031,33 +4056,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50121315",
-      "headline": "Tyreek Hill's wife recounts assault, verbal abuse at trial",
-      "description": "Tyreek Hill's wife recounted details of assault and verbal abuse during testimony Tuesday on the first day of a civil assault and battery trial in Florida, proceedings that began a day after ESPN reported Hill would potentially sign an NFL contract soon.",
-      "published": "2026-10-07",
-      "likelyKind": "transaction",
-      "teams": [],
-      "teamIds": [],
-      "players": [
-        {
-          "id": "3116406",
-          "name": "Tyreek Hill",
-          "position": "Wide Receiver",
-          "currentTeam": "MIA"
-        },
-        {
-          "id": "15813",
-          "name": "Kenny Vaccaro",
-          "position": "Safety",
-          "currentTeam": "TEN"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50121315/tyreek-hill-wife-recounts-assault-verbal-abuse-trial",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-28"
     }
   ]
 }

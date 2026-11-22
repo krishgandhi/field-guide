@@ -287,7 +287,7 @@
             }
           },
           "passPlayShare": 55.6,
-          "passPlayShareRank": 25,
+          "passPlayShareRank": 24,
           "quarterbackCarries": 24
         },
         "defence": {
@@ -475,7 +475,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 23,
+          "passPlayShareRank": 22,
           "quarterbackCarries": 31
         },
         "defence": {
@@ -889,12 +889,12 @@
               "draftedBy": "2021: Rd 4, Pk 136 (ARI)"
             },
             {
-              "id": "5151083",
-              "name": "Will Lee III",
+              "id": "3917853",
+              "name": "Mike Jackson",
               "label": "CB",
-              "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 4, Pk 129 (CAR)"
+              "debutYear": 2019,
+              "experience": 6,
+              "draftedBy": "2019: Rd 5, Pk 158 (DAL)"
             }
           ],
           "rank": 21,
@@ -1039,7 +1039,7 @@
             }
           },
           "passPlayShare": 55,
-          "passPlayShareRank": 27,
+          "passPlayShareRank": 26,
           "quarterbackCarries": 31
         },
         "defence": {
@@ -1249,12 +1249,12 @@
               "draftedBy": "2023: Rd 1, Pk 28 (CIN)"
             },
             {
-              "id": "3051746",
-              "name": "Oren Burks",
+              "id": "4427716",
+              "name": "Jack Kiser",
               "label": "LB",
-              "debutYear": 2018,
-              "experience": 9,
-              "draftedBy": "2018: Rd 3, Pk 88 (GB)"
+              "debutYear": null,
+              "experience": 2,
+              "draftedBy": "2025: Rd 4, Pk 107 (JAX)"
             },
             {
               "id": "4726127",
@@ -1641,12 +1641,12 @@
               "draftedBy": "2023: Rd 2, Pk 32 (PIT)"
             },
             {
-              "id": "4248911",
-              "name": "DaRon Bland",
+              "id": "4259546",
+              "name": "Ameer Speed",
               "label": "CB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 5, Pk 167 (DAL)"
+              "experience": 3,
+              "draftedBy": "2023: Rd 6, Pk 214 (NE)"
             }
           ],
           "rank": 29,
@@ -1862,12 +1862,12 @@
               "draftedBy": null
             },
             {
-              "id": "4686472",
-              "name": "Marvin Mims Jr.",
+              "id": "4391845",
+              "name": "Cody Schrader",
               "label": "KR",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 2, Pk 63 (DEN)"
+              "experience": 3,
+              "draftedBy": null
             }
           ],
           "rank": 18,
@@ -1979,7 +1979,7 @@
             }
           },
           "passPlayShare": 57.3,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 20
         },
         "defence": {
@@ -2189,12 +2189,12 @@
               "draftedBy": "2022: Rd 1, Pk 28 (GB)"
             },
             {
-              "id": "4683643",
-              "name": "Barryn Sorrell",
+              "id": "4361423",
+              "name": "Micah Parsons",
               "label": "DE",
               "debutYear": null,
-              "experience": 2,
-              "draftedBy": "2025: Rd 4, Pk 124 (GB)"
+              "experience": 6,
+              "draftedBy": "2021: Rd 1, Pk 12 (DAL)"
             },
             {
               "id": "4259493",
@@ -2543,7 +2543,7 @@
             }
           },
           "passPlayShare": 56.3,
-          "passPlayShareRank": 24,
+          "passPlayShareRank": 23,
           "quarterbackCarries": 3
         },
         "defence": {
@@ -2919,7 +2919,7 @@
             }
           },
           "passPlayShare": 58.6,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 25
         },
         "defence": {
@@ -3107,7 +3107,7 @@
             }
           },
           "passPlayShare": 57.5,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 41
         },
         "defence": {
@@ -3295,7 +3295,7 @@
             }
           },
           "passPlayShare": 59,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 17
         },
         "defence": {
@@ -3732,7 +3732,24 @@
           }
         },
         "specialTeams": {
-          "players": [],
+          "players": [
+            {
+              "id": "3051909",
+              "name": "Daniel Carlson",
+              "label": "K",
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 5, Pk 167 (MIN)"
+            },
+            {
+              "id": "4682745",
+              "name": "Jaylen Wright",
+              "label": "KR",
+              "debutYear": null,
+              "experience": 3,
+              "draftedBy": "2024: Rd 4, Pk 120 (MIA)"
+            }
+          ],
           "rank": 31,
           "score": 1,
           "note": "Among the worst in the league at kicking field goals so far this season — 31st of 32.",
@@ -3842,7 +3859,7 @@
             }
           },
           "passPlayShare": 56.5,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 25
         },
         "defence": {
@@ -3944,12 +3961,12 @@
         "offence": {
           "players": [
             {
-              "id": "4431452",
-              "name": "Drake Maye",
+              "id": "4240391",
+              "name": "Tommy DeVito",
               "label": "QB",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 1, Pk 3 (NE)"
+              "experience": 4,
+              "draftedBy": null
             },
             {
               "id": "4569173",
@@ -4029,9 +4046,9 @@
               "rank": 1
             }
           },
-          "passPlayShare": 59.2,
-          "passPlayShareRank": 16,
-          "quarterbackCarries": 48
+          "passPlayShare": 55,
+          "passPlayShareRank": 27,
+          "quarterbackCarries": 5
         },
         "defence": {
           "players": [
@@ -4406,7 +4423,7 @@
             }
           },
           "passPlayShare": 57.6,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 15
         },
         "defence": {
@@ -4720,12 +4737,12 @@
               "draftedBy": "2021: Rd 1, Pk 10 (PHI)"
             },
             {
-              "id": "4428850",
-              "name": "Dontayvion Wicks",
+              "id": "4870795",
+              "name": "Makai Lemon",
               "label": "WR",
               "debutYear": null,
-              "experience": 4,
-              "draftedBy": "2023: Rd 5, Pk 159 (GB)"
+              "experience": 0,
+              "draftedBy": "2026: Rd 1, Pk 20 (PHI)"
             },
             {
               "id": "3121023",
@@ -4788,12 +4805,12 @@
         "defence": {
           "players": [
             {
-              "id": "4567123",
-              "name": "Byron Young",
+              "id": "4685759",
+              "name": "Jalen Carter",
               "label": "DT",
               "debutYear": null,
               "experience": 4,
-              "draftedBy": "2023: Rd 3, Pk 70 (LV)"
+              "draftedBy": "2023: Rd 1, Pk 9 (PHI)"
             },
             {
               "id": "4362116",
@@ -5041,12 +5058,12 @@
               "draftedBy": null
             },
             {
-              "id": "5081338",
-              "name": "Kaden Wetjen",
+              "id": "4694237",
+              "name": "Max Hurleman",
               "label": "KR",
               "debutYear": null,
-              "experience": 0,
-              "draftedBy": "2026: Rd 4, Pk 121 (PIT)"
+              "experience": 1,
+              "draftedBy": null
             }
           ],
           "rank": 22,
@@ -5346,7 +5363,7 @@
             }
           },
           "passPlayShare": 55.5,
-          "passPlayShareRank": 26,
+          "passPlayShareRank": 25,
           "quarterbackCarries": 41
         },
         "defence": {
