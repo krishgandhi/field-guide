@@ -1,6 +1,98 @@
 {
   "candidates": [
     {
+      "id": "50575889",
+      "headline": "Rams TE Terrance Ferguson needs season-ending ankle surgery, Sean McVay says",
+      "description": "Rams tight end Terrance Ferguson's ankle injury will require season-ending surgery.",
+      "published": "2026-11-23",
+      "likelyKind": "injury",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "4570037",
+          "name": "Terrance Ferguson",
+          "position": "Tight End",
+          "currentTeam": "LAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50575889/rams-te-terrance-ferguson-needs-season-ending-ankle-surgery",
+      "attempts": 0
+    },
+    {
+      "id": "50575346",
+      "headline": "49ers release WR Brandon Aiyuk with roster exemption ending",
+      "description": "The 49ers released wide receiver Brandon Aiyuk on Monday.",
+      "published": "2026-11-23",
+      "likelyKind": "transaction",
+      "teams": [
+        "San Francisco 49ers"
+      ],
+      "teamIds": [
+        "SF"
+      ],
+      "players": [
+        {
+          "id": "4360438",
+          "name": "Brandon Aiyuk",
+          "position": "Wide Receiver",
+          "currentTeam": "SF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50575346/sources-49ers-releasing-wr-brandon-aiyuk",
+      "attempts": 0
+    },
+    {
+      "id": "50575341",
+      "headline": "Vrabel: Patriots sticking with DeVito as QB1, not looking for outside help",
+      "description": "Patriots coach Mike Vrabel said Monday the team isn't looking outside the organization for a starting quarterback as it prepares to be without Drake Maye in the coming weeks due to a fractured right fibula.",
+      "published": "2026-11-23",
+      "likelyKind": "role",
+      "teams": [
+        "New England Patriots"
+      ],
+      "teamIds": [
+        "NE"
+      ],
+      "players": [
+        {
+          "id": "4240391",
+          "name": "Tommy DeVito",
+          "position": "Quarterback",
+          "currentTeam": "NE"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50575341/mike-vrabel-patriots-sticking-tommy-devito-qb1",
+      "attempts": 0
+    },
+    {
+      "id": "50569797",
+      "headline": "Despite loss to Broncos, Fernando Mendoza settling in as Raiders' starting QB",
+      "description": "Fernando Mendoza, making his second start for the Raiders, had good and bad moments Sunday at Denver. He completed 18 of 37 passes for 267 yards and three touchdowns but was sacked five times and pressured 16 times, and threw a game-sealing pick-six.",
+      "published": "2026-11-23",
+      "likelyKind": "role",
+      "teams": [
+        "Las Vegas Raiders"
+      ],
+      "teamIds": [
+        "LV"
+      ],
+      "players": [
+        {
+          "id": "4837248",
+          "name": "Fernando Mendoza",
+          "position": "Quarterback",
+          "currentTeam": "LV"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50569797/fernando-mendoza-settling-raiders-starting-quarterback",
+      "attempts": 0
+    },
+    {
       "id": "50557657",
       "headline": "Sources: Ex-Colts QB Daniel Jones likely to wait before signing with new team",
       "description": "If Daniel Jones clear waivers and becomes a free agent, the QB is unlikely to sign immediately, preferring to wait for the right opportunity, sources said.",
@@ -1028,7 +1120,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50446499/falcons-trade-center-neuzil-ravens-guard-vorhees-pick",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50444069",
       "headline": "Source: Falcons cutting kicker Nick Folk, signing Jake Moody",
@@ -1058,7 +1152,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50444069/sources-falcons-cutting-kicker-nick-folk-signing-jake-moody",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-23"
     },
     {
       "id": "50443891",
@@ -1083,7 +1179,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443891/bengals-nix-agreed-trade-eagles-sources-say",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-23"
     },
     {
       "id": "50443653",
@@ -1106,7 +1204,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443653/source-dolphins-captain-zach-sieler-rest-season",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-23"
     },
     {
       "id": "50443229",
@@ -1131,10 +1231,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443229/bengals-trade-eagles-lb-arnold-ebiketie-sources-say",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-23"
+    },
     {
       "id": "50443204",
       "headline": "Sources: Vikings inquiring about QBs ahead of trade deadline",
@@ -3939,120 +4039,6 @@
         }
       ],
       "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50138218",
-      "headline": "Undrafted rookie QB Daniels savors Thursday night win vs. Cowboys",
-      "description": "Jalon Daniels became the first undrafted rookie starting QB in the common draft era to win a game for a team that entered winless, leading the Bucs to a 24-16 win over the Cowboys.",
-      "published": "2026-10-09",
-      "likelyKind": "role",
-      "teams": [
-        "Tampa Bay Buccaneers"
-      ],
-      "teamIds": [
-        "TB"
-      ],
-      "players": [
-        {
-          "id": "4596472",
-          "name": "Jalon Daniels",
-          "position": "Quarterback",
-          "currentTeam": "TB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50138218/undrafted-rookie-qb-daniels-savors-thursday-night-win-vs-cowboys",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50127865",
-      "headline": "TE Sam LaPorta says extension talks with Lions at 'stalemate'",
-      "description": "Lions tight end Sam LaPorta is currently focused on the 2026 season but acknowledged for the first time after Wednesday's practice that he has broken off contract talks on an extension.",
-      "published": "2026-10-07",
-      "likelyKind": "transaction",
-      "teams": [
-        "Detroit Lions"
-      ],
-      "teamIds": [
-        "DET"
-      ],
-      "players": [
-        {
-          "id": "4430027",
-          "name": "Sam LaPorta",
-          "position": "Tight End",
-          "currentTeam": "DET"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50127865/te-sam-laporta-says-extension-talks-lions-stalemate",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50124795",
-      "headline": "Is it time to panic about 49ers' injuries? Breaking down IR, trade deadline plan",
-      "description": "The 49ers are again among the most injured teams in the NFL. We answered questions about their injuries and how they will affect the 2026 season.",
-      "published": "2026-10-07",
-      "likelyKind": "transaction",
-      "teams": [
-        "San Francisco 49ers"
-      ],
-      "teamIds": [
-        "SF"
-      ],
-      "players": [
-        {
-          "id": "4040605",
-          "name": "Nick Bosa",
-          "position": "Defensive End",
-          "currentTeam": "SF"
-        },
-        {
-          "id": "4710714",
-          "name": "De'Zhaun Stribling",
-          "position": "Wide Receiver",
-          "currentTeam": "SF"
-        },
-        {
-          "id": "3895856",
-          "name": "Christian Kirk",
-          "position": "Wide Receiver",
-          "currentTeam": "SF"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50124795/san-francisco-49ers-2026-season-injuries-list",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50126306",
-      "headline": "Ravens acquire center Cam Jurgens in trade with Eagles",
-      "description": "The Ravens have acquired two-time Pro Bowl center Cam Jurgens in a trade with the Eagles.",
-      "published": "2026-10-07",
-      "likelyKind": "transaction",
-      "teams": [
-        "Baltimore Ravens",
-        "Philadelphia Eagles"
-      ],
-      "teamIds": [
-        "BAL",
-        "PHI"
-      ],
-      "players": [
-        {
-          "id": "4361178",
-          "name": "Cam Jurgens",
-          "position": "Center",
-          "currentTeam": "BAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50126306/ravens-acquire-center-cam-jurgens-trade-eagles",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-29"
