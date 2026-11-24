@@ -1,6 +1,29 @@
 {
   "candidates": [
     {
+      "id": "50585397",
+      "headline": "Source: Ravens cut punt returner LaJohntay Wester after his two muffs in loss",
+      "description": "The Ravens are waiving returner LaJohntay Wester after he muffed two punts in Sunday's loss at Carolina, a source told ESPN on Tuesday.",
+      "published": "2026-11-24",
+      "likelyKind": "transaction",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "4690143",
+          "name": "LaJohntay Wester",
+          "position": "Wide Receiver",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50585397/source-ravens-cut-punt-returner-wester-two-muffs-loss",
+      "attempts": 0
+    },
+    {
       "id": "50575889",
       "headline": "Rams TE Terrance Ferguson needs season-ending ankle surgery, Sean McVay says",
       "description": "Rams tight end Terrance Ferguson's ankle injury will require season-ending surgery.",
@@ -1089,7 +1112,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50446805/rb-taylor-qb-jones-remain-colts-trade-deadline-passes",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50446499",
       "headline": "Falcons trade center Ryan Neuzil to Ravens for guard Andrew Vorhees, pick",
@@ -1119,10 +1144,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50446499/falcons-trade-center-neuzil-ravens-guard-vorhees-pick",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-24"
+    },
     {
       "id": "50444069",
       "headline": "Source: Falcons cutting kicker Nick Folk, signing Jake Moody",
@@ -4006,39 +4031,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50134415",
-      "headline": "Don't be surprised if: Unsung heroes rack up the stats, and one QB to trade away",
-      "description": "Don't be surprised if the trade market for a QB1 drops off after Week 5, and unsung heroes start to shine.",
-      "published": "2026-10-09",
-      "likelyKind": "transaction",
-      "teams": [],
-      "teamIds": [],
-      "players": [
-        {
-          "id": "4431452",
-          "name": "Drake Maye",
-          "position": "Quarterback",
-          "currentTeam": "NE"
-        },
-        {
-          "id": "4430737",
-          "name": "Kyren Williams",
-          "position": "Running Back",
-          "currentTeam": "LAR"
-        },
-        {
-          "id": "4426388",
-          "name": "Jameson Williams",
-          "position": "Wide Receiver",
-          "currentTeam": "DET"
-        }
-      ],
-      "url": "https://www.espn.com/fantasy/football/story/_/id/50134415/fantasy-football-start-sit-sleepers-breakouts-week-5",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-29"

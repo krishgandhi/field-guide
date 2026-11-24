@@ -29,15 +29,6 @@
       "pointsAgainst": 163,
       "conferenceRank": 5
     },
-    "CIN": {
-      "wins": 7,
-      "losses": 2,
-      "ties": 0,
-      "pointDifferential": 85,
-      "pointsFor": 278,
-      "pointsAgainst": 193,
-      "conferenceRank": 3
-    },
     "JAX": {
       "wins": 7,
       "losses": 3,
@@ -45,6 +36,15 @@
       "pointDifferential": 120,
       "pointsFor": 287,
       "pointsAgainst": 167,
+      "conferenceRank": 3
+    },
+    "CIN": {
+      "wins": 7,
+      "losses": 3,
+      "ties": 0,
+      "pointDifferential": 83,
+      "pointsFor": 298,
+      "pointsAgainst": 215,
       "conferenceRank": 4
     },
     "CLE": {
@@ -237,12 +237,12 @@
       "conferenceRank": 10
     },
     "WSH": {
-      "wins": 3,
+      "wins": 4,
       "losses": 5,
       "ties": 1,
-      "pointDifferential": -27,
-      "pointsFor": 196,
-      "pointsAgainst": 223,
+      "pointDifferential": -25,
+      "pointsFor": 218,
+      "pointsAgainst": 243,
       "conferenceRank": 11
     },
     "TB": {

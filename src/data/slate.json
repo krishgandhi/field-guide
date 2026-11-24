@@ -3,18 +3,6 @@
   "week": 11,
   "games": [
     {
-      "id": "401873078",
-      "kickoff": "2026-11-24T01:15Z",
-      "home": "WSH",
-      "away": "CIN",
-      "spread": 6,
-      "favourite": "away",
-      "overUnder": 54.5,
-      "broadcast": "ESPN",
-      "venue": "Northwest Stadium",
-      "neutralSite": false
-    },
-    {
       "id": "401873066",
       "kickoff": "2026-11-20T01:15Z",
       "home": "HOU",
@@ -157,6 +145,18 @@
       "broadcast": "NBC",
       "venue": "Estadio Banorte",
       "neutralSite": true
+    },
+    {
+      "id": "401873078",
+      "kickoff": "2026-11-24T01:15Z",
+      "home": "WSH",
+      "away": "CIN",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "ESPN",
+      "venue": "Northwest Stadium",
+      "neutralSite": false
     }
   ],
   "byes": [
@@ -168,133 +168,10 @@
     "SEA"
   ],
   "injuries": {
-    "ARI": [
-      {
-        "player": "Carson Beck",
-        "position": "QB",
-        "status": "Out"
-      }
-    ],
-    "ATL": [
-      {
-        "player": "Divine Deablo",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Zachariah Branch",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "BAL": [
-      {
-        "player": "Marlon Humphrey",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "BUF": [
-      {
-        "player": "Dorian Williams",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Christian Benford",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Dalton Kincaid",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "CAR": [
-      {
-        "player": "Bobby Okereke",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "CHI": [
-      {
-        "player": "Kyler Gordon",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "DAL": [
-      {
-        "player": "Jake Ferguson",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Jonathan Mingo",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Jaishawn Barham",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "DET": [
-      {
-        "player": "Ennis Rakestraw Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "D.J. Reed",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
     "GB": [
-      {
-        "player": "Micah Parsons",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Josh Jacobs",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Zaire Franklin",
-        "position": "LB",
-        "status": "Out"
-      },
       {
         "player": "Luke Musgrave",
         "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "HOU": [
-      {
-        "player": "Woody Marks",
-        "position": "RB",
-        "status": "Out"
-      },
-      {
-        "player": "Chris Braswell",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Brevin Jordan",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Marvin Harrison Jr.",
-        "position": "WR",
         "status": "Out"
       }
     ],
@@ -303,88 +180,13 @@
         "player": "Seth McGowan",
         "position": "RB",
         "status": "Out"
-      },
-      {
-        "player": "Charvarius Ward",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Will Mallory",
-        "position": "TE",
-        "status": "Out"
-      },
-      {
-        "player": "Sauce Gardner",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "JAX": [
-      {
-        "player": "Danny Striggow",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Matt Dickerson",
-        "position": "DE",
-        "status": "Out"
-      }
-    ],
-    "KC": [
-      {
-        "player": "Kenneth Walker III",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "LV": [
-      {
-        "player": "Brock Bowers",
-        "position": "TE",
-        "status": "Out"
-      }
-    ],
-    "LAC": [
-      {
-        "player": "Daiyan Henley",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Tarheeb Still",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Brenen Thompson",
-        "position": "WR",
-        "status": "Out"
-      }
-    ],
-    "MIA": [
-      {
-        "player": "Jared Wayne",
-        "position": "WR",
-        "status": "Out"
       }
     ],
     "MIN": [
       {
-        "player": "Kyler Murray",
-        "position": "QB",
-        "status": "Out"
-      },
-      {
         "player": "Jordan Addison",
         "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Isaiah Rodgers",
-        "position": "CB",
-        "status": "Out"
+        "status": "Doubtful"
       }
     ],
     "NE": [
@@ -397,23 +199,6 @@
         "player": "A.J. Brown",
         "position": "WR",
         "status": "Doubtful"
-      },
-      {
-        "player": "Carlton Davis III",
-        "position": "CB",
-        "status": "Out"
-      }
-    ],
-    "NO": [
-      {
-        "player": "Martin Emerson Jr.",
-        "position": "CB",
-        "status": "Out"
-      },
-      {
-        "player": "Pete Werner",
-        "position": "LB",
-        "status": "Out"
       }
     ],
     "NYG": [
@@ -423,64 +208,11 @@
         "status": "Out"
       }
     ],
-    "NYJ": [
-      {
-        "player": "Isaiah Williams",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Omar Cooper Jr.",
-        "position": "WR",
-        "status": "Out"
-      },
-      {
-        "player": "Trevin Wallace",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "PHI": [
-      {
-        "player": "Smael Mondon Jr.",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
     "PIT": [
       {
         "player": "Alex Highsmith",
         "position": "LB",
         "status": "Doubtful"
-      },
-      {
-        "player": "Nick Herbig",
-        "position": "LB",
-        "status": "Out"
-      }
-    ],
-    "SF": [
-      {
-        "player": "Dre Greenlaw",
-        "position": "LB",
-        "status": "Out"
-      },
-      {
-        "player": "Khalid Kareem",
-        "position": "DE",
-        "status": "Out"
-      },
-      {
-        "player": "Isaac Guerendo",
-        "position": "RB",
-        "status": "Out"
-      }
-    ],
-    "SEA": [
-      {
-        "player": "Sam Darnold",
-        "position": "QB",
-        "status": "Out"
       }
     ]
   }
