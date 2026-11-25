@@ -1,6 +1,127 @@
 {
   "candidates": [
     {
+      "id": "31433043",
+      "headline": "Aaron Rodgers' timeline with Packers, ending in trade to Jets",
+      "description": "Here's a look at how Rodgers -- a 2005 first-round pick, four-time MVP and Super Bowl champion quarterback -- finished out his career with the Packers.",
+      "published": "2026-11-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "8439",
+          "name": "Aaron Rodgers",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/31433043/from-holdout-concession-how-aaron-rodgers-green-bay-packers-got-here",
+      "attempts": 0
+    },
+    {
+      "id": "50595660",
+      "headline": "Sources: Steelers cut Rodgers after QB rips McCarthy in scorched-earth interview",
+      "description": "The Steelers are releasing Aaron Rodgers, sources told ESPN, after the quarterback said Wednesday on \"The Pat McAfee Show\" that coach Mike McCarthy has been sleeping through team meetings.",
+      "published": "2026-11-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "8439",
+          "name": "Aaron Rodgers",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50595660/rodgers-heard-mccarthy-benching",
+      "attempts": 0
+    },
+    {
+      "id": "50582759",
+      "headline": "How will Packers use Micah Parsons in return from torn ACL?",
+      "description": "Parsons and the Packers must balance protecting his surgically repaired knee with turning him loose Wednesday.",
+      "published": "2026-11-25",
+      "likelyKind": "injury",
+      "teams": [
+        "Green Bay Packers"
+      ],
+      "teamIds": [
+        "GB"
+      ],
+      "players": [
+        {
+          "id": "4361423",
+          "name": "Micah Parsons",
+          "position": "Defensive End",
+          "currentTeam": "GB"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50582759/micah-parsons-packers-acl-return-snap-count-rams",
+      "attempts": 0
+    },
+    {
+      "id": "50574387",
+      "headline": "Has Puka Nacua played his final snaps in a Rams uniform?",
+      "description": "It is the final season of Nacua's rookie deal, and the complicating factors of signing him to an extension are glaring.",
+      "published": "2026-11-25",
+      "likelyKind": "transaction",
+      "teams": [
+        "Los Angeles Rams"
+      ],
+      "teamIds": [
+        "LAR"
+      ],
+      "players": [
+        {
+          "id": "4426515",
+          "name": "Puka Nacua",
+          "position": "Wide Receiver",
+          "currentTeam": "LAR"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50574387/puka-nacua-injury-last-season-los-angeles-rams-week-12",
+      "attempts": 0
+    },
+    {
+      "id": "50589757",
+      "headline": "Sources: Aaron Rodgers excused from Steelers facility to process benching",
+      "description": "The Steelers have benched Aaron Rodgers in a stunning twist that could signal the end of the star QB's NFL career.",
+      "published": "2026-11-25",
+      "likelyKind": "role",
+      "teams": [
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "3116407",
+          "name": "Mason Rudolph",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        },
+        {
+          "id": "8439",
+          "name": "Aaron Rodgers",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50589757/steelers-bench-struggling-qb-aaron-rodgers-start-mason-rudolph",
+      "attempts": 0
+    },
+    {
       "id": "50585397",
       "headline": "Source: Ravens cut punt returner LaJohntay Wester after his two muffs in loss",
       "description": "The Ravens are waiving returner LaJohntay Wester after he muffed two punts in Sunday's loss at Carolina, a source told ESPN on Tuesday.",
@@ -932,7 +1053,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50448300/patrick-brittany-mahomes-fourth-child-announcement",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50447756",
       "headline": "Raiders name Fernando Mendoza starting QB after trading Kirk Cousins",
@@ -960,7 +1083,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50447756/raiders-name-fernando-mendoza-starting-qb-trading-kirk-cousins",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-25"
     },
     {
       "id": "50444528",
@@ -997,7 +1122,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50444528/kirk-cousins-trade-minnesota-vikings-las-vegas-raiders",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-25"
     },
     {
       "id": "50443388",
@@ -1050,7 +1177,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50443388/2026-nfl-trade-deadline-winners-losers-best-worst-deals",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-25"
     },
     {
       "id": "50446669",
@@ -1082,7 +1211,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50446669/chiefs-josh-downs-trade-reaction-vince-carter-gif",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-25"
     },
     {
       "id": "50446805",
@@ -1111,10 +1242,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50446805/rb-taylor-qb-jones-remain-colts-trade-deadline-passes",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-25"
+    },
     {
       "id": "50446499",
       "headline": "Falcons trade center Ryan Neuzil to Ravens for guard Andrew Vorhees, pick",
@@ -3895,145 +4026,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-31"
-    },
-    {
-      "id": "50158326",
-      "headline": "Making sense of the Giants-Commanders tie, the Texans' Marvin Harrison Jr. trade",
-      "description": "What were the Commanders doing in the final minute of OT? Why did the 1-4 Texans make an aggressive trade for Marvin Harrison Jr.? Let's try to find the logic.",
-      "published": "2026-10-12",
-      "likelyKind": "transaction",
-      "teams": [
-        "Washington Commanders",
-        "New York Giants",
-        "Houston Texans",
-        "Arizona Cardinals"
-      ],
-      "teamIds": [
-        "WSH",
-        "NYG",
-        "HOU",
-        "ARI"
-      ],
-      "players": [
-        {
-          "id": "4426348",
-          "name": "Jayden Daniels",
-          "position": "Quarterback",
-          "currentTeam": "WSH"
-        },
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "HOU"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50158326/week-5-commanders-tie-texans-marvin-harrison-jr-trade",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-31"
-    },
-    {
-      "id": "50148005",
-      "headline": "Sources: Cardinals finalizing deal to trade WR Marvin Harrison Jr.",
-      "description": "The Cardinals are finalizing a deal to trade Marvin Harrison Jr., sources told ESPN's Adam Schefter and NFL Network's Ian Rapoport.",
-      "published": "2026-10-11",
-      "likelyKind": "transaction",
-      "teams": [
-        "Arizona Cardinals"
-      ],
-      "teamIds": [
-        "ARI"
-      ],
-      "players": [
-        {
-          "id": "4432708",
-          "name": "Marvin Harrison Jr.",
-          "position": "Wide Receiver",
-          "currentTeam": "ARI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50148005/sources-cardinals-finalizing-deal-trade-wr-marvin-harrison-jr",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-30"
-    },
-    {
-      "id": "50148833",
-      "headline": "Colts place DE Arden Key on IR with hamstring injury",
-      "description": "Colts defensive end Arden Key has been placed on injured reserve with a hamstring injury, meaning he will miss at least four games before returning to the active roster.",
-      "published": "2026-10-10",
-      "likelyKind": "injury",
-      "teams": [
-        "Indianapolis Colts"
-      ],
-      "teamIds": [
-        "IND"
-      ],
-      "players": [
-        {
-          "id": "3843843",
-          "name": "Arden Key",
-          "position": "Defensive End",
-          "currentTeam": "IND"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50148833/colts-place-de-arden-key-ir-hamstring-injury",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-30"
-    },
-    {
-      "id": "50147669",
-      "headline": "Sources: Ravens held Cam Jurgens physical before trade with Eagles",
-      "description": "As the Ravens and Eagles were preparing to agree to a trade that would send Cam Jurgens to Baltimore, the two sides made immediate plans for the center to undergo a physical in Philadelphia before any deal was finalized, league sources told ESPN.",
-      "published": "2026-10-10",
-      "likelyKind": "transaction",
-      "teams": [
-        "Baltimore Ravens",
-        "Philadelphia Eagles"
-      ],
-      "teamIds": [
-        "BAL",
-        "PHI"
-      ],
-      "players": [
-        {
-          "id": "4361178",
-          "name": "Cam Jurgens",
-          "position": "Center",
-          "currentTeam": "BAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50147669/sources-ravens-held-cam-jurgens-physical-trade-eagles",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
-    },
-    {
-      "id": "50142134",
-      "headline": "Eagles release QB Andy Dalton after costly pick, demotion",
-      "description": "Andy Dalton, who lost his spot as the Eagles' backup quarterback following a costly interception against the Bears, has been released.",
-      "published": "2026-10-09",
-      "likelyKind": "transaction",
-      "teams": [
-        "Philadelphia Eagles"
-      ],
-      "teamIds": [
-        "PHI"
-      ],
-      "players": [
-        {
-          "id": "14012",
-          "name": "Andy Dalton",
-          "position": "Quarterback",
-          "currentTeam": "PHI"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50142134/sources-eagles-release-andy-dalton-costly-pick-demotion",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-29"
     }
   ]
 }

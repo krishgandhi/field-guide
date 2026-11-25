@@ -99,7 +99,7 @@
             }
           },
           "passPlayShare": 63.1,
-          "passPlayShareRank": 6,
+          "passPlayShareRank": 5,
           "quarterbackCarries": 1
         },
         "defence": {
@@ -1603,7 +1603,7 @@
             }
           },
           "passPlayShare": 63.1,
-          "passPlayShareRank": 7,
+          "passPlayShareRank": 6,
           "quarterbackCarries": 33
         },
         "defence": {
@@ -4461,12 +4461,12 @@
               "draftedBy": "2023: Rd 1, Pk 24 (NYG)"
             },
             {
-              "id": "4361266",
-              "name": "Greg Newsome II",
+              "id": "4242547",
+              "name": "Paulson Adebo",
               "label": "CB",
               "debutYear": null,
               "experience": 6,
-              "draftedBy": "2021: Rd 1, Pk 26 (CLE)"
+              "draftedBy": "2021: Rd 3, Pk 76 (NO)"
             }
           ],
           "rank": 12,
@@ -4901,12 +4901,12 @@
         "offence": {
           "players": [
             {
-              "id": "8439",
-              "name": "Aaron Rodgers",
+              "id": "3116407",
+              "name": "Mason Rudolph",
               "label": "QB",
-              "debutYear": 2005,
-              "experience": 22,
-              "draftedBy": "2005: Rd 1, Pk 24 (GB)"
+              "debutYear": 2018,
+              "experience": 9,
+              "draftedBy": "2018: Rd 3, Pk 76 (PIT)"
             },
             {
               "id": "4569987",
@@ -4986,9 +4986,9 @@
               "rank": 27
             }
           },
-          "passPlayShare": 64.7,
-          "passPlayShareRank": 5,
-          "quarterbackCarries": 19
+          "passPlayShare": 63.1,
+          "passPlayShareRank": 7,
+          "quarterbackCarries": 4
         },
         "defence": {
           "players": [
