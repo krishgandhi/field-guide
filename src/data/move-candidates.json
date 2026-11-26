@@ -1,6 +1,43 @@
 {
   "candidates": [
     {
+      "id": "50511931",
+      "headline": "Why the Chiefs and Bills can give thanks to 2017 trade that landed Mahomes in KC",
+      "description": "Kansas City traded up for Patrick Mahomes, while Buffalo got a franchise left tackle and several Pro Bowlers.",
+      "published": "2026-11-26",
+      "likelyKind": "transaction",
+      "teams": [
+        "Buffalo Bills",
+        "Kansas City Chiefs"
+      ],
+      "teamIds": [
+        "BUF",
+        "KC"
+      ],
+      "players": [
+        {
+          "id": "3918298",
+          "name": "Josh Allen",
+          "position": "Quarterback",
+          "currentTeam": "BUF"
+        },
+        {
+          "id": "3139477",
+          "name": "Patrick Mahomes",
+          "position": "Quarterback",
+          "currentTeam": "KC"
+        },
+        {
+          "id": "3042717",
+          "name": "Tre'Davious White",
+          "position": "Cornerback",
+          "currentTeam": "BUF"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50511931/bills-chiefs-2017-trade-no-10-pat-mahomes",
+      "attempts": 0
+    },
+    {
       "id": "31433043",
       "headline": "Aaron Rodgers' timeline with Packers, ending in trade to Jets",
       "description": "Here's a look at how Rodgers -- a 2005 first-round pick, four-time MVP and Super Bowl champion quarterback -- finished out his career with the Packers.",
@@ -1030,7 +1067,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50447827/philadelphia-eagles-trade-haul-2027-draft-picks",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50448300",
       "headline": "Patrick and Brittany Mahomes announce baby No. 4 on NFL trade deadline day",
@@ -1052,10 +1091,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50448300/patrick-brittany-mahomes-fourth-child-announcement",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-26"
+    },
     {
       "id": "50447756",
       "headline": "Raiders name Fernando Mendoza starting QB after trading Kirk Cousins",
@@ -3998,31 +4037,6 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-31"
-    },
-    {
-      "id": "50167021",
-      "headline": "Source: Packers lose DT Javon Hargrave for season to torn Achilles",
-      "description": "Tests confirmed Monday that Packers defensive tackle Javon Hargrave suffered a season-ending torn Achilles in Sunday's victory over the Bears, a source told ESPN's Adam Schefter.",
-      "published": "2026-10-12",
-      "likelyKind": "injury",
-      "teams": [
-        "Green Bay Packers"
-      ],
-      "teamIds": [
-        "GB"
-      ],
-      "players": [
-        {
-          "id": "2983055",
-          "name": "Javon Hargrave",
-          "position": "Defensive Tackle",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50167021/source-packers-lose-hargrave-season-ending-torn-achilles",
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-10-31"

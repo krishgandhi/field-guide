@@ -339,7 +339,7 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 20
+              "rank": 21
             },
             "takeaways": {
               "value": "9",
@@ -366,13 +366,13 @@
               "draftedBy": "2021: Rd 6, Pk 217 (CHI)"
             }
           ],
-          "rank": 25,
+          "rank": 26,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 25th of 32.",
+          "note": "Below average at kicking field goals so far this season, 26th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "75.0",
-              "rank": 11
+              "rank": 12
             }
           }
         }
@@ -443,7 +443,7 @@
           "stats": {
             "_runAttempts": {
               "value": "302",
-              "rank": 4
+              "rank": 5
             },
             "_passAttempts": {
               "value": "333",
@@ -471,11 +471,11 @@
             },
             "turnovers given away": {
               "value": "17",
-              "rank": 7
+              "rank": 8
             }
           },
           "passPlayShare": 57.2,
-          "passPlayShareRank": 21,
+          "passPlayShareRank": 20,
           "quarterbackCarries": 33
         },
         "defence": {
@@ -631,7 +631,7 @@
           "stats": {
             "_runAttempts": {
               "value": "320",
-              "rank": 3
+              "rank": 4
             },
             "_passAttempts": {
               "value": "303",
@@ -643,7 +643,7 @@
             },
             "yards per carry": {
               "value": "4.6",
-              "rank": 7
+              "rank": 8
             },
             "yards per pass": {
               "value": "8.4",
@@ -659,7 +659,7 @@
             },
             "turnovers given away": {
               "value": "16",
-              "rank": 8
+              "rank": 9
             }
           },
           "passPlayShare": 56.1,
@@ -813,9 +813,9 @@
               "draftedBy": "2022: Rd 7, Pk 249 (GB)"
             }
           ],
-          "rank": 11,
+          "rank": 12,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 11th of 32.",
+          "note": "Better than most for points scored so far this season, 12th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "256",
@@ -823,7 +823,7 @@
             },
             "_passAttempts": {
               "value": "373",
-              "rank": 7
+              "rank": 8
             },
             "_sacks": {
               "value": "32",
@@ -1001,9 +1001,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 9,
+          "rank": 10,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 9th of 32.",
+          "note": "Better than most for points scored so far this season, 10th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "336",
@@ -1061,12 +1061,12 @@
               "draftedBy": "2020: Rd 4, Pk 130 (MIN)"
             },
             {
-              "id": "4241007",
-              "name": "D'Marco Jackson",
+              "id": "4430822",
+              "name": "Noah Sewell",
               "label": "LB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 5, Pk 161 (NO)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 5, Pk 148 (CHI)"
             },
             {
               "id": "4243253",
@@ -1085,9 +1085,9 @@
               "draftedBy": "2023: Rd 2, Pk 56 (CHI)"
             }
           ],
-          "rank": 6,
+          "rank": 5,
           "score": 5,
-          "note": "Among the best in the league for points allowed so far this season — 6th of 32.",
+          "note": "Among the best in the league for points allowed so far this season — 5th of 32.",
           "stats": {
             "sacks": {
               "value": "32",
@@ -1199,7 +1199,7 @@
             },
             "_passAttempts": {
               "value": "380",
-              "rank": 5
+              "rank": 7
             },
             "_sacks": {
               "value": "19",
@@ -1279,11 +1279,11 @@
           "stats": {
             "sacks": {
               "value": "29",
-              "rank": 7
+              "rank": 8
             },
             "takeaways": {
               "value": "12",
-              "rank": 18
+              "rank": 19
             }
           }
         },
@@ -1471,7 +1471,7 @@
             },
             "takeaways": {
               "value": "13",
-              "rank": 14
+              "rank": 15
             }
           }
         },
@@ -1579,7 +1579,7 @@
             },
             "_sacks": {
               "value": "15",
-              "rank": 28
+              "rank": 29
             },
             "yards per carry": {
               "value": "4.1",
@@ -1753,9 +1753,9 @@
               "draftedBy": "2017: Rd 1, Pk 20 (DEN)"
             }
           ],
-          "rank": 14,
+          "rank": 15,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 14th of 32.",
+          "note": "Middle of the league for points scored so far this season, 15th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "257",
@@ -1779,7 +1779,7 @@
             },
             "rushing touchdowns": {
               "value": "12",
-              "rank": 7
+              "rank": 8
             },
             "passing touchdowns": {
               "value": "12",
@@ -1847,7 +1847,7 @@
             },
             "takeaways": {
               "value": "13",
-              "rank": 14
+              "rank": 15
             }
           }
         },
@@ -1947,7 +1947,7 @@
           "stats": {
             "_runAttempts": {
               "value": "293",
-              "rank": 6
+              "rank": 7
             },
             "_passAttempts": {
               "value": "334",
@@ -1971,7 +1971,7 @@
             },
             "passing touchdowns": {
               "value": "20",
-              "rank": 8
+              "rank": 9
             },
             "turnovers given away": {
               "value": "7",
@@ -1979,7 +1979,7 @@
             }
           },
           "passPlayShare": 57.1,
-          "passPlayShareRank": 22,
+          "passPlayShareRank": 21,
           "quarterbackCarries": 25
         },
         "defence": {
@@ -2129,20 +2129,20 @@
               "draftedBy": "2024: Rd 1, Pk 25 (GB)"
             }
           ],
-          "rank": 16,
+          "rank": 14,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 16th of 32.",
+          "note": "Middle of the league for points scored so far this season, 14th of 32.",
           "stats": {
             "_runAttempts": {
-              "value": "219",
+              "value": "233",
               "rank": 31
             },
             "_passAttempts": {
-              "value": "370",
-              "rank": 8
+              "value": "399",
+              "rank": 3
             },
             "_sacks": {
-              "value": "25",
+              "value": "26",
               "rank": 15
             },
             "yards per carry": {
@@ -2150,7 +2150,7 @@
               "rank": 31
             },
             "yards per pass": {
-              "value": "7.7",
+              "value": "7.6",
               "rank": 8
             },
             "rushing touchdowns": {
@@ -2158,17 +2158,17 @@
               "rank": 24
             },
             "passing touchdowns": {
-              "value": "20",
+              "value": "21",
               "rank": 8
             },
             "turnovers given away": {
-              "value": "15",
-              "rank": 10
+              "value": "18",
+              "rank": 7
             }
           },
-          "passPlayShare": 65.7,
+          "passPlayShare": 66,
           "passPlayShareRank": 3,
-          "quarterbackCarries": 13
+          "quarterbackCarries": 14
         },
         "defence": {
           "players": [
@@ -2213,17 +2213,17 @@
               "draftedBy": "2026: Rd 2, Pk 52 (GB)"
             }
           ],
-          "rank": 16,
-          "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 16th of 32.",
+          "rank": 20,
+          "score": 2,
+          "note": "Below average for points allowed so far this season, 20th of 32.",
           "stats": {
             "sacks": {
-              "value": "29",
-              "rank": 7
+              "value": "30",
+              "rank": 6
             },
             "takeaways": {
-              "value": "20",
-              "rank": 2
+              "value": "21",
+              "rank": 1
             }
           }
         },
@@ -2246,13 +2246,13 @@
               "draftedBy": "2022: Rd 2, Pk 54 (KC)"
             }
           ],
-          "rank": 30,
+          "rank": 28,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 30th of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 28th of 32.",
           "stats": {
             "field goal percentage": {
-              "value": "71.4",
-              "rank": 15
+              "value": "73.9",
+              "rank": 14
             }
           }
         }
@@ -2317,9 +2317,9 @@
               "draftedBy": "2025: Rd 2, Pk 48 (HOU)"
             }
           ],
-          "rank": 10,
+          "rank": 11,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 10th of 32.",
+          "note": "Better than most for points scored so far this season, 11th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "256",
@@ -2339,7 +2339,7 @@
             },
             "yards per pass": {
               "value": "7.6",
-              "rank": 9
+              "rank": 8
             },
             "rushing touchdowns": {
               "value": "6",
@@ -2401,9 +2401,9 @@
               "draftedBy": "2024: Rd 2, Pk 42 (HOU)"
             }
           ],
-          "rank": 17,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 17th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 16th of 32.",
           "stats": {
             "sacks": {
               "value": "35",
@@ -2511,7 +2511,7 @@
           "stats": {
             "_runAttempts": {
               "value": "300",
-              "rank": 5
+              "rank": 6
             },
             "_passAttempts": {
               "value": "355",
@@ -2531,7 +2531,7 @@
             },
             "rushing touchdowns": {
               "value": "12",
-              "rank": 7
+              "rank": 8
             },
             "passing touchdowns": {
               "value": "7",
@@ -2881,9 +2881,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 8,
+          "rank": 9,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 8th of 32.",
+          "note": "Better than most for points scored so far this season, 9th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "275",
@@ -2919,7 +2919,7 @@
             }
           },
           "passPlayShare": 58.4,
-          "passPlayShareRank": 17,
+          "passPlayShareRank": 16,
           "quarterbackCarries": 25
         },
         "defence": {
@@ -2975,7 +2975,7 @@
             },
             "takeaways": {
               "value": "13",
-              "rank": 14
+              "rank": 15
             }
           }
         },
@@ -3075,7 +3075,7 @@
           "stats": {
             "_runAttempts": {
               "value": "288",
-              "rank": 9
+              "rank": 10
             },
             "_passAttempts": {
               "value": "282",
@@ -3107,7 +3107,7 @@
             }
           },
           "passPlayShare": 57.3,
-          "passPlayShareRank": 20,
+          "passPlayShareRank": 19,
           "quarterbackCarries": 49
         },
         "defence": {
@@ -3163,7 +3163,7 @@
             },
             "takeaways": {
               "value": "14",
-              "rank": 10
+              "rank": 11
             }
           }
         },
@@ -3217,12 +3217,12 @@
               "draftedBy": "2009: Rd 1, Pk 1 (DET)"
             },
             {
-              "id": "4430737",
-              "name": "Kyren Williams",
+              "id": "4429096",
+              "name": "Blake Corum",
               "label": "RB",
               "debutYear": null,
-              "experience": 5,
-              "draftedBy": "2022: Rd 5, Pk 164 (LAR)"
+              "experience": 3,
+              "draftedBy": "2024: Rd 3, Pk 83 (LAR)"
             },
             {
               "id": "4710855",
@@ -3257,56 +3257,56 @@
               "draftedBy": null
             }
           ],
-          "rank": 12,
+          "rank": 8,
           "score": 4,
-          "note": "Better than most for points scored so far this season, 12th of 32.",
+          "note": "Better than most for points scored so far this season, 8th of 32.",
           "stats": {
             "_runAttempts": {
-              "value": "288",
-              "rank": 9
+              "value": "335",
+              "rank": 2
             },
             "_passAttempts": {
-              "value": "375",
-              "rank": 6
+              "value": "398",
+              "rank": 4
             },
             "_sacks": {
-              "value": "15",
+              "value": "16",
               "rank": 28
             },
             "yards per carry": {
-              "value": "4.6",
-              "rank": 7
+              "value": "4.7",
+              "rank": 5
             },
             "yards per pass": {
               "value": "7.0",
               "rank": 18
             },
             "rushing touchdowns": {
-              "value": "12",
-              "rank": 7
+              "value": "14",
+              "rank": 5
             },
             "passing touchdowns": {
               "value": "19",
               "rank": 10
             },
             "turnovers given away": {
-              "value": "15",
-              "rank": 10
+              "value": "16",
+              "rank": 9
             }
           },
-          "passPlayShare": 59,
-          "passPlayShareRank": 15,
-          "quarterbackCarries": 17
+          "passPlayShare": 56.6,
+          "passPlayShareRank": 22,
+          "quarterbackCarries": 18
         },
         "defence": {
           "players": [
             {
-              "id": "4362245",
-              "name": "Braden Fiske",
+              "id": "4250621",
+              "name": "Kobie Turner",
               "label": "DE",
               "debutYear": null,
-              "experience": 3,
-              "draftedBy": "2024: Rd 2, Pk 39 (LAR)"
+              "experience": 4,
+              "draftedBy": "2023: Rd 3, Pk 89 (LAR)"
             },
             {
               "id": "16716",
@@ -3341,17 +3341,17 @@
               "draftedBy": "2022: Rd 1, Pk 21 (KC)"
             }
           ],
-          "rank": 5,
+          "rank": 6,
           "score": 5,
-          "note": "Among the best in the league for points allowed so far this season — 5th of 32.",
+          "note": "Among the best in the league for points allowed so far this season — 6th of 32.",
           "stats": {
             "sacks": {
-              "value": "21",
-              "rank": 20
+              "value": "22",
+              "rank": 18
             },
             "takeaways": {
-              "value": "12",
-              "rank": 18
+              "value": "15",
+              "rank": 8
             }
           }
         },
@@ -3366,20 +3366,20 @@
               "draftedBy": null
             },
             {
-              "id": "4386544",
-              "name": "Xavier Smith",
+              "id": "4243003",
+              "name": "Ronnie Rivers",
               "label": "KR",
               "debutYear": null,
-              "experience": 3,
+              "experience": 5,
               "draftedBy": null
             }
           ],
-          "rank": 27,
-          "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 27th of 32.",
+          "rank": 24,
+          "score": 2,
+          "note": "Below average at kicking field goals so far this season, 24th of 32.",
           "stats": {
             "field goal percentage": {
-              "value": "73.3",
+              "value": "78.9",
               "rank": 3
             }
           }
@@ -3455,7 +3455,7 @@
             },
             "_passAttempts": {
               "value": "390",
-              "rank": 3
+              "rank": 5
             },
             "_sacks": {
               "value": "22",
@@ -3750,9 +3750,9 @@
               "draftedBy": "2024: Rd 4, Pk 120 (MIA)"
             }
           ],
-          "rank": 28,
+          "rank": 29,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 28th of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 29th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "72.7",
@@ -3859,7 +3859,7 @@
             }
           },
           "passPlayShare": 57.9,
-          "passPlayShareRank": 18,
+          "passPlayShareRank": 17,
           "quarterbackCarries": 26
         },
         "defence": {
@@ -4023,7 +4023,7 @@
             },
             "_sacks": {
               "value": "25",
-              "rank": 15
+              "rank": 16
             },
             "yards per carry": {
               "value": "4.1",
@@ -4093,9 +4093,9 @@
               "draftedBy": "2023: Rd 1, Pk 17 (NE)"
             }
           ],
-          "rank": 19,
+          "rank": 18,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 19th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 18th of 32.",
           "stats": {
             "sacks": {
               "value": "27",
@@ -4126,9 +4126,9 @@
               "draftedBy": "2025: Rd 3, Pk 69 (NE)"
             }
           ],
-          "rank": 24,
+          "rank": 25,
           "score": 2,
-          "note": "Below average at kicking field goals so far this season, 24th of 32.",
+          "note": "Below average at kicking field goals so far this season, 25th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "78.6",
@@ -4207,7 +4207,7 @@
             },
             "_passAttempts": {
               "value": "386",
-              "rank": 4
+              "rank": 6
             },
             "_sacks": {
               "value": "29",
@@ -4385,9 +4385,9 @@
               "draftedBy": "2020: Rd 1, Pk 4 (NYG)"
             }
           ],
-          "rank": 15,
+          "rank": 16,
           "score": 3,
-          "note": "Middle of the league for points scored so far this season, 15th of 32.",
+          "note": "Middle of the league for points scored so far this season, 16th of 32.",
           "stats": {
             "_runAttempts": {
               "value": "284",
@@ -4419,11 +4419,11 @@
             },
             "turnovers given away": {
               "value": "15",
-              "rank": 10
+              "rank": 12
             }
           },
           "passPlayShare": 58.7,
-          "passPlayShareRank": 16,
+          "passPlayShareRank": 15,
           "quarterbackCarries": 22
         },
         "defence": {
@@ -4479,7 +4479,7 @@
             },
             "takeaways": {
               "value": "14",
-              "rank": 10
+              "rank": 11
             }
           }
         },
@@ -4502,9 +4502,9 @@
               "draftedBy": null
             }
           ],
-          "rank": 26,
-          "score": 2,
-          "note": "Below average at kicking field goals so far this season, 26th of 32.",
+          "rank": 27,
+          "score": 1,
+          "note": "Among the worst in the league at kicking field goals so far this season — 27th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "74.1",
@@ -4579,7 +4579,7 @@
           "stats": {
             "_runAttempts": {
               "value": "291",
-              "rank": 8
+              "rank": 9
             },
             "_passAttempts": {
               "value": "333",
@@ -4595,7 +4595,7 @@
             },
             "yards per pass": {
               "value": "7.6",
-              "rank": 9
+              "rank": 8
             },
             "rushing touchdowns": {
               "value": "5",
@@ -4611,7 +4611,7 @@
             }
           },
           "passPlayShare": 57.9,
-          "passPlayShareRank": 19,
+          "passPlayShareRank": 18,
           "quarterbackCarries": 25
         },
         "defence": {
@@ -4663,11 +4663,11 @@
           "stats": {
             "sacks": {
               "value": "29",
-              "rank": 7
+              "rank": 8
             },
             "takeaways": {
               "value": "12",
-              "rank": 18
+              "rank": 19
             }
           }
         },
@@ -4845,13 +4845,13 @@
               "draftedBy": "2024: Rd 1, Pk 22 (PHI)"
             }
           ],
-          "rank": 18,
+          "rank": 17,
           "score": 3,
-          "note": "Middle of the league for points allowed so far this season, 18th of 32.",
+          "note": "Middle of the league for points allowed so far this season, 17th of 32.",
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 20
+              "rank": 21
             },
             "takeaways": {
               "value": "5",
@@ -5043,7 +5043,7 @@
             },
             "takeaways": {
               "value": "14",
-              "rank": 10
+              "rank": 11
             }
           }
         },
@@ -5143,7 +5143,7 @@
           "stats": {
             "_runAttempts": {
               "value": "293",
-              "rank": 6
+              "rank": 7
             },
             "_passAttempts": {
               "value": "305",
@@ -5159,7 +5159,7 @@
             },
             "yards per pass": {
               "value": "7.6",
-              "rank": 9
+              "rank": 8
             },
             "rushing touchdowns": {
               "value": "8",
@@ -5171,7 +5171,7 @@
             },
             "turnovers given away": {
               "value": "16",
-              "rank": 8
+              "rank": 9
             }
           },
           "passPlayShare": 53.7,
@@ -5231,7 +5231,7 @@
             },
             "takeaways": {
               "value": "13",
-              "rank": 14
+              "rank": 15
             }
           }
         },
@@ -5331,7 +5331,7 @@
           "stats": {
             "_runAttempts": {
               "value": "288",
-              "rank": 9
+              "rank": 10
             },
             "_passAttempts": {
               "value": "291",
@@ -5442,9 +5442,9 @@
               "draftedBy": "2019: Rd 2, Pk 36 (SF)"
             }
           ],
-          "rank": 29,
+          "rank": 30,
           "score": 1,
-          "note": "Among the worst in the league at kicking field goals so far this season — 29th of 32.",
+          "note": "Among the worst in the league at kicking field goals so far this season — 30th of 32.",
           "stats": {
             "field goal percentage": {
               "value": "72.7",
@@ -5519,7 +5519,7 @@
           "stats": {
             "_runAttempts": {
               "value": "322",
-              "rank": 2
+              "rank": 3
             },
             "_passAttempts": {
               "value": "273",
@@ -5539,7 +5539,7 @@
             },
             "rushing touchdowns": {
               "value": "12",
-              "rank": 7
+              "rank": 8
             },
             "passing touchdowns": {
               "value": "8",
@@ -5791,11 +5791,11 @@
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 20
+              "rank": 21
             },
             "takeaways": {
               "value": "12",
-              "rank": 18
+              "rank": 19
             }
           }
         },
@@ -5973,17 +5973,17 @@
               "draftedBy": "2025: Rd 2, Pk 61 (WSH)"
             }
           ],
-          "rank": 20,
-          "score": 2,
-          "note": "Below average for points allowed so far this season, 20th of 32.",
+          "rank": 19,
+          "score": 3,
+          "note": "Middle of the league for points allowed so far this season, 19th of 32.",
           "stats": {
             "sacks": {
               "value": "21",
-              "rank": 20
+              "rank": 21
             },
             "takeaways": {
               "value": "14",
-              "rank": 10
+              "rank": 11
             }
           }
         },

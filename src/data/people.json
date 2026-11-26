@@ -81,9 +81,9 @@
         }
       ],
       "career": {
-        "Total Tackles": "557",
-        "Solo Tackles": "345",
-        "Assist Tackles": "212",
+        "Total Tackles": "559",
+        "Solo Tackles": "346",
+        "Assist Tackles": "213",
         "Sacks": "112.5",
         "Forced Fumbles": "24",
         "Fumbles Recovered": "8",
@@ -93,9 +93,9 @@
         "Average Interception Yards": "0.0",
         "Interception Touchdowns": "0",
         "Long Interception": "0",
-        "Passes Defended": "21",
-        "Stuffs": "112.5",
-        "Stuff Yards": "265",
+        "Passes Defended": "22",
+        "Stuffs": "113.5",
+        "Stuff Yards": "267",
         "Kicks Blocked": "0"
       },
       "headshot": "/players/16716.png"
@@ -191,8 +191,8 @@
         }
       ],
       "career": {
-        "Total Tackles": "415",
-        "Solo Tackles": "296",
+        "Total Tackles": "418",
+        "Solo Tackles": "299",
         "Assist Tackles": "119",
         "Sacks": "128.5",
         "Forced Fumbles": "24",
@@ -204,8 +204,8 @@
         "Interception Touchdowns": "0",
         "Long Interception": "0",
         "Passes Defended": "18",
-        "Stuffs": "65",
-        "Stuff Yards": "103",
+        "Stuffs": "66",
+        "Stuff Yards": "107",
         "Kicks Blocked": "3"
       },
       "headshot": "/players/3122132.png"
@@ -454,8 +454,8 @@
       "college": "Washington",
       "awards": [],
       "career": {
-        "Total Tackles": "273",
-        "Solo Tackles": "197",
+        "Total Tackles": "275",
+        "Solo Tackles": "199",
         "Assist Tackles": "76",
         "Sacks": "5.5",
         "Forced Fumbles": "8",
@@ -466,7 +466,7 @@
         "Average Interception Yards": "10.0",
         "Interception Touchdowns": "0",
         "Long Interception": "26",
-        "Passes Defended": "42",
+        "Passes Defended": "43",
         "Stuffs": "12",
         "Stuff Yards": "28",
         "Kicks Blocked": "0"

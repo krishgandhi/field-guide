@@ -3,25 +3,13 @@
   "week": 12,
   "games": [
     {
-      "id": "401873079",
-      "kickoff": "2026-11-26T01:00Z",
-      "home": "LAR",
-      "away": "GB",
-      "spread": 2.5,
-      "favourite": "home",
-      "overUnder": 43.5,
-      "broadcast": "Netflix",
-      "venue": "SoFi Stadium",
-      "neutralSite": false
-    },
-    {
       "id": "401873081",
       "kickoff": "2026-11-26T18:00Z",
       "home": "DET",
       "away": "CHI",
-      "spread": 1.5,
-      "favourite": "away",
-      "overUnder": 55.5,
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
       "broadcast": "CBS",
       "venue": "Ford Field",
       "neutralSite": false
@@ -33,7 +21,7 @@
       "away": "PHI",
       "spread": 8.5,
       "favourite": "home",
-      "overUnder": 47.5,
+      "overUnder": 49.5,
       "broadcast": "Fox",
       "venue": "AT&T Stadium",
       "neutralSite": false
@@ -45,9 +33,21 @@
       "away": "KC",
       "spread": 3,
       "favourite": "home",
-      "overUnder": 46.5,
+      "overUnder": 45.5,
       "broadcast": "NBC",
       "venue": "Highmark Stadium",
+      "neutralSite": false
+    },
+    {
+      "id": "401873079",
+      "kickoff": "2026-11-26T01:00Z",
+      "home": "LAR",
+      "away": "GB",
+      "spread": null,
+      "favourite": null,
+      "overUnder": null,
+      "broadcast": "Netflix",
+      "venue": "SoFi Stadium",
       "neutralSite": false
     },
     {
@@ -55,7 +55,7 @@
       "kickoff": "2026-11-27T20:00Z",
       "home": "PIT",
       "away": "DEN",
-      "spread": 3.5,
+      "spread": 4.5,
       "favourite": "away",
       "overUnder": 36.5,
       "broadcast": "Prime Video",
@@ -79,7 +79,7 @@
       "kickoff": "2026-11-29T18:00Z",
       "home": "IND",
       "away": "NYG",
-      "spread": 6.5,
+      "spread": 6,
       "favourite": "away",
       "overUnder": 41.5,
       "broadcast": "Fox",
@@ -91,9 +91,9 @@
       "kickoff": "2026-11-29T18:00Z",
       "home": "MIA",
       "away": "NYJ",
-      "spread": 3.5,
+      "spread": 4.5,
       "favourite": "away",
-      "overUnder": 40.5,
+      "overUnder": 39.5,
       "broadcast": "CBS",
       "venue": "Hard Rock Stadium",
       "neutralSite": false
@@ -117,7 +117,7 @@
       "away": "TEN",
       "spread": 14.5,
       "favourite": "home",
-      "overUnder": 48.5,
+      "overUnder": 49.5,
       "broadcast": "Fox",
       "venue": "EverBank Stadium",
       "neutralSite": false
@@ -127,7 +127,7 @@
       "kickoff": "2026-11-29T18:00Z",
       "home": "HOU",
       "away": "BAL",
-      "spread": 7,
+      "spread": 6.5,
       "favourite": "home",
       "overUnder": 47.5,
       "broadcast": "CBS",
@@ -139,8 +139,8 @@
       "kickoff": "2026-11-29T21:05Z",
       "home": "LAC",
       "away": "NE",
-      "spread": 1.5,
-      "favourite": "home",
+      "spread": 2.5,
+      "favourite": "away",
       "overUnder": 35.5,
       "broadcast": "CBS",
       "venue": "SoFi Stadium",
@@ -151,7 +151,7 @@
       "kickoff": "2026-11-29T21:25Z",
       "home": "ARI",
       "away": "WSH",
-      "spread": 7,
+      "spread": 6.5,
       "favourite": "away",
       "overUnder": 41.5,
       "broadcast": "Fox",
@@ -163,9 +163,9 @@
       "kickoff": "2026-11-29T21:25Z",
       "home": "SF",
       "away": "SEA",
-      "spread": 2.5,
+      "spread": 3,
       "favourite": "home",
-      "overUnder": 44.5,
+      "overUnder": 43.5,
       "broadcast": "Fox",
       "venue": "Levi's Stadium",
       "neutralSite": false
@@ -177,7 +177,7 @@
       "away": "LV",
       "spread": 4.5,
       "favourite": "home",
-      "overUnder": 39.5,
+      "overUnder": 40.5,
       "broadcast": "NBC",
       "venue": "Huntington Bank Field",
       "neutralSite": false
@@ -199,12 +199,32 @@
   "injuries": {
     "CHI": [
       {
-        "player": "Roschon Johnson",
-        "position": "RB",
+        "player": "Case Keenum",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Colston Loveland",
+        "position": "TE",
+        "status": "Out"
+      },
+      {
+        "player": "Isaac Yiadom",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Kyler Gordon",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "DAL": [
+      {
+        "player": "Jonathan Mingo",
+        "position": "WR",
+        "status": "Out"
+      },
       {
         "player": "Jake Ferguson",
         "position": "TE",
@@ -213,16 +233,55 @@
     ],
     "DEN": [
       {
-        "player": "J.K. Dobbins",
-        "position": "RB",
+        "player": "Sai'vion Jones",
+        "position": "DE",
+        "status": "Out"
+      }
+    ],
+    "DET": [
+      {
+        "player": "DJ Wonnum",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Ennis Rakestraw Jr.",
+        "position": "CB",
+        "status": "Out"
+      },
+      {
+        "player": "Tyrus Wheat",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Keith Abney II",
+        "position": "CB",
         "status": "Out"
       }
     ],
     "GB": [
       {
+        "player": "Zaire Franklin",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Josh Jacobs",
+        "position": "RB",
+        "status": "Out"
+      },
+      {
         "player": "Luke Musgrave",
         "position": "TE",
         "status": "Out"
+      }
+    ],
+    "HOU": [
+      {
+        "player": "Logan Hall",
+        "position": "DE",
+        "status": "Doubtful"
       }
     ],
     "IND": [
@@ -236,6 +295,28 @@
       {
         "player": "Kenneth Walker III",
         "position": "RB",
+        "status": "Out"
+      }
+    ],
+    "LAR": [
+      {
+        "player": "Ty Simpson",
+        "position": "QB",
+        "status": "Out"
+      },
+      {
+        "player": "Darryl Peterson III",
+        "position": "LB",
+        "status": "Out"
+      },
+      {
+        "player": "Desjuan Johnson",
+        "position": "DE",
+        "status": "Out"
+      },
+      {
+        "player": "Larrell Murchison",
+        "position": "DE",
         "status": "Out"
       }
     ],
@@ -260,13 +341,13 @@
     ],
     "PHI": [
       {
-        "player": "Jonathan Jones",
-        "position": "CB",
+        "player": "Arnold Ebiketie",
+        "position": "LB",
         "status": "Out"
       },
       {
-        "player": "Arnold Ebiketie",
-        "position": "LB",
+        "player": "Jonathan Jones",
+        "position": "CB",
         "status": "Out"
       }
     ],
@@ -274,7 +355,7 @@
       {
         "player": "Alex Highsmith",
         "position": "LB",
-        "status": "Doubtful"
+        "status": "Out"
       }
     ]
   }
