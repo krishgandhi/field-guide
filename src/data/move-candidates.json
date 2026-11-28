@@ -1,6 +1,93 @@
 {
   "candidates": [
     {
+      "id": "50623183",
+      "headline": "Falcons release Tua Tagovailoa, ending veteran QB's brief Atlanta stint",
+      "description": "The Falcons have released Tua Tagovailoa, ending the veteran quarterback's time in Atlanta after less than nine months.",
+      "published": "2026-11-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Atlanta Falcons"
+      ],
+      "teamIds": [
+        "ATL"
+      ],
+      "players": [
+        {
+          "id": "4241479",
+          "name": "Tua Tagovailoa",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        },
+        {
+          "id": "4360423",
+          "name": "Michael Penix Jr.",
+          "position": "Quarterback",
+          "currentTeam": "ATL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50623183/sources-falcons-agree-part-ways-qb-tua-tagovailoa",
+      "attempts": 0
+    },
+    {
+      "id": "50618077",
+      "headline": "Steelers, fueled by jabs over Aaron Rodgers drama, 'come together' to rout Broncos",
+      "description": "Turned into a national punchline following Aaron Rodgers' release, the Steelers played with a sense of \"urgency\" and \"anger\" in a 27-5 win over the Broncos.",
+      "published": "2026-11-28",
+      "likelyKind": "transaction",
+      "teams": [
+        "Pittsburgh Steelers"
+      ],
+      "teamIds": [
+        "PIT"
+      ],
+      "players": [
+        {
+          "id": "3116407",
+          "name": "Mason Rudolph",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        },
+        {
+          "id": "8439",
+          "name": "Aaron Rodgers",
+          "position": "Quarterback",
+          "currentTeam": "PIT"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50618077/steelers-fueled-jabs-aaron-rodgers-drama-rout-broncos",
+      "attempts": 0
+    },
+    {
+      "id": "50614218",
+      "headline": "Ravens' Marlon Humphrey to return to lineup; role uncertain",
+      "description": "Ravens cornerback Marlon Humphrey will play Sunday against the Texans, a week after he was benched for making disparaging comments about the city of Baltimore.",
+      "published": "2026-11-27",
+      "likelyKind": "role",
+      "teams": [
+        "Baltimore Ravens"
+      ],
+      "teamIds": [
+        "BAL"
+      ],
+      "players": [
+        {
+          "id": "3126356",
+          "name": "Marlon Humphrey",
+          "position": "Cornerback",
+          "currentTeam": "BAL"
+        },
+        {
+          "id": "4832793",
+          "name": "Olaivavega Ioane",
+          "position": "Guard",
+          "currentTeam": "BAL"
+        }
+      ],
+      "url": "https://www.espn.com/nfl/story/_/id/50614218/ravens-marlon-humphrey-return-lineup-role-uncertain",
+      "attempts": 0
+    },
+    {
       "id": "50511931",
       "headline": "Why the Chiefs and Bills can give thanks to 2017 trade that landed Mahomes in KC",
       "description": "Kansas City traded up for Patrick Mahomes, while Buffalo got a franchise left tackle and several Pro Bowlers.",
@@ -986,7 +1073,9 @@
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50453373/sources-giants-eyed-bijan-robinson-trade-deadline",
       "attempts": 0
-    },
+    }
+  ],
+  "givenUp": [
     {
       "id": "50442897",
       "headline": "Questions on 2026 NFL trade deadline deals: Does Kirk Cousins lift the Vikings?",
@@ -1020,7 +1109,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50442897/2026-trade-deadline-barnwell-questions-cousins-downs",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-28"
     },
     {
       "id": "50445806",
@@ -1043,7 +1134,9 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50445806/cowboys-quinnen-williams-trade-deadline",
-      "attempts": 0
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-28"
     },
     {
       "id": "50447827",
@@ -1066,10 +1159,10 @@
         }
       ],
       "url": "https://www.espn.com/nfl/story/_/id/50447827/philadelphia-eagles-trade-haul-2027-draft-picks",
-      "attempts": 0
-    }
-  ],
-  "givenUp": [
+      "attempts": 0,
+      "reason": "backlog over the worklist limit, never drafted",
+      "givenUpOn": "2026-11-28"
+    },
     {
       "id": "50448300",
       "headline": "Patrick and Brittany Mahomes announce baby No. 4 on NFL trade deadline day",
@@ -3957,89 +4050,6 @@
       "attempts": 0,
       "reason": "backlog over the worklist limit, never drafted",
       "givenUpOn": "2026-11-01"
-    },
-    {
-      "id": "50195809",
-      "headline": "What Cowboys-Packers' Micah Parsons trade means a year later",
-      "description": "We examine the fallout and lingering impact on both franchises more than a year after the blockbuster deal.",
-      "published": "2026-10-17",
-      "likelyKind": "transaction",
-      "teams": [
-        "Green Bay Packers",
-        "Dallas Cowboys"
-      ],
-      "teamIds": [
-        "GB",
-        "DAL"
-      ],
-      "players": [
-        {
-          "id": "4361423",
-          "name": "Micah Parsons",
-          "position": "Defensive End",
-          "currentTeam": "GB"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50195809/cowboys-packers-micah-parsons-trade-winner",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-11-01"
-    },
-    {
-      "id": "50197704",
-      "headline": "Seahawks sticking with Sam Darnold as starter despite INTs",
-      "description": "Seahawks coach Mike Macdonald is standing behind Sam Darnold as the team's starting quarterback despite his seven interceptions over the past four games.",
-      "published": "2026-10-16",
-      "likelyKind": "role",
-      "teams": [
-        "Seattle Seahawks"
-      ],
-      "teamIds": [
-        "SEA"
-      ],
-      "players": [
-        {
-          "id": "3912547",
-          "name": "Sam Darnold",
-          "position": "Quarterback",
-          "currentTeam": "SEA"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50197704/seahawks-sticking-sam-darnold-starter-ints",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-31"
-    },
-    {
-      "id": "50197342",
-      "headline": "Ravens rule out QB Lamar Jackson; Tyler Huntley to start vs. Browns",
-      "description": "The Ravens have ruled quarterback Lamar Jackson out for a second straight week, elevating Tyler Huntley to the starting role for Sunday's game in Cleveland.",
-      "published": "2026-10-16",
-      "likelyKind": "role",
-      "teams": [
-        "Baltimore Ravens"
-      ],
-      "teamIds": [
-        "BAL"
-      ],
-      "players": [
-        {
-          "id": "3916387",
-          "name": "Lamar Jackson",
-          "position": "Quarterback",
-          "currentTeam": "BAL"
-        },
-        {
-          "id": "4035671",
-          "name": "Tyler Huntley",
-          "position": "Quarterback",
-          "currentTeam": "BAL"
-        }
-      ],
-      "url": "https://www.espn.com/nfl/story/_/id/50197342/ravens-rule-qb-jackson-huntley-start-browns",
-      "attempts": 0,
-      "reason": "backlog over the worklist limit, never drafted",
-      "givenUpOn": "2026-10-31"
     }
   ]
 }

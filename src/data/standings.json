@@ -13,11 +13,11 @@
     },
     "DEN": {
       "wins": 8,
-      "losses": 2,
+      "losses": 3,
       "ties": 0,
-      "pointDifferential": 26,
-      "pointsFor": 236,
-      "pointsAgainst": 210,
+      "pointDifferential": 4,
+      "pointsFor": 241,
+      "pointsAgainst": 237,
       "conferenceRank": 2
     },
     "KC": {
@@ -47,6 +47,15 @@
       "pointsAgainst": 215,
       "conferenceRank": 4
     },
+    "PIT": {
+      "wins": 7,
+      "losses": 4,
+      "ties": 0,
+      "pointDifferential": 35,
+      "pointsFor": 241,
+      "pointsAgainst": 206,
+      "conferenceRank": 6
+    },
     "CLE": {
       "wins": 6,
       "losses": 4,
@@ -54,15 +63,6 @@
       "pointDifferential": -32,
       "pointsFor": 188,
       "pointsAgainst": 220,
-      "conferenceRank": 6
-    },
-    "PIT": {
-      "wins": 6,
-      "losses": 4,
-      "ties": 0,
-      "pointDifferential": 13,
-      "pointsFor": 214,
-      "pointsAgainst": 201,
       "conferenceRank": 7
     },
     "NE": {
